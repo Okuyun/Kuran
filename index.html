@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"    content="width=device-width">
+    <meta name="author"      content="M A Eyler, Istanbul, 2020" />
+    <meta name="description" content="Reader for the Quran" />
+    <!-- <link rel="stylesheet" href="code/main.css" media="all">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="image/icon.png"> -->
+    <title>Iqra Introduction</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+    iframe {
+      display: inline-block;
+      /* border: 1px solid; */
+      width: 462px;
+      height: 740px;
+    }
+    button {
+      position: fixed;
+      background-color: yellow;
+    }
+    #closeM {
+      top: 5px;
+      left: 438px;
+    }
+    #displayM {
+      top: 5px;
+      left: 852px;
+    }
+  </style>
+  <body>
+
+<button id=closeM>x</button>
+<button id=displayM hidden>M</button>
+
+<iframe id=search src='https://maeyler.github.io/Iqra3/mujam.html' name=mujam>
+</iframe>
+<iframe id=reader src='https://maeyler.github.io/Iqra3/reader.html' name=iqra>
+</iframe>
+
+<script src="code/common.js"></script>
+<script>
+function hideSearch() {
+  search.style.display='none'; reader.style.width='880px'
+  closeM.hidden=true; displayM.hidden=false; 
+}
+function showSearch() {
+  search.style.display=''; reader.style.width=''
+  closeM.hidden=false; displayM.hidden=true; 
+}
+    const VERSION = '4a0'
+    document.title = 'Iqra '+VERSION
+    closeM.onclick = hideSearch
+    displayM.onclick = showSearch
+    // window.name = "NewTab"
+</script>
+    
+  </body>
+</html>
