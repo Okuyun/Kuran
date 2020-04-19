@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"    content="width=device-width" />
+    <meta name="theme-color" content="cyan" />
+    <meta name="author"      content="M A Eyler, Istanbul, 2019" />
+    <meta name="description" content="Reader for the Quran" />
+    <link rel="stylesheet" href="code/reader.css" media="all">
+    <!-- <link rel="manifest" href="manifest.json"> -->
+    <link rel="icon" href="image/icon.png">
+    <title>Iqra</title>
+</head>
+
+<body>
+<div id=div3>
+  <b id=title></b>
+  <select id=sureS></select>  
+  <button id=pageS>
+    Sayfa <span id=sayfa></span>&emsp;▼
+  </button> <button 
+  id=starB>&nbsp;</button>&emsp;<button 
+  id=trans>&nbsp;</button><button 
+  id=linkB>&nbsp;</button><button 
+  id=zoomB>&nbsp;</button><button 
+  id=showR>&nbsp;</button>  
+</div>
+
+<div id=div2>
+  <div id=text>Türkçe meal yükleniyor</div>
+  <div id=html readonly>Kuran metni yükleniyor</div>
+  <div id=div0></div>
+</div>
+
+<div id=div1>
+  <button id=leftB>◁</button>
+  <input id=slider type=range min=1 max=604 value=1>
+  <span  id=infoS></span>
+  <button id=rightB>▷</button>
+</div>
+
+<!--span id=bilgi>produce again for each page</span-->
+
+<div id=menuS class=menu>
+   Sayfa <input id=sayNo type=number min=1 max=604 value=1>
+   <hr> <span id=starred>star menu</span>
+</div>
+
+<div id=menuC class=menu>
+   <span class="menuC">Kopyala</span>
+   <span class="menuC">Mucem</span>
+   <span class="menuC">Finder</span>
+   <!--span class="menuC">Benzer</span-->
+</div>
+
+<div id=menuK class=menu>
+   <span class="menuK">quran.com</span>
+   <span class="menuK">corpus.quran.com</span>
+   <span class="menuK">kuranmeali.com</span>
+   <span class="menuK">acikkuran.com</span>
+   <!--span class="menuK">Reader</span-->
+   <hr><div  id=version></div>
+   <span class="menuK">Yardım -- F1</span>
+   <span class="menuK" id=add2hs hidden>Install PWA</span>
+   <!-- display property overrides the hidden attribute -->
+</div>
+
+<script src="code/buckwalter.js"></script>
+<script src="code/common.js"></script>
+<script src="code/utilities.js"></script>
+<script src="code/model.js"></script>
+<script src="code/submitForm.js"></script>
+<script src="code/reader.js"></script>
+
+<script> //type="module">
+  // import * as Q from "./code/reader.js"
+  // console.log(Q)
+
+    if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('sw.js')
+        .then(reg => { console.log('Service worker', reg.scope) })
+        .catch(alert)
+    }
+    //initReader()
+    
+/**
+ * BeforeInstallPromptEvent saved for later use
+ */
+ var pevt
+/**
+ * Prevent Chrome from showing the InstallPrompt
+ * from  https://love2dev.com/blog/beforeinstallprompt/
+ * 
+ * @param {BeforeInstallPromptEvent} e 
+ */
+function beforeinstallCB(e) {
+  function addToHomeScreen() {
+    pevt.prompt()  //ask user
+    pevt.userChoice.then(console.log)
+    add2hs.style.display = 'none'
+    pevt = null; hideMenus()
+  }
+    e.preventDefault(); pevt = e
+    add2hs.style.display = '' //show button
+    add2hs.onclick = addToHomeScreen
+}
+window.onbeforeinstallprompt = beforeinstallCB
+add2hs.style.display = 'none' //hide button at start
+</script>
+</body>
+</html>

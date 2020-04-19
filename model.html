@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"    content="width=device-width">
+    <meta name="author"      content="M A Eyler, Istanbul, 2020" />
+    <meta name="description" content="Reader for the Quran" />
+    <link rel="icon" href="image/icon.png">
+    <title>Kuran Meali </title>
+
+  <style>
+    body { max-width: 440px; }
+    body, h2, h3 { margin: 20px; }
+    h2 { margin-bottom: 16px; }
+    body, input, button { 
+      font: 16px arial;
+    }
+    #url { width: 340px; }
+    #page, #indx { width: 90px; }
+    button {
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2 id=title></h2>
+Bu yazılım ile Kuran-ı Kerim meali yüklenir.
+<hr />
+<p><label>
+    URL <br>
+    <input type=text id=url placeholder='https://...'>
+    <button id=urlB>Oku</button>
+</p>
+<p><label>
+    İndeks <br>
+    <input type=number id=indx placeholder='1-6236'>
+    <button id=indxB>İndeks</button>
+</p>
+<p><label>
+    Sayfa <br>
+    <input type=number id=page placeholder='1-604'>
+    <button id=pageB>Sayfa</button>
+</p>
+<hr />
+<p id=sayfa></p>
+
+<script src="code/common.js"></script>
+<script src="code/utilities.js"></script>
+<script src="code/model.js"></script>
+<script>
+"use strict";
+function doText() {
+    kur = new KuranData(url.value) //, console.log)
+    console.log(kur)
+}
+function doIndex() {
+    let t = kur.getVerse(indx.value)
+    sayfa.textContent = t; console.log(t)
+}
+function doPage() {
+    let p = Number(page.value)
+    // sayfa.textContent = a.join('\n')
+    sayfa.innerHTML = kur.pageToHTML(p)
+    console.log(p+'. sayfa')
+}
+    var kur
+    title.innerText = document.title
+    url.value = 'https://maeyler.github.io/BahisQurani/data/tr.yazir.txt'
+    // url.onchange = doText
+    urlB.onclick = doText
+    indx.onchange = doIndex
+    indxB.onclick = doIndex
+    page.onchange = doPage
+    pageB.onclick = doPage
+    doText()  //read data
+</script>
+
+</body>
+</html>

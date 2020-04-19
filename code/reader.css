@@ -1,0 +1,240 @@
+body { 
+  margin: 0;
+  background-color: cyan;
+}
+
+@media screen and (max-height: 420px) {
+    #div1 { display: none; }
+}
+@media screen and (max-width: 850px) {
+    #title { display: none; }
+    #zoomB { display: none; }
+    #div3, #sureS, button { 
+      font-size: 3vw;
+    }
+    #text { 
+      font-size: 3.3vw;
+      display: none;
+    }
+    #html, #bilgi { 
+      font-size: 4.5vw;
+    }
+}
+
+@media screen and (min-width: 851px) {
+    #title {
+      margin: 0;
+      font-size: 15px;
+      display: inline-block;
+    }
+    #div3, #sureS, #pageS {
+      font-size: 14px;
+    }
+    #div2 { 
+      overflow-y: auto;
+      margin: 0 auto;
+      width: 840px;
+    }
+    #text, #html {
+      width: 400px; 
+      display: inline-block;
+      vertical-align: middle;
+      /* overflow-y: auto;
+      height: 88vh; */
+      border: black 1px solid;
+    }
+    #text { 
+      font-size: 14px;
+    }
+    #html, #bilgi { 
+      font-size: 19px;
+    }
+}
+/** common to all screens **/
+    div { 
+      text-align: center;
+    }
+    button {
+      min-width: 36px;
+      height: 36px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 50%;
+    }
+    #pageS {
+      width: auto;
+      font-weight: normal;
+    }
+    #sureS, #pageS {
+      padding: 4px;
+      height: 30px;
+      background-color: #eee;
+      border-radius: 15px;
+      border: none;
+    }
+    #sayNo {
+      margin-top: 6px;
+    }
+    #div0 { 
+      height: 36px;
+    }
+    #bilgi { 
+      display: none;
+      user-select: none;
+      position: absolute;
+      min-width: 90px;
+      text-align: center;
+      color: blue;
+      background-color: #ff7;
+      border: black 1px solid;
+      padding-bottom: 5px;
+      cursor: pointer;
+      z-index: 1;
+    }
+    #div1, #div3 { 
+      white-space: nowrap;
+      user-select: none;
+      margin: 0;
+    }
+    #div1 { 
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+    }
+    #text, #html {
+      background-color: white;
+      padding: 4px 8px;
+      vertical-align: top;
+      min-height: 100%;
+    }
+    #text { 
+      text-align: left;
+      line-height: 1.25;
+    }
+    #html { 
+      text-align: justify;
+    }
+    #text, #div3, #infoS { 
+      font-family: sansserif, arial;
+    }
+    #html, #bilgi { 
+      font-family: me_quran, serif;
+      line-height: 2;
+      direction: rtl;
+    }
+    #infoS { 
+      display: none;
+      user-select: none;
+      font-size: 14px;
+      background-color: #ff7;
+      color: blue;
+      text-align: center;
+      padding: 5px 5px;
+      position: fixed;
+      border: black 1px solid;
+      z-index: 1;
+      left: 40vw; 
+      bottom: 90px;
+      min-width: 160px;
+    }
+    #slider {
+      position: relative;
+      top: 4px;
+      width: 72%;
+      max-width: 604px;
+      margin: 0;
+    }
+    .divider { 
+      margin-top: 8px;
+      height: 50px;
+      background-image: url(../image/sura.png);
+      background-repeat: no-repeat;
+      /* background-size: contain; */
+    }
+    .besmele, .divider { 
+      text-align: center;
+      color: #070;
+    }
+    .mavi { 
+      color: blue;
+    }
+    .gri { 
+      background-color : #ffc;
+    }
+    ::selection {
+      color: yellow; 
+      background-color: blue;
+    }
+	@font-face {
+	  font-family: me_quran;
+	  src: url(../image/me_quran.ttf)
+	}
+
+/* Menu Style
+  Ref: https://dev.to/iamafro/how-to-create-a-custom-context-menu--5d7p
+*/
+    .menu {
+      box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      display: none;
+      border: black 1px solid;
+      color: blue;
+      background-color: #eee;
+      font: 13px sansserif, arial;
+      user-select: none;
+      overflow-y: auto;
+      max-height: 70vh;
+      z-index: 1;
+    }
+    #version { 
+      color: black;
+    }
+    .menuK {
+      display: block;
+      padding: 10px;
+    }
+    .menuC {
+      display: inline-block;
+      padding: 10px 12px;
+    }
+    .menuC:hover, .menuK:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    #menuS {
+      min-width: 120px;
+      left: 130px;
+      top: 0px;
+    }
+
+/* End of menu style */
+
+/*
+Icons made by 
+<a href=https://www.flaticon.com/authors/kiranshastry>Kiranshastry</a> 
+from <a href=https://www.flaticon.com/>www.flaticon.com</a>
+*/
+button {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: Transparent;
+    border: none;
+}
+button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#starB {
+    background-image: url(../image/star.png);
+}
+#trans {
+    background-image: url(../image/Tee.png);
+}
+#linkB {
+    background-image: url(../image/menu.png);
+}
+#zoomB {
+    background-image: url(../image/search.png);
+}
+#showR {
+    background-image: url(../image/Kay.png);
+}
+

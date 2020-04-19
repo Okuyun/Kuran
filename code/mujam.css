@@ -1,0 +1,197 @@
+    body {
+        max-width: 600px;
+        min-width: 450px;
+        margin: 0;
+        font-size: 12px;
+        font-family: arial, sans-serif;
+    }
+    body, th {
+        background-color: #eee;
+    }
+    #div0 {
+        background-color: cyan;
+    }
+    #out1, #out2, #out4, .item {
+        font: 15px arial, sans-serif;
+    }
+    #out1, #out2, #out4 {
+        margin-left: 8px;
+    }
+    .item {
+        display: inline-block;
+        color: black;
+        background-color: hsl(240, 100%, 95%);
+        margin: 4px 2px;
+        border: 1px solid;
+        padding: 6px;
+    }
+    .item:hover { 
+        background-color: hsl(240, 100%, 85%);
+    }
+    select, li, #out3 {
+        font: 18px me_quran, serif;
+        line-height: 1.5;
+        margin-right: 4px;
+        padding-right: 4px;
+        color: blue;
+    }
+    button {
+        min-width: 36px;
+        height: 36px;
+        cursor: pointer;
+        font: inherit;
+    }
+    table, li { 
+        background-color: white;
+    }
+    li {
+        margin: 12px 0;
+        padding: 3px 6px;
+        list-style: none;
+    }
+    li span {
+        position: relative;
+    }
+    table {
+        border-collapse: collapse; 
+        text-align: center;
+        cursor: default;
+        margin: 20px 8px;
+    }
+    th { 
+        color: black;
+        font-weight: normal;
+        padding: 0px; 
+    }
+    td {
+        box-sizing: border-box;
+        width: 4.5vw;
+        height: 4.5vw;
+        border: 1px solid black; 
+        padding: 0px;
+        position: relative;
+    }
+    td:hover { 
+        border: 4px solid brown;
+    }
+@media screen and (max-width: 460px) {
+    td { width: 20px; height: 20px;}
+}
+@media screen and (min-width: 590px) {
+    td { width: 26px; height: 26px;}
+}
+    button:hover .t1 { 
+        display: block; 
+    }
+    span .t1 {
+        display: none;
+        cursor: pointer;
+    }
+    #bilgi {
+        display: none;
+        position: absolute;
+        width: 180px;
+        z-index: 1; /* on top of other cells */
+        top: 18px;
+        text-align: center;
+    }
+    .t1, .t2 {
+        font: 12px/1.6 sansserif, arial;
+        padding: 5px;
+        cursor: pointer;
+        border: black 1px solid;
+        color: black;
+    }
+    .t1 {
+        background-color: #eee;
+    }
+    .t2, #showS {
+        background-color: #ff7;
+    }
+    #corpus {
+        color: blue;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+	@font-face {
+	  font-family: me_quran;
+	  src: url(../image/me_quran.ttf)
+	}
+	
+	/* Menu Style */
+    .menu {
+      box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      display: none;
+      border: black 1px solid;
+      text-align: center;
+      color: blue;
+      background-color: #eee;
+      font: 13px sansserif, arial;
+      user-select: none;
+      z-index: 1;
+    }
+    #version { 
+      color: black;
+    }
+    .menuK {
+      display: block;
+      padding: 10px;
+    }
+    .menuK:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    #modal {
+      position: fixed; 
+      padding-top: 50px;
+      left: 0; 
+      top: 0;
+      width: 100%;
+      height: 100%; 
+      background-color: gray;
+      background-color: rgba(127, 127, 127, 0.75);
+        z-index: 2;
+    }
+    #dialog {
+        border: 1px solid;
+        background-color: seashell;
+        padding: 18px;
+        width: 314px;
+        position: relative;
+        top: 20px;
+        margin: auto;
+    }
+    #dClose:hover {
+        background-color: darkgray;
+    }
+    #dTopic { width: 100px; }
+    #dRefs  { width: 310px; }
+    #dError { color: red; }
+    #dClose {
+        position: absolute;
+        right: 18px;
+        width: auto;
+        height: auto;
+    }
+
+/*
+Icons made by 
+<a href=https://www.flaticon.com/authors/kiranshastry>Kiranshastry</a> 
+from <a href=https://www.flaticon.com/>www.flaticon.com</a>
+*/
+#ekleD {
+    background-image: url(../image/add.png);
+    background-size: contain;
+    border: none;
+}
+#editD {
+    background-image: url(../image/edit.png);
+    background-size: contain;
+    border: none;
+}
+#deleD {
+    background-image: url(../image/del.png);
+    background-size: contain;
+    border: none;
+}

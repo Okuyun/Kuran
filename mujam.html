@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="cyan" />
+    <meta name="author"      content="M A Eyler, Istanbul, 2019" />
+    <meta name="description" content="Reader for the Quran" />
+    <link rel="stylesheet" href="code/mujam.css" media="all">
+    <link rel="manifest" href="manifest.json"> 
+    <link rel="icon" href="image/iconF.png">
+    <title>Mucem </title>
+</head>
+
+<body>
+<div id=div0>
+   <button id=showS>Liste</button> &nbsp;
+   <span id=out2>page count</span> &nbsp;
+   <span id=out3>root/word</span>
+   <button id=showT>Konular</button>
+</div>
+<div id=div1 hidden>
+   <span id=out1>page count</span> &nbsp;
+   <select id=menu1></select>
+   Kök: <select id=menu2></select>
+   <select id=menu3></select>
+   <button id=combine>◀</button>
+   <p id=kelimeler></p>
+</div>
+<div id=div4 hidden>
+   <span id=out4>page count</span> &nbsp;
+   <select id=menu4></select>&emsp;
+   <button id=ekleD>&nbsp;</button>&nbsp;
+   <button id=editD>&nbsp;</button>&nbsp;
+   <button id=deleD>&nbsp;</button>&emsp;
+   <button id=back>◀</button>
+   <p id=konular></p>
+</div>
+
+<div id=modal hidden>
+   <div id=dialog></div>
+</div>
+<table id=tablo></table>
+
+<!--div id=bilgi>produce again for each table</div-->
+
+<div id=menuK class=menu>
+   <span class="menuK">quran.com</span>
+   <span class="menuK">corpus.quran.com</span>
+   <span class="menuK">kuranmeali.com</span>
+   <span class="menuK">acikkuran.com</span>
+   <!--span class="menuK">Reader</span-->
+   <hr><div  id=version></div>
+   <span class="menuK">Yardım -- F1</span>
+   <!-- <span class="menuK" id=add2hs>Install PWA</span> -->
+</div>
+
+<script src="code/buckwalter.js"></script>
+<script src="code/common.js"></script>
+<script src="code/utilities.js"></script>
+<script src="code/mujam.js"></script>
+
+<script></script>
+</body>
+</html>

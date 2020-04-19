@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"    content="width=device-width">
+    <meta name="author"      content="M A Eyler, Istanbul, 2020" />
+    <meta name="description" content="Reader for the Quran" />
+    <!-- <link rel="stylesheet" href="code/main.css" media="all"> -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="image/icon.png">
+    <title>Iqra Introduction</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: cyan;
+    }
+    iframe {
+      display: inline-block;
+      position: absolute;
+      box-sizing: border-box;
+      border: none;
+      height: 100%;
+    }
+    button {
+      position: fixed;
+      top: 8px; right: 0;
+      background-color: pink;
+    }
+  </style>
+  </head>
+  <body>
+
+  <iframe id=findFrm src='start.html' name=finder></iframe>
+  <iframe id=readFrm src='reader.html' name=iqra></iframe>
+
+  <button id=closeM>x</button>
+  <button id=openM hidden>M</button>
+
+<script src="code/common.js"></script>
+<script>
+function addListener(frm) {
+  frm.contentWindow.addEventListener('hashchange', reportHash)
+  console.log('* addListener *', frm.name)
+}
+function setTitle(str) {
+  document.title = VERSION +' '+ str
+}
+function reportHash(e) {
+  let s = '[Dış kaynak]', h = ''
+  if (e.target.name == 'iqra') {
+    if (firstEvent) {
+      firstEvent = false; return
+    }
+    if (readFrm.style.display == 'none') hideFinder()
+    s = e.target.document.title
+    h = e.target.location.hash
+  } else { // finder
+    if (last != null && e.target.document) {
+      s = e.target.document.title
+      h = e.target.location.hash
+    }
+    if (findFrm.style.display == 'none') showFinder() 
+  }
+  setTitle(s)
+  console.log('* reportHash *', h, location.hash)
+  if (h=='' || window.location.hash == h) return
+  window.location.hash = h
+  hashInProgress = true
+}
+function hashModified() {
+  let h = decodedHash()
+  console.log('** hashInProgress='+hashInProgress, h)
+  if (hashInProgress || !h || h.length<3) {
+    hashInProgress = false; return 
+  } else switch (h.substring(0, 2)) { //new address entered
+    case 'p=': case 'v=':
+      window.open('reader.html#'+h, 'iqra'); hideFinder()
+      break;
+    case 'r=':
+      window.open('mujam.html#'+h, 'finder')
+      break;
+    case 'b=': case 'w=':
+      window.open('../BahisQurani/finder.html#'+h, 'finder')
+      break
+    default:
+        console.log('unknown hash entered', h)
+  }
+}
+function hideFinder() {
+  closeM.hidden=true; openM.hidden=false
+  resize()
+}
+function showFinder() {
+  closeM.hidden=false; openM.hidden=true
+  // if (!findFrm.src) findFrm.src = 'mujam.html'
+  resize()
+}
+var WIDTH = 500  //can be modified in dev tools
+function resize() {
+    const HIDE = 'none', SHOW = ''
+    let W = Math.min(window.innerWidth, screen.width)
+    if (closeM.hidden) { //hideFinder
+      setStyle(findFrm.style, HIDE)
+      let x2 = 0, w2 = W
+      if (W>600 && W<=850) { //single column
+        x2 = Math.trunc((W-WIDTH)/2); w2 = WIDTH
+      }
+      setStyle(readFrm.style, SHOW, x2, w2)
+    } else { //showFinder
+      if (W <= 850) { //single column
+        setStyle(findFrm.style, SHOW, 0, W)
+        setStyle(readFrm.style, HIDE)
+      } else { //two columns
+        findFrm.style.borderRight = '1px solid cyan'
+        let w2 = WIDTH, x2 = W - w2
+        setStyle(findFrm.style, SHOW, 0, x2)
+        setStyle(readFrm.style, SHOW, x2, w2)
+      }
+    }
+    function setStyle(s, d, x, w) {
+      s.display = d; if (d == HIDE) return
+      s.left  = (x == 0)? 0 : x+'px'
+      s.width = (w == W)? '100%' : w+'px'
+    }
+  }
+  function sourceChanged(e) {
+    try {
+      let p = finder.location.pathname
+      if (last != p) {
+        last = p; addListener(findFrm)
+      }
+    } catch (err) {
+      last = null // cannot read location
+    }
+    console.log('* sourceChanged *', last)
+    reportHash(e)
+  }
+  function initReader() {
+    console.log('* initReader *', initialHash)
+    if (!iqra.initialized) { //good idea, poor practice
+      setTimeout(initReader, 500); return
+    }
+    resize(); addListener(readFrm); //hashModified()
+    if (!initialHash) return
+    window.location.hash = initialHash
+    initialHash = null
+  }
+  var last  // finder location
+  var hashInProgress = false, firstEvent = true
+  var initialHash = decodedHash()
+  console.log('* start *', initialHash, location.hash)
+  readFrm.style.display = 'none' //hide iqra frame
+  setTitle('Iqra ')
+  window.name = 'iqra'+VERSION
+  window.onresize = resize
+  window.onhashchange = hashModified
+  closeM.onclick = hideFinder
+  openM.onclick  = showFinder
+  readFrm.onload = initReader
+  findFrm.onload = sourceChanged
+  iqra.addEventListener('hashchange', reportHash)
+  window.onerror = console.log
+  window.onbeforeinstallprompt = (e) => {
+    iqra.beforeinstallCB(e)
+    console.log('beforeinstallprompt event')
+  }
+</script>
+    
+  </body>
+</html>
