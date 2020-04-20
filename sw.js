@@ -1,5 +1,5 @@
 "use strict";
-const PREF ='iqra', CACHE = PREF+'01'
+const PREF ='iqra', CACHE = PREF+'02'
 const FILES = [
   'data/Quran.txt',
   'data/Kuran.txt',

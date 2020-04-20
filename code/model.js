@@ -1,5 +1,41 @@
 "use strict";
-class KuranData {
+// sName, aName: Sura names 1-114
+const sName
+=["","Fatiha","Bakara","Ali İmran","Nisa","Maide","Enam","Araf","Enfal",
+"Tevbe","Yunus","Hud","Yusuf","Rad","İbrahim","Hicr","Nahl","İsra","Kehf"
+,"Meryem","Taha","Enbiya","Hacc","Muminun","Nur","Furkan","Şuara","Neml"
+,"Kasas","Ankebut","Rum","Lokman","Secde","Ahzab","Sebe","Fatır","Yasin"
+,"Saffat","Sad","Zümer","Mümin","Fussilet","Şura","Zuhruf","Duhan","Casiye"
+,"Ahkaf","Muhammed","Fetih","Hucurat","Kaf","Zariyat","Tur","Necm","Kamer"
+,"Rahman","Vakıa","Hadid","Mücadele","Haşr","Mümtahine","Saff","Cuma"
+,"Münafıkun","Tegabun","Talak","Tahrim","Mülk","Kalem","Hakka","Mearic"
+,"Nuh","Cinn","Müzzemmil","Müddessir","Kıyamet","İnsan","Mürselat","Nebe"
+,"Naziat","Abese","Tekvir","İnfitar","Mutaffifin","İnşikak","Buruc","Tarık"
+,"Ala","Gaşiye","Fecr","Beled","Şems","Leyl","Duha","İnşirah","Tin","Alak"
+,"Kadir","Beyyine","Zilzal","Adiyat","Karia","Tekasur","Asr","Hümeze","Fil"
+,"Kureyş","Maun","Kevser","Kafirun","Nasr","Leheb","İhlas","Felak","Nas"]
+
+const aName 
+=  ["","الفاتحة","البقرة","آل عمران","النساء","المائدة","الأنعام"
+,"الأعراف","الأنفال","التوبة","يونس","هود","يوسف","الرعد","ابراهيم"
+,"الحجر","النحل","الإسراء","الكهف","مريم","طه","الأنبياء","الحج"
+,"المؤمنون","النور","الفرقان","الشعراء","النمل","القصص","العنكبوت"
+,"الروم","لقمان","السجدة","الأحزاب","سبإ","فاطر","يس","الصافات","ص"
+,"الزمر","غافر","فصلت","الشورى","الزخرف","الدخان","الجاثية","الأحقاف"
+,"محمد","الفتح","الحجرات","ق","الذاريات","الطور","النجم","القمر"
+,"الرحمن","الواقعة","الحديد","المجادلة","الحشر","الممتحنة","الصف"
+,"الجمعة","المنافقون","التغابن","الطلاق","التحريم","الملك","القلم"
+,"الحاقة","المعارج","نوح","الجن","المزمل","المدثر","القيامة","الانسان"
+,"المرسلات","النبإ","النازعات","عبس","التكوير","الإنفطار","المطففين"
+,"الإنشقاق","البروج","الطارق","الأعلى","الغاشية","الفجر","البلد","الشمس"
+,"الليل","الضحى","الشرح","التين","العلق","القدر","البينة","الزلزلة"
+,"العاديات","القارعة","التكاثر","العصر","الهمزة","الفيل","قريش"
+,"الماعون","الكوثر","الكافرون","النصر","المسد","الإخلاص","الفلق","الناس"]
+
+/** Reads a text file -- Quran translation
+ *  one line for each verse that begins with "c|v|"
+ */
+class KuranText {
     constructor(url, callback) {
       //cannot use function because of "this"
       let process = (tt) => {
@@ -13,16 +49,16 @@ class KuranData {
         this.url = url; this.data = []
         fetch_text_then(url, process)
     }
-    chapName(c) { return '<br>('+c+') '+sName[c]+' Suresi' }
+    chapName(c) { return '('+c+') '+sName[c]+' Suresi' }
     get besmele() { return 'Bismillahirrahmanirrahim' }
     verseToHTML(id, s) {
       return '<span id='+id+'>'+s+'</span><BR>'
     }
     pageToHTML(p) {
       let newChapter = () => {
-        let br = i==index[p]+1? '' : '<BR>'; //semicolon required
+        // let br = i==index[p]+1? '' : '<BR>'; //semicolon required
         [c, v] = toCV(i)
-        out.push(br+'<div class=divider>'+this.chapName(c)+'</div>')
+        out.push('<div class=divider>'+this.chapName(c)+'</div>')
         if (c!=1 && c!=9)
           out.push('<div class=besmele>'+this.besmele+'</div>')
       }
@@ -41,9 +77,11 @@ class KuranData {
     getVerse(i) { return this.data[i] }
     toString() { return url }
 }
-class QuranData extends KuranData {
+/** Reads original Quran in Arabic */
+class QuranText extends KuranText {
     constructor(url, callback) { super(url, callback) }
-    chapName(c) { return ' سورة '+sName[c] }
+    /** we override three methods */
+    chapName(c) { return ' سورة '+aName[c] }
     get besmele() { return 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ' }
     verseToHTML(id, s) {
       let [n,...a] = s.split(/\.? /)  //divide into words

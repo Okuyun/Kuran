@@ -47,12 +47,12 @@ Bu yazılım ile Kuran-ı Kerim meali yüklenir.
 <p id=sayfa></p>
 
 <script src="code/common.js"></script>
-<script src="code/utilities.js"></script>
 <script src="code/model.js"></script>
+<script src="code/utilities.js"></script>
 <script>
 "use strict";
 function doText() {
-    kur = new KuranData(url.value) //, console.log)
+    kur = new KuranText(url.value) //, console.log)
     console.log(kur)
 }
 function doIndex() {

@@ -12,8 +12,8 @@ const names = new Array(M+1);
 const first = new Array(M+1);
 const P = 604; //pages
 const LOCATION = 'https://maeyler.github.io/BahisQurani/data/'
-const kur = new KuranData(LOCATION+'tr.yazir.txt', initialPage)
-const qur = new QuranData(LOCATION+'quran-uthmani.txt', initialPage)
+const kur = new KuranText(LOCATION+'tr.yazir.txt', initialPage)
+const qur = new QuranText(LOCATION+'quran-uthmani.txt', initialPage)
 const LINK = "http://kuranmeali.com/Sayfalar.php?sayfa=";
 const rootToList = new Map()
 const wordToRoot = new Map()

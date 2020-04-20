@@ -146,13 +146,14 @@ body {
     }
     .divider { 
       margin-top: 8px;
-      height: 50px;
       background-image: url(../image/sura.png);
       background-repeat: no-repeat;
-      /* background-size: contain; */
+      background-size: 100% auto;
+      line-height: 42px;
+      color: #070;
     }
-    .besmele, .divider { 
-      text-align: center;
+    .besmele { 
+      line-height: 1.5;
       color: #070;
     }
     .mavi { 

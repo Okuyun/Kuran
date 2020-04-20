@@ -1,6 +1,6 @@
 "use strict";
-
 // import {EM_SPACE} from './common.js';
+// import {sName} from './utilities.js';
 
 /**
  * Immutable reference to a verse
@@ -263,7 +263,6 @@ function toChapter(i) {
 }
 
 /**
- * 
  * Get array of chapter,verses number based on the index itself.
  * uses: toChapter method and last array (contains the number of last summed verses)
  * @param {number} index
@@ -298,10 +297,9 @@ const nChap = last.length - 1,
 /**
  * index: verse index for each page
  * nPage: number of pages
- * sName: Sura names
  * labels: show the sura name, number, and first verse of this page.
  */
-var index, nPage, sName  //global
+var index, nPage  //global
 const labels = ['']
 /**
  * initialize the utilities and set the attributes.
@@ -336,127 +334,11 @@ function init() {
         //30,24,32,42,29,19,36,25,22,36,26,30,20,36,19,27,13,19,19,17,14,14,15]; 
         30, 24, 32, 33, 29, 28, 26, 23, 23, 28, 30, 29, 23, 28, 24, 21, 22, 13, 19, 19, 17, 14, 14, 15
     ];
-    // in turkish 
-    const suraNames = `
-Fatiha
-Bakara
-Ali İmran
-Nisa
-Maide
-Enam
-Araf
-Enfal
-Tevbe
-Yunus
-Hud
-Yusuf
-Rad
-İbrahim
-Hicr
-Nahl
-İsra
-Kehf
-Meryem
-Taha
-Enbiya
-Hacc
-Muminun
-Nur
-Furkan
-Şuara
-Neml
-Kasas
-Ankebut
-Rum
-Lokman
-Secde
-Ahzab
-Sebe
-Fatır
-Yasin
-Saffat
-Sad
-Zümer
-Mümin
-Fussilet
-Şura
-Zuhruf
-Duhan
-Casiye
-Ahkaf
-Muhammed
-Fetih
-Hucurat
-Kaf
-Zariyat
-Tur
-Necm
-Kamer
-Rahman
-Vakıa
-Hadid
-Mücadele
-Haşr
-Mümtahine
-Saff
-Cuma
-Münafıkun
-Tegabun
-Talak
-Tahrim
-Mülk
-Kalem
-Hakka
-Mearic
-Nuh
-Cinn
-Müzzemmil
-Müddessir
-Kıyamet
-İnsan
-Mürselat
-Nebe
-Naziat
-Abese
-Tekvir
-İnfitar
-Mutaffifin
-İnşikak
-Buruc
-Tarık
-Ala
-Gaşiye
-Fecr
-Beled
-Şems
-Leyl
-Duha
-İnşirah
-Tin
-Alak
-Kadir
-Beyyine
-Zilzal
-Adiyat
-Karia
-Tekasur
-Asr
-Hümeze
-Fil
-Kureyş
-Maun
-Kevser
-Kafirun
-Nasr
-Leheb
-İhlas
-Felak
-Nas`;
+
     // number of pages.
     nPage = count.length;
     index = [0, 0]  //new Array(nPage + 1);
     index.length = nPage + 1;
-    sName = suraNames.split("\n");
     for (let p = 1; p <= nPage; p++) {
         index[p + 1] = index[p] + count[p]
         let v = new VerseRef(index[p]+1)
