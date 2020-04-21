@@ -8,7 +8,7 @@ const sName
 ,"Saffat","Sad","Zümer","Mümin","Fussilet","Şura","Zuhruf","Duhan","Casiye"
 ,"Ahkaf","Muhammed","Fetih","Hucurat","Kaf","Zariyat","Tur","Necm","Kamer"
 ,"Rahman","Vakıa","Hadid","Mücadele","Haşr","Mümtahine","Saff","Cuma"
-,"Münafıkun","Tegabun","Talak","Tahrim","Mülk","Kalem","Hakka","Mearic"
+,"Münafikun","Tegabun","Talak","Tahrim","Mülk","Kalem","Hakka","Mearic"
 ,"Nuh","Cinn","Müzzemmil","Müddessir","Kıyamet","İnsan","Mürselat","Nebe"
 ,"Naziat","Abese","Tekvir","İnfitar","Mutaffifin","İnşikak","Buruc","Tarık"
 ,"Ala","Gaşiye","Fecr","Beled","Şems","Leyl","Duha","İnşirah","Tin","Alak"
@@ -91,3 +91,5 @@ class QuranText extends KuranText {
       return '<span id='+id+'>'+s+'</span>' //no <BR>
     }
 }
+
+// export {sName, aName, KuranText, QuranText}

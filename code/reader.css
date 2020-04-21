@@ -145,6 +145,7 @@ body {
       margin: 0;
     }
     .divider { 
+      height: 48px;
       margin-top: 8px;
       background-image: url(../image/sura.png);
       background-repeat: no-repeat;

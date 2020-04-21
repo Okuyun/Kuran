@@ -62,14 +62,14 @@ function reportHash(e) {
     if (findFrm.style.display == 'none') showFinder() 
   }
   setTitle(s)
-  console.log('* reportHash *', h, location.hash)
+  // console.log('* reportHash *', h, location.hash)
   if (h=='' || window.location.hash == h) return
   window.location.hash = h
   hashInProgress = true
 }
 function hashModified() {
   let h = decodedHash()
-  console.log('** hashInProgress='+hashInProgress, h)
+  // console.log('** hashInProgress='+hashInProgress, h)
   if (hashInProgress || !h || h.length<3) {
     hashInProgress = false; return 
   } else switch (h.substring(0, 2)) { //new address entered

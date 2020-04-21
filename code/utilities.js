@@ -1,6 +1,6 @@
 "use strict";
 // import {EM_SPACE} from './common.js';
-// import {sName} from './utilities.js';
+// import {sName} from './model.js';
 
 /**
  * Immutable reference to a verse
@@ -286,8 +286,17 @@ const last = [0, 7, 293, 493, 669, 789, 954, 1160, 1235, 1364,
     5622, 5672, 5712, 5758, 5800, 5829, 5848, 5884, 5909, 5931, 5948,
     5967, 5993, 6023, 6043, 6058, 6079, 6090, 6098, 6106, 6125, 6130,
     6138, 6146, 6157, 6168, 6176, 6179, 6188, 6193, 6197, 6204, 6207,
-    6213, 6216, 6221, 6225, 6230, 6236
-];
+    6213, 6216, 6221, 6225, 6230, 6236]
+
+function suraFromPage(k) {
+    return toChapter(index[k+1]-1)
+}
+function suraContainsPage(c, k) {
+    if (c == M) return (k == P)
+    let c1 = index[k-1]+1
+    let c2 = index[k]
+    return (c1<=c && c<=c2);
+}
 
 /**
  * n stands for number.

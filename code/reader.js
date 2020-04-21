@@ -8,8 +8,8 @@
 
 //const DATA_URL = "https://maeyler.github.io/Iqra3/data/"; in common.js
 const M = 114; //suras
-const names = new Array(M+1);
-const first = new Array(M+1);
+// const names = new Array(M+1);
+// const first = new Array(M+1);
 const P = 604; //pages
 const LOCATION = 'https://maeyler.github.io/BahisQurani/data/'
 const kur = new KuranText(LOCATION+'tr.yazir.txt', initialPage)
@@ -85,19 +85,19 @@ function markVerse(cv, cls='gri') {
     let id = '#_'+cv.replace(':', '_')
     mark(html); mark(text)
 }
-function suraFromPage(k) {
+/* function suraFromPage(k) {
     let i = 1;
     while (k > first[i]) i++;
     if (k < first[i]) i--;
     return i;
 }
-function suraContainsPage(k) {
+function suraContainsPage(k) { not used
     if (curSura == M) return (k == P);
     let i = first[curSura];
     let j = first[curSura+1];
     if (i == j) return (k == i);
     return (i<=k && k<j);
-}
+} */
 function displayWord(evt) {
     if (!showR.style.backgroundColor) return
     let t = evt.target
@@ -161,17 +161,17 @@ function gotoPage(k, adjusting) { // 1<=k<=P
     setStorage(false)
     hideMenus();  //html.scrollTo(0)
 }
-function setSura(k) { // 1<=k<=M
-    k = Number(k);
-    if (curSura == k) return;
-    curSura = k;
-    sureS.selectedIndex = k-1
+function setSura(c) { // 1<=c<=M
+    // c = Number(c);
+    if (curSura == c) return;
+    curSura = c;
+    sureS.selectedIndex = c-1
 }
-function gotoSura(k) {
-    if (!k || k < 1)  k = 1;
-    if (k > M) k = M;
-    setSura(k);
-    gotoPage(first[k]);
+function gotoSura(c) {
+    if (!c || c < 1)  c = 1;
+    if (c > M) c = M;
+    setSura(c);
+    gotoPage(pageOf(c, 1));
 }
 function dragStart(evt) {
     if (menuK.style.display || menuC.style.display || menuS.style.display) {
@@ -230,7 +230,7 @@ function dragEnd(evt) {
     console.log("animate", tr2)
     trg.animate({transform:[tr1, tr2]}, 300)
 }
-function readNames(name) {
+/* function readNames(name) {
     function toNames(t) {
       let i = 0, labels = []
       for (let s of t.split('\n')) {
@@ -244,7 +244,7 @@ function readNames(name) {
     }
   //fetch(DATA_URL+name).then(x => x.text()).then(toNames)
     fetch_text_then(DATA_URL+name, toNames)
-}
+} */
 function readWords(name) {
     function toWords(t) {
       for (let s of t.split('\n')) {
@@ -324,12 +324,13 @@ function initReader() {
     slider.oninput = () => {adjustPage(true)}
     slider.onchange= () => {adjustPage(false)} //committed
     rightB.onclick = () => {gotoPage(curPage+1)}
-    try {
-        readNames("iqra.names"); readWords("words.txt");
-        // readText("Kuran.txt", kur); readText("Quran.txt", qur); 
-    } catch(err) { 
-        console.log(err)
-    }
+    let labels = []
+    for (let i=1; i<=M; i++)
+      labels.push(i+'. '+sName[i])
+    sureS.innerHTML = '<option>'+labels.join('<option>')
+    readWords("words.txt");
+    // readNames("iqra.names"); 
+    // readText("Kuran.txt", kur); readText("Quran.txt", qur); 
     menuFn(); 
     var prevTime
     document.onvisibilitychange = () => {
@@ -484,7 +485,7 @@ function makeStarMenu() {
     let t = ''
     let a = [...bookmarks].reverse()
     for (let k of a) if (k != curPage)
-        t += span+'s'+k+' '+names[suraFromPage(k)]+'</span>\n'
+        t += span+'s'+k+' '+sName[suraFromPage(k)]+'</span>\n'
     starred.innerHTML = t
 }
 function handleStars() {
@@ -540,4 +541,4 @@ function toggleWords() {
 
 initReader()
 
-// export {names, first, rootToList, wordToRoot}
+// export {rootToList, wordToRoot}
