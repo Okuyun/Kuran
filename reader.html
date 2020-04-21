@@ -18,12 +18,10 @@
   <select id=sureS></select>  
   <button id=pageS>
     Sayfa <span id=sayfa></span>&emsp;▼
-  </button> <button 
-  id=starB>&nbsp;</button>&emsp;<button 
-  id=trans>&nbsp;</button><button 
-  id=linkB>&nbsp;</button><button 
-  id=zoomB>&nbsp;</button><button 
-  id=showR>&nbsp;</button>  
+  </button> 
+  <button id=starB>&nbsp;</button>
+  <button id=trans>&nbsp;</button>  
+  <button id=linkB>&nbsp;</button>
 </div>
 
 <div id=div2>
@@ -54,15 +52,26 @@
 </div>
 
 <div id=menuK class=menu>
+   <!-- <button id=zoomB>&nbsp;</button>
+   <button id=showR>&nbsp;</button> -->
+   <span class=menuK id=showR>Kelime kökleri</span>
+   <span class=menuK id=zoomB>Büyüteç</span>
+   <hr>
    <span class="menuK">quran.com</span>
    <span class="menuK">corpus.quran.com</span>
    <span class="menuK">kuranmeali.com</span>
    <span class="menuK">acikkuran.com</span>
-   <!--span class="menuK">Reader</span-->
    <hr><div  id=version></div>
    <span class="menuK">Yardım -- F1</span>
    <span class="menuK" id=add2hs hidden>Install PWA</span>
    <!-- display property overrides the hidden attribute -->
+</div>
+
+<div id=menuV class=menu>
+   <span class="menuK">quran.com</span>
+   <span class="menuK">corpus.quran.com</span>
+   <span class="menuK">kuranmeali.com</span>
+   <span class="menuK">acikkuran.com</span>
 </div>
 
 <script src="code/buckwalter.js"></script>

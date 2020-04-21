@@ -30,17 +30,10 @@ body {
     #div3, #sureS, #pageS {
       font-size: 14px;
     }
-    #div2 { 
-      overflow-y: auto;
-      margin: 0 auto;
-      width: 844px;
-    }
     #text, #html {
       width: 400px; 
       display: inline-block;
       vertical-align: middle;
-      /* overflow-y: auto;
-      height: 88vh; */
       border: black 1px solid;
     }
     #text { 
@@ -145,7 +138,7 @@ body {
       margin: 0;
     }
     .divider { 
-      height: 48px;
+      height: 50px;
       margin-top: 8px;
       background-image: url(../image/sura.png);
       background-repeat: no-repeat;
@@ -233,10 +226,10 @@ button:hover {
 #linkB {
     background-image: url(../image/menu.png);
 }
-#zoomB {
+/* #zoomB {
     background-image: url(../image/search.png);
 }
 #showR {
     background-image: url(../image/Kay.png);
-}
+} */
 

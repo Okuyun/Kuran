@@ -81,32 +81,48 @@ function markVerse(cv, cls='gri') {
   }
     // markPattern('[^﴾﴿]*﴿'+numberToArabic(n)+'﴾?', 'cls)
     // let e = new RegExp(n+'[\.-](.)+\n', 'g')
-    let id = '#_'+cv.replace(':', '_')
+    let id = '#c'+cv.replace(':', '_')
     mark(html); mark(text)
 }
 function displayWord(evt) {
+    evt.preventDefault(); //hideMenus()
     if (!showR.style.backgroundColor) return
-    let t = evt.target
-    let w = t.innerText.trim()
-    let r = wordToRoot.get(toBuckwalter(w))
-    if (!r) { hideElement(bilgi); return }
-    // let n = rootToList.get(r).length
-    bilgi.innerText = toArabic(r)  //+' => '+n
-    t.style.backgroundColor = '#ddd'; t.append(bilgi)
+    let t = evt.target, str = ''
+    if (t.id) { // t is a verse separator
+      str = t.id
+    } else { // t is a word
+      let w = t.innerText.trim()
+      let r = wordToRoot.get(toBuckwalter(w))
+      if (!r) { /* hideElement(bilgi); */ return }
+      // let n = rootToList.get(r).length
+      str = toArabic(r)  //+' => '+n
+    }
+    t.style.backgroundColor = '#ddd'  //mark target
+    bilgi.innerText = str
     let y = t.offsetTop + t.offsetHeight
     setPosition(bilgi, t.offsetLeft+24, y-6, 105)
+    t.append(bilgi)
 }
 function selectWord(evt) {
-    let s = window.getSelection()
-    if (!s.toString()) { //select word
+    evt.preventDefault(); //hideMenus()
+    let t = evt.target
+    if (t.id) { // t is a verse separator
+      let y = Math.max(evt.clientY-150, 0)
+      setPosition(menuV, evt.clientX, y)
+      t.append(menuV)
+    } else { // t is a word
+      let s = window.getSelection()
+      if (!s.toString()) { //select word
         let range = document.createRange();
         range.selectNodeContents(evt.target);
         s.removeAllRanges(); s.addRange(range);
+      }
+      setPosition(menuC, evt.clientX, evt.clientY-60, 220)
     }
 }
 function hideWord(evt) {
     evt.target.style.backgroundColor = ''
-    hideElement(bilgi)
+    hideElement(bilgi); hideElement(menuV)
 }
 function adjustPage(adj) {
     infoS.style.display = adj? 'block' : ''
@@ -125,23 +141,26 @@ function gotoPage(k, adjusting) { // 1<=k<=P
     if (curPage == k) return;
     setSura(suraFromPage(k));
     if (adjusting == 'slider') return;
-    curPage = k;
-    slider.value = k;
+    curPage = k; slider.value = k;
+    document.body.append(menuV)
     text.innerHTML = kur.pageToHTML(k)
     html.innerHTML = qur.pageToHTML(k)
     starB.style.backgroundColor = 
         bookmarks.has(k)? CHECKED : ''
     let wc = html.childElementCount
     console.log('Page '+k, wc+' verses');
-    for (let x of html.querySelectorAll('span')) {
-      x.onmouseenter = displayWord
-      x.onmouseleave = hideWord
-      x.oncontextmenu = selectWord
-    }
+    for (let e of html.querySelectorAll('span')) 
+      for (let x of e.querySelectorAll('span')) {
+        x.onmouseenter = displayWord
+        x.onmouseleave = hideWord
+        x.oncontextmenu = selectWord
+      }
     bilgi = document.createElement('span')
     bilgi.id = 'bilgi'; document.body.append(bilgi)
-    bilgi.onclick = 
-      () => {openMujam(toBuckwalter(bilgi.innerText))} 
+    bilgi.onclick = () => {
+      if (bilgi.parentElement.id) return
+      openMujam(toBuckwalter(bilgi.innerText))
+    } 
     if (adjusting != 'hashInProgress') //cv are not set
       location.hash = '#p='+curPage
     setStorage(false)
@@ -274,31 +293,6 @@ function initialPage() {
       gotoPage(k)
     }
 }
-function resize() { //not used -- reverted to CSS
-  let W = Math.min(window.innerWidth, screen.width)
-  console.log('resize', innerWidth, screen.width)
-  if (W <= 850) { //single column
-    title.style.display = 'none'
-    zoomB.style.display = 'none'
-    div2.style.width = '100%'
-    text.style.display = 'none'
-    text.style.fontSize = '3.3vw'
-    div3.style.fontSize = '3vw'
-    sureS.style.fontSize = '3vw'
-    html.style.fontSize = '4.5vw'
-    bilgi.style.fontSize = '4.5vw'
-  } else { //two columns
-    title.style.display = ''
-    zoomB.style.display = ''
-    div2.style.width = ''
-    text.style.display = ''
-    text.style.fontSize = ''
-    div3.style.fontSize = ''
-    sureS.style.fontSize = ''
-    html.style.fontSize = ''
-    bilgi.style.fontSize = ''
-  }
-}
 function initReader() {
     title.innerHTML = 'Iqra '+VERSION+'&emsp;';
     version.innerText = 'Iqra '+VERSION;
@@ -362,7 +356,7 @@ function initReader() {
  * Start of Menu functions -- added by Abdurrahman Rajab - FSMVU
  * Ref: https://dev.to/iamafro/how-to-create-a-custom-context-menu--5d7p
  *
- * We have two Menu elements: menuC (context)  menuK (open source)
+ * Menu elements: menuC (context)  menuK (button)  menuV (verse)
  *
  */
 var //LINKF = 'https://a0m0rajab.github.io/BahisQurani/finder.html#w='
@@ -412,9 +406,19 @@ function menuFn() {
       let [x, k] = t.split(/s| /)
       if (Number(k)) gotoPage(Number(k))
   }
-  menuK.onclick = (evt) => { //external source menu
+  menuK.onclick = (evt) => { //menu button
       evt.preventDefault()
       openSitePage(evt.target.innerText[0], curPage)
+  }
+  function openSite(s) {
+      let id = menuV.parentElement.id
+      if (!id) return
+      let [c, v] = id.substring(2).split(':')
+      openSiteVerse(s, c, v)
+  }
+  menuV.onclick = (evt) => { //external source menu
+      evt.preventDefault()
+      openSite(evt.target.innerText[0])
   }
   document.onkeydown = (evt) => {
       let k = evt.key.toUpperCase()
@@ -426,6 +430,8 @@ function menuFn() {
           menuItem(k)
       else if (menuK.style.display)
           openSitePage(k, curPage)
+      else if (menuV.style.display)
+          openSite(k)
       else switch (k) {
           case 'ARROWLEFT':
             if (!evt.altKey && !evt.ctrlKey && !evt.metaKey)
@@ -453,12 +459,7 @@ function menuFn() {
   window.hideMenus = () => { 
       hideElement(menuC); hideElement(menuK); 
       hideElement(menuS); hideElement(bilgi)
-      linkB.style.backgroundColor = ''
-  }
-  html.oncontextmenu = (evt) => {
-      evt.preventDefault(); 
-      hideElement(menuK); linkB.style.backgroundColor = ''
-      setPosition(menuC, evt.clientX, evt.clientY-60, 220)
+      hideElement(menuV); linkB.style.backgroundColor = ''
   }
 }
 /**
@@ -525,7 +526,8 @@ function toggleMenuK() {
       setPosition(menuK, e.offsetLeft+10, e.offsetTop+35, 120)
     }
 }
-function toggleZoom() {
+function toggleZoom(evt) {
+    evt.stopPropagation()
     let e = document.body
     if (zoomB.style.backgroundColor) {
       e.style.transform = ''
@@ -535,7 +537,8 @@ function toggleZoom() {
       zoomB.style.backgroundColor = CHECKED
     }
 }
-function toggleWords() {
+function toggleWords(evt) {
+    evt.stopPropagation()
     if  (showR.style.backgroundColor)
          showR.style.backgroundColor = ''
     else showR.style.backgroundColor = CHECKED

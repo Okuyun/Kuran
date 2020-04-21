@@ -56,8 +56,7 @@ class KuranText {
     }
     pageToHTML(p) {
       let newChapter = () => {
-        // let br = i==index[p]+1? '' : '<BR>'; //semicolon required
-        [c, v] = toCV(i)
+        [c, v] = toCV(i) // c, v are declared below
         out.push('<div class=divider>'+this.chapName(c)+'</div>')
         if (c!=1 && c!=9)
           out.push('<div class=besmele>'+this.besmele+'</div>')
@@ -68,7 +67,7 @@ class KuranText {
         while (i <= k) { //for each verse x
           let s = this.getVerse(i)
           if (s.startsWith('1.')) newChapter()
-          let id = '_'+c+'_'+v
+          let id = 'c'+c+'_'+v
           out.push(this.verseToHTML(id, s))
           i++; v++
         }
@@ -77,17 +76,18 @@ class KuranText {
     getVerse(i) { return this.data[i] }
     toString() { return url }
 }
-/** Reads original Quran in Arabic */
+/** Reads Quran text in Arabic */
 class QuranText extends KuranText {
     constructor(url, callback) { super(url, callback) }
     /** we override three methods */
     chapName(c) { return ' سورة '+aName[c] }
     get besmele() { return 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ' }
     verseToHTML(id, s) {
-      let [n,...a] = s.split(/\.? /)  //divide into words
-      // a.length-- //skip last char '\n'
+      let cv = id.substring(1).replace('_', ':') 
+      let [n, ...a] = s.split(/\.? /)  //divide into words
+      let num = ' ﴿'+numberToArabic(n)+'﴾ '
       s = a.map(w => '<span>'+w+'</span>').join(' ')
-        + ' ﴿'+numberToArabic(n)+'﴾ '
+        + '<span id=v='+cv+'>'+num+'</span>' 
       return '<span id='+id+'>'+s+'</span>' //no <BR>
     }
 }
