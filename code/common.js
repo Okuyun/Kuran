@@ -3,12 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4c1";
-
-/**
- * Location for data files
- */
-const DATA_URL = "https://maeyler.github.io/Iqra3/data/";
+const VERSION = "V4c2";
 
 /**
  * &emsp; used in both Mujam
@@ -121,5 +116,5 @@ async function fetch_text_then(url, callback) {
     callback(t)
 }
 
-// export {VERSION, DATA_URL, EM_SPACE, setPosition, hideElement, 
+// export {VERSION, EM_SPACE, setPosition, hideElement, 
 //     openSitePage, openSiteVerse, fetch_text_then}

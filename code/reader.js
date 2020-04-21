@@ -1,12 +1,11 @@
 "use strict";
 
 // import {pageOf, timeString} from './utilities.js';
-// import {VERSION, DATA_URL, setPosition, 
+// import {VERSION, setPosition, 
 //     hideElement, openSitePage, fetch_text_then} from './common.js'
 // import {toArabic, toBuckwalter} from "./buckwalter.js"
 // import {readTabularData, submitData} from "./submitForm.js"
 
-//const DATA_URL = "https://maeyler.github.io/Iqra3/data/"; in common.js
 const M = 114; //suras
 // const names = new Array(M+1);
 // const first = new Array(M+1);
@@ -85,19 +84,6 @@ function markVerse(cv, cls='gri') {
     let id = '#_'+cv.replace(':', '_')
     mark(html); mark(text)
 }
-/* function suraFromPage(k) {
-    let i = 1;
-    while (k > first[i]) i++;
-    if (k < first[i]) i--;
-    return i;
-}
-function suraContainsPage(k) { not used
-    if (curSura == M) return (k == P);
-    let i = first[curSura];
-    let j = first[curSura+1];
-    if (i == j) return (k == i);
-    return (i<=k && k<j);
-} */
 function displayWord(evt) {
     if (!showR.style.backgroundColor) return
     let t = evt.target
@@ -146,7 +132,7 @@ function gotoPage(k, adjusting) { // 1<=k<=P
     starB.style.backgroundColor = 
         bookmarks.has(k)? CHECKED : ''
     let wc = html.childElementCount
-    console.log('Page '+k, wc+' words');
+    console.log('Page '+k, wc+' verses');
     for (let x of html.querySelectorAll('span')) {
       x.onmouseenter = displayWord
       x.onmouseleave = hideWord
@@ -230,22 +216,7 @@ function dragEnd(evt) {
     console.log("animate", tr2)
     trg.animate({transform:[tr1, tr2]}, 300)
 }
-/* function readNames(name) {
-    function toNames(t) {
-      let i = 0, labels = []
-      for (let s of t.split('\n')) {
-        i++; //skip 0
-        let [f, n] = s.split('\t'); //TAB
-        names[i] = n; labels.push(i+'. '+n)
-        first[i] = Number(f)
-      }
-      console.log(name, names.length); labels.pop()
-      sureS.innerHTML = '<option>'+labels.join('<option>')
-    }
-  //fetch(DATA_URL+name).then(x => x.text()).then(toNames)
-    fetch_text_then(DATA_URL+name, toNames)
-} */
-function readWords(name) {
+function readWords() {
     function toWords(t) {
       for (let s of t.split('\n')) {
         let [root, ...L] = s.split(' ');
@@ -256,8 +227,9 @@ function readWords(name) {
       }
       console.log(name, rootToList.size, wordToRoot.size); 
     }
+    const name = "data/words.txt"
   //fetch(DATA_URL+name).then(x => x.text()).then(toWords)
-    fetch_text_then(DATA_URL+name, toWords)
+    fetch_text_then(name, toWords)
 }
 function gotoHashPage() {
 //re-designed by Abdurrahman Rajab
@@ -302,6 +274,31 @@ function initialPage() {
       gotoPage(k)
     }
 }
+function resize() { //not used -- reverted to CSS
+  let W = Math.min(window.innerWidth, screen.width)
+  console.log('resize', innerWidth, screen.width)
+  if (W <= 850) { //single column
+    title.style.display = 'none'
+    zoomB.style.display = 'none'
+    div2.style.width = '100%'
+    text.style.display = 'none'
+    text.style.fontSize = '3.3vw'
+    div3.style.fontSize = '3vw'
+    sureS.style.fontSize = '3vw'
+    html.style.fontSize = '4.5vw'
+    bilgi.style.fontSize = '4.5vw'
+  } else { //two columns
+    title.style.display = ''
+    zoomB.style.display = ''
+    div2.style.width = ''
+    text.style.display = ''
+    text.style.fontSize = ''
+    div3.style.fontSize = ''
+    sureS.style.fontSize = ''
+    html.style.fontSize = ''
+    bilgi.style.fontSize = ''
+  }
+}
 function initReader() {
     title.innerHTML = 'Iqra '+VERSION+'&emsp;';
     version.innerText = 'Iqra '+VERSION;
@@ -328,10 +325,15 @@ function initReader() {
     for (let i=1; i<=M; i++)
       labels.push(i+'. '+sName[i])
     sureS.innerHTML = '<option>'+labels.join('<option>')
-    readWords("words.txt");
-    // readNames("iqra.names"); 
-    // readText("Kuran.txt", kur); readText("Quran.txt", qur); 
-    menuFn(); 
+    try {
+      readWords();
+      // readNames("iqra.names"); 
+      // readText("Kuran.txt", kur); 
+      // readText("Quran.txt", qur); 
+      menuFn(); 
+    } catch (e) {
+      console.error(e)
+    }
     var prevTime
     document.onvisibilitychange = () => {
       if (document.hidden) {
@@ -346,6 +348,7 @@ function initReader() {
       }
     }
   
+    // window.onresize = resize
     window.onhashchange = gotoHashPage
     window.name = "iqra" //by A Rajab
     let {roots, marks} = getStorage()
@@ -476,7 +479,7 @@ function toggleTrans() {
       trans.style.backgroundColor = ''
     } else { //hide html
       html.style.display = 'none'
-      text.style.display = 'block'
+      text.style.display = 'inline-block'
       trans.style.backgroundColor = CHECKED
     }
 }

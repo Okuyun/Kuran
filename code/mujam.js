@@ -1,6 +1,6 @@
 "use strict";
 
-// import {VERSION, DATA_URL, EM_SPACE, setPosition, hideElement, 
+// import {VERSION, EM_SPACE, setPosition, hideElement, 
 //     openSitePage, openSiteVerse, fetch_text_then} from './common.js'
 // import {VerseRef, RefSet, nPage, encodeLine, labels} from './utilities.js'
 // import {toArabic, toBuckwalter} from "./buckwalter.js"
@@ -478,8 +478,8 @@ sajda = [175, 250, 271, 292, 308, 333, 364, 378, 415, 453, 479, 527, 589, 597, 9
     makeMenu(menu1, letters); 
     try {
         out2.innerText = "Reading data"
-        // const DATA_URL = "https://maeyler.github.io/Iqra3/data/" in common.js
-        fetch_text_then(DATA_URL+"refs.txt", report2)
+        // const DATA_URL = "https://maeyler.github.io/Iqra3/data/" 
+        fetch_text_then("data/refs.txt", report2)
     } catch(err) { 
         out2.innerText = ""+err;
     }
