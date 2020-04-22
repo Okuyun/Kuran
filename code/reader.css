@@ -178,7 +178,7 @@ body {
       font: 13px sansserif, arial;
       user-select: none;
       overflow-y: auto;
-      max-height: 70vh;
+      max-height: 80vh;
       z-index: 1;
     }
     #version { 
@@ -192,7 +192,7 @@ body {
       display: inline-block;
       padding: 10px 12px;
     }
-    .menuC:hover, .menuK:hover {
+    img:hover, .menuC:hover, .menuK:hover {
       background-color: rgba(0, 0, 0, 0.2);
     }
     #menuS {
@@ -208,6 +208,7 @@ Icons made by
 <a href=https://www.flaticon.com/authors/kiranshastry>Kiranshastry</a> 
 from <a href=https://www.flaticon.com/>www.flaticon.com</a>
 */
+img { width: 32px; }
 button {
     background-size: contain;
     background-repeat: no-repeat;

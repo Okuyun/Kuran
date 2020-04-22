@@ -527,7 +527,7 @@ function toggleMenuK() {
     }
 }
 function toggleZoom(evt) {
-    // evt.stopPropagation()
+    evt.stopPropagation()
     let e = document.body
     if (zoomB.style.backgroundColor) {
       e.style.transform = ''
@@ -539,7 +539,7 @@ function toggleZoom(evt) {
     hideMenus()
 }
 function toggleWords(evt) {
-    // evt.stopPropagation()
+    evt.stopPropagation()
     if  (showR.style.backgroundColor)
          showR.style.backgroundColor = ''
     else showR.style.backgroundColor = CHECKED
