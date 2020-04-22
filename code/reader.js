@@ -360,7 +360,7 @@ function initReader() {
  *
  */
 var //LINKF = 'https://a0m0rajab.github.io/BahisQurani/finder.html#w='
-    LINKF = '../BahisQurani/finder.html#w='
+    LINKF = 'https://maeyler.github.io/BahisQurani/finder.html#w='
 var LINKM = 'mujam.html#r='
 function openMujam(...a) { //array of roots in Buckwalter
     let p = a.join('&r=')
@@ -527,7 +527,7 @@ function toggleMenuK() {
     }
 }
 function toggleZoom(evt) {
-    evt.stopPropagation()
+    // evt.stopPropagation()
     let e = document.body
     if (zoomB.style.backgroundColor) {
       e.style.transform = ''
@@ -536,13 +536,15 @@ function toggleZoom(evt) {
       e.style.transform ='scale(1.16) translate(0, 8%)'
       zoomB.style.backgroundColor = CHECKED
     }
+    hideMenus()
 }
 function toggleWords(evt) {
-    evt.stopPropagation()
+    // evt.stopPropagation()
     if  (showR.style.backgroundColor)
          showR.style.backgroundColor = ''
     else showR.style.backgroundColor = CHECKED
     setStorage(false)
+    hideMenus()
 }
 
 initReader()

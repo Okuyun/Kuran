@@ -69,7 +69,7 @@ function reportHash(e) {
 }
 function hashModified() {
   let h = decodedHash()
-  // console.log('** hashInProgress='+hashInProgress, h)
+  console.log('** hashInProgress='+hashInProgress, h)
   if (hashInProgress || !h || h.length<3) {
     hashInProgress = false; return 
   } else switch (h.substring(0, 2)) { //new address entered
@@ -80,7 +80,7 @@ function hashModified() {
       window.open('mujam.html#'+h, 'finder')
       break;
     case 'b=': case 'w=':
-      window.open('../BahisQurani/finder.html#'+h, 'finder')
+      window.open('https://maeyler.github.io/BahisQurani/finder.html#'+h, 'finder')
       break
     default:
         console.log('unknown hash entered', h)
@@ -150,8 +150,8 @@ function resize() {
   var initialHash = decodedHash()
   console.log('* start *', initialHash, location.hash)
   readFrm.style.display = 'none' //hide iqra frame
-  setTitle('Iqra ')
-  window.name = 'iqra'+VERSION
+  setTitle('Iqra V4')
+  window.name = 'iqraTop'
   window.onresize = resize
   window.onhashchange = hashModified
   closeM.onclick = hideFinder
