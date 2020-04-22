@@ -1,9 +1,6 @@
 "use strict";
 const PREF ='iqra', CACHE = PREF+'02'
 const FILES = [
-  'data/Quran.txt',
-  'data/Kuran.txt',
-  'data/iqra.names',
   'data/words.txt',
   'data/refs.txt',
   'image/sura.png',
