@@ -1,5 +1,6 @@
 "use strict";
-// sName, aName: Sura names 1-114
+
+/** Sura names in Turkish -- 1-114 */
 const sName
 =["","Fatiha","Bakara","Ali İmran","Nisa","Maide","Enam","Araf","Enfal",
 "Tevbe","Yunus","Hud","Yusuf","Rad","İbrahim","Hicr","Nahl","İsra","Kehf"
@@ -15,6 +16,7 @@ const sName
 ,"Kadir","Beyyine","Zilzal","Adiyat","Karia","Tekasur","Asr","Hümeze","Fil"
 ,"Kureyş","Maun","Kevser","Kafirun","Nasr","Leheb","İhlas","Felak","Nas"]
 
+/** Sura names in Arabic */
 const aName 
 =  ["","الفاتحة","البقرة","آل عمران","النساء","المائدة","الأنعام"
 ,"الأعراف","الأنفال","التوبة","يونس","هود","يوسف","الرعد","ابراهيم"
@@ -32,6 +34,15 @@ const aName
 ,"العاديات","القارعة","التكاثر","العصر","الهمزة","الفيل","قريش"
 ,"الماعون","الكوثر","الكافرون","النصر","المسد","الإخلاص","الفلق","الناس"]
 
+/**
+ * Global array to hold the index numbers of Sajda.
+ * 
+ * sajdaX.map(i => pageOf(c=toChapter(i), i-last[c-1]))
+ * gives sajdaP used in mujam.js
+ */
+const sajdaX = [1160, 1722, 1950, 2138, 2308, 2613, 2915, 
+                3184, 3518, 3994, 4255, 4846, 5905, 6125]
+
 /** Reads a text file -- Quran translation
  *  one line for each verse that begins with "c|v|"
  */
@@ -43,14 +54,16 @@ class KuranText {
         let a = ('\n'+tt).replace(/\|/g, '. ').split(/\n\d+\. /)
         //trim the credits at the end
         a[6236] = a[6236].split(/\n/)[0]
+        for (let i of sajdaX) a[i] += this.secde 
         this.data = a; this.loaded = true
         if (callback) callback(a)
       }
         this.url = url; this.data = []
         fetch_text_then(url, process)
     }
-    chapName(c) { return '('+c+') '+sName[c]+' Suresi' }
+    chapName(c)   { return '('+c+') '+sName[c]+' Suresi' }
     get besmele() { return 'Bismillahirrahmanirrahim' }
+    get secde()   { return ' [S] ' }
     verseToHTML(id, s) {
       return '<span id='+id+'>'+s+'</span><BR>'
     }
@@ -79,9 +92,10 @@ class KuranText {
 /** Reads Quran text in Arabic */
 class QuranText extends KuranText {
     constructor(url, callback) { super(url, callback) }
-    /** we override three methods */
-    chapName(c) { return ' سورة '+aName[c] }
+    /** override 4 methods below */
+    chapName(c)   { return ' سورة '+aName[c] }
     get besmele() { return 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ' }
+    get secde()   { return ' ۩ ' }
     verseToHTML(id, s) {
       let cv = id.substring(1).replace('_', ':') 
       let [n, ...a] = s.split(/\.? /)  //divide into words

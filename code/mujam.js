@@ -22,10 +22,10 @@ var tRefs = new Map();
  */
 var wRefs = [];
 /**
- * Global array to hold the places of Sajda.
- * used in marking sajdah verses
+ * Global array to hold the page numbers of Sajda.
  */
-var sajda;
+const sajdaP = [175, 250, 271, 292, 308, 333, 364, 
+            378, 415, 453, 479, 527, 589, 597, 999]
 /**
  * child window (or tab) to display Quran
  * the same window is used on each click
@@ -373,7 +373,7 @@ function displayTable(set) {
                 c = L.length
                 numC += c; numP++
             }
-            let ch = sajda.includes(pn)? "۩" : "&nbsp;"
+            let ch = sajdaP.includes(pn)? "۩" : "&nbsp;"
             row += "<td style='" +toColor(c)+"'>"+ ch + "</td>"
         }
         if (i > m) { //use th for the last row
@@ -472,7 +472,6 @@ function gotoHashRoot() {
 function initMujam() {
     version.innerText = 'Iqra '+VERSION;
     //showSelections(false);
-sajda = [175, 250, 271, 292, 308, 333, 364, 378, 415, 453, 479, 527, 589, 597, 999]
     let letters = [];
     for (let c=1575; c<1609; c++) letters.push(String.fromCharCode(c));
     makeMenu(menu1, letters); 
