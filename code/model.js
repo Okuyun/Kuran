@@ -45,6 +45,9 @@ const sajdaX = [1160, 1722, 1950, 2138, 2308, 2613, 2915,
 
 /** Reads a text file -- Quran translation
  *  one line for each verse that begins with "c|v|"
+ * 
+ *  Usage: kur = new KuranText('tr.yazir.txt', initialPage)
+ *    kur.loaded, kur.getVerse(i),  kur.pageToHTML(p)
  */
 class KuranText {
     constructor(url, callback) {
@@ -56,9 +59,12 @@ class KuranText {
         a[6236] = a[6236].split(/\n/)[0]
         for (let i of sajdaX) a[i] += this.secde 
         this.data = a; this.loaded = true
+        console.log(this.url, a.length)
         if (callback) callback(a)
       }
         this.url = url; this.data = []
+        if (!url.startsWith('http'))
+          url = 'https://maeyler.github.io/BahisQurani/data/'+url
         fetch_text_then(url, process)
     }
     chapName(c)   { return '('+c+') '+sName[c]+' Suresi' }
@@ -106,4 +112,37 @@ class QuranText extends KuranText {
     }
 }
 
-// export {sName, aName, KuranText, QuranText}
+/** Keeps data related to words and roots
+ *  Usage: MD = new MujamData()
+ *    MD.rootToList('mrj') => ["maraja", ...]
+ *    MD.wordToRoot('maraja') => "mrj"
+ */
+class MujamData {
+  constructor(callback){
+    let toWords = (t) => {
+      for (let s of t.split('\n')) {
+        let [root, ...L] = s.split(' ')
+        //keep L in Buckwalter form
+        this._root2List.set(root, L)
+        for (let w of L) 
+          this._word2Root.set(w, root)
+      }
+      this.loaded = true; Object.freeze(this)
+      let n1 = this._root2List.size+' roots'
+      let n2 = this._word2Root.size+' words'
+      console.log('MujamData', n1, n2)
+      if (callback) callback(t)
+    }
+    if (!MujamData.instance) { //singleton
+      this._root2List = new Map()
+      this._word2Root = new Map()
+      fetch_text_then('data/words.txt', toWords)
+      MujamData.instance = this
+    }
+    return MujamData.instance
+  }
+  wordToRoot(w) { return this._word2Root.get(w) }
+  rootToList(w) { return this._root2List.get(w) }
+}
+
+// export {sName, aName, KuranText, QuranText, MujamData }

@@ -10,12 +10,11 @@ const M = 114; //suras
 // const names = new Array(M+1);
 // const first = new Array(M+1);
 const P = 604; //pages
-const LOCATION = 'https://maeyler.github.io/BahisQurani/data/'
-const kur = new KuranText(LOCATION+'tr.yazir.txt', initialPage)
-const qur = new QuranText(LOCATION+'quran-uthmani.txt', initialPage)
-const LINK = "http://kuranmeali.com/Sayfalar.php?sayfa=";
-const rootToList = new Map()
-const wordToRoot = new Map()
+const kur = new KuranText('tr.yazir.txt', initialPage)
+const qur = new QuranText('quran-uthmani.txt', initialPage)
+const MD  = new MujamData()
+// const rootToList = new Map()
+// const wordToRoot = new Map()
 const CHECKED = '#ff7' // color when the button is down
 const swipe = { t:0, x:0, y:0 }
 var curSura, curPage, bilgi, bookmarks;
@@ -68,7 +67,7 @@ function forceSelection() {
 function markWord(w, root, cls='mavi') {
     for (let x of html.querySelectorAll('span')) {
       let b = toBuckwalter(x.innerText.trim())
-      if (root) b = wordToRoot.get(b)
+      if (root) b = MD.wordToRoot(b)
       if (b != w) continue
       x.classList.add(cls)
     }
@@ -92,9 +91,9 @@ function displayWord(evt) {
       str = t.id
     } else { // t is a word
       let w = t.innerText.trim()
-      let r = wordToRoot.get(toBuckwalter(w))
+      let r = MD.wordToRoot(toBuckwalter(w))
       if (!r) { /* hideElement(bilgi); */ return }
-      // let n = rootToList.get(r).length
+      // let n = MD.rootToList(r).length
       str = toArabic(r)  //+' => '+n
     }
     t.style.backgroundColor = '#ddd'  //mark target
@@ -235,21 +234,6 @@ function dragEnd(evt) {
     console.log("animate", tr2)
     trg.animate({transform:[tr1, tr2]}, 300)
 }
-function readWords() {
-    function toWords(t) {
-      for (let s of t.split('\n')) {
-        let [root, ...L] = s.split(' ');
-        //keep L in Buckwalter form
-        //L = L.map(toArabic)
-        rootToList.set(root, L);
-        for (let w of L) wordToRoot.set(w, root)
-      }
-      console.log(name, rootToList.size, wordToRoot.size); 
-    }
-    const name = "data/words.txt"
-  //fetch(DATA_URL+name).then(x => x.text()).then(toWords)
-    fetch_text_then(name, toWords)
-}
 function gotoHashPage() {
 //re-designed by Abdurrahman Rajab
 //all text is in Buckwalter
@@ -265,7 +249,7 @@ function gotoHashPage() {
         document.title = 'Iqra Sayfa '+s
         break
       case 'r': // r=Sbr
-        let L = rootToList.get(s)
+        let L = MD.rootToList(s)
         if (L) markWord(s, true)
         break
       case 'w': // w=yuwsuf
@@ -289,8 +273,7 @@ function initialPage() {
     initialized = kur.loaded && qur.loaded
     if (initialized && !gotoHashPage()) {
       console.log("initialPage")
-      let k = getStorage().page || 1
-      gotoPage(k)
+      gotoPage(getStorage().page || 1)
     }
 }
 function initReader() {
@@ -319,15 +302,9 @@ function initReader() {
     for (let i=1; i<=M; i++)
       labels.push(i+'. '+sName[i])
     sureS.innerHTML = '<option>'+labels.join('<option>')
-    try {
-      readWords();
-      // readNames("iqra.names"); 
-      // readText("Kuran.txt", kur); 
-      // readText("Quran.txt", qur); 
+    menuFn(); 
       menuFn(); 
-    } catch (e) {
-      console.error(e)
-    }
+    menuFn(); 
     var prevTime
     document.onvisibilitychange = () => {
       if (document.hidden) {
@@ -383,7 +360,7 @@ function menuFn() {
           case 'M':
               let a = []
               for (let w of s.split(' ')) {
-                let r = wordToRoot.get(toBuckwalter(w))
+                let r = MD.wordToRoot(toBuckwalter(w))
                 if (r) a.push(r)
               }
               if (a.length > 0) openMujam(...a)
@@ -548,5 +525,3 @@ function toggleWords(evt) {
 }
 
 initReader()
-
-// export {rootToList, wordToRoot}

@@ -316,7 +316,7 @@ const labels = ['']
  * 
  */
 function init() {
-    console.log(nChap + " suras -> " + nVerse);
+    console.log('init', nChap + " suras -> " + nVerse);
     // count of verses in a page.
     const count = [0, 12, 11, 8, 5, 8, 11, 9, 4, 8, 7, 7, 5, 5, 8, 4, 7, 7, 7, 8, 7, 4, 8, 10, 6, //7,5
         7, 5, 5, 4, 6, 6, 8, 5, 4, 5, 6, 3, 4, 8, 3, 4, 4, 3, 5, 5, 5, 7, 1, 4, 9, 6, 7, 7, 8, 8, 7, 9, 9,
@@ -353,7 +353,7 @@ function init() {
         let v = new VerseRef(index[p]+1)
         labels.push(v.toString())
     }
-    console.log(nPage + " pages -> " + index[nPage]);
+    // console.log(nPage + " pages -> " + index[nPage]);
 }
 
  init()
