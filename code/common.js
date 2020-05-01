@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4c5";
+const VERSION = "V4c7";
 
 /**
  * &emsp; used in both Mujam

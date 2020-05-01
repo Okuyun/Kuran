@@ -1,8 +1,8 @@
 "use strict";
 
 // import {pageOf, timeString} from './utilities.js';
-// import {VERSION, setPosition, 
-//     hideElement, openSitePage, fetch_text_then} from './common.js'
+// import {VERSION, setPosition, hideElement, fetch_text_then, 
+//         openSitePage, openSiteVerse} from './common.js
 // import {toArabic, toBuckwalter} from "./buckwalter.js"
 // import {readTabularData, submitData} from "./submitForm.js"
 
@@ -12,12 +12,13 @@ const M = 114; //suras
 const P = 604; //pages
 const kur = new KuranText('tr.yazir.txt', initialPage)
 const qur = new QuranText('quran-uthmani.txt', initialPage)
-const MD  = new MujamData()
+const MD  = new MujamData('data/words.txt')
+const SD  = new SimData('data/simi.txt')
 // const rootToList = new Map()
 // const wordToRoot = new Map()
 const CHECKED = '#ff7' // color when the button is down
 const swipe = { t:0, x:0, y:0 }
-var curSura, curPage, bilgi, bookmarks;
+var curSura, curPage, bookmarks;
 var initialized = false
 window.mujam = undefined
 
@@ -86,29 +87,25 @@ function markVerse(cv, cls='gri') {
 function displayWord(evt) {
     evt.preventDefault(); //hideMenus()
     if (!showR.style.backgroundColor) return
-    let t = evt.target, str = ''
-    if (t.id) { // t is a verse separator
-      str = t.id
-    } else { // t is a word
-      let w = t.innerText.trim()
-      let r = MD.wordToRoot(toBuckwalter(w))
-      if (!r) { /* hideElement(bilgi); */ return }
-      // let n = MD.rootToList(r).length
-      str = toArabic(r)  //+' => '+n
-    }
+    let t = evt.target 
     t.style.backgroundColor = '#ddd'  //mark target
-    bilgi.innerText = str
+    if (!t.tText ) return
+    if (t.id) { // t is a verse separator
+      bilgi.style.font = '14px sans'
+    } else { // t is a word
+      bilgi.style.font = ''
+    }
+    bilgi.innerText = t.tText 
     let y = t.offsetTop + t.offsetHeight
     setPosition(bilgi, t.offsetLeft+24, y-6, 105)
-    t.append(bilgi)
 }
 function selectWord(evt) {
-    evt.preventDefault(); //hideMenus()
+    evt.preventDefault(); hideMenus()
     let t = evt.target
     if (t.id) { // t is a verse separator
       let y = Math.max(evt.clientY-150, 0)
+      menuV.cv = t.id
       setPosition(menuV, evt.clientX, y)
-      t.append(menuV)
     } else { // t is a word
       let s = window.getSelection()
       if (!s.toString()) { //select word
@@ -121,7 +118,6 @@ function selectWord(evt) {
 }
 function hideWord(evt) {
     evt.target.style.backgroundColor = ''
-    hideElement(bilgi); hideElement(menuV)
 }
 function adjustPage(adj) {
     infoS.style.display = adj? 'block' : ''
@@ -131,8 +127,33 @@ function adjustPage(adj) {
       infoS.innerText = s
     }
 }
+function doClick() {
+    let t = bilgi.innerText
+    if (bilgi.style.font) { // verse separator
+      console.log(location.hash+' to '+t)
+      location.hash = '#v='+t.split(' ')[0]
+    } else { // a word
+      openMujam(toBuckwalter(t))
+    }
+} 
 function gotoPage(k, adjusting) { // 1<=k<=P
 //This is the only place where hash is set
+  function doVerse(e) {
+      for (let x of e.children) {
+        x.onmouseenter = displayWord
+        x.onmouseleave = hideWord
+        x.oncontextmenu = selectWord
+        if (x.id) { // x is a verse separator
+          // let i = cvToIndex(x.id.substring(2))
+          x.tText = SD.similarTo(idx)
+          if (x.tText) x.classList.add('gri')
+        } else { // x is a word
+          let w = x.innerText.trim()
+          let r = MD.wordToRoot(toBuckwalter(w))
+          if (r) x.tText = toArabic(r)   
+        }
+      }
+  }
     if (!k || k < 1) k = 1;
     if (k > P) k = P;
     k = Number(k);
@@ -141,25 +162,17 @@ function gotoPage(k, adjusting) { // 1<=k<=P
     setSura(suraFromPage(k));
     if (adjusting == 'slider') return;
     curPage = k; slider.value = k;
-    document.body.append(menuV)
     text.innerHTML = kur.pageToHTML(k)
     html.innerHTML = qur.pageToHTML(k)
     starB.style.backgroundColor = 
         bookmarks.has(k)? CHECKED : ''
     let wc = html.childElementCount
-    console.log('Page '+k, wc+' verses');
-    for (let e of html.querySelectorAll('span')) 
-      for (let x of e.querySelectorAll('span')) {
-        x.onmouseenter = displayWord
-        x.onmouseleave = hideWord
-        x.oncontextmenu = selectWord
-      }
-    bilgi = document.createElement('span')
-    bilgi.id = 'bilgi'; document.body.append(bilgi)
-    bilgi.onclick = () => {
-      if (bilgi.parentElement.id) return
-      openMujam(toBuckwalter(bilgi.innerText))
-    } 
+    let idx = index[curPage]  //better than cvToIndex
+    console.log('Page '+k, wc+' verses', idx)
+    for (let e of html.children) {
+        if (e.tagName != 'SPAN') continue
+        idx++; doVerse(e)
+    }
     if (adjusting != 'hashInProgress') //cv are not set
       location.hash = '#p='+curPage
     setStorage(false)
@@ -178,7 +191,8 @@ function gotoSura(c) {
     gotoPage(pageOf(c, 1));
 }
 function dragStart(evt) {
-    if (menuK.style.display || menuC.style.display || menuS.style.display) {
+    if (menuK.style.display || menuC.style.display 
+     || menuS.style.display || bilgi.style.display)  {
         hideMenus(); evt.preventDefault(); return
     }
     if (swipe.t>0) return
@@ -293,7 +307,7 @@ function initReader() {
     linkB.onclick  = toggleMenuK
     zoomB.onclick  = toggleZoom
     showR.onclick  = toggleWords
-    //bilgi.onclick -- do on each page
+    bilgi.onclick  = doClick
     leftB.onclick  = () => {gotoPage(curPage-1)}
     slider.oninput = () => {adjustPage(true)}
     slider.onchange= () => {adjustPage(false)} //committed
@@ -313,7 +327,7 @@ function initReader() {
         console.log('Start', new Date())
       } else {
         let dt = Date.now()/1000 - prevTime
-        console.log("invisible "+timeString(dt))
+        if (dt > 1000) console.log("invisible "+timeString(dt))
         if (dt > 9999 && localStorage.userName) //more than 3 hours
             readTabularData(setBookmarks, console.error)
       }
@@ -388,9 +402,8 @@ function menuFn() {
       openSitePage(evt.target.innerText[0], curPage)
   }
   function openSite(s) {
-      let id = menuV.parentElement.id
-      if (!id) return
-      let [c, v] = id.substring(2).split(':')
+      if (!menuV.cv) return
+      let [c, v] = menuV.cv.substring(2).split(':')
       openSiteVerse(s, c, v)
   }
   menuV.onclick = (evt) => { //external source menu
@@ -427,9 +440,9 @@ function menuFn() {
             evt.clientY = linkB.offsetTop +10
             toggleMenuK(evt); break
           case 'Z': case '+':
-            toggleZoom();  break
+            toggleZoom(evt);  break
           case 'K':
-            toggleWords(); break
+            toggleWords(evt); break
           default: return
       }
   }
@@ -438,6 +451,9 @@ function menuFn() {
       hideElement(menuS); hideElement(bilgi)
       hideElement(menuV); linkB.style.backgroundColor = ''
   }
+  div1.onmouseenter = hideMenus
+  div3.onmouseenter = hideMenus
+  text.onmouseenter = hideMenus
 }
 /**
 * End of menu functions 

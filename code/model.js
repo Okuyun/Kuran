@@ -116,9 +116,10 @@ class QuranText extends KuranText {
  *  Usage: MD = new MujamData()
  *    MD.rootToList('mrj') => ["maraja", ...]
  *    MD.wordToRoot('maraja') => "mrj"
+ * Ref: sitepoint.com/javascript-design-patterns-singleton/
  */
 class MujamData {
-  constructor(callback){
+  constructor(url, callback){
     let toWords = (t) => {
       for (let s of t.split('\n')) {
         let [root, ...L] = s.split(' ')
@@ -136,7 +137,7 @@ class MujamData {
     if (!MujamData.instance) { //singleton
       this._root2List = new Map()
       this._word2Root = new Map()
-      fetch_text_then('data/words.txt', toWords)
+      fetch_text_then(url, toWords)
       MujamData.instance = this
     }
     return MujamData.instance
@@ -145,4 +146,33 @@ class MujamData {
   rootToList(w) { return this._root2List.get(w) }
 }
 
-// export {sName, aName, KuranText, QuranText, MujamData }
+/** Keeps data related to similarity
+ *  Usage: SD = new SimData()
+ *    SD.similarTo(1) => [1, 223, ...]
+ * Ref: sitepoint.com/javascript-design-patterns-singleton/
+ */
+class SimData {
+  constructor(url, callback){
+    let toWords = (t) => {
+      let a = t.split('\n')
+      for (let i=0; i<a.length; i++) {
+        let s = a[i].trim()
+        let k = s.indexOf(' ')
+        let indx = cvToIndex(s.substring(0, k))
+        this._data[indx] = s.substring(k+1)
+      }
+      this.loaded = true; Object.freeze(this)
+      console.log('SimData', this._data.length+' verses')
+      if (callback) callback(t)
+    }
+    if (!SimData.instance) { //singleton
+      this._data = new Array(6237) // index 0 not used
+      fetch_text_then(url, toWords)
+      SimData.instance = this
+    }
+    return SimData.instance
+  }
+  similarTo(i) { return this._data[i] }
+}
+
+// export {sName, aName, KuranText, QuranText, MujamData, SimData }

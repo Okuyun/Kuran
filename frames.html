@@ -48,8 +48,8 @@ function setTitle(str) {
 function reportHash(e) {
   let s = '[Dış kaynak]', h = ''
   if (e.target.name == 'iqra') {
-    if (firstEvent) {
-      firstEvent = false; return
+    if (skipEvent) {
+      skipEvent = false; return
     }
     if (readFrm.style.display == 'none') hideFinder()
     s = e.target.document.title
@@ -146,8 +146,9 @@ function resize() {
     initialHash = null
   }
   var last  // finder location
-  var hashInProgress = false, firstEvent = true
+  var hashInProgress = false
   var initialHash = decodedHash()
+  var skipEvent = !initialHash
   console.log('* start *', initialHash, location.hash)
   readFrm.style.display = 'none' //hide iqra frame
   setTitle('Iqra V4')

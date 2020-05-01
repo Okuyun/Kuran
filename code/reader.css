@@ -76,6 +76,8 @@ body {
       user-select: none;
       position: absolute;
       min-width: 90px;
+      max-width: 220px;
+      padding: 8px;
       text-align: center;
       color: blue;
       background-color: #ff7;
@@ -106,6 +108,7 @@ body {
     }
     #html { 
       text-align: justify;
+      direction: rtl;
     }
     #text, #div3, #infoS { 
       font-family: sansserif, arial;
@@ -113,7 +116,6 @@ body {
     #html, #bilgi { 
       font-family: me_quran, serif;
       line-height: 2;
-      direction: rtl;
     }
     #infoS { 
       display: none;
@@ -155,6 +157,7 @@ body {
     }
     .gri { 
       background-color : #ffc;
+      border-radius: 25px;
     }
     ::selection {
       color: yellow; 

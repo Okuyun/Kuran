@@ -274,6 +274,15 @@ function toCV(i) {
     return [c, i - last[c - 1]];
 }
 /**
+ * Convert cv such as '21:30' to the index 
+ * @param {string} cv
+ * @returns {number} index
+ */
+function cvToIndex(cv) {
+    let [c, v] = cv.split(':')
+    return indexOf(Number(c), Number(v))
+}
+/**
  * Array holds the cumulative number of verses based on chapter location.
  */
 const last = [0, 7, 293, 493, 669, 789, 954, 1160, 1235, 1364,
@@ -373,4 +382,5 @@ function timeString(t) {
  }
  //window.ts = timeString  for testing
 
-// export {VerseRef, RefSet, nPage, labels, encodeLine, indexOf, pageOf, toCV, timeString}
+// export {VerseRef, RefSet, nPage, labels, encodeLine, 
+//         indexOf, pageOf, toCV, cvToIndex, timeString}
