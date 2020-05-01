@@ -300,7 +300,7 @@ function initReader() {
     text.addEventListener("touchend", dragEnd);
     html.addEventListener("touchend", dragEnd);
     sureS.onchange = () => {gotoSura(sureS.selectedIndex+1)}
-    sayNo.onkeydown= keyToPage
+    pgNum.onkeydown= keyToPage
     pageS.onclick  = handleStars
     trans.onclick  = toggleTrans
     starB.onclick  = toggleStar
@@ -462,7 +462,7 @@ function keyToPage(evt) {
     if (evt.key == 'Escape') {
       hideElement(menuS)
     } else if (evt.key == 'Enter') {
-      gotoPage(sayNo.value)
+      gotoPage(pgNum.value)
       hideElement(menuS)
     }
 }
@@ -492,8 +492,8 @@ function handleStars() {
       hideMenus(); makeStarMenu()
       let e = pageS
       setPosition(menuS, e.offsetLeft+35, e.offsetTop+35, 110)
-      sayNo.value = curPage
-      sayNo.select(0,3); sayNo.focus()
+      pgNum.value = curPage
+      pgNum.select(0,3); pgNum.focus()
     }
 }
 function toggleStar() {
