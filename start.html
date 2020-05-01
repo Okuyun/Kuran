@@ -16,7 +16,7 @@
       font: 16px arial;
     }
     #text { width: 340px; }
-    #page, #root { width: 90px; }
+    #page, #root, #cv { width: 90px; }
     button {
       background-color: yellow;
     }
@@ -30,20 +30,20 @@ Bu yazılım ile Kuran-ı Kerim'de kelimeler arayabilir, istenen sayfayı
 açabilir ya da Mucem'de kelime köklerini bulabilirsiniz.
 <hr />
 <p><label>
-Türkçe/İngilizce (Finder) <br>
+Arapça/Türkçe/İngilizce (Finder) <br>
 <input type=text id=text placeholder='Aranacak metin'>
 <button id=textB>Ara</button>
 </p>
 <p><label>
 Sayfa (Iqra) <br>
 <input type=number id=page placeholder='1-604'>
-<button id=pageB>Oku</button>
-<button id=prevB>Önceki sayfa</button>
+<button id=pageB>Oku</button> &emsp;
+<input type=text id=cv placeholder='27:30'>
 </p>
 <p><label>
 Kök (Mucem) <br>
 <input type=text id=root placeholder='ktb'>
-<button id=rootB>Kök</button>
+<button id=rootB>Kök</button> &emsp;
 </p>
 <hr />
 <p></p>
@@ -54,26 +54,25 @@ function doText() {
     let h = '#t='+text.value
     window.open('https://maeyler.github.io/BahisQurani/finder.html'+h, 'finder')
 }
-function doPage() {
-    let h = '#p='+page.value
+function doOpen(h) {
+    if (h.length < 4) return
     if (parent.iqra)
       parent.iqra.location.hash = h
     else window.open('reader.html'+h, 'iqra')
 }
 function doRoot() {
-    let h = '#r='+root.value
+    let a = root.value.split(/\s+/)
+    let h = '#r='+a.join('&r=')
     window.open('mujam.html'+h, 'finder')
 }
     title.innerText = document.title
     text.onchange = doText
     textB.onclick = doText
-    page.onchange = doPage
-    pageB.onclick = doPage
+    page.onchange = () => doOpen('#p='+page.value)
+    pageB.onclick = page.onchange
+    cv.onchange   = () => doOpen('#v='+cv.value)
     root.onchange = doRoot
     rootB.onclick = doRoot
-    if (parent.hideFinder) //opened by frames
-      prevB.onclick = parent.hideFinder
-    else prevB.hidden = true
 </script>
 
 </body>
