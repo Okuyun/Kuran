@@ -31,29 +31,33 @@
 
 <body>
 
-<h2 id=title></h2>
+<h2 id=title title='innehû lequr-ânun kerîm &#010;fî kitâbin meknûn'></h2>
 Bu yazılım ile Kuran-ı Kerim'de kelimeler arayabilir, istenen sayfayı  
 açabilir ya da Mucem'de kelime köklerini bulabilirsiniz.
 <hr />
 <p><label>
 Arapça/Türkçe/İngilizce (Finder) <br>
-<input type=text id=text placeholder='Aranacak metin'>
+<input type=text id=text placeholder='Aranacak metin'
+title='Bu alana girilen metin Finder yazılımı ile aranır'>
 </p>
 <p>
 <div><label>
 Sayfa (Iqra) <br>
-<input type=number id=page placeholder='1-604'>
+<input type=number id=page placeholder='1-604'
+title='1-604 aralığında sayfa numarası'>
 <br><br>
 <label>
 Kök (Mucem) <br>
-<input type=text id=root placeholder='ktb Elm'>
+<input type=text id=root placeholder='ktb Elm'
+title='Birden fazla kök aranacaksa boşluk ile ayrılmalı'>
 </div>
 <div><label>
 Sure:Ayet <br>
-<input type=text id=cv placeholder='27:30'>
+<input type=text id=cv placeholder='27:30'
+title='Sure ve ayet numaraları ":" ile ayrılmalı'>
 <br><br><br>
-<button id=search>Ara</button>
-<button id=clear hidden>Sil</button>
+<button id=search title='Girilen bütün değerler kullanılır'>Ara</button>
+<button id=clear title='Girilen bütün değerler silinir' hidden>Sil</button>
 </div>
 </p>
 <hr />

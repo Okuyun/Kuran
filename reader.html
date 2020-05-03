@@ -15,13 +15,13 @@
 <body>
 <div id=div3>
   <b id=title></b>
-  <select id=sureS></select>  
-  <button id=pageS>
+  <select id=sureS title='Sure seçin (liste mushaf sırasında)'></select>  
+  <button id=pageS title='Sayfa no girin veya yıldızlı sayfayı seçin'>
     Sayfa <span id=sayfa></span>
   </button> 
-  <button id=starB>&nbsp;</button>
-  <button id=trans>&nbsp;</button>  
-  <button id=linkB>&nbsp;</button>
+  <button id=starB title='Bu sayfaya yıldız koy/kaldır'>&nbsp;</button>
+  <button id=trans title='Meal sayfasını göster/gizle'>&nbsp;</button>  
+  <button id=linkB title='Sayfa menüsü'>&nbsp;</button>
 </div>
 
 <div id=div2>
@@ -31,10 +31,11 @@
 </div>
 
 <div id=div1>
-  <button id=leftB>◁</button>
-  <input id=slider type=range min=1 max=604 value=1>
+  <button id=leftB title='Önceki sayfa'>◁</button>
+  <input id=slider type=range min=1 max=604 value=1
+  title='Aranan sayfaya geçmek için slider'>
   <span  id=infoS></span>
-  <button id=rightB>▷</button>
+  <button id=rightB title='Sonraki sayfa'>▷</button>
 </div>
 
 <span id=bilgi>tooltip for each word and each verse</span>
@@ -54,10 +55,10 @@
 <div id=menuK class=menu>
    <!-- <button id=zoomB>&nbsp;</button>
    <button id=showR>&nbsp;</button> -->
-   <div>
+   <div title='Kelime köklerini göster/gizle'>
      <img id=showR src="image/Kay.png"> Kökler&emsp;
    </div>
-   <div>
+   <div title='Sayfayı geçici olarak büyüt'>
      <img id=zoomB src="image/search.png"> Büyüteç
    </div> 
    <hr>
@@ -67,7 +68,8 @@
    <span class="menuK">acikkuran.com</span>
    <hr><div  id=version></div>
    <span class="menuK">Yardım -- F1</span>
-   <span class="menuK" id=add2hs hidden>Install PWA</span>
+   <span class="menuK" id=add2hs hidden
+   title='Web sayfasını uygulama olarak aç'>Install PWA</span>
    <!-- display property overrides the hidden attribute -->
 </div>
 
