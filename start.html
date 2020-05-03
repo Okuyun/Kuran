@@ -15,10 +15,16 @@
     body, input, button { 
       font: 16px arial;
     }
-    #text { width: 340px; }
+    div {
+      display: inline-block; width: 120px;
+      vertical-align: top;
+    }
+    #text { width: 90%; max-width: 340px; }
     #page, #root, #cv { width: 90px; }
+    #search { background-color: yellow; }
     button {
-      background-color: yellow;
+      border: 3px solid gray;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -32,47 +38,60 @@ açabilir ya da Mucem'de kelime köklerini bulabilirsiniz.
 <p><label>
 Arapça/Türkçe/İngilizce (Finder) <br>
 <input type=text id=text placeholder='Aranacak metin'>
-<button id=textB>Ara</button>
 </p>
-<p><label>
+<p>
+<div><label>
 Sayfa (Iqra) <br>
 <input type=number id=page placeholder='1-604'>
-<button id=pageB>Oku</button> &emsp;
-<input type=text id=cv placeholder='27:30'>
-</p>
-<p><label>
+<br><br>
+<label>
 Kök (Mucem) <br>
-<input type=text id=root placeholder='ktb'>
-<button id=rootB>Kök</button> &emsp;
+<input type=text id=root placeholder='ktb Elm'>
+</div>
+<div><label>
+Sure:Ayet <br>
+<input type=text id=cv placeholder='27:30'>
+<br><br><br>
+<button id=search>Ara</button>
+<button id=clear>Yeni</button>
+</div>
 </p>
 <hr />
 <p></p>
 
+<script src="code/common.js"></script>
 <script>
 "use strict";
-function doText() {
-    let h = '#t='+text.value
-    window.open('https://maeyler.github.io/BahisQurani/finder.html'+h, 'finder')
-}
-function doOpen(h) {
-    if (h.length < 4) return
+function doSearch() {
+    let h = ''
+    if (cv.value) h += 'v='+cv.value
+    else if (page.value) h += 'p='+page.value
+    if (root.value) {
+      let t = 'r='+root.value.split(/\s+/).join('&r=')
+      if (!h) {
+        window.open('mujam.html#'+t, 'finder'); return 
+      }
+      h += '&'+t
+    }
+    if (text.value) {
+      let t = text.value
+      if (!h) {
+        window.open(FINDER+'#t='+t, 'finder'); return 
+      }
+      h += '&b='+t
+    }
+    if (!h) return
+    console.log('doSearch', h)
     if (parent.iqra)
       parent.iqra.location.hash = h
-    else window.open('reader.html'+h, 'iqra')
+    else window.open('reader.html#'+h, 'iqra')
 }
-function doRoot() {
-    let a = root.value.split(/\s+/)
-    let h = '#r='+a.join('&r=')
-    window.open('mujam.html'+h, 'finder')
+function clearAll() {
+  document.querySelectorAll('input').forEach(x=>x.value='')
 }
     title.innerText = document.title
-    text.onchange = doText
-    textB.onclick = doText
-    page.onchange = () => doOpen('#p='+page.value)
-    pageB.onclick = page.onchange
-    cv.onchange   = () => doOpen('#v='+cv.value)
-    root.onchange = doRoot
-    rootB.onclick = doRoot
+    search.onclick = doSearch
+    clear.onclick = clearAll
 </script>
 
 </body>

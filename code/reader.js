@@ -18,7 +18,7 @@ const SD  = new SimData('data/simi.txt')
 // const wordToRoot = new Map()
 const CHECKED = '#ff7' // color when the button is down
 const swipe = { t:0, x:0, y:0 }
-var curSura, curPage, bookmarks;
+var curSura, curPage, bookmarks, lastSelection;
 var initialized = false
 window.mujam = undefined
 
@@ -61,7 +61,8 @@ function setStorage(synch) {
 }
 function forceSelection() {
     //trim for Windows -- thank you Rajab
-    let s = getSelection().toString().trim()
+    let s = window.getSelection() // fixed for Safari
+    s = s.toString().trim() || lastSelection
     if (s) return s
     else alert("Önce Arapça bir kelime seçin")
 }
@@ -108,7 +109,8 @@ function selectWord(evt) {
       setPosition(menuV, evt.clientX, y)
     } else { // t is a word
       let s = window.getSelection()
-      if (!s.toString()) { //select word
+      lastSelection = s.toString().trim()
+      if (!lastSelection) { //select word
         let range = document.createRange();
         range.selectNodeContents(evt.target);
         s.removeAllRanges(); s.addRange(range);
@@ -267,7 +269,8 @@ function gotoHashPage() {
         if (L) markWord(s, true)
         break
       case 'w': // w=yuwsuf
-        for (let t of decodeURI(s).split(' '))
+      case 'b': // w and b behave the same
+        for (let t of s.split(' '))
           markWord(t, false)
         break
       case 'v': // v=12:90
@@ -350,9 +353,7 @@ function initReader() {
  * Menu elements: menuC (context)  menuK (button)  menuV (verse)
  *
  */
-var //LINKF = 'https://a0m0rajab.github.io/BahisQurani/finder.html#w='
-    LINKF = 'https://maeyler.github.io/BahisQurani/finder.html#w='
-var LINKM = 'mujam.html#r='
+var LINKF = FINDER+'#w=', LINKM = 'mujam.html#r='
 function openMujam(...a) { //array of roots in Buckwalter
     let p = a.join('&r=')
     window.mujam = window.open(LINKM + p, "finder")

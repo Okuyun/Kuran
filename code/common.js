@@ -3,13 +3,18 @@
 /**
  * The code version.
  */
-const VERSION = "V4c7";
+const VERSION = "V4c8";
 
 /**
  * &emsp; used in both Mujam
  * used at report2 @see report2
  */
 const EM_SPACE = String.fromCharCode(8195)
+
+/**
+ * Link to finder -- could be modified in console
+ */
+var FINDER = 'https://maeyler.github.io/BahisQurani/finder.html'
 
 /**
  * Use the hash part of URL in the address bar

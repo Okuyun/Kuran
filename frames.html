@@ -8,7 +8,7 @@
     <meta name="description" content="Reader for the Quran" />
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="image/icon.png">
-    <title>Iqra Introduction</title>
+    <title>Iqra V4</title>
   <style>
     body {
       margin: 0;
@@ -42,10 +42,7 @@ function addListener(frm) {
   frm.contentWindow.addEventListener('hashchange', reportHash)
   console.log('* addListener *', frm.name)
 }
-function setTitle(str) {
-  document.title = VERSION +' '+ str
-}
-function reportHash(e) {
+function reportHash(e) { //hashchange in one of the panes
   let s = '[Dış kaynak]', h = ''
   if (e.target.name == 'iqra') {
     if (skipEvent) {
@@ -55,13 +52,18 @@ function reportHash(e) {
     s = e.target.document.title
     h = e.target.location.hash
   } else { // finder
-    if (last != null && e.target.document) {
+    try {
+      startPage = finder.location.pathname == "/start.html"
+    } catch (e) {
+      startPage = false //external
+    }
+    if (lastPath != null && e.target.document) {
       s = e.target.document.title
       h = e.target.location.hash
     }
     if (findFrm.style.display == 'none') showFinder() 
   }
-  setTitle(s)
+  document.title = VERSION +' '+ s
   // console.log('* reportHash *', h, location.hash)
   if (h=='' || window.location.hash == h) return
   window.location.hash = h
@@ -80,11 +82,18 @@ function hashModified() {
       window.open('mujam.html#'+h, 'finder')
       break;
     case 'b=': case 'w=': case 't=':
-      window.open('https://maeyler.github.io/BahisQurani/finder.html#'+h, 'finder')
+      window.open(FINDER+'#'+h, 'finder')
       break
     default:
         console.log('unknown hash entered', h)
   }
+}
+function startPane() {
+  if (startPage) hideFinder()
+  else {
+    window.open('start.html', 'finder')
+    startPage = true
+  } 
 }
 function hideFinder() {
   closeM.hidden=true; openM.hidden=false
@@ -110,11 +119,13 @@ function resize() {
       if (W <= 850) { //single column
         setStyle(findFrm.style, SHOW, 0, W)
         setStyle(readFrm.style, HIDE)
+        closeM.style.right = ''
       } else { //two columns
         findFrm.style.borderRight = '1px solid cyan'
         let w2 = WIDTH, x2 = W - w2
         setStyle(findFrm.style, SHOW, 0, x2)
         setStyle(readFrm.style, SHOW, x2, w2)
+        closeM.style.right = w2+'px'
       }
     }
     function setStyle(s, d, x, w) {
@@ -126,13 +137,13 @@ function resize() {
   function sourceChanged(e) {
     try {
       let p = finder.location.pathname
-      if (last != p) {
-        last = p; addListener(findFrm)
+      if (lastPath != p) {
+        lastPath = p; addListener(findFrm)
       }
     } catch (err) {
-      last = null // cannot read location
+      lastPath = null // cannot read location
     }
-    console.log('* sourceChanged *', last)
+    console.log('* sourceChanged *', lastPath)
     reportHash(e)
   }
   function initReader() {
@@ -145,17 +156,17 @@ function resize() {
     window.location.hash = initialHash
     initialHash = null
   }
-  var last  // finder location
+  var lastPath  // finder location
+  var startPage = true // is shown?
   var hashInProgress = false
   var initialHash = decodedHash()
   var skipEvent = !initialHash
   console.log('* start *', initialHash, location.hash)
   readFrm.style.display = 'none' //hide iqra frame
-  setTitle('Iqra V4')
   window.name = 'iqraTop'
   window.onresize = resize
   window.onhashchange = hashModified
-  closeM.onclick = hideFinder
+  closeM.onclick = startPane  //hideFinder
   openM.onclick  = showFinder
   readFrm.onload = initReader
   findFrm.onload = sourceChanged
