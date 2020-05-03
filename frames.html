@@ -53,9 +53,10 @@ function reportHash(e) { //hashchange in one of the panes
     h = e.target.location.hash
   } else { // finder
     try {
-      startPage = finder.location.pathname == "/start.html"
+      let p = finder.location.pathname //may fail
+      isStartPage = p.includes("start.html")
     } catch (e) {
-      startPage = false //external
+      isStartPage = false //external page
     }
     if (lastPath != null && e.target.document) {
       s = e.target.document.title
@@ -89,10 +90,10 @@ function hashModified() {
   }
 }
 function startPane() {
-  if (startPage) hideFinder()
+  if (isStartPage) hideFinder()
   else {
     window.open('start.html', 'finder')
-    startPage = true
+    isStartPage = true
   } 
 }
 function hideFinder() {
@@ -157,7 +158,7 @@ function resize() {
     initialHash = null
   }
   var lastPath  // finder location
-  var startPage = true // is shown?
+  var isStartPage = true // is shown?
   var hashInProgress = false
   var initialHash = decodedHash()
   var skipEvent = !initialHash

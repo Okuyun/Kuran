@@ -53,7 +53,7 @@ Sure:Ayet <br>
 <input type=text id=cv placeholder='27:30'>
 <br><br><br>
 <button id=search>Ara</button>
-<button id=clear>Yeni</button>
+<button id=clear hidden>Sil</button>
 </div>
 </p>
 <hr />
@@ -62,36 +62,61 @@ Sure:Ayet <br>
 <script src="code/common.js"></script>
 <script>
 "use strict";
+function doRoot(h) {
+    let t = root.value.split(/\s+/).join('&r=')
+    if (!h) {
+      window.open('mujam.html#r='+t, 'finder'); return ''
+    }
+    return h+'&r='+t
+}
+function doText(h) {
+    let t = text.value
+    if (!h) {
+      window.open(FINDER+'#t='+t, 'finder'); return ''
+    }
+    return h+'&b='+t
+}
+function doOpen(h) {
+    if (!h) return
+    if (parent.iqra)
+      parent.iqra.location.hash = h
+    else window.open('reader.html#'+h, 'iqra')
+}
 function doSearch() {
     let h = ''
     if (cv.value) h += 'v='+cv.value
     else if (page.value) h += 'p='+page.value
     if (root.value) {
-      let t = 'r='+root.value.split(/\s+/).join('&r=')
-      if (!h) {
-        window.open('mujam.html#'+t, 'finder'); return 
-      }
-      h += '&'+t
+      let d = doRoot(h)
+      if (!d) return; h = d
     }
     if (text.value) {
-      let t = text.value
-      if (!h) {
-        window.open(FINDER+'#t='+t, 'finder'); return 
-      }
-      h += '&b='+t
+      let d = doText(h)
+      if (!d) return; h = d
     }
-    if (!h) return
-    console.log('doSearch', h)
-    if (parent.iqra)
-      parent.iqra.location.hash = h
-    else window.open('reader.html#'+h, 'iqra')
+    doOpen(h); clear.hidden = false
 }
 function clearAll() {
-  document.querySelectorAll('input').forEach(x=>x.value='')
+  document.querySelectorAll('input').forEach(x => x.value='')
+  clear.hidden = true
+}
+function keyToPage(evt) {
+    if (evt.key == 'Enter') 
+      switch (evt.target) {
+        case root:
+          doRoot(); break;
+        case text:
+          doText(); break;
+        case page:
+          doOpen('p='+page.value); break;
+        case cv:
+          doOpen('v='+cv.value); break;
+      }
 }
     title.innerText = document.title
     search.onclick = doSearch
     clear.onclick = clearAll
+    document.onkeydown = keyToPage
 </script>
 
 </body>
