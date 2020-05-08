@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"    content="width=device-width">
+    <meta name="author"      content="M A Eyler, Istanbul, 2020" />
+    <meta name="description" content="Reader for the Quran" />
+    <link rel="icon" href="image/icon.png">
+    <title>Iqra video </title>
+
+  <style>
+    body { 
+        max-width: 440px;
+        background: #ffc;
+    }
+    body, h2, h3 { margin: 20px; }
+    h2 { margin-bottom: 16px; }
+    li {
+        list-style: none;
+        margin: 8px;
+        font: 16px arial;
+    }
+    a {
+        position: relative;
+        top: -40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2 id=title title='Iqra yazılımı için videolar'></h2>
+<hr />
+<div id=liste>
+</div>
+<hr />
+<a href="https://www.youtube.com/playlist?list=PLBDiqooDrruvsdTEmNMOLt0PJALyahUNX"
+   target="Kuran">Iqra -- youtube</a>
+<p></p>
+
+<script src="code/common.js"></script>
+<script>
+"use strict";
+function clearAll() {
+  document.querySelectorAll('input').forEach(x => x.value='')
+  clear.hidden = true
+}
+const DATA = 
+`1. Hz Adem ve Hz İsa	SJQIFUp_Q6g
+2. Subhâneke	sNwh2HN7KWs
+3. Subhânellezi	PrNFXsoaOHk
+4. Bilmece -- subhâne	zOQVexEFBqA
+5. Secde ayetleri	xRMbkLCR4OU
+6. Bir Elif Farkı	nA0iZ2Sq1dw
+7. Allah'a sığın	_WKpQknGKSE
+8. Giriş sayfası değişti	xjlKHVwDLfM
+9. Dış kaynak: quran.com	HTCHSMK8d8A
+10. Dış kaynak: Açık Kuran	V2weItQq4AM
+11. Sekine	-LRwOubwxls
+12. En sık geçen kelime	ZMq0hGxnItU
+13. Ramazan dersleri	jOm2weOSuJI
+14. bismi rabbike	M3Lbo4KGxpQ
+15. Bakara -- son ayet	FMMntiOy4l4
+16. Benzerlik	vlhT0jmFhRI`
+    title.innerText = document.title
+    const IMG1 = '<img src="https://img.youtube.com/vi/'
+    const IMG2 = '/default.jpg">' //sddefault is larger
+    const HREF = 'href="https://www.youtube.com/watch?v='
+    const TARG = '" target="Kuran"'
+    let a = []
+    for (let s of DATA.split('\n')) {
+        let [topic, link] = s.split('\t')
+        a.push('<li>'+IMG1+link+IMG2+'&emsp;'
+          +'<a '+HREF+link+TARG+'>'+topic+'</a>')
+    }
+    liste.innerHTML = a.join('\n')
+
+/* How to get DATA from youtube play list
+a=[]; document.querySelectorAll('ytd-playlist-panel-video-renderer').forEach(x => 
+{t=x.querySelector('[title]').title; s=x.children[0].href.substring(32,43);
+a.push(t+'\t'+s)}); a.reverse().join('\n')
+*/
+</script>
+
+</body>
+</html>
