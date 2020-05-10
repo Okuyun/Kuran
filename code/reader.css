@@ -206,8 +206,7 @@ body {
 
 /* End of menu style */
 
-/*
-Icons made by 
+/* Icons made by 
 <a href=https://www.flaticon.com/authors/kiranshastry>Kiranshastry</a> 
 from <a href=https://www.flaticon.com/>www.flaticon.com</a>
 */
@@ -237,3 +236,21 @@ button:hover {
     background-image: url(../image/Kay.png);
 } */
 
+/* CSS triangles using transparent border
+* https://css-tricks.com/snippets/css/css-triangle/
+*/
+#rightB, #leftB {
+  margin: 0 6px;
+  display: inline-block;
+  width: 0; height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  cursor: pointer;
+}
+#rightB {
+  border-left: 16px solid #00f6;
+}
+
+#leftB {
+  border-right: 16px solid #00f6; 
+}
