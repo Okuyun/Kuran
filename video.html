@@ -10,26 +10,35 @@
 
   <style>
     body { 
-        max-width: 440px;
-        background: #ffc;
+        /* max-width: 440px; */
+        background: #adf;
+        font: 15px arial;
     }
     body, h2, h3 { margin: 20px; }
     h2 { margin-bottom: 16px; }
     li {
+        display: inline-block;
+        width: 320px;
         list-style: none;
-        margin: 8px;
-        font: 16px arial;
+        margin: 8px 0;
+        cursor: pointer;
     }
-    a {
-        position: relative;
-        top: -40px;
+    li div {
+        display: inline-block;
+        vertical-align: top;
+        margin: 8px;
+        /* position: relative;
+        top: 10px; */
     }
   </style>
 </head>
 
 <body>
 
-<h2 id=title title='Iqra yazılımı için videolar'></h2>
+<h2 id=title title='Iqra yazılımı için hazırlanmış videolar'></h2>
+<iframe id=player width="560" height="315" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+frameborder="0" allowfullscreen></iframe>
 <hr />
 <div id=liste>
 </div>
@@ -41,10 +50,6 @@
 <script src="code/common.js"></script>
 <script>
 "use strict";
-function clearAll() {
-  document.querySelectorAll('input').forEach(x => x.value='')
-  clear.hidden = true
-}
 const DATA = 
 `1. Hz Adem ve Hz İsa	SJQIFUp_Q6g
 2. Subhâneke	sNwh2HN7KWs
@@ -55,26 +60,34 @@ const DATA =
 7. Allah'a sığın	_WKpQknGKSE
 8. Giriş sayfası değişti	xjlKHVwDLfM
 9. Dış kaynak: quran.com	HTCHSMK8d8A
-10. Dış kaynak: Açık Kuran	V2weItQq4AM
+10. Dış kaynak: Açık K	V2weItQq4AM
 11. Sekine	-LRwOubwxls
 12. En sık geçen kelime	ZMq0hGxnItU
 13. Ramazan dersleri	jOm2weOSuJI
 14. bismi rabbike	M3Lbo4KGxpQ
 15. Bakara -- son ayet	FMMntiOy4l4
 16. Benzerlik	vlhT0jmFhRI`
+function doClick(evt) {
+    let t = evt.target
+    let h = t.ref || t.parentNode.ref
+    console.log(t.tagName, h)
+    if (h) player.src = h
+}
     title.innerText = document.title
-    const IMG1 = '<img src="https://img.youtube.com/vi/'
-    const IMG2 = '/default.jpg">' //sddefault is larger
-    const HREF = 'href="https://www.youtube.com/watch?v='
-    const TARG = '" target="Kuran"'
-    let a = []
+    const IMG1 = 'https://img.youtube.com/vi/'
+    const IMG2 = '/default.jpg' //sddefault is larger
+    const HREF = 'https://www.youtube.com/embed/'
     for (let s of DATA.split('\n')) {
         let [topic, link] = s.split('\t')
-        a.push('<li>'+IMG1+link+IMG2+'&emsp;'
-          +'<a '+HREF+link+TARG+'>'+topic+'</a>')
+        let t = document.createElement('li')
+        let i = document.createElement('img')
+        i.src = IMG1+link+IMG2; t.append(i)
+        let a = document.createElement('div')
+        a.innerText = topic; t.append(a)
+        t.ref = HREF+link; liste.append(t)
     }
-    liste.innerHTML = a.join('\n')
-
+    liste.onclick = doClick
+    
 /* How to get DATA from youtube play list
 a=[]; document.querySelectorAll('ytd-playlist-panel-video-renderer').forEach(x => 
 {t=x.querySelector('[title]').title; s=x.children[0].href.substring(32,43);
