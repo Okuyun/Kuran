@@ -19,8 +19,8 @@
       display: inline-block; width: 120px;
       vertical-align: top;
     }
-    #text { width: 90%; max-width: 340px; }
-    #page, #root, #cv { width: 90px; }
+    #text, #omni { width: 90%; max-width: 340px; }
+    #page, #root, #vers { width: 90px; }
     #search { background-color: yellow; }
     button {
       border: 3px solid gray;
@@ -36,49 +36,49 @@ Bu yazılım ile Kuran-ı Kerim'de kelimeler arayabilir, istenen sayfayı
 açabilir ya da Mucem'de kelime köklerini bulabilirsiniz.
 <hr />
 <p><label>
-Arapça/Türkçe/İngilizce (Finder) <br>
+Arapça/Türkçe/İngilizce (Finder) </label><br>
 <input type=text id=text placeholder='Aranacak metin'
 title='Bu alana girilen metin Finder yazılımı ile aranır'>
 </p>
 <p>
 <div><label>
-Sayfa (Iqra) <br>
+Sayfa (Mushaf) </label><br>
 <input type=number id=page placeholder='1-604'
 title='1-604 aralığında sayfa numarası'>
 <br><br>
 <label>
-Kök (Mucem) <br>
+Kök (Mucem) </label><br>
 <input type=text id=root placeholder='ktb Elm'
 title='Birden fazla kök aranacaksa boşluk ile ayrılmalı'>
 </div>
 <div><label>
-Sure:Ayet <br>
-<input type=text id=cv placeholder='27:30'
+Sure:Ayet </label><br>
+<input type=text id=vers placeholder='27:30'
 title='Sure ve ayet numaraları ":" ile ayrılmalı'>
 <br><br><br>
-<button id=search title='Girilen bütün değerler kullanılır'>Ara</button>
-<button id=clear title='Girilen bütün değerler silinir' hidden>Sil</button>
+<button id=search title='Link adresini kullan'>Ara</button>
+<button id=clear title='Link adresini sil' hidden>Sil</button>
 </div>
 </p>
-<hr />
+<p><label>
+  Link adresi (hashtag) </label><br>
+  <input type=text id=omni title=
+'Linki ilk harf belirler: &#10;Mushaf: p=… v=… &#10;Mucem: r=… &#10;Finder: t=… b=…'>
+  </p>
+  <hr />
 <p></p>
 
 <script src="code/common.js"></script>
 <script>
 "use strict";
 function doRoot(h) {
-    let t = root.value.split(/\s+/).join('&r=')
-    if (!h) {
-      window.open('mujam.html#r='+t, 'finder'); return ''
-    }
-    return h+'&r='+t
+    if (!h) return
+    h = h.replace(/\s+/g, '&r=')
+    window.open('mujam.html#'+h, 'finder')
 }
 function doText(h) {
-    let t = text.value
-    if (!h) {
-      window.open(FINDER+'#t='+t, 'finder'); return ''
-    }
-    return h+'&b='+t
+    if (!h) return
+    window.open(FINDER+'#'+h, 'finder')
 }
 function doOpen(h) {
     if (!h) return
@@ -87,18 +87,13 @@ function doOpen(h) {
     else window.open('reader.html#'+h, 'iqra')
 }
 function doSearch() {
-    let h = ''
-    if (cv.value) h += 'v='+cv.value
-    else if (page.value) h += 'p='+page.value
-    if (root.value) {
-      let d = doRoot(h)
-      if (!d) return; h = d
-    }
-    if (text.value) {
-      let d = doText(h)
-      if (!d) return; h = d
-    }
-    doOpen(h); clear.hidden = false
+    let t = omni.value
+    if (/^[vp]=/.test(t))
+      doOpen(t) //t starts with v or p
+    else if (/^r=/.test(t))
+      doRoot(t) //t starts with r
+    else if (/^[bt]=/.test(t))
+      doText(t) //t starts with b or t
 }
 function clearAll() {
   document.querySelectorAll('input').forEach(x => x.value='')
@@ -108,18 +103,35 @@ function keyToPage(evt) {
     if (evt.key == 'Enter') 
       switch (evt.target) {
         case root:
-          doRoot(); break;
+          doRoot('r='+root.value); break;
         case text:
-          doText(); break;
+          doText('t='+text.value); break;
         case page:
           doOpen('p='+page.value); break;
-        case cv:
-          doOpen('v='+cv.value); break;
+        case vers:
+          doOpen('v='+vers.value); break;
+        case omni:
+          doSearch(); break;
       }
+}
+function setOmni(evt) {
+    let h = ''
+    if (vers.value) h += '&v='+vers.value
+    else if (page.value) h += '&p='+page.value;
+    if (root.value) 
+      h += '&r='+root.value.replace(/\s+/g, '&r=')
+    if (text.value) h += '&t='+text.value
+    if (!h) return
+    omni.value = h.substring(1)
+    clear.hidden = false
 }
     title.innerText = document.title
     search.onclick = doSearch
     clear.onclick = clearAll
+    root.onchange = setOmni
+    text.onchange = setOmni
+    page.onchange = setOmni
+    vers.onchange = setOmni
     document.onkeydown = keyToPage
 </script>
 
