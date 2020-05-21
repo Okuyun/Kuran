@@ -68,7 +68,19 @@ const DATA =
 15. Yumuşak huy	IuadmFumBdU
 16. Güzel bir örnek	_iYCiHfzsm8
 17. Alemlere rahmet	p0sxwT2MVnc
-18. lâ ilâhe illâ ...	tmhJW7uDV_o`
+18. lâ ilâhe illâ ...	tmhJW7uDV_o
+19. On dokuz	qjgcu3_3GSA
+20. yevme lâ yenfa'u	uL0tqCXgAyM
+21. Emrolunduğun gibi	gAugYT2QFJk
+22. Emredileni yaparlar	2yX8EJf66ZU
+23. Zikir ve şükür	DnYsSzQppdM
+24. Hesabı hızlıdır	iB-76sybVsk
+25. Sabrı tavsiye	G2v_17c7GF8
+26. Ona "ol" der	uwAcunMHnF4
+27. inşâallâh	MBYncaOmH_8
+28. Korku ve hüzün	v-6YjwgYDWo
+29. Onu Biz koruruz	soXaZCzb60M
+30. Dualarının sonu	EsckXKMzIAo`
 function doClick(evt) {
     let t = evt.target
     let h = t.ref || t.parentNode.ref
@@ -91,9 +103,9 @@ function doClick(evt) {
     liste.onclick = doClick
     
 /* How to get DATA from youtube play list
-a=[]; document.querySelectorAll('ytd-playlist-panel-video-renderer').forEach(x => 
-{t=x.querySelector('[title]').title; s=x.children[0].href.substring(32,43);
-a.push(t+'\t'+s)}); a.reverse().join('\n')
+[...document.querySelectorAll('ytd-playlist-video-renderer')].map(x => 
+x.querySelector('[title]').title+'\t'+
+x.querySelector('[href]').href.substring(32,43)).reverse().join('\n')
 */
 </script>
 
