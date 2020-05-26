@@ -134,11 +134,17 @@ body {
     }
     #slider {
       position: relative;
-      top: 4px;
       width: 72%;
       max-width: 604px;
       margin: 0;
     }
+    input[type="range" i] {
+      -webkit-appearance: none;
+      background: rgba(113, 171, 181, 0.3);
+      outline-color:cyan;
+      cursor: pointer;
+    }
+    
     .divider { 
       height: 50px;
       margin-top: 8px;
@@ -254,3 +260,6 @@ button:hover {
 #leftB {
   border-right: 16px solid #00f6; 
 }
+
+
+ 
