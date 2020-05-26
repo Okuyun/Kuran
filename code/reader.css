@@ -138,7 +138,7 @@ body {
       max-width: 604px;
       margin: 0;
     }
-    input[type="range" i] {
+    input[type="range" i] { /* added by A Rajab */
       -webkit-appearance: none;
       background: rgba(113, 171, 181, 0.3);
       outline-color:cyan;
@@ -256,10 +256,6 @@ button:hover {
 #rightB {
   border-left: 16px solid #00f6;
 }
-
 #leftB {
   border-right: 16px solid #00f6; 
 }
-
-
- 

@@ -10,8 +10,11 @@ const M = 114; //suras
 // const names = new Array(M+1);
 // const first = new Array(M+1);
 const P = 604; //pages
+const SOURCE = ['', 'ar.jalalayn.txt', 'ar.muyassar.txt', 
+ 'tr.diyanet.txt',  'en.ahmedali.txt', 'tr.yazir.txt', 'en.yusufali.txt']
 let TRANS = localStorage.translation
-const kur = new KuranText(TRANS || 'tr.yazir.txt', initialPage)
+let snum = 5  //JSON.parse(localStorage.settings).source || 5
+var kur = new KuranText(TRANS || SOURCE[snum], initialPage)
 const qur = new QuranText('quran-uthmani.txt', initialPage)
 const MD  = new MujamData('data/words.txt')
 const SD  = new SimData('data/simi.txt')
