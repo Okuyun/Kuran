@@ -70,8 +70,8 @@ class KuranText {
     chapName(c)   { return '('+c+') '+sName[c]+' Suresi' }
     get besmele() { return 'Bismillahirrahmanirrahim' }
     get secde()   { return ' [S] ' }
-    verseToHTML(id, s) {
-      return '<span id='+id+'>'+s+'</span><BR>'
+    verseToHTML(cls, s) {
+      return '<span class='+cls+'>'+s+'</span><BR>'
     }
     pageToHTML(p) {
       let newChapter = () => {
@@ -86,8 +86,8 @@ class KuranText {
         while (i <= k) { //for each verse x
           let s = this.getVerse(i)
           if (s.startsWith('1.')) newChapter()
-          let id = 'c'+c+'_'+v
-          out.push(this.verseToHTML(id, s))
+          let cls = 'c'+c+'_'+v
+          out.push(this.verseToHTML(cls, s))
           i++; v++
         }
         return out.join('\n')
@@ -102,13 +102,13 @@ class QuranText extends KuranText {
     chapName(c)   { return ' سورة '+aName[c] }
     get besmele() { return 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ' }
     get secde()   { return ' ۩ ' }
-    verseToHTML(id, s) {
-      let cv = id.substring(1).replace('_', ':') 
+    verseToHTML(cls, s) {
+      let cv = cls.substring(1).replace('_', ':') 
       let [n, ...a] = s.split(/\.? /)  //divide into words
       let num = ' ﴿'+numberToArabic(n)+'﴾ '
       s = a.map(w => '<span>'+w+'</span>').join(' ')
-        + '<span id=v='+cv+'>'+num+'</span>' 
-      return '<span id='+id+'>'+s+'</span>' //no <BR>
+        + '<span cls=v='+cv+'>'+num+'</span>' 
+      return '<span class='+cls+'>'+s+'</span>' //no <BR>
     }
 }
 

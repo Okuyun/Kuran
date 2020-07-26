@@ -86,7 +86,7 @@ function markVerse(cv, cls='gri') {
   }
     // markPattern('[^﴾﴿]*﴿'+numberToArabic(n)+'﴾?', 'cls)
     // let e = new RegExp(n+'[\.-](.)+\n', 'g')
-    let id = '#c'+cv.replace(':', '_')
+    let id = '.c'+cv.replace(':', '_')
     mark(html); mark(text)
 }
 function displayWord(evt) {
