@@ -298,7 +298,7 @@ const last = [0, 7, 293, 493, 669, 789, 954, 1160, 1235, 1364,
     6213, 6216, 6221, 6225, 6230, 6236]
 
 function suraFromPage(k) {
-    return toChapter(index[k+1]-1)
+    return toChapter(index[k]+1)
 }
 function suraContainsPage(c, k) {
     if (c == M) return (k == P)
