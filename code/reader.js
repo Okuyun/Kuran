@@ -12,7 +12,7 @@ const M = 114; //suras
 const P = 604; //pages
 const SOURCE = ['', 'ar.jalalayn.txt', 'ar.muyassar.txt', 
  'tr.diyanet.txt',  'en.ahmedali.txt', 'tr.yazir.txt', 'en.yusufali.txt']
-let TRANS = localStorage.translation
+let TRANS //= localStorage.translation  disable during dev
 let snum = 5  //JSON.parse(localStorage.settings).source || 5
 var kur = new KuranText(TRANS || SOURCE[snum], initialPage)
 const qur = new QuranText('quran-uthmani.txt', initialPage)
@@ -70,23 +70,23 @@ function forceSelection() {
     if (s) return s
     else alert("Önce Arapça bir kelime seçin")
 }
-function markWord(w, root, cls='mavi') {
+function markWord(w, root) {
     for (let x of html.querySelectorAll('span')) {
       let b = toBuckwalter(x.innerText.trim())
       if (root) b = MD.wordToRoot(b)
-      if (b != w) continue
-      x.classList.add(cls)
+      if (b == w) x.classList.add('mavi')
     }
 }
-function markVerse(cv, cls='gri') {
+function markVerse(cv) {
   function mark(elt) {
-    let x = elt.querySelector(id)
-    if (x) x.classList.add(cls)
-    else console.log(id+' not in '+elt.id)
+    //apply 'gri' style to x within elt
+    let x = elt.querySelector(cls)
+    if (x) x.classList.add('gri')
+    else console.log(cls+' not in '+elt.id)
   }
     // markPattern('[^﴾﴿]*﴿'+numberToArabic(n)+'﴾?', 'cls)
     // let e = new RegExp(n+'[\.-](.)+\n', 'g')
-    let id = '.c'+cv.replace(':', '_')
+    let cls = '.c'+cv.replace(':', '_')
     mark(html); mark(text)
 }
 function displayWord(evt) {
@@ -146,7 +146,7 @@ function gotoPage(k, adjusting) { // 1<=k<=P
 //This is the only place where hash is set
   function doVerse(e) {
       for (let x of e.children) {
-        x.onmouseenter = displayWord
+        x.onclick = displayWord
         x.onmouseleave = hideWord
         x.oncontextmenu = selectWord
         if (x.id) { // x is a verse separator
@@ -335,8 +335,8 @@ function initReader() {
       } else {
         let dt = Date.now()/1000 - prevTime
         if (dt > 1000) console.log("invisible "+timeString(dt))
-        if (dt > 9999 && localStorage.userName) //more than 3 hours
-            readTabularData(setBookmarks, console.error)
+        // if (dt > 9999 && localStorage.userName) //more than 3 hours
+        //     readTabularData(setBookmarks, console.error)
       }
     }
   
@@ -347,8 +347,8 @@ function initReader() {
     //we cannot use page yet, files are not read -- see initialPage()
     showR.style.backgroundColor = roots? CHECKED : ''
     arrayToSet(marks) //immediate action
-    if (localStorage.userName) //takes time to load
-        readTabularData(setBookmarks, console.error)
+    // if (localStorage.userName) //takes time to load
+    //     readTabularData(setBookmarks, console.error)
 }
 /********************
  * Start of Menu functions -- added by Abdurrahman Rajab - FSMVU

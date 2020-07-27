@@ -20,6 +20,7 @@
     .item {
         display: inline-block;
         color: black;
+        cursor: pointer;
         background-color: hsl(240, 100%, 95%);
         margin: 4px 2px;
         border: 1px solid;

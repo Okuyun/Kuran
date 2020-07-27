@@ -107,7 +107,7 @@ class QuranText extends KuranText {
       let [n, ...a] = s.split(/\.? /)  //divide into words
       let num = ' ﴿'+numberToArabic(n)+'﴾ '
       s = a.map(w => '<span>'+w+'</span>').join(' ')
-        + '<span cls=v='+cv+'>'+num+'</span>' 
+        + '<span id=v='+cv+'>'+num+'</span>' 
       return '<span class='+cls+'>'+s+'</span>' //no <BR>
     }
 }

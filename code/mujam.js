@@ -311,9 +311,14 @@ function displayList(refs, liste) {
             s += SPAN+ y.cv +_SPAN
         s += '</div>\n'
     }
+    function doClick3(evt) {
+        let cv = evt.target.innerText
+        bilgi.innerText = VerseRef.fromChapVerse(cv)
+        doClick(evt)  //transfer event from x to bilgi
+    }
     liste.innerHTML = s
     for (let x of liste.querySelectorAll('.item')) {
-        x.onmouseenter = doHover
+        x.onclick = doClick3  //doHover
         x.onmouseleave = hideBilgi
     }
     if (!BUTTON) return
@@ -412,8 +417,8 @@ function hideBilgi() {
  * @param {*} evt get the event trigger. 
  */
 function doClick(evt) {
-    //do not handle if menuK is on or bilgi is off
-    if (menuK.style.display || !bilgi.style.display) return
+    //do not handle if menuK is on --or bilgi is off
+    if (menuK.style.display /* || !bilgi.style.display */) return
     evt.preventDefault()
     let [nam, refs] = bilgi.innerText.split(EM_SPACE)
     let [xx, p] = nam.split(/\.| /)  //dot or space
@@ -622,6 +627,7 @@ function doHover(evt) {  //listener for each td and span element
     if (menuK.style.display) return
     let cls, ref, cw
     if (evt.target.tagName == 'SPAN') {
+        console.error('cannot happen', evt.target)
         let cv = evt.target.innerText
         ref = VerseRef.fromChapVerse(cv)
         cls = 't2>' //backgroundColor yellow
