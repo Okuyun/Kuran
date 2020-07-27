@@ -8,7 +8,7 @@ body {
 }
 @media screen and (max-width: 850px) {
     #title { display: none; }
-    /* #zoomB { display: none; } */
+    #zoomB { display: none; }
     #div3, #sureS, button { 
       font-size: 3vw;
     }
@@ -27,6 +27,7 @@ body {
       font-size: 15px;
       display: inline-block;
     }
+    /* #trans { display: none; } */
     #div3, #sureS, #pageS {
       font-size: 14px;
     }
@@ -235,10 +236,10 @@ button:hover {
 #linkB {
     background-image: url(../image/menu.png);
 }
-/* #zoomB {
+#zoomB {
     background-image: url(../image/search.png);
 }
-#showR {
+/* #showR {
     background-image: url(../image/Kay.png);
 } */
 

@@ -53,9 +53,9 @@ function setBookmarks(text, data) { //called once in initReader()
 function setStorage(synch) {
     //if (!LS) return
     let page  = curPage
-    let roots = showR.style.backgroundColor? true : false
+    //let roots = showR.style.backgroundColor? true : false
     let marks = [...bookmarks]
-    let pref = {page, roots, marks}
+    let pref = {page, /* roots, */ marks}
     localStorage.iqra = JSON.stringify(pref)
     let topic = navigator.platform  //PAGES
     if (synch && localStorage.userName) {
@@ -91,7 +91,7 @@ function markVerse(cv) {
 }
 function displayWord(evt) {
     evt.preventDefault(); //hideMenus()
-    if (!showR.style.backgroundColor) return
+    // if (!showR.style.backgroundColor) return
     let t = evt.target 
     t.style.backgroundColor = '#ddd'  //mark target
     if (!t.tText ) return
@@ -313,7 +313,7 @@ function initReader() {
     starB.onclick  = toggleStar
     linkB.onclick  = toggleMenuK
     zoomB.onclick  = toggleZoom
-    showR.onclick  = toggleWords
+    // showR.onclick  = toggleWords
     bilgi.onclick  = doClick
     leftB.onclick  = () => {gotoPage(curPage-1)}
     slider.oninput = () => {adjustPage(true)}
@@ -343,9 +343,9 @@ function initReader() {
     // window.onresize = resize
     window.onhashchange = gotoHashPage
     window.name = "iqra" //by A Rajab
-    let {roots, marks} = getStorage()
+    let {/* roots, */ marks} = getStorage()
     //we cannot use page yet, files are not read -- see initialPage()
-    showR.style.backgroundColor = roots? CHECKED : ''
+    // showR.style.backgroundColor = roots? CHECKED : ''
     arrayToSet(marks) //immediate action
     // if (localStorage.userName) //takes time to load
     //     readTabularData(setBookmarks, console.error)
@@ -446,8 +446,8 @@ function menuFn() {
             toggleMenuK(evt); break
           case 'Z': case '+':
             toggleZoom(evt);  break
-          case 'K':
-            toggleWords(evt); break
+          // case 'K':
+          //   toggleWords(evt); break
           default: return
       }
   }
@@ -530,19 +530,23 @@ function toggleZoom(evt) {
     if (zoomB.style.backgroundColor) {
       e.style.transform = ''
       zoomB.style.backgroundColor = ''
+      if (document.fullscreenElement) 
+          document.exitFullscreen()
     } else {
       e.style.transform ='scale(1.16) translate(0, 8%)'
       zoomB.style.backgroundColor = CHECKED
+      // if (document.fullscreenEnabled) 
+      //     e.requestFullscreen()  black background!!
     }
     hideMenus()
 }
-function toggleWords(evt) {
+/* function toggleWords(evt) {
     evt.stopPropagation()
     if  (showR.style.backgroundColor)
          showR.style.backgroundColor = ''
     else showR.style.backgroundColor = CHECKED
     setStorage(false)
     hideMenus()
-}
+} */
 
 initReader()
