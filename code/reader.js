@@ -26,8 +26,7 @@ var curSura, curPage, bookmarks, lastSelection;
 var initialized = false
 window.mujam = undefined
 
-//const LS = location.protocol.startsWith('http') && localStorage;
-const DEFAULT = {page:1, roots:true, marks:[71,573,378]}
+const DEFAULT = {page:1, marks:[71,573,378]}
 const MAX_MARKS = 12  // if more marks, delete the oldest
 
 function getStorage() {
@@ -41,7 +40,7 @@ function arrayToSet(m) {
     for (let k of m) 
         bookmarks.add(Number(k))
 }
-function setBookmarks(text, data) { //called once in initReader()
+function setBookmarks(text, data) { //not used -- initReader()
     if (!text || !data.length) return
     console.log(data)
     let b = data.reverse()  //b is the latest entry in data
@@ -51,11 +50,9 @@ function setBookmarks(text, data) { //called once in initReader()
     setStorage(false)
 }
 function setStorage(synch) {
-    //if (!LS) return
     let page  = curPage
-    //let roots = showR.style.backgroundColor? true : false
     let marks = [...bookmarks]
-    let pref = {page, /* roots, */ marks}
+    let pref = {page, marks}
     localStorage.iqra = JSON.stringify(pref)
     let topic = navigator.platform  //PAGES
     if (synch && localStorage.userName) {
@@ -152,7 +149,7 @@ function gotoPage(k, adjusting) { // 1<=k<=P
         if (x.id) { // x is a verse separator
           // let i = cvToIndex(x.id.substring(2))
           x.tText = SD.similarTo(idx)
-          if (x.tText) x.classList.add('gri')
+          if (x.tText) x.classList.add('mavi')
         } else { // x is a word
           let w = x.innerText.trim()
           let r = MD.wordToRoot(toBuckwalter(w))
@@ -266,7 +263,7 @@ function gotoHashPage() {
     switch (e.charAt(0)) {
       case 'p': // p=245
         gotoPage(s)
-        document.title = 'Iqra Sayfa '+s
+        document.title = nameFromPage(s)
         break
       case 'r': // r=Sbr
         let L = MD.rootToList(s)
@@ -281,7 +278,7 @@ function gotoHashPage() {
         let [c, v] = s.split(':') 
         c = Number(c); v = Number(v)
         gotoPage(pageOf(c, v), 'hashInProgress')
-        document.title = 'Iqra Ayet '+s
+        document.title = sName[c]+' '+s
         markVerse(s); break
       default: 
         console.log("wrong hash" + e)
@@ -343,9 +340,8 @@ function initReader() {
     // window.onresize = resize
     window.onhashchange = gotoHashPage
     window.name = "iqra" //by A Rajab
-    let {/* roots, */ marks} = getStorage()
+    let {marks} = getStorage()
     //we cannot use page yet, files are not read -- see initialPage()
-    // showR.style.backgroundColor = roots? CHECKED : ''
     arrayToSet(marks) //immediate action
     // if (localStorage.userName) //takes time to load
     //     readTabularData(setBookmarks, console.error)
@@ -487,7 +483,7 @@ function makeStarMenu() {
     let t = ''
     let a = [...bookmarks].reverse()
     for (let k of a) if (k != curPage)
-        t += span+'s'+k+' '+sName[suraFromPage(k)]+'</span>\n'
+        t += span+nameFromPage(k)+'</span>\n'
     starred.innerHTML = t
 }
 function handleStars() {

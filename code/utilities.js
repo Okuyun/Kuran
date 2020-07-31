@@ -300,6 +300,13 @@ const last = [0, 7, 293, 493, 669, 789, 954, 1160, 1235, 1364,
 function suraFromPage(k) {
     return toChapter(index[k]+1)
 }
+function nameFromPage(k) {
+    k = Number(k)
+    let [c1, v1] = toCV(index[k]+1)
+    let c2 = toChapter(index[k+1])
+    if (c2>c1 && v1>1) { c1++; v1='' }
+    return 's'+k+' '+sName[c1]+' '+v1
+}
 function suraContainsPage(c, k) {
     if (c == M) return (k == P)
     let c1 = index[k-1]+1
