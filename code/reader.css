@@ -7,8 +7,8 @@ body {
     #div1 { display: none; }
 }
 @media screen and (max-width: 850px) {
-    #title, #zoomB { display: none; }
     .hiddenNarrow { display: none; }
+    #title, #zoomB { display: none; }
     #div3, #sureS, button { 
       font-size: 3vw;
     }
@@ -21,6 +21,9 @@ body {
 }
 
 @media screen and (min-width: 851px) {
+    .zoomWide { 
+      transform: scale(1.16) translate(0, 8%);
+    }
     #title {
       margin: 0;
       font-size: 15px;

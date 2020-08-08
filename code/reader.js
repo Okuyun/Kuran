@@ -509,11 +509,13 @@ function toggleZoom(evt) {
     evt.stopPropagation()
     let e = document.body
     if (zoomB.classList.toggle('checked')) {
-      e.style.transform ='scale(1.16) translate(0, 8%)'
+      e.classList.add('zoomWide')
+      // e.style.transform ='scale(1.16) translate(0, 8%)'
       // if (document.fullscreenEnabled) 
       //     e.requestFullscreen()  black background!!
     } else {
-      e.style.transform = ''
+      e.classList.remove('zoomWide')
+      // e.style.transform = ''
       // if (document.fullscreenElement) 
       //     document.exitFullscreen()
     }
