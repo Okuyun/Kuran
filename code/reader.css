@@ -152,16 +152,20 @@ body {
       background-repeat: no-repeat;
       background-size: 100% auto;
       line-height: 42px;
-      color: #070;
     }
     .besmele { 
       line-height: 1.5;
-      color: #070;
+    }
+    .divider, .besmele, .kahve { 
+      color: #a61;
     }
     .mavi { 
       color: blue;
     }
     .gri { 
+      background-color : #ddd;
+    }
+    .sari { 
       background-color : #ffc;
       border-radius: 25px;
     }

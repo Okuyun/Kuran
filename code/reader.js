@@ -71,9 +71,9 @@ function markWord(w, root) {
 }
 function markVerse(cv) {
   function mark(elt) {
-    //apply 'gri' style to x within elt
+    //apply 'sari' style to x within elt
     let x = elt.querySelector(cls)
-    if (x) x.classList.add('gri')
+    if (x) x.classList.add('sari')
     else console.log(cls+' not in '+elt.id)
   }
     // markPattern('[^﴾﴿]*﴿'+numberToArabic(n)+'﴾?', 'cls)
@@ -84,7 +84,7 @@ function markVerse(cv) {
 function displayWord(evt) {
     evt.preventDefault(); //hideMenus()
     let t = evt.target 
-    t.style.backgroundColor = '#ddd'  //mark target
+    t.classList.add('gri')  //mark target
     if (!t.tText ) return
     if (t.id) { // t is a verse separator
       bilgi.style.font = '14px sans'
@@ -114,7 +114,8 @@ function selectWord(evt) {
     }
 }
 function hideWord(evt) {
-    evt.target.style.backgroundColor = ''
+    // evt.target.style.backgroundColor = ''
+    evt.target.classList.remove('gri') 
 }
 function adjustPage(adj) {
     infoS.style.display = adj? 'block' : ''
@@ -143,7 +144,7 @@ function gotoPage(k, adjusting) { // 1<=k<=P
         if (x.id) { // x is a verse separator
           // let i = cvToIndex(x.id.substring(2))
           x.tText = SD.similarTo(idx)
-          if (x.tText) x.classList.add('mavi')
+          if (x.tText) x.classList.add('kahve')
         } else { // x is a word
           let w = x.innerText.trim()
           let r = MD.wordToRoot(toBuckwalter(w))
@@ -429,9 +430,9 @@ function menuFn() {
           case '*':
             toggleStar(); break
           case 'M': case '.':
-            evt.clientX = linkB.offsetLeft
-            evt.clientY = linkB.offsetTop +10
-            toggleMenuK(evt); break
+            // evt.clientX = linkB.offsetLeft
+            // evt.clientY = linkB.offsetTop +10
+            toggleMenuK(); break
           case 'Z': case '+':
             toggleZoom(evt);  break
           default: return
@@ -440,7 +441,7 @@ function menuFn() {
   window.hideMenus = () => { 
       hideElement(menuC); hideElement(menuK); 
       hideElement(menuS); hideElement(bilgi)
-      hideElement(menuV); linkB.style.backgroundColor = ''
+      hideElement(menuV); linkB.classList.remove('checked')
   }
   div1.onmouseenter = hideMenus
   div3.onmouseenter = hideMenus
@@ -479,8 +480,8 @@ function handleStars() {
       hideElement(menuS)
     } else {
       hideMenus(); makeStarMenu()
-      let e = pageS
-      setPosition(menuS, e.offsetLeft+35, e.offsetTop+35, 110)
+      let x = pageS.offsetLeft+35, y = pageS.offsetTop+30
+      setPosition(menuS, x, y, 110)
       pgNum.value = curPage
       pgNum.select(0,3); pgNum.focus()
     }
@@ -498,8 +499,8 @@ function toggleStar() {
 }
 function toggleMenuK() {
     if (linkB.classList.toggle('checked')) {
-      let e = linkB
-      setPosition(menuK, e.offsetLeft+10, e.offsetTop+35, 120)
+      let x = linkB.offsetLeft+10, y = linkB.offsetTop+33
+      setPosition(menuK, x, y, 120)
     } else {
       hideElement(menuK)
     }
