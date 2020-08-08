@@ -7,14 +7,13 @@ body {
     #div1 { display: none; }
 }
 @media screen and (max-width: 850px) {
-    #title { display: none; }
-    #zoomB { display: none; }
+    #title, #zoomB { display: none; }
+    .hiddenNarrow { display: none; }
     #div3, #sureS, button { 
       font-size: 3vw;
     }
     #text { 
       font-size: 3.3vw;
-      display: none;
     }
     #html, #bilgi { 
       font-size: 4.5vw;
@@ -27,7 +26,7 @@ body {
       font-size: 15px;
       display: inline-block;
     }
-    /* #trans { display: none; } */
+    #trans { display: none; }
     #div3, #sureS, #pageS {
       font-size: 14px;
     }
@@ -166,6 +165,9 @@ body {
       background-color : #ffc;
       border-radius: 25px;
     }
+    .checked { 
+      background-color : #ff7;
+    }
     ::selection {
       color: yellow; 
       background-color: blue;
@@ -239,9 +241,6 @@ button:hover {
 #zoomB {
     background-image: url(../image/search.png);
 }
-/* #showR {
-    background-image: url(../image/Kay.png);
-} */
 
 /* CSS triangles using transparent border
 * https://css-tricks.com/snippets/css/css-triangle/

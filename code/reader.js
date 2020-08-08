@@ -7,8 +7,6 @@
 // import {readTabularData, submitData} from "./submitForm.js"
 
 const M = 114; //suras
-// const names = new Array(M+1);
-// const first = new Array(M+1);
 const P = 604; //pages
 const SOURCE = ['', 'ar.jalalayn.txt', 'ar.muyassar.txt', 
  'tr.diyanet.txt',  'en.ahmedali.txt', 'tr.yazir.txt', 'en.yusufali.txt']
@@ -18,9 +16,6 @@ var kur = new KuranText(TRANS || SOURCE[snum], initialPage)
 const qur = new QuranText('quran-uthmani.txt', initialPage)
 const MD  = new MujamData('data/words.txt')
 const SD  = new SimData('data/simi.txt')
-// const rootToList = new Map()
-// const wordToRoot = new Map()
-const CHECKED = '#ff7' // color when the button is down
 const swipe = { t:0, x:0, y:0 }
 var curSura, curPage, bookmarks, lastSelection;
 var initialized = false
@@ -88,7 +83,6 @@ function markVerse(cv) {
 }
 function displayWord(evt) {
     evt.preventDefault(); //hideMenus()
-    // if (!showR.style.backgroundColor) return
     let t = evt.target 
     t.style.backgroundColor = '#ddd'  //mark target
     if (!t.tText ) return
@@ -167,8 +161,7 @@ function gotoPage(k, adjusting) { // 1<=k<=P
     curPage = k; slider.value = k;
     text.innerHTML = kur.pageToHTML(k)
     html.innerHTML = qur.pageToHTML(k)
-    starB.style.backgroundColor = 
-        bookmarks.has(k)? CHECKED : ''
+    starB.classList.toggle('checked', bookmarks.has(k))
     let wc = html.childElementCount
     let idx = index[curPage]  //better than cvToIndex
     console.log('Page '+k, wc+' verses', idx)
@@ -310,7 +303,6 @@ function initReader() {
     starB.onclick  = toggleStar
     linkB.onclick  = toggleMenuK
     zoomB.onclick  = toggleZoom
-    // showR.onclick  = toggleWords
     bilgi.onclick  = doClick
     leftB.onclick  = () => {gotoPage(curPage-1)}
     slider.oninput = () => {adjustPage(true)}
@@ -442,8 +434,6 @@ function menuFn() {
             toggleMenuK(evt); break
           case 'Z': case '+':
             toggleZoom(evt);  break
-          // case 'K':
-          //   toggleWords(evt); break
           default: return
       }
   }
@@ -468,14 +458,12 @@ function keyToPage(evt) {
     }
 }
 function toggleTrans() {
-    if (trans.style.backgroundColor) {
-      html.style.display = ''
-      text.style.display = ''
-      trans.style.backgroundColor = ''
-    } else { //hide html
-      html.style.display = 'none'
-      text.style.display = 'inline-block'
-      trans.style.backgroundColor = CHECKED
+    if (trans.classList.toggle('checked')) {
+      html.classList.add('hiddenNarrow')
+      text.classList.remove('hiddenNarrow')
+    } else { //hide text if narrow screen
+      html.classList.remove('hiddenNarrow')
+      text.classList.add('hiddenNarrow')
     }
 }
 function makeStarMenu() {
@@ -498,51 +486,37 @@ function handleStars() {
     }
 }
 function toggleStar() {
-    if (starB.style.backgroundColor) {
-      starB.style.backgroundColor = ''
-      bookmarks.delete(curPage)
-    } else {
-      starB.style.backgroundColor = CHECKED
+    if (starB.classList.toggle('checked')) {
       bookmarks.add(curPage)
       let a = [...bookmarks]
       if (a.length > MAX_MARKS)
       bookmarks.delete(a[0]) //the oldest entry
+    } else {
+      bookmarks.delete(curPage)
     }
     setStorage(true) //may need to synch
 }
 function toggleMenuK() {
-    if (linkB.style.backgroundColor) {
-      linkB.style.backgroundColor = ''
-      hideElement(menuK)
-    } else {
-      hideMenus(); linkB.style.backgroundColor = CHECKED
+    if (linkB.classList.toggle('checked')) {
       let e = linkB
       setPosition(menuK, e.offsetLeft+10, e.offsetTop+35, 120)
+    } else {
+      hideElement(menuK)
     }
 }
 function toggleZoom(evt) {
     evt.stopPropagation()
     let e = document.body
-    if (zoomB.style.backgroundColor) {
-      e.style.transform = ''
-      zoomB.style.backgroundColor = ''
-      if (document.fullscreenElement) 
-          document.exitFullscreen()
-    } else {
+    if (zoomB.classList.toggle('checked')) {
       e.style.transform ='scale(1.16) translate(0, 8%)'
-      zoomB.style.backgroundColor = CHECKED
       // if (document.fullscreenEnabled) 
       //     e.requestFullscreen()  black background!!
+    } else {
+      e.style.transform = ''
+      // if (document.fullscreenElement) 
+      //     document.exitFullscreen()
     }
     hideMenus()
 }
-/* function toggleWords(evt) {
-    evt.stopPropagation()
-    if  (showR.style.backgroundColor)
-         showR.style.backgroundColor = ''
-    else showR.style.backgroundColor = CHECKED
-    setStorage(false)
-    hideMenus()
-} */
 
 initReader()
