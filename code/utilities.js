@@ -297,15 +297,20 @@ const last = [0, 7, 293, 493, 669, 789, 954, 1160, 1235, 1364,
     6138, 6146, 6157, 6168, 6176, 6179, 6188, 6193, 6197, 6204, 6207,
     6213, 6216, 6221, 6225, 6230, 6236]
 
-function suraFromPage(k) {
-    return toChapter(index[k]+1)
-}
-function nameFromPage(k) {
+function cvFromPage(k) {
+    //if more than one sura on page k
+    //return c2 unless v1==1
     k = Number(k)
     let [c1, v1] = toCV(index[k]+1)
     let c2 = toChapter(index[k+1])
-    if (c2>c1 && v1>1) { c1++; v1='' }
-    return 's'+k+' '+sName[c1]+' '+v1
+    if (c2>c1 && v1>1) { c1++; v1=1 }
+    return [c1, v1] 
+}
+function nameFromPage(k) {
+    let [c, v] = cvFromPage(k)
+    let n = 's'+k+' '+sName[c]
+    if (v == 1) return n
+    return n+' '+v
 }
 function suraContainsPage(c, k) {
     if (c == M) return (k == P)

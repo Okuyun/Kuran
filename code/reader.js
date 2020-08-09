@@ -128,8 +128,9 @@ function adjustPage(adj) {
 function doClick(evt) {
   if (bilgi.style.font) { // verse separator
       let t = evt.target.innerText
+      if (t.length > 6) return
       console.log(location.hash+' to '+t)
-      location.hash = '#v='+t.split(' ')[0]
+      location.hash = '#v='+t  //.split(' ')[0]
     } else { // a word
       openMujam(toBuckwalter(bilgi.innerText))
     }
@@ -144,10 +145,10 @@ function gotoPage(k, adjusting) { // 1<=k<=P
         if (x.id) { // x is a verse separator
           // let i = cvToIndex(x.id.substring(2))
           let s = SD.similarTo(idx)
-          x.tText = s? s.split(' ')
-            .map(x => '<span>'+x+'</span>')
-            .join('&emsp;') : '';
-          if (x.tText) x.classList.add('kahve')
+          if (!s) return
+          x.tText = s.split(' ')
+            .map(x => '<div>'+x+'</div>').join('');
+          x.classList.add('kahve')
         } else { // x is a word
           let w = x.innerText.trim()
           let r = MD.wordToRoot(toBuckwalter(w))
@@ -160,7 +161,7 @@ function gotoPage(k, adjusting) { // 1<=k<=P
     k = Number(k);
     sayfa.innerText = k;
     if (curPage == k) return;
-    setSura(suraFromPage(k));
+    let [c] = cvFromPage(k); setSura(c);
     if (adjusting == 'slider') return;
     curPage = k; slider.value = k;
     text.innerHTML = kur.pageToHTML(k)

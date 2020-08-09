@@ -78,16 +78,19 @@ body {
       display: none;
       user-select: none;
       position: absolute;
-      min-width: 90px;
-      max-width: 220px;
-      padding: 8px;
+      min-width: 95px;
+      max-width: 200px;
+      padding: 4px;
       text-align: center;
       color: blue;
       background-color: #ff7;
       border: black 1px solid;
-      padding-bottom: 5px;
       cursor: pointer;
       z-index: 1;
+    }
+    #bilgi div {
+      display: inline-block;
+      padding: 8px;
     }
     #div1, #div3 { 
       white-space: nowrap;
@@ -233,7 +236,7 @@ button {
     background-color: Transparent;
     border: none;
 }
-button:hover {
+button:hover, #bilgi div:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 #starB {
