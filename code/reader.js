@@ -87,11 +87,11 @@ function displayWord(evt) {
     t.classList.add('gri')  //mark target
     if (!t.tText ) return
     if (t.id) { // t is a verse separator
-      bilgi.style.font = '14px sans'
+      bilgi.style.font = '14px/1.6 sans'
     } else { // t is a word
       bilgi.style.font = ''
     }
-    bilgi.innerText = t.tText 
+    bilgi.innerHTML = t.tText 
     let y = t.offsetTop + t.offsetHeight
     setPosition(bilgi, t.offsetLeft+24, y-6, 105)
 }
@@ -125,13 +125,13 @@ function adjustPage(adj) {
       infoS.innerText = s
     }
 }
-function doClick() {
-    let t = bilgi.innerText
-    if (bilgi.style.font) { // verse separator
+function doClick(evt) {
+  if (bilgi.style.font) { // verse separator
+      let t = evt.target.innerText
       console.log(location.hash+' to '+t)
       location.hash = '#v='+t.split(' ')[0]
     } else { // a word
-      openMujam(toBuckwalter(t))
+      openMujam(toBuckwalter(bilgi.innerText))
     }
 } 
 function gotoPage(k, adjusting) { // 1<=k<=P
@@ -143,7 +143,10 @@ function gotoPage(k, adjusting) { // 1<=k<=P
         x.oncontextmenu = selectWord
         if (x.id) { // x is a verse separator
           // let i = cvToIndex(x.id.substring(2))
-          x.tText = SD.similarTo(idx)
+          let s = SD.similarTo(idx)
+          x.tText = s? s.split(' ')
+            .map(x => '<span>'+x+'</span>')
+            .join('&emsp;') : '';
           if (x.tText) x.classList.add('kahve')
         } else { // x is a word
           let w = x.innerText.trim()
@@ -508,14 +511,13 @@ function toggleMenuK() {
 function toggleZoom(evt) {
     evt.stopPropagation()
     let e = document.body
+    //  e = div2 poor location for dialogs
     if (zoomB.classList.toggle('checked')) {
       e.classList.add('zoomWide')
-      // e.style.transform ='scale(1.16) translate(0, 8%)'
       // if (document.fullscreenEnabled) 
       //     e.requestFullscreen()  black background!!
     } else {
       e.classList.remove('zoomWide')
-      // e.style.transform = ''
       // if (document.fullscreenElement) 
       //     document.exitFullscreen()
     }
