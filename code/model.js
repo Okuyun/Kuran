@@ -51,12 +51,26 @@ const sajdaX = [1160, 1722, 1950, 2138, 2308, 2613, 2915,
  */
 class KuranText {
     constructor(url, callback) {
+      let setLine = (v, txt) => v+'. '+txt
       //cannot use function because of "this"
       let process = (tt) => {
-        // console.log(tt.length, url) // => 874956
-        let a = ('\n'+tt).replace(/\|/g, '. ').split(/\n\d+\. /)
+        // insert an empty line a[0]
+        let a = ('\n'+tt).split('\n')
         //trim the credits at the end
-        a[6236] = a[6236].split(/\n/)[0]
+        a.length = nVerse+1 //6236+1
+        let num = 0;
+        let [ ,v0, t0] = a[1].split('|')
+        for (let i=1; i<nVerse; i++) {
+          let [ ,v1, t1] = a[i+1].split('|')
+          if (t1 == t0) num++
+          else if (num==0) a[i] = setLine(v0, t0)
+          else { //num>0
+            a[i] = setLine((v0-num)+'-'+v0, t0)
+            while (num>0) { a[i-num] = num; num-- }
+          }
+          v0 = v1; t0 = t1
+        }
+        a[nVerse] = setLine(v0, t0)
         for (let i of sajdaX) a[i] += this.secde 
         this.data = a; this.loaded = true
         console.log(this.url, a.length)
@@ -71,24 +85,29 @@ class KuranText {
     get besmele() { return 'Bismillahirrahmanirrahim' }
     get secde()   { return ' [S] ' }
     verseToHTML(cls, s) {
-      return '<span class='+cls+'>'+s+'</span><BR>'
+      return '<span class="'+cls+'">'+s+'</span><BR>'
     }
     pageToHTML(p) {
-      let newChapter = () => {
-        [c, v] = toCV(i) // c, v are declared below
+      let toID = (c, v) => 'c'+c+'_'+v
+      let newChapter = (c) => {
         out.push('<div class=divider>'+this.chapName(c)+'</div>')
         if (c!=1 && c!=9)
           out.push('<div class=besmele>'+this.besmele+'</div>')
       }
         let i = index[p]+1 //first verse on page
         let k = index[p+1] //last verse on page
-        let [c, v] = toCV(i), out = []
+        let out = [], num = 0;
         while (i <= k) { //for each verse x
+          let [c, v] = toCV(i)
+          if (v == 1) newChapter(c)
           let s = this.getVerse(i)
-          if (s.startsWith('1.')) newChapter()
-          let cls = 'c'+c+'_'+v
+          if (typeof s == 'number') {
+            num = s; i = i+s; continue 
+          }
+          let cls = toID(c, v)
+          while (num>0) { cls += ' '+toID(c, v-num); num-- }
           out.push(this.verseToHTML(cls, s))
-          i++; v++
+          i++
         }
         return out.join('\n')
     }
