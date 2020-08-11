@@ -3,9 +3,6 @@ body {
   background-color: cyan;
 }
 
-@media screen and (max-height: 420px) {
-    #div1 { display: none; }
-}
 @media screen and (max-width: 850px) {
     .hiddenNarrow { display: none; }
     #title, #zoomB { display: none; }
@@ -71,9 +68,6 @@ body {
     #pgNum {
       margin-top: 6px;
     }
-    #div0 { 
-      height: 36px;
-    }
     #bilgi { 
       display: none;
       user-select: none;
@@ -100,8 +94,13 @@ body {
     #div1 { 
       width: 100%;
       position: fixed;
-      bottom: 0;
+      bottom: 4px;
     }
+    #div0 { height: 36px; }
+  @media screen and (max-height: 420px) {
+      #div1 { position: relative; }
+      #div0 { height: 14px; }
+  }
     #text, #html {
       background-color: white;
       padding: 4px 8px;
