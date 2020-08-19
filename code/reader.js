@@ -42,18 +42,12 @@ function setBookmarks(text, data) { //not used -- initReader()
       .find(x => x.user == localStorage.userName)
     if (!b) return
     arrayToSet(b.marks.split(' '))
-    setStorage(false)
+    //setStorage(false)
 }
-function setStorage(synch) {
+function setStorage() {
     let page  = curPage
     let marks = [...bookmarks]
-    let pref = {page, marks}
-    localStorage.iqra = JSON.stringify(pref)
-    let topic = navigator.platform  //PAGES
-    if (synch && localStorage.userName) {
-        submitData(localStorage.userName, topic, marks.join(' '))
-        console.log(marks.length+" bookmarks sumbitted")
-    }
+    localStorage.iqra = JSON.stringify({page, marks})
 }
 function forceSelection() {
     //trim for Windows -- thank you Rajab
@@ -176,8 +170,7 @@ function gotoPage(k, adjusting) { // 1<=k<=P
     }
     if (adjusting != 'hashInProgress') //cv are not set
       location.hash = '#p='+curPage
-    setStorage(false)
-    hideMenus();  //html.scrollTo(0)
+    setStorage(); hideMenus();  //html.scrollTo(0)
 }
 function setSura(c) { // 1<=c<=M
     // c = Number(c);
@@ -261,7 +254,7 @@ function gotoHashPage() {
     switch (e.charAt(0)) {
       case 'p': // p=245
         gotoPage(s)
-        document.title = nameFromPage(s)
+        document.title = 's'+nameFromPage(s)
         break
       case 'r': // r=Sbr
         let L = MD.rootToList(s)
@@ -476,7 +469,7 @@ function makeStarMenu() {
     let t = ''
     let a = [...bookmarks].reverse()
     for (let k of a) if (k != curPage)
-        t += span+nameFromPage(k)+'</span>\n'
+        t += span+'s'+nameFromPage(k)+'</span>\n'
     starred.innerHTML = t
 }
 function handleStars() {
@@ -491,6 +484,7 @@ function handleStars() {
     }
 }
 function toggleStar() {
+    let msg = ''
     if (starB.classList.toggle('checked')) {
       bookmarks.add(curPage)
       let a = [...bookmarks]
@@ -498,8 +492,15 @@ function toggleStar() {
       bookmarks.delete(a[0]) //the oldest entry
     } else {
       bookmarks.delete(curPage)
+      msg = '-'
     }
-    setStorage(true) //may need to synch
+    let n = localStorage.userName
+    if (n) {
+      let s = msg? 'Remove' : 'Add'
+      console.log(s+" bookmark: "+curPage)
+      msg = msg+nameFromPage(curPage)
+      submitData(n, navigator.platform, msg)
+    }
 }
 function toggleMenuK() {
     if (linkB.classList.toggle('checked')) {

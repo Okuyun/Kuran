@@ -61,7 +61,7 @@ title='Sure ve ayet numaraları ":" ile ayrılmalı'>
 </div>
 </p>
 <p><label>
-  Link adresi (hashtag) </label><br>
+  Link adresi (hashtag or URL) </label><br>
   <input type=text id=omni title=
 'Linki ilk harf belirler: &#10;Mushaf: p=… v=… &#10;Mucem: r=… &#10;Finder: t=… b=…'>
   </p>
@@ -94,10 +94,19 @@ function doSearch() {
       doRoot(t) //t starts with r
     else if (/^[bt]=/.test(t))
       doText(t) //t starts with b or t
+    else window.open(t) //t contains URL
 }
 function clearAll() {
   document.querySelectorAll('input').forEach(x => x.value='')
   clear.hidden = true
+}
+function versValue() {
+    //find numbers, \D means not digit
+    let [c, v] = vers.value.split(/\D+/)
+    if (!c) c = '1'
+    if (!v) v = '1'
+    vers.value = c+':'+v
+    return vers.value
 }
 function keyToPage(evt) {
     if (evt.key == 'Enter') 
@@ -109,14 +118,14 @@ function keyToPage(evt) {
         case page:
           doOpen('p='+page.value); break;
         case vers:
-          doOpen('v='+vers.value); break;
+          doOpen('v='+versValue()); break;
         case omni:
           doSearch(); break;
       }
 }
 function setOmni(evt) {
     let h = ''
-    if (vers.value) h += '&v='+vers.value
+    if (vers.value) h += '&v='+versValue()
     else if (page.value) h += '&p='+page.value;
     if (root.value) 
       h += '&r='+root.value.replace(/\s+/g, '&r=')

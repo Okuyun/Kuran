@@ -308,7 +308,7 @@ function cvFromPage(k) {
 }
 function nameFromPage(k) {
     let [c, v] = cvFromPage(k)
-    let n = 's'+k+' '+sName[c]
+    let n = k+' '+sName[c]
     if (v == 1) return n
     return n+' '+v
 }

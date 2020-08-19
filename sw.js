@@ -1,5 +1,5 @@
 "use strict";
-const PREF ='iqra', CACHE = PREF+'02'
+const PREF ='iqra', CACHE = PREF+'4'
 const FILES = [
   'data/words.txt',
   'data/refs.txt',
@@ -21,7 +21,8 @@ function installCB(e) {  //CB means call-back
 addEventListener('install', installCB)
 
 function save(req, resp) {
-  if (!req.url.includes("Iqra3")) 
+  // console.log("save "+req.url);
+  if (!req.url.includes("maeyler"))
      return resp;
   return caches.open(CACHE)
   .then(cache => { // save request
