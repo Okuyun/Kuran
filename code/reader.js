@@ -21,13 +21,9 @@ var curSura, curPage, bookmarks, lastSelection;
 var initialized = false
 window.mujam = undefined
 
-const DEFAULT = {page:1, marks:[71,573,378]}
+const DEFAULT = {page:1, marks:[378]}
 const MAX_MARKS = 12  // if more marks, delete the oldest
-
-function getStorage() {
-    if (!localStorage.iqra) return DEFAULT
-    return JSON.parse(localStorage.iqra)
-}
+  
 function arrayToSet(m) {
     if (!m) return
     console.log('Bookmarks set to '+m.join(' '))  
@@ -42,12 +38,6 @@ function setBookmarks(text, data) { //not used -- initReader()
       .find(x => x.user == localStorage.userName)
     if (!b) return
     arrayToSet(b.marks.split(' '))
-    //setStorage(false)
-}
-function setStorage() {
-    let page  = curPage
-    let marks = [...bookmarks]
-    localStorage.iqra = JSON.stringify({page, marks})
 }
 function forceSelection() {
     //trim for Windows -- thank you Rajab
@@ -170,7 +160,9 @@ function gotoPage(k, adjusting) { // 1<=k<=P
     }
     if (adjusting != 'hashInProgress') //cv are not set
       location.hash = '#p='+curPage
-    setStorage(); hideMenus();  //html.scrollTo(0)
+    setStorage('page', curPage)
+    setStorage('marks', [...bookmarks])
+    hideMenus();  //html.scrollTo(0)
 }
 function setSura(c) { // 1<=c<=M
     // c = Number(c);
@@ -330,9 +322,9 @@ function initReader() {
     // window.onresize = resize
     window.onhashchange = gotoHashPage
     window.name = "iqra" //by A Rajab
-    let {marks} = getStorage()
     //we cannot use page yet, files are not read -- see initialPage()
-    arrayToSet(marks) //immediate action
+    let x = getStorage() || DEFAULT
+    arrayToSet(x.marks) //immediate action
     // if (localStorage.userName) //takes time to load
     //     readTabularData(setBookmarks, console.error)
 }

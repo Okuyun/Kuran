@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.0g";
+const VERSION = "V4.0h";
 
 /**
  * &emsp; used in both Mujam
@@ -120,6 +120,20 @@ async function fetch_text_then(url, callback) {
     let t = await r.text()   //text
     callback(t)
 }
+
+/**
+ * localStorage
+ */
+function getStorage(k) {
+    if (!localStorage.iqra) return ''
+    let x = JSON.parse(localStorage.iqra)
+    return k? x[k] : x
+}
+function setStorage(k, v) {
+    let x = getStorage(); x[k] = v
+    localStorage.iqra = JSON.stringify(x)
+}
+
 
 // export {VERSION, EM_SPACE, setPosition, hideElement, 
 //     openSitePage, openSiteVerse, fetch_text_then}
