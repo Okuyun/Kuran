@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"    content="width=device-width">
+  <meta name="author"      content="M A Eyler, Istanbul, 2020" />
+  <link rel="icon" href="image/icon.png">
+  <title>Yer işaretleri</title>
+
+  <style>
+    body {max-width: 540px;}
+    img {
+        position: fixed;
+        top:8px; right:8px;
+        width: 50px;
+    }
+    pre {
+        overflow-x: auto;
+        line-height: 1.5;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<h2 id=title></h2>
+<img id=image>
+<p>
+    Kullandığınız cihazlar arasında yer işaretlerini eşitlemek 
+    için Google Drive hesabınızdan yetki vermelisiniz.
+    Giriş düğmesi ile hesaba girmek yeterli.
+    İstenen yetki, sadece bu yazılıma ait olan "iqra bookmarks"
+    klasörüne erişim izninden ibarettir. Drive içindeki diğer 
+    dosyalara erişim hakkı <b>vermiyorsunuz</b>. </p><p>
+    Bu cihazda saklanan yerel işaretler ile Google Drive içindeki
+    işaretler birleştirilir ve onayınıza sunulur. 
+    Yer işaretleri, yıldızlı sayfaların numarasıdır.
+    İki kümeden sadece birini ilgili düğme ile seçebilirsiniz.
+    En çok 12 işaret (sayfa numarası) saklanabilir.
+    Onay düğmesi ile iki veri kümesi eşitlenir.
+</p><p>
+<button id=auth onclick="doSignIn()">Giriş</button>
+&nbsp; <span id=user></span>
+&emsp; <input type=checkbox id=auto>Otomatik eşitle </p><p>
+<button id=localB disabled onclick="useMarks(localT)">Yerel işaretler
+</button>&nbsp; <span id=localT></span> </p><p>
+<button id=driveB disabled onclick="useMarks(driveT)">Google Drive
+</button>&nbsp; <span id=driveT></span> </p><p>
+Seçilen işaretler: <input type=text id=input>
+<button id=sync disabled onclick="synchronize()">Onay</button>
+<pre id=out></pre>
+
+<script src="https://apis.google.com/js/api.js"></script>
+<script>
+/**
+ * https://developers.google.com/explorer-help/guides/code_samples
+ */
+function stringify(m) {
+    if (typeof m === "string") return m
+    return JSON.stringify(m,'',2)
+}
+function log(m) {
+    if (m.result) { log(m.result); return }
+    console.log(m); out.style.color = ''
+    out.innerText = stringify(m)
+}
+function error(e) {
+    if (e.result) { error(e.result); return }
+    if (e.error) { error(e.error); return }
+    console.error(e); out.style.color = 'red'
+    out.innerText = stringify(e)
+}
+async function doSignIn() {
+  log("Authorization begins");
+  try {
+    await gapi.auth2.getAuthInstance().signIn()
+    showFiles()
+  } catch (e) { error(e) }
+}
+async function doLoadClient() {
+  const DRIVE = 
+    "https://content.googleapis.com/discovery/v1/apis/drive/v3/rest"
+  if (!gapi.client.drive) try {
+      log("Load drive client");
+      await gapi.client.load(DRIVE)
+      log("GAPI client loaded")
+  } catch (e) { error(e) }
+}
+const FOLDER = 'application/vnd.google-apps.folder'
+const FIELDS = 'files(id,name,mimeType,parents)'
+async function doCreate(name, mimeType, parentId) {
+  log("create "+name);
+  try {
+    let resource = {name, mimeType}
+    if (parentId) resource.parents = [parentId]
+    gapi.client. drive.files.create(resource).then(log)
+    let f = await gapi.client.drive.files.create(resource)
+    log(f); return f.id
+  } catch (e) { error(e) }
+}
+async function getFileData(fileId, fields=FIELDS) {
+  log("getFileData "+fileId);
+  try {
+    return await gapi.client.drive.files.get({fileId, fields})
+  } catch (e) { error(e) }
+}
+async function doSearch(q, fields=FIELDS) {
+  log("search "+q);
+  try {
+    return await gapi.client.drive.files.list({q, fields})
+  } catch (e) { error(e) }
+}
+async function doRename(fileId, name) {
+  log("rename "+name)
+  try {
+    resource = { name }
+    return await gapi.client.drive.files.update({fileId, resource})
+ } catch (e) { error(e) }
+}
+async function synchronize() {
+    log("synchronize");
+    await getMarksId()
+    let s = input.value.trim()
+    if (!s) { error('need at least one bookmark'); return }
+    await doRename(marksId, s)
+    localT.innerText = s
+    driveT.innerText = s
+}
+function useMarks(elt) {
+    input.value = elt.innerText
+}
+function currentUser() {
+    return gapi.auth2.getAuthInstance().currentUser.get()
+}
+function showProfile() {
+    let p = currentUser().getBasicProfile()
+    image.src = p.getImageUrl()
+    user.innerText = p.getEmail()
+}
+var folderId, marksId
+const M_FOLDER = 'iqra bookmarks', M_MIME = 'text/iqra'
+  apiKey = 'AIzaSyCH22pYgwYoWme6CFPiU3i_JLD-SgATteU',
+  clientId = "864962883135-ut9cl3g1jlqv1frlp2p6cq9r3jsfflkv.apps.googleusercontent.com",
+  scope = 'https://www.googleapis.com/auth/drive.file';
+async function init() {
+    await gapi.auth2.init({ apiKey, clientId, scope })
+    if (!currentUser().getId()) return
+    showFiles()
+}
+async function findOrMake(q, name, type, parent) {
+    let {files} = await doSearch(q)
+    if (files.length) return files[0].id
+    return await doCreate(name, type, parent)
+}
+async function getMarksId() {
+    log('getMarksId')
+    let q, files
+    let q1 = 'trashed = false and name = "'+M_FOLDER+'"'
+    folderId = await findOrMake(q1, M_FOLDER, FOLDER)
+    let q2 = 'trashed = false and mimeType contains "iqra"'
+    marksId = await findOrMake(q2, 'no_name', M_MIME, folderId)
+}
+async function showFiles() {
+    await doLoadClient(); 
+    showProfile(); sync.disabled = false
+    localB.disabled = false; driveB.disabled = false
+    //local marks a
+    let i = localStorage.iqra
+    let a = i? JSON.parse(i).marks : []
+    localT.innerText = a.join(' ') || '(yok)'
+    //drive data b
+    getMarksId()
+    let {files} = await getFileData(marksId)
+    let str, b = []
+    if (files.length) {
+      str = files[0].name
+      b = str.split(' ')
+    } else {
+      str = '(yok)'
+    }
+    driveT.innerText = str
+    //merge a & b
+    const MAX = 6 //items from each list
+    let n = 0 //items from b
+    for (let x of b) 
+      if (!a.includes(x) && n<6) {
+        a.push(x); n++
+      }
+    let d = a.length - 2*MAX
+    if (d > 0) d.splice(0, d)
+    input.value = a.join(' ')
+}
+title.innerText = document.title
+gapi.load("client:auth2", init);
+</script>
+</body>
+</html>

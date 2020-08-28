@@ -94,7 +94,7 @@ function doSearch() {
       doRoot(t) //t starts with r
     else if (/^[bt]=/.test(t))
       doText(t) //t starts with b or t
-    else window.open(t) //t contains URL
+    else window.open(t, 'finder') //t contains URL
 }
 function clearAll() {
   document.querySelectorAll('input').forEach(x => x.value='')
