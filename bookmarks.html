@@ -8,7 +8,10 @@
   <title>Yer işaretleri</title>
 
   <style>
-    body {max-width: 540px;}
+    body {
+      max-width: 540px;
+      background: #fff8d0;
+    }
     p { font: 11pt/1.3 sans-serif; }
     img {
         position: fixed;
@@ -18,8 +21,13 @@
     pre {
         overflow-x: auto;
         line-height: 1.3;
+        /* background: #eee; */
     }
-    #input { width: 90%; }
+    #input { width: 97%; }
+    #sync { 
+      background: #bcf;
+      margin-bottom: 5px;
+    }
   </style>
 
 </head>
@@ -29,31 +37,41 @@
 <h2 id=title></h2>
 <img id=image>
 <p>
+    Yer işaretleri, yıldızlı sayfaların numarasıdır.
     Kullandığınız cihazlar arasında yer işaretlerini eşitlemek 
     için Google Drive hesabınızdan yetki vermelisiniz.
-    Giriş düğmesi ile hesaba girmek yeterli.
     İstenen yetki, sadece bu yazılıma ait olan "iqra bookmarks"
     klasörüne erişim izninden ibarettir. Drive içindeki diğer 
-    dosyalara erişim hakkı <b>yok</b>. </p><p>
-    Bu cihazda saklanan yerel işaretler ile Google Drive içindeki
-    işaretler birleştirilir ve onayınıza sunulur. 
-    Yer işaretleri, yıldızlı sayfaların numarasıdır.
-    İki kümeden sadece birini ilgili düğme ile seçebilirsiniz.
+    dosyalara erişim hakkı <b>yok</b>. 
+</p><p>
+    Bu cihazda saklanan yerel işaretler ile bulut (Google Drive)
+    içindeki işaretler birleştirilir ve onayınıza sunulur. 
+<!-- İki kümeden sadece birini ilgili düğme ile seçebilirsiniz. -->
     En çok 12 işaret (sayfa numarası) saklanabilir.
     Onay düğmesi ile iki veri kümesi eşitlenir.
 </p><p>
-<button id=auth onclick="doSignIn()">Giriş</button>
-&nbsp; <span id=user></span>
-&emsp; <input type=checkbox id=auto onchange="autoSync()">
-<label for=auto>Otomatik eşitle</label> </p><p>
-<button id=localB disabled onclick="useMarks(localT)">Yerel işaretler
-</button> <br><span id=localT></span> </p><p>
-<button id=driveB disabled onclick="useMarks(driveT)">Google Drive
-</button> <br><span id=driveT></span> </p><p>
+<button id=auth onclick="doSignIn()"
+title="Bulut erişimi için yetkilendirme">Giriş</button>&nbsp; 
+<span id=user title="Yetki veren kullanıcı"></span>&emsp; 
+<input type=checkbox id=auto onchange="autoSync()"
+title="Seçili ise, yer işaretleri otomatik eşitlenir">
+<label for=auto>Otomatik eşitle</label> 
+</p><p>
+<button id=localB disabled onclick="useMarks(localT)"
+title="Bu cihazda saklanan yer işaretlerini kullanın">
+Yerel işaretler</button><br>
+<span id=localT title="Bu cihazdaki yer işaretleri"></span> 
+</p><p>
+<button id=driveB disabled onclick="useMarks(driveT)"
+title="Bulutta saklanan yer işaretlerini kullanın">
+Google Drive</button><br>
+<span id=driveT title="Buluttaki yer işaretleri"></span> 
+</p><p>
 Seçilen işaretler: &emsp; 
-<button id=sync disabled onclick="synchronize()">Onay</button><br>
-<input type=text id=input>
-<pre id=out></pre>
+<button id=sync disabled onclick="synchronize()"
+title="Seçilen işaretleri kullanın">Onay</button><br>
+<input type=text id=input title="Seçilen işaretler">
+</p><pre id=out></pre>
 
 <script src="code/common.js"></script>
 <script src="https://apis.google.com/js/api.js"></script>
@@ -66,23 +84,23 @@ function stringify(m) {
     return JSON.stringify(m,'',2)
 }
 function log(m) {
-    let r = m.result? m.result : m
+    let r = m.result || m
     console.log(m); out.style.color = ''
     out.innerText = stringify(r)
 }
 function error(e) {
-    let r = e.error? e.error : e
+    let r = e.error || e.result ||  e
     console.error(e); out.style.color = 'red'
     out.innerText = stringify(r)
 }
 async function doSignIn() {
-  log("Authorization begins");
+  log("Authorization");
   try {
     await gapi.auth2.getAuthInstance().signIn()
-    showFiles()
+    displayMarks()
   } catch (e) { error(e) }
 }
-async function doLoadClient() {
+async function loadClient() {
   const DRIVE = 
     "https://content.googleapis.com/discovery/v1/apis/drive/v3/rest"
   if (!gapi.client.drive) try {
@@ -108,7 +126,7 @@ async function getFileData(fileId, fields) {
   } catch (e) { error(e) }
 }
 async function doSearch(q, fields) {
-  log("search "+q);
+  log("search ["+q+"]");
   try {
     return gapi.client.drive.files.list({q, fields})
   } catch (e) { error(e) }
@@ -121,13 +139,13 @@ async function doRename(fileId, name) {
  } catch (e) { error(e) }
 }
 async function synchronize() {
-    log("synchronize");
     if (!marksId) await getMarksId()
     let s = input.value.trim()
     if (!s) { error('need at least one bookmark'); return }
-    await doRename(marksId, s)
-    localT.innerText = s
-    driveT.innerText = s
+    let a = s.split(/\D+/); s = a.join(' ') //normalize s
+    localT.innerText = driveT.innerText = input.value = s
+    setStorage('marks', a); await doRename(marksId, s)
+    log("synchronized");
 }
 function useMarks(elt) {
     input.value = elt.innerText
@@ -153,9 +171,12 @@ const M_FOLDER = 'iqra bookmarks', M_MIME = 'text/iqra'
   clientId = "864962883135-ut9cl3g1jlqv1frlp2p6cq9r3jsfflkv.apps.googleusercontent.com",
   scope = 'https://www.googleapis.com/auth/drive.file';
 async function init() {
+  try {
     await gapi.auth2.init({ apiKey, clientId, scope })
     if (!currentUser().getId()) return
-    marksId = getStorage('marksId'); showFiles()
+    marksId = getStorage('marksId'); displayMarks()
+    auto.checked = marksId? true : false
+  } catch (e) { error(e) }
 }
 async function getMarksId() {
   log('getMarksId')
@@ -166,8 +187,8 @@ async function getMarksId() {
     let files = result.files
     if (files.length) folderId = files[0].id
     else {
-      let f = await doCreate(M_FOLDER, FOLDER)
-      log(f); folderId = f.id
+      let {result} = await doCreate(M_FOLDER, FOLDER)
+      log(result); folderId = result.id
     }
   }
     let q = 'trashed = false and mimeType contains "iqra"'
@@ -175,24 +196,26 @@ async function getMarksId() {
     let files = result.files
     if (files.length) marksId = files[0].id
     else {
-      let f = await doCreate('no_name', M_MIME, folderId)
-      log(f); marksId = f.id
+      let {result} = await doCreate('no_name', M_MIME, folderId)
+      log(result); marksId = result.id
     }
     return new Promise((resolve, reject) => resolve())
 }
-async function showFiles() {
-    await doLoadClient(); 
+async function displayMarks() {
+    await loadClient(); 
     showProfile(); sync.disabled = false
     localB.disabled = false; driveB.disabled = false
+    let x = getStorage()
     //local marks a
-    let a = getStorage('marks')
+    let a = x.marks
     localT.innerText = a.join(' ') || '(yok)'
     //drive data b
+    marksId = x.marksId
     if (!marksId) await getMarksId()
     let str, b;
     if (marksId) {
-      let f = await getFileData(marksId)
-      str = f.name; b = str.split(' ')
+      let {result} = await getFileData(marksId)
+      str = result.name; b = str.split(' ')
     } else {
       str = '(yok)'; b = []
     }
@@ -207,7 +230,6 @@ async function showFiles() {
     let d = a.length - 2*MAX
     if (d > 0) a.splice(0, d)
     input.value = a.join(' ')
-    setStorage('marks', a)
 }
 title.innerText = document.title
 gapi.load("client:auth2", init);

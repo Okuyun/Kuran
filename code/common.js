@@ -66,7 +66,9 @@ function hideElement(elt) {
 function openSitePage(s, p) {
   let url, name;
   switch (s.toUpperCase()) {
-    case 'Y': case '?':  //Yardım
+    case 'Y':  //Yer işaretleri
+        url = 'bookmarks.html'; name = 'finder'; break
+    case 'D': case '?':  //Dokümanlar
         url = 'guideQ.html'; name = 'Kuran'; break
     case 'K':
         url = "http://kuranmeali.com/Sayfalar.php?sayfa="+p
