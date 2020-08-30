@@ -37,25 +37,24 @@
 <h2 id=title></h2>
 <img id=image>
 <p>
-    Yer işaretleri, yıldızlı sayfaların numarasıdır.
-    Kullandığınız cihazlar arasında yer işaretlerini eşitlemek 
-    için Google Drive hesabınızdan yetki vermelisiniz.
-    İstenen yetki, sadece bu yazılıma ait olan "iqra bookmarks"
-    klasörüne erişim izninden ibarettir. Drive içindeki diğer 
-    dosyalara erişim hakkı <b>yok</b>. 
+  Bu cihazda yıldızla işaretlediğiniz sayfaları, 
+  kullandığınız diğer cihazlarda da yıldızlı görmek istiyorsanız, 
+  Google Drive hesabınızdan erişim izni vermeniz gerekiyor. 
+  İstenen yetki, bu yazılıma ait olan "iqra bookmarks" klasörüne 
+  erişmekten ibarettir, başka Drive dosyalarına erişim izni istenmiyor.
 </p><p>
-    Bu cihazda saklanan yerel işaretler ile bulut (Google Drive)
-    içindeki işaretler birleştirilir ve onayınıza sunulur. 
-<!-- İki kümeden sadece birini ilgili düğme ile seçebilirsiniz. -->
-    En çok 12 işaret (sayfa numarası) saklanabilir.
-    Onay düğmesi ile iki veri kümesi eşitlenir.
+  <!-- En çok 12 işaret (sayfa numarası) kaydedebilirsiniz.  -->
+  Bu cihazdaki yerel işaretler ile bulut (Google Drive) içindeki 
+  işaretler birleştirilir ve tek liste olarak onayınıza sunulur. 
+  "Onay" düğmesine basarsanız, onaylanan liste 
+  yerel ve bulut işaretlerini eşitleyecektir.
 </p><p>
 <button id=auth onclick="doSignIn()"
 title="Bulut erişimi için yetkilendirme">Giriş</button>&nbsp; 
 <span id=user title="Yetki veren kullanıcı"></span>&emsp; 
-<input type=checkbox id=auto onchange="autoSync()"
+<!-- <input type=checkbox id=auto onchange="autoSync()"
 title="Seçili ise, yer işaretleri otomatik eşitlenir">
-<label for=auto>Otomatik eşitle</label> 
+<label for=auto>Otomatik eşitle</label> -->
 </p><p>
 <button id=localB disabled onclick="useMarks(localT)"
 title="Bu cihazda saklanan yer işaretlerini kullanın">
@@ -177,7 +176,7 @@ async function init() {
     await gapi.auth2.init({ apiKey, clientId, scope })
     if (!currentUser().getId()) return
     marksId = getStorage('marksId'); displayMarks()
-    auto.checked = marksId? true : false
+    // auto.checked = marksId? true : false
   } catch (e) { error(e) }
 }
 async function getMarksId() {
