@@ -15,7 +15,7 @@
     p { font: 11pt/1.3 sans-serif; }
     img {
         position: fixed;
-        top:8px; right:8px;
+        top:8px; right:22px;
         width: 50px;
     }
     pre {
@@ -70,7 +70,7 @@ Google Drive</button><br>
 Seçilen işaretler: &emsp; 
 <button id=sync disabled onclick="synchronize()"
 title="Seçilen işaretleri kullanın">Onay</button><br>
-<input type=text id=input title="Seçilen işaretler">
+<input type=text id=input title="Seçilen işaretler" inputmode=numeric>
 </p><pre id=out></pre>
 
 <script src="code/common.js"></script>
@@ -141,9 +141,11 @@ async function doRename(fileId, name) {
 async function synchronize() {
     if (!marksId) await getMarksId()
     let s = input.value.trim()
-    if (!s) { error('need at least one bookmark'); return }
-    let a = s.split(/\D+/); s = a.join(' ') //normalize s
+    if (!s) { error('at least one bookmark is needed'); return }
+    let a = s.split(/\D+/); ensureMaxSize(a)
+    s = a.join(' ') //normalize s
     localT.innerText = driveT.innerText = input.value = s
+    if (parent && parent.iqra) parent.iqra.arrayToSet(a)
     setStorage('marks', a); await doRename(marksId, s)
     log("synchronized");
 }
@@ -201,6 +203,11 @@ async function getMarksId() {
     }
     return new Promise((resolve, reject) => resolve())
 }
+const MAX_ITEMS = 6 //items from each list
+function ensureMaxSize(a) {
+    let d = a.length - 2*MAX_ITEMS
+    if (d > 0) a.splice(0, d)
+}
 async function displayMarks() {
     await loadClient(); 
     showProfile(); sync.disabled = false
@@ -215,21 +222,18 @@ async function displayMarks() {
     let str, b;
     if (marksId) {
       let {result} = await getFileData(marksId)
-      str = result.name; b = str.split(' ')
+      log(result); str = result.name; b = str.split(' ')
     } else {
       str = '(yok)'; b = []
     }
     driveT.innerText = str
     //merge a & b
-    const MAX = 6 //items from each list
     let n = 0 //items from b
     for (let x of b) 
-      if (!a.includes(x) && (a.length<2*MAX || n<MAX)) {
+      if (!a.includes(x) && (a.length<2*MAX_ITEMS || n<MAX_ITEMS)) {
         a.push(x); n++
       }
-    let d = a.length - 2*MAX
-    if (d > 0) a.splice(0, d)
-    input.value = a.join(' ')
+    ensureMaxSize(a); input.value = a.join(' ')
 }
 title.innerText = document.title
 gapi.load("client:auth2", init);
