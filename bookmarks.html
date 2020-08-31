@@ -75,6 +75,7 @@ title="Seçilen işaretleri kullanın">Onay</button><br>
 <script src="code/common.js"></script>
 <script src="https://apis.google.com/js/api.js"></script>
 <script>
+"use strict";
 /**
  * https://developers.google.com/explorer-help/guides/code_samples
  */
@@ -167,7 +168,7 @@ function showProfile() {
     user.innerText = p.getEmail()
 }
 var folderId, marksId
-const M_FOLDER = 'iqra bookmarks', M_MIME = 'text/iqra'
+const M_FOLDER = 'iqra bookmarks', M_MIME = 'text/iqra',
   apiKey = 'AIzaSyCH22pYgwYoWme6CFPiU3i_JLD-SgATteU',
   clientId = "864962883135-ut9cl3g1jlqv1frlp2p6cq9r3jsfflkv.apps.googleusercontent.com",
   scope = 'https://www.googleapis.com/auth/drive.file';
@@ -189,7 +190,7 @@ async function getMarksId() {
     if (files.length) folderId = files[0].id
     else {
       let {result} = await doCreate(M_FOLDER, FOLDER)
-      log(result); folderId = result.id
+      log(result.id); folderId = result.id
     }
   }
     let q = 'trashed = false and mimeType contains "iqra"'
@@ -198,7 +199,7 @@ async function getMarksId() {
     if (files.length) marksId = files[0].id
     else {
       let {result} = await doCreate('no_name', M_MIME, folderId)
-      log(result); marksId = result.id
+      log(result.id); marksId = result.id
     }
     return new Promise((resolve, reject) => resolve())
 }
@@ -221,7 +222,7 @@ async function displayMarks() {
     let str, b;
     if (marksId) {
       let {result} = await getFileData(marksId)
-      log(result); str = result.name; b = str.split(' ')
+      console.log(result); str = result.name; b = str.split(' ')
     } else {
       str = '(yok)'; b = []
     }

@@ -235,7 +235,7 @@ button {
     background-color: Transparent;
     border: none;
 }
-button:hover, #bilgi div:hover {
+#bilgi div:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 #starB {
