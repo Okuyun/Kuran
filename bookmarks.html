@@ -134,7 +134,7 @@ async function doSearch(q, fields) {
 async function doRename(fileId, name) {
   log("rename "+name)
   try {
-    resource = { name }
+    let resource = { name }
     return gapi.client.drive.files.update({fileId, resource})
  } catch (e) { error(e) }
 }
