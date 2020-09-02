@@ -5,7 +5,7 @@
   <meta name="viewport"    content="width=device-width">
   <meta name="author"      content="M A Eyler, Istanbul, 2020" />
   <link rel="icon" href="image/icon.png">
-  <title>Yer işaretleri</title>
+  <title>Yer işaretlerini eşitle</title>
 
   <style>
     body {
@@ -13,6 +13,7 @@
       background: #fff8d0;
     }
     p { font: 11pt/1.3 sans-serif; }
+    button { cursor: pointer; }
     img {
         position: fixed;
         top:8px; right:22px;
@@ -21,20 +22,22 @@
     pre {
         overflow-x: auto;
         line-height: 1.3;
-        /* background: #eee; */
     }
     #input { width: 97%; }
-    #sync { 
+    #sync, #localB, #driveB { 
       background: #bcf;
       margin-bottom: 5px;
+      font-size: 16px; 
     }
+    .mavi { color: blue; }
+    .large { font-size: 24px; }
   </style>
 
 </head>
 
 <body>
 
-<h2 id=title></h2>
+<h3 id=title></h3>
 <img id=image>
 <p>
   Bu cihazda yıldızla işaretlediğiniz sayfaları, 
@@ -43,11 +46,15 @@
   İstenen yetki, bu yazılıma ait olan "iqra bookmarks" klasörüne 
   erişmekten ibarettir, başka Drive dosyalarına erişim izni istenmiyor.
 </p><p>
-  <!-- En çok 12 işaret (sayfa numarası) kaydedebilirsiniz.  -->
-  Bu cihazdaki yerel işaretler ile bulut (Google Drive) içindeki 
-  işaretler birleştirilir ve tek liste olarak onayınıza sunulur. 
-  "Onay" düğmesine basarsanız, onaylanan liste 
-  yerel ve bulut işaretlerini eşitleyecektir.
+  İşaretleri eşitlemek için üç farklı yöntem var: <br>
+  * Cihazdaki yer işaretleri buluta aktarılır. <br>
+  * Buluttaki yer işaretleri cihaza aktarılır. <br>
+  * Cihazdaki işaretler ile buluttaki işaretler
+  birleştirilir ve tek liste olarak gösterilir.
+  Kullanıcı listeyi dilediği gibi düzenler ve 
+  "Eşitle" düğmesiyle iki listeyi eşitler. <br>
+  Her üç durumda, yerel ve bulut işaretleri eşitlenecektir.
+  Yazılım en çok 12 adet yer işareti kaydedebilir. 
 </p><p>
 <button id=auth onclick="doSignIn()"
 title="Bulut erişimi için yetkilendirme">Giriş</button>&nbsp; 
@@ -56,20 +63,28 @@ title="Bulut erişimi için yetkilendirme">Giriş</button>&nbsp;
 title="Seçili ise, yer işaretleri otomatik eşitlenir">
 <label for=auto>Otomatik eşitle</label> -->
 </p><p>
-<button id=localB disabled onclick="useMarks(localT)"
-title="Bu cihazda saklanan yer işaretlerini kullanın">
-Yerel işaretler</button><br>
-<span id=localT title="Bu cihazdaki yer işaretleri"></span> 
+Buluttaki yer işaretleri (Google Drive)<br>
+<span id=driveT class=mavi
+title="Bulutta saklanan yer işaretleri"></span> 
 </p><p>
+<button id=localB disabled onclick="useMarks(localT)"
+title="Buluta kaydederken oradaki eski işaretleri sil">
+Buluta aktar</button>
+<span class=large>⇑ &emsp; ⇓</span>
 <button id=driveB disabled onclick="useMarks(driveT)"
-title="Bulutta saklanan yer işaretlerini kullanın">
-Google Drive</button><br>
-<span id=driveT title="Buluttaki yer işaretleri"></span> 
+title="Buluttan indirirken cihazdaki eski işaretleri sil">
+Cihaza aktar</button>
+</p><p>
+Cihazdaki yer işaretleri (Yerel kayıt)<br>
+<span id=localT class=mavi
+title="Cihazda saklanan yer işaretleri"></span> 
 </p><p>
 Seçilen işaretler: &emsp; 
-<button id=sync disabled onclick="synchronize()"
-title="Seçilen işaretleri kullanın">Onay</button><br>
-<input type=text id=input title="Seçilen işaretler" inputmode=numeric>
+<button id=sync disabled onclick="useInput()"
+title="Seçilen işaretleri buluta ve cihaza kaydet">Eşitle</button>
+<span class=large>⇑⇑</span><br>
+<input type=text id=input inputmode=numeric
+title="Seçilen işaretleri dilediğniz gibi düzenleyebilirsiniz">
 </p><pre id=out></pre>
 
 <script src="code/common.js"></script>
@@ -109,8 +124,6 @@ async function loadClient() {
       log("GAPI client loaded")
   } catch (e) { error(e) }
 }
-const FOLDER = 'application/vnd.google-apps.folder'
-const FIELDS = 'files(id,name,mimeType,parents)'
 async function doCreate(name, mimeType, parentId) {
   log("create "+name);
   try {
@@ -138,19 +151,23 @@ async function doRename(fileId, name) {
     return gapi.client.drive.files.update({fileId, resource})
  } catch (e) { error(e) }
 }
-async function synchronize() {
-    if (!marksId) await getMarksId()
-    let s = input.value.trim()
-    if (!s) { error('at least one bookmark is needed'); return }
-    let a = s.split(/\D+/); ensureMaxSize(a)
-    s = a.join(' ') //normalize s
+async function synchronize(a) {
+    ensureMaxSize(a); let s = a.join(' ')
     localT.innerText = driveT.innerText = input.value = s
-    if (parent && parent.iqra) parent.iqra.arrayToSet(a)
-    setStorage('marks', a); await doRename(marksId, s)
-    log("synchronized");
+  //if opened by Iqra, opener.name == 'iqra' -- use a
+    if (opener && opener.arrayToSet) opener.arrayToSet(a)
+    setStorage('marks', a) //save a to localStorage
+    if (!marksId) await getMarksId()
+    await doRename(marksId, s) //save s to Drive
+    log("eşitlendi");
 }
 function useMarks(elt) {
-    input.value = elt.innerText
+    synchronize(elt.innerText.split(' '))
+}
+function useInput() {
+    let s = input.value.trim()
+    if (s) synchronize(s.split(/\D+/))
+    else error('at least one bookmark is needed');
 }
 function autoSync() {
     if (auto.checked) {
@@ -165,10 +182,12 @@ function currentUser() {
 function showProfile() {
     let p = currentUser().getBasicProfile()
     image.src = p.getImageUrl()
+    image.title = p.getName()+'\n'+p.getEmail()
     user.innerText = p.getEmail()
 }
 var folderId, marksId
-const M_FOLDER = 'iqra bookmarks', M_MIME = 'text/iqra',
+const FOLDER = 'application/vnd.google-apps.folder',
+  M_FOLDER = 'iqra bookmarks', M_MIME = 'text/iqra',
   apiKey = 'AIzaSyCH22pYgwYoWme6CFPiU3i_JLD-SgATteU',
   clientId = "864962883135-ut9cl3g1jlqv1frlp2p6cq9r3jsfflkv.apps.googleusercontent.com",
   scope = 'https://www.googleapis.com/auth/drive.file';
@@ -182,7 +201,7 @@ async function init() {
 }
 async function getMarksId() {
   log('getMarksId')
-  let fields = FIELDS
+  let fields = 'files(id,name,mimeType,parents)'
   {
     let q = 'mimeType = "'+FOLDER+'" and name = "'+M_FOLDER+'"'
     let {result} = await doSearch(q, fields)
@@ -215,7 +234,7 @@ async function displayMarks() {
     let x = getStorage()
     //local marks a
     let a = x.marks
-    localT.innerText = a.join(' ') || '(yok)'
+    localT.innerText = (a && a.join(' ')) || '(yok)'
     //drive data b
     marksId = x.marksId
     if (!marksId) await getMarksId()

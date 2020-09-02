@@ -127,7 +127,7 @@ async function fetch_text_then(url, callback) {
  * localStorage
  */
 function getStorage(k) {
-    if (!localStorage.iqra) return ''
+    if (!localStorage.iqra) return {}
     let x = JSON.parse(localStorage.iqra)
     return k? x[k] : x
 }
