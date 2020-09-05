@@ -10,7 +10,7 @@ const M = 114; //suras
 const P = 604; //pages
 const SOURCE = ['', 'ar.jalalayn.txt', 'ar.muyassar.txt', 
  'tr.diyanet.txt',  'en.ahmedali.txt', 'tr.yazir.txt', 'en.yusufali.txt']
-let TRANS //= localStorage.translation  disable during dev
+let TRANS = localStorage.translation  //disable during dev
 let snum = 5  //JSON.parse(localStorage.settings).source || 5
 var kur = new KuranText(TRANS || SOURCE[snum], initialPage)
 const qur = new QuranText('quran-uthmani.txt', initialPage)

@@ -199,7 +199,7 @@ body {
       font: 13px sansserif, arial;
       user-select: none;
       overflow-y: auto;
-      max-height: 80vh;
+      max-height: 82vh;
       z-index: 1;
     }
     #version { 
