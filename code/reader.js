@@ -31,14 +31,14 @@ function arrayToSet(m) {
     for (let k of m) 
         bookmarks.add(Number(k))
 }
-function setBookmarks(text, data) { //not used -- initReader()
+/* function setBookmarks(text, data) { //not used -- initReader()
     if (!text || !data.length) return
     console.log(data)
     let b = data.reverse()  //b is the latest entry in data
       .find(x => x.user == localStorage.userName)
     if (!b) return
     arrayToSet(b.marks.split(' '))
-}
+} */
 function forceSelection() {
     //trim for Windows -- thank you Rajab
     let s = window.getSelection() // fixed for Safari
@@ -303,8 +303,6 @@ function initReader() {
       labels.push(i+'. '+sName[i])
     sureS.innerHTML = '<option>'+labels.join('<option>')
     menuFn(); 
-      menuFn(); 
-    menuFn(); 
     var prevTime
     document.onvisibilitychange = () => {
       if (document.hidden) {
@@ -318,7 +316,7 @@ function initReader() {
         //     readTabularData(setBookmarks, console.error)
       }
     }
-  
+    bookmarks = new Set()
     // window.onresize = resize
     window.onhashchange = gotoHashPage
     window.name = "iqra" //by A Rajab
@@ -398,7 +396,7 @@ function menuFn() {
       if (evt.key == 'Escape') 
           hideMenus()
       else if (evt.key == 'F1') 
-          openSitePage('Y') //Yardım
+          openSitePage('D') //Yardım
       else if (menuC.style.display)
           menuItem(k)
       else if (menuK.style.display)

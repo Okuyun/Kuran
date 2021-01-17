@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.0i";
+const VERSION = "V4.0k";
 
 /**
  * &emsp; used in both Mujam
@@ -98,10 +98,10 @@ function openSiteVerse(s, c, v) {
         name = "Kuran"; break
     case 'Q':
         url = "https://quran.com/"+c+"/"+v
-        name = "finder"; break
+        name = "Kuran"; break
     case 'A':
         url = "https://acikkuran.com/"+c+"/"+v
-        name = "finder"; break
+        name = "Kuran"; break
     case 'R':
         alert('Reader -- not implemented yet')
     default:  return
