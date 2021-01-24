@@ -14,7 +14,7 @@ const EM_SPACE = String.fromCharCode(8195)
 /**
  * Link to finder -- could be modified in console
  */
-var FINDER = 'https://maeyler.github.io/BahisQurani/finder.html'
+var FINDER = '/Rehber/finder.html'
 
 /**
  * Use the hash part of URL in the address bar
