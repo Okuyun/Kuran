@@ -1,7 +1,7 @@
     body {
         max-width: 900px;
         padding: 0 10px;
-        margin: 0;
+        margin: auto;
         font: 15px/1.4 sans-serif;
         background: #eee;
     }

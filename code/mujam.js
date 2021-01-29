@@ -298,7 +298,7 @@ function readTopics() {
  * @param {Element} liste to be modified
  */
 function displayList(refs, liste) {
-    const MAX_REFS = 8  //hide larger lists
+    const MAX_REFS = 50  //hide larger lists
     const SPAN = '<span class=item>', _SPAN = '</span>'
     let BUTTON = '', _BUTTON = ''
     if (refs.length > 1) {
@@ -306,10 +306,10 @@ function displayList(refs, liste) {
     }
     let s = ''
     for (let x of refs) { // x is {name, list}
-        s += '<li>'+BUTTON+ x.name +_BUTTON+'<div>'
+        s += '<li>'+BUTTON+ x.name +_BUTTON +'&emsp; <span>'
         for (let y of x.list) // y is VerseRef
             s += SPAN+ y.cv +_SPAN
-        s += '</div>\n'
+        s += '\n' //'</span>\n'
     }
     function doClick3(evt) {
         let cv = evt.target.innerText
@@ -323,17 +323,17 @@ function displayList(refs, liste) {
     }
     if (!BUTTON) return
     for (let x of liste.querySelectorAll('button')) {
-        let div = x.nextElementSibling
-        if (div.children.length > MAX_REFS) {
+        let span = x.nextElementSibling
+        if (span.children.length > MAX_REFS) {
             x.style.backgroundColor = 'yellow'
             x.parentElement.style.backgroundColor = '#eee'
-            div.hidden = true
+            span.hidden = true
         }
         x.onclick = () => {
-            if (div.hidden) {
+            if (span.hidden) {
                 x.style.backgroundColor = ''
                 x.parentElement.style.backgroundColor = ''
-                div.hidden = false
+                span.hidden = false
             } 
             selectWord(x.innerText)
         } 
@@ -626,13 +626,7 @@ function getPageOf(td) {
 function doHover(evt) {  //listener for each td and span element
     if (menuK.style.display) return
     let cls, ref, cw
-    if (evt.target.tagName == 'SPAN') {
-        console.error('cannot happen', evt.target)
-        let cv = evt.target.innerText
-        ref = VerseRef.fromChapVerse(cv)
-        cls = 't2>' //backgroundColor yellow
-        cw = kelimeler.clientWidth
-    } else { // TD
+    { // TD
         let p = getPageOf(evt.target)
         if (pRefs[p]) {
             let [f, ...L] = pRefs[p]
