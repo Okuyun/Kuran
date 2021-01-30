@@ -16,7 +16,7 @@
       font: 16px arial;
     }
     div {
-      display: inline-block; width: 120px;
+      display: inline-block; width: 160px;
       vertical-align: top;
     }
     #text, #omni { width: 90%; max-width: 340px; }
@@ -25,6 +25,11 @@
     button {
       border: 3px solid gray;
       border-radius: 8px;
+      cursor: pointer;
+    }
+    .small { 
+      font-size: smaller;
+      color: red;
     }
   </style>
 </head>
@@ -32,22 +37,24 @@
 <body>
 
 <h2 id=title title='innehû lequr-ânun kerîm &#010;fî kitâbin meknûn'></h2>
-Bu yazılım ile Kuran-ı Kerim'de kelimeler arayabilir, istenen sayfayı  
-açabilir ya da Mucem'de kelime köklerini bulabilirsiniz.
+<p>Iqra4 yazılımı ile Kuran-ı Kerim'i farklı yollardan keşfedin: 
+Kelimeler arayın, istenen sayfaya gidin 
+ya da Mucem'de kelime köklerini bulun.</p>
+<p>Aşağıda istediğiniz yöntemle başlayabilirsiniz:</p>
 <hr />
 <p><label>
-Arapça/Türkçe/İngilizce (Finder) </label><br>
+Kelime bul (Arapça ya da meal) </label><br>
 <input type=text id=text placeholder='Aranacak metin'
-title='Bu alana girilen metin Finder yazılımı ile aranır'>
+title='Bu alana girilen metin Rehber yazılımı ile aranır'>
 </p>
 <p>
 <div><label>
 Sayfa (Mushaf) </label><br>
 <input type=number id=page placeholder='1-604'
-title='1-604 aralığında sayfa numarası'>
+title='1-604 aralığında sayfa numarası'>&nbsp; veya
 <br><br>
 <label>
-Kök (Mucem) </label><br>
+Mucem'de bul</label><br>
 <input type=text id=root placeholder='ktb Elm'
 title='Birden fazla kök aranacaksa boşluk ile ayrılmalı'>
 </div>
@@ -56,14 +63,14 @@ Sure:Ayet </label><br>
 <input type=text id=vers placeholder='27:30' inputmode=numeric
 title='Sure ve ayet numaraları ":" ile ayrılmalı'>
 <br><br><br>
-<button id=search title='Link adresini kullan'>Ara</button>
-<button id=clear title='Link adresini sil' hidden>Sil</button>
+<button id=search title='Link adresini kullan'>Bul</button> &nbsp;
+<button id=clear title='Girilen verileri sil' hidden>Sil</button>
 </div>
 </p>
-<p><label>
-  Link adresi (hashtag or URL) </label><br>
+<p><label>Link
+  <span class=small>(hashtag or URL -- for experts only) </span></label><br>
   <input type=text id=omni title=
-'Linki ilk harf belirler: &#10;Mushaf: p=… v=… &#10;Mucem: r=… &#10;Finder: t=… b=…'>
+'Linki ilk harf belirler: &#10;Mushaf: p=… v=… &#10;Mucem: r=… &#10;Rehber: t=… b=…'>
   </p>
   <hr />
 <p></p>
