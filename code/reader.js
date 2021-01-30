@@ -349,7 +349,7 @@ function menuFn() {
               .then(() => { console.log('Panoya:', s) })
               .catch(e => { alert('Panoya yazamadım\n'+e) })
               break
-          case 'F':
+          case 'R':
               window.open(LINKF + s, "finder")
               break
           case 'M':
