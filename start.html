@@ -20,7 +20,7 @@
       vertical-align: top;
     }
     #text, #omni { width: 90%; max-width: 340px; }
-    #page, #root, #vers { width: 90px; }
+    #page, #root { width: 130px; }
     #search { background-color: yellow; }
     button {
       border: 3px solid gray;
@@ -38,42 +38,33 @@
 
 <h2 id=title title='innehû lequr-ânun kerîm &#010;fî kitâbin meknûn'></h2>
 <p>Iqra4 yazılımı ile Kuran-ı Kerim'i farklı yollardan keşfedin: 
-Kelimeler arayın, istenen sayfaya gidin 
-ya da Mucem'de kelime köklerini bulun.</p>
-<p>Aşağıda istediğiniz yöntemle başlayabilirsiniz:</p>
+  Kelimeler arayın, istenen sayfaya gidin, 
+  ya da Mucem'de kelime köklerini bulun.<br>
+  Aşağıda istediğiniz yöntemle başlayabilirsiniz:</p>
 <hr />
 <p><label>
 Kelime bul (Arapça ya da meal) </label><br>
 <input type=text id=text placeholder='Aranacak metin'
 title='Bu alana girilen metin Rehber yazılımı ile aranır'>
 </p>
-<p>
-<div><label>
-Sayfa (Mushaf) </label><br>
-<input type=number id=page placeholder='1-604'
-title='1-604 aralığında sayfa numarası'>&nbsp; veya
-<br><br>
-<label>
+<p><label>
+Mushafa git (Sayfa veya Sure:Ayet) </label><br>
+<input type=text id=page placeholder='378 veya 27 30' inputmode=numeric title=
+'1-604 arasında sayfa numarası &#10;ya da sure-ayet numaraları&#10;(boşluk ile ayrılmış)'>
+</p>
+<p><label>
 Mucem'de bul</label><br>
 <input type=text id=root placeholder='ktb Elm'
-title='Birden fazla kök aranacaksa boşluk ile ayrılmalı'>
-</div>
-<div><label>
-Sure:Ayet </label><br>
-<input type=text id=vers placeholder='27:30' inputmode=numeric
-title='Sure ve ayet numaraları ":" ile ayrılmalı'>
-<br><br><br>
+title='Birden fazla kök aranacaksa boşluk ile ayrılmalı'> &emsp;
 <button id=search title='Link adresini kullan'>Bul</button> &nbsp;
 <button id=clear title='Girilen verileri sil' hidden>Sil</button>
-</div>
 </p>
 <p><label>Link
   <span class=small>(hashtag or URL -- for experts only) </span></label><br>
   <input type=text id=omni title=
 'Linki ilk harf belirler: &#10;Mushaf: p=… v=… &#10;Mucem: r=… &#10;Rehber: t=… b=…'>
-  </p>
-  <hr />
-<p></p>
+</p>
+<hr />
 
 <script src="code/common.js"></script>
 <script>
@@ -93,7 +84,7 @@ function doOpen(h) {
       parent.iqra.location.hash = h
     else window.open('reader.html#'+h, 'iqra')
 }
-function doSearch() {
+function doOmni() {
     let t = omni.value
     if (/^[vp]=/.test(t))
       doOpen(t) //t starts with v or p
@@ -107,13 +98,18 @@ function clearAll() {
   document.querySelectorAll('input').forEach(x => x.value='')
   clear.hidden = true
 }
-function versValue() {
+function pageValue() {
     //find numbers, \D means not digit
-    let [c, v] = vers.value.split(/\D+/)
-    if (!c) c = '1'
-    if (!v) v = '1'
-    vers.value = c+':'+v
-    return vers.value
+    let [c, v] = page.value.split(/\D+/)
+    if (v) { //c:v
+      page.value = c+':'+v
+      return 'v='+page.value
+    } else { //page
+      if (c < 1) c = '1'
+      if (c>604) c = '604'
+      page.value = c
+      return 'p='+c
+    }
 }
 function keyToPage(evt) {
     if (evt.key == 'Enter') 
@@ -123,17 +119,14 @@ function keyToPage(evt) {
         case text:
           doText('t='+text.value); break;
         case page:
-          doOpen('p='+page.value); break;
-        case vers:
-          doOpen('v='+versValue()); break;
+          doOpen(pageValue()); break;
         case omni:
-          doSearch(); break;
+          doOmni(); break;
       }
 }
 function setOmni(evt) {
     let h = ''
-    if (vers.value) h += '&v='+versValue()
-    else if (page.value) h += '&p='+page.value;
+    if (page.value) h += '&'+pageValue()
     if (root.value) 
       h += '&r='+root.value.replace(/\s+/g, '&r=')
     if (text.value) h += '&t='+text.value
@@ -142,12 +135,11 @@ function setOmni(evt) {
     clear.hidden = false
 }
     title.innerText = document.title
-    search.onclick = doSearch
+    search.onclick = doOmni
     clear.onclick = clearAll
     root.onchange = setOmni
     text.onchange = setOmni
     page.onchange = setOmni
-    vers.onchange = setOmni
     document.onkeydown = keyToPage
 </script>
 
