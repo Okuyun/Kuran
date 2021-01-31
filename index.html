@@ -21,6 +21,10 @@
       border: none;
       height: 100%;
     }
+    #findFrm {
+      border-left: 1px solid cyan;
+      border-right: 1px solid cyan;
+    }
     button {
       position: fixed;
       top: 8px; right: 0;
@@ -109,25 +113,27 @@ var WIDTH = 500  //can be modified in dev tools
 function resize() {
     const HIDE = 'none', SHOW = ''
     let W = Math.min(window.innerWidth, screen.width)
-    if (closeM.hidden) { //hideFinder
+    if (W >= 1200) { //wide screen
+        finderShown(860, false) //display all
+    } else if (closeM.hidden) { //hideFinder
+        finderHidden()
+    } else { //showFinder
+        finderShown(WIDTH, W<=850)
+    }
+    function finderHidden() {
       setStyle(findFrm.style, HIDE)
       let x2 = 0, w2 = W
       if (W>600 && W<=850) { //single column
         x2 = Math.trunc((W-WIDTH)/2); w2 = WIDTH
       }
       setStyle(readFrm.style, SHOW, x2, w2)
-    } else { //showFinder
-      if (W <= 850) { //single column
-        setStyle(findFrm.style, SHOW, 0, W)
-        setStyle(readFrm.style, HIDE)
-        closeM.style.right = ''
-      } else { //two columns
-        findFrm.style.borderRight = '1px solid cyan'
-        let w2 = WIDTH, x2 = W - w2
-        setStyle(findFrm.style, SHOW, 0, x2)
-        setStyle(readFrm.style, SHOW, x2, w2)
-        closeM.style.right = w2+'px'
-      }
+    }
+    function finderShown(w2, single) {
+      let x2 = single? W : W - w2
+      setStyle(findFrm.style, SHOW, 0, x2)
+      let d = single? HIDE : SHOW
+      setStyle(readFrm.style, d, x2, w2)
+      closeM.style.right = single? '' : w2+'px'      
     }
     function setStyle(s, d, x, w) {
       s.display = d; if (d == HIDE) return
