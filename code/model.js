@@ -77,8 +77,8 @@ class KuranText {
         if (callback) callback(a)
       }
         this.url = url; this.data = []
-        if (!url.startsWith('http'))
-          url = 'https://maeyler.github.io/BahisQurani/data/'+url
+        if (!url.startsWith('http')) 
+             url = '/Rehber/data/'+url
         fetch_text_then(url, process)
     }
     chapName(c)   { return '('+c+') '+sName[c]+' Suresi' }
