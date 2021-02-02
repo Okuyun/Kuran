@@ -70,6 +70,13 @@ function currentRoot() {
     let [v] = menu2.value.split(EM_SPACE)
     return toBuckwalter(v)
 }
+/**
+ * display alert and throw error
+ */
+function notFound(root) {
+    const ERR = 'Mucemde bulunamadı: '+root
+    alert(ERR); throw ERR
+}
 
 /**
  * Parsing and using remote data. 
@@ -155,6 +162,7 @@ function selectRoot(root, modifyHash=true) { //root in Arabic
       menu2.value = rootToCounts.get(root);
     }
     let cnt = rootToCounts.get(root);
+    if (!cnt) notFound(root)
     let lst = rootToWords.get(cnt);
     let nL = lst? lst.length : 0;
     if (lst) makeMenu(menu3, lst);
@@ -212,6 +220,7 @@ function selectTopic(topic) { //called by menu4 and list items
  */
 function getReferences(root) {
     let cnt = rootToCounts.get(root);
+    if (!cnt) notFound(root)
     let refA = []
     for (let word of rootToWords.get(cnt)) {
         let enc = wordToRefs.get(word)

@@ -57,7 +57,7 @@
         border-collapse: collapse; 
         text-align: center;
         cursor: default;
-        margin: 20px 8px;
+        margin: 8px;
     }
     th { 
         color: black;
