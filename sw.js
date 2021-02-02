@@ -1,13 +1,14 @@
 "use strict";
 const PREF ='iqra', CACHE = PREF+'4'
 const FILES = [
-  'data/words.txt',
-  'data/refs.txt',
-  'image/sura.png',
-  'image/icon.png',
-  'image/iconF.png',
-  'image/me_quran.ttf',
-  'manifest.json'
+  '/Kuran/index.html',
+  '/Kuran/data/words.txt',
+  '/Kuran/data/refs.txt',
+  '/Kuran/image/sura.png',
+  '/Kuran/image/icon.png',
+  '/Kuran/image/iconF.png',
+  '/Kuran/image/me_quran.ttf',
+  '/Kuran/manifest.json'
 ]
 
 function installCB(e) {  //CB means call-back
