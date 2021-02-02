@@ -2,7 +2,7 @@
   "name": "Iqra Quran Reader",
   "short_name": "Iqra4",
   "description": "Reader for the Quran",
-  "start_url": "frames.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "cyan",
   "theme_color": "cyan",

@@ -22,7 +22,7 @@ addEventListener('install', installCB)
 
 function save(req, resp) {
   // console.log("save "+req.url);
-  if (!req.url.includes("maeyler"))
+  if (!req.url.includes("okuyun"))
      return resp;
   return caches.open(CACHE)
   .then(cache => { // save request
