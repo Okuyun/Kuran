@@ -129,10 +129,12 @@ function gotoPage(k, adjusting) { // 1<=k<=P
         if (x.id) { // x is a verse separator
           // let i = cvToIndex(x.id.substring(2))
           let s = SD.similarTo(idx)
-          if (!s) return
+          if (!s) {
+            x.classList.add('ayetno'); return
+          }
           x.tText = s.split(' ')
             .map(x => '<div>'+x+'</div>').join('');
-          x.classList.add('kahve')
+          x.classList.add('mavi')
         } else { // x is a word
           let w = x.innerText.trim()
           let r = MD.wordToRoot(toBuckwalter(w))

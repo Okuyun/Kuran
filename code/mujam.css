@@ -6,7 +6,7 @@
         font-family: arial, sans-serif;
     }
     body, th {
-        background-color: #eee;
+        background-color: #f9f4e8;
     }
     #div0 {
         background-color: cyan;
@@ -42,7 +42,7 @@
         cursor: pointer;
         font: inherit;
     }
-    table, li { 
+    table { 
         background-color: white;
     }
     li {

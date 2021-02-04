@@ -96,16 +96,21 @@ body {
       position: fixed;
       bottom: 4px;
     }
-    #div0 { height: 36px; }
+    #div0 {
+      height: 36px;
+      background-color: cyan;
+    }
   @media screen and (max-height: 420px) {
       #div1 { position: relative; }
       #div0 { height: 14px; }
   }
+    #div2 { 
+      background-color: #f9f4e8;
+    }
     #text, #html {
-      background-color: white;
       padding: 4px 8px;
       vertical-align: top;
-      min-height: 100%;
+      height: 100%;
     }
     #text { 
       text-align: left;
@@ -161,8 +166,8 @@ body {
     .besmele { 
       line-height: 1.5;
     }
-    .divider, .besmele, .kahve { 
-      color: #a61;
+    .divider, .besmele, .ayetno { 
+      color: #82672D;
     }
     .mavi { 
       color: blue;
