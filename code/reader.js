@@ -148,7 +148,8 @@ async function gotoPage(k, adjusting) { // 1<=k<=P
     let tr2 = "translate(0, "+h+"px)"
     // console.log("animate", tr2)
     div2.animate({transform:[tr1, tr2]}, ms)
-    return new Promise(res => setTimeout(res, ms));
+    //modify page close to the end
+    return new Promise(res => setTimeout(res, ms*0.9))
   }
     if (!k || k < 1) k = 1;
     if (k > P) k = P;
@@ -245,7 +246,7 @@ function dragEnd(evt) {
     console.log("animate", tr2)
     trg.animate({transform:[tr1, tr2]}, 300)
 }
-function gotoHashPage() {
+async function gotoHashPage() {
 //re-designed by Abdurrahman Rajab
 //all text is in Buckwalter
   let h = decodedHash()
@@ -256,7 +257,7 @@ function gotoHashPage() {
     let s = e.substring(2)
     switch (e.charAt(0)) {
       case 'p': // p=245
-        gotoPage(s)
+        await gotoPage(s)
         document.title = 's'+nameFromPage(s)
         break
       case 'r': // r=Sbr
@@ -271,7 +272,7 @@ function gotoHashPage() {
       case 'v': // v=12:90
         let [c, v] = s.split(':') 
         c = Number(c); v = Number(v)
-        gotoPage(pageOf(c, v), 'hashInProgress')
+        await gotoPage(pageOf(c, v), 'hashInProgress')
         document.title = sName[c]+' '+s
         markVerse(s); break
       default: 

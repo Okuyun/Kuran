@@ -76,7 +76,7 @@ function reportHash(e) { //hashchange in one of the panes
 }
 function hashModified() {
   let h = decodedHash()
-  console.log('** hashInProgress='+hashInProgress, h)
+  // console.log('** hashInProgress='+hashInProgress, h)
   if (hashInProgress || !h || h.length<3) {
     hashInProgress = false; return 
   } else switch (h.substring(0, 2)) { //new address entered

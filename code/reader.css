@@ -105,9 +105,9 @@ body {
       #div0 { height: 14px; }
   }
     #div2 { 
-      background-color: #f9f4e8;
     }
     #text, #html {
+      background-color: #f9f4e8;
       padding: 4px 8px;
       vertical-align: top;
       height: 100%;
