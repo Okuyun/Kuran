@@ -142,9 +142,9 @@ async function gotoPage(k, adjusting) { // 1<=k<=P
         }
       }
   }
-  function animate(down, ms=200) {
+  function animate(down, ms=300) {
     let tr1 = "translate(0,0)" //initial position
-    let h = (down? '+' : '-')+div2.clientHeight
+    let h = (down? '-' : '+')+div2.clientHeight
     let tr2 = "translate(0, "+h+"px)"
     // console.log("animate", tr2)
     div2.animate({transform:[tr1, tr2]}, ms)
@@ -158,7 +158,7 @@ async function gotoPage(k, adjusting) { // 1<=k<=P
     if (curPage == k) return;
     let [c] = cvFromPage(k); setSura(c);
     if (adjusting == 'slider') return;
-    await animate(curPage < k)
+    if (curPage) await animate(curPage < k)
     curPage = k; slider.value = k;
     text.innerHTML = kur.pageToHTML(k)
     html.innerHTML = qur.pageToHTML(k)
