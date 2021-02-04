@@ -119,7 +119,7 @@ function doClick(evt) {
       openMujam(toBuckwalter(bilgi.innerText))
     }
 } 
-function gotoPage(k, adjusting) { // 1<=k<=P
+async function gotoPage(k, adjusting) { // 1<=k<=P
 //This is the only place where hash is set
   function doVerse(e) {
       for (let x of e.children) {
@@ -142,6 +142,14 @@ function gotoPage(k, adjusting) { // 1<=k<=P
         }
       }
   }
+  function animate(down, ms=200) {
+    let tr1 = "translate(0,0)" //initial position
+    let h = (down? '+' : '-')+div2.clientHeight
+    let tr2 = "translate(0, "+h+"px)"
+    // console.log("animate", tr2)
+    div2.animate({transform:[tr1, tr2]}, ms)
+    return new Promise(res => setTimeout(res, ms));
+  }
     if (!k || k < 1) k = 1;
     if (k > P) k = P;
     k = Number(k);
@@ -149,6 +157,7 @@ function gotoPage(k, adjusting) { // 1<=k<=P
     if (curPage == k) return;
     let [c] = cvFromPage(k); setSura(c);
     if (adjusting == 'slider') return;
+    await animate(curPage < k)
     curPage = k; slider.value = k;
     text.innerHTML = kur.pageToHTML(k)
     html.innerHTML = qur.pageToHTML(k)
@@ -282,12 +291,12 @@ function initialPage() {
 function initReader() {
     title.innerHTML = 'Iqra '+VERSION+'&emsp;';
     version.innerText = 'Iqra '+VERSION;
-    text.addEventListener("touchstart", dragStart);
-    html.addEventListener("touchstart", dragStart);
-    text.addEventListener("touchmove", drag);
-    html.addEventListener("touchmove", drag);
-    text.addEventListener("touchend", dragEnd);
-    html.addEventListener("touchend", dragEnd);
+    // text.addEventListener("touchstart", dragStart);
+    // html.addEventListener("touchstart", dragStart);
+    // text.addEventListener("touchmove", drag);
+    // html.addEventListener("touchmove", drag);
+    // text.addEventListener("touchend", dragEnd);
+    // html.addEventListener("touchend", dragEnd);
     sureS.onchange = () => {gotoSura(sureS.selectedIndex+1)}
     pgNum.onkeydown= keyToPage
     pageS.onclick  = handleStars
