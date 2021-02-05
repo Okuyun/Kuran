@@ -118,7 +118,13 @@ function doClick(evt) {
     } else { // a word
       openMujam(toBuckwalter(bilgi.innerText))
     }
-} 
+}
+function prevPage() {
+    gotoPage(curPage-1)
+}
+function nextPage() {
+    gotoPage(curPage+1)
+}
 async function gotoPage(k, adjusting) { // 1<=k<=P
 //This is the only place where hash is set
   function doVerse(e) {
@@ -235,10 +241,10 @@ function dragEnd(evt) {
     //max 300 msec delay or min W/3 drag
     if (dt>300 && 3*Math.abs(dx)<W) return
     if (dx>K  && curPage<P) { //swipe right
-        gotoPage(curPage+1); w2 = W+"px"
+        nextPage(); w2 = W+"px"
     } 
     if (dx<-K && curPage>1) { //swipe left
-        gotoPage(curPage-1); w2 = -W+"px"
+        prevPage(); w2 = -W+"px"
     }
     if (!w2) return //page not modified
     if (!tr1) tr1 = "translate(0,0)"
@@ -282,9 +288,10 @@ async function gotoHashPage() {
   }
   return true
 }
-function initialPage() {
+async function initialPage() {
     initialized = kur.loaded && qur.loaded
-    if (initialized && !gotoHashPage()) {
+    if (initialized) { //global
+    if (await gotoHashPage()) return
       console.log("initialPage")
       gotoPage(getStorage().page || 1)
     }
@@ -306,10 +313,10 @@ function initReader() {
     linkB.onclick  = toggleMenuK
     zoomB.onclick  = toggleZoom
     bilgi.onclick  = doClick
-    leftB.onclick  = () => {gotoPage(curPage-1)}
+    leftB.onclick  = () => {prevPage()}
     slider.oninput = () => {adjustPage(true)}
     slider.onchange= () => {adjustPage(false)} //committed
-    rightB.onclick = () => {gotoPage(curPage+1)}
+    rightB.onclick = () => {nextPage()}
     let labels = []
     for (let i=1; i<=M; i++)
       labels.push(i+'. '+sName[i])
@@ -418,11 +425,11 @@ function menuFn() {
       else switch (k) {
           case 'ARROWLEFT':
             if (!evt.altKey && !evt.ctrlKey && !evt.metaKey)
-              {gotoPage(curPage-1); evt.preventDefault()}
+              {prevPage(); evt.preventDefault()}
             break
           case 'ARROWRIGHT':
             if (!evt.altKey && !evt.ctrlKey && !evt.metaKey)
-              {gotoPage(curPage+1); evt.preventDefault()}
+              {nextPage(); evt.preventDefault()}
             break
           case 'T':
             toggleTrans(); break
@@ -449,11 +456,18 @@ function menuFn() {
 /**
 * End of menu functions 
 ***********************************************/
-function keyToPage(evt) {
+async function keyToPage(evt) {
     if (evt.key == 'Escape') {
       hideElement(menuS)
     } else if (evt.key == 'Enter') {
-      gotoPage(pgNum.value)
+      let [c, v] = pgNum.value.split(/\D+/)
+      if (v) { //c:v
+        let p = pageOf(Number(c), Number(v))
+        await gotoPage(p)
+        markVerse(c+':'+v)
+      } else { //page
+        gotoPage(Number(c))
+      }
       hideElement(menuS)
     }
 }

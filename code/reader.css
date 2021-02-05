@@ -66,6 +66,7 @@ body {
       border: none;
     }
     #pgNum {
+      width: 50px;
       margin-top: 6px;
     }
     #bilgi { 
@@ -104,8 +105,6 @@ body {
       #div1 { position: relative; }
       #div0 { height: 14px; }
   }
-    #div2 { 
-    }
     #text, #html {
       background-color: #f9f4e8;
       padding: 4px 8px;
