@@ -6,9 +6,6 @@ body {
 @media screen and (max-width: 850px) {
     .hiddenNarrow { display: none; }
     #title, #zoomB { display: none; }
-    #div3, #sureS, button { 
-      font-size: 3vw;
-    }
     #text { 
       font-size: 3.3vw;
     }
@@ -27,9 +24,6 @@ body {
       display: inline-block;
     }
     #trans { display: none; }
-    #div3, #sureS, #pageS {
-      font-size: 14px;
-    }
     #text, #html {
       width: 400px; 
       display: inline-block;
@@ -64,6 +58,7 @@ body {
       background-color: #eee;
       border-radius: 15px;
       border: none;
+      font-size: 15px;
     }
     #pgNum {
       width: 50px;
