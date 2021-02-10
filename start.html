@@ -15,19 +15,23 @@
     body, input, button { 
       font: 16px arial;
     }
-    div {
-      display: inline-block; width: 160px;
-      vertical-align: top;
-    }
     #text, #omni { width: 90%; max-width: 340px; }
     #page, #root { width: 130px; }
-    #search { background-color: yellow; }
     button {
       border: 3px solid gray;
       border-radius: 8px;
       cursor: pointer;
     }
-    .small { 
+    .buck {
+      border: 1px solid red;
+      background: #eee;
+      border-radius: 4px;
+      padding: 0 6px;
+      cursor: pointer;
+    }
+    .yellow { background: yellow; }
+    .white { background: white; }
+    .small {
       font-size: smaller;
       color: red;
     }
@@ -53,12 +57,20 @@ Mushafa git (Sayfa veya Sure:Ayet) </label><br>
 '1-604 arasında sayfa numarası &#10;ya da sure-ayet numaraları&#10;(boşluk ile ayrılmış)'>
 </p>
 <p><label>
-Mucem'de bul</label><br>
+Mucem'de bul</label>&emsp;
+<span class=buck title="Buckwalter kodunu göster/gizle"
+  onclick="buck.hidden=!buck.hidden">B</span><br>
 <input type=text id=root placeholder='ktb Elm'
-title='Birden fazla kök aranacaksa boşluk ile ayrılmalı'> &emsp;
-<button id=search title='Link adresini kullan'>Bul</button> &nbsp;
+  title='Birden fazla kök aranacaksa boşluk ile ayrılmalı'>&emsp;
+<button class=yellow id=search title='Link adresini kullan'>Bul</button> &nbsp;
 <button id=clear title='Girilen verileri sil' hidden>Sil</button>
 </p>
+<div id=buck class=small hidden>
+  <span class=white>
+  &nbsp; A b t v j H x d * r z s $ S D T Z E g f q k l m n h w y &nbsp;</span><br>
+  <a href="https://en.wikipedia.org/wiki/Buckwalter_transliteration" target=Kuran>
+    Buckwalter transliteration</a>
+</div>
 <p><label>Link
   <span class=small>(hashtag or URL -- for experts only) </span></label><br>
   <input type=text id=omni title=
