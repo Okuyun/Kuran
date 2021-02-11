@@ -154,7 +154,7 @@ function useDriveMarks() {
     let a = useInput(driveT)
   //if opened by Iqra, opener.name == 'iqra' -- use a
     if (opener && opener.arrayToSet) opener.arrayToSet(a)
-    setStorage('marks', a) //save a to localStorage
+    setStorage('iqra', 'marks', a) //save a to localStorage
     localT.value = localT.old = a.join(' '); 
     driveT.value = driveT.old; 
     log("Cihaza aktarıldı")
@@ -183,9 +183,9 @@ function ensureMaxSize(a) {
 }
 function autoSync() {
     if (auto.checked) {
-      setStorage('marksId', marksId)
+      setStorage('iqra', 'marksId', marksId)
     } else {
-      setStorage('marksId', undefined)
+      setStorage('iqra', 'marksId', undefined)
     }
 }
 function currentUser() {
@@ -208,7 +208,7 @@ async function init() {
     await gapi.auth2.init({ apiKey, clientId, scope })
     await loadClient(); 
     if (!currentUser().getId()) return
-    marksId = getStorage('marksId'); displayMarks()
+    marksId = getStorage('iqra', 'marksId'); displayMarks()
     // auto.checked = marksId? true : false
   } catch (e) { error(e) }
 }
@@ -238,7 +238,7 @@ async function getMarksId() {
 async function displayMarks() {
     showProfile(); //sync.disabled = false
     localB.disabled = false; driveB.disabled = false
-    let x = getStorage()
+    let x = getStorage('iqra') || {}
     //local marks a
     let a = x.marks
     localT.value = localT.old = (a && a.join(' ')) || '(yok)'

@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4β1f";
+const VERSION = "V4β1g";
 
 /**
  * &emsp; used in both Mujam
@@ -124,16 +124,31 @@ async function fetch_text_then(url, callback) {
 }
 
 /**
- * localStorage
+ * get localStorage.q.k (k is optional)
  */
-function getStorage(k) {
-    if (!localStorage.iqra) return {}
-    let x = JSON.parse(localStorage.iqra)
-    return k? x[k] : x
+function getStorage(q, k) {
+    if (!localStorage) return
+    let e = localStorage[q]
+    if (!e) return
+    try {
+        let x = JSON.parse(e)
+        return k? x[k] : x
+    } catch (err) {
+        return e
+    }
 }
-function setStorage(k, v) {
-    let x = getStorage(); x[k] = v
-    localStorage.iqra = JSON.stringify(x)
+/**
+ * set localStorage.q.k to v (k is optional)
+ */
+function setStorage(q, k, v) {
+    if (!localStorage) return
+    if (v) {
+        let x = getStorage(q) || {}; x[k] = v
+        localStorage[q] = JSON.stringify(x)
+    } else { // v is omitted, use k
+        localStorage[q] = typeof(k) == 'object'?
+           JSON.stringify(k) : k
+    }
 }
 
 

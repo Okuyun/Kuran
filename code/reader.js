@@ -8,10 +8,10 @@
 
 const M = 114; //suras
 const P = 604; //pages
-const SOURCE = ['', 'ar.jalalayn.txt', 'ar.muyassar.txt', 
- 'tr.diyanet.txt',  'en.ahmedali.txt', 'tr.yazir.txt', 'en.yusufali.txt']
-let TRANS = localStorage.translation  //disable during dev
-let snum = 5  //JSON.parse(localStorage.settings).source || 5
+const SOURCE = ['', 'ar.jalalayn.txt', 'ar.muyassar.txt', 'tr.diyanet.txt',
+  'en.ahmedali.txt', 'tr.yazir.txt', 'en.yusufali.txt', 'fr.hamidullah.txt']
+let TRANS = getStorage('translation')
+let snum = getStorage('settings', 'source') || 5
 var kur = new KuranText(TRANS || SOURCE[snum], initialPage)
 const qur = new QuranText('quran-uthmani.txt', initialPage)
 const MD  = new MujamData('data/words.txt')
@@ -178,8 +178,7 @@ async function gotoPage(k, adjusting) { // 1<=k<=P
     }
     if (adjusting != 'hashInProgress') //cv are not set
       location.hash = '#p='+curPage
-    setStorage('page', curPage)
-    setStorage('marks', [...bookmarks])
+    setStorage('iqra', 'page', curPage)
     hideMenus();  //html.scrollTo(0)
 }
 function setSura(c) { // 1<=c<=M
@@ -293,7 +292,7 @@ async function initialPage() {
     if (initialized) { //global
     if (await gotoHashPage()) return
       console.log("initialPage")
-      gotoPage(getStorage().page || 1)
+      gotoPage(getStorage('iqra', 'page') || 1)
     }
 }
 function initReader() {
@@ -340,8 +339,9 @@ function initReader() {
     window.onhashchange = gotoHashPage
     window.name = "iqra" //by A Rajab
     //we cannot use page yet, files are not read -- see initialPage()
-    let x = getStorage() || DEFAULT
+    let x = getStorage('iqra') || DEFAULT
     arrayToSet(x.marks) //immediate action
+    if (x.zoom) toggleZoom()
     // if (localStorage.userName) //takes time to load
     //     readTabularData(setBookmarks, console.error)
 }
@@ -510,7 +510,8 @@ function toggleStar() {
       bookmarks.delete(curPage)
       msg = '-'
     }
-    let n = localStorage.userName
+    setStorage('iqra', 'marks', [...bookmarks])
+    let n = getStorage('userName')
     if (n) {
       let s = msg? 'Remove' : 'Add'
       console.log(s+" bookmark: "+curPage)
@@ -526,11 +527,12 @@ function toggleMenuK() {
       hideElement(menuK)
     }
 }
-function toggleZoom(evt) {
-    evt.stopPropagation()
+function toggleZoom() {
+    // evt.stopPropagation()
     let e = document.body
-    //  e = div2 poor location for dialogs
-    if (zoomB.classList.toggle('checked')) {
+    let checked = zoomB.classList.toggle('checked')
+    setStorage('iqra', 'zoom', checked)
+    if (checked) {
       e.classList.add('zoomWide')
       // if (document.fullscreenEnabled) 
       //     e.requestFullscreen()  black background!!
