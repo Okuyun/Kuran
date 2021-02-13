@@ -21,7 +21,7 @@ var curSura, curPage, bookmarks, lastSelection;
 var initialized = false
 window.mujam = undefined
 
-const DEFAULT = {page:1, marks:[378]}
+const DEFAULT = {page:1, marks:[]}
 const MAX_MARKS = 12  // if more marks, delete the oldest
   
 function arrayToSet(m) {
@@ -30,6 +30,23 @@ function arrayToSet(m) {
     bookmarks = new Set()
     for (let k of m) 
         bookmarks.add(Number(k))
+}
+function saveSettings() {
+    let x = {
+      page: curPage,
+      marks: [...bookmarks],
+      trans: trans.classList.contains("checked"),
+      zoom: zoomB.classList.contains("checked")
+    }
+    setStorage('iqra', x)
+}
+function readSettings() {
+    let x = getStorage('iqra') || DEFAULT
+    //we cannot use page yet, files are not read -- see initialPage()
+    arrayToSet(x.marks) //immediate action
+    if (x.trans) toggleTrans()
+    if (x.zoom) toggleZoom()
+    return x
 }
 /* function setBookmarks(text, data) { //not used -- initReader()
     if (!text || !data.length) return
@@ -178,8 +195,8 @@ async function gotoPage(k, adjusting) { // 1<=k<=P
     }
     if (adjusting != 'hashInProgress') //cv are not set
       location.hash = '#p='+curPage
-    setStorage('iqra', 'page', curPage)
-    hideMenus();  //html.scrollTo(0)
+    // setStorage('iqra', 'page', curPage)
+    saveSettings()
 }
 function setSura(c) { // 1<=c<=M
     // c = Number(c);
@@ -290,9 +307,9 @@ async function gotoHashPage() {
 async function initialPage() {
     initialized = kur.loaded && qur.loaded
     if (initialized) { //global
-    if (await gotoHashPage()) return
-      console.log("initialPage")
+      if (await gotoHashPage()) return
       gotoPage(getStorage('iqra', 'page') || 1)
+      console.log("initialPage", curPage)
     }
 }
 function initReader() {
@@ -338,10 +355,7 @@ function initReader() {
     // window.onresize = resize
     window.onhashchange = gotoHashPage
     window.name = "iqra" //by A Rajab
-    //we cannot use page yet, files are not read -- see initialPage()
-    let x = getStorage('iqra') || DEFAULT
-    arrayToSet(x.marks) //immediate action
-    if (x.zoom) toggleZoom()
+    if (readSettings() === DEFAULT) saveSettings()
     // if (localStorage.userName) //takes time to load
     //     readTabularData(setBookmarks, console.error)
 }
@@ -479,6 +493,8 @@ function toggleTrans() {
       html.classList.remove('hiddenNarrow')
       text.classList.add('hiddenNarrow')
     }
+    // setStorage('iqra', 'trans', checked)
+    hideMenus(); saveSettings()
 }
 function makeStarMenu() {
     const span = '<span class="menuK">'
@@ -510,7 +526,8 @@ function toggleStar() {
       bookmarks.delete(curPage)
       msg = '-'
     }
-    setStorage('iqra', 'marks', [...bookmarks])
+    // setStorage('iqra', 'marks', [...bookmarks])
+    saveSettings()
     let n = getStorage('userName')
     if (n) {
       let s = msg? 'Remove' : 'Add'
@@ -528,10 +545,8 @@ function toggleMenuK() {
     }
 }
 function toggleZoom() {
-    // evt.stopPropagation()
     let e = document.body
     let checked = zoomB.classList.toggle('checked')
-    setStorage('iqra', 'zoom', checked)
     if (checked) {
       e.classList.add('zoomWide')
       // if (document.fullscreenEnabled) 
@@ -541,7 +556,8 @@ function toggleZoom() {
       // if (document.fullscreenElement) 
       //     document.exitFullscreen()
     }
-    hideMenus()
+    // setStorage('iqra', 'zoom', checked)
+    hideMenus(); saveSettings()
 }
 
 initReader()
