@@ -46,7 +46,12 @@ function readSettings() {
     arrayToSet(x.marks) //immediate action
     if (x.trans) toggleTrans()
     if (x.zoom) toggleZoom()
+    let s = getStorage('settings')
+    if (s) setFontFamily(s.fontType) 
     return x
+}
+function setFontFamily(f){
+    html.style.fontFamily = bilgi.style.fontFamily = f
 }
 /* function setBookmarks(text, data) { //not used -- initReader()
     if (!text || !data.length) return
@@ -181,6 +186,7 @@ async function gotoPage(k, adjusting) { // 1<=k<=P
     if (curPage == k) return;
     let [c] = cvFromPage(k); setSura(c);
     if (adjusting == 'slider') return;
+    hideMenus(); 
     if (curPage) await animate(curPage < k)
     curPage = k; slider.value = k;
     text.innerHTML = kur.pageToHTML(k)
@@ -196,7 +202,7 @@ async function gotoPage(k, adjusting) { // 1<=k<=P
     if (adjusting != 'hashInProgress') //cv are not set
       location.hash = '#p='+curPage
     // setStorage('iqra', 'page', curPage)
-    hideMenus(); saveSettings()
+    saveSettings()
 }
 function setSura(c) { // 1<=c<=M
     // c = Number(c);

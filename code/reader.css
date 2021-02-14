@@ -184,6 +184,15 @@ body {
 	  font-family: me_quran;
 	  src: url(../image/me_quran.ttf)
 	}
+  @font-face {
+    font-family: Zekr;
+    src: url("/Rehber/style/ZEKRQURAN.TTF");
+  }
+  @font-face {
+    font-family: ZekrBold;
+    src: url("/Rehber/style/ZEKRQURANBOLD.TTF");
+  }
+
 
 /* Menu Style
   Ref: https://dev.to/iamafro/how-to-create-a-custom-context-menu--5d7p
