@@ -196,7 +196,7 @@ async function gotoPage(k, adjusting) { // 1<=k<=P
     if (adjusting != 'hashInProgress') //cv are not set
       location.hash = '#p='+curPage
     // setStorage('iqra', 'page', curPage)
-    saveSettings()
+    hideMenus(); saveSettings()
 }
 function setSura(c) { // 1<=c<=M
     // c = Number(c);
