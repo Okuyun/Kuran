@@ -36,18 +36,17 @@ Bu yazılım ile Kuran-ı Kerim metni yüklenir.
 <p><label>
     İndeks <br>
     <input type=number id=indx placeholder='1-6236' value=5621>
-    <button id=indxB>İndeks</button> &nbsp;
-    <button id=rootB>Kökler</button>
+    <button id=indxB>Ayet</button> &nbsp;
+    <button id=rootB hidden>Kökler</button>
 </p>
 <p><label>
     Sayfa <br>
     <input type=number id=page placeholder='1-604'>
     <button id=pageB>Sayfa</button>
 </p>
-<!-- <button onclick="doText('quran-uthmani.txt')">Mushaf</button> -->
 <hr />
 <p id=sayfa></p>
-<textarea id=out rows=20 cols=60></textarea>
+<textarea id=out rows=20 cols=60 hidden></textarea>
 
 <script src="code/buckwalter.js"></script>
 <script src="code/common.js"></script>
@@ -100,7 +99,7 @@ function accepted(cv) {
     if (!c) c = count[cv] = index2roots(cvToIndex(cv)).length
     return c>1
 }
-const acc = [], rej = [], count = {}
+// const acc = [], rej = [], count = {}
 async function readSimi() {
     console.log(kur)
     let r = await fetch('data/simi.txt') //response
@@ -121,7 +120,7 @@ function display(a) {
 }
 /*  */
     var kur  //assigned in doText()
-    const MD  = new MujamData('data/words.txt')
+ // const MD  = new MujamData('data/words.txt')
     title.innerText = document.title
     // Event e is not used in the listeners
     urlB.onclick  = (e) => doText()
@@ -130,8 +129,8 @@ function display(a) {
     rootB.onclick = (e) => doRoot()
     page.onchange = (e) => doPage()
     pageB.onclick = (e) => doPage()
-    //'tr.yazir.txt')  //read data
-    doText('quran-uthmani.txt', readSimi)
+    doText('tr.yazir.txt')  //read data
+ // doText('quran-uthmani.txt', readSimi)
 </script>
 
 </body>
