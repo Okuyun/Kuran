@@ -15,7 +15,7 @@
     body, input, button { 
       font: 16px arial;
     }
-    #url { width: 340px; }
+    #url { width: 300px; }
     #page, #indx { width: 90px; }
     button {
       background-color: yellow;
@@ -26,7 +26,7 @@
 <body>
 
 <h2 id=title></h2>
-Bu yazılım ile Kuran-ı Kerim meali yüklenir.
+Bu yazılım ile Kuran-ı Kerim metni yüklenir.
 <hr />
 <p><label>
     URL <br>
@@ -35,46 +35,103 @@ Bu yazılım ile Kuran-ı Kerim meali yüklenir.
 </p>
 <p><label>
     İndeks <br>
-    <input type=number id=indx placeholder='1-6236'>
-    <button id=indxB>İndeks</button>
+    <input type=number id=indx placeholder='1-6236' value=5621>
+    <button id=indxB>İndeks</button> &nbsp;
+    <button id=rootB>Kökler</button>
 </p>
 <p><label>
     Sayfa <br>
     <input type=number id=page placeholder='1-604'>
     <button id=pageB>Sayfa</button>
 </p>
+<!-- <button onclick="doText('quran-uthmani.txt')">Mushaf</button> -->
 <hr />
 <p id=sayfa></p>
+<textarea id=out rows=20 cols=60></textarea>
 
+<script src="code/buckwalter.js"></script>
 <script src="code/common.js"></script>
 <script src="code/model.js"></script>
 <script src="code/utilities.js"></script>
 <script>
 "use strict";
-function doText() {
-    kur = new KuranText(url.value) //, console.log)
-    console.log(kur)
-}
-function doIndex() {
-    let t = kur.getVerse(indx.value)
+function report(t) {
     sayfa.textContent = t; console.log(t)
 }
-function doPage() {
-    let p = Number(page.value)
-    // sayfa.textContent = a.join('\n')
+function doText(u = url.value, callback) {
+    kur = new KuranText(u, callback)
+    url.value = u
+}
+function doIndex(i = indx.value) {
+    report(kur.getVerse(i))
+    indx.value = i
+}
+function doPage(p = Number(page.value)) {
     sayfa.innerHTML = kur.pageToHTML(p)
     console.log(p+'. sayfa')
+    page.value = p
 }
-    var kur
+/** 
+ * bundan sonrası data/simi.txt fazlalıkları silmek için -- Feb 2021 
+ *                                                                    */
+function word2charCode(w) {
+    let c = []; 
+    for (let i=0; i<w.length; i++) c.push(w.charCodeAt(i))
+    return c
+}
+function index2roots(i) {
+    let a = kur.data[i].trim().split(' ')
+// console.log(a.filter(x => MD._word2Root.get(toBuckwalter(x))))
+// ["تَشَآءُونَ", "يَشَآءَ", "ٱللَّهُ", "ٱللَّهَ", "كَانَ", "عَلِيمًا", "حَكِيمًا"]
+    let s = new Set()
+    for (let w of a) {
+      let b = MD._word2Root.get(toBuckwalter(w))
+      if (b) s.add(b)
+    }
+    return [...s]
+}
+// console.log(word2charCode(a[a.length-1])) //last word 
+// [1581, 1614, 1603, 1616, 1610, 1605, 1611, 1575]
+function doRoot(i = indx.value) {
+    report(index2roots(i))
+}
+function accepted(cv) {
+    let c = count[cv]
+    if (!c) c = count[cv] = index2roots(cvToIndex(cv)).length
+    return c>1
+}
+const acc = [], rej = [], count = {}
+async function readSimi() {
+    console.log(kur)
+    let r = await fetch('data/simi.txt') //response
+    let t = await r.text()   //text
+    let a = t.split('\n')
+    console.log('SimData', a.length+' lines')
+    for (let w of a) {
+      let [cv, ...rest] = w.trim().split(' ')
+      let b = rest.filter(accepted)
+      if (accepted(cv) && b.length>0) 
+           acc.push([cv].concat(b).join(' '))
+      else rej.push(w)
+    }
+    console.log('Accept: '+acc.length, 'Reject: '+rej.length)
+}
+function display(a) {
+    out.value = a.join('\n')
+}
+/*  */
+    var kur  //assigned in doText()
+    const MD  = new MujamData('data/words.txt')
     title.innerText = document.title
-    url.value = 'https://maeyler.github.io/BahisQurani/data/tr.yazir.txt'
-    // url.onchange = doText
-    urlB.onclick = doText
-    indx.onchange = doIndex
-    indxB.onclick = doIndex
-    page.onchange = doPage
-    pageB.onclick = doPage
-    doText()  //read data
+    // Event e is not used in the listeners
+    urlB.onclick  = (e) => doText()
+    indx.onchange = (e) => doIndex()
+    indxB.onclick = (e) => doIndex()
+    rootB.onclick = (e) => doRoot()
+    page.onchange = (e) => doPage()
+    pageB.onclick = (e) => doPage()
+    //'tr.yazir.txt')  //read data
+    doText('quran-uthmani.txt', readSimi)
 </script>
 
 </body>

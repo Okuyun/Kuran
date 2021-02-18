@@ -117,7 +117,7 @@ function openSiteVerse(s, c, v) {
  * @param {function} callback 
  */
 async function fetch_text_then(url, callback) {
-    // fetch(url).then(r => r.text()).then(report2)
+    // fetch(url).then(r => r.text()).then(callback)
     let r = await fetch(url) //response
     let t = await r.text()   //text
     callback(t)
