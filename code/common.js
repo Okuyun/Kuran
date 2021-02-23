@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4β1h";
+const VERSION = "V4β1j";
 
 /**
  * &emsp; used in both Mujam
@@ -66,9 +66,9 @@ function hideElement(elt) {
 function openSitePage(s, p) {
   let url, name;
   switch (s.toUpperCase()) {
-    case 'Y':  //Yer işaretleri
+    case 'B':  //Yer işaretleri -- Bookmarks
         url = 'bookmarks.html'; name = 'finder'; break
-    case 'D': case '?':  //Dokümanlar
+    case 'Y': case '?':  //Yardım
         url = 'guideQ.html'; name = 'Kuran'; break
     case 'K':
         url = "http://kuranmeali.com/Sayfalar.php?sayfa="+p

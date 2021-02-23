@@ -435,7 +435,7 @@ function menuFn() {
       if (evt.key == 'Escape') 
           hideMenus()
       else if (evt.key == 'F1') 
-          openSitePage('D') //Yardım
+          openSitePage('Y') //Yardım
       else if (menuC.style.display)
           menuItem(k)
       else if (menuK.style.display)
