@@ -9,9 +9,37 @@
     <link rel="icon" href="image/icon.png">
     <title>Iqra Yardım </title>
   </head>
+  <style>
+    #contents {
+      position: fixed;
+      right: 8px; top: 8px;
+      text-align: right;
+    }
+    #menu1 {
+      list-style-type:none;
+      margin: 0;
+      padding: 12px;
+      background: honeydew;
+      border: 1px solid;
+    }
+  </style>
   <body>
 
 <h2 id=title>Iqra &mdash; Oku </h2>
+
+<div id=contents>
+  <button onclick="menu1.hidden=!menu1.hidden">☰</button>
+  <ul id=menu1 hidden>
+    <li><a href=#title>Iqra &mdash; Oku</a>
+    <li><a href=#arama>Arama</a>
+    <li><a href=#rehber>Rehber</a>
+    <li><a href=#mucem>Mucem</a>
+    <li><a href=#benzerlik>Benzerlik</a>
+    <li><a href=#yetenekler>Yetenekler</a>
+    <li><a href=#sss>SSS</a>
+    <li><a href=#tarihçe>Tarihçe</a>
+  </ul>
+</div>
 
 <p>Iqra, Kerim Kitabımız Kuran’ı okumak için yapılan yüzlerce yazılımdan biridir.</p>
 
@@ -67,21 +95,21 @@ secde ayetleri için kullanılan işaret görülüyor.
 <p>Yazılım üç türlü aramayı destekliyor:</p>
 
 <ol>
-  <li>Düz metin ara (üç dilde) &mdash; Finder</li>
+  <li>Düz metin ara (üç dilde) &mdash; Rehber</li>
   <li>Arapça kelimenin kökü ile ara &mdash; Mucem</li>
   <li>Ayete kelime bazında benzeyen ayetleri ara</li>
 </ol>
 
-<h3 id="finder">2.1 Finder (Üç dil)</h3>
+<h3 id="rehber">2.1 Rehber (Üç dil)</h3>
 
 <p>Arapça metin ya da Türkçe-İngilizce meal içinde düz metin aramak için Abdurrahman Rajab tarafından bitirme projesi olarak sunuldu (Bitiş tarihi: 2020 Haziran)</p>
 
 <p class=center>
-  <img src="docs/Finder_meta.png" alt="Finder" class=large />
-  Resim 3. <a href="/Rehber/finder.html#b=Einda%20{ll~ahi" target="finder">Finder</a>
+  <img src="docs/Finder_meta.png" alt="Rehber" class=large />
+  Resim 3. <a href="/Rehber/finder.html#b=Einda%20{ll~ahi" target="finder">Rehber</a>
 </p>
 
-<p>Sağdaki Mushaf penceresinde 47. sayfada “indallah” kelimesi seçilmiş. Bağlam menüsünden Finder penceresine kolayca geçebiliriz. Ayet numarasına ya da bulunan renkli metne basarak Mushaf’a dönmek ya da menüden dış yazılıma geçmek mümkün.</p>
+<p>Sağdaki Mushaf penceresinde 47. sayfada “indallah” kelimesi seçilmiş. Bağlam menüsünden Rehber penceresine kolayca geçebiliriz. Ayet numarasına ya da bulunan renkli metne basarak Mushaf’a dönmek ya da menüden dış yazılıma geçmek mümkün.</p>
 
 <p>Arapça-Türkçe-İngilizce sesli arama özelliği eklendi (Ayrıntılar ilgili sayfada açıklanacak)</p>
 
@@ -132,19 +160,19 @@ sadece Arapça metinde kullanılır, mealler için benzerlik modülü henüz yok
     <p>Mucem: Gösterilen <strong>ktb</strong> (kef-tâ-bâ) kökünün muhtelif türevleri 319 kere, 205 sayfada geçiyor. Resimde seçilen 59. sayfada 6 kere, daha açık renkli sayfalarda ise daha az sayıda... Arama konusu ayetleri, sarı kutuya tıklayarak Mushaf sayfasında okuyabiliriz. (Dış kaynaklarda okumak için ayrıca bağlam menüsü var) Sağ alt köşedeki Corpus linkinden kullandığımız referans sayfaya ulaşılır.</p>
   </li>
   <li>
-    <p>Mushaf: Açık olan 59. sayfada "ktb" kökünden türeyen 6 kelime mavi işaretli. Mushafta bir kelime seçtikten sonra, bağlam menüsünden Mucem ve Finder arama yöntemlerine geçilebilir. Benzer ayetleri aramak ayet menüsüne eklenecek.</p>
+    <p>Mushaf: Açık olan 59. sayfada "ktb" kökünden türeyen 6 kelime mavi işaretli. Mushafta bir kelime seçtikten sonra, bağlam menüsünden Mucem ve Rehber arama yöntemlerine geçilebilir. Benzer ayetleri aramak ayet menüsüne eklenecek.</p>
   </li>
 </ul>
 
-<b>Mushaf-Finder Geçişi</b>
-<p><img src="docs/Finder-Mushaf.png" alt="Finder-Mushaf" class=large /></p>
+<b>Mushaf-Rehber Geçişi</b>
+<p><img src="docs/Finder-Mushaf.png" alt="Rehber-Mushaf" class=large /></p>
 
 <ul>
   <li>
-    <p>Mushaf: Açık olan 382. sayfada “metâ hâzâ” kelimeleri seçilmiş. Bağlam menüsünden Finder penceresine kolayca geçebiliriz.</p>
+    <p>Mushaf: Açık olan 382. sayfada “metâ hâzâ” kelimeleri seçilmiş. Bağlam menüsünden Rehber penceresine kolayca geçebiliriz.</p>
   </li>
   <li>
-    <p>Finder: Resimde “metâ hâzâ” harf dizisinin bulunduğu ayetler görülüyor. Ayet numarasına ya da bulunan renkli metne basarak Mushaf’a dönmek ya da menüden dış yazılıma geçmek mümkün.</p>
+    <p>Rehber: Resimde “metâ hâzâ” harf dizisinin bulunduğu ayetler görülüyor. Ayet numarasına ya da bulunan renkli metne basarak Mushaf’a dönmek ya da menüden dış yazılıma geçmek mümkün.</p>
   </li>
 </ul>
 
