@@ -12,7 +12,7 @@
     body { 
         /* max-width: 440px; */
         background: #adf;
-        font: 15px arial;
+        font: 14px arial;
     }
     body, h2, h3 { margin: 20px; }
     h2 { margin-bottom: 16px; }
@@ -27,6 +27,7 @@
         display: inline-block;
         vertical-align: top;
         margin: 8px;
+        width: 180px;
         /* position: relative;
         top: 10px; */
     }
@@ -51,22 +52,22 @@ frameborder="0" allowfullscreen></iframe>
 <script>
 "use strict";
 const DATA = 
-`1. Hz Adem ve Hz İsa	SJQIFUp_Q6g
-2. Subhâneke	sNwh2HN7KWs
-3. Subhânellezi	PrNFXsoaOHk
-4. Bilmece -- subhâne	zOQVexEFBqA
-5. Secde ayetleri	xRMbkLCR4OU
-6. Bir Elif Farkı	nA0iZ2Sq1dw
-7. Allah'a sığın	_WKpQknGKSE
-8. Giriş sayfası değişti	xjlKHVwDLfM
-9. Dış kaynak: quran.com	HTCHSMK8d8A
-10. Dış kaynak: Açık K	V2weItQq4AM
-11. Sekine	-LRwOubwxls
-12. En sık geçen kelime	ZMq0hGxnItU
-13. Ramazan dersleri	jOm2weOSuJI
-14. bismi rabbike	M3Lbo4KGxpQ
-15. Bakara -- son ayet	FMMntiOy4l4
-16. Benzerlik	vlhT0jmFhRI`
+`1. Hz Adem ve Hz İsa	SJQIFUp_Q6g	Iqra yazılımı ile Kuran-ı Kerim’i keşfedelim
+2. Subhâneke	sNwh2HN7KWs	Mushaftaki kelimeyi Mucemde ara
+3. Subhânellezi	PrNFXsoaOHk	Mucemde kelime listesi, Rehberde Arapça ara
+4. Bilmece -- subhâne	zOQVexEFBqA	Mushaftaki kelimeyi Rehberde ara
+5. Secde ayetleri	xRMbkLCR4OU	Aynı anda iki panel açalım
+6. Bir Elif Farkı	nA0iZ2Sq1dw	
+7. Allah'a sığın	_WKpQknGKSE	Rehberde kelime öbeği ve sesli arama
+8. Giriş sayfası değişti	xjlKHVwDLfM	Arama paneli, Tek satır modu, Dış kaynaklar
+9. Dış kaynak: quran.com	HTCHSMK8d8A	Seçilen metin quran.com’da
+10. Dış kaynak: Açık K	V2weItQq4AM	Seçilen metin Açık Kuran’da
+11. Sekine	-LRwOubwxls	Mucemde ara
+12. En sık geçen kelime	ZMq0hGxnItU	Mucemde ara
+13. Ramazan dersleri	jOm2weOSuJI	Iqra4 ve kelime kökleri
+14. bismi rabbike	M3Lbo4KGxpQ	Rehber ayarları: meal seçimi
+15. Bakara -- son ayet	FMMntiOy4l4	
+16. Benzerlik	vlhT0jmFhRI	içerik olarak benzeyen başka ayetler var mı?`
 function doClick(evt) {
     let t = evt.target
     let h = t.ref || t.parentNode.ref
@@ -78,12 +79,13 @@ function doClick(evt) {
     const IMG2 = '/default.jpg' //sddefault is larger
     const HREF = 'https://www.youtube.com/embed/'
     for (let s of DATA.split('\n')) {
-        let [topic, link] = s.split('\t')
+        let [topic, link, hint] = s.split('\t')
         let t = document.createElement('li')
         let i = document.createElement('img')
         i.src = IMG1+link+IMG2; t.append(i)
         let a = document.createElement('div')
-        a.innerText = topic; t.append(a)
+        a.innerHTML = '<b>'+topic+'</b><br><br>'+hint
+        t.append(a)
         t.ref = HREF+link; liste.append(t)
     }
     liste.onclick = doClick
