@@ -16,27 +16,31 @@
       text-align: right;
     }
     #menu1 {
-      list-style-type:none;
+      list-style-type: none;
       margin: 0;
       padding: 12px;
       background: honeydew;
       border: 1px solid;
     }
-  </style>
+@media screen and (min-width: 1100px) {
+    #buton { display: none; }
+    #menu1 { display: block; }
+}
+</style>
   <body>
 
-<h2 id=title>Iqra &mdash; Oku </h2>
+<h2 id=title>Iqra &ndash; Oku </h2>
 
 <div id=contents>
-  <button onclick="menu1.hidden=!menu1.hidden">☰</button>
+  <button id=buton onclick="menu1.hidden=!menu1.hidden">☰</button>
   <ul id=menu1 hidden>
-    <li><a href=#title>Iqra &mdash; Oku</a>
+    <li><a href=#title>Iqra &ndash; Oku</a>
     <li><a href=#arama>Arama</a>
     <li><a href=#rehber>Rehber</a>
     <li><a href=#mucem>Mucem</a>
     <li><a href=#benzerlik>Benzerlik</a>
     <li><a href=#yetenekler>Yetenekler</a>
-    <li><a href=#sss>SSS</a>
+    <li><a href=#sss>Sorular</a>
     <li><a href=#tarihçe>Tarihçe</a>
   </ul>
 </div>
@@ -48,7 +52,7 @@
 <p>Yazılımın başlangıç linki:
 <a href="/Kuran" target="iqraTop">https://okuyun.github.io/Kuran</a>
 <br>Tanıtım videoları:
-<a href="/Kuranvideo.html" target="Kuran">https://okuyun.github.io/Kuran/video.html</a>
+<a href="/Kuran/video.html" target="Kuran">https://okuyun.github.io/Kuran/video.html</a>
 </p>
 
 <p>
@@ -61,8 +65,7 @@
   <li>☆ &ndash; Yer işareti ekle/sil</li>
   <li>T &ndash; Arapça metni göster/gizle</li>
   <li>Q &ndash; Geçici bir büyüteç göster/gizle</li>
-  <li>☰ &ndash; Sayfa menüsü</li>
-  <!-- <li><u>=</u> - Sayfa menüsü</li> -->
+  <li><li><u>=</u> &ndash; Sayfa menüsü</li>
 </ul>
 
 <p>Pembe A düğmesi ile Arama paneline geçmek her noktada mümkün.</p>
@@ -70,9 +73,9 @@
 <p>Başlangıç adresinde sayfa ya da ayet numaraları belirtilebilir:</p>
 <ul>
   <li><a href="index.html#v=27:28" target="iqraTop">
-  index.html#v=27:28</a> (27. surenin 28. ayeti &mdash; aşağıda birinci resim)</li>
+  #v=27:28</a> (27. surenin 28. ayeti &ndash; aşağıda birinci resim)</li>
   <li><a href="index.html#p=378" target="iqraTop">
-  index.html#p=378</a> (numarası verilen sayfa &mdash; ikinci resim)</li>
+  #p=378</a> (numarası verilen sayfa &ndash; ikinci resim)</li>
 </ul>
 
 <p>
@@ -96,8 +99,8 @@ secde ayetleri için kullanılan işaret görülüyor.
 <p>Yazılım üç türlü aramayı destekliyor:</p>
 
 <ol>
-  <li>Düz metin ara (üç dilde) &mdash; Rehber</li>
-  <li>Arapça kelimenin kökü ile ara &mdash; Mucem</li>
+  <li>Düz metin ara (üç dilde) &ndash; Rehber</li>
+  <li>Arapça kelimenin kökü ile ara &ndash; Mucem</li>
   <li>Ayete kelime bazında benzeyen ayetleri ara</li>
 </ol>
 
@@ -215,23 +218,23 @@ sadece Arapça metinde kullanılır, mealler için benzerlik modülü henüz yok
   </li>
   <li>
 <p>V2.0 Yazılımın Windows'a çevrilmesi çok başarılı olmadı. Mac OS'de 
-  çalışan bir çok özelliği Windows'a taşıyamadık. (Turbo Pascal &mdash; 1998)</p>
+  çalışan bir çok özelliği Windows'a taşıyamadık. (Turbo Pascal &ndash; 1998)</p>
   </li>
   <li>
 <p>V3.0 <a href="http://corpus.quran.com" target="Kuran">
   Quranic Arabic Corpus</a> çıkınca, bütün masa-üstü ve diz-üstü 
-  sistemlerde çalışan ilk sürümü geliştirdik. (Java &mdash; 2012)
+  sistemlerde çalışan ilk sürümü geliştirdik. (Java &ndash; 2012)
   Lakin o yıllar mobil cihazların tırmanış zamanıydı ve standart Java
   bu cihazlarla uyumlu değildi.</p>
   </li>
   <li>
 <p><a href="https://maeyler.github.io/Iqra3/code/iqra.jar">V3.05 jar file</a> ve 
 <a href="https://maeyler.github.io/Iqra3/image/me_quran.ttf">me_quran font</a>
-(son Java sürümü &mdash; 2017)</p>
+(son Java sürümü &ndash; 2017)</p>
   </li>
   <li>
 <p><a href="https://maeyler.github.io/Iqra3/iqra%20V3.06.html">V3.06</a>
- Web sayfası (ilk mobil sürüm, JavaScript &mdash; 2019)</p>
+ Web sayfası (ilk mobil sürüm, JavaScript &ndash; 2019)</p>
   </li>
   <li>
 <p><a href="https://maeyler.github.io/Iqra3/iqra%20V3.11.html">V3.11</a>
