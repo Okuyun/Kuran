@@ -119,7 +119,7 @@ body {
     }
     #html, #bilgi { 
       font-family: me_quran, serif;
-      line-height: 2;
+      line-height: 1.9;
     }
     #infoS { 
       display: none;
@@ -210,7 +210,8 @@ body {
       max-height: 82vh;
       z-index: 1;
     }
-    .black { 
+    .black {
+      margin-top: 8px;
       color: black;
     }
     .menuK {
