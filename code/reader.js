@@ -147,7 +147,7 @@ function prevPage() {
 function nextPage() {
     gotoPage(curPage+1)
 }
-async function gotoPage(k, adjusting) { // 1<=k<=P
+function gotoPage(k, adjusting) { // 1<=k<=P
 //This is the only place where hash is set
   function doVerse(e) {
       for (let x of e.children) {
@@ -171,6 +171,7 @@ async function gotoPage(k, adjusting) { // 1<=k<=P
       }
   }
   function animate(down, ms=300) {
+  //not used -- fails in Safari
     let tr1 = "translate(0,0)" //initial position
     let h = (down? '-' : '+')+div2.clientHeight
     let tr2 = "translate(0, "+h+"px)"
@@ -179,6 +180,10 @@ async function gotoPage(k, adjusting) { // 1<=k<=P
     //modify page close to the end
     return new Promise(res => setTimeout(res, ms*0.9))
   }
+  function setTrans(t1='', t2='') {
+      div2.style.transition = t1
+      div2.style.transform = t2
+  }
     if (!k || k < 1) k = 1;
     if (k > P) k = P;
     k = Number(k);
@@ -186,12 +191,20 @@ async function gotoPage(k, adjusting) { // 1<=k<=P
     if (curPage == k) return;
     let [c] = cvFromPage(k); setSura(c);
     if (adjusting == 'slider') return;
+  try {
     hideMenus(); 
-    if (curPage) await animate(curPage < k)
+    if (curPage) { //await animate(curPage < k)
+      let h = (curPage < k? '-' : '+')+div2.clientHeight
+      setTrans("transform 0.35s", "translate(0, "+h+"px)")
+      setTimeout(setTrans, 360)
+    }
     curPage = k; slider.value = k;
     text.innerHTML = kur.pageToHTML(k)
     html.innerHTML = qur.pageToHTML(k)
     starB.classList.toggle('checked', bookmarks.has(k))
+  } catch (error) {
+    alert(error)
+  }
     let wc = html.childElementCount
     let idx = index[curPage]  //better than cvToIndex
     console.log('Page '+k, wc+' verses', idx)
@@ -274,7 +287,7 @@ function dragEnd(evt) {
     console.log("animate", tr2)
     trg.animate({transform:[tr1, tr2]}, 300)
 }
-async function gotoHashPage() {
+function gotoHashPage() {
 //re-designed by Abdurrahman Rajab
 //all text is in Buckwalter
   let h = decodedHash()
@@ -285,7 +298,7 @@ async function gotoHashPage() {
     let s = e.substring(2)
     switch (e.charAt(0)) {
       case 'p': // p=245
-        await gotoPage(s)
+        gotoPage(s)
         document.title = 's'+nameFromPage(s)
         break
       case 'r': // r=Sbr
@@ -300,7 +313,7 @@ async function gotoHashPage() {
       case 'v': // v=12:90
         let [c, v] = s.split(':') 
         c = Number(c); v = Number(v)
-        await gotoPage(pageOf(c, v), 'hashInProgress')
+        gotoPage(pageOf(c, v), 'hashInProgress')
         document.title = sName[c]+' '+s
         markVerse(s); break
       default: 
@@ -310,10 +323,10 @@ async function gotoHashPage() {
   }
   return true
 }
-async function initialPage() {
+function initialPage() {
     initialized = kur.loaded && qur.loaded
     if (initialized) { //global
-      if (await gotoHashPage()) return
+      if (gotoHashPage()) return
       gotoPage(getStorage('iqra', 'page') || 1)
       console.log("initialPage", curPage)
     }
@@ -476,14 +489,14 @@ function menuFn() {
 /**
 * End of menu functions 
 ***********************************************/
-async function keyToPage(evt) {
+function keyToPage(evt) {
     if (evt.key == 'Escape') {
       hideElement(menuS)
     } else if (evt.key == 'Enter') {
       let [c, v] = pgNum.value.split(/\D+/)
       if (v) { //c:v
         let p = pageOf(Number(c), Number(v))
-        await gotoPage(p)
+        gotoPage(p)
         markVerse(c+':'+v)
       } else { //page
         gotoPage(Number(c))
