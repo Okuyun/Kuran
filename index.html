@@ -22,17 +22,18 @@
       height: 100%;
       min-width: 100px;
     }
-    #findFrm {
-      border-left: 1px solid cyan;
-      border-right: 1px solid cyan;
-    }
     button {
       position: fixed;
       top: 8px; right: 0;
       background-color: pink;
     }
   @media screen and (min-width: 851px) {
-    #findFrm { resize: horizontal; }
+    #findFrm {
+      margin: auto;
+      resize: horizontal; 
+      border-left: 1px solid cyan;
+      border-right: 1px solid cyan;
+    }
   }
   @media screen and (min-width: 1200px) {
     button { display: none; }
@@ -116,7 +117,9 @@ function showFinder() {
   // if (!findFrm.src) findFrm.src = 'mujam.html'
   resize()
 }
-function setWidth(evt) {
+function setWidth(entries, observer) {
+  let t = entries[0].target
+  if (t !== findFrm) { console.log(t); return } 
   let s = readFrm.style
   if (s.display == 'none') return //readFrm is hidden
   let x = findFrm.offsetWidth
@@ -195,7 +198,7 @@ var WIDTH = 520  //can be modified in dev tools
   findFrm.onload = sourceChanged
   iqra.addEventListener('hashchange', reportHash)
   new ResizeObserver(setWidth).observe(findFrm)
-  window.onerror = console.log
+  // window.onerror = console.log
   window.onbeforeinstallprompt = (e) => {
     iqra.beforeinstallCB(e)
     console.log('beforeinstallprompt event')
