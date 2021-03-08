@@ -118,8 +118,9 @@ function showFinder() {
   resize()
 }
 function setWidth(entries, observer) {
-  let t = entries[0].target
-  if (t !== findFrm) { console.log(t); return } 
+  let t = entries[0]
+  // console.log(readFrm.style.left, t.contentRect.width); 
+  if (t.target !== findFrm) return
   let s = readFrm.style
   if (s.display == 'none') return //readFrm is hidden
   let x = findFrm.offsetWidth
