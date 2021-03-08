@@ -55,7 +55,7 @@ function addListener(frm) {
   console.log('* addListener *', frm.name)
 }
 function reportHash(e) { //hashchange in one of the panes
-  let s = '[Dış kaynak]', h = ''
+  let s = '[Iqra]', h = ''
   if (e.target.name == 'iqra') {
     if (skipEvent) {
       skipEvent = false; return
@@ -70,7 +70,7 @@ function reportHash(e) { //hashchange in one of the panes
     } catch (e) {
       isStartPage = false //external page
     }
-    if (lastPath != null && e.target.document) {
+    if (e.target.document) {
       s = e.target.document.title
       h = e.target.location.hash
     }
