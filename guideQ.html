@@ -48,7 +48,7 @@
   </ul>
 </div>
 
-<p>Iqra, Kerim Kitabımız Kuran’ı okumak için yapılan yüzlerce yazılımdan biridir.</p>
+<p>Iqra, Kerim Kitabımız Kuran’ı okumak için yapılan yüzlerce yazılımdan biridir. Bunu diğer yazılımlardan ayrılan temel özellikler: Kelime kökünü Kuran metni üzerinde belirtmesi, bir kelimenin Kuran-ı Kerim'de geçtiği tüm sayfaları tek bir ekranda göstermesi ve internetsiz ortamda çalışabilmesidir.</p>
 
 <h3>1. Sayfayı açmak ve çevirmek</h3>
 
@@ -61,21 +61,18 @@
 <p>
   <img src="docs/start.png" alt="Start ekranı"/>
 </p>
-
-<p>Giriş sayfasında sayfa ya da ayet numarası ile mushaf açılır. Ekran yeteri kadar geniş ise hem Kuran sayfası hem de meali görünür. Sayfa açılınca, sonraki ya da önceki sayfaya geçmek, başka bir sure ya da sayfa numarası vermek mümkün. Sağ üstte görünen tuşların anlamı:</p>
-
 <ul>
-  <li>☆ &nbsp; Yer işareti ekle/sil</li>
-  <li>T &nbsp; Tercüme göster/gizle</li>
-  <li><xs>A</xs>A &nbsp;Arapça yazı boyu</li>
-  <li><u>=</u> &nbsp; Sayfa menüsü</li>
+  <li>Kelime bul: Kuran metninde Arapça ya da mealde Türkçe kelime ara</li>
+  <li>Mushafa git: Sayfa veya ayet numarası ile belirtilen yeri göster</li>
+  <li>Mucem’de bul: Verilen kelimeyi Arapça kökü ile ara</li>
 </ul>
 
-<p>Pembe A düğmesi ile Arama paneline geçmek her noktada mümkün.</p>
+<p>Giriş sayfasında sayfa ya da ayet numarası ile mushaf açılır. Ekran yeteri kadar geniş ise hem Kuran sayfası hem de meali görünür. Sayfa açılınca, sonraki ya da önceki sayfaya geçmek, başka bir sure ya da sayfa numarası vermek mümkün.</p>
+
 
 <p>Başlangıç adresinde sayfa ya da ayet numaraları belirtilebilir:</p>
 <ul>
-  <li><a href="index.html#v=27:28" target="iqraTop">
+  <li><a href="index.html#v=27:28&r=ktb" target="iqraTop">
   #v=27:28</a> (27. surenin 28. ayeti &ndash; aşağıda birinci resim)</li>
   <li><a href="index.html#p=378" target="iqraTop">
   #p=378</a> (numarası verilen sayfa &ndash; ikinci resim)</li>
@@ -85,7 +82,18 @@
   <img src="docs/Iqra_ktb.png" alt="Iqra ekranı" class=large />
 </p>
 
-<p>Sayfanın adresinde yazılan sayfa ya da ayet numarasından sonra, <code>&amp;r=ktb</code> şeklinde kelime kökleri verilirse, bu kelimeler renkli gösterilir. Mucem’de seçilen kelimeler bu şekilde renklendiriliyor.</p>
+<p>Sağ üstte görünen tuşların anlamı:
+<ul>
+  <li>☆ &nbsp; Yer işareti ekle/sil</li>
+  <li>T &nbsp; Tercüme göster/gizle (geniş ekranda görünmez)</li>
+  <li><xs>A</xs>A &nbsp;Yazı boyu büyük/normal (dar ekranda görünmez)</li>
+  <li><u>=</u> &nbsp; Sayfa menüsü: Dış kaynaklar, Sürüm, Yardım, Yer işaretleri</li>
+  <li>A &nbsp; Arama paneline geç (Pembe tuş)</li>
+</ul>
+
+</p>
+
+<p>Arapça kelimelerin kökü, bilgisayarda mouse ile kelimeye tıklayarak, mobilde dokunarak bulunur. Sayfanın adresinde yazılan sayfa ya da ayet numarasından sonra, <code>&amp;r=ktb</code> şeklinde kelime kökleri verilirse, bu kelimeler renkli gösterilir. Mucem’de seçilen kelimeler bu şekilde renklendiriliyor.</p>
 
 <p>Dar ekranlara hem ayet hem de meal sütunları bir arada sığmaz, ayetler ile anlamlar arasındaki geçiş için T tuşuna basmak gerekiyor. Fontlar ekran genişliği ile orantılı olduğundan, telefonu yan tutmak daha iyi görüntü verecektir.</p>
 
@@ -138,7 +146,7 @@ secde ayetleri için kullanılan işaret görülüyor.
 
 <p>Ayetlerin benzerliği konusunda birkaç örnek <a href="benzerlik.html">şu sayfada</a>
 verilmişti. Acaba bunun gibi benzerlikleri otomatik olarak bulmak mümkün mü?
-Cevap evet, benzerlik modülünün ilk sürümü bile epeyce başarılı oldu:
+Cevap evet, benzerlik modülü ile birden fazla benzer kelime içeren ayetleri bulmak mümkün:
 </p>
 <p>
   <img src="docs/Iqra_simi.png" alt="Iqra simi" />
@@ -258,7 +266,7 @@ sadece Arapça metinde kullanılır, mealler için benzerlik modülü henüz yok
   </li>
   <li>
 <p><a href="index.html" target="iqraTop">V4.1</a>
- Yeni adres (Mart 2021)</a></p>
+ Yeni adres: okuyun.github.io/Kuran/ (Mart 2021)</a></p>
   </li>
 </ul>
 <p>(C) 1992, 2012, 2019 by M Akif Eyler
