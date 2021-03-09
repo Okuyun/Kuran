@@ -6,10 +6,10 @@
 const VERSION = "V4.1";
 
 /**
- * &emsp; used in both Mujam
- * used at report2 @see report2
+ * &ensp; used in Mujam and VerseRef
+ * use EN space, may be renamed later
  */
-const EM_SPACE = String.fromCharCode(8195)
+const EM_SPACE = String.fromCharCode(8194) //8195
 
 /**
  * Link to finder -- could be modified in console

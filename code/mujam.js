@@ -165,11 +165,11 @@ function selectRoot(root, modifyHash=true) { //root in Arabic
     if (!cnt) notFound(root)
     let lst = rootToWords.get(cnt);
     let nL = lst? lst.length : 0;
-    if (lst) makeMenu(menu3, lst);
+    /* if (lst) makeMenu(menu3, lst);
     if (nL > 1)
         menu3.selectedIndex = -1; //do not select Word
     menu3.disabled = (nL == 1);
-    menu3.style.color = (nL == 1 ? "gray" : "");
+    menu3.style.color = (nL == 1 ? "gray" : ""); */
     //combine refs in lst
     combine.hidden = true;
     if (!modifyHash) return
@@ -186,9 +186,9 @@ function selectRoot(root, modifyHash=true) { //root in Arabic
  * @param {string} word to be selected.
  */
 function selectWord(word) { //called by menu3 and list items
-    if (!word) word = menu3.value;
-    else if (word == menu3.value) return;
-    else menu3.value = word;
+    // if (!word) word = menu3.value;
+    // else if (word == menu3.value) return;
+    // else menu3.value = word;
     combine.hidden = false;
     //let enc = wordToRefs.get(word)
     //parseRefs(word, enc)
@@ -309,13 +309,15 @@ function readTopics() {
 function displayList(refs, liste) {
     const MAX_REFS = 50  //hide larger lists
     const SPAN = '<span class=item>', _SPAN = '</span>'
-    let BUTTON = '', _BUTTON = ''
-    if (refs.length > 1) {
-        BUTTON = '<button>'; _BUTTON = '</button>'
-    }
+    // let BUTTON = '', _BUTTON = ''
+    // if (refs.length > 1) {
+    //     BUTTON = '<button>'; _BUTTON = '</button>'
+    // }
     let s = ''
     for (let x of refs) { // x is {name, list}
-        s += '<li>'+BUTTON+ x.name +_BUTTON +'&emsp; <span>'
+        let but = refs.length == 1? '' :
+            '<button>'+ x.name +'</button>&emsp;'
+        s += '<li>'+but+'<span>'
         for (let y of x.list) // y is VerseRef
             s += SPAN+ y.cv +_SPAN
         s += '\n' //'</span>\n'
@@ -330,7 +332,7 @@ function displayList(refs, liste) {
         x.onclick = doClick3  //doHover
         x.onmouseleave = hideBilgi
     }
-    if (!BUTTON) return
+    if (refs.length == 1) return //no buttons
     for (let x of liste.querySelectorAll('button')) {
         let span = x.nextElementSibling
         if (span.children.length > MAX_REFS) {
@@ -406,7 +408,7 @@ function displayTable(set) {
     out3.innerText = set.name
     out4.innerText = pages
     console.log(pages, set)
-    menu3.hidden = wRefs.length == 1
+    // menu3.hidden = wRefs.length == 1
     for (let x of tablo.querySelectorAll('td')) {
         x.onmouseenter = doHover
         x.onmouseleave = hideBilgi
@@ -504,7 +506,7 @@ function initMujam() {
     showT.onclick  = () => {showTopics(true)}
     menu1.onchange = () => {selectLetter()}
     menu2.onchange = () => {selectRoot()}
-    menu3.onchange = () => {selectWord()}
+    // menu3.onchange = () => {selectWord()}
     combine.onclick= () => {gotoHashRoot()}
     menu4.onchange = () => {selectTopic()}
     back.onclick   = () => {history.back()}
@@ -562,6 +564,7 @@ function showSelections(show) {
     div0.hidden = show
     div1.hidden = !show
     div4.hidden = true
+    combine.hidden = false
     if (show) displayList(wRefs, kelimeler)
 }
 function showTopics(show) {
