@@ -6,6 +6,7 @@
     <meta name="theme-color" content="cyan" />
     <meta name="author"      content="M A Eyler, Istanbul, 2020" />
     <meta name="description" content="Reader for the Quran" />
+    <link rel="apple-touch-icon" href="image/icon.png">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="image/icon.png">
     <title>Iqra V4</title>
@@ -42,8 +43,10 @@
   </head>
   <body>
 
-  <iframe id=findFrm src='start.html' name=finder></iframe>
-  <iframe id=readFrm src='reader.html' name=iqra></iframe>
+  <iframe id=findFrm src='start.html' 
+   name=finder title="Arama paneli"></iframe>
+  <iframe id=readFrm src='reader.html' 
+   name=iqra title="Mushaf paneli"></iframe>
 
   <button id=closeM title='Arama panelini kapat'>x</button>
   <button id=openM hidden title='Arama paneline dön'>A</button>
