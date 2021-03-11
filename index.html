@@ -31,7 +31,8 @@
   @media screen and (min-width: 851px) {
     #findFrm {
       margin: auto;
-      resize: horizontal; 
+      resize: both;
+      max-height: 100%;
       border-left: 1px solid cyan;
       border-right: 1px solid cyan;
     }
@@ -124,12 +125,12 @@ function setWidth(entries, observer) {
   let t = entries[0]
   // console.log(readFrm.style.left, t.contentRect.width); 
   if (t.target !== findFrm) return
-  let s = readFrm.style
-  if (s.display == 'none') return //readFrm is hidden
-  let x = findFrm.offsetWidth
-  let w = Math.min(window.innerWidth, screen.width)-x
-  // console.log(x, w)
-  s.left  = x+'px'; s.width = w+'px'
+  if (readFrm.style.display == 'none') return //readFrm is hidden
+  finderWidth = findFrm.offsetWidth
+  let w = Math.min(window.innerWidth, screen.width) - finderWidth
+  // console.log(finderWidth, w)
+  readFrm.style.left = finderWidth+'px'
+  readFrm.style.width = w+'px'
   closeM.style.right = w+'px'
 }
 var WIDTH = 520  //can be modified in dev tools
@@ -152,7 +153,12 @@ var WIDTH = 520  //can be modified in dev tools
       setStyle(readFrm.style, SHOW, x2, w2)
     }
     function finderShown(w2, single) {
-      let x2 = single? W : W - w2
+      let x2 = W  //if single
+      if (!single) {
+        if (!finderWidth) finderWidth =
+          getStorage('iqra', 'finderWidth') || W - w2;
+        x2 = finderWidth; w2 = W - finderWidth
+      }
       setStyle(findFrm.style, SHOW, 0, x2)
       let d = single? HIDE : SHOW
       setStyle(readFrm.style, d, x2, w2)
@@ -186,11 +192,12 @@ var WIDTH = 520  //can be modified in dev tools
     window.location.hash = initialHash
     initialHash = null
   }
-  var lastPath  // finder location
-  var isStartPage = true // is shown?
-  var hashInProgress = false
-  var initialHash = decodedHash()
-  var skipEvent = !initialHash
+  var lastPath,  // finder location
+    isStartPage = true, // is shown?
+    hashInProgress = false,
+    initialHash = decodedHash(),
+    skipEvent = !initialHash,
+    finderWidth;
   console.log('* start *', initialHash, location.hash)
   readFrm.style.display = 'none' //hide iqra frame
   window.name = 'iqraTop'

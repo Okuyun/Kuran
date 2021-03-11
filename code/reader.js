@@ -38,6 +38,8 @@ function saveSettings() {
       trans: trans.classList.contains("checked"),
       zoom: zoomB.classList.contains("checked")
     }
+    if (parent.finderWidth)
+      x.finderWidth = parent.finderWidth
     setStorage('iqra', x)
 }
 function readSettings() {
@@ -46,6 +48,8 @@ function readSettings() {
     arrayToSet(x.marks) //immediate action
     if (x.trans) toggleTrans()
     if (x.zoom) toggleZoom()
+    if (parent.name == 'iqraTop' && x.finderWidth)
+      parent.finderWidth = x.finderWidth
     let s = getStorage('settings')
     if (s) setFontFamily(s.fontType) 
     return x
