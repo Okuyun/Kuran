@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"    content="width=device-width" />
+    <meta name="theme-color" content="cyan" />
+    <meta name="author"      content="M A Eyler, Istanbul, 2019" />
+    <meta name="description" content="Reader for the Quran" />
+    <link rel="icon" href="../image/icon.png">
+    <script src="../code/buckwalter.js"></script>
+    <title>Counter</title>
+
+    <style>
+        div { display: inline-block; }
+        pre { overflow: auto; }
+    </style>
+</head>
+
+<body>
+
+<h3 id=docName></h3>
+<div id=sss></div>
+<div style="width: 12px;"></div>
+<div>
+    <h3 id=title></h3>
+    Count all chars in Quran
+    <pre id=output></pre>
+</div>
+<hr />
+
+<link  href="https://maeyler.github.io/JS/sss/inspector.css" rel="stylesheet">
+<script src="https://maeyler.github.io/JS/sss/inspector.js"></script>
+<script>
+"use strict";
+class Counter extends Menu {
+  constructor() {
+    super();
+    this.local = localStorage
+    this.caches = caches
+    this.window = window
+  }
+  async count(url) {
+      if (!url) url = "/Rehber/data/quran-simple-clean.txt"
+      let r = await fetch(url) //response
+      display(r)
+      count2(await r.clone().text())
+  }
+}
+function count2(txt) {
+    let map = new Map()
+    for (let k of txt) {//each char c
+      let c = map.get(k)
+      if (!c) c = 0
+      map.set(k, c+1)
+    }
+    console.log(map)
+    let b = [], n = 0
+    for (let k of map.keys()) {
+        //if (k <= '¶') continue  //skip ASCII
+        let uni = k.charCodeAt(0).toString(16).padStart(4, '0')
+        let num = map.get(k).toString().padStart(7, ' ')
+        b.push('\\u'+uni+'  '+toBuckwalter(k)+num+'  '+k)
+        n += map.get(k)
+    }
+    let s = b.sort().join('\n')
+    output.innerText = s+"\n\nTotal =  "+n
+    console.log(n+" chars -- most are two bytes")
+}
+function init() {
+    MENU = new Counter()
+    display(MENU); 
+}
+    title.innerText = document.title
+    docName.innerText = "Inspector "+VERSION;
+    try {
+        inspect(sss, init); //makes the table
+        inp.value = "new Date()";
+    } catch(e) {
+        reportError(e);
+    }
+</script>
+
+</body>
+</html>
