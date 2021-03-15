@@ -45,6 +45,30 @@ class Counter extends Menu {
       display(r)
       count2(await r.clone().text())
   }
+  getBookmarks()  { return getStorage("iqra", "marks") }
+  setBookmarks(a) { return setStorage("iqra", "marks", a) }
+}
+  //copied from common.js -- name conflict with sss
+function getStorage(q, k) {
+    if (!localStorage) return
+    let e = localStorage[q]
+    if (!e) return
+    try {
+        let x = JSON.parse(e)
+        return k? x[k] : x
+    } catch (err) {
+        return e
+    }
+}
+function setStorage(q, k, v) {
+    if (!localStorage) return
+    if (v) {
+        let x = getStorage(q) || {}; x[k] = v
+        localStorage[q] = JSON.stringify(x)
+    } else { // v is omitted, use k
+        localStorage[q] = typeof(k) == 'object'?
+           JSON.stringify(k) : k
+    }
 }
 function count2(txt) {
     let map = new Map()
@@ -68,6 +92,8 @@ function count2(txt) {
 }
 function init() {
     MENU = new Counter()
+    MENU.getStorage = getStorage
+    MENU.setStorage = setStorage
     display(MENU); 
 }
     title.innerText = document.title
