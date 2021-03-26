@@ -277,3 +277,22 @@ button {
 #leftB {
   border-right: 16px solid #00f6; 
 }
+
+#noteBox {
+  border: 6px solid gray;
+  padding: 6px;
+  position: fixed;
+  right: 20px;
+  bottom: 32px;
+  width: 300px;
+  height: 200px;
+  resize: none;
+}
+#noteBut {
+  min-width: 24px;
+  height: 24px;
+  border-radius: 0;
+  background-image: url(../image/add.png);
+  background-size: contain;
+  border: none;
+}

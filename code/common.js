@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.1";
+const VERSION = "V4.1a";
 
 /**
  * &ensp; used in Mujam and VerseRef
@@ -64,7 +64,7 @@ function hideElement(elt) {
  * @param {number} p page
  */
 function openSitePage(s, p) {
-  let url, name;
+  let url, name; hideMenus()
   switch (s.toUpperCase()) {
     case 'B':  //Yer işaretleri -- Bookmarks
         url = 'bookmarks.html'; name = 'finder'; break
@@ -77,7 +77,7 @@ function openSitePage(s, p) {
         let [c, v] = toCV(index[p]+1)
         openSiteVerse(s, c, v); return
   }
-  window.open(url, name); hideMenus()
+  window.open(url, name)
 }
 
 /**
@@ -150,7 +150,55 @@ function setStorage(q, k, v) {
            JSON.stringify(k) : k
     }
 }
-
+/**
+ * Code related to annotation
+ */
+class Notes {
+    constructor(key='notes') {
+        this.key = key
+        this.data = getStorage(key) || {}
+        this.but = document.querySelector('#noteBut')
+        if (!this.but) throw('#noteBut is not found')
+        this.box = document.querySelector('#noteBox')
+        if (!this.box) throw('#noteBox is not found')
+    }
+    boxValue() {
+        const MAX = 200
+        return this.box.value.trim().substring(0, MAX)
+    }
+    saveCurrent() {
+        let c = this.current
+        let v = this.boxValue()
+        if (c && v && this.data[c] !== v) {
+            this.data[c] = v
+            setStorage(this.key, this.data)
+        }
+    }
+    setFocus() {
+        this.box.selectionEnd = this.box.value.length
+        this.box.selectionStart = 0; this.box.focus()
+    }
+    display(c) { //called on new page/word
+        this.saveCurrent()
+        this.current = String(c)
+        let v = this.data[c] || ''
+        this.box.value = v
+        this.but.style.backgroundImage = v?
+            'url(./image/edit.png)' : '' //'add.png'
+        if (this.box.hidden) return
+        if (v) this.setFocus()
+        else this.box.hidden = true
+    }
+    edit() { //called when this.but is clicked
+        if (this.box.hidden) {
+            this.box.hidden = false
+            this.setFocus()
+        } else {
+            this.box.hidden = true
+            this.saveCurrent()
+        }
+    }
+}
 
 // export {VERSION, EM_SPACE, setPosition, hideElement, 
-//     openSitePage, openSiteVerse, fetch_text_then}
+//   openSitePage, openSiteVerse, fetch_text_then, Notes}

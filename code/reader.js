@@ -23,6 +23,7 @@ window.mujam = undefined
 
 const DEFAULT = {page:1, marks:[]}
 const MAX_MARKS = 12  // if more marks, delete the oldest
+const notes = new Notes('notesQ')
   
 function arrayToSet(m) {
     if (!m) return
@@ -206,6 +207,7 @@ function gotoPage(k, adjusting) { // 1<=k<=P
     text.innerHTML = kur.pageToHTML(k)
     html.innerHTML = qur.pageToHTML(k)
     starB.classList.toggle('checked', bookmarks.has(k))
+    notes.display(k) //in common.js
   } catch (error) {
     alert(error)
   }
@@ -356,6 +358,7 @@ function initReader() {
     slider.oninput = () => {adjustPage(true)}
     slider.onchange= () => {adjustPage(false)} //committed
     rightB.onclick = () => {nextPage()}
+    noteBut.onclick = () => {notes.edit()} //in common.js
     let labels = []
     for (let i=1; i<=M; i++)
       labels.push(i+'. '+sName[i])
