@@ -178,6 +178,15 @@ class Notes {
         this.box.selectionEnd = this.box.value.length
         this.box.selectionStart = 0; this.box.focus()
     }
+    showBox(show) {
+        if (show) {
+            this.box.hidden = false
+            this.but.style.backgroundColor = '#ff7'
+        } else {
+            this.box.hidden = true
+            this.but.style.backgroundColor = ''
+        }
+    }
     display(c) { //called on new page/word
         this.saveCurrent()
         this.current = String(c)
@@ -187,16 +196,13 @@ class Notes {
             'url(./image/edit.png)' : '' //'add.png'
         if (this.box.hidden) return
         if (v) this.setFocus()
-        else this.box.hidden = true
+        else this.showBox(false)
     }
-    edit() { //called when this.but is clicked
-        if (this.box.hidden) {
-            this.box.hidden = false
-            this.setFocus()
-        } else {
-            this.box.hidden = true
-            this.saveCurrent()
-        }
+    edit(show = this.box.hidden) {
+    //called when this.but is clicked
+        this.showBox(show)
+        if (show) this.setFocus()
+        else this.saveCurrent()
     }
 }
 

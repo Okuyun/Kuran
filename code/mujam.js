@@ -26,6 +26,9 @@ var wRefs = [];
  */
 const sajdaP = [175, 250, 271, 292, 308, 333, 364, 
             378, 415, 453, 479, 527, 589, 597, 999]
+
+const notes = new Notes('notesM')
+
 /**
  * child window (or tab) to display Quran
  * the same window is used on each click
@@ -175,6 +178,7 @@ function selectRoot(root, modifyHash=true) { //root in Arabic
     if (!modifyHash) return
     //replace special chars
     let b = encodeURI(toBuckwalter(root))
+    notes.display(b) //in common.js
     location.hash = "#r=" + b;
 }
 /**
@@ -189,7 +193,8 @@ function selectWord(word) { //called by menu3 and list items
     // if (!word) word = menu3.value;
     // else if (word == menu3.value) return;
     // else menu3.value = word;
-    combine.hidden = false;
+    combine.hidden = false
+    notes.edit(false)
     //let enc = wordToRefs.get(word)
     //parseRefs(word, enc)
     let set = wRefs.find(x => x.name == word)
@@ -208,6 +213,7 @@ function selectTopic(topic) { //called by menu4 and list items
     if (!topic) topic = menu4.value;
     else if (topic == menu4.value) return;
     else menu4.value = topic;
+    notes.edit(false)
     let s = tRefs.get(topic)
     location.hash = s.name +'='+ s.toEncoded()
     //if (s) displayTable(s)
@@ -507,6 +513,7 @@ function initMujam() {
     menu1.onchange = () => {selectLetter()}
     menu2.onchange = () => {selectRoot()}
     // menu3.onchange = () => {selectWord()}
+    noteBut.onclick = () => {notes.edit()} //in common.js
     combine.onclick= () => {gotoHashRoot()}
     menu4.onchange = () => {selectTopic()}
     back.onclick   = () => {history.back()}

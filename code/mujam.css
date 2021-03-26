@@ -196,3 +196,24 @@ from <a href=https://www.flaticon.com/>www.flaticon.com</a>
     background-size: contain;
     border: none;
 }
+
+#noteBox {
+    border: 6px solid gray;
+    padding: 6px;
+    position: fixed;
+    left: 20px;
+    top: 32px;
+    width: 300px;
+    height: 200px;
+    resize: none;
+    z-index: 2;
+  }
+  #noteBut {
+    min-width: 24px;
+    height: 24px;
+    border-radius: 0;
+    background-image: url(../image/add.png);
+    background-size: contain;
+    border: none;
+  }
+  
