@@ -571,7 +571,7 @@ function toggleMenuK() {
     }
 }
 function toggleZoom() {
-    let e = document.body
+    let e = div2 //document.body
     let checked = zoomB.classList.toggle('checked')
     if (checked) {
       e.classList.add('zoomWide')

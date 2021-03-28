@@ -161,6 +161,13 @@ class Notes {
         if (!this.but) throw('#noteBut is not found')
         this.box = document.querySelector('#noteBox')
         if (!this.box) throw('#noteBox is not found')
+        this.box.onkeydown = (evt) => {
+            evt.stopPropagation()
+            if (evt.key == 'Escape') //just close
+                this.showBox(false)
+            if (evt.key == 'Enter') //save & close
+                this.edit(false)
+        }
     }
     boxValue() {
         const MAX = 200
