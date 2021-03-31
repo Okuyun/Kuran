@@ -73,15 +73,12 @@ title='Bu alana girilen metin Rehber yazılımı ile aranır'>
   <input type=text id=omni title=
 'Linki ilk harf belirler: &#10;Mushaf: p=… v=… &#10;Mucem: r=… &#10;Rehber: t=… b=…'>
 </p>
-<button onclick=gotoPage("/Kuran/ders/00.html")>Dersler</button>
+<button onclick='location.pathname="/Kuran/ders/"'>Dersler</button>
 </div>
 
 <script src="code/common.js"></script>
 <script>
 "use strict";
-function gotoPage(url) {
-    location.pathname = url
-}
 function doRoot(h) {
     if (!h) return
     h = h.replace(/\s+/g, '&r=')
