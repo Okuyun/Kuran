@@ -91,18 +91,25 @@ function hashModified() {
   // console.log('** hashInProgress='+hashInProgress, h)
   if (hashInProgress || !h || h.length<3) {
     hashInProgress = false; return 
-  } else switch (h.substring(0, 2)) { //new address entered
-    case 'p=': case 'v=':
+  } 
+  let [c, d] = h.split('=')
+  switch (c) { //first char
+    case 'p': case 'v':
       window.open('reader.html#'+h, 'iqra'); hideFinder()
       break;
-    case 'r=':
+    case 'r':
       window.open('mujam.html#'+h, 'finder')
       break;
-    case 'b=': case 'w=': case 't=':
+    case 'b': case 'w': case 't':
       window.open(FINDER+'#'+h, 'finder')
       break
-    default:
-        console.log('unknown hash entered', h)
+    case 'd':
+      window.open('ders/'+d+'.html', 'finder')
+      break;
+    default: //topic content must be divisible by 3
+      if (d.length%3 == 0 && !d.includes('='))
+           window.open('mujam.html#'+h, 'finder')
+      else console.log('unknown hash entered', h)
   }
 }
 function startPane() {
@@ -133,7 +140,7 @@ function setWidth(entries, observer) {
   readFrm.style.width = w+'px'
   closeM.style.right = w+'px'
 }
-var WIDTH = 520  //can be modified in dev tools
+var WIDTH = 550  //can be modified in dev tools
   function resize() {
     const HIDE = 'none', SHOW = ''
     let W = Math.min(window.innerWidth, screen.width)
