@@ -175,7 +175,7 @@ function gotoPage(k, adjusting) { // 1<=k<=P
         }
       }
   }
-  function animate(down, ms=300) {
+  function animate(down, ms=400) {
   //not used -- fails in Safari
     let tr1 = "translate(0,0)" //initial position
     let h = (down? '-' : '+')+div2.clientHeight
@@ -200,8 +200,8 @@ function gotoPage(k, adjusting) { // 1<=k<=P
     hideMenus(); 
     if (curPage) { //await animate(curPage < k)
       let h = (curPage < k? '-' : '+')+div2.clientHeight
-      setTrans("transform 0.35s", "translate(0, "+h+"px)")
-      setTimeout(setTrans, 360)
+      setTrans("transform 0.4s", "translate(0, "+h+"px)")
+      setTimeout(setTrans, 410)
     }
     curPage = k; slider.value = k;
     text.innerHTML = kur.pageToHTML(k)
@@ -240,14 +240,14 @@ function dragStart(evt) {
      || menuS.style.display || bilgi.style.display)  {
         hideMenus(); evt.preventDefault(); return
     }
-    if (swipe.t>0) return
+    if (swipe.t > 0) return
     swipe.t = Date.now()
     swipe.x = Math.round(evt.touches[0].clientX)
     swipe.y = Math.round(evt.touches[0].clientY)
     //console.log("dragStart", swipe)
 }
-function drag(evt) {
-    if (swipe.t==0) return
+function drag(evt) { //not used
+    if (swipe.t == 0) return
     let trg = evt.target
     while (trg && trg.tagName != 'DIV')
         trg = trg.parentElement
@@ -263,35 +263,34 @@ function drag(evt) {
     trg.style.transform = tr;
 }
 function dragEnd(evt) {
-    if (swipe.t==0) return
-    let trg = evt.target
-    while (trg && trg.tagName != 'DIV')
-        trg = trg.parentElement
+    if (swipe.t == 0) return
     let dt = Date.now() - swipe.t
-    let xx = evt.changedTouches[0].clientX
-    let dx = Math.round(xx) - swipe.x
-    let tr1 = trg.style.transform //initial
-    console.log("dragEnd", tr1, trg.tagName)
-    trg.style.transform = ""; swipe.t = 0
-    let w2 = 0  //animation width
-    let W = trg.clientWidth
-    console.log(dt, dx, W)
+    let ct = evt.changedTouches[0]
+    let dx = Math.round(ct.clientX) - swipe.x
+    let dy = Math.round(ct.clientY) - swipe.y
+    swipe.t = 0
+    if (dt > 300) return  //too slow
     const K = 60  //too little movement
-    if (-K<=dx && dx<=K) return
+    if (dx*dx + dy*dy < K*K) return //-K<=dx && dx<=K
     evt.preventDefault()
-    //max 300 msec delay or min W/3 drag
-    if (dt>300 && 3*Math.abs(dx)<W) return
-    if (dx>K  && curPage<P) { //swipe right
-        nextPage(); w2 = W+"px"
-    } 
-    if (dx<-K && curPage>1) { //swipe left
-        prevPage(); w2 = -W+"px"
+    let teta = Math.atan2(dy, dx)
+    //convert teta to clock angle [0-12]
+    let a = Math.round(6*(1 + teta/Math.PI))
+    console.log("dragEnd", a, dx, dy)
+    switch (a) {
+      case 0: case 12: //swipe right -- T button
+        toggleTrans(); break
+      case 6: //swipe left -- pink button
+        if (parent.toogleFinder)
+            parent.toogleFinder()
+        else alert("horizontal "+a+", "+dx)
+        break
+      case 9: //swipe down
+        prevPage(); break
+      case 3: //swipe up
+        nextPage(); break
+      default: //not swipe
     }
-    if (!w2) return //page not modified
-    if (!tr1) tr1 = "translate(0,0)"
-    let tr2 = "translate("+w2+",0)" //final position
-    console.log("animate", tr2)
-    trg.animate({transform:[tr1, tr2]}, 300)
 }
 function gotoHashPage() {
 //re-designed by Abdurrahman Rajab
@@ -340,12 +339,8 @@ function initialPage() {
 function initReader() {
     title.innerHTML = 'Iqra '+VERSION+'&emsp;';
     version.innerText = 'Iqra '+VERSION;
-    // text.addEventListener("touchstart", dragStart);
-    // html.addEventListener("touchstart", dragStart);
-    // text.addEventListener("touchmove", drag);
-    // html.addEventListener("touchmove", drag);
-    // text.addEventListener("touchend", dragEnd);
-    // html.addEventListener("touchend", dragEnd);
+    div2.ontouchstart = dragStart
+    div2.ontouchend = dragEnd
     sureS.onchange = () => {gotoSura(sureS.selectedIndex+1)}
     pgNum.onkeydown= keyToPage
     pageS.onclick  = handleStars
@@ -463,11 +458,11 @@ function menuFn() {
       else if (menuV.style.display)
           openSite(k)
       else switch (k) {
-          case 'ARROWLEFT':
+          case 'ARROWDOWN': case 'ARROWLEFT': 
             if (!evt.altKey && !evt.ctrlKey && !evt.metaKey)
               {prevPage(); evt.preventDefault()}
             break
-          case 'ARROWRIGHT':
+          case 'ARROWUP': case 'ARROWRIGHT':
             if (!evt.altKey && !evt.ctrlKey && !evt.metaKey)
               {nextPage(); evt.preventDefault()}
             break

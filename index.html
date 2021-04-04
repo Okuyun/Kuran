@@ -119,6 +119,10 @@ function startPane() {
     isStartPage = true
   } 
 }
+function toogleFinder() {
+  if (closeM.hidden) showFinder() 
+  else hideFinder()
+}
 function hideFinder() {
   closeM.hidden=true; openM.hidden=false
   resize()

@@ -138,7 +138,7 @@ body {
     }
     #slider {
       position: relative;
-      width: 72%;
+      width: 70%;
       max-width: 604px;
       margin: 0;
     }
@@ -267,15 +267,15 @@ button {
   margin: 0 6px;
   display: inline-block;
   width: 0; height: 0;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
   cursor: pointer;
 }
 #rightB {
-  border-left: 16px solid #00f6;
+  border-bottom: 20px solid #00f6; 
 }
 #leftB {
-  border-right: 16px solid #00f6; 
+  border-top: 20px solid #00f6;
 }
 
 #noteBox {
@@ -289,8 +289,8 @@ button {
   resize: none;
 }
 #noteBut {
-  min-width: 24px;
-  height: 24px;
+  min-width: 26px;
+  height: 26px;
   border-radius: 0;
   background-image: url(../image/add.png);
   background-size: contain;
