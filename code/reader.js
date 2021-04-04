@@ -269,28 +269,29 @@ function dragEnd(evt) {
     let dx = Math.round(ct.clientX) - swipe.x
     let dy = Math.round(ct.clientY) - swipe.y
     swipe.t = 0
-    if (dt > 300) return  //too slow
+    if (dt > 400) return  //not swipe
     const K = 60  //too little movement
-    if (dx*dx + dy*dy < K*K) return //-K<=dx && dx<=K
-    evt.preventDefault()
+    if (dx*dx + dy*dy < K*K) return  //not swipe
     let teta = Math.atan2(dy, dx)
     //convert teta to clock angle [0-12]
     let a = Math.round(6*(1 + teta/Math.PI))
     console.log("dragEnd", a, dx, dy)
     switch (a) {
-      case 0: case 12: //swipe right -- T button
-        toggleTrans(); break
-      case 6: //swipe left -- pink button
+      case 0: case 12: //swipe left -- pink button
         if (parent.toogleFinder)
             parent.toogleFinder()
         else alert("horizontal "+a+", "+dx)
         break
+      case 6: //swipe right -- T button
+        toggleTrans(); break
       case 9: //swipe down
         prevPage(); break
       case 3: //swipe up
         nextPage(); break
       default: //not swipe
+        return
     }
+    evt.preventDefault()
 }
 function gotoHashPage() {
 //re-designed by Abdurrahman Rajab
