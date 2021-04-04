@@ -79,6 +79,18 @@ title='Bu alana girilen metin Rehber yazılımı ile aranır'>
 <script src="code/common.js"></script>
 <script>
 "use strict";
+const swipe = new TouchHandler(document.body, {dragEnd})
+function dragEnd(a, dx) {
+    switch (a) {
+      case 0: case 12: //swipe left or
+      case 6: //swipe right -- pink button
+        if (parent.toogleFinder)
+            parent.toogleFinder()
+        else alert("horizontal "+a+", "+dx)
+      default: //angle not supported
+        return false
+    }
+}
 function doRoot(h) {
     if (!h) return
     h = h.replace(/\s+/g, '&r=')

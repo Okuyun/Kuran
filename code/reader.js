@@ -16,7 +16,7 @@ var kur = new KuranText(TRANS || SOURCE[snum], initialPage)
 const qur = new QuranText('quran-uthmani.txt', initialPage)
 const MD  = new MujamData('data/words.txt')
 const SD  = new SimData('data/simi.txt')
-const swipe = { t:0, x:0, y:0 }
+const swipe = new TouchHandler(div2, {dragStart, dragEnd})
 var curSura, curPage, bookmarks, lastSelection;
 var initialized = false
 window.mujam = undefined
@@ -238,44 +238,11 @@ function gotoSura(c) {
 function dragStart(evt) {
     if (menuK.style.display || menuC.style.display 
      || menuS.style.display || bilgi.style.display)  {
-        hideMenus(); evt.preventDefault(); return
+        hideMenus(); evt.preventDefault(); return false
     }
-    if (swipe.t > 0) return
-    swipe.t = Date.now()
-    swipe.x = Math.round(evt.touches[0].clientX)
-    swipe.y = Math.round(evt.touches[0].clientY)
-    //console.log("dragStart", swipe)
+    return true
 }
-function drag(evt) { //not used
-    if (swipe.t == 0) return
-    let trg = evt.target
-    while (trg && trg.tagName != 'DIV')
-        trg = trg.parentElement
-    let dx = Math.round(evt.touches[0].clientX) - swipe.x
-    let dy = Math.round(evt.touches[0].clientY) - swipe.y
-    if (Math.abs(dx) < 3*Math.abs(dy)) { //not horizontal
-        // console.log("cancel", dx, dy)
-        trg.style.transform = ""; swipe.t = 0; 
-        return  //swipe cancelled
-    }
-    evt.preventDefault(); 
-    let tr = "translate("+dx+"px, 0)"
-    trg.style.transform = tr;
-}
-function dragEnd(evt) {
-    if (swipe.t == 0) return
-    let dt = Date.now() - swipe.t
-    let ct = evt.changedTouches[0]
-    let dx = Math.round(ct.clientX) - swipe.x
-    let dy = Math.round(ct.clientY) - swipe.y
-    swipe.t = 0
-    if (dt > 400) return  //not swipe
-    const K = 60  //too little movement
-    if (dx*dx + dy*dy < K*K) return  //not swipe
-    let teta = Math.atan2(dy, dx)
-    //convert teta to clock angle [0-12]
-    let a = Math.round(6*(1 + teta/Math.PI))
-    console.log("dragEnd", a, dx, dy)
+function dragEnd(a, dx) {
     switch (a) {
       case 0: case 12: //swipe left -- pink button
         if (parent.toogleFinder)
@@ -288,10 +255,10 @@ function dragEnd(evt) {
         prevPage(); break
       case 3: //swipe up
         nextPage(); break
-      default: //not swipe
-        return
+      default: //angle not supported
+        return false
     }
-    evt.preventDefault()
+    return true
 }
 function gotoHashPage() {
 //re-designed by Abdurrahman Rajab
@@ -340,8 +307,7 @@ function initialPage() {
 function initReader() {
     title.innerHTML = 'Iqra '+VERSION+'&emsp;';
     version.innerText = 'Iqra '+VERSION;
-    div2.ontouchstart = dragStart
-    div2.ontouchend = dragEnd
+    console.log(swipe)  //TouchHandler
     sureS.onchange = () => {gotoSura(sureS.selectedIndex+1)}
     pgNum.onkeydown= keyToPage
     pageS.onclick  = handleStars

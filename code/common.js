@@ -213,5 +213,55 @@ class Notes {
     }
 }
 
-// export {VERSION, EM_SPACE, setPosition, hideElement, 
-//   openSitePage, openSiteVerse, fetch_text_then, Notes}
+/**
+ * Code related to Touch events
+ */
+class TouchHandler {
+    constructor(elt, action) {
+        this.action = action
+        elt.ontouchstart = (e) => this.start(e)
+        elt.ontouchmove = (e) => this.move(e)
+        elt.ontouchend = (e) => this.swipe(e)
+    }
+    start(evt) {
+        if (this.t) return
+        if (!invoke(this.action.dragStart, evt)) return
+        this.t = Date.now()
+        this.x = Math.round(evt.touches[0].clientX)
+        this.y = Math.round(evt.touches[0].clientY)
+        // console.log("dragStart", this)
+    }
+    angle(evt) {
+        let ct = evt.changedTouches[0]
+        let dx = Math.round(ct.clientX) - this.x
+        let dy = Math.round(ct.clientY) - this.y
+        let teta = Math.atan2(dy, dx)
+        //convert teta to clock angle [0-12]
+        let a = Math.round(6*(1 + teta/Math.PI))
+        return { a, dx, dy }
+    }
+    move(evt) {
+        if (!this.t) return
+        let { a, dx, dy } = this.angle(evt)
+        if (invoke(this.action.drag, a, dx, dy))
+            evt.preventDefault()
+    }
+    swipe(evt) {
+        if (!this.t) return
+        let dt = Date.now() - this.t
+        this.t = undefined
+        if (dt > 400) return  //not swipe
+        let { a, dx, dy } = this.angle(evt)
+        const K = 60  //too little movement
+        if (dx*dx + dy*dy < K*K) return  //not swipe
+        console.log("dragEnd", a, dx, dy)
+        if (invoke(this.action.dragEnd, a, dx, dy))
+            evt.preventDefault()
+    }
+}
+function invoke(cb, ...arg) {
+    return !cb || cb(...arg)
+}
+
+// export {VERSION, EM_SPACE, setPosition, hideElement, Notes, 
+//   openSitePage, openSiteVerse, fetch_text_then, TouchHandler}
