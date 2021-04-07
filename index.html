@@ -28,6 +28,12 @@
       top: 8px; right: 0;
       background-color: pink;
     }
+    /* #cover {
+      position: fixed;
+      background: none;
+      width: 100%;
+      height: 100%;
+    } */
   @media screen and (min-width: 851px) {
     #findFrm {
       margin: auto;
@@ -51,9 +57,13 @@
 
   <button id=closeM title='Arama panelini kapat'>x</button>
   <button id=openM hidden title='Arama paneline dön'>A</button>
+  <!-- <div id=cover></div> -->
 
 <script src="code/common.js"></script>
 <script>
+"use strict";
+// const swipe = new TouchHandler({dragStart, dragEnd, cover})
+// cannot listen to touch events on iframe -- never called
 function addListener(frm) {
   frm.contentWindow.addEventListener('hashchange', reportHash)
   console.log('* addListener *', frm.name)

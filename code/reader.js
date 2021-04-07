@@ -16,7 +16,7 @@ var kur = new KuranText(TRANS || SOURCE[snum], initialPage)
 const qur = new QuranText('quran-uthmani.txt', initialPage)
 const MD  = new MujamData('data/words.txt')
 const SD  = new SimData('data/simi.txt')
-const swipe = new TouchHandler(div2, {dragStart, dragEnd})
+var swipe = new TouchHandler({dragStart, dragEnd}, div2)
 var curSura, curPage, bookmarks, lastSelection;
 var initialized = false
 window.mujam = undefined
@@ -242,23 +242,23 @@ function dragStart(evt) {
     }
     return true
 }
-function dragEnd(a, dx) {
+function dragEnd(a) {
+    console.log("dragEnd", a)
     switch (a) {
       case 0: case 12: //swipe left -- pink button
         if (parent.toogleFinder)
             parent.toogleFinder()
-        else alert("horizontal "+a+", "+dx)
-        break
+        else alert("horizontal swipe "+a)
+        return true
       case 6: //swipe right -- T button
-        toggleTrans(); break
+        toggleTrans(); return true
       case 9: //swipe down
-        prevPage(); break
+        prevPage(); return true
       case 3: //swipe up
-        nextPage(); break
+        nextPage(); return true
       default: //angle not supported
         return false
     }
-    return true
 }
 function gotoHashPage() {
 //re-designed by Abdurrahman Rajab

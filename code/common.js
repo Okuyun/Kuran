@@ -217,19 +217,18 @@ class Notes {
  * Code related to Touch events
  */
 class TouchHandler {
-    constructor(elt, action) {
+    constructor(action, elt = document.body) {
         this.action = action
         elt.ontouchstart = (e) => this.start(e)
         elt.ontouchmove = (e) => this.move(e)
         elt.ontouchend = (e) => this.swipe(e)
     }
     start(evt) {
-        if (this.t) return
-        if (!invoke(this.action.dragStart, evt)) return
+        if (this.t || !this.action.dragStart) return
+        if (!this.action.dragStart(evt)) return
         this.t = Date.now()
         this.x = Math.round(evt.touches[0].clientX)
         this.y = Math.round(evt.touches[0].clientY)
-        // console.log("dragStart", this)
     }
     angle(evt) {
         let ct = evt.changedTouches[0]
@@ -241,26 +240,25 @@ class TouchHandler {
         return { a, dx, dy }
     }
     move(evt) {
-        if (!this.t) return
+        if (!this.t || !this.action.drag) return
         let { a, dx, dy } = this.angle(evt)
-        if (invoke(this.action.drag, a, dx, dy))
-            evt.preventDefault()
+        if (!this.action.drag(a, evt)) return
+        evt.preventDefault()
     }
     swipe(evt) {
-        if (!this.t) return
+        if (!this.t || !this.action.dragEnd) return
         let dt = Date.now() - this.t
         this.t = undefined
         if (dt > 400) return  //not swipe
         let { a, dx, dy } = this.angle(evt)
         const K = 60  //too little movement
         if (dx*dx + dy*dy < K*K) return  //not swipe
-        console.log("dragEnd", a, dx, dy)
-        if (invoke(this.action.dragEnd, a, dx, dy))
-            evt.preventDefault()
+        if (!this.action.dragEnd(a, evt)) return
+        evt.preventDefault()
     }
 }
-function invoke(cb, ...arg) {
-    return !cb || cb(...arg)
+function isFalse(cb, ...arg) { //not used
+    return cb && !cb(...arg)
 }
 
 // export {VERSION, EM_SPACE, setPosition, hideElement, Notes, 

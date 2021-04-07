@@ -677,6 +677,28 @@ function doHover(evt) {  //listener for each td and span element
     bilgi.style.display = "block"
 }
 
+/**
+ * For touch-sensitive screens
+ */
+var swipe = new TouchHandler({dragStart, dragEnd})
+function dragStart(evt) {
+   //  console.log("dragStart", swipe)
+    return true
+}
+function dragEnd(a) {
+    console.log("dragEnd", a)
+    switch (a) {
+      case 0: case 12: //swipe left or
+      case 6: //swipe right -- pink button
+        if (parent.toogleFinder)
+            parent.toogleFinder()
+        else alert("horizontal swipe "+a)
+        return true
+      default: //angle not supported
+        return false
+    }
+}
+ 
 function test(prop='index') {
     if (div1.hidden) showSelections(true)
     let testEval = (a) => {
