@@ -43,9 +43,9 @@
       border-right: 1px solid cyan;
     }
   }
-  @media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
     button { display: none; }
-  }
+  } */
   </style>
   </head>
   <body>
@@ -111,10 +111,13 @@ function hashModified() {
       window.open('mujam.html#'+h, 'finder')
       break;
     case 'b': case 'w': case 't':
-      window.open(FINDER+'#'+h, 'finder')
+      window.open('/Rehber/finder.html#'+h, 'finder')
       break
     case 'd':
       window.open('/Kitap/ders/'+d+'.html', 'finder')
+      break;
+    case 'm':
+      window.open('/Kitap/rama/'+d+'.html', 'finder')
       break;
     default: //topic content must be divisible by 3
       if (d.length%3 == 0 && !d.includes('='))
