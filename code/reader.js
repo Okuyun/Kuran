@@ -242,23 +242,23 @@ function dragStart(evt) {
     }
     return true
 }
-function dragEnd(a) {
-    console.log("dragEnd", a)
+function dragEnd(a, dx) {
     switch (a) {
       case 0: case 12: //swipe left -- pink button
         if (parent.toogleFinder)
             parent.toogleFinder()
-        else alert("horizontal swipe "+a)
-        return true
+        else alert("horizontal swipe "+a+", "+dx)
+        break
       case 6: //swipe right -- T button
-        toggleTrans(); return true
+        toggleTrans(); break
       case 9: //swipe down
-        prevPage(); return true
+        prevPage(); break
       case 3: //swipe up
-        nextPage(); return true
+        nextPage(); break
       default: //angle not supported
         return false
     }
+    return true
 }
 function gotoHashPage() {
 //re-designed by Abdurrahman Rajab
@@ -425,11 +425,11 @@ function menuFn() {
       else if (menuV.style.display)
           openSite(k)
       else switch (k) {
-          case 'ARROWDOWN': case 'ARROWLEFT': 
+          case 'ARROWUP': case 'ARROWLEFT': 
             if (!evt.altKey && !evt.ctrlKey && !evt.metaKey)
               {prevPage(); evt.preventDefault()}
             break
-          case 'ARROWUP': case 'ARROWRIGHT':
+          case 'ARROWDOWN': case 'ARROWRIGHT':
             if (!evt.altKey && !evt.ctrlKey && !evt.metaKey)
               {nextPage(); evt.preventDefault()}
             break
