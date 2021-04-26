@@ -129,6 +129,7 @@ function hideWord(evt) {
     evt.target.classList.remove('gri') 
 }
 function adjustPage(adj) {
+    if (!kur.loaded || !qur.loaded) return
     infoS.style.display = adj? 'block' : ''
     gotoPage(slider.value, adj? 'slider' : '')
     if (adj) {
@@ -208,8 +209,9 @@ function gotoPage(k, adjusting) { // 1<=k<=P
     html.innerHTML = qur.pageToHTML(k)
     starB.classList.toggle('checked', bookmarks.has(k))
     notes.display(k) //in common.js
-  } catch (error) {
-    alert(error)
+  } catch (e) {
+    console.error(e)
+    alert(e)
   }
     let wc = html.childElementCount
     let idx = index[curPage]  //better than cvToIndex
