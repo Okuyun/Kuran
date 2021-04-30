@@ -693,6 +693,12 @@ function test(prop='index') {
     console.log(a == b)
 }
 
-initMujam()
+try {
+    initMujam()
+} catch (e) {
+    console.error(e)
+    alert(e)
+}
+
 
 // export {pRefs, tRefs, wRefs, rootToWords, wordToRefs, test}
