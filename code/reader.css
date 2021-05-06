@@ -10,7 +10,7 @@ body {
       font-size: 3.3vw;
     }
     #html, #bilgi { 
-      font-size: 4.5vw;
+      font-size: min(max(4.5vw, 18px), 28px);
     }
 }
 
