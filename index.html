@@ -51,12 +51,47 @@
 
   <button id=closeM title='Arama panelini kapat'>x</button>
   <button id=openM hidden title='Arama paneline dön'>A</button>
+  <p id=dummy hidden></p>
 
 <script src="code/common.js"></script>
 <script>
+const swipe = new TouchHandler({dragStart, dragEnd}, dummy)
+function dragStart(evt) {
+    // console.log("dragStart", swipe)
+    return true
+}
+function dragEnd(a) { //delegate all work to parent listener
+    console.log("dragEnd", a)
+    if (!parent.toogleFinder) //should not happen
+      { alert("swipe "+a); return }
+    switch (a) {
+      case 0: case 12: //swipe left -- A button
+        parent.toogleFinder()
+        if (!parent.transIsChecked())
+          iqra.toggleTrans()
+        return true
+      case 6: //swipe right -- A button
+        parent.toogleFinder()
+        if (parent.transIsChecked())
+          iqra.toggleTrans()
+        return true
+      case 3: //swipe up -- x button
+        parent.startPane()
+        return true
+      default: //angle not supported
+        return false
+    }
+}
+function transIsChecked() {
+    return iqra.trans.classList.contains('checked')
+}
 function addListener(frm) {
   frm.contentWindow.addEventListener('hashchange', reportHash)
   console.log('* addListener *', frm.name)
+  if (frm.name !== 'finder') return
+  let b = finder.document.querySelector('body')
+  b.ontouchstart = dummy.ontouchstart
+  b.ontouchend   = dummy.ontouchend
 }
 function reportHash(e) { //hashchange in one of the panes
   let s = '[Iqra]', h = ''
@@ -147,7 +182,7 @@ function setWidth(entries, observer) {
   readFrm.style.width = w+'px'
   closeM.style.right = w+'px'
 }
-var WIDTH = 550  //can be modified in dev tools
+var WIDTH = 590  //can be modified in dev tools
   function resize() {
     const HIDE = 'none', SHOW = ''
     let W = Math.min(window.innerWidth, screen.width)

@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.1d";
+const VERSION = "V4.1e";
 
 /**
  * &ensp; used in Mujam and VerseRef
@@ -215,13 +215,20 @@ class Notes {
 
 /**
  * Code related to Touch events
+ * 
+ * input: 
+ * action contains three functions called on related events
+ * swipe = new TouchHandler({dragStart, drag, dragEnd})
+ * 
+ * output: 
+ * clock angle [0-12]  0, 3, 6, 9, 12 main directions
  */
 class TouchHandler {
     constructor(action, elt = document.body) {
         this.action = action
         elt.ontouchstart = (e) => this.start(e)
         elt.ontouchmove = (e) => this.move(e)
-        elt.ontouchend = (e) => this.swipe(e)
+        elt.ontouchend = (e) => this.stop(e)
     }
     start(evt) {
         if (this.t || !this.action.dragStart) return
@@ -245,7 +252,7 @@ class TouchHandler {
         if (!this.action.drag(a, evt)) return
         evt.preventDefault()
     }
-    swipe(evt) {
+    stop(evt) {
         if (!this.t || !this.action.dragEnd) return
         let dt = Date.now() - this.t
         this.t = undefined

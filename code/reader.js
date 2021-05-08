@@ -246,21 +246,25 @@ function dragStart(evt) {
 }
 function dragEnd(a, dx) {
     switch (a) {
-      case 0: case 12: //swipe left -- pink button
-        if (parent.toogleFinder)
-            parent.toogleFinder()
-        else alert("horizontal swipe "+a+", "+dx)
-        break
-      case 6: //swipe right -- T button
-        toggleTrans(); break
+      case 0: case 12: //swipe left
+        if (!parent.toogleFinder) return false
+        if (!trans.classList.contains('checked'))
+          parent.toogleFinder() //pink button
+        else toggleTrans() //T button
+        return true
+      case 6: //swipe right
+        if (!parent.toogleFinder) return false
+        if (trans.classList.contains('checked'))
+          parent.toogleFinder() //pink button
+        else toggleTrans() //T button
+        return true
       case 9: //swipe down
-        prevPage(); break
+        prevPage(); return true
       case 3: //swipe up
-        nextPage(); break
+        nextPage(); return true
       default: //angle not supported
         return false
     }
-    return true
 }
 function gotoHashPage() {
 //re-designed by Abdurrahman Rajab
@@ -309,7 +313,7 @@ function initialPage() {
 function initReader() {
     title.innerHTML = 'Iqra '+VERSION+'&emsp;';
     version.innerText = 'Iqra '+VERSION;
-    console.log(swipe)  //TouchHandler
+    // console.log(swipe)  //TouchHandler
     sureS.onchange = () => {gotoSura(sureS.selectedIndex+1)}
     pgNum.onkeydown= keyToPage
     pageS.onclick  = handleStars

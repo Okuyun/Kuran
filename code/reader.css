@@ -7,10 +7,10 @@ body {
     .hiddenNarrow { display: none; }
     #title, #zoomB { display: none; }
     #text { 
-      font-size: 3.3vw;
+      font-size: min(max(3.3vw, 13px), 20px);
     }
     #html, #bilgi { 
-      font-size: min(max(4.5vw, 18px), 28px);
+      font-size: min(max(4.5vw, 18px), 27px);
     }
 }
 
