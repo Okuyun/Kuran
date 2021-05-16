@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.1e";
+const VERSION = "V4.1f";
 
 /**
  * &ensp; used in Mujam and VerseRef
@@ -224,7 +224,7 @@ class Notes {
  * clock angle [0-12]  0, 3, 6, 9, 12 main directions
  */
 class TouchHandler {
-    constructor(action, elt = document.body) {
+    constructor(action, elt = document.scrollingElement) {
         this.action = action
         elt.ontouchstart = (e) => this.start(e)
         elt.ontouchmove = (e) => this.move(e)
@@ -236,6 +236,13 @@ class TouchHandler {
         this.t = Date.now()
         this.x = Math.round(evt.touches[0].clientX)
         this.y = Math.round(evt.touches[0].clientY)
+        let doc = window.findFrm?  //running at top level
+          findFrm.contentDocument : document
+        let se = doc.scrollingElement
+        this.atTop = se.scrollTop === 0
+        this.atBot = 
+          se.clientHeight+se.scrollTop === se.scrollHeight
+        // console.log(window.name, this.atTop, this.atBot)
     }
     angle(evt) {
         let ct = evt.changedTouches[0]
@@ -258,6 +265,8 @@ class TouchHandler {
         this.t = undefined
         if (dt > 400) return  //not swipe
         let { a, dx, dy } = this.angle(evt)
+        if (a==3 && !this.atBot) return
+        if (a==9 && !this.atTop) return
         const K = 60  //too little movement
         if (dx*dx + dy*dy < K*K) return  //not swipe
         if (!this.action.dragEnd(a, evt)) return

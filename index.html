@@ -14,6 +14,7 @@
     body {
       margin: 0;
       background-color: #8ff;
+      min-height: 90vh;
     }
     iframe {
       display: inline-block;
@@ -57,7 +58,7 @@
 <script>
 const swipe = new TouchHandler({dragStart, dragEnd}, dummy)
 function dragStart(evt) {
-    // console.log("dragStart", swipe)
+    // console.log("dragStart", window.name)
     return true
 }
 function dragEnd(a) { //delegate all work to parent listener

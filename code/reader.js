@@ -84,8 +84,10 @@ function markVerse(cv) {
   function mark(elt) {
     //apply 'sari' style to x within elt
     let x = elt.querySelector(cls)
-    if (x) x.classList.add('sari')
-    else console.log(cls+' not in '+elt.id)
+    if (x) {
+      x.classList.add('sari')
+      x.scrollIntoView(false)
+    } else console.log(cls+' not in '+elt.id)
   }
     // markPattern('[^﴾﴿]*﴿'+numberToArabic(n)+'﴾?', 'cls)
     // let e = new RegExp(n+'[\.-](.)+\n', 'g')
@@ -223,7 +225,7 @@ function gotoPage(k, adjusting) { // 1<=k<=P
     if (adjusting != 'hashInProgress') //cv are not set
       location.hash = '#p='+curPage
     // setStorage('iqra', 'page', curPage)
-    saveSettings()
+    saveSettings(); scrollTo(0, 0)
 }
 function setSura(c) { // 1<=c<=M
     // c = Number(c);
@@ -244,7 +246,7 @@ function dragStart(evt) {
     }
     return true
 }
-function dragEnd(a, dx) {
+function dragEnd(a) {
     switch (a) {
       case 0: case 12: //swipe left
         if (!parent.toogleFinder) return false
