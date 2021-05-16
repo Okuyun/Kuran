@@ -16,7 +16,7 @@ var kur = new KuranText(TRANS || SOURCE[snum], initialPage)
 const qur = new QuranText('quran-uthmani.txt', initialPage)
 const MD  = new MujamData('data/words.txt')
 const SD  = new SimData('data/simi.txt')
-var swipe = new TouchHandler({dragStart, dragEnd})  //, div2)
+var swipe = new TouchHandler({dragStart, dragEnd}, div2)
 var curSura, curPage, bookmarks, lastSelection;
 var initialized = false
 window.mujam = undefined
