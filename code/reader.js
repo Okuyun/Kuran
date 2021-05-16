@@ -123,7 +123,9 @@ function selectWord(evt) {
         range.selectNodeContents(evt.target);
         s.removeAllRanges(); s.addRange(range);
       }
-      setPosition(menuC, evt.clientX, evt.clientY-60, 220)
+      let se = document.scrollingElement
+      let y = t.offsetTop - se.scrollTop - 30 
+      setPosition(menuC, evt.clientX, y, 220)
     }
 }
 function hideWord(evt) {
