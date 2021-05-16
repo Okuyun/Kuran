@@ -75,7 +75,7 @@ function openSitePage(s, p) {
         name = "Kuran"; break
     case 'P':
         url = "https://okuyun.github.io/Kuran/#p="
-        doShare('Kuran-ı Kerim '+p+'. sayfa', url+p)
+        doShare(p+'. sayfa', url+p)
         return
     default:
         let [c, v] = toCV(index[p]+1)
@@ -86,7 +86,8 @@ function openSitePage(s, p) {
 
 function doShare(text, url) {
     if (!navigator.share) return
-    navigator.share({title:text, text, url})
+    let title = "Kuran-ı Kerim"
+    navigator.share({title, text, url})
 }
 
 /**
@@ -113,7 +114,7 @@ function openSiteVerse(s, c, v) {
         name = "Kuran"; break
     case 'P':
         url = "https://okuyun.github.io/Kuran/#v="
-        doShare('Ayet '+c+':'+v, url+c+':'+v)
+        doShare(sName[c]+' Suresi '+v+'. ayet', url+c+':'+v)
         return
     default:  return
   }
