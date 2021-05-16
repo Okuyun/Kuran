@@ -73,11 +73,20 @@ function openSitePage(s, p) {
     case 'K':
         url = "http://kuranmeali.com/Sayfalar.php?sayfa="+p
         name = "Kuran"; break
+    case 'P':
+        url = "https://okuyun.github.io/Kuran/#p="
+        doShare('Kuran-ı Kerim '+p+'. sayfa', url+p)
+        return
     default:
         let [c, v] = toCV(index[p]+1)
         openSiteVerse(s, c, v); return
   }
   window.open(url, name)
+}
+
+function doShare(text, url) {
+    if (!navigator.share) return
+    navigator.share({title:text, text, url})
 }
 
 /**
@@ -88,7 +97,7 @@ function openSitePage(s, p) {
  * @param {number} v verse
  */
 function openSiteVerse(s, c, v) {
-  let url, name;
+  let url, name; hideMenus()
   switch (s.toUpperCase()) {
     case 'K':
         url = "http://kuranmeali.com/AyetKarsilastirma.php?sure="+c+"&ayet="+v
@@ -97,17 +106,19 @@ function openSiteVerse(s, c, v) {
         url = "http://corpus.quran.com/wordbyword.jsp?chapter="+c+"&verse="+v
         name = "Kuran"; break
     case 'Q':
-        url = "https://quran.com/"+c+"/"+v
+        url = "https://quran.com/"+c+'/'+v
         name = "Kuran"; break
     case 'A':
-        url = "https://acikkuran.com/"+c+"/"+v
+        url = "https://acikkuran.com/"+c+'/'+v
         name = "Kuran"; break
-    case 'R':
-        alert('Reader -- not implemented yet')
+    case 'P':
+        url = "https://okuyun.github.io/Kuran/#v="
+        doShare('Ayet '+c+':'+v, url+c+':'+v)
+        return
     default:  return
   }
   console.log(s, url)
-  window.open(url, name); hideMenus()
+  window.open(url, name)
 }
 
 /**

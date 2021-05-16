@@ -175,6 +175,10 @@
         width: auto;
         height: auto;
     }
+    .black {
+      margin-top: 8px;
+      color: black;
+    }
 
 /*
 Icons made by 
