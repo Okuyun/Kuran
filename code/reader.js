@@ -105,7 +105,8 @@ function displayWord(evt) {
       bilgi.style.font = ''
     }
     bilgi.innerHTML = t.tText 
-    let y = t.offsetTop + t.offsetHeight
+    let y = //t.offsetTop + t.offsetHeight
+      t.getBoundingClientRect().bottom + window.pageYOffset
     setPosition(bilgi, t.offsetLeft+24, y-6, 105)
 }
 function selectWord(evt) {
@@ -123,8 +124,8 @@ function selectWord(evt) {
         range.selectNodeContents(evt.target);
         s.removeAllRanges(); s.addRange(range);
       }
-      let se = document.scrollingElement
-      let y = t.offsetTop - se.scrollTop - 30 
+      // console.log(evt.offsetY, evt.clientY, evt.pageY)
+      let y = t.getBoundingClientRect().top - 26
       setPosition(menuC, evt.clientX, y, 220)
     }
 }

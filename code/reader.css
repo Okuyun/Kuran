@@ -96,6 +96,9 @@ body {
       height: 36px;
       background-color: cyan;
     }
+    #div2 {
+      min-height: calc(98vh - 36px);
+    }
   @media screen and (max-height: 420px) {
       #div1 { position: relative; }
       #div0 { height: 14px; }
