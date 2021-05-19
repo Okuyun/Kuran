@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"    content="width=device-width">
+    <meta name="author"      content="M A Eyler, Istanbul, 2020" />
+    <meta name="description" content="Reader for the Quran" />
+    <link rel="icon" href="image/icon.png">
+    <title>Konular</title>
+
+  <style>
+    body {
+      max-width: 540px;
+      min-height: 90vh;
+      background: #dfd;
+    }
+    button {
+        min-width: 36px;
+        height: 36px;
+        cursor: pointer;
+        font: inherit;
+    }
+    select {
+        font: 18px Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+        margin-right: 4px;
+        padding: 4px;
+        color: blue;
+    }
+    a {
+        font: 15px arial, sans-serif;
+        text-decoration: none;
+        display: inline-block;
+        vertical-align: top;
+        width: 3em;
+        color: black;
+        cursor: pointer;
+        background-color: hsl(240, 100%, 95%);
+        margin: 8px;
+        border: 1px solid;
+        padding: 6px;
+    }
+    a:hover { 
+        background-color: hsl(240, 100%, 85%);
+    }
+    .i {
+        display: inline-block;
+        font-style: italic;
+        color: black;
+        width: 80%;
+        margin: 8px 0;
+    }
+    .menu {
+      box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      display: none;
+      border: black 1px solid;
+      text-align: center;
+      color: blue;
+      background-color: #eee;
+      font: 13px sansserif, arial;
+      user-select: none;
+      z-index: 1;
+    }
+    #modal {
+      position: fixed; 
+      padding-top: 50px;
+      left: 0; 
+      top: 0;
+      width: 100%;
+      height: 100%; 
+      background-color: gray;
+      background-color: rgba(127, 127, 127, 0.75);
+        z-index: 2;
+    }
+    #dialog {
+        border: 1px solid;
+        background-color: seashell;
+        padding: 18px;
+        width: 314px;
+        position: relative;
+        top: 20px;
+        margin: auto;
+    }
+    #dClose:hover {
+        background-color: darkgray;
+    }
+    #dTopic { width: 100px; }
+    #dRefs  { width: 310px; }
+    #dError { color: red; }
+    #dClose {
+        position: absolute;
+        right: 18px;
+        width: auto;
+        height: auto;
+    }
+/*
+Icons made by 
+<a href=https://www.flaticon.com/authors/kiranshastry>Kiranshastry</a> 
+from <a href=https://www.flaticon.com/>www.flaticon.com</a>
+*/
+#ekleD {
+    background-image: url(/Kuran/image/add.png);
+    background-size: contain;
+    border: none;
+}
+#editD {
+    background-image: url(/Kuran/image/edit.png);
+    background-size: contain;
+    border: none;
+}
+#deleD {
+    background-image: url(/Kuran/image/del.png);
+    background-size: contain;
+    border: none;
+}
+  </style>
+</head>
+
+<body>
+
+<h2 id=title title=''>Konular</h2>
+<div id=div4>
+   <select id=menu4></select>&emsp;
+   <button id=ekleD title='konu ekle'>&nbsp;</button>&nbsp;
+   <button id=editD title='düzenle'>&nbsp;</button>&nbsp;
+   <button id=deleD title='konu sil'>&nbsp;</button>&emsp;
+   <p id=konular></p>
+</div>
+
+<div id=modal hidden>
+   <div id=dialog></div>
+</div>
+
+<script src="code/common.js"></script>
+<script src="code/model.js"></script>
+<script src="code/utilities.js"></script>
+<script>
+"use strict";
+class Topic extends RefSet {
+    constructor(name, list, comment) {
+        super(name, list)
+        this.comment = comment
+    }
+    toString() {
+        return super.toString()+'\t'+this.comment
+    }
+    static fromString(str) {
+        let [rest, comm] = str.split('\t')
+        let s = RefSet.fromString(rest)
+        s.comment = comm || ''
+        return s
+    }
+}
+
+var topics = new Map();
+function addTopic(topic, enc) {
+    let s = topics.get(topic)
+    if (s) {
+        menu4.value = topic
+        return s
+    }
+    s = RefSet.fromEncoded(topic, enc)
+    topics.set(topic, s)
+    localStorage.topics 
+        = topic+'='+enc+'\n'+ localStorage.topics
+    menu4.innerHTML = menu4.innerHTML
+        .replace('>','>'+topic+'</option><option>')
+    console.log(topic, 'inserted to topics')
+    return s
+}
+function readTopics() {
+    topics.clear(); let a = []
+    for (let s of localStorage.topics.split('\n')) {
+        let [topic, enc] = s.split('=')
+        topics.set(topic, RefSet.fromEncoded(topic, enc))
+        a.push(topic)
+    }
+    menu4.innerHTML = "<option selected>" + a.join("<option>")
+}
+function anchor(x) {
+    let s = 
+    '<a href="reader.html#v='+x.cv+'" target=iqra>'+x.cv+'</a>'
+    if (!parent.iqra) return s  //no parent, stand-alone
+    if (!parent.iqra.kur.loaded) return s 
+    let p = 0, i = x.index
+    while (typeof p == 'number')
+        p = parent.iqra.kur.getVerse(i++)
+    return s+'&ensp;<div class=i>'+p+'</div>'
+}  
+function selectTopic(topic) { //called by menu4 and list items
+    if (!topic) topic = menu4.value;
+    else if (topic == menu4.value) return;
+    else menu4.value = topic;
+    // notes.edit(false)
+    let s = topics.get(topic)
+    location.hash = s.name +'='+ s.toEncoded()
+    //if (s) displayTable(s)
+    konular.innerHTML = s.list.map(anchor).join('\n')
+}
+function showDialog(topic, button, callback) {
+  function checkInput() {
+    dError.innerText = ''
+    dAccept.disabled = true
+    let s = topics.get(dTopic.value)
+    if (s && s.name != topic)
+        dError.innerText = 'Bu konu var zaten'
+    else if (dTopic.value && dRefs.value)
+        dAccept.disabled = false
+  }
+    dialog.innerHTML = 
+    'Konu &emsp;<input id=dTopic type=text> '
+    +'<span id=dError></span><BR><BR>'
+    +'Ayetler <BR><input id=dRefs type=text><BR><BR>'
+    +'<input type=button id=dAccept disabled>'
+    +'<input type=button id=dClose>'
+    dTopic.value = topic
+    dTopic.oninput = checkInput
+    let s1 = topics.get(topic)
+    dRefs.value = s1? s1.cvList : ''
+    dRefs.oninput = checkInput
+    dAccept.value = button
+    dAccept.onclick = callback
+    dClose.value = 'x'
+    dClose.onclick = () => {modal.hidden = true}
+    modal.onkeydown = (evt) => {
+        if (evt.key == 'Escape')
+            dClose.onclick()
+        if (evt.key == 'Enter' && !dAccept.disabled)
+            dAccept.onclick()
+    }
+    modal.hidden = false
+    dTopic.focus()
+}
+function topicFromDialog() {
+    modal.hidden = true
+    let topic = dTopic.value
+    let enc = encodeLine(dRefs.value)
+    addTopic(topic, enc)
+    let h = '#'+topic +'='+ enc
+    if (decodedHash().includes(topic))
+        history.replaceState(null, '', h) 
+    else location.hash = h
+}
+function replaceTopic() {
+    deleteTopic(menu4.value); topicFromDialog()
+}
+function deleteTopic(t, conf) {
+    let a = []
+    if (conf && !confirm(t+' silinecek')) return
+    for (let s of localStorage.topics.split('\n')) {
+        let [topic] = s.split('=')
+        if (topic != t) a.push(s)
+    }
+    localStorage.topics = a.join('\n')
+    readTopics()
+}
+function gotoHash() {
+  let h = decodedHash()
+  if (!h) return false
+  let [topic, enc] = h.split('=')
+  //parseRefs(topic, enc)  use tRefs
+  let set = addTopic(topic, enc)
+  selectTopic(topic)
+  return true
+}
+window.onhashchange = gotoHash
+if (!localStorage.topics)
+  localStorage.topics = 'Secde=1w82bu2i62ne2s430l38z3gg3pq42y4a74qm5k15q5'
+readTopics(); selectTopic()
+menu4.onchange = () => {selectTopic()}
+ekleD.onclick  = () => {showDialog('', 'Ekle', topicFromDialog)}
+editD.onclick  = () => {showDialog(menu4.value, 'Değiştir', replaceTopic)}
+deleD.onclick  = () => {deleteTopic(menu4.value, 'confirm')}
+</script>
+
+</body>
+</html>
