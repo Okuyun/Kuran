@@ -1,3 +1,4 @@
+html { overscroll-behavior: contain }
 body { 
   margin: 0;
   background-color: cyan;
