@@ -145,10 +145,8 @@ function hashModified() {
     case 'm':
       window.open('/Kitap/rama/'+d+'.html', 'finder')
       break;
-    default: //topic content must be divisible by 3
-      if (d.length%3 == 0 && !d.includes('='))
-           window.open('konular.html#'+h, 'finder')
-      else alert('unknown hash entered', h)
+    default: 
+      window.open('konular.html#'+h, 'finder')
   }
 }
 function startPane() {

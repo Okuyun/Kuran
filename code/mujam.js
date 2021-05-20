@@ -43,22 +43,18 @@ var HUE = localStorage.mujamHue || 240
 window.TITLE = 'Mucem'
 /**
  * A map holds the letters and its roots.
- * set at report2 @see report2
  */
 const letterToRoots = new Map();
 /**
  * A map holds the roots and its words.
- * set at report2 @see report2
  */
 const rootToWords = new Map();
 /**
  * A map holds the roots and its counts.
- * set at report2 @see report2
  */
 const rootToCounts = new Map();
 /**
  * A map holds the words and its references.
- * set at report2 @see report2
  */
 const wordToRefs = new Map();
 /**
@@ -163,12 +159,6 @@ function selectRoot(root, modifyHash=true) { //root in Arabic
     let cnt = rootToCounts.get(root);
     if (!cnt) notFound(root)
     let lst = rootToWords.get(cnt);
-    /* let nL = lst? lst.length : 0;
-    if (lst) makeMenu(menu3, lst);
-    if (nL > 1)
-        menu3.selectedIndex = -1; //do not select Word
-    menu3.disabled = (nL == 1);
-    menu3.style.color = (nL == 1 ? "gray" : ""); */
     //combine refs in lst
     combine.hidden = true;
     if (!modifyHash) return
@@ -178,21 +168,14 @@ function selectRoot(root, modifyHash=true) { //root in Arabic
     location.hash = "#r=" + b;
 }
 /**
- * Select word, if undefined menu3 values will be the selected one.
- * when its used combine will be shown.
- * 
+ * Select given word
  * get the references from wordToRefs map.
  * 
  * @param {string} word to be selected.
  */
-function selectWord(word) { //called by menu3 and list items
-    // if (!word) word = menu3.value;
-    // else if (word == menu3.value) return;
-    // else menu3.value = word;
+function selectWord(word) { //called by list items
     combine.hidden = false
     notes.edit(false)
-    //let enc = wordToRefs.get(word)
-    //parseRefs(word, enc)
     let set = wRefs.find(x => x.name == word)
     if (!set) return
     displayTable(set)
@@ -361,9 +344,7 @@ function displayTable(set) {
     out1.innerText = pages
     out2.innerText = pages
     out3.innerText = set.name
-    // out4.innerText = pages
     console.log(pages, set)
-    // menu3.hidden = wRefs.length == 1
     for (let x of tablo.querySelectorAll('td')) {
         x.onmouseenter = doHover
         x.onmouseleave = hideBilgi
@@ -419,24 +400,19 @@ function doClick2() {
  * 
  */
 function gotoHashRoot() {
-  let h = decodedHash()
-  if (!h) return false
-  showSelections(false); let set
-  if (!h.startsWith('r=')) { //given topic
-    alert("invalid hash: "+h)
-    /* let [topic, enc] = h.split('=')
-    //parseRefs(topic, enc)  use tRefs
-    set = addTopic(topic, enc)
-    showTopics(true)
-    displayList([set], konular) */
-  } else { //given roots
+    let h = decodedHash()
+    if (!h) return false
+    if (!h.startsWith('r=')) { //given topic
+      window.location.href = "/Kuran/#"+h
+      return false  //no need to return
+    } //else given roots
+    showSelections(false)
     h = h.substring(2)  //strip 'r='
     let roots = h.split('&r=').map(toArabic)
-    set = parseRoots(roots)
+    let set = parseRoots(roots)
     selectRoot(roots[0], false)
-  }
-  displayTable(set)
-  return true
+    displayTable(set)
+    return true
 }
 /**
  * Initialize the globals
@@ -459,7 +435,6 @@ function initMujam() {
     showS.onclick  = () => {showSelections(true)}
     menu1.onchange = () => {selectLetter()}
     menu2.onchange = () => {selectRoot()}
-    // menu3.onchange = () => {selectWord()}
     noteBut.onclick = () => {notes.edit()} //in common.js
     combine.onclick= () => {gotoHashRoot()}
     menuFn()
@@ -512,7 +487,6 @@ function menuFn() {
 function showSelections(show) {
     div0.hidden = show
     div1.hidden = !show
-    // div4.hidden = true
     combine.hidden = false
     if (show) displayList(wRefs, kelimeler)
 }

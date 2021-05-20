@@ -177,26 +177,29 @@ function readTopics() {
         a.push(topic)
     }
     menu4.innerHTML = "<option selected>" + a.join("<option>")
+    displayTopic(topics.get(a[0]))
 }
 function anchor(x) {
     let s = 
     '<a href="reader.html#v='+x.cv+'" target=iqra>'+x.cv+'</a>'
     if (!parent.iqra) return s  //no parent, stand-alone
-    if (!parent.iqra.kur.loaded) return s 
+    let kur = parent.iqra.kur
+    if (!kur || !kur.loaded) return s
     let p = 0, i = x.index
-    while (typeof p == 'number')
-        p = parent.iqra.kur.getVerse(i++)
+    while (p.toString().length <= 6) //typeof p == 'number'
+        p = kur.getVerse(i++)
     return s+'&ensp;<div class=i>'+p+'</div>'
-}  
-function selectTopic(topic) { //called by menu4 and list items
+}
+function displayTopic(s) {
+    document.title = 'Konu: '+s.name
+    konular.innerHTML = s.list.map(anchor).join('\n')
+}
+function setMenu(topic) { //called by menu4 and list items
     if (!topic) topic = menu4.value;
     else if (topic == menu4.value) return;
     else menu4.value = topic;
-    // notes.edit(false)
     let s = topics.get(topic)
     location.hash = s.name +'='+ s.toEncoded()
-    //if (s) displayTable(s)
-    konular.innerHTML = s.list.map(anchor).join('\n')
 }
 function showDialog(topic, button, callback) {
   function checkInput() {
@@ -256,19 +259,22 @@ function deleteTopic(t, conf) {
     readTopics()
 }
 function gotoHash() {
-  let h = decodedHash()
-  if (!h) return false
-  let [topic, enc] = h.split('=')
-  //parseRefs(topic, enc)  use tRefs
-  let set = addTopic(topic, enc)
-  selectTopic(topic)
-  return true
+    let h = decodedHash()
+    if (!h) return false
+    let [topic, enc] = h.split('=')
+    //topic content must be divisible by 3
+    if (!enc || enc.length%3>0 || enc.includes('=')) {
+        alert('unknown hash entered', h); return false
+    }
+    let s = addTopic(topic, enc)
+    setMenu(topic); displayTopic(s)
+    return true
 }
 window.onhashchange = gotoHash
 if (!localStorage.topics)
   localStorage.topics = 'Secde=1w82bu2i62ne2s430l38z3gg3pq42y4a74qm5k15q5'
-readTopics(); selectTopic()
-menu4.onchange = () => {selectTopic()}
+readTopics(); gotoHash()
+menu4.onchange = () => {setMenu()}
 ekleD.onclick  = () => {showDialog('', 'Ekle', topicFromDialog)}
 editD.onclick  = () => {showDialog(menu4.value, 'Değiştir', replaceTopic)}
 deleD.onclick  = () => {deleteTopic(menu4.value, 'confirm')}
