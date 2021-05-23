@@ -12,8 +12,9 @@ const SOURCE = ['', 'ar.jalalayn.txt', 'ar.muyassar.txt', 'tr.diyanet.txt',
   'en.ahmedali.txt', 'tr.yazir.txt', 'en.yusufali.txt', 'fr.hamidullah.txt']
 let TRANS = getStorage('translation')
 let snum = getStorage('settings', 'source') || 5
+//constants do not appear as properties from the parent
 var kur = new KuranText(TRANS || SOURCE[snum], initialPage)
-const qur = new QuranText('quran-uthmani.txt', initialPage)
+var qur = new QuranText('quran-uthmani.txt', initialPage)
 const MD  = new MujamData('data/words.txt')
 const SD  = new SimData('data/simi.txt')
 var swipe = new TouchHandler({dragStart, dragEnd}, div2)
@@ -32,11 +33,14 @@ function arrayToSet(m) {
     for (let k of m) 
         bookmarks.add(Number(k))
 }
+function transIsChecked() {
+    return trans.classList.contains("checked")
+}
 function saveSettings() {
     let x = {
       page: curPage,
       marks: [...bookmarks],
-      trans: trans.classList.contains("checked"),
+      trans: transIsChecked(),
       zoom: zoomB.classList.contains("checked")
     }
     if (parent.finderWidth)
@@ -253,13 +257,13 @@ function dragEnd(a) {
     switch (a) {
       case 0: case 12: //swipe left
         if (!parent.toogleFinder) return false
-        if (!trans.classList.contains('checked'))
+        if (!transIsChecked())
           parent.toogleFinder() //pink button
         else toggleTrans() //T button
         return true
       case 6: //swipe right
         if (!parent.toogleFinder) return false
-        if (trans.classList.contains('checked'))
+        if (transIsChecked())
           parent.toogleFinder() //pink button
         else toggleTrans() //T button
         return true

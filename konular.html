@@ -14,12 +14,6 @@
       min-height: 90vh;
       background: #dfd;
     }
-    button {
-        min-width: 32px;
-        height: 32px;
-        cursor: pointer;
-        font: inherit;
-    }
     select {
         font: 18px Arial, Helvetica, sans-serif;
         line-height: 1.5;
@@ -94,11 +88,18 @@
         width: auto;
         height: auto;
     }
-#share { /* see http://alexking.org/project/share-icon */
-    background-image: url(/Kuran/image/share.png);
-    background-size: cover;  /* contain; */
-    border: none;
-}
+    #div4 button {
+        width: 32px;
+        height: 32px;
+        background-size: contain;
+        background-color: #dfd;
+        border: none;
+    }
+    button#share { /* see http://alexking.org/project/share-icon */
+        width: 26px;
+        height: 26px;
+        background-image: url(/Kuran/image/share.png);
+    }
 /*
 Icons made by 
 <a href=https://www.flaticon.com/authors/kiranshastry>Kiranshastry</a> 
@@ -106,18 +107,12 @@ from <a href=https://www.flaticon.com/>www.flaticon.com</a>
 */
 #ekleD {
     background-image: url(/Kuran/image/add.png);
-    background-size: contain;
-    border: none;
 }
 #editD {
     background-image: url(/Kuran/image/edit.png);
-    background-size: contain;
-    border: none;
 }
 #deleD {
     background-image: url(/Kuran/image/del.png);
-    background-size: contain;
-    border: none;
 }
   </style>
 </head>
@@ -186,10 +181,13 @@ function readTopics() {
     displayTopic(topics.get(a[0]))
 }
 function anchor(x) {
-    let s = 
+    let s =  //use chapter-verse form x
     '<a href="reader.html#v='+x.cv+'" target=iqra>'+x.cv+'</a>'
     if (!parent.iqra) return s  //no parent, stand-alone
+    // let cls = parent.iqra.transIsChecked() ? 'b>' : 'i>'
     let kur = parent.iqra.kur
+        // cls === 'b>' ?  //select data
+        // parent.iqra.qur : parent.iqra.kur
     if (!kur || !kur.loaded) return s
     let p = 0, i = x.index
     while (p.toString().length <= 6) //typeof p == 'number'
