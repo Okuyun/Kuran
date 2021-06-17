@@ -216,8 +216,6 @@ body {
     font-size: smaller;
   }
 
-details {
-}
 summary {
   cursor: pointer;
   list-style: none;
