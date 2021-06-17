@@ -249,7 +249,8 @@ function gotoSura(c) {
 }
 function dragStart(evt) {
     if (menuK.style.display || menuC.style.display 
-     || menuS.style.display || bilgi.style.display)  {
+      || menuS.style.display || menuT.style.display
+      || bilgi.style.display || pageD.open)  {
         hideMenus(); evt.preventDefault(); return false
     }
     return true
@@ -329,7 +330,8 @@ function initReader() {
     pageA.onclick  = handlePageNum
     starA.onclick  = handleStars
     starB.onclick  = toggleStar
-    tranA.onclick  = toggleTrans
+    tranA.onclick  = handleTrans
+    tranB.onclick  = toggleTrans
     linkB.onclick  = toggleMenuK
     zoomB.onclick  = toggleZoom
     bilgi.onclick  = doClick
@@ -416,6 +418,17 @@ function menuFn() {
       let [x, k] = t.split(/s| /)
       if (Number(k)) gotoPage(Number(k))
   }
+  menuT.onclick = (evt) => { //translation menu
+    function setTrans() {
+      text.innerHTML = kur.pageToHTML(curPage)
+      setStorage('settings', 'source', k)
+    }
+      hideElement(menuT); evt.preventDefault()
+      let t = evt.target, k = Number(t.id)
+      if (!k) return
+      console.log(k, t.textContent)
+      kur = new KuranText(SOURCE[k], setTrans)
+  }
   menuK.onclick = (evt) => { //menu button
       evt.preventDefault()
       openSitePage(evt.target.innerText[0], curPage)
@@ -464,10 +477,9 @@ function menuFn() {
       }
   }
   window.hideMenus = () => { 
-      hideElement(menuC); hideElement(menuK)
-      hideElement(menuS); hideElement(bilgi)
-      hideElement(menuV); pageD.open=false
-      linkB.classList.remove('checked')
+      hideElement(menuC); hideElement(menuK); hideElement(menuS); 
+      hideElement(menuT); hideElement(bilgi); hideElement(menuV); 
+      pageD.open = false; //linkB.classList.remove('checked')
   }
   div1.onmouseenter = hideMenus
   div3.onmouseenter = hideMenus
@@ -490,6 +502,14 @@ function keyToPage(evt) {
         gotoPage(Number(c))
       }
       hideElement(menuS)
+    }
+}
+function handleTrans() {
+    if (menuT.style.display) {
+      hideElement(menuT)
+    } else {
+      let x = tranA.offsetLeft+10, y = tranA.offsetTop+33
+      hideMenus(); setPosition(menuT, x, y, 110)
     }
 }
 function toggleTrans() {
@@ -516,7 +536,7 @@ function handleStars() {
       hideElement(menuS)
     } else {
       hideMenus(); makeStarMenu()
-      let x = starA.offsetLeft+35, y = starA.offsetTop+30
+      let x = starA.offsetLeft+10, y = starA.offsetTop+33
       setPosition(menuS, x, y, 110)
     }
 }
@@ -547,9 +567,10 @@ function toggleStar() {
     }
 }
 function toggleMenuK() {
-    if (linkB.classList.toggle('checked')) {
+    if (!menuK.style.display) {
+      //linkB.classList.toggle('checked')
       let x = linkB.offsetLeft+10, y = linkB.offsetTop+33
-      setPosition(menuK, x, y, 120)
+      hideMenus(); setPosition(menuK, x, y, 120)
     } else {
       hideElement(menuK)
     }
