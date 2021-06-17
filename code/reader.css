@@ -199,6 +199,28 @@ body {
     src: url("/Rehber/style/ZEKRQURANBOLD.TTF");
   }
 
+/* Details-summary */
+details {
+  position: relative;
+  top: -6px;
+  height: 32px;
+  margin-left: 4px;
+  display: inline-block;
+}
+summary {
+  color: black;
+  cursor: pointer;
+  list-style: none;
+  min-width: 36px;
+  height: 36px;
+  background-size: cover;
+  vertical-align: top;
+  border: 1px solid cyan;
+  border-radius: 50%;
+}
+summary:hover {
+  border: 1px solid white;
+}
 
 /* Menu Style
   Ref: https://dev.to/iamafro/how-to-create-a-custom-context-menu--5d7p

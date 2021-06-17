@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.1h";
+const VERSION = "V4.1j";
 
 /**
  * &ensp; used in Mujam and VerseRef
@@ -54,7 +54,9 @@ function setPosition(elt, x, y, mw=200) {
  * @param {Element} elt 
  */
 function hideElement(elt) {
-    elt.style.display = '' 
+    let d = elt.closest('details')
+    if (d) d.open = false
+    else elt.style.display = '' 
 }
 
 /**
