@@ -35,7 +35,7 @@ function arrayToSet(m) {
         bookmarks.add(Number(k))
 }
 function transIsChecked() {
-    return trans.classList.contains("checked")
+    return tranA.classList.contains("checked")
 }
 function saveSettings() {
     let x = {
@@ -217,7 +217,7 @@ function gotoPage(k, adjusting) { // 1<=k<=P
     curPage = k; slider.value = k;
     text.innerHTML = kur.pageToHTML(k)
     html.innerHTML = qur.pageToHTML(k)
-    starB.classList.toggle('checked', bookmarks.has(k))
+    starA.classList.toggle('checked', bookmarks.has(k))
     notes.display(k) //in common.js
   } catch (e) {
     console.error(e)
@@ -326,9 +326,10 @@ function initReader() {
     // console.log(swipe)  //TouchHandler
     sureS.onchange = () => {gotoSura(sureS.selectedIndex+1)}
     pgNum.onkeydown= keyToPage
-    pageS.onclick  = handleStars
-    trans.onclick  = toggleTrans
+    pageA.onclick  = handlePageNum
+    starA.onclick  = handleStars
     starB.onclick  = toggleStar
+    tranA.onclick  = toggleTrans
     linkB.onclick  = toggleMenuK
     zoomB.onclick  = toggleZoom
     bilgi.onclick  = doClick
@@ -463,9 +464,10 @@ function menuFn() {
       }
   }
   window.hideMenus = () => { 
-      hideElement(menuC); hideElement(menuK); 
+      hideElement(menuC); hideElement(menuK)
       hideElement(menuS); hideElement(bilgi)
-      hideElement(menuV); linkB.classList.remove('checked')
+      hideElement(menuV); pageD.open=false
+      linkB.classList.remove('checked')
   }
   div1.onmouseenter = hideMenus
   div3.onmouseenter = hideMenus
@@ -479,6 +481,7 @@ function keyToPage(evt) {
       hideElement(menuS)
     } else if (evt.key == 'Enter') {
       let [c, v] = pgNum.value.split(/\D+/)
+      if (v === '') v = 1
       if (v) { //c:v
         let p = pageOf(Number(c), Number(v))
         gotoPage(p)
@@ -490,7 +493,7 @@ function keyToPage(evt) {
     }
 }
 function toggleTrans() {
-    if (trans.classList.toggle('checked')) {
+    if (tranA.classList.toggle('checked')) {
       html.classList.add('hiddenNarrow')
       text.classList.remove('hiddenNarrow')
     } else { //hide text if narrow screen
@@ -513,15 +516,18 @@ function handleStars() {
       hideElement(menuS)
     } else {
       hideMenus(); makeStarMenu()
-      let x = pageS.offsetLeft+35, y = pageS.offsetTop+30
+      let x = starA.offsetLeft+35, y = starA.offsetTop+30
       setPosition(menuS, x, y, 110)
-      pgNum.value = curPage
-      pgNum.select(0,3); pgNum.focus()
     }
+}
+function handlePageNum() {
+    pgNum.value = curPage
+    pgNum.select(0,3)
+    pgNum.focus() //doesn't focus, use TAB key
 }
 function toggleStar() {
     let msg = ''
-    if (starB.classList.toggle('checked')) {
+    if (starA.classList.toggle('checked')) {
       bookmarks.add(curPage)
       let a = [...bookmarks]
       if (a.length > MAX_MARKS)
@@ -531,7 +537,7 @@ function toggleStar() {
       msg = '-'
     }
     // setStorage('iqra', 'marks', [...bookmarks])
-    saveSettings()
+    saveSettings(); hideMenus()
     let n = getStorage('userName')
     if (n) {
       let s = msg? 'Remove' : 'Add'

@@ -16,11 +16,23 @@
 <div id=div3>
   <b id=title></b>
   <select id=sureS title='Sure seçin (liste mushaf sırasında)'></select>  
-  <button id=pageS title='Sayfa no girin veya yıldızlı sayfayı seçin'>
-    Sayfa <span id=sayfa></span>
-  </button> 
-  <button id=starB title='Bu sayfaya yıldız koy/kaldır'>&nbsp;</button>
-  <button id=trans title='Meal sayfasını göster/gizle'>&nbsp;</button>  
+  <details id=pageD>
+    <summary id=pageA title='Sayfa ya da ayet seçin'>
+      Sayfa <span id=sayfa></span></summary>
+    <div class="bkgd">
+      <div class="dialog">
+        Sayfa/Ayet <input id=pgNum type=text inputmode=numeric>
+<pre>
+36    36. sayfa
+36.   36. sure Yasin
+36.3  Yasin 3. ayet
+(. yerine boşluk olur)
+</pre>
+      </div>
+    </div>
+  </details>
+  <button id=starA title='Sayfa işaretleri'>&nbsp;</button>
+  <button id=tranA title='Meal sayfasını göster/gizle'>&nbsp;</button>  
   <button id=zoomB title='Sayfayı geçici olarak büyüt'>&nbsp;</button>
   <button id=linkB title='Sayfa menüsü'>&nbsp;</button>
 </div>
@@ -44,8 +56,10 @@
 <span id=bilgi>tooltip for each word and each verse</span>
 
 <div id=menuS class=menu>
-   Göster <input id=pgNum type=text inputmode=numeric>
-   <hr> <span id=starred>star menu</span>
+  <span id=starB class="menuK" title='Bu sayfaya yıldız koy/kaldır'>
+    Ekle/Kaldır</span>
+  <hr>
+  <span id=starred>star menu</span>
 </div>
 
 <div id=menuC class=menu>
@@ -79,15 +93,6 @@
    <span class="menuK">Paylaş...</span>
 </div>
 <!-- June 2021 -- problems with CSS, give up details-summary
-<details>
-  <summary id=pageS title='Sayfa no girin veya yıldızlı sayfayı seçin'>
-    Sayfa <span id=sayfa></span></summary>
-  <div class=bkgd>
-    <div id=menuS class=menu>
-      Göster <input id=pgNum type=text inputmode=numeric>
-    </div>
-  </div>
-</details>
 <details>
   <summary id=starB title='Bu sayfaya yıldız koy/kaldır'>&nbsp;</summary>
   <div id=starM class=menu>

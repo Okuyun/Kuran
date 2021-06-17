@@ -25,19 +25,10 @@
       border-radius: 8px;
       cursor: pointer;
     }
-    .buck {
-      border: 1px solid red;
-      background: #eee;
-      border-radius: 4px;
-      padding: 0 6px;
-      cursor: pointer;
-    }
     .yellow { background: yellow; }
     .white { background: white; }
-    .small {
-      font-size: smaller;
-      color: red;
-    }
+    .small { font-size: smaller; }
+    .expert { color: red; }
   </style>
 </head>
 
@@ -58,8 +49,6 @@
 title='Bu alana girilen metin Rehber yazılımı ile aranır'>
 </p>
 <p><label>Mucemde bul</label>&nbsp;
-<span class=buck title="Buckwalter kodunu göster/gizle"
-  onclick="buck.hidden=!buck.hidden">?</span><br>
 <input type=text id=root placeholder='ktb Elm'
   title='Birden fazla kök aranacaksa boşluk ile ayrılmalı'>&emsp;
 <button class=yellow id=search title='Link adresini kullan'>Bul</button> &nbsp;
@@ -69,17 +58,20 @@ title='Bu alana girilen metin Rehber yazılımı ile aranır'>
 <button onclick='location="/Kitap/rama/"'>Ramazan</button> &nbsp;
 <button onclick='location="/Kitap/ders/"'>Dersler</button>
 <hr />
-<div id=buck class=small hidden>
+<details class=expert title="Buckwalter kodunu göster/gizle">
+  <summary>for experts only</summary>
+<p class=small>
   <span class=white>
   &nbsp; A b t v j H x d * r z s $ S D T Z E g f q k l m n h w y &nbsp;</span><br>
   <a href="https://en.wikipedia.org/wiki/Buckwalter_transliteration" target=Kuran>
     Buckwalter transliteration</a>
-<p><label>Link
-  <span class=small>(hashtag or URL -- for experts only) </span></label><br>
+</p>
+<p class=small><label>Link
+  <span>(hashtag or URL) </span></label><br>
   <input type=text id=omni title=
 'Linki ilk harf belirler: &#10;Mushaf: p=… v=… &#10;Mucem: r=… &#10;Rehber: t=… b=…'>
 </p>
-</div>
+</details>
 
 <script src="code/common.js"></script>
 <script>
@@ -135,6 +127,7 @@ function clearAll() {
 function pageValue() {
     //find numbers, \D means not digit
     let [c, v] = page.value.split(/\D+/)
+    if (v === '') v = 1
     if (v) { //c:v
       page.value = c+':'+v
       return 'v='+page.value

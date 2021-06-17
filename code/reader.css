@@ -26,7 +26,7 @@ body {
       font-size: 15px;
       display: inline-block;
     }
-    #trans { display: none; }
+    /* #tranA { display: none; } */
     #text, #html {
       width: 400px; 
       display: inline-block;
@@ -51,15 +51,11 @@ body {
       font-size: 16px;
       border-radius: 50%;
     }
-    #pageS {
-      width: auto;
-      font-weight: normal;
-    }
-    #sureS, #pageS {
+    #sureS, #pageD {
+      display: inline-block;
       padding: 4px;
-      height: 30px;
       background-color: #eee;
-      border-radius: 15px;
+      border-radius: 10px;
       border: none;
       font-size: 15px;
     }
@@ -199,27 +195,32 @@ body {
     src: url("/Rehber/style/ZEKRQURANBOLD.TTF");
   }
 
-/* Details-summary */
+  .bkgd {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(136, 136, 136, 0.6);
+    z-index: 5;
+  }
+  .dialog {
+    width: 150px;
+    padding: 20px;
+    display: block;
+    margin: 40px auto;
+    background: white;
+    border: 5px double orange;
+  }
+  pre {
+    text-align: left;
+    font-size: smaller;
+  }
+
 details {
-  position: relative;
-  top: -6px;
-  height: 32px;
-  margin-left: 4px;
-  display: inline-block;
 }
 summary {
-  color: black;
   cursor: pointer;
   list-style: none;
-  min-width: 36px;
-  height: 36px;
-  background-size: cover;
-  vertical-align: top;
-  border: 1px solid cyan;
-  border-radius: 50%;
-}
-summary:hover {
-  border: 1px solid white;
 }
 
 /* Menu Style
@@ -275,10 +276,10 @@ button {
 #bilgi div:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
-#starB {
+#starA {
     background-image: url(../image/star.png);
 }
-#trans {
+#tranA {
     background-image: url(../image/Tee.png);
 }
 #linkB {
