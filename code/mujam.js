@@ -419,7 +419,6 @@ function gotoHashRoot() {
  */
 function initMujam() {
     version.innerText = 'Iqra '+VERSION;
-    //showSelections(false);
     let letters = [];
     for (let c=1575; c<1609; c++) letters.push(String.fromCharCode(c));
     makeMenu(menu1, letters); 
@@ -526,7 +525,7 @@ function doHover(evt) {  //listener for each td and span element
     //if (x0+mw/2 > cw) dx = cw-mw-x0
     bilgi.style.left = (dx)+'px'
     let y = evt.target.clientTop + evt.target.clientHeight
-    bilgi.style.top = (y-1)+'px'
+    bilgi.style.top = (y-3)+'px'
     bilgi.style.display = "block"
 }
 
