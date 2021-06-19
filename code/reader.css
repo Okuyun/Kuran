@@ -195,6 +195,9 @@ body {
     src: url("/Rehber/style/ZEKRQURANBOLD.TTF");
   }
 
+  .large {
+    font-size: large;
+  }
   .bkgd {
     position: fixed;
     left: 0; top: 0;

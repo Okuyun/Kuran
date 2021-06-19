@@ -327,7 +327,8 @@ function initReader() {
     // console.log(swipe)  //TouchHandler
     sureS.onchange = () => {gotoSura(sureS.selectedIndex+1)}
     pgNum.onkeydown= keyToPage
-    pageA.onclick  = handlePageNum
+ // pageA.onclick  = handlePageNum cannot focus
+    pageD.ontoggle = handlePageNum
     starA.onclick  = handleStars
     starB.onclick  = toggleStar
     tranA.onclick  = handleTrans
@@ -543,7 +544,7 @@ function handleStars() {
 function handlePageNum() {
     pgNum.value = curPage
     pgNum.select(0,3)
-    pgNum.focus() //doesn't focus, use TAB key
+    pgNum.focus()
 }
 function toggleStar() {
     let msg = ''
