@@ -41,7 +41,7 @@ body {
     }
 }
 /** common to all screens **/
-    div { 
+    #div1, #div3 { 
       text-align: center;
     }
     button {
@@ -240,10 +240,11 @@ summary {
       z-index: 1;
     }
     .black {
+      text-align: center;
       margin-top: 8px;
       color: black;
     }
-    .menuK {
+    .black, .menuK {
       display: block;
       padding: 10px;
     }

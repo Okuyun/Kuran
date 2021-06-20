@@ -329,6 +329,8 @@ function initReader() {
     pgNum.onkeydown= keyToPage
  // pageA.onclick  = handlePageNum cannot focus
     pageD.ontoggle = handlePageNum
+    let bkgd = pageD.querySelector('.bkgd')
+    bkgd.onclick = (e) => e.target===bkgd? pageD.open=false : 0
     starA.onclick  = handleStars
     starB.onclick  = toggleStar
     tranA.onclick  = handleTrans
@@ -424,10 +426,11 @@ function menuFn() {
       text.innerHTML = kur.pageToHTML(curPage)
       setStorage('settings', 'source', k)
     }
-      hideElement(menuT); evt.preventDefault()
+      hideElement(menuT); //evt.preventDefault()
       let t = evt.target, k = Number(t.id)
       if (!k) return
       console.log(k, t.textContent)
+      if (!transIsChecked()) toggleTrans()
       kur = new KuranText(SOURCE[k], setTrans)
   }
   menuK.onclick = (evt) => { //menu button
@@ -468,7 +471,7 @@ function menuFn() {
             toggleTrans(); break
           case '*':
             toggleStar(); break
-          case 'M': case '.':
+          case 'M': //case '.':
             // evt.clientX = linkB.offsetLeft
             // evt.clientY = linkB.offsetTop +10
             toggleMenuK(); break
