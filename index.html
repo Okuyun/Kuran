@@ -68,12 +68,12 @@ function dragEnd(a) { //delegate all work to parent listener
     switch (a) {
       case 0: case 12: //swipe left -- A button
         parent.toogleFinder()
-        if (!parent.transIsChecked())
+        if (!iqra.transIsChecked())
           iqra.toggleTrans()
         return true
       case 6: //swipe right -- A button
         parent.toogleFinder()
-        if (parent.transIsChecked())
+        if (iqra.transIsChecked())
           iqra.toggleTrans()
         return true
       case 3: //swipe up -- x button
@@ -82,9 +82,6 @@ function dragEnd(a) { //delegate all work to parent listener
       default: //angle not supported
         return false
     }
-}
-function transIsChecked() {
-    return iqra.trans.classList.contains('checked')
 }
 function addListener(frm) {
   frm.contentWindow.addEventListener('hashchange', reportHash)
