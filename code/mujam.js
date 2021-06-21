@@ -302,9 +302,9 @@ function displayTable(set) {
     }
     // get colour based on the number of verses in a page.
     function toColor(n) {
-        if (n == 0) return ""
+        if (n == 0) return "''"
         let L = 96 - 6 * Math.min(n, 16)
-        return "background: hsl("+HUE+", 100%, "+L+"%)"
+        return "'background-color: hsl("+HUE+", 100%, "+L+"%)'"
     }
     indexToArray(set.list)
     // m number of rows, 20 pages per row.
@@ -327,8 +327,9 @@ function displayTable(set) {
                 c = L.length
                 numC += c; numP++
             }
-            let ch = sajdaP.includes(pn)? "۩" : "&nbsp;"
-            row += "<td style='" +toColor(c)+"'>"+ ch + "</td>"
+            let ch = sajdaP.includes(pn)? //"۩" : "&nbsp;"
+                " class=sajda>" : ">"
+            row += "<td style="+toColor(c)+ ch + "</td>"
         }
         if (i > m) { //use th for the last row
           row += "<th colspan=13>Iqra "+VERSION+" (C) 2019 MAE</th>"

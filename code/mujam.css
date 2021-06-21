@@ -64,24 +64,24 @@
         font-weight: normal;
     }
     td {
-        border: 0.6px solid black; 
-        font-size: 16px;
+        border: 0.5px solid black; 
+        font-size: 15px;
     }
-    td, th {
+    td {
         box-sizing: border-box;
         width: 4.5vw;
         height: 4.5vw;
-        padding: 0px;
+        padding: 2px;
         position: relative;
     }
     td:hover { 
         border: 4px solid brown;
     }
 @media screen and (max-width: 460px) {
-    td, th  { width: 20px; height: 20px;}
+    td  { width: 20px; height: 20px;}
 }
 @media screen and (min-width: 590px) {
-    td, th  { width: 26px; height: 26px;}
+    td  { width: 26px; height: 26px;}
 }
     button:hover .t1 { 
         display: block; 
@@ -169,5 +169,10 @@
     background-image: url(../image/add.png);
     background-size: contain;
     border: none;
+  }
+  .sajda {
+    background-color: transparent;
+    background-image: url(../image/sajda.png);
+    background-size: contain;
   }
   
