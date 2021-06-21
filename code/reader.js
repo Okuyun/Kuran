@@ -230,8 +230,10 @@ function gotoPage(k, adjusting) { // 1<=k<=P
         if (e.tagName != 'SPAN') continue
         idx++; doVerse(e)
     }
-    if (adjusting != 'hashInProgress') //cv are not set
-      location.hash = '#p='+curPage
+    if (adjusting !== 'hashInProgress') {
+      let h = '#p='+curPage
+      if (location.hash !== h) location.hash = h
+    }
     // setStorage('iqra', 'page', curPage)
     saveSettings(); scrollTo(0, 0)
 }

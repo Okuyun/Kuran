@@ -184,14 +184,13 @@ function anchor(x) {
     let s =  //use chapter-verse form x
     '<a href="reader.html#v='+x.cv+'" target=iqra>'+x.cv+'</a>'
     if (!parent.iqra) return s  //no parent, stand-alone
-    // let cls = parent.iqra.transIsChecked() ? 'b>' : 'i>'
     let kur = parent.iqra.kur
-        // cls === 'b>' ?  //select data
-        // parent.iqra.qur : parent.iqra.kur
     if (!kur || !kur.loaded) return s
     let p = 0, i = x.index
-    while (p.toString().length <= 6) //typeof p == 'number'
+    while (p.toString().length <= 6) {
         p = kur.getVerse(i++)
+        if (!p) return s
+    }
     return s+'&ensp;<div class=i>'+p+'</div>'
 }
 function displayTopic(s) {
@@ -245,7 +244,8 @@ function topicFromDialog() {
     let enc = encodeLine(dRefs.value)
     addTopic(topic, enc)
     let h = '#'+topic +'='+ enc
-    if (decodedHash().includes(topic))
+    let d = decodedHash()
+    if (d && d.includes(topic))
         history.replaceState(null, '', h) 
     else location.hash = h
 }
