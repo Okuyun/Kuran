@@ -332,13 +332,22 @@ function displayTable(set) {
             row += "<td style="+toColor(c)+ ch + "</td>"
         }
         if (i > m) { //use th for the last row
-          row += "<th colspan=13>Iqra "+VERSION+" (C) 2019 MAE</th>"
-           +"<th id=corpus colspan=3 onClick=doClick2()>Corpus</th>"
+            let q = menu2.value? "?q=" + currentRoot() : ''
+            row += "<th colspan=12>Iqra "+VERSION+" (C) 2019 MAE</th>"
+            +"<th colspan=3><a href='"
+            +"http://corpus.quran.com/qurandictionary.jsp"+q
+            +"' title='Kaynak site' target=Kuran>Corpus</a></th>"
+            +"<th id=last></th>"       
         }
         text += "<tr>" + row + "</tr>"
     }
     // end of table
+    notes.edit(false) //close noteBox
+    let nb = document.querySelector('#noteBut')
+    nb.remove() //we need a single instance in the last cell
     tablo.innerHTML = text
+    let last = tablo.querySelector('#last')
+    last.append(nb) //to the table again
     tablo.oncontextmenu = showMenuK
     document.title = TITLE + " -- " + set.name
     let pages = numP + " sayfa"
@@ -384,17 +393,6 @@ function doClick(evt) {
     window.iqra = window.open("reader.html"+h, "iqra")
 }
 /**
- * Open Corpus quran link that related to the selected word specific word. 
- * 
- */
-function doClick2() {
-    const REF = "http://corpus.quran.com/qurandictionary.jsp";
-    let p = "";
-    if (menu2.value) p = "?q=" + currentRoot()
-    console.log("Corpus" + p);
-    window.open(REF + p, "Kuran")  //, "resizable,scrollbars");
-}
-/**
  * Use the hash part of URL in the address bar
  *
  * @returns true if hash part of URL is not empty
@@ -435,7 +433,7 @@ function initMujam() {
     showS.onclick  = () => {showSelections(true)}
     menu1.onchange = () => {selectLetter()}
     menu2.onchange = () => {selectRoot()}
-    noteBut.onclick = () => {notes.edit()} //in common.js
+    noteBut.onclick= () => {notes.edit()} //in common.js
     combine.onclick= () => {gotoHashRoot()}
     menuFn()
 }
@@ -463,7 +461,7 @@ function menuFn() {
   document.onclick = (evt) => {
       if (!menuK.style.display) {
         let t = evt.target.tagName
-        if (t == "TD" || t == "SPAN") return
+        if (t=="A" || t=="TD" || t=="SPAN") return
       }
       hideMenus(); evt.preventDefault()
   }

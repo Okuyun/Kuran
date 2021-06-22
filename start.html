@@ -58,8 +58,11 @@ title='Bu alana girilen metin Rehber yazılımı ile aranır'>
 <button onclick='location="/Kitap/rama/"'>Ramazan</button> &nbsp;
 <button onclick='location="/Kitap/ders/"'>Dersler</button>
 <hr />
-<details class=expert>
-  <summary title="Buckwalter kodunu göster/gizle">for experts only</summary>
+<details id=expert class=expert>
+  <summary title="Buckwalter kodunu göster/gizle">
+    <button onclick="expert.open=!expert.open">?</button> 
+    &ensp; For expert use only
+  </summary>
 <p class=small>
   <span class=white title="Buckwalter kodu -- alfabetik sıra">
   &nbsp; A b t v j H x d * r z s $ S D T Z E g f q k l m n h w y &nbsp;</span><br>

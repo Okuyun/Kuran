@@ -111,11 +111,6 @@
     .t2, #showS, #combine {
         background-color: #ff7;
     }
-    #corpus {
-        color: blue;
-        cursor: pointer;
-        text-decoration: underline;
-    }
 	@font-face {
 	  font-family: me_quran;
 	  src: url(../image/me_quran.ttf)
@@ -153,16 +148,14 @@
     border: 6px solid gray;
     padding: 6px;
     position: fixed;
-    left: 20px;
-    top: 32px;
+    left: 8px;
+    bottom: 32px;
     width: 300px;
     height: 200px;
     resize: none;
     z-index: 2;
   }
   #noteBut {
-    position: relative;
-    top: 5px;
     min-width: 24px;
     height: 24px;
     background-color: transparent;
