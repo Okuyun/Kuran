@@ -159,8 +159,6 @@ function selectRoot(root, modifyHash=true) { //root in Arabic
     let cnt = rootToCounts.get(root);
     if (!cnt) notFound(root)
     let lst = rootToWords.get(cnt);
-    //combine refs in lst
-    combine.hidden = true;
     if (!modifyHash) return
     //replace special chars
     let b = encodeURI(toBuckwalter(root))
@@ -174,7 +172,6 @@ function selectRoot(root, modifyHash=true) { //root in Arabic
  * @param {string} word to be selected.
  */
 function selectWord(word) { //called by list items
-    combine.hidden = false
     notes.edit(false)
     let set = wRefs.find(x => x.name == word)
     if (!set) return
@@ -237,7 +234,14 @@ function parseRoots(roots) { //root array in Arabic
     if (rest.length > 0) wRefs = [set]
     return set
 }
-
+/**
+ * showS button is clicked
+ */
+function showSelections() {
+    div0.hidden = true
+    div1.hidden = false
+    kelimeler.hidden = false
+}
 /**
  * Build and display the HTML list.
  * 
@@ -245,12 +249,12 @@ function parseRoots(roots) { //root array in Arabic
  * @param {Element} liste to be modified
  */
 function displayList(refs, liste) {
+    div0.hidden = false
+    showS.hidden = refs.length == 1
+    div1.hidden = true
+    kelimeler.hidden = refs.length > 1
     const MAX_REFS = 50  //hide larger lists
     const SPAN = '<span class=item>', _SPAN = '</span>'
-    // let BUTTON = '', _BUTTON = ''
-    // if (refs.length > 1) {
-    //     BUTTON = '<button>'; _BUTTON = '</button>'
-    // }
     let s = ''
     for (let x of refs) { // x is {name, list}
         let but = refs.length == 1? '' :
@@ -405,11 +409,11 @@ function gotoHashRoot() {
       window.location.href = "/Kuran/#"+h
       return false  //no need to return
     } //else given roots
-    showSelections(false)
     h = h.substring(2)  //strip 'r='
     let roots = h.split('&r=').map(toArabic)
     let set = parseRoots(roots)
     selectRoot(roots[0], false)
+    displayList(wRefs, kelimeler)
     displayTable(set)
     return true
 }
@@ -430,7 +434,7 @@ function initMujam() {
     }
     window.name = "finder"
     window.onhashchange = gotoHashRoot
-    showS.onclick  = () => {showSelections(true)}
+    showS.onclick  = () => {showSelections()}
     menu1.onchange = () => {selectLetter()}
     menu2.onchange = () => {selectRoot()}
     noteBut.onclick= () => {notes.edit()} //in common.js
@@ -482,12 +486,6 @@ function menuFn() {
   }
 }
 
-function showSelections(show) {
-    div0.hidden = show
-    div1.hidden = !show
-    combine.hidden = false
-    if (show) displayList(wRefs, kelimeler)
-}
 function getPageOf(td) {
     let r = td.parentElement.rowIndex;
     let p = 20*(r-1) + td.cellIndex;
@@ -528,22 +526,6 @@ function doHover(evt) {  //listener for each td and span element
     bilgi.style.display = "block"
 }
 
-function test(prop='index') {
-    if (div1.hidden) showSelections(true)
-    let testEval = (a) => {
-      let e = eval(a); console.log(a, e); return e
-    }
-    //a and b contain the same objects
-    let a = testEval('pRefs.flat() //already sorted')
-    let b = testEval('wRefs.map(x => x.list).flat()')
-    //convert a and b to string
-    b.sort((x, y) => x.index - y.index)
-    let testJoin = (a) => a.map(x => x[prop]).join(' ')
-    console.log(a = testJoin(a))
-    console.log(b = testJoin(b))
-    console.log(a == b)
-}
-
 try {
     initMujam()
 } catch (e) {
@@ -552,4 +534,4 @@ try {
 }
 
 
-// export {pRefs, wRefs, rootToWords, wordToRefs, test}
+// export {pRefs, wRefs, rootToWords, wordToRefs}
