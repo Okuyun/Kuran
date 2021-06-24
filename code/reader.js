@@ -34,6 +34,9 @@ function arrayToSet(m) {
     for (let k of m) 
         bookmarks.add(Number(k))
 }
+function starIsChecked() {
+    return starA.classList.contains("checked")
+}
 function transIsChecked() {
     return tranA.classList.contains("checked")
 }
@@ -217,7 +220,8 @@ function gotoPage(k, adjusting) { // 1<=k<=P
     curPage = k; slider.value = k;
     text.innerHTML = kur.pageToHTML(k)
     html.innerHTML = qur.pageToHTML(k)
-    starA.classList.toggle('checked', bookmarks.has(k))
+    if (starIsChecked() !== bookmarks.has(k)) toggleStar()
+    // starA.classList.toggle('checked', bookmarks.has(k))
     notes.display(k) //in common.js
   } catch (e) {
     console.error(e)
@@ -448,7 +452,8 @@ function menuFn() {
       evt.preventDefault()
       openSite(evt.target.innerText[0])
   }
-  document.onkeydown = (evt) => {
+document.onkeydown = handleKeyEvent
+function handleKeyEvent(evt) {
       let k = evt.key.toUpperCase()
       if (evt.key == 'Escape') 
           hideMenus()
@@ -495,6 +500,7 @@ function menuFn() {
 * End of menu functions 
 ***********************************************/
 function keyToPage(evt) {
+    evt.stopPropagation()
     if (evt.key == 'Escape') {
       hideElement(menuS)
     } else if (evt.key == 'Enter') {
@@ -520,9 +526,11 @@ function handleTrans() {
 }
 function toggleTrans() {
     if (tranA.classList.toggle('checked')) {
+      tranB.innerHTML = 'Meal Gizle &ndash; T'
       html.classList.add('hiddenNarrow')
       text.classList.remove('hiddenNarrow')
     } else { //hide text if narrow screen
+      tranB.innerHTML = 'Meal Göster &ndash; T'
       html.classList.remove('hiddenNarrow')
       text.classList.add('hiddenNarrow')
     }
@@ -553,13 +561,16 @@ function handlePageNum() {
 }
 function toggleStar() {
     let msg = ''
+    // const YILDIZ = '<b class=large>☆</b> '
     if (starA.classList.toggle('checked')) {
       bookmarks.add(curPage)
       let a = [...bookmarks]
       if (a.length > MAX_MARKS)
       bookmarks.delete(a[0]) //the oldest entry
+      starB.innerHTML = 'Yıldız Kaldır'
     } else {
       bookmarks.delete(curPage)
+      starB.innerHTML = 'Yıldız Ekle'
       msg = '-'
     }
     // setStorage('iqra', 'marks', [...bookmarks])
