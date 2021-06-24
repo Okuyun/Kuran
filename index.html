@@ -26,21 +26,31 @@
     }
     button {
       position: fixed;
-      top: 8px; right: 0;
       background-color: pink;
+      border: 2px solid brown;
+      border-radius: 15px;
+    }
+    #closeM, #openM {
+      top: 8px; right: 0;
+      cursor: pointer;
+    }
+    #yarim {
+      height: 30px;
+      bottom: -6px;
+      cursor: col-resize;
     }
   @media screen and (min-width: 851px) {
     #findFrm {
       margin: auto;
-      resize: both;
+   /* resize: both; Chrome bug not resolved */
       max-height: 100%;
       border-left: 1px solid cyan;
       border-right: 1px solid cyan;
     }
   }
-/* @media screen and (min-width: 1200px) {
-    button { display: none; }
-  } */
+  @media screen and (min-width: 1200px) {
+    #openM { display: none; }
+  }
   </style>
   </head>
   <body>
@@ -52,6 +62,7 @@
 
   <button id=closeM title='Arama panelini kapat'>x</button>
   <button id=openM hidden title='Arama paneline dön'>A</button>
+  <button id=yarim title='Arama panelinin boyunu ayarla'>⇔</button>
   <p id=dummy hidden></p>
 
 <script src="code/common.js"></script>
@@ -166,19 +177,8 @@ function showFinder() {
   // if (!findFrm.src) findFrm.src = 'mujam.html'
   resize()
 }
-function setWidth(entries, observer) {
-  let t = entries[0]
-  // console.log(readFrm.style.left, t.contentRect.width); 
-  if (t.target !== findFrm) return
-  if (readFrm.style.display == 'none') return //readFrm is hidden
-  finderWidth = findFrm.offsetWidth
-  let w = Math.min(window.innerWidth, screen.width) - finderWidth
-  // console.log(finderWidth, w)
-  readFrm.style.left = finderWidth+'px'
-  readFrm.style.width = w+'px'
-  closeM.style.right = w+'px'
-}
-var WIDTH = 590  //can be modified in dev tools
+
+  var WIDTH = 590  //can be modified in dev tools
   function resize() {
     const HIDE = 'none', SHOW = ''
     let W = Math.min(window.innerWidth, screen.width)
@@ -196,6 +196,7 @@ var WIDTH = 590  //can be modified in dev tools
         x2 = Math.trunc((W-WIDTH)/2); w2 = WIDTH
       }
       setStyle(readFrm.style, SHOW, x2, w2)
+      yarim.style.display = HIDE
     }
     function finderShown(w2, single) {
       let x2 = W  //if single
@@ -207,7 +208,9 @@ var WIDTH = 590  //can be modified in dev tools
       setStyle(findFrm.style, SHOW, 0, x2)
       let d = single? HIDE : SHOW
       setStyle(readFrm.style, d, x2, w2)
-      closeM.style.right = single? '' : w2+'px'      
+      closeM.style.right = single? '' : w2+'px'  
+      yarim.style.right = (w2-15)+'px'
+      yarim.style.display = d
     }
     function setStyle(s, d, x, w) {
       s.display = d; if (d == HIDE) return
@@ -253,8 +256,45 @@ var WIDTH = 590  //can be modified in dev tools
   readFrm.onload = initReader
   findFrm.onload = sourceChanged
   iqra.addEventListener('hashchange', reportHash)
-  new ResizeObserver(setWidth).observe(findFrm)
-  // window.onerror = console.log
+
+var id //indicates a drag event is active
+var x0 //clientX of the latest drag
+function dragSt(e) {
+  // e.preventDefault()
+  let p = e.touches? e.touches[0] : e
+  x0 = Math.round(p.clientX)
+  id = setTimeout(dragEnd, 1500) //global
+  console.log(e.type, x0, id)
+}
+function drag(e) {
+  // e.preventDefault()
+  if (!id) return
+  // clearTimeout(id)
+  // id = setTimeout(dragEnd, 1000) //global
+  let p = e.touches? e.touches[0] : e
+  let x1 = Math.round(p.clientX)
+  let f0 = finderWidth
+  let fw = f0 + (x1 - x0); x0 = x1
+  let W = Math.min(window.innerWidth, screen.width)
+  finderWidth = Math.min(Math.max(fw, 350), W-350)
+  if (fw !== f0) resize()  //else do not move
+  console.log(e.type, fw)
+}
+function dragEnd(e) {
+  // if (e) e.preventDefault()
+  if (!id) return
+  clearTimeout(id); id = undefined
+  setStorage('iqra', 'finderWidth', finderWidth)
+  console.log(e? e.type : 'cancel', finderWidth)
+}
+  yarim.addEventListener("mousedown", dragSt);
+  document.addEventListener("mousemove", drag);
+  document.addEventListener("mouseup", dragEnd);
+  yarim.addEventListener("touchstart", dragSt);
+  document.addEventListener("touchmove", drag);
+  document.addEventListener("touchend", dragEnd);
+  // resizable iframe has a bug
+  // new ResizeObserver(setWidth).observe(findFrm)
   window.onbeforeinstallprompt = (e) => {
     iqra.beforeinstallCB(e)
     console.log('beforeinstallprompt event')
