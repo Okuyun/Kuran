@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.2z";
+const VERSION = "V4.2α";
 
 /**
  * &ensp; used in Mujam and VerseRef
@@ -243,6 +243,9 @@ class TouchHandler {
         elt.ontouchstart = (e) => this.start(e)
         elt.ontouchmove = (e) => this.move(e)
         elt.ontouchend = (e) => this.stop(e)
+        // elt.addEventListener("touchstart", this.start.bind(this));
+        // elt.addEventListener("touchmove", this.move.bind(this));
+        // elt.addEventListener("touchend", this.stop.bind(this));
     }
     start(evt) {
         if (this.t || !this.action.dragStart) return

@@ -31,12 +31,13 @@
       border-radius: 15px;
     }
     #closeM, #openM {
+      height: 28px; width: 28px;
       top: 8px; right: 0;
       cursor: pointer;
     }
     #yarim {
-      height: 30px;
-      bottom: -6px;
+      height: 32px;
+      bottom: -15px;
       cursor: col-resize;
     }
   @media screen and (min-width: 851px) {
@@ -62,7 +63,7 @@
 
   <button id=closeM title='Arama panelini kapat'>x</button>
   <button id=openM hidden title='Arama paneline dön'>A</button>
-  <button id=yarim title='Arama panelinin boyunu ayarla'>⇔</button>
+  <button id=yarim title='Arama panelinin boyunu ayarla'>⇔<br>&nbsp;</button>
   <p id=dummy hidden></p>
 
 <script src="code/common.js"></script>
@@ -101,6 +102,8 @@ function addListener(frm) {
   let b = finder.document.querySelector('body')
   b.ontouchstart = dummy.ontouchstart
   b.ontouchend   = dummy.ontouchend
+  // b.addEventListener("touchstart", ontouchstart);
+  // b.addEventListener("touchend", ontouchend);
 }
 function reportHash(e) { //hashchange in one of the panes
   let s = '[Iqra]', h = ''
@@ -278,7 +281,7 @@ function drag(e) {
   let W = Math.min(window.innerWidth, screen.width)
   finderWidth = Math.min(Math.max(fw, 350), W-350)
   if (fw !== f0) resize()  //else do not move
-  console.log(e.type, fw)
+  // console.log(e.type, fw)
 }
 function dragEnd(e) {
   // if (e) e.preventDefault()
@@ -291,8 +294,8 @@ function dragEnd(e) {
   document.addEventListener("mousemove", drag);
   document.addEventListener("mouseup", dragEnd);
   yarim.addEventListener("touchstart", dragSt);
-  document.addEventListener("touchmove", drag);
-  document.addEventListener("touchend", dragEnd);
+  yarim.addEventListener("touchmove", drag);
+  yarim.addEventListener("touchend", dragEnd);
   // resizable iframe has a bug
   // new ResizeObserver(setWidth).observe(findFrm)
   window.onbeforeinstallprompt = (e) => {

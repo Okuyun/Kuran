@@ -502,7 +502,7 @@ function handleKeyEvent(evt) {
 function keyToPage(evt) {
     evt.stopPropagation()
     if (evt.key == 'Escape') {
-      hideElement(menuS)
+      hideMenus()
     } else if (evt.key == 'Enter') {
       let [c, v] = pgNum.value.split(/\D+/)
       if (v === '') v = 1

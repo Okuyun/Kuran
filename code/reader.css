@@ -238,6 +238,7 @@ summary {
       font: 13px sansserif, arial;
       user-select: none;
       overflow-y: auto;
+      max-height: 90vh; /* for overflow */
       z-index: 1;
     }
     .black {
