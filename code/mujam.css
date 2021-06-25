@@ -157,8 +157,8 @@
     z-index: 2;
   }
   #noteBut {
-    min-width: 24px;
-    height: 24px;
+    min-width: 20px;
+    height: 20px;
     background-color: transparent;
     background-image: url(../image/add.png);
     background-size: contain;

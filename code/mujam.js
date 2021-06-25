@@ -337,11 +337,12 @@ function displayTable(set) {
         }
         if (i > m) { //use th for the last row
             let q = menu2.value? "?q=" + currentRoot() : ''
-            row += "<th colspan=12>Iqra "+VERSION+" (C) 2019 MAE</th>"
+            row += "<th id=last></th>" 
+            +"<th colspan=11>Iqra "+VERSION+" (C) 2019 MAE</th>"
             +"<th colspan=3><a href='"
             +"http://corpus.quran.com/qurandictionary.jsp"+q
             +"' title='Kaynak site' target=Kuran>Corpus</a></th>"
-            +"<th id=last></th>"       
+            +"<th>&nbsp;</th>"       
         }
         text += "<tr>" + row + "</tr>"
     }

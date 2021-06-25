@@ -321,8 +321,8 @@ button {
   resize: none;
 }
 #noteBut {
-  min-width: 26px;
-  height: 26px;
+  min-width: 22px;
+  height: 22px;
   border-radius: 0;
   background-image: url(../image/add.png);
   background-size: contain;
