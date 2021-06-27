@@ -33,13 +33,18 @@
     }
     #closeM, #openM {
       height: 28px; width: 28px;
-      top: 8px; right: 0;
+      top: 4px; right: 0;
       cursor: pointer;
     }
-    #yarim {
-      height: 32px;
-      bottom: -15px;
+    #sizer {
+      /* height: 32px; */
+      bottom: -18px;
       cursor: col-resize;
+    }
+    #sizer.sizing {
+      border: 12px solid pink;
+      border-radius: 25px;
+      bottom: -28px;
     }
   @media screen and (min-width: 851px) {
     #findFrm {
@@ -64,7 +69,7 @@
 
   <button id=closeM title='Arama panelini kapat'>x</button>
   <button id=openM hidden title='Arama paneline dön'>A</button>
-  <button id=yarim title='Arama panelinin boyunu ayarla'>⇔<br>&nbsp;</button>
+  <button id=sizer title='Arama panelini ayarla'>⇔<br>&nbsp;</button>
   <p id=dummy hidden></p>
 
 <script src="code/common.js"></script>
@@ -103,8 +108,6 @@ function addListener(frm) {
   let b = finder.document.querySelector('body')
   b.ontouchstart = dummy.ontouchstart
   b.ontouchend   = dummy.ontouchend
-  // b.addEventListener("touchstart", ontouchstart);
-  // b.addEventListener("touchend", ontouchend);
 }
 function reportHash(e) { //hashchange in one of the panes
   let s = '[Iqra]', h = ''
@@ -200,7 +203,7 @@ function showFinder() {
         x2 = Math.trunc((W-WIDTH)/2); w2 = WIDTH
       }
       setStyle(readFrm.style, SHOW, x2, w2)
-      yarim.style.display = HIDE
+      sizer.style.display = HIDE
     }
     function finderShown(w2, single) {
       let x2 = W  //if single
@@ -213,8 +216,8 @@ function showFinder() {
       let d = single? HIDE : SHOW
       setStyle(readFrm.style, d, x2, w2)
       closeM.style.right = single? '' : w2+'px'  
-      yarim.style.right = (w2-15)+'px'
-      yarim.style.display = d
+      sizer.style.right = (w2-15)+'px'
+      sizer.style.display = d
     }
     function setStyle(s, d, x, w) {
       s.display = d; if (d == HIDE) return
@@ -269,12 +272,13 @@ function dragSt(e) {
   x0 = Math.round(p.clientX)
   id = setTimeout(dragEnd, 1500) //global
   console.log(e.type, x0, id)
+  sizer.classList.add('sizing')
 }
 function drag(e) {
   // e.preventDefault()
   if (!id) return
-  // clearTimeout(id)
-  // id = setTimeout(dragEnd, 1000) //global
+  clearTimeout(id)
+  id = setTimeout(dragEnd, 1000) //global
   let p = e.touches? e.touches[0] : e
   let x1 = Math.round(p.clientX)
   let f0 = finderWidth
@@ -290,13 +294,14 @@ function dragEnd(e) {
   clearTimeout(id); id = undefined
   setStorage('iqra', 'finderWidth', finderWidth)
   console.log(e? e.type : 'cancel', finderWidth)
+  sizer.classList.remove('sizing')
 }
-  yarim.addEventListener("mousedown", dragSt);
-  document.addEventListener("mousemove", drag);
-  document.addEventListener("mouseup", dragEnd);
-  yarim.addEventListener("touchstart", dragSt);
-  yarim.addEventListener("touchmove", drag);
-  yarim.addEventListener("touchend", dragEnd);
+  sizer.onmousedown = dragSt
+  sizer.onmousemove = drag
+  sizer.onmouseup = dragEnd
+  sizer.ontouchstart = dragSt
+  sizer.ontouchmove = drag
+  sizer.ontouchend = dragEnd
   // resizable iframe has a bug
   // new ResizeObserver(setWidth).observe(findFrm)
   window.onbeforeinstallprompt = (e) => {
