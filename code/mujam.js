@@ -317,12 +317,12 @@ function displayTable(set) {
     for (let j = 1; j <= n; j++) {
         row += "<th>" + (j % 10) + "</th>" //use last digit
     }
-    let text = "<tr>" + row + "</tr>"
+    let text = "<tr class=first>" + row + "</tr>"
     let pn = 0, numC = 0, numP = 0  //counters
     for (let i = 1; i <= m + 1; i++) {
         let z = i > m ? m : i
         let s2 = '' //unused "<span class=t1>Cüz " + z + "</span>"
-        row = "<th class=first>" +threeDigits(pn)+ s2 + "</th>"
+        row = "<th>" +threeDigits(pn)+ s2 + "</th>"
         let U = i > m ? 4 : n
         for (let j = 1; j <= U; j++) {
             pn++  // pn == 20*(i-1)+j  page number

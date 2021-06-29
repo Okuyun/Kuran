@@ -60,6 +60,7 @@
         cursor: default;
         margin: 8px;
     }
+    tr.first { height: 18px; }
     th { 
         color: black;
         font-weight: normal;
