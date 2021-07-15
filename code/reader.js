@@ -337,8 +337,9 @@ function initReader() {
     pageD.ontoggle = handlePageNum
     let bkgd = pageD.querySelector('.bkgd')
     bkgd.onclick = (e) => e.target===bkgd? pageD.open=false : 0
-    starA.ontouchstart = () => clickStart = Date.now()
-    starA.onmousedown  = () => clickStart = Date.now()
+    starA.ontouchstart = startClick
+    starA.ontouchend   = handleStars
+    starA.onmousedown  = startClick
     starA.onclick  = handleStars
     starB.onclick  = toggleStar
     tranA.onclick  = handleTrans
@@ -547,18 +548,17 @@ function makeStarMenu() {
         t += span+'s'+nameFromPage(k)+'</span>\n'
     starred.innerHTML = t
 }
+function startClick() { clickStart = Date.now() }
 function handleStars(evt) {
     if (clickStart && Date.now()-clickStart < 300) {
-       // console.log(Date.now()-clickStart)
+      console.log(Date.now()-clickStart)
       evt.preventDefault(); toggleStar()
-      clickStart = undefined
-    } else if (menuS.style.display) {
-      hideElement(menuS)
     } else {
       hideMenus(); makeStarMenu()
       let x = starA.offsetLeft+10, y = starA.offsetTop+33
       setPosition(menuS, x, y, 110)
     }
+    clickStart = undefined
 }
 function handlePageNum() {
     pgNum.value = curPage
