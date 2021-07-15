@@ -171,6 +171,8 @@ function setOmni(evt) {
     text.onchange = setOmni
     page.onchange = setOmni
     document.onkeydown = keyToPage
+    let p = getStorage('iqra', 'page')
+    if (p) { page.value = p; setFocus(page) }
 </script>
 
 </body>

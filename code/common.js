@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.2α";
+const VERSION = "V4.2β";
 
 /**
  * &ensp; used in Mujam and VerseRef
@@ -140,7 +140,7 @@ async function fetch_text_then(url, callback) {
 /**
  * get localStorage.q.k (k is optional)
  */
-function getStorage(q, k) {
+function getStorage(q='iqra', k) {
     if (!localStorage) return
     let e = localStorage[q]
     if (!e) return
@@ -195,10 +195,6 @@ class Notes {
             setStorage(this.key, this.data)
         }
     }
-    setFocus() {
-        this.box.selectionEnd = this.box.value.length
-        this.box.selectionStart = 0; this.box.focus()
-    }
     showBox(show) {
         if (show) {
             this.box.hidden = false
@@ -216,13 +212,13 @@ class Notes {
         this.but.style.backgroundImage = v?
             'url(./image/edit.png)' : '' //'add.png'
         if (this.box.hidden) return
-        if (v) this.setFocus()
+        if (v) setFocus(this.box)
         else this.showBox(false)
     }
     edit(show = this.box.hidden) {
     //called when this.but is clicked
         this.showBox(show)
-        if (show) this.setFocus()
+        if (show) setFocus(this.box)
         else this.saveCurrent()
     }
 }
@@ -292,6 +288,12 @@ class TouchHandler {
 }
 function isFalse(cb, ...arg) { //not used
     return cb && !cb(...arg)
+}
+
+function setFocus(elt) {
+    if (!elt || elt.value == undefined) return
+    elt.selectionEnd = elt.value.length
+    elt.selectionStart = 0; elt.focus()
 }
 
 // export {VERSION, EM_SPACE, setPosition, hideElement, Notes, 

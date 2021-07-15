@@ -19,8 +19,9 @@ var qur = new QuranText('quran-uthmani.txt', initialPage)
 const MD  = new MujamData('data/words.txt')
 const SD  = new SimData('data/simi.txt')
 var swipe = new TouchHandler({dragStart, dragEnd}, div2)
-var curSura, curPage, bookmarks, lastSelection;
-var initialized = false
+var curSura, curPage, bookmarks, lastSelection,
+    initialized = false, //becomes true when loaded
+    clickStart; //start time for click events
 window.mujam = undefined
 
 const DEFAULT = {page:1, marks:[]}
@@ -322,9 +323,8 @@ function gotoHashPage() {
 function initialPage() {
     initialized = kur.loaded && qur.loaded
     if (initialized) { //global
-      if (gotoHashPage()) return
-      gotoPage(getStorage('iqra', 'page') || 1)
-      console.log("initialPage", curPage)
+      if (!gotoHashPage()) gotoPage(1) 
+      //getStorage('iqra', 'page') || 1)
     }
 }
 function initReader() {
@@ -337,6 +337,8 @@ function initReader() {
     pageD.ontoggle = handlePageNum
     let bkgd = pageD.querySelector('.bkgd')
     bkgd.onclick = (e) => e.target===bkgd? pageD.open=false : 0
+    starA.ontouchstart = () => clickStart = Date.now()
+    starA.onmousedown  = () => clickStart = Date.now()
     starA.onclick  = handleStars
     starB.onclick  = toggleStar
     tranA.onclick  = handleTrans
@@ -545,8 +547,12 @@ function makeStarMenu() {
         t += span+'s'+nameFromPage(k)+'</span>\n'
     starred.innerHTML = t
 }
-function handleStars() {
-    if (menuS.style.display) {
+function handleStars(evt) {
+    if (clickStart && Date.now()-clickStart < 300) {
+       // console.log(Date.now()-clickStart)
+      evt.preventDefault(); toggleStar()
+      clickStart = undefined
+    } else if (menuS.style.display) {
       hideElement(menuS)
     } else {
       hideMenus(); makeStarMenu()
@@ -556,8 +562,7 @@ function handleStars() {
 }
 function handlePageNum() {
     pgNum.value = curPage
-    pgNum.select(0,3)
-    pgNum.focus()
+    setFocus(pgNum)
 }
 function toggleStar() {
     let msg = ''
