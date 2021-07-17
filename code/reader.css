@@ -175,9 +175,11 @@ body {
     .sari { 
       background-color : #ffc;
       border-radius: 25px;
+      border: 1px solid yellow;
     }
     .checked { 
       background-color : #ff7;
+      border: 1px solid brown;
     }
     ::selection {
       color: yellow; 
