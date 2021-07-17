@@ -43,14 +43,20 @@ const aName
 const sajdaX = [1160, 1722, 1950, 2138, 2308, 2613, 2915, 
                 3184, 3518, 3994, 4255, 4846, 5905, 6125]
 
+/** Source files are kept by id 0-9 */
+const SOURCE = ['quran-uthmani.txt', 'ar.jalalayn.txt', 'ar.muyassar.txt',
+  'tr.diyanet.txt', 'en.ahmedali.txt', 'tr.yazir.txt', 'en.yusufali.txt',
+  'fr.hamidullah.txt', 'en.pickthall.txt', 'tr.abay.txt']
+
 /** Reads a text file -- Quran translation
  *  one line for each verse that begins with "c|v|"
  * 
- *  Usage: kur = new KuranText('tr.yazir.txt', initialPage)
+ *  Usage:   kur = new KuranText(5, initialPage) OR
+ *    new KuranText('tr.yazir.txt', initialPage)
  *    kur.loaded, kur.getVerse(i),  kur.pageToHTML(p)
  */
 class KuranText {
-    constructor(url, callback) {
+    constructor(id, callback) {
       let setLine = (v, txt) => v+'. '+txt
       //cannot use function because of "this"
       let process = (tt) => {
@@ -76,6 +82,7 @@ class KuranText {
         console.log(this.url, a.length)
         if (callback) callback(a)
       }
+        let url = SOURCE[id] || id
         this.url = url; this.data = []
         if (!url.startsWith('http')) 
              url = '/Rehber/data/'+url
@@ -112,11 +119,11 @@ class KuranText {
         return out.join('\n')
     }
     getVerse(i) { return this.data[i] }
-    toString() { return url }
+    toString() { return this.url }
 }
 /** Reads Quran text in Arabic */
 class QuranText extends KuranText {
-    constructor(url, callback) { super(url, callback) }
+    constructor(url, callback) { super(0, callback) }
     /** override 4 methods below */
     chapName(c)   { return ' سورة '+aName[c] }
     get besmele() { return 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ' }

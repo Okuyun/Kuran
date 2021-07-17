@@ -8,14 +8,11 @@
 
 const M = 114; //suras
 const P = 604; //pages
-const SOURCE = ['', 'ar.jalalayn.txt', 'ar.muyassar.txt', 'tr.diyanet.txt',
-  'en.ahmedali.txt', 'tr.yazir.txt', 'en.yusufali.txt', 'fr.hamidullah.txt',
-  'en.pickthall.txt', 'tr.abay.txt']
 let snum = getStorage('settings', 'source')
 if (!snum || snum<=0 || snum>=SOURCE.length) snum = 5
 //constants do not appear as properties from the parent
-var kur = new KuranText(SOURCE[snum], initialPage)
-var qur = new QuranText('quran-uthmani.txt', initialPage)
+var kur = new KuranText(snum, initialPage)
+var qur = new QuranText(0, initialPage)
 const MD  = new MujamData('data/words.txt')
 const SD  = new SimData('data/simi.txt')
 var swipe = new TouchHandler({dragStart, dragEnd}, div2)
@@ -442,7 +439,7 @@ function menuFn() {
       if (!k) return
       console.log(k, t.textContent)
       if (!transIsChecked()) toggleTrans()
-      kur = new KuranText(SOURCE[k], setTrans)
+      kur = new KuranText(k, setTrans)
   }
   menuK.onclick = (evt) => { //menu button
       evt.preventDefault()
@@ -523,7 +520,7 @@ function keyToPage(evt) {
 }
 function checkTrans() {
   function handleCheck(e) {
-    let s = SOURCE[e.id]
+    let s = SOURCE[e.id]  //defined in model.js
     e.classList.toggle('checked', s === kur.url)
   }
     menuT.querySelectorAll('[id]').forEach(handleCheck)
