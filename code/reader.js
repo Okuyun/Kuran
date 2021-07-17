@@ -325,6 +325,7 @@ function initialPage() {
     if (initialized) { //global
       if (!gotoHashPage()) gotoPage(1) 
       //getStorage('iqra', 'page') || 1)
+      checkTrans()
     }
 }
 function initReader() {
@@ -337,8 +338,9 @@ function initReader() {
     pageD.ontoggle = handlePageNum
     let bkgd = pageD.querySelector('.bkgd')
     bkgd.onclick = (e) => e.target===bkgd? pageD.open=false : 0
-    starA.ontouchstart = () => clickStart = Date.now()
-    starA.onmousedown  = () => clickStart = Date.now()
+    starA.ontouchstart = startClick
+    starA.ontouchend   = handleStars
+    starA.onmousedown  = startClick
     starA.onclick  = handleStars
     starB.onclick  = toggleStar
     tranA.onclick  = handleTrans
@@ -433,6 +435,7 @@ function menuFn() {
     function setTrans() {
       text.innerHTML = kur.pageToHTML(curPage)
       setStorage('settings', 'source', k)
+      checkTrans()
     }
       hideElement(menuT); //evt.preventDefault()
       let t = evt.target, k = Number(t.id)
@@ -518,6 +521,13 @@ function keyToPage(evt) {
       hideElement(menuS)
     }
 }
+function checkTrans() {
+  function handleCheck(e) {
+    let s = SOURCE[e.id]
+    e.classList.toggle('checked', s === kur.url)
+  }
+    menuT.querySelectorAll('[id]').forEach(handleCheck)
+}
 function handleTrans() {
     if (menuT.style.display) {
       hideElement(menuT)
@@ -547,18 +557,19 @@ function makeStarMenu() {
         t += span+'s'+nameFromPage(k)+'</span>\n'
     starred.innerHTML = t
 }
+function startClick() { clickStart = Date.now() }
 function handleStars(evt) {
-    if (clickStart && Date.now()-clickStart < 300) {
-       // console.log(Date.now()-clickStart)
-      evt.preventDefault(); toggleStar()
-      clickStart = undefined
-    } else if (menuS.style.display) {
+    if (menuS.style.display) {
       hideElement(menuS)
+    } else if (clickStart && Date.now()-clickStart < 300) {
+      console.log(Date.now()-clickStart)
+      evt.preventDefault(); toggleStar()
     } else {
       hideMenus(); makeStarMenu()
       let x = starA.offsetLeft+10, y = starA.offsetTop+33
       setPosition(menuS, x, y, 110)
     }
+    clickStart = undefined
 }
 function handlePageNum() {
     pgNum.value = curPage
