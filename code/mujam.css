@@ -124,15 +124,12 @@
       position: fixed;
       display: none;
       border: black 1px solid;
-      text-align: center;
+      /* text-align: center; */
       color: blue;
       background-color: #eee;
       font: 13px sansserif, arial;
       user-select: none;
       z-index: 1;
-    }
-    #version { 
-      color: black;
     }
     .menuK {
       display: block;
@@ -145,6 +142,7 @@
     .black {
       margin-top: 8px;
       color: black;
+      text-align: center;
     }
   #noteBox {
     border: 6px solid gray;

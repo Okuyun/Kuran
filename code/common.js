@@ -66,15 +66,16 @@ function hideElement(elt) {
  * @param {number} p page
  */
 function openSitePage(s, p) {
-  let url, name; hideMenus()
-  switch (s.toUpperCase()) {
+    let url; hideMenus()
+    let name = "Kuran"; 
+    switch (s.toUpperCase()) {
     case 'B':  //Yer işaretleri -- Bookmarks
         url = 'bookmarks.html'; name = 'finder'; break
     case 'Y': case '?':  //Yardım
-        url = 'guideQ.html'; name = 'Kuran'; break
+        url = 'guideQ.html'; break
     case 'K':
-        url = "http://kuranmeali.com/Sayfalar.php?sayfa="+p
-        name = "Kuran"; break
+        url = "https://kuranmeali.com/Sayfalar.php?sayfa="+p
+        break
     case 'P':
         url = "https://okuyun.github.io/Kuran/#p="
         doShare(p+'. sayfa', url+p)
@@ -100,20 +101,25 @@ function doShare(text, url) {
  * @param {number} v verse
  */
 function openSiteVerse(s, c, v) {
-  let url, name; hideMenus()
+  let url; hideMenus()
+  let name = "Kuran"; 
   switch (s.toUpperCase()) {
     case 'K':
-        url = "http://kuranmeali.com/AyetKarsilastirma.php?sure="+c+"&ayet="+v
-        name = "Kuran"; break
+        url = "https://kuranmeali.com/AyetKarsilastirma.php?sure="+c+"&ayet="+v
+        break
     case 'C':
         url = "http://corpus.quran.com/wordbyword.jsp?chapter="+c+"&verse="+v
-        name = "Kuran"; break
+        break
+    case 'D':
+        url = "https://kuran.diyanet.gov.tr/mushaf/kuran-1/"
+                +sName[c]+"-suresi-"+c+"/ayet-"+v+"/kuran-yolu-meali-5"
+        break
     case 'Q':
         url = "https://quran.com/"+c+'/'+v
-        name = "Kuran"; break
+        break
     case 'A':
         url = "https://acikkuran.com/"+c+'/'+v
-        name = "Kuran"; break
+        break
     case 'P':
         url = "https://okuyun.github.io/Kuran/#v="
         doShare(sName[c]+' Suresi '+v+'. ayet', url+c+':'+v)
