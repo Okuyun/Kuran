@@ -29,6 +29,18 @@
     .white { background: white; }
     .small { font-size: smaller; }
     .expert { color: red; }
+    #page {
+      position: relative;
+      top: -10px;
+    }
+    #star {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-image: url(image/star.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   </style>
 </head>
 
@@ -43,6 +55,7 @@
 <p><label>Mushafta göster (Sayfa veya Sure:Ayet) </label><br>
 <input type=text id=page placeholder='378 veya 27 30' inputmode=numeric title=
 '1-604 arasında sayfa numarası &#10;ya da sure-ayet numaraları&#10;(boşluk ile ayrılmış)'>
+&emsp; <button id=star></button>
 </p>
 <p><label>Rehberde bul (Arapça ya da meal) </label><br>
 <input type=text id=text placeholder='Aranacak metin'
@@ -171,8 +184,18 @@ function setOmni(evt) {
     text.onchange = setOmni
     page.onchange = setOmni
     document.onkeydown = keyToPage
-    let p = getStorage('iqra', 'page')
-    if (p) { page.value = p; setFocus(page) }
+    let s = getStorage('iqra')
+    if (s.page) {
+      page.value = s.page; setFocus(page)
+    }
+    let m = s.marks
+    if (m && m.length) {
+      let h = m.pop()
+      star.onclick = () => doOpen('#p='+h)
+      star.title='En son işaretlenen sayfa: '+h
+    } else {
+      star.hidden = true
+    }
 </script>
 
 </body>
