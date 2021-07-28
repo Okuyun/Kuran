@@ -47,6 +47,7 @@
         background: darkorange;
         margin: 6px;
         padding: 2px 5px;
+        user-select: none;
     }
   </style>
 </head>
@@ -108,7 +109,7 @@ function display(key='notesQ') {
   function anchor(p) {
     let a =  //use page p and notes[p]
      '<a href="reader.html#p='+p+'"'
-    +' target=iqra>s. '+p+'</a>'
+    +' target=iqra>s.'+p+'</a> '
     let x = 
      '<button id='+p+' title="Bu notu sil"'
     +' onclick="remove(this.id)">x</button>'
