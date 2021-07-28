@@ -29,11 +29,9 @@
     .white { background: white; }
     .small { font-size: smaller; }
     .expert { color: red; }
-    #page {
-      position: relative;
-      top: -10px;
-    }
     #star {
+      position: relative;
+      top: 10px;
       width: 36px;
       height: 36px;
       border-radius: 50%;
@@ -55,7 +53,9 @@
 <p><label>Mushafta göster (Sayfa veya Sure:Ayet) </label><br>
 <input type=text id=page placeholder='378 veya 27 30' inputmode=numeric title=
 '1-604 arasında sayfa numarası &#10;ya da sure-ayet numaraları&#10;(boşluk ile ayrılmış)'>&emsp; 
-<button id=star></button>
+<button id=star></button>&nbsp;
+<button id=bookmark onclick='location="bookmarks.html"'
+  title="Yer işaretlerini yönetin">Yıldızlar</button>
 </p>
 <p><label>Rehberde bul (Arapça ya da meal) </label><br>
 <input type=text id=text placeholder='Aranacak metin'
@@ -64,11 +64,12 @@ title='Bu alana girilen metin Rehber yazılımı ile aranır'>
 <p><label>Mucemde bul </label><br>
 <input type=text id=root placeholder='ktb Elm'
   title='Birden fazla kök aranacaksa boşluk ile ayrılmalı'>&emsp;
-<button class=yellow id=search title='Link adresini kullan'>Bul</button> &nbsp;
+<button class=yellow id=search title='Link adresini kullan'>Bul</button>&nbsp;
 <button id=clear title='Girilen verileri sil' hidden>Sil</button>
 </p>
-<button onclick='location="konular.html"'>Konular</button> &nbsp;
-<button onclick='location="/Kitap/rama/"'>Ramazan</button> &nbsp;
+<button onclick='location="konular.html"'>Konular</button>
+<button onclick='location="notlar.html"'>Notlar</button>
+<button onclick='location="/Kitap/rama/"'>30 gün</button>
 <button onclick='location="/Kitap/ders/"'>Dersler</button>
 <hr />
 <details id=expert class=expert>
@@ -195,6 +196,7 @@ function setOmni(evt) {
       star.title='En son işaretlenen sayfa: '+h
     } else {
       star.style.visibility = "hidden"
+      bookmark.style.visibility = "hidden"
     }
 </script>
 

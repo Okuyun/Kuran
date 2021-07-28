@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"    content="width=device-width">
+    <meta name="author"      content="M A Eyler, Istanbul, 2020" />
+    <meta name="description" content="Reader for the Quran" />
+    <link rel="icon" href="image/icon.png">
+    <title>Notlar</title>
+
+  <style>
+    body {
+        max-width: 540px;
+        background: #dfd;
+    }
+    button {
+        cursor: pointer;
+        background: yellow;
+        margin: 6px;
+        padding: 6px;
+    }
+    #notlar div {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    #notlar a {
+        font: 15px arial, sans-serif;
+        text-decoration: none;
+        display: inline-block;
+        width: 3em;
+        color: black;
+        cursor: pointer;
+        background: hsl(240, 100%, 95%);
+        margin: 6px;
+        border: 1px solid;
+        padding: 6px;
+    }
+    #notlar a:hover { 
+        background: hsl(240, 100%, 85%);
+    }
+    #notlar i {
+        color: black;
+        margin: 6px;
+        text-overflow: ellipsis;
+    }
+    #notlar button {
+        background: darkorange;
+        margin: 6px;
+        padding: 2px 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2 title='Her sayfaya notlar eklenebilir'>Sayfa Notları</h2>
+<p>Mushafın her sayfasına o sayfa ile ilgili bir not eklenebilir. 
+Sağ alt köşedeki + (artı) simgesine basmak yeterli.
+</p>
+<div>
+  <button id=save onclick="doSave()">
+    <a id=saveA title="Notları dosyaya kaydet">Kaydet</a>
+  </button> &ensp;
+  <input type=file onChange='fileSelect(this.files[0])' 
+    title="Kaydedilmiş dosyadan notları oku" /><br>
+Notları başka bir cihaza aktarmak için önce yerel bir dosyaya kaydedin,
+sonra bu dosyayı diğer cihaza taşıyıp oradan seçin.
+</div>
+<p id=notlar></p>
+
+<script src="code/common.js"></script>
+<script>
+"use strict";
+function doSave() {
+    let data = localStorage.notesQ
+    if (saveA.href) URL.revokeObjectURL(saveA.href)
+    let blob = new Blob([data], {type: 'text/plain'})
+    saveA.href= URL.createObjectURL(blob)
+    let [time] = new Date().toTimeString().split(' ')
+    saveA.download = NAME + time.replace(/:/g, '.')
+    console.log('doSave', saveA.download)
+}
+async function fileSelect(f) {
+    try {
+      if (!f.name.startsWith(NAME)) throw 'İsim yanlış'
+      let t = await f.text()
+      let a = Object.getOwnPropertyNames(JSON.parse(t))
+      let msg = 
+      "Listedeki "+number+" adet notunuz silinecek.\n"
+      + "Dosyadan okunan "+a.length+" adet not var.\n"
+      + "Bu işlem geri alınamaz. Devam?"
+      if (number && !confirm(msg)) return
+      localStorage.notesQ = t; display()
+      console.log('fileSelect', f.name)
+    } catch (e) {
+      alert('Bu dosya olmaz: '+f.name+'\n'+e)
+    }
+}
+function remove(c) {
+    let key = 'notesQ'
+    let d = getStorage(key)
+    if (!d || !d[c]) return
+    delete d[c]
+    setStorage(key, d); display()
+    console.log('remove', c)
+}
+function display(key='notesQ') {
+  function anchor(p) {
+    let a =  //use page p and notes[p]
+     '<a href="reader.html#p='+p+'"'
+    +' target=iqra>s. '+p+'</a>'
+    let x = 
+     '<button id='+p+' title="Bu notu sil"'
+    +' onclick="remove(this.id)">x</button>'
+    let n = '<i>'+notes[p]+'</i>'
+    return '<div>'+a+x+n+'</div>'
+  }
+    notes = getStorage(key) //global
+    let a = Object.getOwnPropertyNames(notes)
+    notlar.innerHTML = a.map(anchor).join('\n')
+    number = a.length //global
+}
+const NAME = 'Notlar '
+var notes, number;
+display()
+</script>
+
+</body>
+</html>

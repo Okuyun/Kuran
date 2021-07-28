@@ -69,8 +69,8 @@ function openSitePage(s, p) {
     let url; hideMenus()
     let name = "Kuran"; 
     switch (s.toUpperCase()) {
-    case 'B':  //Yer işaretleri -- Bookmarks
-        url = 'bookmarks.html'; name = 'finder'; break
+    // case 'B':  //Yer işaretleri -- Bookmarks
+    //     url = 'bookmarks.html'; name = 'finder'; break
     case 'Y': case '?':  //Yardım
         url = 'guideQ.html'; break
     case 'K':
@@ -162,12 +162,12 @@ function getStorage(q='iqra', k) {
  */
 function setStorage(q, k, v) {
     if (!localStorage) return
-    if (v) {
-        let x = getStorage(q) || {}; x[k] = v
-        localStorage[q] = JSON.stringify(x)
-    } else { // v is omitted, use k
+    if (v === undefined) { //v is omitted, use k
         localStorage[q] = typeof(k) == 'object'?
            JSON.stringify(k) : k
+    } else {
+        let x = getStorage(q) || {}; x[k] = v
+        localStorage[q] = JSON.stringify(x)
     }
 }
 /**
@@ -176,7 +176,6 @@ function setStorage(q, k, v) {
 class Notes {
     constructor(key='notes') {
         this.key = key
-        this.data = getStorage(key) || {}
         this.but = document.querySelector('#noteBut')
         if (!this.but) throw('#noteBut is not found')
         this.box = document.querySelector('#noteBox')
@@ -189,6 +188,9 @@ class Notes {
                 this.edit(false)
         }
     }
+    data(c) {
+        return getStorage(this.key, c) || ''
+    }
     boxValue() {
         const MAX = 200
         return this.box.value.trim().substring(0, MAX)
@@ -196,10 +198,9 @@ class Notes {
     saveCurrent() {
         let c = this.current
         let v = this.boxValue()
-        if (c && v && this.data[c] !== v) {
-            this.data[c] = v
-            setStorage(this.key, this.data)
-        }
+        let d = this.data(c)
+        if (c && d!==v) 
+            setStorage(this.key, c, v)
     }
     showBox(show) {
         if (show) {
@@ -213,7 +214,7 @@ class Notes {
     display(c) { //called on new page/word
         this.saveCurrent()
         this.current = String(c)
-        let v = this.data[c] || ''
+        let v = this.data(c)
         this.box.value = v
         this.but.style.backgroundImage = v?
             'url(./image/edit.png)' : '' //'add.png'
