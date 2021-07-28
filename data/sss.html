@@ -24,6 +24,8 @@
 <div>
     <h3 id=title></h3>
     Count all chars in Quran
+    <button onclick="MENU.count(SIMPLE)">Simple</button>
+    <button onclick="MENU.count(ABAY)">Abay</button>
     <pre id=output></pre>
 </div>
 <hr />
@@ -32,6 +34,8 @@
 <script src="https://maeyler.github.io/JS/sss/inspector.js"></script>
 <script>
 "use strict";
+const SIMPLE = "/Rehber/data/quran-simple-clean.txt";
+const ABAY   = "/Rehber/data/tr.abay.txt";
 class Counter extends Menu {
   constructor() {
     super();
@@ -39,8 +43,7 @@ class Counter extends Menu {
     this.caches = caches
     this.window = window
   }
-  async count(url) {
-      if (!url) url = "/Rehber/data/quran-simple-clean.txt"
+  async count(url = SIMPLE) {
       let r = await fetch(url) //response
       display(r)
       count2(await r.clone().text())
@@ -48,11 +51,11 @@ class Counter extends Menu {
   getBookmarks()  { return getStorage("iqra", "marks") }
   setBookmarks(a) { return setStorage("iqra", "marks", a) }
 }
-  //copied from common.js -- name conflict with sss
-function getStorage(q, k) {
+//copied from common.js -- name conflict with sss
+function getStorage(q='iqra', k) {
     if (!localStorage) return
     let e = localStorage[q]
-    if (!e) return
+    if (!e) return {}
     try {
         let x = JSON.parse(e)
         return k? x[k] : x
@@ -62,20 +65,22 @@ function getStorage(q, k) {
 }
 function setStorage(q, k, v) {
     if (!localStorage) return
-    if (v) {
-        let x = getStorage(q) || {}; x[k] = v
-        localStorage[q] = JSON.stringify(x)
-    } else { // v is omitted, use k
+    if (v === undefined) { //v is omitted, use k
         localStorage[q] = typeof(k) == 'object'?
            JSON.stringify(k) : k
+    } else {
+        let x = getStorage(q) || {}; x[k] = v
+        localStorage[q] = JSON.stringify(x)
     }
 }
 function count2(txt) {
     let map = new Map()
-    for (let k of txt) {//each char c
-      let c = map.get(k)
-      if (!c) c = 0
-      map.set(k, c+1)
+    let p  //prev char
+    for (let k of txt) {  //each char k
+      let c = map.get(k) || 0 //count c
+      if (k<='9' || k!==p)
+        map.set(k, c+1)  //skip repeated char
+      p = k
     }
     console.log(map)
     let b = [], n = 0
