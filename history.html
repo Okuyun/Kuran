@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"    content="width=device-width">
+    <meta name="author"      content="M A Eyler, Istanbul, 2019" />
+    <meta name="description" content="History of Iqra" />
+    <link rel="stylesheet" href="code/main.css" media="all">
+    <link rel="icon" href="image/icon.png">
+    <title>Yazılımın tarihçesi</title>
+  </head>
+  <style>
+    xs { font-size: x-small; }
+</style>
+  <body>
+
+<h2 id=title></h2>
+
+<h3 id="ezvu">
+<a href="https://www.macintoshrepository.org/1981-easy-view">
+  Easy View</a></h3>
+
+<p>Iqra projesi 1991'de (henüz web yok iken) basit bir Mac yazılımı olarak başladı. Metin dosyalarının iç yapısını kullanarak hızlı erişim sağladığı için, Kuran metnine ve mealine aynı hızda erişebiliyorduk.
+</p>
+
+<b>Mac sürümü &ndash; 1991</b>
+<p>Mac daha ilk günden yerelleştirmeye uygun tasarlanmıştı. Her pencerede farklı bir dil kullanabiliyorduk. Böylece Kuran metnini ve mealini aynı ekranda iki pencerede izleme imkanı doğdu.
+Basit bir DOS programı olan Salsabil'den Arapça metin, Diyanet mealinden Türkçe metin kullandık. Think Pascal ile geliştirilen bu yazılım sadece Mac OS altında çalışıyordu.</p>
+  <img src="docs/EV mac 1994.png">
+
+<p>Yazılımın Arapça (ve diğer diller) ile uyumunu gösteren bir ekran resmi bulamadım. Ama bu özelliği sayesinde ödül kazandığını burada eklemeliyim.</p>
+  <img src="docs/award 1993.jpg">
+<br><br>
+<b>Windows sürümü &ndash; 1994</b>
+<p>Yazılımın Windows'a uygulanması çok başarılı olmadı. Mac OS'de çalışan bir çok özelliği Windows'a taşıyamadık. Arapça metin şöyle dursun, Türkçeye özgü Ğ ve Ş bile doğru görünmüyordu.</p>
+  <img src="docs/EV win 1994.png" class="large">
+<br><br>
+<b>Java sürümü &ndash; 2004</b>
+<p>Yazılımın Java'ya taşınması dil sorununu bütün masa-üstü ve diz-üstü sistemlerde çözdü.</p>
+  <img src="docs/ezvu TR.png" class="large">
+<p>Java ayarları doğru yapılınca bu penceredeki Türkçe harfler elbette doğru görünüyordu. Bunca zaman sonra bu kadar çalışması bile tebrike şayan! Sonraki sene <a href="https://eyler.blogspot.com/2006/01/unicodea-vg.html">
+Unicode sayesinde</a> dil sorununu kökten çözüldü. </p>
+<br>
+<h3 id="iqra3">Iqra 3</h3>
+<p> <a href="http://corpus.quran.com" target="Kuran">
+Quranic Arabic Corpus</a> çıkınca, Arapça metne hakim olmaya başladık. Kelimelerin kökleri de verildiği için artık Mucem yazılımı gerçekleşebilirdi. </p>
+<b>V3.0 &ndash; 2011</b> (ilk Java sürümü)
+<br>
+<b>V3.05 &ndash; 2017</b> (son Java sürümü)
+<br>
+  <img src="docs/Iqra3.05.png" class="large">
+
+<p>Yukarıdaki pencereyi görmek için cihazınızda Java kurulu olmalı ve şu iki dosyayı indirmelisiniz: <br>
+<a href="https://maeyler.github.io/Iqra3/code/iqra.jar">jar file</a> ve 
+<a href="https://maeyler.github.io/Iqra3/image/me_quran.ttf">me_quran font</a></p>
+<p>Lakin Java ile yazılım geliştirmek zordu, 7 yılda fazla ileri gidemedik. Mucem bir türlü hayalden hakikate çıkamadı.
+Üstelik o yıllar mobil cihazların tırmanış zamanıydı ve standart Java bu cihazlarla uyumlu değildi. Mobil cihazlarda çalışması için web sayfalarına geçmeliydik.</p>
+  </p>
+<br>
+<b>Mobil sürüm &ndash; 2019</b> (JavaScript)
+<p><a href="https://maeyler.github.io/Iqra3/iqra%20V3.06.html">V3.06</a>
+Web sayfası (ilk mobil sürüm) </p>
+  <img src="docs/iqra V3.06.png" class="large">
+<p>Bugün çok ilkel görünen bu sayfada istenen bütün data mevcut. İlk defa kendi web sayfamızda Kuran metni ve meali bir arada göründüğü için bu sayfa çok önemli bir adım: Artık dosya indirmek ve yazılım kurmak tarihe karıştı. Öte yandan, bu ilk sürümde hatalar vardı. Arapça metne bakınca, besmele ile ilk ayetin karıştığını görebilirsiniz.</p>
+<p><a href="https://maeyler.github.io/Iqra3/iqra%20V3.11.html">V3.11</a>
+Iqra ve Visual Mujam projeleri birleşti</a></p>
+  <img src="docs/iqra V3.11.png">
+
+<p><a href="https://maeyler.github.io/Iqra3/reader.html">V3.29</a>
+Menüler ve yer işaretleri (Iqra3 sona erdi)</a></p>
+  <img src="docs/iqra V3.29.png">
+
+<br>
+<h3 id="iqra4">Iqra 4</h3>
+Bu sürümde yazılımın muhtelif parçaları tek pencerenin farklı panellerinde görünüyor. Artık bütün gayretimiz kullanım kolaylığı...
+<ul>
+  <li>
+<p><a href="https://maeyler.github.io/Kuran/frames.html" target="iqraTop">V4.0</a>
+ Paneller tek pencerede (Mayıs 2020)</a></p>
+  </li>
+  <li>
+<p>V4.1
+ Yeni adres: okuyun.org (Mart 2021)</a></p>
+  </li>
+  <li>
+<p><a href="/Kuran/" target="iqraTop">V4.2</a>
+  Kitap özellikleri (Ağustos 2021)</a></p>
+  </li>
+  <img src="docs/iqra V4.2.png">
+</ul>
+
+<p>(C) 1992, 2012, 2019 by M Akif Eyler
+
+<p>Copied using 
+<a href="http://corpus.quran.com/download/" target="Kuran">GNU License</a></p>
+
+<script>
+    title.innerText = document.title
+    window.name = "Kuran"
+</script>
+
+  </body>
+</html>
