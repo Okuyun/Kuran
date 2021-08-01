@@ -1,25 +1,22 @@
-### Iqra version 3
+### Iqra version 4
 
 Desktop and mobile Quran reader with Turkish translation
 
-V1. The project started in 1992 using the Arabic text from simple DOS program Salsabil
+V1. The project started in 1991 using the Arabic text from simple DOS program Salsabil, Turkish translation was copied from Diyanet
+([Easy View](https://www.macintoshrepository.org/1981-easy-view) running under Mac OS, code in Think Pascal)
 
-Turkish translation was copied from Diyanet
+V2. A simplified translation to Windows 3 (1994)
 
-(Easy View running under Mac OS, code in Think Pascal)
+V3. When [Quranic Arabic Corpus](http://corpus.quran.com) was released, we used their data (Java, 2011)
 
-V2. A simplified translation to Windows using Turbo Pascal (1998)
+Here is [V3.05 as jar file](https://github.com/maeyler/Iqra3/blob/master/code/iqra.jar) best viewed with [me_quran font](https://github.com/maeyler/Iqra3/blob/master/image/me_quran.ttf) (2017)
 
-V3. When [Quranic Arabic Corpus](http://corpus.quran.com) was released, we used their data in 2012 using Java
+[V3.06](https://maeyler.github.io/Iqra3/iqra%20V3.06.html) written as a web page using JavaScript (2019, first mobile version)
 
-Here is [V3.05 as jar file](https://github.com/maeyler/Iqra3/blob/master/code/iqra.jar) best viewed with [me_quran font](https://github.com/maeyler/Iqra3/blob/master/image/me_quran.ttf)
-
-V3.06 written as a web page using JavaScript (2019, first mobile version)
-
-V3.10 combined Iqra with [Visual Mujam project](https://maeyler.github.io/Visual-Mujam/)
+V3.11 combined Iqra with [Visual Mujam project](https://maeyler.github.io/Visual-Mujam/)
 
 
-(C) 1992, 2012, 2019 by M Akif Eyler -- GNU License below is also applicable to Iqra3
+(C) 1992, 2012, 2019 by M Akif Eyler -- GNU License below is also applicable to Iqra4
 
 Copied using [GNU License](http://corpus.quran.com/download/)
 ````
