@@ -10,89 +10,106 @@
     <title>Yazılımın tarihçesi</title>
   </head>
   <style>
-    xs { font-size: x-small; }
+    body { background: #ffe; }
+    .dikkat {
+      font-size: large;
+      color: blue;
+      background: yellow;
+      padding: 1em;
+    }
 </style>
   <body>
 
 <h2 id=title></h2>
 
 <h3 id="ezvu">
-<a href="https://www.macintoshrepository.org/1981-easy-view">
+<a href="https://www.macintoshrepository.org/1981-easy-view" target="NewTab">
   Easy View</a></h3>
 
-<p>Iqra projesi 1991'de (henüz web yok iken) basit bir Mac yazılımı olarak başladı. Metin dosyalarının iç yapısını kullanarak hızlı erişim sağladığı için, Kuran metnine ve mealine aynı hızda erişebiliyorduk.
+<p>Iqra projesi 1991'de (henüz web yok iken) basit bir Mac yazılımı olarak başladı. Birbiriyle ilişkili çok sayıda metin dosyasının iç yapısını kullanarak bilgiye hızlı erişim sağlıyordu. Kuran metni ve meali, içine eklenen yapısal elemanlarla, bu yazılıma uyarlandı. Sonuç olarak, Kuran'ın istenen ayetine bir anda erişebiliyor ve aranan kelimeyi birkaç saniye içinde bulabiliyorduk.
 </p>
 
-<b>Mac sürümü &ndash; 1991</b>
+<b>1. Mac sürümü &ndash; 1991</b>
 <p>Mac daha ilk günden yerelleştirmeye uygun tasarlanmıştı. Her pencerede farklı bir dil kullanabiliyorduk. Böylece Kuran metnini ve mealini aynı ekranda iki pencerede izleme imkanı doğdu.
 Basit bir DOS programı olan Salsabil'den Arapça metin, Diyanet mealinden Türkçe metin kullandık. Think Pascal ile geliştirilen bu yazılım sadece Mac OS altında çalışıyordu.</p>
   <img src="docs/EV mac 1994.png">
 
-<p>Yazılımın Arapça (ve diğer diller) ile uyumunu gösteren bir ekran resmi bulamadım. Ama bu özelliği sayesinde ödül kazandığını burada eklemeliyim.</p>
+<p>Yazılımın Arapça (ve diğer diller) ile uyumunu gösteren bir ekran resmi bulamadım. Ama bu özelliği sayesinde 
+<a href="http://www.nzdl.org/cgi-bin/library.cgi?e=d-00000-00---off-0tidbits--00-0----0-10-0---0---0direct-10---4-------0-1l--11-en-50---20-about---00-0-1-00-0-0-11-1-0utfZz-8-00&a=d&cl=CL1.1&d=HASH0a156a8fabea2a2f8a723a.2"  target="NewTab">ödül kazandığını</a> burada eklemeliyim.</p>
   <img src="docs/award 1993.jpg">
 <br><br>
-<b>Windows sürümü &ndash; 1994</b>
-<p>Yazılımın Windows'a uygulanması çok başarılı olmadı. Mac OS'de çalışan bir çok özelliği Windows'a taşıyamadık. Arapça metin şöyle dursun, Türkçeye özgü Ğ ve Ş bile doğru görünmüyordu.</p>
+<b>2. Windows sürümü &ndash; 1994</b>
+<p>Bilkent'te öğretim üyesi olan David Davenport yazılımı Windows'a uyguladı ama uygulama çok başarılı olmadı. Mac OS'de çalışan bir çok özelliği Windows'a taşıyamadık. Arapça metin şöyle dursun, Türkçeye özgü Ğ ve Ş bile doğru görünmüyordu, çünkü işletim sisteminde bu özellikler yoktu. Yine de, PC dünyasında İngilizce meale en hızlı ulaşan yazılım oldu.</p>
   <img src="docs/EV win 1994.png" class="large">
 <br><br>
-<b>Java sürümü &ndash; 2004</b>
-<p>Yazılımın Java'ya taşınması dil sorununu bütün masa-üstü ve diz-üstü sistemlerde çözdü.</p>
+<b>3. Java sürümü &ndash; 2004</b>
+<p>Yazılımın Java'ya taşınması ile, Easy View bütün masa-üstü ve diz-üstü sistemlerde çalışabilir oldu. Dil sorunu büyük ölçüde çözüldü.</p>
   <img src="docs/ezvu TR.png" class="large">
-<p>Java ayarları doğru yapılınca bu penceredeki Türkçe harfler elbette doğru görünüyordu. Bunca zaman sonra bu kadar çalışması bile tebrike şayan! Sonraki sene <a href="https://eyler.blogspot.com/2006/01/unicodea-vg.html">
-Unicode sayesinde</a> dil sorununu kökten çözüldü. </p>
+<p>Java ayarları doğru yapılınca bu penceredeki Türkçe harfler elbette doğru görünüyordu. (Şu sıralar hiç Java kullanmadığım için ayarları yapmadım) Sonraki sene <a href="https://eyler.blogspot.com/2006/01/unicodea-vg.html" target="NewTab">Unicode sayesinde</a> dil sorunu kökten çözüldü. </p>
 <br>
-<h3 id="iqra3">Iqra 3</h3>
-<p> <a href="http://corpus.quran.com" target="Kuran">
-Quranic Arabic Corpus</a> çıkınca, Arapça metne hakim olmaya başladık. Kelimelerin kökleri de verildiği için artık Mucem yazılımı gerçekleşebilirdi. </p>
-<b>V3.0 &ndash; 2011</b> (ilk Java sürümü)
-<br>
-<b>V3.05 &ndash; 2017</b> (son Java sürümü)
-<br>
+
+<h2 id="iqra3">Iqra 3</h2>
+<p> <a href="http://corpus.quran.com" target="NewTab">
+Quranic Arabic Corpus</a> çıkınca, Arapça metne hakim olmaya başladık. 
+Genel amaçlı metin işleme yazılımı Easy View, sadece Kuran amaçlı Iqra yazılımına dönüştü. 
+Bu arada sayfa düzenini standart mushaflara uygun hale getirdik. 
+Kelimelerin kökleri verildiği için artık Mucem yazılımı da gerçekleşebilirdi. </p>
+<p>
+<b>V3.00 &ndash; 2011</b> (ilk Java sürümü)<br>
+<b>V3.05 &ndash; 2017</b> (son Java sürümü)<br>
+</p>
   <img src="docs/Iqra3.05.png" class="large">
 
-<p>Yukarıdaki pencereyi görmek için cihazınızda Java kurulu olmalı ve şu iki dosyayı indirmelisiniz: <br>
+<p>Yukarıdaki pencereyi görmek için cihazınızda Java kurulu olmalı ve şu iki dosyayı indirmelisiniz:
 <a href="https://maeyler.github.io/Iqra3/code/iqra.jar">jar file</a> ve 
 <a href="https://maeyler.github.io/Iqra3/image/me_quran.ttf">me_quran font</a></p>
 <p>Lakin Java ile yazılım geliştirmek zordu, 7 yılda fazla ileri gidemedik. Mucem bir türlü hayalden hakikate çıkamadı.
 Üstelik o yıllar mobil cihazların tırmanış zamanıydı ve standart Java bu cihazlarla uyumlu değildi. Mobil cihazlarda çalışması için web sayfalarına geçmeliydik.</p>
   </p>
 <br>
-<b>Mobil sürüm &ndash; 2019</b> (JavaScript)
-<p><a href="https://maeyler.github.io/Iqra3/iqra%20V3.06.html">V3.06</a>
-Web sayfası (ilk mobil sürüm) </p>
+
+<b class="dikkat">Mobil sürüm (JavaScript)</b>
+<br><br>
+<p><a href="https://maeyler.github.io/Iqra3/iqra%20V3.06.html" target="iqraTop">V3.06</a>
+Web sayfası (ilk mobil sürüm &ndash; Ekim 2019) </p>
+<p>Şimdi çok ilkel görünen bu tasarımda istenen bütün data mevcut. İlk defa kendi web sayfamızda Kuran metni ve meali bir arada göründüğü için bu sayfa çok önemli bir adım: Artık dosya indirmek ve yazılım kurmak tarihe karıştı. Öte yandan, bu ilk sürümde hatalar vardı. Arapça metne bakınca, besmele ile ilk ayetin karıştığını görebilirsiniz:</p>
   <img src="docs/iqra V3.06.png" class="large">
-<p>Bugün çok ilkel görünen bu sayfada istenen bütün data mevcut. İlk defa kendi web sayfamızda Kuran metni ve meali bir arada göründüğü için bu sayfa çok önemli bir adım: Artık dosya indirmek ve yazılım kurmak tarihe karıştı. Öte yandan, bu ilk sürümde hatalar vardı. Arapça metne bakınca, besmele ile ilk ayetin karıştığını görebilirsiniz.</p>
-<p><a href="https://maeyler.github.io/Iqra3/iqra%20V3.11.html">V3.11</a>
-Iqra ve Visual Mujam projeleri birleşti</a></p>
-  <img src="docs/iqra V3.11.png">
-
-<p><a href="https://maeyler.github.io/Iqra3/reader.html">V3.29</a>
-Menüler ve yer işaretleri (Iqra3 sona erdi)</a></p>
-  <img src="docs/iqra V3.29.png">
-
 <br>
-<h3 id="iqra4">Iqra 4</h3>
-Bu sürümde yazılımın muhtelif parçaları tek pencerenin farklı panellerinde görünüyor. Artık bütün gayretimiz kullanım kolaylığı...
+<p><a href="https://maeyler.github.io/Iqra3/iqra%20V3.11.html" target="iqraTop">V3.11</a>
+Iqra ve Visual Mujam projeleri birleşti (Kasım 2019)</p>
+<p>Arapça kelime kökleri gösteriliyor ve ilk defa Mucem tablosu ile ilişkili çalışıyor. Aşağıdaki telefon ekranında sadece Türkçe meal gösterilmiş:</p>
+  <img src="docs/iqra V3.11.png">
+<br>
+<p><a href="https://maeyler.github.io/Iqra3/reader.html" target="iqraTop">V3.29</a>
+Menüler ve yer işaretleri  (Mart 2020)</p>
+<p>Iqra3 için bu son sürümde, Iqra4'de kullandığımız hemen bütün özellikler var, lakin görünüm epeyce farklı:</p>
+  <img src="docs/iqra V3.29.png" class="large">
+<br>
+
+<h2 id="iqra4">Iqra 4</h2>
+Bu sürümde yazılımın muhtelif parçaları tek pencerenin farklı panellerinde görünüyor. Artık bütün gayretimiz zarif görünüm ve kolay kullanım yönünde...
 <ul>
   <li>
 <p><a href="https://maeyler.github.io/Kuran/frames.html" target="iqraTop">V4.0</a>
- Paneller tek pencerede (Mayıs 2020)</a></p>
+  Paneller tek pencerede (Mayıs 2020)</p>
   </li>
   <li>
-<p>V4.1
- Yeni adres: okuyun.org (Mart 2021)</a></p>
+<p>V4.1 Yeni adres: 
+  <a href="https://okuyun.org" target="iqraTop">okuyun.org</a> (Mart 2021)</p>
   </li>
   <li>
 <p><a href="/Kuran/" target="iqraTop">V4.2</a>
-  Kitap özellikleri (Ağustos 2021)</a></p>
+  Kitap özellikleri (Ağustos 2021)</p>
   </li>
-  <img src="docs/iqra V4.2.png">
 </ul>
+  <img src="docs/iqra V4.2.png" class="large">
 
-<p>(C) 1992, 2012, 2019 by M Akif Eyler
-
+<p>
+(C) 1992, 2012, 2019 by M Akif Eyler  &emsp; 
+<button onclick="history.back()">◀</button>
+</p>
 <p>Copied using 
-<a href="http://corpus.quran.com/download/" target="Kuran">GNU License</a></p>
+<a href="http://corpus.quran.com/download/" target="NewTab">GNU License</a></p>
 
 <script>
     title.innerText = document.title
