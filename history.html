@@ -11,25 +11,48 @@
   </head>
   <style>
     body { background: #ffe; }
+    ul { margin: 0  0 40px -20px; }
+    li { margin: 12px 0; }
     .dikkat {
       font-size: large;
       color: blue;
       background: yellow;
-      padding: 1em;
+      padding: 10px;
+    }
+    .Kuran {
+      font-family: Georgia, Times, serif;
+      color: green;
     }
 </style>
   <body>
 
 <h2 id=title></h2>
+<p class="Kuran">
+27:88 <b>sun`allâhillezî etqane kulle şey</b><br>
+<i>İşte bu, her şeyi sağlam yapan Allah'ın sanatıdır.</i>
+</p>
+<p>Yüce Allah, kendi sanatı olan yaratılışı anlamamız için bize muhtelif sanatlar öğretiyor. 
+Mimarlıktan müziğe, hattatlıktan mutfağa, terzilikten yazılıma... 
+her yaptığımız iş bir sanat olarak değerlendirilmeli, öyle okunmalı.
+</p>
 
-<h3 id="ezvu">
-<a href="https://www.macintoshrepository.org/1981-easy-view" target="NewTab">
-  Easy View</a></h3>
+<ul>Bu yazılımın evrimi üç safhada gelişti:
+  <li><b>Easy View</b> &emsp;
+    <a href="#mac">Mac – 1991</a>&ensp; 
+    <a href="#ezvu">Java – 2004</a></li>
+  <li><b>Iqra 3</b> &emsp;
+    <a href="#iqra3">Java – 2011</a>&ensp; 
+    <a href="#mobil" class="dikkat">Web – 2019</a></li>
+  <li><b>Iqra 4</b> &emsp;
+    <a href="#iqra4">Web – 2020</a></li>
+</ul>
+
+<h3><a href="https://www.macintoshrepository.org/1981-easy-view" target="NewTab">Easy View</a></h3>
 
 <p>Iqra projesi 1991'de (henüz web yok iken) basit bir Mac yazılımı olarak başladı. Birbiriyle ilişkili çok sayıda metin dosyasının iç yapısını kullanarak bilgiye hızlı erişim sağlıyordu. Kuran metni ve meali, içine eklenen yapısal elemanlarla, bu yazılıma uyarlandı. Sonuç olarak, Kuran'ın istenen ayetine bir anda erişebiliyor ve aranan kelimeyi birkaç saniye içinde bulabiliyorduk.
 </p>
 
-<b>1. Mac sürümü &ndash; 1991</b>
+<b id=mac>1. Mac sürümü &ndash; 1991</b>
 <p>Mac daha ilk günden yerelleştirmeye uygun tasarlanmıştı. Her pencerede farklı bir dil kullanabiliyorduk. Böylece Kuran metnini ve mealini aynı ekranda iki pencerede izleme imkanı doğdu.
 Basit bir DOS programı olan Salsabil'den Arapça metin, Diyanet mealinden Türkçe metin kullandık. Think Pascal ile geliştirilen bu yazılım sadece Mac OS altında çalışıyordu.</p>
   <img src="docs/EV mac 1994.png">
@@ -42,7 +65,7 @@ Basit bir DOS programı olan Salsabil'den Arapça metin, Diyanet mealinden Türk
 <p>Bilkent'te öğretim üyesi olan David Davenport yazılımı Windows'a uyguladı ama uygulama çok başarılı olmadı. Mac OS'de çalışan bir çok özelliği Windows'a taşıyamadık. Arapça metin şöyle dursun, Türkçeye özgü Ğ ve Ş bile doğru görünmüyordu, çünkü işletim sisteminde bu özellikler yoktu. Yine de, PC dünyasında İngilizce meale en hızlı ulaşan yazılım oldu.</p>
   <img src="docs/EV win 1994.png" class="large">
 <br><br>
-<b>3. Java sürümü &ndash; 2004</b>
+<b id=ezvu>3. Java sürümü &ndash; 2004</b>
 <p>Yazılımın Java'ya taşınması ile, Easy View bütün masa-üstü ve diz-üstü sistemlerde çalışabilir oldu. Dil sorunu büyük ölçüde çözüldü.</p>
   <img src="docs/ezvu TR.png" class="large">
 <p>Java ayarları doğru yapılınca bu penceredeki Türkçe harfler elbette doğru görünüyordu. (Şu sıralar hiç Java kullanmadığım için ayarları yapmadım) Sonraki sene <a href="https://eyler.blogspot.com/2006/01/unicodea-vg.html" target="NewTab">Unicode sayesinde</a> dil sorunu kökten çözüldü. </p>
@@ -68,7 +91,7 @@ Kelimelerin kökleri verildiği için artık Mucem yazılımı da gerçekleşebi
   </p>
 <br>
 
-<b class="dikkat">Mobil sürüm (JavaScript)</b>
+<b id=mobil class="dikkat">Mobil sürüm (JavaScript)</b>
 <br><br>
 <p><a href="https://maeyler.github.io/Iqra3/iqra%20V3.06.html" target="iqraTop">V3.06</a>
 Web sayfası (ilk mobil sürüm &ndash; Ekim 2019) </p>
