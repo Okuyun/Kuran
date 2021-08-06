@@ -114,6 +114,9 @@ function openSiteVerse(s, c, v) {
         url = "https://kuran.diyanet.gov.tr/mushaf/kuran-1/"
                 +sName[c]+"-suresi-"+c+"/ayet-"+v+"/kuran-yolu-meali-5"
         break
+    case 'T':
+        url = "https://tanzil.net/#"+c+':'+v
+        break
     case 'Q':
         url = "https://quran.com/"+c+'/'+v
         break
