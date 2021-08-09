@@ -25,6 +25,9 @@
       border-radius: 8px;
       cursor: pointer;
     }
+    .group button {
+      min-width: 84px;
+    }
     .yellow { background: yellow; }
     .white { background: white; }
     .small { font-size: smaller; }
@@ -54,8 +57,7 @@
 <input type=text id=page placeholder='378 veya 27 30' inputmode=numeric title=
 '1-604 arasında sayfa numarası &#10;ya da sure-ayet numaraları&#10;(boşluk ile ayrılmış)'>&emsp; 
 <button id=star></button>&nbsp;
-<button id=bookmark onclick='location="bookmarks.html"'
-  title="Yer işaretlerini yönetin">Yıldızlar</button>
+<button id=last>Son</button>&nbsp;
 </p>
 <p><label>Rehberde bul (Arapça ya da meal) </label><br>
 <input type=text id=text placeholder='Aranacak metin'
@@ -67,10 +69,20 @@ title='Bu alana girilen metin Rehber yazılımı ile aranır'>
 <button class=yellow id=search title='Link adresini kullan'>Bul</button>&nbsp;
 <button id=clear title='Girilen verileri sil' hidden>Sil</button>
 </p>
+<p class="group">
 <button onclick='location="konular.html"'>Konular</button>
 <button onclick='location="notlar.html"'>Notlar</button>
+<button onclick='window.open("guideQ.html","Kuran")'>Yardım</button>
+</p>
+<p id=kitap class="group">
+<button id=bookmark onclick='location="bookmarks.html"'
+  title="Yer işaretlerini yönetin">Yıldızlar</button>
 <button onclick='location="/Kitap/rama/"'>30 gün</button>
 <button onclick='location="/Kitap/ders/"'>Dersler</button>
+</p>
+<p id=offline hidden class=expert>
+  Internet kapalı iken bazı özellikler çalışmaz
+</p>
 <hr />
 <details id=expert class=expert>
   <summary title="Buckwalter kodunu göster/gizle">
@@ -91,6 +103,7 @@ title='Bu alana girilen metin Rehber yazılımı ile aranır'>
 </details>
 
 <script src="code/common.js"></script>
+<script src="code/buckwalter.js"></script>
 <script>
 "use strict";
 /* already done in index.html
@@ -123,9 +136,7 @@ function doText(h) {
 }
 function doOpen(h) {
     if (!h) return
-    if (parent.iqra)
-      parent.iqra.location.hash = h
-    else window.open('reader.html#'+h, 'iqra')
+    window.open('reader.html#'+h, 'iqra')
 }
 function doOmni() {
     let t = omni.value
@@ -155,13 +166,21 @@ function pageValue() {
       return 'p='+c
     }
 }
+function rootValue() {
+    let r = root.value
+    let b = toBuckwalter(r)
+    return 'r='+(b.includes('?') ? r : b)
+}
+function textValue() {
+    return 't='+text.value
+}
 function keyToPage(evt) {
     if (evt.key == 'Enter') 
       switch (evt.target) {
         case root:
-          doRoot('r='+root.value); break;
+          doRoot(rootValue()); break;
         case text:
-          doText('t='+text.value); break;
+          doText(textValue()); break;
         case page:
           doOpen(pageValue()); break;
         case omni:
@@ -172,32 +191,47 @@ function setOmni(evt) {
     let h = ''
     if (page.value) h += '&'+pageValue()
     if (root.value) 
-      h += '&r='+root.value.replace(/\s+/g, '&r=')
-    if (text.value) h += '&t='+text.value
+      h += '&'+rootValue().replace(/\s+/g, '&r=')
+    if (text.value) h += '&'+textValue()
     if (!h) return
     omni.value = h.substring(1)
     clear.hidden = false
+    // console.log(omni.value)
 }
-    title.innerText = document.title
+function init(storage = {}) {
+  function hideButtons(b) {
+    kitap.hidden = b; offline.hidden = !b
+    console.log(b ? 'offline' : 'online')
+  }
+    onoffline = () => hideButtons(true)
+    ononline  = () => hideButtons(false)
+    hideButtons(!navigator.onLine)
     search.onclick = doOmni
     clear.onclick = clearAll
     root.onchange = setOmni
     text.onchange = setOmni
     page.onchange = setOmni
     document.onkeydown = keyToPage
-    let s = getStorage('iqra')
-    if (s.page) {
-      page.value = s.page; setFocus(page)
+    let p = storage.page
+    if (p) {
+      last.onclick = () => doOpen('p='+p)
+      last.innerText = 'Sayfa '+p
+      last.title='En son açılan sayfa: '+p
+    } else {
+      last.style.visibility = "hidden"
     }
-    let m = s.marks
+    let m = storage.marks
     if (m && m.length) {
       let h = m.pop()
-      star.onclick = () => doOpen('#p='+h)
+      star.onclick = () => doOpen('p='+h)
       star.title='En son işaretlenen sayfa: '+h
     } else {
       star.style.visibility = "hidden"
       bookmark.style.visibility = "hidden"
     }
+}
+    title.innerText = document.title
+    init(getStorage('iqra'))
 </script>
 
 </body>
