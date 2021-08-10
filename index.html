@@ -267,11 +267,11 @@ function showFinder() {
 
 var id //indicates a drag event is active
 var x0 //clientX of the latest drag
-function dragSt(e) {
+function resizeStart(e) {
   // e.preventDefault()
   let p = e.touches? e.touches[0] : e
   x0 = Math.round(p.clientX)
-  id = setTimeout(dragEnd, 1500) //global
+  id = setTimeout(resizeEnd, 1500) //global
   console.log(e.type, x0, id)
   sizer.classList.add('sizing')
 }
@@ -279,7 +279,7 @@ function drag(e) {
   // e.preventDefault()
   if (!id) return
   clearTimeout(id)
-  id = setTimeout(dragEnd, 1000) //global
+  id = setTimeout(resizeEnd, 1000) //global
   let p = e.touches? e.touches[0] : e
   let x1 = Math.round(p.clientX)
   let f0 = finderWidth
@@ -289,7 +289,7 @@ function drag(e) {
   if (fw !== f0) resize()  //else do not move
   // console.log(e.type, fw)
 }
-function dragEnd(e) {
+function resizeEnd(e) {
   // if (e) e.preventDefault()
   if (!id) return
   clearTimeout(id); id = undefined
@@ -297,12 +297,12 @@ function dragEnd(e) {
   console.log(e? e.type : 'cancel', finderWidth)
   sizer.classList.remove('sizing')
 }
-  sizer.onmousedown = dragSt
+  sizer.onmousedown = resizeStart
   sizer.onmousemove = drag
-  sizer.onmouseup = dragEnd
-  sizer.ontouchstart = dragSt
+  sizer.onmouseup = resizeEnd
+  sizer.ontouchstart = resizeStart
   sizer.ontouchmove = drag
-  sizer.ontouchend = dragEnd
+  sizer.ontouchend = resizeEnd
   // resizable iframe has a bug
   // new ResizeObserver(setWidth).observe(findFrm)
   window.onbeforeinstallprompt = (e) => {

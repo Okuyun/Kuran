@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.2β";
+const VERSION = "V4.2";
 
 /**
  * &ensp; used in Mujam and VerseRef
@@ -249,9 +249,6 @@ class TouchHandler {
         elt.ontouchstart = (e) => this.start(e)
         elt.ontouchmove = (e) => this.move(e)
         elt.ontouchend = (e) => this.stop(e)
-        // elt.addEventListener("touchstart", this.start.bind(this));
-        // elt.addEventListener("touchmove", this.move.bind(this));
-        // elt.addEventListener("touchend", this.stop.bind(this));
     }
     start(evt) {
         if (this.t || !this.action.dragStart) return
@@ -262,10 +259,10 @@ class TouchHandler {
         let doc = window.findFrm?  //running at top level
           findFrm.contentDocument : document
         let se = doc.scrollingElement
-        this.atTop = se.scrollTop === 0
+        this.atTop = (se.scrollTop < 1)
         this.atBot = 
-          se.clientHeight+se.scrollTop === se.scrollHeight
-        // console.log(window.name, this.atTop, this.atBot)
+          (se.scrollHeight-se.clientHeight-se.scrollTop < 1) 
+// console.log(window.name, evt.target.tagName, this.atTop, this.atBot)
     }
     angle(evt) {
         let ct = evt.changedTouches[0]
@@ -288,6 +285,7 @@ class TouchHandler {
         this.t = undefined
         if (dt > 400) return  //not swipe
         let { a, dx, dy } = this.angle(evt)
+        // console.log(window.name, dt, a, this.action.dragEnd.name)
         if (a==3 && !this.atBot) return
         if (a==9 && !this.atTop) return
         const K = 60  //too little movement
@@ -295,9 +293,6 @@ class TouchHandler {
         if (!this.action.dragEnd(a, evt)) return
         evt.preventDefault()
     }
-}
-function isFalse(cb, ...arg) { //not used
-    return cb && !cb(...arg)
 }
 
 function setFocus(elt) {
