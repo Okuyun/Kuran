@@ -42,7 +42,7 @@
     <li><a href="#rehber">Rehber</a>
     <li><a href="#mucem">Mucem</a>
     <li><a href="#benzerlik">Benzerlik</a>
-    <li><a href="#yetenekler">Yetenekler</a>
+    <li><a href="#panel">Paneller</a>
     <li><a href="#sss">Sorular</a>
     <li><a href="history.html">Tarihçe</a>
     <li><a href="#tesekkur">Teşekkür</a>
@@ -53,7 +53,7 @@
 
 <p>Iqra, Kerim Kitabımız Kuran’ı okumak için yapılan yüzlerce yazılımdan biridir. Bunu diğer yazılımlardan ayrılan temel özellikler: Kelime kökünü Kuran metni üzerinde belirtmesi, bir kelimenin Kuran-ı Kerim'de geçtiği tüm sayfaları tek bir ekranda göstermesi ve internetsiz ortamda çalışabilmesidir.</p>
 
-<p>Ezber ve tilavet kolaylığı açısından, standart Mushaf sayfalarının düzeni aynen kullanıldı. </p>
+<p>Ezber ve tilavet kolaylığı açısından, standart Mushaf sayfalarını kullandık. </p>
 
 <h3 id=mushaf>1. Mushaf sayfaları</h3>
 
@@ -64,16 +64,19 @@
 </p>
 
 <p>
+  Başlangıç sayfası telefon ekranında şöyle görünür: <br><br>
   <img src="docs/start.png" alt="Start ekranı" class=large />
 </p>
 <ul>
-  <li>Mushafta göster: Sayfa veya ayet numarası ile belirtilen yeri göster</li>
-  <li>Rehberde bul: Kuran metninde Arapça ya da mealde Türkçe kelime ara</li>
+  <li>Mushafta göster: Sayfa veya ayet numarası ile belirtilen yeri,<br>
+    veya son işaretlenen ya da son açılan sayfayı göster
+  </li>
+  <li>Rehberde bul: Kuran metninde Arapça ya da mealde kelime ara</li>
   <li>Mucemde bul: Verilen Arapça kökten türetilen kelimeleri ara</li>
 </ul>
-
-<p>Giriş sayfasında sayfa ya da ayet numarası ile mushaf açılır. Ekran yeteri kadar geniş ise hem Kuran sayfası hem de meali görünür. Sayfa açılınca, sonraki ya da önceki sayfaya geçmek, başka bir sure ya da sayfa numarası vermek mümkün.</p>
-
+<p>Mushaf açılınca, ekran yeteri kadar geniş ise hem Kuran sayfası hem de meali görünür.
+İkisi bir arada sığmıyorsa sadece biri gösterilir (Bk: <a href="#panel">Paneller</a>)
+Mushaf açıkken sonraki ya da önceki sayfaya geçmek, başka bir sure, ayet ya da sayfa numarası vermek mümkün.</p>
 
 <p>Başlangıç adresinde sayfa ya da ayet numaraları belirtilebilir:</p>
 <ul>
@@ -87,19 +90,17 @@
   <img src="docs/Iqra_ktb.png" alt="Iqra ekranı" class=large />
 </p>
 
-<p>Sağ üstte görünen tuşların anlamı:
+<p>Sağ üstte görünen butonların anlamı:
 <ul>
-  <li>☆ &nbsp; Yer işareti ekle/sil</li>
-  <li>T &nbsp; Tercüme göster/gizle (geniş ekranda görünmez)</li>
+  <li>☆ &nbsp; Yer işareti ekle/sil/seç</li>
+  <li>T &nbsp; Tercüme göster/gizle/seç</li>
   <li><xs>A</xs>A &nbsp;Yazı boyu büyük/normal (dar ekranda görünmez)</li>
-  <li><u>=</u> &nbsp; Sayfa menüsü: Dış kaynaklar, Sürüm, Yardım, Yer işaretleri</li>
+  <li><u>=</u> &nbsp; Sayfa menüsü: Dış kaynaklar, Sürüm, Yardım</li>
   <li>A &nbsp; Arama paneline geç (Pembe tuş)</li>
 </ul>
 
 </p>
-
-<p>Arapça kelimelerin kökü, bilgisayarda mouse ile kelimeye tıklayarak, mobilde dokunarak bulunur. Sayfanın adresinde yazılan sayfa ya da ayet numarasından sonra, <code>&amp;r=ktb</code> şeklinde kelime kökleri verilirse, bu kelimeler renkli gösterilir. Mucemde seçilen kelimeler bu şekilde renklendiriliyor.</p>
-
+<p>Arapça kelimelerin kökü, bilgisayarda mouse ile kelimeye tıklayarak, mobilde dokunarak bulunur. Arama panelinde (Mucem veya Rehber) seçilen ayetler ve kelimeler renkli gösterilir.</p>
 <p>Dar ekranlara hem ayet hem de meal sütunları bir arada sığmaz, ayetler ile anlamlar arasındaki geçiş için T tuşuna basmak gerekiyor. Fontlar ekran genişliği ile orantılı olduğundan, telefonu yan tutmak daha iyi görüntü verecektir.</p>
 
 <p>
@@ -163,7 +164,7 @@ benzerlik modülü de Arapça kelime kökleri ile çalıştığı için,
 sadece Arapça metinde kullanılır, mealler için benzerlik modülü henüz yok.
 </p>
 
-<h3 id="yetenekler">3. Yazılımın yetenekleri</h3>
+<h3 id="panel">3. Yazılımın yetenekleri</h3>
 
 <p>PWA (Progressive web application) olduğu için taşıdığı özellikler:</p>
 
@@ -174,9 +175,25 @@ sadece Arapça metinde kullanılır, mealler için benzerlik modülü henüz yok
   <li>Internet bağlantısı olmadan off-line çalışabilir</li>
   <li>Masa-üstünden telefona kadar her boy ekranla uyumludur</li>
 </ul>
+<p>Aşağıdaki örnekler üstünde yazılımın yeteneklerini özetleyelim:</p>
 
-<p>Yazılımı kullanırken, arama ve Mushaf pencerelerini aynı anda açık tutmayı tavsiye ediyoruz. Geniş ekranlarda mouse ile, dar ekranlarda adres çubuğunu kaydırarak (ya da ilgili linklere tıklayarak) pencereler arası geçiş sağlanıyor. Aşağıdaki iki örnek üstünde yazılımın yeteneklerini özetleyelim:</p>
+<b>Paneller &ndash; Arama, Tercüme, Kuran</b>
 
+<p>Yazılımın en bariz özelliği, üç panelli tasarım:<br><br>
+  <img src="design/wide.png" alt="üç panel bir arada" class=large /></p>
+  
+<p>Üç paneli üç harfle gösterelim:<br>
+A: Arama, T: Tercüme (meal), K: Kuran
+</p>
+<p>
+Arama paneline bakıldığında şu sayfalardan yalnız biri görünür:
+Başlangıç, Rehber, Mucem, Konular, Notlar, Yıldızlar, Kitap...
+(Kitap sayfaları henüz gelişme aşamasındadır, çevrimdışı çalışmaz)
+</p>
+<p>Ekran yeteri kadar geniş ise üç panel aynı anda gösterilir. 
+  Diz-üstü bilgisayara iki, telefona yalnız bir panel sığacaktır.
+  Bu durumda, paneller arası geçiş için pembe butonlar ya da ekran kaydırma (swipe) kullanılır.<p>
+<br>
 <b>Mucem-Mushaf Geçişi</b>
 <p><img src="docs/Mucem-Mushaf.png" alt="Mucem-Mushaf" class=large /></p>
 
