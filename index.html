@@ -73,6 +73,7 @@
   <p id=dummy hidden></p>
 
 <script src="code/common.js"></script>
+<script src="code/utilities.js"></script>
 <script>
 sizer.style.display = 'none' //invisible
 const swipe = new TouchHandler({dragStart, dragEnd}, dummy)
@@ -110,15 +111,23 @@ function addListener(frm) {
   b.ontouchstart = dummy.ontouchstart
   b.ontouchend   = dummy.ontouchend
 }
+function hashToPage(h) {
+  [s] = h.split('&')
+  if (s.startsWith('#p=')) {
+    h = s.substring(3)
+  } else if (s.startsWith('#v=')) {
+    let [c, v] = s.substring(3).split(':')
+    h = pageOf(Number(c), Number(v))
+  }
+  console.log('hashToPage', h); return h
+}
 function reportHash(e) { //hashchange in one of the panes
   let s = '[Iqra]', h = ''
   if (e.target.name == 'iqra') {
-    if (skipEvent) {
-      skipEvent = false; return
-    }
-    if (readFrm.style.display == 'none') hideFinder()
     s = e.target.document.title
     h = e.target.location.hash
+    if (hashToPage(h) === iqra.curPage) return
+    if (readFrm.style.display == 'none') hideFinder()
   } else { // finder
     try {
       let p = finder.location.pathname //may fail
@@ -252,7 +261,6 @@ function showFinder() {
     isStartPage = true, // is shown?
     hashInProgress = false,
     initialHash = decodedHash(),
-    skipEvent = !initialHash,
     finderWidth;
   console.log('* start *', initialHash, location.hash)
   readFrm.style.display = 'none' //hide iqra frame
