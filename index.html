@@ -253,7 +253,7 @@ function showFinder() {
     if (!iqra.initialized) { //good idea, poor practice
       setTimeout(initReader, 500); return
     }
-    resize(); addListener(readFrm); //hashModified()
+    showFinder(); addListener(readFrm)
     if (!initialHash) return
     window.location.hash = initialHash
     initialHash = null
