@@ -4,7 +4,6 @@
 // import {VERSION, setPosition, hideElement, fetch_text_then, 
 //         openSitePage, openSiteVerse} from './common.js
 // import {toArabic, toBuckwalter} from "./buckwalter.js"
-// import {readTabularData, submitData} from "./submitForm.js"
 
 const M = 114; //suras
 const P = 604; //pages
@@ -64,14 +63,6 @@ function readSettings() {
 function setFontFamily(f){
     html.style.fontFamily = bilgi.style.fontFamily = f
 }
-/* function setBookmarks(text, data) { //not used -- initReader()
-    if (!text || !data.length) return
-    console.log(data)
-    let b = data.reverse()  //b is the latest entry in data
-      .find(x => x.user == localStorage.userName)
-    if (!b) return
-    arrayToSet(b.marks.split(' '))
-} */
 function forceSelection() {
     //trim for Windows -- thank you Rajab
     let s = window.getSelection() // fixed for Safari
@@ -236,7 +227,6 @@ function gotoPage(k, adjusting) { // 1<=k<=P
       let h = '#p='+curPage
       if (location.hash !== h) location.hash = h
     }
-    // setStorage('iqra', 'page', curPage)
     saveSettings(); scrollTo(0, 0)
 }
 function setSura(c) { // 1<=c<=M
@@ -364,8 +354,6 @@ function initReader() {
       } else {
         let dt = Date.now()/1000 - prevTime
         if (dt > 1000) console.log("invisible "+timeString(dt))
-        // if (dt > 9999 && localStorage.userName) //more than 3 hours
-        //     readTabularData(setBookmarks, console.error)
       }
     }
     bookmarks = new Set()
@@ -373,8 +361,6 @@ function initReader() {
     window.onhashchange = gotoHashPage
     window.name = "iqra" //by A Rajab
     if (readSettings() === DEFAULT) saveSettings()
-    // if (localStorage.userName) //takes time to load
-    //     readTabularData(setBookmarks, console.error)
 }
 /********************
  * Start of Menu functions -- added by Abdurrahman Rajab - FSMVU
@@ -543,7 +529,6 @@ function toggleTrans() {
       html.classList.remove('hiddenNarrow')
       text.classList.add('hiddenNarrow')
     }
-    // setStorage('iqra', 'trans', checked)
     hideMenus(); saveSettings()
 }
 function makeStarMenu() {
@@ -586,15 +571,7 @@ function toggleStar() {
       starB.innerHTML = 'Yıldız Ekle'
       msg = '-'
     }
-    // setStorage('iqra', 'marks', [...bookmarks])
     saveSettings(); hideMenus()
-    let n = getStorage('userName')
-    if (n) {
-      let s = msg? 'Remove' : 'Add'
-      console.log(s+" bookmark: "+curPage)
-      msg = msg+nameFromPage(curPage)
-      submitData(n, navigator.platform, msg)
-    }
 }
 function toggleMenuK() {
     if (!menuK.style.display) {
@@ -610,14 +587,9 @@ function toggleZoom() {
     let checked = zoomB.classList.toggle('checked')
     if (checked) {
       e.classList.add('zoomWide')
-      // if (document.fullscreenEnabled) 
-      //     e.requestFullscreen()  black background!!
     } else {
       e.classList.remove('zoomWide')
-      // if (document.fullscreenElement) 
-      //     document.exitFullscreen()
     }
-    // setStorage('iqra', 'zoom', checked)
     hideMenus(); saveSettings()
 }
 
