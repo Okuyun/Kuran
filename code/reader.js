@@ -42,7 +42,7 @@ function saveSettings() {
       page: curPage,
       marks: [...bookmarks],
       trans: transIsChecked(),
-      zoom: zoomB.classList.contains("checked")
+      zoom: zoomA.classList.contains("checked")
     }
     if (parent.finderWidth)
       x.finderWidth = parent.finderWidth
@@ -321,19 +321,16 @@ function initReader() {
     // console.log(swipe)  //TouchHandler
     sureS.onchange = () => {gotoSura(sureS.selectedIndex+1)}
     pgNum.onkeydown= keyToPage
- // pageA.onclick  = handlePageNum cannot focus
     pageD.ontoggle = handlePageNum
     let bkgd = pageD.querySelector('.bkgd')
     bkgd.onclick = (e) => e.target===bkgd? pageD.open=false : 0
-    starA.ontouchstart = startClick
-    starA.ontouchend   = handleStars
-    starA.onmousedown  = startClick
-    starA.onclick  = handleStars
+    new ButtonMenu(starA, menuS, makeStarMenu)
+    new ButtonMenu(tranA, menuT)
+    new ButtonMenu(linkA, menuK)
+    yardim.onclick  = () => {openSitePage('Y')}
     starB.onclick  = toggleStar
-    tranA.onclick  = handleTrans
     tranB.onclick  = toggleTrans
-    linkB.onclick  = toggleMenuK
-    zoomB.onclick  = toggleZoom
+    zoomA.onclick  = toggleZoom
     bilgi.onclick  = doClick
     leftB.onclick  = () => {prevPage()}
     slider.oninput = () => {adjustPage(true)}
@@ -407,7 +404,7 @@ function menuFn() {
       evt.preventDefault()
       menuItem(evt.target.innerText[0])
   }
-  menuS.onclick = (evt) => { //page menu
+  menuS.onclick = (evt) => { //star menu
       evt.preventDefault()
       let t = evt.target.innerText
       //console.log(curPage, t)
@@ -467,8 +464,6 @@ function handleKeyEvent(evt) {
           case '*':
             toggleStar(); break
           case 'M': //case '.':
-            // evt.clientX = linkB.offsetLeft
-            // evt.clientY = linkB.offsetTop +10
             toggleMenuK(); break
           case 'Z': case '+':
             toggleZoom(evt);  break
@@ -478,7 +473,7 @@ function handleKeyEvent(evt) {
   window.hideMenus = () => { 
       hideElement(menuC); hideElement(menuK); hideElement(menuS); 
       hideElement(menuT); hideElement(bilgi); hideElement(menuV); 
-      pageD.open = false; //linkB.classList.remove('checked')
+      pageD.open = false; //linkA.classList.remove('checked')
   }
   div1.onmouseenter = hideMenus
   div3.onmouseenter = hideMenus
@@ -511,14 +506,6 @@ function checkTrans() {
   }
     menuT.querySelectorAll('[id]').forEach(handleCheck)
 }
-function handleTrans() {
-    if (menuT.style.display) {
-      hideElement(menuT)
-    } else {
-      let x = tranA.offsetLeft+10, y = tranA.offsetTop+33
-      hideMenus(); setPosition(menuT, x, y, 110)
-    }
-}
 function toggleTrans() {
     if (tranA.classList.toggle('checked')) {
       tranB.innerHTML = 'Meal Gizle &ndash; T'
@@ -538,20 +525,6 @@ function makeStarMenu() {
     for (let k of a) if (k != curPage)
         t += span+'s'+nameFromPage(k)+'</span>\n'
     starred.innerHTML = t
-}
-function startClick() { clickStart = Date.now() }
-function handleStars(evt) {
-    if (menuS.style.display) {
-      hideElement(menuS)
-    } else if (clickStart && Date.now()-clickStart < 300) {
-      console.log(Date.now()-clickStart)
-      evt.preventDefault(); toggleStar()
-    } else {
-      hideMenus(); makeStarMenu()
-      let x = starA.offsetLeft+10, y = starA.offsetTop+33
-      setPosition(menuS, x, y, 110)
-    }
-    clickStart = undefined
 }
 function handlePageNum() {
     pgNum.value = curPage
@@ -575,8 +548,7 @@ function toggleStar() {
 }
 function toggleMenuK() {
     if (!menuK.style.display) {
-      //linkB.classList.toggle('checked')
-      let x = linkB.offsetLeft+10, y = linkB.offsetTop+33
+      let x = linkA.offsetLeft+10, y = linkA.offsetTop+33
       hideMenus(); setPosition(menuK, x, y, 120)
     } else {
       hideElement(menuK)
@@ -584,7 +556,7 @@ function toggleMenuK() {
 }
 function toggleZoom() {
     let e = div2 //document.body
-    let checked = zoomB.classList.toggle('checked')
+    let checked = zoomA.classList.toggle('checked')
     if (checked) {
       e.classList.add('zoomWide')
     } else {

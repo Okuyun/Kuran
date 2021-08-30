@@ -232,6 +232,11 @@ class Notes {
         else this.saveCurrent()
     }
 }
+function setFocus(elt) {
+    if (!elt || elt.value == undefined) return
+    elt.selectionEnd = elt.value.length
+    elt.selectionStart = 0; elt.focus()
+}
 
 /**
  * Code related to Touch events
@@ -295,10 +300,50 @@ class TouchHandler {
     }
 }
 
-function setFocus(elt) {
-    if (!elt || elt.value == undefined) return
-    elt.selectionEnd = elt.value.length
-    elt.selectionStart = 0; elt.focus()
+/**
+ * Click/Touch activates the first element
+ * Long press (350msec) activates the menu
+ */
+class ButtonMenu {
+    constructor(button, menu, callback) {
+        const nothing = () => null
+        this.button = button; this.menu = menu
+        this.callback = callback || nothing
+        // button.onclick = nothing
+        button.onmousedown = button.ontouchstart 
+        = (e) => this.start(e)
+        button.onmouseup = button.ontouchend 
+        = (e) => this.stop(e)
+    }
+    start(evt) {
+        const m = this.menu
+        const showMenu = () => {
+            m.style.display = 'block'
+            let x = this.button.offsetLeft+10
+            let y = this.button.offsetTop+33
+            hideMenus(); this.callback()
+            setPosition(m, x, y, 110)
+        }
+        if (m.style.display) {
+            hideElement(m)
+        } else {
+            this.id = setTimeout(showMenu, 350)
+            // console.log('setTimeout', this.id)
+        }
+        evt.stopPropagation()
+    }
+    stop(evt) {
+        const m = this.menu
+        if (m.style.display) { 
+            //long press -- do nothing
+        } else { //click on the first item
+            let f = this.menu.firstElementChild
+            if (f && f.onclick) f.onclick()
+            clearTimeout(this.id)
+        }
+        this.id = undefined
+        evt.stopPropagation(); evt.preventDefault()
+    }
 }
 
 // export {VERSION, EM_SPACE, setPosition, hideElement, Notes, 

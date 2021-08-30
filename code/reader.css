@@ -6,7 +6,7 @@ body {
 
 @media screen and (max-width: 850px) {
     .hiddenNarrow { display: none; }
-    #title, #zoomB { display: none; }
+    #title, #zoomA { display: none; }
     #text { 
       font-size: 3.3vw;
       font-size: min(max(3.3vw, 13px), 20px);
@@ -40,10 +40,13 @@ body {
       font-size: 19px;
     }
 }
-/** common to all screens **/
+
+@media screen and (min-width: 400px) {
     .center { 
       text-align: center;
     }
+}
+/** common to all screens **/
     button {
       min-width: 36px;
       height: 36px;
@@ -84,10 +87,11 @@ body {
     #div1, #div3 { 
       white-space: nowrap;
       user-select: none;
+      padding-left: 3px;
       margin: 0;
     }
     #div1 { 
-      width: 100%;
+      width: 98%;
       position: fixed;
       bottom: 4px;
     }
@@ -287,10 +291,10 @@ button {
 #tranA {
     background-image: url(../image/Tee.png);
 }
-#linkB {
+#linkA {
     background-image: url(../image/menu.png);
 }
-#zoomB {
+#zoomA {
     background-image: url(../image/zoom.png);
 }
 
