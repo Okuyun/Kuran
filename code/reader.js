@@ -155,7 +155,7 @@ function prevPage() {
 function nextPage() {
     gotoPage(curPage+1)
 }
-function gotoPage(k, adjusting) { // 1<=k<=P
+function gotoPage(k=1, adjusting) { // 1<=k<=P
 //This is the only place where hash is set
   function doVerse(e) {
       for (let x of e.children) {
@@ -192,7 +192,7 @@ function gotoPage(k, adjusting) { // 1<=k<=P
       div2.style.transition = t1
       div2.style.transform = t2
   }
-    if (!k || k < 1) k = 1;
+    if (k < 1) k = 1;
     if (k > P) k = P;
     k = Number(k);
     sayfa.innerText = k;
@@ -419,10 +419,14 @@ function menuFn() {
     }
       hideElement(menuT); //evt.preventDefault()
       let t = evt.target, k = Number(t.id)
-      if (!k) return
-      console.log(k, t.textContent)
-      if (!transIsChecked()) toggleTrans()
-      kur = new KuranText(k, setTrans)
+      if (k) {
+        console.log(k, t.textContent)
+        if (!transIsChecked()) toggleTrans()
+        kur = new KuranText(k, setTrans) //current
+      } else {
+        let n = qur.url.includes('simple')? 0 : 10
+        qur = new QuranText(n, gotoPage)  //page 1
+      }
   }
   menuK.onclick = (evt) => { //menu button
       evt.preventDefault()

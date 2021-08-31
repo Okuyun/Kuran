@@ -46,7 +46,7 @@ const sajdaX = [1160, 1722, 1950, 2138, 2308, 2613, 2915,
 /** Source files are kept by id 0-9 */
 const SOURCE = ['quran-uthmani.txt', 'ar.jalalayn.txt', 'ar.muyassar.txt',
   'tr.diyanet.txt', 'en.ahmedali.txt', 'tr.yazir.txt', 'en.yusufali.txt',
-  'fr.hamidullah.txt', 'en.pickthall.txt', 'tr.abay.txt']
+  'fr.hamidullah.txt', 'en.pickthall.txt', 'tr.abay.txt', 'quran-simple-clean.txt']
 
 /** Reads a text file -- Quran translation
  *  one line for each verse that begins with "c|v|"
@@ -80,7 +80,7 @@ class KuranText {
         for (let i of sajdaX) a[i] += this.secde 
         this.data = a; this.loaded = true
         console.log(this.url, a.length)
-        if (callback) callback(a)
+        if (callback) callback()
       }
         let url = SOURCE[id] || id
         this.url = url; this.data = []
@@ -123,7 +123,7 @@ class KuranText {
 }
 /** Reads Quran text in Arabic */
 class QuranText extends KuranText {
-    constructor(url, callback) { super(0, callback) }
+    constructor(id, callback) { super(id, callback) }
     /** override 4 methods below */
     chapName(c)   { return ' سورة '+aName[c] }
     get besmele() { return 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ' }
