@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.2a";
+const VERSION = "V4.2b";
 
 /**
  * &ensp; used in Mujam and VerseRef
@@ -304,7 +304,7 @@ class TouchHandler {
  * Click/Touch activates the first element
  * Long press (350msec) activates the menu
  */
-class ButtonMenu {
+class ButtonMenu { //used in V4.2a only -- complicated
     constructor(button, menu, callback) {
         const nothing = () => null
         this.button = button; this.menu = menu

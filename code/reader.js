@@ -315,6 +315,23 @@ function initialPage() {
       checkTrans()
     }
 }
+function makeMenu(button, menu, callback) {
+  function showMenu() {
+    hideMenus(); time = Date.now()
+    menu.style.display = 'block'
+    let x = button.offsetLeft+10
+    let y = button.offsetTop+33
+    if (callback) callback()
+    setPosition(menu, x, y, 110)
+  }
+  function hideMenu() {
+    if (Date.now() - time < 1000) return
+    menu.style.display = '' 
+  }
+    let time  // undefined
+    button.onmouseenter = showMenu
+    button.onclick = hideMenu
+}
 function initReader() {
     title.innerHTML = 'Iqra '+VERSION+'&emsp;';
     version.innerText = 'Iqra '+VERSION;
@@ -324,9 +341,12 @@ function initReader() {
     pageD.ontoggle = handlePageNum
     let bkgd = pageD.querySelector('.bkgd')
     bkgd.onclick = (e) => e.target===bkgd? pageD.open=false : 0
-    new ButtonMenu(starA, menuS, makeStarMenu)
-    new ButtonMenu(tranA, menuT)
-    new ButtonMenu(linkA, menuK)
+    // new ButtonMenu(starA, menuS, makeStarMenu)
+    // new ButtonMenu(tranA, menuT)
+    // new ButtonMenu(linkA, menuK)
+    makeMenu(starA, menuS, makeStarMenu)
+    makeMenu(tranA, menuT)
+    makeMenu(linkA, menuK)
     yardim.onclick  = () => {openSitePage('Y')}
     starB.onclick  = toggleStar
     tranB.onclick  = toggleTrans
