@@ -417,15 +417,20 @@ function menuFn() {
       setStorage('settings', 'source', k)
       checkTrans()
     }
+    function toggleText(simple) {
+      let n = simple? 0 : 10
+      let s = simple? 'gizle' : 'göster'
+      qur = new QuranText(n, nextPage)
+      hareke.innerText = 'Harekeleri '+s
+    }
       hideElement(menuT); //evt.preventDefault()
       let t = evt.target, k = Number(t.id)
       if (k) {
         console.log(k, t.textContent)
         if (!transIsChecked()) toggleTrans()
         kur = new KuranText(k, setTrans) //current
-      } else {
-        let n = qur.url.includes('simple')? 0 : 10
-        qur = new QuranText(n, gotoPage)  //page 1
+      } else if (t === hareke) {
+        toggleText(qur.url.includes('simple'))
       }
   }
   menuK.onclick = (evt) => { //menu button
@@ -512,11 +517,11 @@ function checkTrans() {
 }
 function toggleTrans() {
     if (tranA.classList.toggle('checked')) {
-      tranB.innerHTML = 'Meal Gizle &ndash; T'
+      tranB.innerHTML = 'Meal gizle &ndash; T'
       html.classList.add('hiddenNarrow')
       text.classList.remove('hiddenNarrow')
     } else { //hide text if narrow screen
-      tranB.innerHTML = 'Meal Göster &ndash; T'
+      tranB.innerHTML = 'Meal göster &ndash; T'
       html.classList.remove('hiddenNarrow')
       text.classList.add('hiddenNarrow')
     }
