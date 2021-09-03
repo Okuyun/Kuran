@@ -237,10 +237,10 @@ function parseRoots(roots) { //root array in Arabic
 /**
  * showS button is clicked
  */
-function showSelections() {
-    div0.hidden = true
-    div1.hidden = false
-    kelimeler.hidden = false
+function hideList(hide) {
+    div0.hidden = !hide
+    div1.hidden = hide
+    kelimeler.hidden = hide
 }
 /**
  * Build and display the HTML list.
@@ -249,10 +249,8 @@ function showSelections() {
  * @param {Element} liste to be modified
  */
 function displayList(refs, liste) {
-    div0.hidden = false
-    showS.hidden = refs.length == 1
-    div1.hidden = true
-    kelimeler.hidden = refs.length > 1
+    // showS.hidden = refs.length == 1
+    // kelimeler.hidden = refs.length > 1
     const MAX_REFS = 50  //hide larger lists
     const SPAN = '<span class=item>', _SPAN = '</span>'
     let s = ''
@@ -260,8 +258,12 @@ function displayList(refs, liste) {
         let but = refs.length == 1? '' :
             '<button>'+ x.name +'</button>&emsp;'
         s += '<li>'+but+'<span>'
-        for (let y of x.list) // y is VerseRef
-            s += SPAN+ y.cv +_SPAN
+        let lastCV =''
+        for (let y of x.list) // y is VerseRef
+            if (y.cv !== lastCV) {
+                s += SPAN+ y.cv +_SPAN
+                lastCV = y.cv
+            }
         s += '\n' //'</span>\n'
     }
     function doClick3(evt) {
@@ -435,11 +437,11 @@ function initMujam() {
     }
     window.name = "finder"
     window.onhashchange = gotoHashRoot
-    showS.onclick  = () => {showSelections()}
+    showS.onclick  = () => {hideList(false)}
     menu1.onchange = () => {selectLetter()}
     menu2.onchange = () => {selectRoot()}
     noteBut.onclick= () => {notes.edit()} //in common.js
-    combine.onclick= () => {gotoHashRoot()}
+    combine.onclick= () => {hideList(true)}
     menuFn()
 }
 
