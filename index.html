@@ -172,7 +172,9 @@ function hashModified() {
       window.open('/Kitap/rama/'+d+'.html', 'finder')
       break;
     default: 
-      window.open('konular.html#'+h, 'finder')
+      if (c.length > 1)
+        window.open('konular.html#'+h, 'finder')
+      else console.error('wrong char '+c)
   }
 }
 function startPane() {
