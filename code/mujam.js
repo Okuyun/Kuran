@@ -178,7 +178,7 @@ function selectWord(word) { //called by list items
     displayTable(set)
     for (let i of kelimeler.querySelectorAll('li'))
       i.style.backgroundColor =  //set colors
-        i.firstElementChild.innerText == word? '#fec' : ''
+        i.firstElementChild.innerText == word? 'yellow' : ''
 }
 /**
  * calculate the index array for given root.
@@ -278,19 +278,23 @@ function displayList(refs, liste) {
     }
     if (refs.length == 1) return //no buttons
     for (let x of liste.querySelectorAll('button')) {
+        let li = x.parentElement
         let span = x.nextElementSibling
         if (span.children.length > MAX_REFS) {
             x.style.backgroundColor = 'yellow'
-            x.parentElement.style.backgroundColor = '#eee'
             span.hidden = true
         }
         x.onclick = () => {
-            if (span.hidden) {
-                x.style.backgroundColor = ''
-                x.parentElement.style.backgroundColor = ''
-                span.hidden = false
-            } 
-            selectWord(x.innerText)
+            if (li.style.backgroundColor) {
+                gotoHashRoot()  //redraw page
+            } else {
+                if (span.hidden) {
+                    li.style.backgroundColor = ''
+                    x.style.backgroundColor = ''
+                    span.hidden = false
+                } 
+                selectWord(x.innerText)
+            }
         } 
     }
 }

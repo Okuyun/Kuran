@@ -43,9 +43,6 @@
         cursor: pointer;
         font: inherit;
     }
-    table { 
-        background-color: white;
-    }
     li {
         margin: 12px 0;
         padding: 3px 6px;
@@ -58,7 +55,8 @@
         border-collapse: collapse; 
         text-align: center;
         cursor: default;
-        margin: 8px;
+        margin: 8px auto;
+        background-color: white;
     }
     tr.first { height: 18px; }
     th { 
