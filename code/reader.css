@@ -240,9 +240,8 @@ summary {
   Ref: https://dev.to/iamafro/how-to-create-a-custom-context-menu--5d7p
 */
     .menu {
-      box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
-      position: fixed;
       display: none;
+      position: absolute;
       border: black 1px solid;
       color: blue;
       background-color: #eee;
@@ -250,6 +249,7 @@ summary {
       user-select: none;
       overflow-y: auto;
       max-height: 90vh; /* for overflow */
+      box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
       z-index: 1;
     }
     .black {
@@ -272,6 +272,21 @@ summary {
       min-width: 130px;
       left: 130px;
       top: 0px;
+    }
+
+/*  CSS Speech Bubble with Border
+  https://codeconvey.com/css-speech-bubble-with-border/ 
+*/
+    .bubble {
+      padding-top: 8px;
+    }
+    .bubble:before {
+      border: 8px solid transparent;
+      border-bottom-color: gray;
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 48%;
     }
 
 /* End of menu style */

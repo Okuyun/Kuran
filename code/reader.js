@@ -577,7 +577,7 @@ function toggleStar() {
 }
 function toggleMenuK() {
     if (!menuK.style.display) {
-      let x = linkA.offsetLeft+10, y = linkA.offsetTop+33
+      let x = linkA.offsetLeft+2, y = linkA.offsetTop+33
       hideMenus(); setPosition(menuK, x, y, 120)
     } else {
       hideElement(menuK)
