@@ -42,6 +42,9 @@ body {
 }
 
 @media screen and (min-width: 400px) {
+    #div3 {
+      justify-content: center;
+    }
     .center { 
       text-align: center;
     }
@@ -56,6 +59,7 @@ body {
     }
     #sureS, #pageD {
       display: inline-block;
+      margin: 0 3px;
       padding: 4px;
       background-color: #eee;
       border-radius: 10px;
@@ -84,13 +88,14 @@ body {
       display: inline-block;
       padding: 8px;
     }
-    #div1, #div3 { 
-      white-space: nowrap;
+    nav { /* #div1, #div3 */
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
       user-select: none;
-      padding-left: 3px;
-      margin: 0;
     }
-    #div1 { 
+    #div1 {
+      justify-content: center;
       width: 98%;
       position: fixed;
       bottom: 4px;
