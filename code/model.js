@@ -46,7 +46,8 @@ const sajdaX = [1160, 1722, 1950, 2138, 2308, 2613, 2915,
 /** Source files are kept by id 0-9 */
 const SOURCE = ['quran-uthmani.txt', 'ar.jalalayn.txt', 'ar.muyassar.txt',
   'tr.diyanet.txt', 'en.ahmedali.txt', 'tr.yazir.txt', 'en.yusufali.txt',
-  'fr.hamidullah.txt', 'en.pickthall.txt', 'tr.abay.txt', 'quran-simple-clean.txt']
+  'fr.hamidullah.txt', 'en.pickthall.txt', 'tr.abay.txt',
+  'de.zaidan.txt', 'quran-simple-clean.txt']
 
 /** Reads a text file -- Quran translation
  *  one line for each verse that begins with "c|v|"

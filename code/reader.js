@@ -438,7 +438,7 @@ function menuFn() {
       checkTrans()
     }
     function toggleText(simple) {
-      let n = simple? 0 : 10
+      let n = simple? 0 : 11
       let s = simple? 'gizle' : 'göster'
       qur = new QuranText(n, nextPage)
       hareke.innerText = 'Harekeleri '+s
