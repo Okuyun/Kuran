@@ -110,7 +110,7 @@ function selectWord(evt) {
     evt.preventDefault(); hideMenus()
     let t = evt.target
     if (t.id) { // t is a verse separator
-      let y = Math.max(evt.clientY-150, 0)
+      let y = Math.max(evt.offsetY-150, 0)
       menuV.cv = t.id
       setPosition(menuV, evt.clientX, y)
     } else { // t is a word
@@ -122,7 +122,8 @@ function selectWord(evt) {
         s.removeAllRanges(); s.addRange(range);
       }
       // console.log(evt.offsetY, evt.clientY, evt.pageY)
-      let y = t.getBoundingClientRect().top - 26
+      let y = t.getBoundingClientRect().top
+            + window.pageYOffset - 24
       setPosition(menuC, evt.clientX, y, 220)
     }
 }
@@ -330,7 +331,7 @@ function makeMenu(button, menu, callback) {
     button.append(menu)
     button.onmouseenter = showMenu
     button.onmouseleave = hideMenu
-    button.onclick = hideMenu
+    // button.onclick = hideMenu -- fails in mobile
 }
 function initReader() {
     title.innerHTML = 'Iqra '+VERSION+'&emsp;';
