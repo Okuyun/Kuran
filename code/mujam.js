@@ -58,13 +58,14 @@ const rootToCounts = new Map();
  */
 const wordToRefs = new Map();
 /**
- * returns Buckwalter code of the current item in menu2
+ * Buckwalter code of the current root(s)
  */
-function currentRoot() {
-    if (!menu2.value) return null
-    let [v] = menu2.value.split(EM_SPACE)
-    return toBuckwalter(v)
-}
+var currentRoots = []
+// function currentRoot() {
+//     if (!menu2.value) return null
+//     let [v] = menu2.value.split(EM_SPACE)
+//     return toBuckwalter(v)
+// }
 /**
  * display alert and throw error
  */
@@ -342,11 +343,12 @@ function displayTable(set) {
             row += "<td style="+toColor(c)+ ch + "</td>"
         }
         if (i > m) { //use th for the last row
-            let q = menu2.value? "?q=" + currentRoot() : ''
             row += "<th id=last></th>" 
             +"<th colspan=11>Iqra "+VERSION+" (C) 2019 MAE</th>"
             +"<th colspan=3><a href='"
-            +"http://corpus.quran.com/qurandictionary.jsp"+q
+            +"http://corpus.quran.com/qurandictionary.jsp"
+            let [first] = currentRoots
+            row += (first? "?q=" + first : '')
             +"' title='Kaynak site' target=Kuran>Corpus</a></th>"
             +"<th>&nbsp;</th>"       
         }
@@ -394,9 +396,8 @@ function doClick(evt) {
     if (pRefs[p]) { //use first reference & root
         let [cv] = refs.split(' ')
         h = "#v="+cv
-        let d = currentRoot() //decodedHash()
-        //if (!d.startsWith('#')) 
-        if (d /* && div4.hidden */) h += "&r="+d
+        let d = currentRoots.join('&r=')
+        if (d) h += '&r='+d
     } else { //use page number
         h = "#p="+p;
     }
@@ -411,13 +412,12 @@ function doClick(evt) {
  */
 function gotoHashRoot() {
     let h = decodedHash()
-    if (!h) return false
-    if (!h.startsWith('r=')) { //given topic
-      window.location.href = "/Kuran/#"+h
-      return false  //no need to return
-    } //else given roots
+    if (!h || !h.startsWith('r=')) 
+      return false
+    //else given roots
     h = h.substring(2)  //strip 'r='
-    let roots = h.split('&r=').map(toArabic)
+    currentRoots = h.split('&r=')
+    let roots = currentRoots.map(toArabic)
     let set = parseRoots(roots)
     selectRoot(roots[0], false)
     displayList(wRefs, kelimeler)
