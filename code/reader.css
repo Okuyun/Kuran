@@ -242,6 +242,7 @@ summary {
     .menu {
       display: none;
       position: absolute;
+      text-align: left;
       border: black 1px solid;
       color: blue;
       background-color: #eee;
@@ -256,6 +257,7 @@ summary {
       text-align: center;
       margin-top: 8px;
       color: black;
+      cursor: default;
     }
     .black, .menuK {
       display: block;

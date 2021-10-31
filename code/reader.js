@@ -317,7 +317,7 @@ function initialPage() {
 }
 function makeMenu(button, menu, callback) {
   function showMenu() {
-    hideMenus(); time = Date.now()
+    hideMenus();
     menu.style.display = 'block'
     let x = button.offsetLeft+10
     let y = button.offsetTop+33
@@ -325,11 +325,11 @@ function makeMenu(button, menu, callback) {
     setPosition(menu, x, y, 110)
   }
   function hideMenu() {
-    if (Date.now() - time < 1000) return
-    menu.style.display = '' 
+    if (menu.style.display) menu.style.display = '' 
   }
-    let time  // undefined
+    button.append(menu)
     button.onmouseenter = showMenu
+    button.onmouseleave = hideMenu
     button.onclick = hideMenu
 }
 function initReader() {
@@ -339,11 +339,9 @@ function initReader() {
     sureS.onchange = () => {gotoSura(sureS.selectedIndex+1)}
     pgNum.onkeydown= keyToPage
     pageD.ontoggle = handlePageNum
-    let bkgd = pageD.querySelector('.bkgd')
+    let bkgd = document.body.querySelector('.bkgd')
+    pageD.append(bkgd)
     bkgd.onclick = (e) => e.target===bkgd? pageD.open=false : 0
-    // new ButtonMenu(starA, menuS, makeStarMenu)
-    // new ButtonMenu(tranA, menuT)
-    // new ButtonMenu(linkA, menuK)
     makeMenu(starA, menuS, makeStarMenu)
     makeMenu(tranA, menuT)
     makeMenu(linkA, menuK)

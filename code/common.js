@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.2c";
+const VERSION = "V4.3";
 
 /**
  * &ensp; used in Mujam and VerseRef
@@ -297,60 +297,6 @@ class TouchHandler {
         if (dx*dx + dy*dy < K*K) return  //not swipe
         if (!this.action.dragEnd(a, evt)) return
         evt.preventDefault()
-    }
-}
-
-/**
- * Click/Touch activates the first element
- * Long press (350msec) activates the menu
- */
-class ButtonMenu { //used in V4.2a only -- complicated
-    constructor(button, menu, callback) {
-        const nothing = () => null
-        this.button = button; this.menu = menu
-        this.callback = callback || nothing
-        button.onclick 
-        = (e) => this.showMenu()
-        button.onmousedown = button.ontouchstart 
-        = (e) => this.start(e)
-        button.onmouseup = button.ontouchend 
-        = (e) => this.stop(e)
-    }
-    setIgnore(ignore) { //reset the property in 2.5 seconds
-        this.ignore = ignore
-        if (ignore) setTimeout(() => this.setIgnore(), 2500)
-    }
-    showMenu() {
-        if (this.ignore) return
-        const m = this.menu
-        m.style.display = 'block'
-        let x = this.button.offsetLeft+10
-        let y = this.button.offsetTop+33
-        hideMenus(); this.callback()
-        setPosition(m, x, y, 110)
-        this.id = undefined
-    }
-    start(evt) {
-        const m = this.menu
-        if (m.style.display) {
-            hideElement(m)
-            this.setIgnore(true) //ignore the rest
-        } else {
-            this.id = setTimeout(() => this.showMenu(), 350)
-            // console.log('setTimeout', this.id)
-        }
-        evt.stopPropagation(); evt.preventDefault()
-    }
-    stop(evt) {
-        if (this.ignore) return
-        if (this.id) { //click on the first item
-            let f = this.menu.firstElementChild
-            if (f && f.onclick) f.onclick()
-            clearTimeout(this.id)
-            this.id = undefined
-        }
-        evt.stopPropagation(); evt.preventDefault()
-        this.setIgnore(true) //ignore click event 
     }
 }
 
