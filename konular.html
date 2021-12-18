@@ -187,7 +187,7 @@ function anchor(x) {
     let s =  //use chapter-verse form x
     '<a href="reader.html#v='+x.cv+'" target=iqra>'+x.cv+'</a>'
     if (!parent.iqra) return s  //no parent, stand-alone
-    let kur = parent.iqra.kur
+    let kur = parent.iqra.Q.kur
     if (!kur || !kur.loaded) return s
     let p = 0, i = x.index
     while (p.toString().length <= 6) {

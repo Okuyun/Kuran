@@ -5,26 +5,25 @@
 //         openSitePage, openSiteVerse} from './common.js
 // import {toArabic, toBuckwalter} from "./buckwalter.js"
 
-const M = 114; //suras
-const P = 604; //pages
+var Q = {} //keep globals here
+Q.M = 114  //suras
+Q.P = 604  //pages
 let snum = getStorage('settings', 'source')
 if (!snum || snum<=0 || snum>=SOURCE.length) snum = 5
-//constants do not appear as properties from the parent
-var kur = new KuranText(snum, initialPage)
-var qur = new QuranText(0, initialPage)
+Q.kur = new KuranText(snum, initialPage)
+Q.qur = new QuranText(0, initialPage)
 const MD  = new MujamData('data/words.txt')
 const SD  = new SimData('data/simi.txt')
-var swipe = new TouchHandler({dragStart, dragEnd}, div2)
-var curSura, curPage, bookmarks, lastSelection,
-    initialized = false, //becomes true when loaded
-    clickStart; //start time for click events
+new TouchHandler({dragStart, dragEnd}, div2)
+var curSura, curPage, bookmarks, lastSelection
+var initialized = false //becomes true when loaded
 window.mujam = undefined
 
-const DEFAULT = {page:1, marks:[]}
-const MAX_MARKS = 12  // if more marks, delete the oldest
-const notes = new Notes('notesQ')
+Q.DEFAULT = {page:1, marks:[]}
+Q.MAX_MARKS = 12  // if more marks, delete the oldest
+Q.notes = new Notes('notesQ')
 //https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList
-const hasMouse = matchMedia('(pointer:fine)').matches
+Q.hasMouse = matchMedia('(pointer:fine)').matches
   
 function arrayToSet(m) {
     if (!m) return
@@ -51,7 +50,7 @@ function saveSettings() {
     setStorage('iqra', x)
 }
 function readSettings() {
-    let x = getStorage('iqra') || DEFAULT
+    let x = getStorage('iqra') || Q.DEFAULT
     //we cannot use page yet, files are not read -- see initialPage()
     arrayToSet(x.marks) //immediate action
     if (x.trans) toggleTrans()
@@ -134,7 +133,7 @@ function hideWord(evt) {
     evt.target.classList.remove('gri') 
 }
 function adjustPage(adj) {
-    if (!kur.loaded || !qur.loaded) return
+    if (!Q.kur.loaded || !Q.qur.loaded) return
     infoS.style.display = adj? 'block' : ''
     gotoPage(slider.value, adj? 'slider' : '')
     if (adj) {
@@ -196,7 +195,7 @@ function gotoPage(k=1, adjusting) { // 1<=k<=P
       div2.style.transform = t2
   }
     if (k < 1) k = 1;
-    if (k > P) k = P;
+    if (k > Q.P) k = Q.P;
     k = Number(k);
     sayfa.innerText = k;
     if (curPage == k) return;
@@ -210,11 +209,11 @@ function gotoPage(k=1, adjusting) { // 1<=k<=P
       setTimeout(setTrans, 410)
     }
     curPage = k; slider.value = k;
-    text.innerHTML = kur.pageToHTML(k)
-    html.innerHTML = qur.pageToHTML(k)
+    text.innerHTML = Q.kur.pageToHTML(k)
+    html.innerHTML = Q.qur.pageToHTML(k)
     if (starIsChecked() !== bookmarks.has(k)) toggleStar()
     // starA.classList.toggle('checked', bookmarks.has(k))
-    notes.display(k) //in common.js
+    Q.notes.display(k) //in common.js
   } catch (e) {
     console.error(e)
     alert(e)
@@ -240,7 +239,7 @@ function setSura(c) { // 1<=c<=M
 }
 function gotoSura(c) {
     if (!c || c < 1)  c = 1;
-    if (c > M) c = M;
+    if (c > Q.M) c = Q.M;
     setSura(c);
     gotoPage(pageOf(c, 1));
 }
@@ -311,7 +310,7 @@ function gotoHashPage() {
   return true
 }
 function initialPage() {
-    initialized = kur.loaded && qur.loaded
+    initialized = Q.kur.loaded && Q.qur.loaded
     if (initialized) { //global
       if (!gotoHashPage()) gotoPage(1) 
       //getStorage('iqra', 'page') || 1)
@@ -336,7 +335,7 @@ function makeMenu(button, menu, callback) {
     else showMenu()
   }
     button.append(menu)
-    if (hasMouse) { //similar to hover
+    if (Q.hasMouse) { //similar to hover
       button.onmouseenter = showMenu
       button.onmouseleave = hideMenu
     } else { //touch converted to click
@@ -365,9 +364,9 @@ function initReader() {
     slider.oninput = () => {adjustPage(true)}
     slider.onchange= () => {adjustPage(false)} //committed
     rightB.onclick = () => {nextPage()}
-    noteBut.onclick = () => {notes.edit()} //in common.js
+    noteBut.onclick = () => {Q.notes.edit()} //in common.js
     let labels = []
-    for (let i=1; i<=M; i++)
+    for (let i=1; i<=Q.M; i++)
       labels.push(i+'. '+sName[i])
     sureS.innerHTML = '<option>'+labels.join('<option>')
     menuFn(); 
@@ -386,7 +385,7 @@ function initReader() {
     // window.onresize = resize
     window.onhashchange = gotoHashPage
     window.name = "iqra" //by A Rajab
-    if (readSettings() === DEFAULT) saveSettings()
+    if (readSettings() === Q.DEFAULT) saveSettings()
 }
 /********************
  * Start of Menu functions -- added by Abdurrahman Rajab - FSMVU
@@ -442,14 +441,14 @@ function menuFn() {
   }
   menuT.onclick = (evt) => { //translation menu
     function setTrans() {
-      text.innerHTML = kur.pageToHTML(curPage)
+      text.innerHTML = Q.kur.pageToHTML(curPage)
       setStorage('settings', 'source', k)
       checkTrans()
     }
     function toggleText(simple) {
       let n = simple? 0 : 11
       let s = simple? 'gizle' : 'göster'
-      qur = new QuranText(n, nextPage)
+      Q.qur = new QuranText(n, nextPage)
       hareke.innerText = 'Harekeleri '+s
     }
       hideElement(menuT); //evt.preventDefault()
@@ -457,9 +456,9 @@ function menuFn() {
       if (k) {
         console.log(k, t.textContent)
         if (!transIsChecked()) toggleTrans()
-        kur = new KuranText(k, setTrans) //current
+        Q.kur = new KuranText(k, setTrans) //current
       } else if (t === hareke) {
-        toggleText(qur.url.includes('simple'))
+        toggleText(Q.qur.url.includes('simple'))
       }
   }
   menuK.onclick = (evt) => { //menu button
@@ -540,7 +539,7 @@ function keyToPage(evt) {
 function checkTrans() {
   function handleCheck(e) {
     let s = SOURCE[e.id]  //defined in model.js
-    e.classList.toggle('checked', s === kur.url)
+    e.classList.toggle('checked', s === Q.kur.url)
   }
     menuT.querySelectorAll('[id]').forEach(handleCheck)
 }
@@ -574,7 +573,7 @@ function toggleStar() {
     if (starA.classList.toggle('checked')) {
       bookmarks.add(curPage)
       let a = [...bookmarks]
-      if (a.length > MAX_MARKS)
+      if (a.length > Q.MAX_MARKS)
       bookmarks.delete(a[0]) //the oldest entry
       starB.innerHTML = 'Yıldız Kaldır'
     } else {
