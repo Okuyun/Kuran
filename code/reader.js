@@ -23,6 +23,8 @@ window.mujam = undefined
 const DEFAULT = {page:1, marks:[]}
 const MAX_MARKS = 12  // if more marks, delete the oldest
 const notes = new Notes('notesQ')
+//https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList
+const hasMouse = matchMedia('(pointer:fine)').matches
   
 function arrayToSet(m) {
     if (!m) return
@@ -326,12 +328,20 @@ function makeMenu(button, menu, callback) {
     setPosition(menu, x, y, 110)
   }
   function hideMenu() {
-    if (menu.style.display) menu.style.display = '' 
+    menu.style.display = '' 
+  }
+  function showOrHide(e) {
+    if (e.target !== button) return
+    if (menu.style.display) hideMenu()
+    else showMenu()
   }
     button.append(menu)
-    button.onmouseenter = showMenu
-    button.onmouseleave = hideMenu
-    // button.onclick = hideMenu -- fails in mobile
+    if (hasMouse) { //similar to hover
+      button.onmouseenter = showMenu
+      button.onmouseleave = hideMenu
+    } else { //touch converted to click
+      button.onclick = showOrHide
+    }
 }
 function initReader() {
     title.innerHTML = 'Iqra '+VERSION+'&emsp;';
@@ -505,7 +515,7 @@ function handleKeyEvent(evt) {
   }
   div1.onmouseenter = hideMenus
   div3.onmouseenter = hideMenus
-  text.onmouseenter = hideMenus
+  // text.onmouseenter = hideMenus
 }
 /**
 * End of menu functions 
