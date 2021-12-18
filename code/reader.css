@@ -13,7 +13,7 @@ body {
     }
     #html, #bilgi { 
       font-size: 4.5vw;
-      font-size: min(max(4.5vw, 18px), 27px);
+      font-size: min(max(4.5vw, 19px), 27px);
     }
 }
 
@@ -115,7 +115,7 @@ body {
       background-color: #f9f4e8;
       padding: 4px 8px;
       vertical-align: top;
-      height: 100%;
+      max-width: 590px;
     }
     #text { 
       text-align: left;
