@@ -250,11 +250,9 @@ function showFinder() {
     console.log('* sourceChanged *', lastPath)
     reportHash(e)
   }
-  function initReader() {
+  function initReader(e) { // Window.postMessage()
     console.log('* initReader *', initialHash)
-    if (!iqra.initialized) { //good idea, poor practice
-      setTimeout(initReader, 500); return
-    }
+    if (e.data !== "initialized") return
     showFinder(); addListener(readFrm)
     if (!initialHash) return
     window.location.hash = initialHash
@@ -316,6 +314,7 @@ function resizeEnd(e) {
   sizer.ontouchend = resizeEnd
   // resizable iframe has a bug
   // new ResizeObserver(setWidth).observe(findFrm)
+  window.addEventListener("message", initReader)
   window.onbeforeinstallprompt = (e) => {
     iqra.beforeinstallCB(e)
     console.log('beforeinstallprompt event')

@@ -16,12 +16,10 @@ const MD  = new MujamData('data/words.txt')
 const SD  = new SimData('data/simi.txt')
 new TouchHandler({dragStart, dragEnd}, div2)
 var curSura, curPage, bookmarks, lastSelection
-var initialized = false //becomes true when loaded
-window.mujam = undefined
-
 Q.notes = new Notes('notesQ')
 //https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList
 Q.hasMouse = matchMedia('(pointer:fine)').matches
+window.mujam = undefined
   
 function arrayToSet(m) {
     if (!m) return
@@ -312,10 +310,10 @@ function gotoHashPage() {
   return true
 }
 function initialPage() {
-    initialized = Q.kur.loaded && Q.qur.loaded
-    if (initialized) { //global
+    if (Q.kur.loaded && Q.qur.loaded) {
+//https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage    
+      parent.postMessage("initialized", "*")
       if (!gotoHashPage()) gotoPage(1) 
-      //getStorage('iqra', 'page') || 1)
       checkTrans()
     }
 }
