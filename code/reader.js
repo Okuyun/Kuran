@@ -19,8 +19,6 @@ var curSura, curPage, bookmarks, lastSelection
 var initialized = false //becomes true when loaded
 window.mujam = undefined
 
-Q.DEFAULT = {page:1, marks:[]}
-Q.MAX_MARKS = 12  // if more marks, delete the oldest
 Q.notes = new Notes('notesQ')
 //https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList
 Q.hasMouse = matchMedia('(pointer:fine)').matches
@@ -50,7 +48,10 @@ function saveSettings() {
     setStorage('iqra', x)
 }
 function readSettings() {
-    let x = getStorage('iqra') || Q.DEFAULT
+    let x = getStorage('iqra'), save = false;
+    if (!x) {
+      x = {page:1, marks:[]}; save = true
+    }
     //we cannot use page yet, files are not read -- see initialPage()
     arrayToSet(x.marks) //immediate action
     if (x.trans) toggleTrans()
@@ -59,6 +60,7 @@ function readSettings() {
       parent.finderWidth = x.finderWidth
     let s = getStorage('settings')
     if (s) setFontFamily(s.fontType) 
+    if (save) saveSettings()
     return x
 }
 function setFontFamily(f){
@@ -385,7 +387,7 @@ function initReader() {
     // window.onresize = resize
     window.onhashchange = gotoHashPage
     window.name = "iqra" //by A Rajab
-    if (readSettings() === Q.DEFAULT) saveSettings()
+    readSettings()
 }
 /********************
  * Start of Menu functions -- added by Abdurrahman Rajab - FSMVU
@@ -573,7 +575,7 @@ function toggleStar() {
     if (starA.classList.toggle('checked')) {
       bookmarks.add(curPage)
       let a = [...bookmarks]
-      if (a.length > Q.MAX_MARKS)
+      if (a.length > 12) // if more marks,
       bookmarks.delete(a[0]) //the oldest entry
       starB.innerHTML = 'Yıldız Kaldır'
     } else {
@@ -581,7 +583,7 @@ function toggleStar() {
       starB.innerHTML = 'Yıldız Ekle'
       msg = '-'
     }
-    saveSettings(); hideMenus()
+    hideMenus(); saveSettings()
 }
 function toggleMenuK() {
     if (!menuK.style.display) {
