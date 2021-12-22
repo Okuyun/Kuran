@@ -157,6 +157,7 @@ function useDriveMarks() {
     setStorage('iqra', 'marks', a) //save a to localStorage
     localT.value = localT.old = a.join(' '); 
     driveT.value = driveT.old; 
+    parent.iqra.readSettings()
     log("Cihaza aktarıldı")
 }
 async function useLocalMarks() {
