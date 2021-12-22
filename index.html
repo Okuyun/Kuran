@@ -251,26 +251,24 @@ function showFinder() {
     reportHash(e)
   }
   function initReader(e) { // Window.postMessage()
-    console.log('* initReader *', initialHash)
+    console.log('* initReader *', iqra.location.hash)
     if (e.data !== "initialized") return
     showFinder(); addListener(readFrm)
-    if (!initialHash) return
-    window.location.hash = initialHash
-    initialHash = null
+    hashModified()
   }
   var lastPath,  // finder location
     isStartPage = true, // is shown?
     hashInProgress = false,
-    initialHash = decodedHash(),
+    // initialHash = decodedHash(),
     finderWidth;
-  console.log('* start *', initialHash, location.hash)
+  console.log('* start *', location.hash)
   readFrm.style.display = 'none' //hide iqra frame
   window.name = 'iqraTop'
   window.onresize = resize
   window.onhashchange = hashModified
   closeM.onclick = startPane  //hideFinder
   openM.onclick  = showFinder
-  readFrm.onload = initReader
+  // readFrm.onload = initReader
   findFrm.onload = sourceChanged
   iqra.addEventListener('hashchange', reportHash)
 
