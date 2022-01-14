@@ -313,8 +313,8 @@ function initialPage() {
     if (Q.kur.loaded && Q.qur.loaded) {
 //https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage    
       parent.postMessage("initialized", "*")
-      if (!gotoHashPage()) gotoPage(1) 
-      checkTrans()
+      // if (!gotoHashPage()) gotoPage(1) 
+      gotoHashPage(); checkTrans()
     }
 }
 function makeMenu(button, menu, callback) {
