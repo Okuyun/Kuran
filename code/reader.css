@@ -179,11 +179,14 @@ body {
       color: blue;
     }
     .gri { 
-      background-color : #ddd;
+      background-color : #bbb;
     }
     .sari { 
       background-color : #ff66;
       border-radius: 25px;
+    }
+    .yesil { 
+      background-color : #dcd6;
     }
     .checked { 
       background-color : #ff7;

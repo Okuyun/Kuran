@@ -87,10 +87,15 @@ function markVerse(cv) {
       x.scrollIntoView(false)
     } else console.log(cls+' not in '+elt.id)
   }
-    // markPattern('[^﴾﴿]*﴿'+numberToArabic(n)+'﴾?', 'cls)
-    // let e = new RegExp(n+'[\.-](.)+\n', 'g')
     let cls = '.c'+cv.replace(':', '_')
     mark(html); mark(text)
+}
+function toggleVerse(evt, color='yesil') {
+    let t = evt.target, cls = '.'+t.classList[0]
+    // console.log('toggleVerse', cls)
+    t.classList.toggle(color)
+    let p = t.parentElement===text? html : text
+    p.querySelector(cls).classList.toggle(color)
 }
 function displayWord(evt) {
     evt.preventDefault(); //hideMenus()
@@ -160,6 +165,8 @@ function nextPage() {
 function gotoPage(k=1, adjusting) { // 1<=k<=P
 //This is the only place where hash is set
   function doVerse(e) {
+      e.onmouseenter = toggleVerse
+      e.onmouseleave = toggleVerse
       for (let x of e.children) {
         x.onclick = displayWord
         x.onmouseleave = hideWord
@@ -225,6 +232,7 @@ function gotoPage(k=1, adjusting) { // 1<=k<=P
         if (e.tagName != 'SPAN') continue
         idx++; doVerse(e)
     }
+    for (let e of text.children) doVerse(e)
     if (adjusting !== 'hashInProgress') {
       let h = '#p='+curPage
       if (location.hash !== h) location.hash = h
