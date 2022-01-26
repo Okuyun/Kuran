@@ -157,10 +157,10 @@ function doClick(evt) {
     }
 }
 function prevPage() {
-    gotoPage(curPage-1)
+    gotoPage(curPage==1? Q.P : curPage-1)
 }
 function nextPage() {
-    gotoPage(curPage+1)
+    gotoPage(curPage==Q.P? 1 : curPage+1)
 }
 function gotoPage(k=1, adjusting) { // 1<=k<=P
 //This is the only place where hash is set
@@ -321,8 +321,8 @@ function initialPage() {
     if (Q.kur.loaded && Q.qur.loaded) {
 //https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage    
       parent.postMessage("initialized", "*")
-      // if (!gotoHashPage()) gotoPage(1) 
-      gotoHashPage(); checkTrans()
+      if (!gotoHashPage()) gotoPage(1) 
+      checkTrans()
     }
 }
 function makeMenu(button, menu, callback) {
