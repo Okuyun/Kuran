@@ -321,7 +321,9 @@ function initialPage() {
     if (Q.kur.loaded && Q.qur.loaded) {
 //https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage    
       parent.postMessage("initialized", "*")
-      if (!gotoHashPage()) gotoPage(1) 
+      let hash = gotoHashPage()
+      console.log("initialPage", hash, innerWidth)
+      if (!hash && parent.innerWidth>850) gotoPage(1) 
       checkTrans()
     }
 }
