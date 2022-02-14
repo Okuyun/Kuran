@@ -254,7 +254,7 @@ function gotoSura(c) {
 function dragStart(evt) {
     if (menuK.style.display || menuC.style.display 
       || menuS.style.display || menuT.style.display
-      || bilgi.style.display || pageD.open)  {
+      || bilgi.style.display || bkgd.style.display)  {
         hideMenus(); evt.preventDefault(); return false
     }
     return true
@@ -358,10 +358,8 @@ function initReader() {
     // console.log(swipe)  //TouchHandler
     sureS.onchange = () => {gotoSura(sureS.selectedIndex+1)}
     pgNum.onkeydown= keyToPage
-    pageD.ontoggle = handlePageNum
-    let bkgd = document.body.querySelector('.bkgd')
-    pageD.append(bkgd)
-    bkgd.onclick = (e) => e.target===bkgd? pageD.open=false : 0
+    pageA.onclick = handlePageNum
+    bkgd.onclick = (e) => e.target===bkgd? hideElement(bkgd) : 0
     makeMenu(starA, menuS, makeStarMenu)
     makeMenu(tranA, menuT)
     makeMenu(linkA, menuK)
@@ -520,7 +518,7 @@ function handleKeyEvent(evt) {
   window.hideMenus = () => { 
       hideElement(menuC); hideElement(menuK); hideElement(menuS); 
       hideElement(menuT); hideElement(bilgi); hideElement(menuV); 
-      pageD.open = false; //linkA.classList.remove('checked')
+      hideElement(bkgd); //linkA.classList.remove('checked')
   }
   div1.onmouseenter = hideMenus
   div3.onmouseenter = hideMenus
@@ -574,6 +572,7 @@ function makeStarMenu() {
     starred.innerHTML = t
 }
 function handlePageNum() {
+    bkgd.style.display = "block"
     pgNum.value = curPage
     setFocus(pgNum)
 }
