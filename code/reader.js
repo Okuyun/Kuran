@@ -364,8 +364,8 @@ function initReader() {
     makeMenu(tranA, menuT)
     makeMenu(linkA, menuK)
     yardim.onclick  = () => {openSitePage('Y')}
-    starB.onclick  = toggleStar
-    tranB.onclick  = toggleTrans
+    starB.onclick = starH.onclick = toggleStar
+    tranB.onclick = tranH.onclick = toggleTrans
     zoomA.onclick  = toggleZoom
     bilgi.onclick  = doClick
     leftB.onclick  = () => {prevPage()}
@@ -455,9 +455,13 @@ function menuFn() {
     }
     function toggleText(simple) {
       let n = simple? 0 : 11
-      let s = simple? 'gizle' : 'göster'
-      Q.qur = new QuranText(n, nextPage)
-      hareke.innerText = 'Harekeleri '+s
+      // let s = simple? 'gizle' : 'göster'
+      Q.qur = new QuranText(n, () => gotoPage(curPage))
+      if (simple) {
+        classFromTo('hidden', hareH, hareB)
+      } else {
+        classFromTo('hidden', hareB, hareH)
+      }
     }
       hideElement(menuT); //evt.preventDefault()
       let t = evt.target, k = Number(t.id)
@@ -465,7 +469,7 @@ function menuFn() {
         console.log(k, t.textContent)
         if (!transIsChecked()) toggleTrans()
         Q.kur = new KuranText(k, setTrans) //current
-      } else if (t === hareke) {
+      } else if (t === hareB || t === hareH) {
         toggleText(Q.qur.url.includes('simple'))
       }
   }
@@ -551,15 +555,17 @@ function checkTrans() {
   }
     menuT.querySelectorAll('[id]').forEach(handleCheck)
 }
+function classFromTo(cls, e1, e2) {
+    e1.classList.remove(cls)  
+    e2.classList.add(cls)
+}
 function toggleTrans() {
     if (tranA.classList.toggle('checked')) {
-      tranB.innerHTML = 'Meal gizle &ndash; T'
-      html.classList.add('hiddenNarrow')
-      text.classList.remove('hiddenNarrow')
+      classFromTo('hidden', tranH, tranB)
+      classFromTo('hiddenNarrow', text, html)
     } else { //hide text if narrow screen
-      tranB.innerHTML = 'Meal göster &ndash; T'
-      html.classList.remove('hiddenNarrow')
-      text.classList.add('hiddenNarrow')
+      classFromTo('hidden', tranB, tranH)
+      classFromTo('hiddenNarrow', html, text)
     }
     hideMenus(); saveSettings()
 }
@@ -584,10 +590,10 @@ function toggleStar() {
       let a = [...bookmarks]
       if (a.length > 12) // if more marks,
       bookmarks.delete(a[0]) //the oldest entry
-      starB.innerHTML = 'Yıldız Kaldır'
+      classFromTo('hidden', starH, starB)
     } else {
       bookmarks.delete(curPage)
-      starB.innerHTML = 'Yıldız Ekle'
+      classFromTo('hidden', starB, starH)
       msg = '-'
     }
     hideMenus(); saveSettings()

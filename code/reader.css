@@ -274,6 +274,7 @@ body {
       left: 130px;
       top: 0px;
     }
+    .hidden { display: none; }
 
 /*  CSS Speech Bubble with Border
   https://codeconvey.com/css-speech-bubble-with-border/ 
