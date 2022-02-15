@@ -248,7 +248,16 @@ function pageOf(c, v) {
     while (i > index[p + 1]) p++;
     return p;
 }
-/**
+function hashToPage(h) {
+    let s = h.split('&')[0]
+    if (s.startsWith('#p=')) {
+      return Number(s.substring(3))
+    } else if (s.startsWith('#v=')) {
+      let [c, v] = s.substring(3).split(':')
+      return pageOf(Number(c), Number(v))
+    }
+  }
+  /**
  * Get the chapter number based on the index of the verse.
  * 
  * @param {number} i index number.

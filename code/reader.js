@@ -205,7 +205,7 @@ function gotoPage(k=1, adjusting) { // 1<=k<=P
     if (k > Q.P) k = Q.P;
     k = Number(k);
     sayfa.innerText = k;
-    if (curPage == k) return;
+    // if (curPage == k) return;
     let [c] = cvFromPage(k); setSura(c);
     if (adjusting == 'slider') return;
   try {
@@ -233,10 +233,8 @@ function gotoPage(k=1, adjusting) { // 1<=k<=P
         idx++; doVerse(e)
     }
     for (let e of text.children) doVerse(e)
-    if (adjusting !== 'hashInProgress') {
-      let h = '#p='+curPage
-      if (location.hash !== h) location.hash = h
-    }
+    if (hashToPage(location.hash) !== curPage) 
+        location.hash = '#p='+curPage
     saveSettings(); scrollTo(0, 0)
 }
 function setSura(c) { // 1<=c<=M
@@ -292,6 +290,7 @@ function gotoHashPage() {
     let s = e.substring(2)
     switch (e.charAt(0)) {
       case 'p': // p=245
+        if (curPage === Number(s)) break
         gotoPage(s)
         document.title = 's'+nameFromPage(s)
         break
@@ -307,7 +306,8 @@ function gotoHashPage() {
       case 'v': // v=12:90
         let [c, v] = s.split(':') 
         c = Number(c); v = Number(v)
-        gotoPage(pageOf(c, v), 'hashInProgress')
+        let p = pageOf(c, v)
+        if (p !== curPage) gotoPage(p)
         document.title = sName[c]+' '+s
         markVerse(s); break
       default: 
@@ -321,9 +321,9 @@ function initialPage() {
     if (Q.kur.loaded && Q.qur.loaded) {
 //https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage    
       parent.postMessage("initialized", "*")
-      let hash = gotoHashPage()
-      console.log("initialPage", hash, innerWidth)
-      if (!hash && parent.innerWidth>850) gotoPage(1) 
+      let hash = gotoHashPage(), wide = parent.innerWidth>850;
+      console.log("initialPage", {hash, wide})
+      if (!hash && (parent===window || wide)) gotoPage(1) 
       checkTrans()
     }
 }

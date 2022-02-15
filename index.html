@@ -109,16 +109,6 @@ function addListener(frm) {
   b.ontouchstart = dummy.ontouchstart
   b.ontouchend   = dummy.ontouchend
 }
-function hashToPage(h) {
-  [s] = h.split('&')
-  if (s.startsWith('#p=')) {
-    h = s.substring(3)
-  } else if (s.startsWith('#v=')) {
-    let [c, v] = s.substring(3).split(':')
-    h = pageOf(Number(c), Number(v))
-  }
-  console.log('hashToPage', h); return Number(h)
-}
 function reportHash(e) { //hashchange in one of the panes
   let s = '[Iqra]', h = ''
   if (e.target.name == 'iqra') {
