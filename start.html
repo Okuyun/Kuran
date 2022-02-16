@@ -47,65 +47,60 @@
 
 <body>
 
-<h2 id=title title='innehû lequr-ânun kerîm &#010;fî kitâbin meknûn'></h2>
-<p>Iqra4 yazılımı ile Kuran-ı Kerim'i farklı yollardan keşfedin: 
-  İstenen sayfayı gösterin, aradığınız kelimeleri bulun, 
-  ya da Arapça kelime kökleri ile arayın.
-  Aşağıda istediğiniz yöntemle başlayabilirsiniz</p>
+<h2 id=head title='innehû lequr-ânun kerîm &#010;fî kitâbin meknûn'></h2>
+<p id=intro></p>
+
 <hr />
-<p><label>Mushafta göster (Sayfa veya Sure:Ayet) </label><br>
-<input type=text id=page placeholder='378 veya 27 30' inputmode=decimal title=
-'1-604 arasında sayfa numarası &#10;ya da sure-ayet numaraları&#10;(boşluk ile ayrılmış)'>&emsp; 
+<p><label id=lab1></label><br>
+<input type=text id=page inputmode=decimal>&emsp; 
 <button id=star></button>&nbsp;
-<button id=last>Son</button>&nbsp;
+<button id=last>
+  <span id=lastText></span> <span id=lastPage></span>
+</button>&nbsp;
 </p>
-<p><label>Rehberde bul (Arapça ya da meal) </label><br>
-<input type=text id=text placeholder='Aranacak metin'
-title='Bu alana girilen metin Rehber yazılımı ile aranır'>
+<p><label id=lab2></label><br>
+<input type=text id=text>
 </p>
-<p><label>Mucemde bul </label><br>
-<input type=text id=root placeholder='ktb Elm'
-  title='Birden fazla kök aranacaksa boşluk ile ayrılmalı'>&emsp;
-<button class=yellow id=search title='Link adresini kullan'>Bul</button>&nbsp;
-<button id=clear title='Girilen verileri sil' hidden>Sil</button>
+<p><label id=lab3></label><br>
+<input type=text id=root>&emsp;
+<button class=yellow id=search></button>&nbsp;
+<button id=clear hidden></button>&nbsp;
+<button onclick="nextLanguage()">L</button>
 </p>
 <p class="group">
-<button onclick='location="konular.html"'>Konular</button>
-<button onclick='location="notlar.html"'>Notlar</button>
-<button onclick='window.open("guideQ.html","Kuran")'>Yardım</button>
+<button id=topic onclick='location="konular.html"'></button>
+<button id=notes onclick='location="notlar.html"'></button>
+<button id=help onclick='window.open("guideQ.html","Kuran")'></button>
 </p>
 <p id=kitap class="group">
-<button id=bookmark onclick='location="bookmarks.html"'
-  title="Yer işaretlerini yönetin">Yıldızlar</button>
-<button onclick='location="/Kitap/rama/"'>30 gün</button>
-<button onclick='location="/Kitap/ders/"'>Dersler</button>
+<button id=mark onclick='location="bookmarks.html"'></button>
+<button id=days onclick='location="/Kitap/rama/"'></button>
+<button id=ders onclick='location="/Kitap/ders/"'></button>
 </p>
-<p id=offline hidden class=expert>
-  Internet kapalı iken bazı özellikler çalışmaz
-</p>
+<p id=offline hidden class=expert></p>
 <hr />
 <details id=expert class=expert>
-  <summary title="Buckwalter kodunu göster/gizle">
+  <summary id=summ>
     <button onclick="expert.open=!expert.open">?</button> 
     &ensp; For expert use only
   </summary>
 <p class=small>
-  <span class=white title="Buckwalter kodu -- alfabetik sıra">
+  <span id=buck class=white>
   &nbsp; A b t v j H x d * r z s $ S D T Z E g f q k l m n h w y &nbsp;</span><br>
   <a href="https://en.wikipedia.org/wiki/Buckwalter_transliteration" target=Kuran>
     Buckwalter transliteration</a>
 </p>
 <p class=small><label>Link
   <span>(hashtag or URL) </span></label><br>
-  <input type=text id=omni title=
-'Linki ilk harf belirler: &#10;Mushaf: p=… v=… &#10;Mucem: r=… &#10;Rehber: t=… b=…'>
+  <input type=text id=omni>
 </p>
 </details>
 
+<script src="code/languages.js"></script>
+<script>setLanguage(lang_start.TR)</script>
 <script src="code/common.js"></script>
 <script src="code/buckwalter.js"></script>
 <script>
-"use strict";
 function doRoot(h) {
     if (!h) return
     h = h.replace(/\s+/g, '&r=')
@@ -196,8 +191,7 @@ function init(storage = {}) {
     let p = storage.page
     if (p) {
       last.onclick = () => doOpen('p='+p)
-      last.innerText = 'Sayfa '+p
-      last.title='En son açılan sayfa: '+p
+      lastPage.innerText = p
     } else {
       last.style.visibility = "hidden"
     }
@@ -205,14 +199,13 @@ function init(storage = {}) {
     if (m && m.length) {
       let h = m.pop()
       star.onclick = () => doOpen('p='+h)
-      star.title='En son işaretlenen sayfa: '+h
     } else {
       star.style.visibility = "hidden"
-      bookmark.style.visibility = "hidden"
+      mark.style.visibility = "hidden"
     }
 }
-    title.innerText = document.title
-    init(getStorage('iqra'))
+document.title = head.innerText
+init(getStorage('iqra'))
 </script>
 
 </body>
