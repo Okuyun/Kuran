@@ -1,5 +1,35 @@
 "use strict";
-var currentLanguage;
+//Each panel uses a separate instance of this class
+class LangManager {
+    constructor() {
+        this.lang = localStorage.language
+         || navigator.language.substring(0,2);
+        this.applyLanguage()
+        addEventListener("message", languageListener)
+    }
+    applyLanguage() {
+        let str = languageStrings(this.lang)
+        for (let x of parseLanguage(str)) {
+          if (!x.elt || !x.attr) continue
+        // x.elt.setAttribute(x.attr, x.val)
+          x.elt[x.attr] = x.val
+        }
+    }
+    nextLanguage() {
+        let n = this.lang === 'tr'? 'en' : 'tr'
+        this.changeLanguage(n)
+    }
+    changeLanguage(str) {
+        this.lang = str
+        localStorage.language = str
+        postMessage("language", "*")
+    }
+}
+function languageListener(e) {
+    console.log('* languageListener *', e.data)
+    if (e.data !== "language") return
+    langMgr.applyLanguage()
+}
 function parseLanguage(str) {
     let a = str.split('\n'), b = []
     for (let s of a) {
@@ -10,24 +40,12 @@ function parseLanguage(str) {
     }
     return b
 }
-function setLanguage(str) {
-    for (let x of parseLanguage(str)) {
-      if (!x.elt || !x.attr) continue
-    // x.elt.setAttribute(x.attr, x.val)
-      x.elt[x.attr] = x.val
-    }
-    currentLanguage = str
-}
-function nextLanguage() {
-    let n = currentLanguage === lang_start.TR?
-        lang_start.EN : lang_start.TR
-    setLanguage(n)
-}
-//we need an object for each HTML page -- only one will be used at a time
-const lang_start = {}, lang_iqra = {}, lang_mujam = {}, lang_reader = {};
 
-//different languages are defined for each object
-lang_start.TR =
+function languageStrings(lang) {
+    if (lang === 'tr') return start_TR
+    else return start_EN //default
+}
+const start_TR =
 `head	innerText	Kuran-ı Kerim
 intro	innerText	Iqra yazılımı ile Kuran-ı Kerim'i farklı yollardan keşfedin: İstenen sayfayı gösterin, aradığınız kelimeleri bulun, ya da Arapça kelime kökleri ile arayın. Aşağıda istediğiniz yöntemle başlayabilirsiniz.
 lab1	innerText	Mushafta göster (Sayfa veya Sure:Ayet)
@@ -58,7 +76,7 @@ summ	title	Buckwalter kodunu göster/gizle
 buck	title	Buckwalter kodu -- alfabetik sıra
 omni	title	Linki ilk harf belirler: /Mushaf: p=… v=… /Mucem: r=… /Rehber: t=… b=…/`
 
-lang_start.EN = 
+const start_EN = 
 `head	innerText	The Noble Quran
 intro	innerText	Discover the Noble Quran using Iqra software: Display the desired page, search some text in the Book, or find derivatives of given roots. You may start with any method shown below.
 lab1	innerText	Display in the Book
@@ -88,3 +106,5 @@ offline	innerText	Internet is required for some features
 summ	title	Show/Hide Buckwalter code
 buck	title	Buckwalter code -- dictionary order
 omni	title	First letter determines the link: /Book: p=… v=… /Mujam: r=… /Finder: t=… b=…/`
+
+const langMgr = new LangManager()
