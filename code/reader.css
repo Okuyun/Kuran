@@ -1,7 +1,7 @@
 html { overscroll-behavior: contain }
 body { 
   margin: 0;
-  background-color: cyan;
+  background-color: #59b;
 }
 
 @media screen and (max-width: 850px) {
@@ -103,7 +103,7 @@ body {
     }
     #div0 {
       height: 36px;
-      background-color: cyan;
+      background-color: #59b;
     }
     #div2 {
       min-height: calc(98vh - 36px);
@@ -157,7 +157,7 @@ body {
     input[type="range" i] { /* added by A Rajab */
       -webkit-appearance: none;
       background: rgba(113, 171, 181, 0.3);
-      outline-color:cyan;
+      outline-color:#59b;
       cursor: pointer;
     }
     
@@ -232,7 +232,7 @@ body {
   }
   pre {
     text-align: left;
-    font-size: smaller;
+    /* font-size: smaller; */
   }
 
 /* Menu Style
@@ -332,10 +332,10 @@ button {
   cursor: pointer;
 }
 #rightB {
-  border-left: 20px solid #00f6;
+  border-left: 20px solid #0003;
 }
 #leftB {
-  border-right: 20px solid #00f6; 
+  border-right: 20px solid #0003; 
 }
 
 #noteBox {
