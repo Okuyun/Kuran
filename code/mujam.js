@@ -254,14 +254,14 @@ function displayList(refs, liste) {
     // kelimeler.hidden = refs.length > 1
     const MAX_REFS = 50  //hide larger lists
     const SPAN = '<span class=item>', _SPAN = '</span>'
-    let s = ''
-    for (let x of refs) { // x is {name, list}
+    let s = ''
+    for (let x of refs) { // x is {name, list}
         let but = refs.length == 1? '' :
             '<button>'+ x.name +'</button>&emsp;'
         s += '<li>'+but+'<span>'
         let lastCV =''
-        for (let y of x.list) // y is VerseRef
-            if (y.cv !== lastCV) {
+        for (let y of x.list) // y is VerseRef
+            if (y.cv !== lastCV) {
                 s += SPAN+ y.cv +_SPAN
                 lastCV = y.cv
             }
@@ -272,7 +272,7 @@ function displayList(refs, liste) {
         bilgi.innerText = VerseRef.fromChapVerse(cv)
         doClick(evt)  //transfer event from x to bilgi
     }
-    liste.innerHTML = s
+    liste.innerHTML = s
     for (let x of liste.querySelectorAll('.item')) {
         x.onclick = doClick3  //doHover
         x.onmouseleave = hideBilgi
@@ -320,15 +320,15 @@ function displayTable(set) {
     indexToArray(set.list)
     // m number of rows, 20 pages per row.
     const m = 30, n = 20
-    let row = "<th>Sayfa</th>"
+    let row = "<th>"+PAGE+"</th>"
     for (let j = 1; j <= n; j++) {
         row += "<th>" + (j % 10) + "</th>" //use last digit
     }
     let text = "<tr class=first>" + row + "</tr>"
     let pn = 0, numC = 0, numP = 0  //counters
     for (let i = 1; i <= m + 1; i++) {
-        let z = i > m ? m : i
-        let s2 = '' //unused "<span class=t1>Cüz " + z + "</span>"
+        // let z = i > m ? m : i
+        let s2 = '' // "<span class=t1>Cüz " + z + "</span>"
         row = "<th>" +threeDigits(pn)+ s2 + "</th>"
         let U = i > m ? 4 : n
         for (let j = 1; j <= U; j++) {
@@ -363,11 +363,11 @@ function displayTable(set) {
     last.append(nb) //to the table again
     tablo.oncontextmenu = showMenuK
     document.title = TITLE + " -- " + set.name
-    let pages = numP + " sayfa"
-    out1.innerText = pages
-    out2.innerText = pages
+    let str = numP +' '+(numP>1? PAGES : PAGE)
+    out1.innerText = str
+    out2.innerText = str
     out3.innerText = set.name
-    console.log(pages, set)
+    console.log(str, set)
     for (let x of tablo.querySelectorAll('td')) {
         x.onmouseenter = doHover
         x.onmouseleave = hideBilgi

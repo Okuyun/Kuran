@@ -14,40 +14,69 @@
 
 <body>
 <div id=div0>
-   <!-- <input type="checkbox" id=showS>
-   <label for=showS title='Kelime listesini göster/gizle' -->
-   <button id=showS 
-   title='Kelime listesini göster'>Liste</button>&nbsp;
+   <button id=showS>Liste</button>&nbsp;
    <span id=out2>page count</span> &nbsp;
-   <span id=out3
-   title='Bu kök kaç sayfada kaç kere geçiyor'>root/word</span>
+   <span id=out3>root/word</span>
 </div>
 <textarea id=noteBox hidden></textarea>
-<button id=noteBut title="Bu kök hakkında notlar ekleyin"></button>
+<button id=noteBut></button>
 <div id=div1 hidden>
-   <button id=combine
-   title='Kelime listesini gizle'>◀</button>&nbsp;
+   <button id=combine>◀</button>&nbsp;
    <span id=out1>page count</span> &nbsp;
-   <select id=menu1 title='aranan kökün ilk harfi'></select>
-   Kök: <select id=menu2 title='kökler ve sayıları'></select>
+   <select id=menu1></select>
+   <span id=kok></span> <select id=menu2></select>
 </div>
 <p id=kelimeler hidden></p>
 <table id=tablo></table>
 
 <div id=menuK class=menu>
-   <div class="black">Dış kaynaklar:</div>
+   <div id=kay1 class="black"></div>
    <span class="menuK">tanzil.net</span>
    <span class="menuK">quran.com</span>
    <span class="menuK">corpus.quran.com</span>
    <span class="menuK">diyanet.gov.tr</span>
    <span class="menuK">kuranmeali.com</span>
    <span class="menuK">acikkuran.com</span>
-   <span class="menuK">Paylaş...</span>
    <hr><div class="black" id=version></div>
-   <span class="menuK">Yardım -- F1</span>
+   <span id=yardim class="menuK"></span>
+   <span id=pay1 class="menuK"></span>
    <!-- <span class="menuK" id=add2hs>Install PWA</span> -->
 </div>
 
+<script src="code/languages.js"></script>
+<script>//localization strings
+const localization = {};
+
+localization.tr =
+`showS	title	Kelime listesini göster
+showS	innerText	Liste
+combine	title	Kelime listesini gizle
+out3	title	Bu kök kaç sayfada kaç kere geçiyor
+noteBut	title	Bu kök hakkında notlar ekleyin
+menu1	title	Aranan kökün ilk harfi
+kok	innerText	Kök:
+menu2	title	Kökler ve sayıları
+yardim	innerText	Yardım — F1
+pay1	innerText	Paylaş...
+kay1	innerText	Dış kaynaklar:`
+
+localization.en = 
+`showS	title	Show the word list
+showS	innerText	List
+combine	title	Hide the word list
+out3	title	Number of pages with this root
+noteBut	title	Add comments about this root
+menu1	title	First letter of the desied root
+kok	innerText	Root:
+menu2	title	Roots and counts
+yardim	innerText	Help — F1
+pay1	innerText	Share...
+kay1	innerText	External sources:`
+
+const PAGE  = currentLanguage()==='en'? 'Page' : 'Sayfa'
+const PAGES = currentLanguage()==='en'? 'Pages' : 'Sayfa'
+const langMgr = new LangManager()
+</script>
 <script src="code/buckwalter.js"></script>
 <script src="code/common.js"></script>
 <script src="code/model.js"></script>
