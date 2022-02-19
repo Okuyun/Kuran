@@ -8,7 +8,14 @@ function currentLanguage() {
 class LangManager {
     constructor() {
         this.applyLanguage()
+        let keys = Object.keys(localization)
+        let next = {}, i=0;
+        while (i < keys.length-1) {
+           next[keys[i]] = keys[i+1]; i++
+        }
+        next[keys[i]] = keys[0]; this.next = next
         addEventListener("message", languageListener)
+        console.log(next)
     }
     applyLanguage() {
         //localization is defined in each panel
@@ -20,9 +27,9 @@ class LangManager {
           x.elt[x.attr] = x.val
         }
     }
-    nextLanguage() { //need to add 'ar' here
-        let n = currentLanguage() === 'tr'? 'en' : 'tr'
-        this.changeLanguage(n)
+    nextLanguage() {
+     // let n = currentLanguage() === 'tr'? 'en' : 'tr'
+        this.changeLanguage(this.next[currentLanguage()])
     }
     changeLanguage(lan) {
         localStorage.language = lan

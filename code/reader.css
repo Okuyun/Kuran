@@ -6,7 +6,7 @@ body {
 
 @media screen and (max-width: 850px) {
     .hiddenNarrow { display: none; }
-    #title, #zoomA { display: none; }
+    #vers2, #zoomA { display: none; }
     #text { 
       font-size: 3.3vw;
       font-size: min(max(3.3vw, 13px), 20px);
@@ -21,7 +21,7 @@ body {
     .zoomWide { 
       transform: scale(1.16) translate(0, 8%);
     }
-    #title {
+    #vers2 {
       margin: 0;
       font-size: 15px;
       display: inline-block;
