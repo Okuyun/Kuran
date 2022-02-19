@@ -64,11 +64,33 @@
   <iframe id=readFrm src='reader.html' width=450
    name=iqra title="Mushaf paneli"></iframe>
 
-  <button id=closeM title='Arama panelini kapat'>x</button>
-  <button id=openM hidden title='Arama paneline dön'>A</button>
-  <button id=sizer title='Arama panelini ayarla'>⇔<br>&nbsp;</button>
+  <button id=closeM>x</button>
+  <button id=openM hidden>A</button>
+  <button id=sizer>⇔<br>&nbsp;</button>
   <p id=dummy hidden></p>
 
+<script src="code/languages.js"></script>
+<script>//localization strings
+const localization = {};
+
+localization.tr =
+`closeM	title	Arama panelini kapat
+openM	title	Arama paneline dön
+sizer	title	Arama panelini ayarla`
+
+localization.en = 
+`closeM	title	Close the search panel
+openM	title	Back to the search panel
+sizer	title	Adjust width`
+
+let langMgr = new LangManager()
+function applyLanguage() {
+    console.log('applyLanguage', currentLanguage())
+    langMgr.applyLanguage()
+    finder.postMessage("language", "*")
+    iqra.postMessage("language", "*")
+}
+</script>
 <script src="code/common.js"></script>
 <script src="code/model.js"></script>
 <script src="code/utilities.js"></script>

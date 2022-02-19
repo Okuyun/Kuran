@@ -142,7 +142,7 @@ function adjustPage(adj) {
     infoS.style.display = adj? 'block' : ''
     gotoPage(slider.value, adj? 'slider' : '')
     if (adj) {
-      let s = sureS.value+' -- Sayfa '+slider.value
+      let s = sureS.value+' --  p'+slider.value
       infoS.innerText = s
     }
 }
@@ -290,9 +290,8 @@ function gotoHashPage() {
     let s = e.substring(2)
     switch (e.charAt(0)) {
       case 'p': // p=245
-        if (curPage === Number(s)) break
-        gotoPage(s)
-        document.title = 's'+nameFromPage(s)
+        document.title = 'p'+nameFromPage(s)
+        if (curPage != s) gotoPage(s)
         break
       case 'r': // r=Sbr
         let L = MD.rootToList(s)
@@ -353,8 +352,8 @@ function makeMenu(button, menu, callback) {
     }
 }
 function initReader() {
-    title.innerHTML = 'Iqra '+VERSION+'&emsp;';
-    version.innerText = 'Iqra '+VERSION;
+    vers1.innerText = 'Iqra '+VERSION
+    vers2.innerHTML = 'Iqra '+VERSION+'&emsp;'
     // console.log(swipe)  //TouchHandler
     sureS.onchange = () => {gotoSura(sureS.selectedIndex+1)}
     pgNum.onkeydown= keyToPage
@@ -413,15 +412,12 @@ function menuFn() {
   function menuItem(m) {
       let s = forceSelection() //s is not empty
       switch (m) {
-          case 'K':
+          case 'copy':
               navigator.clipboard.writeText(s)
               .then(() => { console.log('Panoya:', s) })
               .catch(e => { alert('Panoya yazamadım\n'+e) })
               break
-          case 'R':
-              window.open(LINKF + s, "finder")
-              break
-          case 'M':
+          case 'mujm':
               let a = []
               for (let w of s.split(' ')) {
                 let r = MD.wordToRoot(toBuckwalter(w))
@@ -429,6 +425,9 @@ function menuFn() {
               }
               if (a.length > 0) openMujam(...a)
               else alert('Mucemde bulunamadı')
+              break
+          case 'fndr':
+              window.open(LINKF + s, "finder")
               break
           case 'B':
               alert('Similar pages -- not implemented yet')
@@ -438,7 +437,7 @@ function menuFn() {
   }
   menuC.onclick = (evt) => { //context menu
       evt.preventDefault()
-      menuItem(evt.target.innerText[0])
+      menuItem(evt.target.id)
   }
   menuS.onclick = (evt) => { //star menu
       evt.preventDefault()
@@ -493,8 +492,8 @@ function handleKeyEvent(evt) {
           hideMenus()
       else if (evt.key == 'F1') 
           openSitePage('Y') //Yardım
-      else if (menuC.style.display)
-          menuItem(k)
+      // else if (menuC.style.display)
+      //     menuItem(k)
       else if (menuK.style.display)
           openSitePage(k, curPage)
       else if (menuV.style.display)

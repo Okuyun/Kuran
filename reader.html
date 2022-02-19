@@ -14,25 +14,26 @@
 
 <body>
 <nav id=div3>
-  <b id=title></b>
-  <select id=sureS title='Sure seçin (liste mushaf sırasında)'></select>  
-  <button id=pageA title='Sayfa ya da ayet seçin'>
-      Sayfa <span id=sayfa></span></summary>
+  <b id=vers2></b>
+  <select id=sureS></select>  
+  <button id=pageA>
+    <span id=page1></span> <span id=sayfa></span>
   </button>
-  <button id=starA title='Sayfa işaretleri'>&nbsp;</button>
-  <button id=tranA title='Tercüme sayfası'>&nbsp;</button>
-  <button id=zoomA title='Sayfayı geçici olarak büyüt'>&nbsp;</button>
-  <button id=linkA title='Yardım, Paylaş, Dış kaynaklar'>&nbsp;</button>
+  <button id=starA>&nbsp;</button>
+  <button id=tranA>&nbsp;</button>
+  <button id=zoomA>&nbsp;</button>
+  <button id=linkA>&nbsp;</button>
 </nav>
 
 <div id="bkgd">
   <div class="dialog">
-    Sayfa/Ayet <input id=pgNum type=text inputmode=decimal>
+    <span id=page2></span>
+    <input id=pgNum type=text inputmode=decimal>
 <pre>
-36   = Sayfa 36
-36.  = Sure 36 (Yasin)
-36.8 = Yasin 8. ayet
-(nokta ya da boşluk)
+<span id=dia1></span>
+<span id=dia2></span>
+<span id=dia3></span>
+<span id=dia4></span>
 </pre>
   </div>
 </div>
@@ -44,12 +45,11 @@
 </div>
 
 <nav id=div1>
-  <div id=leftB title='Önceki sayfa'></div>
-  <input id=slider type=range min=1 max=604 value=1
-  title='Aranan sayfaya geçmek için slider'>
+  <div id=leftB></div>
+  <input id=slider type=range min=1 max=604 value=1>
   <span  id=infoS></span>
-  <div id=rightB title='Sonraki sayfa'></div>&ensp;
-  <button id=noteBut title="Bu sayfa hakkında notlar ekleyin"></button>
+  <div id=rightB></div>&ensp;
+  <button id=noteBut></button>
 </nav>
 <textarea id=noteBox hidden></textarea>
 
@@ -63,8 +63,8 @@
 </div>
 
 <div id=menuT class="menu bubble">
-  <span id=tranB class="menuK">Meal göster &ndash; T</span>
-  <span id=tranH class="menuK hidden">Meal gizle &ndash; T</span>
+  <span id=tranB class="menuK">Meal göster</span>
+  <span id=tranH class="menuK hidden">Meal gizle</span>
   <span id=hareB class="menuK hidden">Harekeleri göster</span>
   <span id=hareH class="menuK">Harekeleri gizle</span>
   <hr>
@@ -76,36 +76,34 @@
   <span id=10 class="menuK">DE &ensp; Amir Zaidan</span>
   <span id=9 class="menuK">AR &ensp; Çeviriyazı</span>
   <hr>
-  <span class="menuK">Kaynak: 
+  <span class="menuK"><span id=kaynak></span>
     <a href="https://tanzil.net/trans/" target="Kuran">tanzil.net</a>
   </span>
 </div>
 
 <div id=menuC class=menu>
-   <span class="menuC">Kopyala</span>
-   <span class="menuC">Mucem</span>
-   <span class="menuC">Rehber</span>
+   <span id=copy class="menuC"></span>
+   <span id=mujm class="menuC"></span>
+   <span id=fndr class="menuC"></span>
    <!--span class="menuC">Benzer</span-->
 </div>
 
 <div id=menuK class="menu bubble">
-   <span id=yardim class="menuK">Yardım &ndash; F1</span>
-   <span class="menuK">Paylaş (sayfa)</span>
-   <hr><div class="black">Dış kaynaklar:</div>
+   <span id=yardim class="menuK"></span>
+   <span id=pay1 class="menuK"></span>
+   <hr><div id=kay1 class="black"></div>
    <span class="menuK">tanzil.net</span>
    <span class="menuK">quran.com</span>
    <span class="menuK">diyanet.gov.tr</span>
    <span class="menuK">kuranmeali.com</span>
-   <hr><div class="black" id=version></div>
-   <!-- <span class="menuK">Bookmarks</span>Yer işaretleri -->
-   <span class="menuK" id=add2hs hidden
-   title='Web sayfasını uygulama olarak aç'>Install PWA</span>
+   <hr><div class="black" id=vers1></div>
+   <span class="menuK" id=add2hs hidden>Install PWA</span>
    <!-- display property overrides the hidden attribute -->
 </div>
 
 <div id=menuV class=menu>
-   <span class="menuK">Paylaş (ayet)...</span>
-   <hr><div class="black">Dış kaynaklar:</div>
+   <span id=pay2 class="menuK"></span>
+   <hr><div id=kay2 class="black"></div>
    <span class="menuK">tanzil.net</span>
    <span class="menuK">quran.com</span>
    <span class="menuK">corpus.quran.com</span>
@@ -114,6 +112,74 @@
    <span class="menuK">acikkuran.com</span>
 </div>
 
+<script src="code/languages.js"></script>
+<script>//localization strings
+const localization = {};
+
+localization.tr = 
+`page1	innerText	Sayfa
+page2	innerText	Sayfa/Ayet
+dia1	innerText	36   = Sayfa 36
+dia2	innerText	36.  = Sure 36 (Yasin)
+dia3	innerText	36.8 = Yasin 8. ayet
+dia4	innerText	(nokta ya da boşluk)
+copy	innerText	Kopyala
+mujm	innerText	Mucem
+fndr	innerText	Rehber
+leftB	title	Önceki sayfa
+slider	title	Aranan sayfaya geçmek için slider
+rightB	title	Sonraki sayfa
+noteBut	title	Bu sayfa hakkında notlar ekleyin
+sureS	title	Sure seçin (liste mushaf sırasında)
+pageA	title	Sayfa ya da ayet seçin
+zoomA	title	Sayfayı geçici olarak büyüt
+starB	innerText	Yıldız Ekle
+starH	innerText	Yıldız Kaldır
+tranB	innerText	Meal göster — T
+tranH	innerText	Meal gizle — T
+hareB	innerText	Harekeleri göster
+hareH	innerText	Harekeleri gizle
+kaynak	innerText	Kaynak:
+yardim	innerText	Yardım — F1
+pay1	innerText	Paylaş (sayfa)
+kay1	innerText	Dış kaynaklar:
+add2hs	title	Web sayfasını uygulama olarak aç
+pay2	innerText	Paylaş (ayet)...
+kay2	innerText	Dış kaynaklar`
+
+localization.en = 
+`page1	innerText	Page
+page2	innerText	Page/Verse
+dia1	innerText	36   = Page 36
+dia2	innerText	36.  = Chap 36 (Yasin)
+dia3	innerText	36.8 = Yasin, verse #8
+dia4	innerText	(period or space)
+copy	innerText	Copy
+mujm	innerText	Mujam
+fndr	innerText	Finder
+leftB	title	Previous page
+slider	title	Slider to view the desired page
+rightB	title	Next page
+noteBut	title	Add comments about this page
+sureS	title	Select chapter
+pageA	title	Enter page or verse number
+zoomA	title	Zoom in/out (change size)
+starB	innerText	Add bookmark
+starH	innerText	Remove bookmark
+tranB	innerText	Show translation
+tranH	innerText	Hide translation
+hareB	innerText	Show vowels
+hareH	innerText	Hide vowels
+kaynak	innerText	Source:
+yardim	innerText	Help — F1
+pay1	innerText	Share (page)
+kay1	innerText	External sources:
+add2hs	title	Install web page as application
+pay2	innerText	Share (verse)...
+kay2	innerText	External sources`
+
+let langMgr = new LangManager()
+</script>
 <script src="code/buckwalter.js"></script>
 <script src="code/common.js"></script>
 <script src="code/model.js"></script>

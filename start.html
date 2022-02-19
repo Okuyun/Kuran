@@ -65,7 +65,8 @@
 <input type=text id=root>&emsp;
 <button class=yellow id=search></button>&nbsp;
 <button id=clear hidden></button>&nbsp;
-<button onclick="langMgr.nextLanguage()">L</button>
+<button onclick="langMgr.nextLanguage()"
+    title="Change language / Dil değiştir">L</button>
 </p>
 <p class="group">
 <button id=topic onclick='location="konular.html"'></button>
@@ -97,6 +98,73 @@
 </details>
 
 <script src="code/languages.js"></script>
+<script>//localization strings
+const localization = {};
+
+localization.tr =
+`head	innerText	Kuran-ı Kerim
+intro	innerText	Iqra yazılımı ile Kuran-ı Kerim'i farklı yollardan keşfedin: İstenen sayfayı gösterin, aradığınız kelimeleri bulun, ya da Arapça kelime kökleri ile arayın. Aşağıda istediğiniz yöntemle başlayabilirsiniz.
+lab1	innerText	Mushafta göster (Sayfa veya Sure:Ayet)
+page	placeholder	378 veya 27 30
+page	title	1-604 arasında sayfa numarası ya da sure-ayet numaraları
+star	title	En son işaretlenen sayfa
+last	title	En son açılan sayfa
+lastText	innerText	Sayfa
+lab2	innerText	Rehberde bul (Arapça ya da meal) 
+text	placeholder	Aranacak metin
+text	title	Bu alana girilen metin Rehber yazılımı ile aranır
+lab3	innerText	Mucemde bul
+root	placeholder	ktb Elm
+root	title	Birden fazla kök aranacaksa boşluk ile ayrılmalı
+search	title	Link adresini kullan
+search	innerText	Bul
+clear	title	Girilen verileri sil
+clear	innerText	Sil
+topic	innerText	Konular
+notes	innerText	Notlar
+help	innerText	Yardım
+mark	title	Yer işaretlerini yönetin
+mark	innerText	Yıldızlar
+days	innerText	30 gün
+ders	innerText	Dersler
+offline	innerText	Internet kapalı iken bazı özellikler çalışmaz
+summ	title	Buckwalter kodunu göster/gizle
+buck	title	Buckwalter kodu -- alfabetik sıra
+omni	title	Linki ilk harf belirler: /Mushaf: p=… v=… /Mucem: r=… /Rehber: t=… b=…/`
+
+localization.en = 
+`head	innerText	The Noble Quran
+intro	innerText	Discover the Noble Quran using Iqra software: Display the desired page, search some text in the Book, or find derivatives of given roots. You may start with any method shown below.
+lab1	innerText	Display in the Book
+page	placeholder	378 or 27 30
+page	title	Page number (1-604) or Chapter and verse numbers
+star	title	Page with the latest bookmark
+last	title	Page opened latest
+lastText	innerText	Page
+lab2	innerText	Search using Finder
+text	placeholder	text to find
+text	title	Text entered here will be searched verbatim using Finder
+lab3	innerText	Search using Mujam
+root	placeholder	ktb Elm
+root	title	Use space to separate roots (in Buckwalter code)
+search	title	Use the address shown in the Link below
+search	innerText	Search
+clear	title	Clear all data entered on this page
+clear	innerText	Clear
+topic	innerText	Topics
+notes	innerText	Notes
+help	innerText	Help
+mark	title	Manage bookmarks
+mark	innerText	Stars
+days	innerText	30 gün
+ders	innerText	Dersler
+offline	innerText	Internet is required for some features
+summ	title	Show/Hide Buckwalter code
+buck	title	Buckwalter code -- dictionary order
+omni	title	First letter determines the link: /Book: p=… v=… /Mujam: r=… /Finder: t=… b=…/`
+
+const langMgr = new LangManager()
+</script>
 <script src="code/common.js"></script>
 <script src="code/buckwalter.js"></script>
 <script>
@@ -188,7 +256,7 @@ function init(storage = {}) {
     page.onchange = setOmni
     document.onkeydown = keyToPage
     let p = storage.page
-    if (p) {
+    if (p && parent.iqra && parent.iqra.curPage!=p) {
       last.onclick = () => doOpen('p='+p)
       lastPage.innerText = p
     } else {
