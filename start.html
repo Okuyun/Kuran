@@ -10,11 +10,15 @@
 
   <style>
     body {
-      max-width: 440px;
       min-height: 90vh;
-      background: #6bb;
     }
-    body, h2, h3 { margin: 20px; }
+    div#data {
+      max-width: 440px;
+      background: #f9f4e8;
+      margin: auto;
+      padding: 12px;
+    }
+    body, h2, h3 { margin: 12px; }
     h2 { margin-bottom: 16px; }
     body, input, button { 
       font: 16px arial;
@@ -25,6 +29,7 @@
       border: 3px solid gray;
       border-radius: 8px;
       cursor: pointer;
+      background: lightgray;
     }
     .group button {
       min-width: 84px;
@@ -32,7 +37,7 @@
     .yellow { background: #ff7; }
     .white { background: white; }
     .small { font-size: smaller; }
-    .expert { color: black; }
+    .expert { color: darkred; }
     #star {
       position: relative;
       top: 10px;
@@ -49,54 +54,56 @@
 <body>
 
 <h2 id=head title='innehû lequr-ânun kerîm &#010;fî kitâbin meknûn'></h2>
-<p id=intro></p>
 
-<hr />
-<p><label id=lab1></label><br>
-<input type=text id=page inputmode=decimal>&emsp; 
-<button id=star></button>&nbsp;
-<button id=last>
-  <span id=lastText></span> <span id=lastPage></span>
-</button>&nbsp;
-</p>
-<p><label id=lab2></label><br>
-<input type=text id=text>
-</p>
-<p><label id=lab3></label><br>
-<input type=text id=root>&emsp;
-<button id=search></button>&nbsp;
-<button id=clear hidden></button>&nbsp;
-<button class=yellow onclick="langMgr.nextLanguage()"
-    title="Change language / Dil değiştir">L</button>
-</p>
-<p class="group">
-<button id=topic onclick='location="konular.html"'></button>
-<button id=notes onclick='location="notlar.html"'></button>
-<button id=help onclick='window.open("guideQ.html","Kuran")'></button>
-</p>
-<p id=kitap class="group">
-<button id=mark onclick='location="bookmarks.html"'></button>
-<button id=days onclick='location="/Kitap/rama/"'></button>
-<button id=ders onclick='location="/Kitap/ders/"'></button>
-</p>
-<p id=offline hidden class=expert></p>
-<hr />
-<details id=expert class=expert>
-  <summary id=summ>
-    <button onclick="expert.open=!expert.open">?</button> 
-    &ensp; For expert use only
-  </summary>
-<p class=small>
-  <span id=buck class=white>
-  &nbsp; A b t v j H x d * r z s $ S D T Z E g f q k l m n h w y &nbsp;</span><br>
-  <a href="https://en.wikipedia.org/wiki/Buckwalter_transliteration" target=Kuran>
-    Buckwalter transliteration</a>
-</p>
-<p class=small><label>Link
-  <span>(hashtag or URL) </span></label><br>
-  <input type=text id=omni>
-</p>
-</details>
+<div id=data>
+  <div id=intro></div>
+  <hr />
+  <p><label id=lab1></label><br>
+  <input type=text id=page inputmode=decimal>&emsp; 
+  <button id=star></button>&nbsp;
+  <button id=last>
+    <span id=lastText></span> <span id=lastPage></span>
+  </button>&nbsp;
+  </p>
+  <p><label id=lab2></label><br>
+  <input type=text id=text>
+  </p>
+  <p><label id=lab3></label><br>
+  <input type=text id=root>&emsp;
+  <button id=search></button>&nbsp;
+  <button id=clear hidden></button>&nbsp;
+  <button class=yellow onclick="langMgr.nextLanguage()"
+      title="Change language / Dil değiştir">L</button>
+  </p>
+  <p class="group">
+  <button id=topic onclick='location="konular.html"'></button>
+  <button id=notes onclick='location="notlar.html"'></button>
+  <button id=help onclick='window.open("guideQ.html","Kuran")'></button>
+  </p>
+  <p id=kitap class="group">
+  <button id=mark onclick='location="bookmarks.html"'></button>
+  <button id=days onclick='location="/Kitap/rama/"'></button>
+  <button id=ders onclick='location="/Kitap/ders/"'></button>
+  </p>
+  <p id=offline hidden class=expert></p>
+  <hr />
+  <details id=expert class=expert>
+    <summary id=summ>
+      <button onclick="expert.open=!expert.open">?</button> 
+      &ensp; For expert use only
+    </summary>
+  <p class=small>
+    <span id=buck class=white>
+    &nbsp; A b t v j H x d * r z s $ S D T Z E g f q k l m n h w y &nbsp;</span><br>
+    <a href="https://en.wikipedia.org/wiki/Buckwalter_transliteration" target=Kuran>
+      Buckwalter transliteration</a>
+  </p>
+  <p class=small><label>Link
+    <span>(hashtag or URL) </span></label><br>
+    <input type=text id=omni>
+  </p>
+  </details>
+</div>
 
 <script src="code/languages.js"></script>
 <script>//localization strings
