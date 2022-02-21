@@ -190,7 +190,7 @@ body {
       background-color : #dcd6;
     }
     .checked { 
-      background-color : #ff7;
+      background-color : #ff7a;
       border: 1px solid brown;
     }
     ::selection {
@@ -223,7 +223,7 @@ body {
     z-index: 5;
   }
   .dialog {
-    width: 170px;
+    width: 180px;
     padding: 20px;
     display: block;
     margin: 40px auto;

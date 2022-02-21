@@ -262,13 +262,13 @@ function dragEnd(a) {
       case 0: case 12: //swipe left
         if (!parent.toogleFinder) return false
         if (!transIsChecked())
-          parent.toogleFinder() //pink button
+          parent.toogleFinder() //yellow button
         else toggleTrans() //T button
         return true
       case 6: //swipe right
         if (!parent.toogleFinder) return false
         if (transIsChecked())
-          parent.toogleFinder() //pink button
+          parent.toogleFinder() //yellow button
         else toggleTrans() //T button
         return true
       case 9: //swipe down
@@ -356,7 +356,8 @@ function initReader() {
     vers2.innerHTML = 'Iqra '+VERSION+'&emsp;'
     // console.log(swipe)  //TouchHandler
     sureS.onchange = () => {gotoSura(sureS.selectedIndex+1)}
-    pgNum.onkeydown= keyToPage
+    pgNum.onkeydown = keyToPage
+    dialogOK.onclick = (e) => {e.key='Enter'; keyToPage(e)}
     pageA.onclick = handlePageNum
     bkgd.onclick = (e) => e.target===bkgd? hideElement(bkgd) : 0
     makeMenu(starA, menuS, makeStarMenu)

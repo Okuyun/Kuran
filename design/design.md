@@ -25,7 +25,7 @@ Wide screen needs no transition
 Tablet mode is tricky
 
 ![phone](phone.png) 
-Horizotal swipe and pink buttons
+Horizotal swipe and yellow buttons
 
 ### User interface
 
