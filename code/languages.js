@@ -6,7 +6,8 @@ function currentLanguage() {
 
 //Each panel uses a separate instance of this class
 class LangManager {
-    constructor() {
+    constructor(callback) {
+        this.callback = callback || (() => null)
         this.applyLanguage()
         let keys = Object.keys(localization)
         let next = {}, i=0;
@@ -15,7 +16,6 @@ class LangManager {
         }
         next[keys[i]] = keys[0]; this.next = next
         addEventListener("message", languageListener)
-        console.log(next)
     }
     applyLanguage() {
         //localization is defined in each panel
@@ -26,6 +26,7 @@ class LangManager {
         // x.elt.setAttribute(x.attr, x.val)
           x.elt[x.attr] = x.val
         }
+        this.callback()
     }
     nextLanguage() {
      // let n = currentLanguage() === 'tr'? 'en' : 'tr'
@@ -36,6 +37,9 @@ class LangManager {
         if (parent.applyLanguage) 
             parent.applyLanguage()
         else this.applyLanguage()
+    }
+    static adjustDirection(elt) {
+        elt.style.direction = currentLanguage()=='ar'? 'rtl' : 'ltr'
     }
 }
 function languageListener(e) {
