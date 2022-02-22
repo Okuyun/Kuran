@@ -112,6 +112,9 @@
 </div>
 
 <script src="code/languages.js"></script>
+<script src="code/buckwalter.js"></script>
+<script src="code/common.js"></script>
+<script src="code/model.js"></script>
 <script>//localization strings
 const localization = {};
 
@@ -209,11 +212,15 @@ add2hs	title	تثبيت الصفحة كتطبيق
 pay2	innerText	شارك (آية)...
 kay2	innerText	مصادر خارجية`
 
-let langMgr = new LangManager()
+function setSuraMenu() {
+    sName = suraNames[currentLanguage()]
+    let labels = []
+    for (let i=1; i<=114; i++)
+      labels.push(i+'. '+sName[i])
+    sureS.innerHTML = '<option>'+labels.join('<option>')
+}
+let langMgr = new LangManager(setSuraMenu) 
 </script>
-<script src="code/buckwalter.js"></script>
-<script src="code/common.js"></script>
-<script src="code/model.js"></script>
 <script src="code/utilities.js"></script>
 <script src="code/reader.js"></script>
 

@@ -1,8 +1,9 @@
 "use strict";
 
+const suraNames = {}
 /** Sura names in Turkish -- 1-114 */
-const sName
-=["","Fatiha","Bakara","Ali İmran","Nisa","Maide","Enam","Araf","Enfal",
+suraNames.tr
+= ["","Fatiha","Bakara","Ali İmran","Nisa","Maide","Enam","Araf","Enfal",
 "Tevbe","Yunus","Hud","Yusuf","Rad","İbrahim","Hicr","Nahl","İsra","Kehf"
 ,"Meryem","Taha","Enbiya","Hacc","Muminun","Nur","Furkan","Şuara","Neml"
 ,"Kasas","Ankebut","Rum","Lokman","Secde","Ahzab","Sebe","Fatır","Yasin"
@@ -16,8 +17,26 @@ const sName
 ,"Kadir","Beyyine","Zilzal","Adiyat","Karia","Tekasur","Asr","Hümeze","Fil"
 ,"Kureyş","Maun","Kevser","Kafirun","Nasr","Leheb","İhlas","Felak","Nas"]
 
+/** Sura names in English */
+suraNames.en
+= ['','Faatiha','Baqara','Aali-Imraan','Nisaa','Maaida',"An'aam", 
+"A'raaf",'Anfaal','Tawba','Yunus','Hud','Yusuf',"Ra'd",'Ibrahim', 
+'Hijr','Nahl','Israa','Kahf','Maryam','Taa-Haa','Anbiyaa','Hajj', 
+'Muminoon','Noor','Furqaan',"Shu'araa",'Naml','Qasas','Ankaboot', 
+'Room','Luqman','Sajda','Ahzaab','Saba','Faatir','Yaseen','Saaffaat','Saad', 
+'Zumar','Ghaafir','Fussilat','Shura','Zukhruf','Dukhaan','Jaathiya','Ahqaf', 
+'Muhammad','Fath','Hujuraat','Qaaf','Dhaariyat','Tur','Najm','Qamar', 
+'Rahmaan','Waaqia','Hadid','Mujaadila','Hashr','Mumtahana','Saff', 
+"Jumu'a",'Munaafiqoon','Taghaabun','Talaaq','Tahrim','Mulk','Qalam', 
+'Haaqqa',"Ma'aarij",'Nooh','Jinn','Muzzammil','Muddaththir','Qiyaama','Insaan', 
+'Mursalaat','Naba',"Naazi'aat",'Abasa','Takwir','Infitaar','Mutaffifin', 
+'Inshiqaaq','Burooj','Taariq',"A'laa",'Ghaashiya','Fajr','Balad','Shams', 
+'Lail','Dhuhaa','Sharh','Tin','Alaq','Qadr','Bayyina','Zalzala',
+'Aadiyaat',"Qaari'a",'Takaathur','Asr','Humaza','Fil','Quraish', 
+"Maa'un",'Kawthar','Kaafiroon','Nasr','Masad','Ikhlaas','Falaq','Naas']
+
 /** Sura names in Arabic */
-const aName 
+suraNames.ar
 =  ["","الفاتحة","البقرة","آل عمران","النساء","المائدة","الأنعام"
 ,"الأعراف","الأنفال","التوبة","يونس","هود","يوسف","الرعد","ابراهيم"
 ,"الحجر","النحل","الإسراء","الكهف","مريم","طه","الأنبياء","الحج"
@@ -33,6 +52,8 @@ const aName
 ,"الليل","الضحى","الشرح","التين","العلق","القدر","البينة","الزلزلة"
 ,"العاديات","القارعة","التكاثر","العصر","الهمزة","الفيل","قريش"
 ,"الماعون","الكوثر","الكافرون","النصر","المسد","الإخلاص","الفلق","الناس"]
+
+var sName = suraNames.en, aName = suraNames.ar;
 
 /**
  * Global array to hold the index numbers of Sajda.

@@ -355,6 +355,7 @@ function initReader() {
     vers1.innerText = 'Iqra '+VERSION
     vers2.innerHTML = 'Iqra '+VERSION+'&emsp;'
     // console.log(swipe)  //TouchHandler
+    setSuraMenu()
     sureS.onchange = () => {gotoSura(sureS.selectedIndex+1)}
     pgNum.onkeydown = keyToPage
     dialogOK.onclick = (e) => {e.key='Enter'; keyToPage(e)}
@@ -373,10 +374,6 @@ function initReader() {
     slider.onchange= () => {adjustPage(false)} //committed
     rightB.onclick = () => {nextPage()}
     noteBut.onclick = () => {Q.notes.edit()} //in common.js
-    let labels = []
-    for (let i=1; i<=Q.M; i++)
-      labels.push(i+'. '+sName[i])
-    sureS.innerHTML = '<option>'+labels.join('<option>')
     menuFn(); 
     var prevTime
     document.onvisibilitychange = () => {
