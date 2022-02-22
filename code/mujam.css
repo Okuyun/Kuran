@@ -99,7 +99,7 @@
         text-align: center;
     }
     .t1, .t2 {
-        font: 12px/1.6 sansserif, arial;
+        font: 12px/1.6 sans-serif, arial;
         padding: 5px;
         cursor: pointer;
         border: black 1px solid;
@@ -125,7 +125,7 @@
       /* text-align: center; */
       color: blue;
       background-color: #eee;
-      font: 13px sansserif, arial;
+      font: 13px sans-serif, arial;
       user-select: none;
       z-index: 1;
     }

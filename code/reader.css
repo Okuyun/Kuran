@@ -70,6 +70,7 @@ body {
     #pgNum {
       width: 50px;
       margin-top: 6px;
+      font-size: large;
     }
     #bilgi { 
       display: none;
@@ -127,7 +128,10 @@ body {
       direction: rtl;
     }
     #text, #div3, #infoS { 
-      font-family: sansserif, arial;
+      font-family: sans-serif, arial;
+    }
+    .dialog { 
+      font: 14px sans-serif, arial;
     }
     #html, #bilgi { 
       font-family: Zekr, serif;
@@ -232,7 +236,6 @@ body {
   }
   pre {
     text-align: left;
-    /* font-size: smaller; */
   }
 
 /* Menu Style
@@ -245,7 +248,7 @@ body {
       border: black 1px solid;
       color: blue;
       background-color: #eee;
-      font: 13px sansserif, arial;
+      font: 13px sans-serif, arial;
       user-select: none;
       overflow-y: auto;
       max-height: 90vh; /* for overflow */
