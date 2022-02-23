@@ -108,8 +108,11 @@
     .t1 {
         background-color: #eee;
     }
-    .t2, #showS, #combine {
+    .t2 {
         background-color: #ff7;
+    }
+    #showS, #combine {
+        background-color: hsl(240, 100%, 95%);
     }
 	@font-face {
 	  font-family: me_quran;

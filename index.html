@@ -31,13 +31,16 @@
       border-radius: 15px;
       user-select: none;
     }
-    #closeM, #openM {
+    #closeM, #openM, #lang {
       height: 28px; width: 28px;
       top: 4px; right: 0;
       cursor: pointer;
     }
+    #lang { left: 0; }
+    #closeM:hover, #openM:hover, #lang:hover {
+      height: 32px; width: 32px;
+    }
     #sizer {
-      /* height: 32px; */
       bottom: -18px;
       cursor: col-resize;
     }
@@ -64,6 +67,8 @@
   <iframe id=readFrm src='reader.html' width=450
    name=iqra title="Mushaf paneli"></iframe>
 
+  <button id=lang onclick="langMgr.nextLanguage()"
+     title="Change language / Dil değiştir">L</button>
   <button id=closeM>x</button>
   <button id=openM hidden>A</button>
   <button id=sizer>⇔<br>&nbsp;</button>
@@ -81,7 +86,7 @@ sizer	title	Arama panelini ayarla`
 localization.en = 
 `closeM	title	Close the search panel
 openM	title	Back to the search panel
-sizer	title	Adjust width`
+sizer	title	Adjust panel width`
 
 localization.ar = 
 `closeM	title	أغلق نافذة البحث
@@ -151,6 +156,7 @@ function reportHash(e) { //hashchange in one of the panes
     } catch (e) {
       isStartPage = false //external page
     }
+    lang.hidden = !isStartPage
     if (e.target.document) {
       s = e.target.document.title
       h = e.target.location.hash
