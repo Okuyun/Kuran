@@ -213,11 +213,13 @@ pay2	innerText	شارك (آية)...
 kay2	innerText	مصادر خارجية`
 
 function setSuraMenu() {
+    let i = sureS.selectedIndex 
     sName = suraNames[currentLanguage()]
     let labels = []
     for (let i=1; i<=114; i++)
       labels.push(i+'. '+sName[i])
     sureS.innerHTML = '<option>'+labels.join('<option>')
+    if (i) sureS.selectedIndex = i
 }
 let langMgr = new LangManager(setSuraMenu) 
 </script>

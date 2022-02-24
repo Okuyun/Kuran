@@ -27,7 +27,7 @@
     button {
       position: fixed;
       background-color: #ff7;
-      border: 2px solid brown;
+      border: 1px solid black;
       border-radius: 15px;
       user-select: none;
     }
@@ -36,7 +36,14 @@
       top: 4px; right: 0;
       cursor: pointer;
     }
-    #lang { left: 0; }
+    #lang {
+      left: 0; 
+      /* flaticon.com/free-icon/language_1246334 */
+      background-image: url(image/language.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      border: none;
+    }
     #closeM:hover, #openM:hover, #lang:hover {
       height: 32px; width: 32px;
     }
@@ -68,7 +75,7 @@
    name=iqra title="Mushaf paneli"></iframe>
 
   <button id=lang onclick="langMgr.nextLanguage()"
-     title="Change language / Dil değiştir">L</button>
+     title="Change language / Dil değiştir"></button>
   <button id=closeM>x</button>
   <button id=openM hidden>A</button>
   <button id=sizer>⇔<br>&nbsp;</button>
