@@ -28,12 +28,13 @@
       position: fixed;
       background-color: #ff7;
       border: 1px solid black;
+      transition: all 0.4s ease-out;
       border-radius: 15px;
       user-select: none;
     }
     #closeM, #openM, #lang {
       height: 28px; width: 28px;
-      top: 4px; right: 0;
+      top: 3px; right: 0;
       cursor: pointer;
     }
     #lang {
@@ -75,7 +76,7 @@
    name=iqra title="Mushaf paneli"></iframe>
 
   <button id=lang onclick="langMgr.nextLanguage()"
-     title="Change language / Dil değiştir"></button>
+     title="Language / اللغة / Dil &#010;English / العربي / Türkçe"></button>
   <button id=closeM>x</button>
   <button id=openM hidden>A</button>
   <button id=sizer>⇔<br>&nbsp;</button>
