@@ -12,7 +12,17 @@
     body {
       max-width: 540px;
       min-height: 90vh;
-      background: #dfd;
+      margin: 0;
+    }
+    #div4 {
+        background: #dfd;
+        padding: 8px;
+    }
+    h2 {
+        text-align: center;
+        height: 32px;
+        margin: 0;
+        padding-top: 4px;
     }
     select {
         font: 16px Arial, Helvetica, sans-serif;
@@ -122,13 +132,13 @@ from <a href=https://www.flaticon.com/>www.flaticon.com</a>
 
 <body>
 
-<h2 id=konu title='siz de konu ekleyip silebilirsiniz'>Konular</h2>
+<h2 id=konu></h2>
 <div id=div4>
    <select id=menu4></select>&emsp;
-   <button id=ekleD title='yeni konu ekle'>&nbsp;</button>&nbsp;
-   <button id=editD title='bu konuyu düzenle'>&nbsp;</button>&nbsp;
-   <button id=deleD title='bu konuyu sil'>&nbsp;</button>&emsp;
-   <button id=share title='bu konuyu paylaş'>&nbsp;</button>
+   <button id=ekleD>&nbsp;</button>&nbsp;
+   <button id=editD>&nbsp;</button>&nbsp;
+   <button id=deleD>&nbsp;</button>&emsp;
+   <button id=share>&nbsp;</button>
    <p id=konular></p>
 </div>
 
@@ -229,6 +239,12 @@ function anchor(x) {
 function displayTopic(s) {
     document.title = 'Konu: '+s.name
     konular.innerHTML = s.list.map(anchor).join('\n')
+}
+addEventListener("message", translationListener)
+function translationListener(evt) {
+    if (evt.data !== "translation") return
+    let t = topics.get(menu4.value)
+    setTimeout(() => displayTopic(t), 500)    
 }
 function setMenu(topic) { //called by menu4 and list items
     if (!topic) topic = menu4.value;

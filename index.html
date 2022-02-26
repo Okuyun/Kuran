@@ -105,14 +105,14 @@ let langMgr = new LangManager()
 function applyLanguage() {
     console.log('applyLanguage', currentLanguage())
     langMgr.applyLanguage()
-    finder.postMessage("language", "*")
     iqra.postMessage("language", "*")
+    finder.postMessage("language", "*")
 }
 function applyTranslation() {
     let k = getStorage('settings', 'source')
     console.log('applyTranslation', k)
-    finder.postMessage("translation", "*")
     iqra.postMessage("translation", "*")
+    finder.postMessage("translation", "*")
 }
 </script>
 <script src="code/common.js"></script>
