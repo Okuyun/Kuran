@@ -103,14 +103,14 @@ sizer	title	ضبط عرض النافذة`
 
 let langMgr = new LangManager()
 function applyLanguage() {
-    console.log('applyLanguage', currentLanguage())
+    // console.log('applyLanguage', currentLanguage())
     langMgr.applyLanguage()
     iqra.postMessage("language", "*")
     finder.postMessage("language", "*")
 }
 function applyTranslation() {
     let k = getStorage('settings', 'source')
-    console.log('applyTranslation', k)
+    // console.log('applyTranslation', k)
     iqra.postMessage("translation", "*")
     finder.postMessage("translation", "*")
 }

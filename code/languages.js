@@ -43,7 +43,7 @@ class LangManager {
     }
 }
 function languageListener(e) {
-    console.log('* listener *', e.data, window.name)
+    // console.log('* listener *', e.data, window.name)
     if (e.data !== "language") return
     langMgr.applyLanguage()
 }

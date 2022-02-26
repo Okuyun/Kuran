@@ -446,7 +446,7 @@ function menuFn() {
   }
   menuT.onclick = (evt) => { //translation menu
     function toggleText(simple) {
-      let n = simple? 0 : 11
+      let n = simple? 0 : 1
       // let s = simple? 'gizle' : 'göster'
       Q.qur = new QuranText(n, () => gotoPage(curPage))
       if (simple) {
