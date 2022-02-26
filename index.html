@@ -108,6 +108,12 @@ function applyLanguage() {
     finder.postMessage("language", "*")
     iqra.postMessage("language", "*")
 }
+function applyTranslation() {
+    let k = getStorage('settings', 'source')
+    console.log('applyTranslation', k)
+    finder.postMessage("translation", "*")
+    iqra.postMessage("translation", "*")
+}
 </script>
 <script src="code/common.js"></script>
 <script src="code/model.js"></script>

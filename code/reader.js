@@ -445,11 +445,6 @@ function menuFn() {
       if (Number(k)) gotoPage(Number(k))
   }
   menuT.onclick = (evt) => { //translation menu
-    function setTrans() {
-      text.innerHTML = Q.kur.pageToHTML(curPage)
-      setStorage('settings', 'source', k)
-      checkTrans()
-    }
     function toggleText(simple) {
       let n = simple? 0 : 11
       // let s = simple? 'gizle' : 'göster'
@@ -465,10 +460,23 @@ function menuFn() {
       if (k) {
         console.log(k, t.textContent)
         if (!transIsChecked()) toggleTrans()
-        Q.kur = new KuranText(k, setTrans) //current
+        setStorage('settings', 'source', k)
+        if (parent.applyTranslation) 
+          parent.applyTranslation()
+        else postMessage("translation", "*")
       } else if (t === hareB || t === hareH) {
         toggleText(Q.qur.url.includes('simple'))
       }
+  }
+  addEventListener("message", translationListener)
+  function translationListener(evt) {
+    function setTrans() {
+      text.innerHTML = Q.kur.pageToHTML(curPage)
+      checkTrans()
+    }
+    if (evt.data !== "translation") return
+    let k = getStorage('settings', 'source')
+    Q.kur = new KuranText(k, setTrans) //current
   }
   menuK.onclick = (evt) => { //menu button
       evt.preventDefault()

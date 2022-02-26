@@ -263,7 +263,7 @@ body {
     }
     .black, .menuK {
       display: block;
-      padding: 10px;
+      padding: 8px 14px;
     }
     .menuC {
       display: inline-block;
