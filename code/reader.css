@@ -148,7 +148,6 @@ body {
       position: fixed;
       border: black 1px solid;
       z-index: 1;
-      left: 40vw; 
       bottom: 90px;
       min-width: 160px;
     }
@@ -227,7 +226,7 @@ body {
     z-index: 5;
   }
   .dialog {
-    width: 180px;
+    width: 190px;
     padding: 20px;
     display: block;
     margin: 40px auto;
