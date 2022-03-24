@@ -334,10 +334,10 @@ button {
   cursor: pointer;
 }
 #rightB {
-  border-left: 20px solid #0003;
+  border-left: 20px solid #00f6;
 }
 #leftB {
-  border-right: 20px solid #0003; 
+  border-right: 20px solid #00f6; 
 }
 
 #noteBox {
