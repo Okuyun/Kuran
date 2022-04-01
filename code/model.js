@@ -201,25 +201,22 @@ class MujamData {
  * Ref: sitepoint.com/javascript-design-patterns-singleton/
  */
 class SimData {
-  constructor(url, callback){
-    let toWords = (t) => {
-      let a = t.split('\n')
-      for (let i=0; i<a.length; i++) {
-        let s = a[i].trim()
-        let k = s.indexOf(' ')
-        let indx = cvToIndex(s.substring(0, k))
-        this._data[indx] = s.substring(k+1)
-      }
-      this.loaded = true; Object.freeze(this)
-      console.log('SimData', this._data.length+' verses')
-      if (callback) callback(t)
+  constructor(url) { //singleton
+    if (SimData.instance) SimData.instance
+    this._data = new Array(6237) // index 0 not used
+    fetch_text_then(url, t => this.setData(t))
+    SimData.instance = this
+  }
+  setData(t, callback) {
+    let a = t.split('\n')
+    for (let s of a) {
+      let k = s.indexOf(' ')
+      let indx = cvToIndex(s.substring(0, k))
+      this._data[indx] = s.trim().substring(k+1)
     }
-    if (!SimData.instance) { //singleton
-      this._data = new Array(6237) // index 0 not used
-      fetch_text_then(url, toWords)
-      SimData.instance = this
-    }
-    return SimData.instance
+    this.loaded = true; //Object.freeze(this)
+    console.log('SimData', this._data.length+' verses')
+    if (callback) callback(t)
   }
   similarTo(i) { return this._data[i] }
 }

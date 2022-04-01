@@ -12,8 +12,8 @@ let snum = getStorage('settings', 'source')
 if (!snum || snum<=0 || snum>=SOURCE.length) snum = 5
 Q.kur = new KuranText(snum, initialPage)
 Q.qur = new QuranText(0, initialPage)
+Q.simi  = new SimData('data/simi.txt')
 const MD  = new MujamData('data/words.txt')
-const SD  = new SimData('data/simi.txt')
 new TouchHandler({dragStart, dragEnd}, div2)
 var curSura, curPage, bookmarks, lastSelection
 Q.notes = new Notes('notesQ')
@@ -162,6 +162,9 @@ function prevPage() {
 function nextPage() {
     gotoPage(curPage==Q.P? 1 : curPage+1)
 }
+function refreshPage() {
+    gotoPage(curPage)
+}
 function gotoPage(k=1, adjusting) { // 1<=k<=P
 //This is the only place where hash is set
   function doVerse(e) {
@@ -173,7 +176,7 @@ function gotoPage(k=1, adjusting) { // 1<=k<=P
         x.oncontextmenu = selectWord
         if (x.id) { // x is a verse separator
           // let i = cvToIndex(x.id.substring(2))
-          let s = SD.similarTo(idx)
+          let s = Q.simi.similarTo(idx)
           if (!s) {
             x.classList.add('ayetno'); return
           }
@@ -448,7 +451,7 @@ function menuFn() {
     function toggleText(simple) {
       let n = simple? 0 : 1
       // let s = simple? 'gizle' : 'göster'
-      Q.qur = new QuranText(n, () => gotoPage(curPage))
+      Q.qur = new QuranText(n, refreshPage)
       if (simple) {
         classFromTo('hidden', hareH, hareB)
       } else {

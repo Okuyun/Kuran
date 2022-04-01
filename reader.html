@@ -34,7 +34,9 @@
 <span id=dia2></span>
 <span id=dia3></span>
 <span id=dia4></span></pre>
-  </div>
+<hr>Load simi.txt: <br>
+<input type="file" onchange="fileSelect(this)" accept=".txt">
+</div>
 </div>
 
 <div id=div2 class="center">
@@ -229,9 +231,18 @@ let langMgr = new LangManager(setSuraMenu)
 <script src="code/utilities.js"></script>
 <script src="code/reader.js"></script>
 
-<script> //type="module">
-  // import * as Q from "./code/reader.js"
-  // console.log(Q)
+<script>
+"use strict";
+const RDR = new FileReader()
+RDR.onload = () => {
+  Q.simi.setData(RDR.result, refreshPage)
+}
+function fileSelect(t) { 
+//t is the file selection HTMLInputElement
+  console.log("fileSelect", t.files[0])
+  RDR.readAsText(t.files[0])
+  hideElement(bkgd)
+}
 
     if (navigator.serviceWorker) {
         navigator.serviceWorker.register('sw.js')
