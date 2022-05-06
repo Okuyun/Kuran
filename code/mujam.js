@@ -253,7 +253,7 @@ function displayList(refs, liste) {
     // showS.hidden = refs.length == 1
     // kelimeler.hidden = refs.length > 1
     const MAX_REFS = 50  //hide larger lists
-    const SPAN = '<span class=item>', _SPAN = '</span>'
+    const SPAN = '<span class=item>', _SPAN = '</span> '
     let s = ''
     for (let x of refs) { // x is {name, list}
         let but = refs.length == 1? '' :
