@@ -74,6 +74,15 @@ function notFound(root) {
     alert(ERR); throw ERR
 }
 
+function firstChar(s) {
+    let c = s[0]  // first char
+    switch (c) {
+        case 'ٱ': case 'أ': case 'إ': 
+            return 'ا'
+        default:
+            return c
+    }
+}
 /**
  * Parsing and using remote data. 
  * @see makeMenu
@@ -97,17 +106,15 @@ function report2(t) {
         let j = i + 1
         let list = []
         while (j < m) {
-            let [xxx, s] = convert(line[j])
-            let k = s.indexOf('\t')
-            if (k <= 0) break;
-            let word = s.substring(0, k)
-            let refs = s.substring(k + 1)
+            let [, s] = convert(line[j])
+            let [word, refs] = s.split('\t')
+            if (!refs) break;
             wordToRefs.set(word, refs)
             list.push(word); j++;
         }
         i = j;
         list.sort();
-        let ch = root[0]; //first char
+        let ch = firstChar(root)
         let x = letterToRoots.get(ch);
         if (x) x.push(number);
         else letterToRoots.set(ch, [number]);
@@ -419,7 +426,7 @@ function gotoHashRoot() {
     currentRoots = h.split('&r=')
     let roots = currentRoots.map(toArabic)
     let set = parseRoots(roots)
-    selectRoot(roots[0], false)
+    selectRoot(firstChar(roots), false)
     displayList(wRefs, kelimeler)
     displayTable(set)
     return true
