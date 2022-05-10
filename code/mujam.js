@@ -6,6 +6,10 @@
 // import {toArabic, toBuckwalter} from "./buckwalter.js"
 
 /**
+ * Do not show word list initially
+ */
+var showList = false;
+/**
  * div element that shows page info
  */
 var bilgi;
@@ -184,7 +188,7 @@ function selectWord(word) { //called by list items
     let set = wRefs.find(x => x.name == word)
     if (!set) return
     displayTable(set)
-    for (let i of kelimeler.querySelectorAll('li'))
+    for (let i of wordList.querySelectorAll('li'))
       i.style.backgroundColor =  //set colors
         i.firstElementChild.innerText == word? 'yellow' : ''
 }
@@ -243,12 +247,22 @@ function parseRoots(roots) { //root array in Arabic
     return set
 }
 /**
- * showS button is clicked
+ * adjust hidden elements
+ */
+function adjustHidden() {
+    let multiple = wRefs[0].name.includes('+')
+    //  showList is global, set using buttons
+    showS.hidden = multiple || showList
+    wordList.hidden = !showS.hidden
+    out3.hidden = !multiple && showList
+    selections.style.display 
+        = out3.hidden? 'inline-block' : 'none'
+}
+/**
+ * showS or combine button is clicked
  */
 function hideList(hide) {
-    div0.hidden = !hide
-    div1.hidden = hide
-    kelimeler.hidden = hide
+    showList = !hide; adjustHidden()
 }
 /**
  * Build and display the HTML list.
@@ -258,7 +272,7 @@ function hideList(hide) {
  */
 function displayList(refs, liste) {
     // showS.hidden = refs.length == 1
-    // kelimeler.hidden = refs.length > 1
+    // wordList.hidden = refs.length > 1
     const MAX_REFS = 50  //hide larger lists
     const SPAN = '<span class=item>', _SPAN = '</span> '
     let s = ''
@@ -365,13 +379,13 @@ function displayTable(set) {
     notes.edit(false) //close noteBox
     let nb = document.querySelector('#noteBut')
     nb.remove() //we need a single instance in the last cell
-    tablo.innerHTML = text
+    tablo.innerHTML = text; adjustHidden()
     let last = tablo.querySelector('#last')
     last.append(nb) //to the table again
     tablo.oncontextmenu = showMenuK
     document.title = TITLE + " -- " + set.name
     let str = numP +' '+(numP>1? PAGES : PAGE)
-    out1.innerText = str
+    // out1.innerText = str
     out2.innerText = str
     out3.innerText = set.name
     console.log(str, set)
@@ -427,7 +441,7 @@ function gotoHashRoot() {
     let roots = currentRoots.map(toArabic)
     let set = parseRoots(roots)
     selectRoot(firstChar(roots), false)
-    displayList(wRefs, kelimeler)
+    displayList(wRefs, wordList)
     displayTable(set)
     return true
 }

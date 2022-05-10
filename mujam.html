@@ -14,19 +14,19 @@
 
 <body>
 <div id=div0>
-   <button id=showS>Liste</button>&nbsp;
+   <button id=showS>▶</button>&nbsp;
    <span id=out2>page count</span> &nbsp;
    <span id=out3>root/word</span>
+   <div id=selections>
+      <select id=menu1></select>
+      <span id=kok></span>
+      <select id=menu2></select>
+      <button id=combine>◀</button>&nbsp;
+   </div>
 </div>
 <textarea id=noteBox hidden></textarea>
 <button id=noteBut></button>
-<div id=div1 hidden>
-   <button id=combine>◀</button>&nbsp;
-   <span id=out1>page count</span> &nbsp;
-   <select id=menu1></select>
-   <span id=kok></span> <select id=menu2></select>
-</div>
-<p id=kelimeler hidden></p>
+<p id=wordList hidden></p>
 <table id=tablo></table>
 
 <div id=menuK class=menu>
@@ -49,7 +49,6 @@ const localization = {};
 
 localization.tr =
 `showS	title	Kelime listesini göster
-showS	innerText	Liste
 combine	title	Kelime listesini gizle
 out3	title	Bu kök kaç sayfada kaç kere geçiyor
 noteBut	title	Bu kök hakkında notlar ekleyin
@@ -62,7 +61,6 @@ kay1	innerText	Dış kaynaklar:`
 
 localization.en = 
 `showS	title	Show the word list
-showS	innerText	List
 combine	title	Hide the word list
 out3	title	Number of pages with this root
 noteBut	title	Add comments about this root
@@ -75,7 +73,6 @@ kay1	innerText	External sources:`
 
 localization.ar = 
 `showS	title	أظهر قائمة الكلمات
-showS	innerText	القائمة
 combine	title	أخفي قائمة الكلمات
 out3	title	عدد الصفحات بهذا المصدر
 noteBut	title	أضف ملاحظة لهذا المصدر
@@ -85,6 +82,12 @@ menu2	title	المصادر وأعدادها
 yardim	innerText	للمساعدة — F1
 pay1	innerText	شارك...
 kay1	innerText	مصادر خارجية:`
+
+/* not used
+showS	innerText	Liste
+showS	innerText	List
+showS	innerText	القائمة
+*/
 
 const PAGE  = currentLanguage()==='en'? 'Page' : 'Sayfa'
 const PAGES = currentLanguage()==='en'? 'Pages' : 'Sayfa'
@@ -96,6 +99,5 @@ const langMgr = new LangManager()
 <script src="code/utilities.js"></script>
 <script src="code/mujam.js"></script>
 
-<script></script>
 </body>
 </html>
