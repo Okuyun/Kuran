@@ -25,7 +25,9 @@ class VerseRef {
         return this.chap+':'+this.verse
     }
     toString() {
-        return 'S.'+this.page+' '+sName[this.chap]+EM_SPACE+this.cv
+        return langMgr.PAGE0+this.page
+                +EM_SPACE+sName[this.chap]
+                +EM_SPACE+this.cv
     }
     /**
      * factory method to make VerseRef

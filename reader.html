@@ -225,8 +225,9 @@ function setSuraMenu() {
       labels.push(i+'. '+sName[i])
     sureS.innerHTML = '<option>'+labels.join('<option>')
     if (i) sureS.selectedIndex = i
+    LangManager.adjustDirection(infoS)
 }
-let langMgr = new LangManager(setSuraMenu) 
+const langMgr = new LangManager(setSuraMenu) 
 </script>
 <script src="code/utilities.js"></script>
 <script src="code/reader.js"></script>

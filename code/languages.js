@@ -17,6 +17,13 @@ class LangManager {
         next[keys[i]] = keys[0]; this.next = next
         addEventListener("message", languageListener)
     }
+    pageString(plural) {
+      switch (currentLanguage()) {
+        case 'tr': return 'Sayfa'
+        case 'ar': return 'صفحة'
+        default: return plural? 'Pages' : 'Page'
+      }
+    }
     applyLanguage() {
         //localization is defined in each panel
         let str = localization[currentLanguage()] 
@@ -26,7 +33,11 @@ class LangManager {
         // x.elt.setAttribute(x.attr, x.val)
           x.elt[x.attr] = x.val
         }
+        this.PAGE  = this.pageString()
+        this.PAGES = this.pageString(true)
+        this.PAGE0 = this.PAGE[0].toLowerCase()
         this.callback()
+        console.log('* applyLanguage *', window.name, this)
     }
     nextLanguage() {
      // let n = currentLanguage() === 'tr'? 'en' : 'tr'

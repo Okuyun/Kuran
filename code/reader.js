@@ -142,8 +142,8 @@ function adjustPage(adj) {
     infoS.style.display = adj? 'block' : ''
     gotoPage(slider.value, adj? 'slider' : '')
     if (adj) {
-      let s = sureS.value+' --  p'+slider.value
-      infoS.innerText = s
+      infoS.innerText = sureS.value+' -- '
+        +langMgr.PAGE0+slider.value
     }
 }
 function doClick(evt) {
@@ -293,8 +293,8 @@ function gotoHashPage() {
     let s = e.substring(2)
     switch (e.charAt(0)) {
       case 'p': // p=245
-        document.title = 'p'+nameFromPage(s)
         if (curPage != s) gotoPage(s)
+        document.title = langMgr.PAGE0+nameFromPage(s)
         break
       case 'r': // r=Sbr
         let L = MD.rootToList(s)
@@ -309,7 +309,7 @@ function gotoHashPage() {
         let [c, v] = s.split(':') 
         c = Number(c); v = Number(v)
         let p = pageOf(c, v)
-        if (p !== curPage) gotoPage(p)
+        if (curPage != p) gotoPage(p)
         document.title = sName[c]+' '+s
         markVerse(s); break
       default: 
@@ -443,8 +443,10 @@ function menuFn() {
   menuS.onclick = (evt) => { //star menu
       evt.preventDefault()
       let t = evt.target.innerText
-      //console.log(curPage, t)
-      let [x, k] = t.split(/s| /)
+      // let [, k] = t.split(/s| /)
+      let [k] = t.substring(1).split(' ')
+      // console.log(curPage, p)
+      // ignore Add/Remove -- NaN
       if (Number(k)) gotoPage(Number(k))
   }
   menuT.onclick = (evt) => { //translation menu
@@ -579,10 +581,10 @@ function toggleTrans() {
 }
 function makeStarMenu() {
     const span = '<span class="menuK">'
-    let t = ''
+    let t = '', p = langMgr.PAGE0
     let a = [...bookmarks].reverse()
     for (let k of a) if (k != curPage)
-        t += span+'s'+nameFromPage(k)+'</span>\n'
+        t += span+p+nameFromPage(k)+'</span>\n'
     starred.innerHTML = t
 }
 function handlePageNum() {
@@ -591,8 +593,6 @@ function handlePageNum() {
     setFocus(pgNum)
 }
 function toggleStar() {
-    let msg = ''
-    // const YILDIZ = '<b class=large>☆</b> '
     if (starA.classList.toggle('checked')) {
       bookmarks.add(curPage)
       let a = [...bookmarks]
@@ -602,7 +602,6 @@ function toggleStar() {
     } else {
       bookmarks.delete(curPage)
       classFromTo('hidden', starB, starH)
-      msg = '-'
     }
     hideMenus(); saveSettings()
 }

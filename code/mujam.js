@@ -65,11 +65,6 @@ const wordToRefs = new Map();
  * Buckwalter code of the current root(s)
  */
 var currentRoots = []
-// function currentRoot() {
-//     if (!menu2.value) return null
-//     let [v] = menu2.value.split(EM_SPACE)
-//     return toBuckwalter(v)
-// }
 /**
  * display alert and throw error
  */
@@ -341,7 +336,7 @@ function displayTable(set) {
     indexToArray(set.list)
     // m number of rows, 20 pages per row.
     const m = 30, n = 20
-    let row = "<th>"+PAGE+"</th>"
+    let row = "<th>"+langMgr.PAGE+"</th>"
     for (let j = 1; j <= n; j++) {
         row += "<th>" + (j % 10) + "</th>" //use last digit
     }
@@ -349,8 +344,7 @@ function displayTable(set) {
     let pn = 0, numC = 0, numP = 0  //counters
     for (let i = 1; i <= m + 1; i++) {
         // let z = i > m ? m : i
-        let s2 = '' // "<span class=t1>Cüz " + z + "</span>"
-        row = "<th>" +threeDigits(pn)+ s2 + "</th>"
+        row = "<th>" +threeDigits(pn)+ "</th>"
         let U = i > m ? 4 : n
         for (let j = 1; j <= U; j++) {
             pn++  // pn == 20*(i-1)+j  page number
@@ -384,7 +378,8 @@ function displayTable(set) {
     last.append(nb) //to the table again
     tablo.oncontextmenu = showMenuK
     document.title = TITLE + " -- " + set.name
-    let str = numP +' '+(numP>1? PAGES : PAGE)
+    let str = numP +' '
+        +(numP>1? langMgr.PAGES : langMgr.PAGE)
     // out1.innerText = str
     out2.innerText = str
     out3.innerText = set.name
@@ -408,19 +403,17 @@ function hideBilgi() {
  * @param {*} evt get the event trigger. 
  */
 function doClick(evt) {
-    //do not handle if menuK is on --or bilgi is off
-    if (menuK.style.display /* || !bilgi.style.display */) return
+    //do not handle if menuK is on
+    if (menuK.style.display) return
     evt.preventDefault()
-    let [nam, refs] = bilgi.innerText.split(EM_SPACE)
-    let [xx, p] = nam.split(/\.| /)  //dot or space
-    let h;
+    let [p, , refs] = bilgi.innerText.split(EM_SPACE)
+    p = p.substring(1) //remove first char
+    let h = "#p="+p; //use page number
     if (pRefs[p]) { //use first reference & root
         let [cv] = refs.split(' ')
         h = "#v="+cv
         let d = currentRoots.join('&r=')
         if (d) h += '&r='+d
-    } else { //use page number
-        h = "#p="+p;
     }
     console.log(h); hideMenus()
     window.iqra = window.open("reader.html"+h, "iqra")
