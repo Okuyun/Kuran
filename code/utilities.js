@@ -332,14 +332,12 @@ function suraContainsPage(c, k) {
 /**
  * nChap: number of chapters -- 114
  * nVerse: number of verses -- 6236
- * labels: sura name, number, and first verse of each page
  * index: verse index for each page
  * nPage: number of pages -- 604
  */
 const 
     nChap = last.length - 1,
     nVerse = last[nChap],
-    labels = [''], 
     index =
 [0,0,12,23,31,36,44,55,64,68,76,83,90,95,100,108,112,119,126,133,
 141,148,152,160,170,176,183,188,193,197,203,209,217,222,226,231,237,240,244,252,
@@ -375,16 +373,15 @@ const
     nPage = index.length - 2;
 
 /**
- * make labels, one for each page.
+ * labels are removed.
  *  
  */
 function init() {
     console.log('init', nChap + " suras -> " + nVerse);
-    for (let p = 1; p <= nPage; p++) {
-        let v = new VerseRef(index[p]+1)
-        labels.push(v.toString())
-    }
-    // console.log(nPage + " pages -> " + index[nPage]);
+    // for (let p = 1; p <= nPage; p++) {
+    //     let v = new VerseRef(index[p]+1)
+    //     labels.push(v.toString())
+    // }
 }
 
  init()
@@ -404,5 +401,5 @@ function timeString(t) {
  }
  //window.ts = timeString  for testing
 
-// export {VerseRef, RefSet, nPage, labels, encodeLine, 
+// export {VerseRef, RefSet, nPage, encodeLine, 
 //         indexOf, pageOf, toCV, cvToIndex, timeString}

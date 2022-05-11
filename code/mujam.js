@@ -2,7 +2,7 @@
 
 // import {VERSION, EM_SPACE, setPosition, hideElement, 
 //     openSitePage, openSiteVerse, fetch_text_then} from './common.js'
-// import {VerseRef, RefSet, nPage, encodeLine, labels} from './utilities.js'
+// import {VerseRef, RefSet, nPage, encodeLine} from './utilities.js'
 // import {toArabic, toBuckwalter} from "./buckwalter.js"
 
 /**
@@ -160,7 +160,7 @@ function selectRoot(root, modifyHash=true) { //root in Arabic
     if (!root) [root] = menu2.value.split(EM_SPACE);
     else if (menu2.value.startsWith(root)) return;
     else {
-      selectLetter(root.charAt(0))
+      selectLetter(firstChar(root))
       menu2.value = rootToCounts.get(root);
     }
     let cnt = rootToCounts.get(root);
@@ -525,7 +525,7 @@ function doHover(evt) {  //listener for each td and span element
                   + EM_SPACE +'('+ (L.length+1) +')'
             cls = 't2>' //backgroundColor
         } else { //no ref on this page
-            ref = labels[p]
+            ref = new VerseRef(index[p]+1).toString()
             cls = 't1>' //no color
         }
         cw = tablo.clientWidth
