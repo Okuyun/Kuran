@@ -308,14 +308,15 @@ const last = [0, 7, 293, 493, 669, 789, 954, 1160, 1235, 1364,
     6138, 6146, 6157, 6168, 6176, 6179, 6188, 6193, 6197, 6204, 6207,
     6213, 6216, 6221, 6225, 6230, 6236]
 
-function cvFromPage(k) {
+function cvFromPage(k, prev) {
     //if more than one sura on page k
-    //return c2 unless v1==1
+    //return c1+1 if !prev && v1>1
     k = Number(k)
     let [c1, v1] = toCV(index[k]+1)
     let c2 = toChapter(index[k+1])
-    if (c2>c1 && v1>1) { c1++; v1=1 }
-    return [c1, v1] 
+    if (c2>c1 && !prev && v1>1) 
+         return [c1+1, 1] 
+    else return [c1, v1] 
 }
 function nameFromPage(k) {
     let [c, v] = cvFromPage(k)

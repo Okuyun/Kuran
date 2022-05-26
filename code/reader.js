@@ -209,7 +209,8 @@ function gotoPage(k=1, adjusting) { // 1<=k<=P
     k = Number(k);
     sayfa.innerText = k;
     // if (curPage == k) return;
-    let [c] = cvFromPage(k); setSura(c);
+    let [c] = cvFromPage(k, true)
+    setSura(c) //might be previous sura
     if (adjusting == 'slider') return;
   try {
     hideMenus(); 
@@ -230,7 +231,7 @@ function gotoPage(k=1, adjusting) { // 1<=k<=P
   }
     let wc = html.childElementCount
     let idx = index[curPage]  //better than cvToIndex
-    console.log('Page '+k, wc+' verses', idx)
+    // console.log('Page '+k, wc+' verses', idx)
     for (let e of html.children) {
         if (e.tagName != 'SPAN') continue
         idx++; doVerse(e)
