@@ -89,6 +89,7 @@ body {
     #bilgi div {
       display: inline-block;
       padding: 8px;
+      font: 14px/1.6 sans;
     }
     nav { /* #div1, #div3 */
       display: flex;

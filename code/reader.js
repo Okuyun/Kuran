@@ -101,11 +101,8 @@ function displayWord(evt) {
     evt.preventDefault(); //hideMenus()
     let t = evt.target 
     t.classList.add('gri')  //mark target
-    if (!t.tText ) return
-    if (t.id) { // t is a verse separator
-      bilgi.style.font = '14px/1.6 sans'
-    } else { // t is a word
-      bilgi.style.font = ''
+    if (!t.tText ) {
+      hideElement(bilgi); return
     }
     bilgi.innerHTML = t.tText 
     let y = //t.offsetTop + t.offsetHeight
@@ -147,11 +144,11 @@ function adjustPage(adj) {
     }
 }
 function doClick(evt) {
-  if (bilgi.style.font) { // verse separator
+    if (evt.target.tagName == 'DIV') { // verse separator
       let t = evt.target.innerText
       if (t.length > 6) return
       console.log(location.hash+' to '+t)
-      location.hash = '#v='+t  //.split(' ')[0]
+      location.hash = '#v='+t
     } else { // a word
       openMujam(toBuckwalter(bilgi.innerText))
     }
@@ -175,7 +172,6 @@ function gotoPage(k=1, adjusting) { // 1<=k<=P
         x.onmouseleave = hideWord
         x.oncontextmenu = selectWord
         if (x.id) { // x is a verse separator
-          // let i = cvToIndex(x.id.substring(2))
           let s = Q.simi.similarTo(idx)
           if (!s) {
             x.classList.add('ayetno'); return
@@ -256,7 +252,7 @@ function gotoSura(c) {
 function dragStart(evt) {
     if (menuK.style.display || menuC.style.display 
       || menuS.style.display || menuT.style.display
-      || bilgi.style.display || bkgd.style.display)  {
+      || bkgd.style.display)  {
         hideMenus(); evt.preventDefault(); return false
     }
     return true
@@ -408,7 +404,7 @@ function openMujam(...a) { //array of roots in Buckwalter
     let p = a.join('&r=')
     window.mujam = window.open(LINKM + p, "finder")
     for (let r of a) markWord(r, true); 
-    console.log('mucem: r='+p)
+    // console.log('mucem: r='+p)
 }
 function menuFn() {
   function menuItem(m) {
