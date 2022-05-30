@@ -266,11 +266,14 @@ function hideList(hide) {
  * @param {Element} liste to be modified
  */
 function displayList(refs, liste) {
-    // showS.hidden = refs.length == 1
-    // wordList.hidden = refs.length > 1
+    function doClick3(evt) {
+        let cv = evt.target.innerText
+        bilgi.innerText = VerseRef.fromChapVerse(cv)
+        doClick(evt)  //transfer event from x to bilgi
+    }
     const MAX_REFS = 50  //hide larger lists
     const SPAN = '<span class=item>', _SPAN = '</span> '
-    let s = ''
+    let s = '', count = 0
     for (let x of refs) { // x is {name, list}
         let but = refs.length == 1? '' :
             '<button>'+ x.name +'</button>&emsp;'
@@ -279,15 +282,11 @@ function displayList(refs, liste) {
         for (let y of x.list) // y is VerseRef
             if (y.cv !== lastCV) {
                 s += SPAN+ y.cv +_SPAN
-                lastCV = y.cv
+                lastCV = y.cv; count++
             }
         s += '\n' //'</span>\n'
     }
-    function doClick3(evt) {
-        let cv = evt.target.innerText
-        bilgi.innerText = VerseRef.fromChapVerse(cv)
-        doClick(evt)  //transfer event from x to bilgi
-    }
+    out2.innerText = count
     liste.innerHTML = s
     for (let x of liste.querySelectorAll('.item')) {
         x.onclick = doClick3  //doHover
@@ -341,7 +340,7 @@ function displayTable(set) {
         row += "<th>" + (j % 10) + "</th>" //use last digit
     }
     let text = "<tr class=first>" + row + "</tr>"
-    let pn = 0, numC = 0, numP = 0  //counters
+    let pn = 0  //, numC = 0, numP = 0 counters not used
     for (let i = 1; i <= m + 1; i++) {
         // let z = i > m ? m : i
         row = "<th>" +threeDigits(pn)+ "</th>"
@@ -351,7 +350,7 @@ function displayTable(set) {
             let c = 0, L = pRefs[pn]
             if (L) { //update counts
                 c = L.length
-                numC += c; numP++
+                // numC += c; numP++
             }
             let ch = sajdaP.includes(pn)? //"۩" : "&nbsp;"
                 " class=sajda>" : ">"
@@ -378,12 +377,11 @@ function displayTable(set) {
     last.append(nb) //to the table again
     tablo.oncontextmenu = showMenuK
     document.title = TITLE + " -- " + set.name
-    let str = numP +' '
-        +(numP>1? langMgr.PAGES : langMgr.PAGE)
-    // out1.innerText = str
-    out2.innerText = str
+    // let str = numP +' '
+    //     +(numP>1? langMgr.PAGES : langMgr.PAGE)
+    // out2.innerText = str
     out3.innerText = set.name
-    console.log(str, set)
+    // console.log(set)
     for (let x of tablo.querySelectorAll('td')) {
         x.onmouseenter = doHover
         x.onmouseleave = hideBilgi

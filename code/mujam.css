@@ -23,9 +23,6 @@
     div, .item {
         font: 14px arial, sans-serif;
     }
-    #out2 {
-        margin-left: 8px;
-    }
     .item {
         display: inline-block;
         color: black;
