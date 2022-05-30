@@ -13,7 +13,7 @@ if (!snum || snum<=0 || snum>=SOURCE.length) snum = 5
 Q.kur = new KuranText(snum, initialPage)
 Q.qur = new QuranText(0, initialPage)
 Q.simi  = new SimData('data/simi.txt')
-const MD  = new MujamData('data/words.txt')
+Q.roots = new MujamData('data/words.txt')
 new TouchHandler({dragStart, dragEnd}, div2)
 var curSura, curPage, bookmarks, lastSelection
 Q.notes = new Notes('notesQ')
@@ -74,7 +74,7 @@ function forceSelection() {
 function markWord(w, root) {
     for (let x of html.querySelectorAll('span')) {
       let b = toBuckwalter(x.innerText.trim())
-      if (root) b = MD.wordToRoot(b)
+      if (root) b = Q.roots.wordToRoot(b)
       if (b == w) x.classList.add('mavi')
     }
 }
@@ -181,7 +181,7 @@ function gotoPage(k=1, adjusting) { // 1<=k<=P
           x.classList.add('mavi')
         } else { // x is a word
           let w = x.innerText.trim()
-          let r = MD.wordToRoot(toBuckwalter(w))
+          let r = Q.roots.wordToRoot(toBuckwalter(w))
           if (r) x.tText = toArabic(r)   
         }
       }
@@ -294,7 +294,7 @@ function gotoHashPage() {
         document.title = langMgr.PAGE0+nameFromPage(s)
         break
       case 'r': // r=Sbr
-        let L = MD.rootToList(s)
+        let L = Q.roots.rootToList(s)
         if (L) markWord(s, true)
         break
       case 'w': // w=yuwsuf
@@ -418,7 +418,7 @@ function menuFn() {
           case 'mujm':
               let a = []
               for (let w of s.split(' ')) {
-                let r = MD.wordToRoot(toBuckwalter(w))
+                let r = Q.roots.wordToRoot(toBuckwalter(w))
                 if (r) a.push(r)
               }
               if (a.length > 0) openMujam(...a)

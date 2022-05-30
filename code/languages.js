@@ -37,7 +37,7 @@ class LangManager {
         this.PAGES = this.pageString(true)
         this.PAGE0 = this.PAGE[0].toLowerCase()
         this.callback()
-        console.log('* applyLanguage *', window.name, this)
+        // console.log('* applyLanguage *', window.name, this)
     }
     nextLanguage() {
      // let n = currentLanguage() === 'tr'? 'en' : 'tr'
