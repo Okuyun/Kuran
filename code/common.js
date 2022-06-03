@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.4e";
+const VERSION = "V4.5p";
 
 /**
  * &ensp; used in Mujam and VerseRef
@@ -141,9 +141,14 @@ function openSiteVerse(s, c, v) {
  */
 async function fetch_text_then(url, callback) {
     // fetch(url).then(r => r.text()).then(callback)
-    let r = await fetch(url) //response
-    let t = await r.text()   //text
-    callback(t)
+    try {
+        let r = await fetch(url) //response
+        if (!r.ok) throw r.statusText
+        let t = await r.text()   //text
+        callback(t); return 'OK'
+    } catch (err) {
+        return err
+    }
 }
 
 /**

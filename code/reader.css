@@ -78,7 +78,7 @@ body {
       position: absolute;
       min-width: 95px;
       max-width: 200px;
-      padding: 4px;
+      padding: 8px 12px;
       text-align: center;
       color: blue;
       background-color: #ff7;
@@ -89,9 +89,16 @@ body {
     #bilgi div {
       display: inline-block;
       padding: 8px;
-      font: 14px/1.6 sans;
+      font: 13px/1.2 sans-serif;
     }
-    nav { /* #div1, #div3 */
+    #bilgi span {
+      display: block;
+      font: 13px/1.2 sans-serif;
+      color: black;
+      cursor: default;
+      margin-top: 10px;
+    }
+    nav {
       display: flex;
       flex-wrap: nowrap;
       align-items: center;

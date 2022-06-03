@@ -186,13 +186,26 @@ class MujamData {
     if (!MujamData.instance) { //singleton
       this._root2List = new Map()
       this._word2Root = new Map()
+      this._meanings  = new Map()
       fetch_text_then(url, toWords)
       MujamData.instance = this
     }
     return MujamData.instance
   }
+  setMeanings(url) {
+    let toList = (t) => {
+      for (let s of t.split('\n')) {
+        let [root, m] = s.split('\t')
+        this._meanings.set(root, m)
+      }
+      console.log('setMeanings', url, t.length)
+    }
+    if (fetch_text_then(url, toList) !== 'OK') 
+        this._meanings.clear()
+  }
   wordToRoot(w) { return this._word2Root.get(w) }
   rootToList(w) { return this._root2List.get(w) }
+  meaning(w) { return this._meanings.get(w) }
 }
 
 /** Keeps data related to similarity

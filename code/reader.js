@@ -14,6 +14,8 @@ Q.kur = new KuranText(snum, initialPage)
 Q.qur = new QuranText(0, initialPage)
 Q.simi  = new SimData('data/simi.txt')
 Q.roots = new MujamData('data/words.txt')
+if (currentLanguage() == 'tr') //will move elsewhere
+    Q.roots.setMeanings('/Kuran/data/roots.tr.txt')
 new TouchHandler({dragStart, dragEnd}, div2)
 var curSura, curPage, bookmarks, lastSelection
 Q.notes = new Notes('notesQ')
@@ -149,8 +151,9 @@ function doClick(evt) {
       if (t.length > 6) return
       console.log(location.hash+' to '+t)
       location.hash = '#v='+t
-    } else { // a word
-      openMujam(toBuckwalter(bilgi.innerText))
+    } else if (evt.target === bilgi) { // a word
+      let w = bilgi.firstChild.textContent
+      if (w) openMujam(toBuckwalter(w))
     }
 }
 function prevPage() {
@@ -180,9 +183,13 @@ function gotoPage(k=1, adjusting) { // 1<=k<=P
             .map(x => '<div>'+x+'</div>').join('');
           x.classList.add('mavi')
         } else { // x is a word
-          let w = x.innerText.trim()
-          let r = Q.roots.wordToRoot(toBuckwalter(w))
-          if (r) x.tText = toArabic(r)   
+          let b = toBuckwalter(x.innerText.trim())
+          let r = Q.roots.wordToRoot(b)
+          if (!r) continue
+          x.tText = toArabic(r)   
+          let m = Q.roots.meaning(r)
+          if (!m) continue
+          x.tText += '<span>'+m+'</span>'
         }
       }
   }
