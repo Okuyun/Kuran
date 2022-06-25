@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<meta charset="UTF-8">
+<meta name="viewport"    content="width=device-width" />
+<meta name="theme-color" content="#59b" />
+<meta name="author"      content="M A Eyler, Istanbul, 2019" />
+<meta name="description" content="Reader for the Quran" />
+<link rel="icon" href="../image/icon.png">
+<title>Elfaz</title>
+
+<style>
+  #out2 {
+    font-family: Zekr, serif;
+    font-size: 18px;
+    line-height: 1.9;
+    direction: rtl;
+  }
+@font-face {
+    font-family: Zekr;
+    src: url("/Rehber/style/ZEKRQURAN.TTF");
+}
+</style>
+
+<body>
+
+<p>
+  <button onclick="doElfaz('/elfaz.txt')">Elfaz</button>
+  <button onclick="doPaste()">Paste</button></p>
+<pre id=out1></pre>
+<p id=out2></p>
+<hr />
+
+<script src="/Kuran/code/buckwalter.js"></script>
+<script src="/Kuran/code/common.js"></script>
+<script src="/Kuran/code/utilities.js"></script>
+<script src="/Kuran/code/model.js"></script>
+<script>
+"use strict";
+const data = [0]
+const MD = new MujamData('words.txt')
+MD.setMeanings('roots.en.txt')
+const root2trans = new Map()
+var qur = {}, tt = ''
+async function doPaste() {
+    tt = await navigator.clipboard.readText()
+    out1.innerText = tt
+}
+function doElfaz(url) {
+    data.length = 1 //clear data
+    fetch_text_then(url, setData)
+}
+function setData(t) {
+    let chap, verse, count, text, trans;
+    let output = () => 
+      data.push({chap, verse, count, text, trans})
+    let init = (c, v) => {
+      chap = c; verse = v; 
+      count = 0; text = ''; trans = [];
+    }
+    let a = t.split('\r\n'); init(1, 1)
+    for (let i=1; i<a.length; i++) {
+      let [c, v, k, ar, tr, en, X] = a[i].split('\t')
+      if (v != verse) { //update verse data
+        output(); init(c, v)
+      }
+      if (X) {  //combine with next word
+        text += ar
+      } else {  //update
+        count++; text += ar+' '; trans.push(en)
+      }
+    }
+    output()
+    console.log('setData', a.length+' words')
+    out1.innerHTML = a.length+' words<br>'
+    qur = new QuranText(0, checkData)
+}
+function checkData() {
+    let toRoot = w => 
+        MD.wordToRoot(toBuckwalter(w)) || ''
+    let diff = 0
+    for (let i=1; i<data.length; i++) {
+        let x = qur.data[i], y = data[i]
+        let words = x.split(' ').splice(1)
+        let n = words.length
+        if (n>2 && !words[n-1]) { //secde
+          n = n-2; words.length = n
+        }
+        y.roots = words.map(toRoot)
+        if (n != y.count) {
+          let cv = y.chap+':'+y.verse
+          out2.innerHTML += cv+y.text+'<br>'
+          diff++; console.log(cv, i, n, y.count)
+        }
+    }
+    console.log('checkData', data.length, diff)
+    out1.innerHTML += data.length+' verses<br><br>'
+    if (diff == 0) { process(); report() }
+}
+function process() {
+    for (let i=1; i<data.length; i++) {
+        let { trans, roots } = data[i]
+        for (let j = 0; j < roots.length; j++) {
+          let t = trans[j], b = roots[j]
+          if (!b) continue
+          if (MD.meaning(b)) continue
+          let L = root2trans.get(b)
+          if (!L) {
+            L = [t]; root2trans.set(b, L)
+          }
+          if (!L.includes(t)) L.push(t)
+        }
+    }
+    console.log('process', root2trans.size)
+}
+function report() {
+    let a = [...root2trans.keys()].sort()
+    for (let key of a) {
+        out1.innerHTML += 
+          key.replace('<', '&lt;')+'\t'
+          +root2trans.get(key).join(', ')+'<br>'
+    }
+}
+</script>
+</body>

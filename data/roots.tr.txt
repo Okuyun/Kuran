@@ -1,181 +1,1718 @@
 {ll~ah	Allah (özel isim)
-qwl	Söylemek. Kavl, söz.
-kwn	Olmak. Kevn. Mekan.
-rbb	Rabb (cins isim). Erbâb.
-Amn	Güvenmek, inanmak. Emanet, iman, mümin.
-Elm	Bilmek, öğretmek. İlim. Âlem. Dağ.
-qwm	Kalkmak, yerleşmek. Kavim. Kıyamet. Makam.
-Aty	Gelmek, getirmek, vermek. Îtâ.
-kfr	Nankörlük, inkar, küfür. Kefaret.
-byn	Arasında. Açıklamak. Beyan.
-$yA	Dilemek. Şey.
-rsl	Göndermek. Rasûl. Risâle.
-ArD	Arz, yeryüzü.
-ywm	Gün.
-Ayy	Ayet.
-smw	Sema. İsim.
-kll	Bütün, hepsi.
-E*b	Azap. Tatlı (su).
-Eml	Yapmak. Amel.
-jEl	Yapmak.
-rHm	Acımak. Rahmet. Merhamet.
-rAy	Görmek. Rüya.
-ktb	Yazmak. Kâtip, kitap.
-hdy	Yol göstermek, hidayet. Muhtedi. Hediye.
-Zlm	Zulüm, haksızlık. Karanlık.
-nfs	Yarışmak. Nefs, kendi.
-qbl	Kabul. Karşılıklı. Önce.
-nzl	İnmek, indirmek. Konak yeri.
-*kr	Zikretmek, anmak, hatırlamak. Erkek.
-Hqq	Hakk. Hakiki. Gerçekleşmek.
-k*b	Yalan. Kizb, tekzib.
-jyA	Gelmek, getirmek.
-Ebd	Kul. İbadet.
-Ax*	Almak, tutmak. Âhize.
-xlq	Yaratmak. Halk. Ahlak.
-wqy	Korumak, sakınmak. Takva.
-Axr	Ertelemek. Son, diğer. Ahiret.
-Amr	Emretmek. Emir, iş.
-nws	İnsan.
-bEd	Uzak, sonra.
-gfr	Bağışlamak. Mağfiret. İstiğfar.
-wly	Yakın olmak. Dost. Veli.
-dEw	Dua. Davet, çağırmak.
-Hkm	Hüküm, hikmet.
-mlk	Mâlik olmak. Melik. Melek.
-jnn	Cennet. Cin. Cinnet.
-End	Yanında, katında.
-xyr	Hayr. Seçmek.
-nwr	Aydınlatmak. Nur. Nar, ateş.
-Hsn	Güzel. Hasen. İhsan.
-Dll	Dalalet, sapmak.
-smE	Duymak, kulak vermek.
-bny	Oğul, çocuk.
-Hyy	Diriltmek. Hayat.
-xrj	Çıkmak. Hariç, ihraç.
-SlH	Sulh. Salih (cins ve özel isim)
-sbl	Yol. Sebil.
-tbE	Uymak, tâbi olmak. Tebâ. Peşpeşe.
-qtl	Öldürmek, savaşmak. Katl.
-Awl	Aile. Birinci, evvel. Tevil.
-mvl	Benzetmek. Mesel.
-qlb	Çevirmek. Kalp.
-$rk	Ortak, şirk.
-swA	Kötü.
-kvr	Çok. Çoğalmak. Kesret.
-mwt	Ölüm. Mevt, memât.
-kbr	Büyük, yaşlı. Tekbir, kibir.
-nbA	Haber vermek, bildirmek. Haber, nebi.
-$hd	Şahit olmak, şehadet. Şehit.
-nSr	Yardım.
-bED	Bir kısım, bazı.
-Sdq	Doğruluk. Tasdik. Sadaka.
-gyr	Gayrı, başka. Değişmek.
-wEd	Vaad.
-rwd	İrade. Murad. Düzen kurmak.
-bSr	Bakmak. Basîret/basâir. Aydınlatan.
-Alh	İlah, tanrı (cins isim)
-lqy	Karşılaşmak.
-dwn	Aşağı.
-slm	İslam, muslim. Barış, selam, teslim.
-nEm	Nimet. Ahır hayvanı.
-muwsaY`	Musa (özel isim)
-dnw	Yakın/aşağı olmak. Dünya.
-qdr	Ayarlamak, kısıtlamak. Kader. Miktar.
-n*r	Uyarmak. Nezir, adak.
-sAl	Sormak. Sual. Mes'ûl.
-nZr	Bakmak. Beklemek, gözlemek. Nazar.
-jmE	Toplamak. Cuma.
-TwE	İsteyerek yapmak. Gücü yetmek.
-EZm	Azim, yüce. Kemik.
-xlf	Ardından gelmek. Halef. Muhtelif.
-Ahl	Kitap ehli. Ev/memleket halkı. Hak sahibi.
-dxl	Girmek. Dahil.
-xwf	Korkmak.
-rzq	Rızık. Rezzak.
-b$r	Müjde. Beşer.
-ydy	El.
-Ezz	Aziz, üstün.
-Amm	Ümmet. Anne, ümmi. İmam, önder.
-jzy	Karşılık, ceza.
-Abw	Baba, ebeveyn, ana-baba.
-nhr	Nehir.
-nfq	Harcamak. İnfak. Nifak.
-Hsb	Hesap, zan.
-Akl	Yemek, yemiş.
-fEl	Yapmak, fiil.
-Ajr	Ücret. Ecir.
-wjd	Bulmak.
-Edw	Haddi aşmak. Düşman.
-rjE	Dönmek. Rücû.
-fDl	Fazl, üstünlük. Erdem.
-Sbr	Sabır.
-wld	Doğurmak. Doğuran, vâlide. Veled.
-A*n	İzin vermek/istemek, bildirmek. Kulak.
+$Am	sol
+$An	durum, iş
+$Eb	şube, dal
+$El	tutuşmak
+$Er	şuur, şiir
+$HH	cimrilik
+$Hm	yağlar
+$Hn	dolu
+$TA	kıyı
+$TT	saçma sapan
+$Tn	şeytan
+$Tr	taraf, yöne
+$bh	benzemek
 $dd	Şedid, şiddetli.
-dyn	Borç. Din.
-A^dam	Âdem
-nuwH	Nûh
-luwT	Lût
-<iboraAhiym	İbrâhîm
-<isomaAEiyl	İsmâîl
-<isoHaAq	İshâk
-yaEoquwb	Ya‘kûb
-yuwsuf	Yûsuf
+$fE	şefaat, çift
+$fh	dudak
+$fq	korkmak, titremek, alaca karanlık
+$fw	kenar
+$fy	şifa
+$gf	bağrı yanık
+$gl	meşguliyet
+$hb	alev, ışın
+$hd	Şahit olmak, şehadet. Şehit.
+$hq	homurtu
+$hr	ay (zaman)
+$hw	şehvet, iştiha
+$jr	ağaç
+$kk	kuşku, şüphe
+$kl	karakter, şekil
+$kr	şükür, teşekkür
+$ks	çekişen
+$kw	şikayet
+$ml	sol, soldan
+$ms	güneş
+$mt	güldürmek
+$mx	yüksek
+$mz	ürkmek
+$nA	kin beslemek, kin
+$qq	çatlamak, yarılmak
+$qw	bedbaht, haydut
+$r*m	topluluk
+$rE	şeriat, akın akın
+$rH	açmak
+$rT	belirtiler
+$rb	içmek, içki
+$rd	dağıtmak
+$rk	Ortak, şirk.
+$rq	doğu, aydınlatmak
+$rr	kötü, şer
+$ry	satın almak, satmak
+$tt	çeşit, ayrı ayrı
+$tw	kış
 $uEayob	Şu‘ayb
-muwsaY%60	Mûsâ
-ha%60ruwn	Hârûn
-daAwud	Dâvûd
-sulayoma%60n	Suleymân
->ay~uwb	Eyyûb
-yuwnus	Yûnus
-<iloyaAs	İlyâs
+$wZ	yalın alev
+$wb	içki
+$wk	kuvvetsiz
+$wr	danışmak, şura
+$wy	haşlamak
+$xS	donup kalmak
+$yA	Dilemek. Şey.
+$yE	parti
+$yb	ihtiyarlık
+$yd	sağlam
+$yx	ihtiyar
+*Ab	kurt
+*Am	yerilmiş olarak
+*En	ita'at ederek
+*b*b	yalpalamak
+*bH	boğazlamak, kurbanlık
+*bb	sinek
+*hb	götürmek, gidermek
+*hl	unutmak
+*kr	Zikretmek, anmak, hatırlamak. Erkek.
+*kw	kesmek
+*ll	alçaltmak, zillet
+*mm	kınanmış, zemmetmek
+*nb	günah
+*qn	çene
+*rA	yaratmak
+*rE	sıkıntı, huzursuz
+*rr	soy, zürriyet
+*rw	savurmak
+*wd	sudan meneden
+*wq	tatmak, tad
+*xr	biriktirmek
+*yE	yaymak
+<iboliys	İblîs
+<iboraAhiym	İbrâhîm
 <idoriys	İdrîs
-{loyasaEa	Elyesa‘
-zakariy~aA	Zekeriyâ
-yaHoyaY%60	Yahya
-EiysaY	‘İsâ
-Eadon	'Adn
-Earafa%60t	'Arafât
+<iloyaAs	İlyâs
+<injiyl	İncîl
+<iram	İrem
+<isoHaAq	İshâk
+<isomaAEiyl	İsmâîl
+<isoraA}iyl	İsrail, Yakub
+>ay~uwb	Eyyûb
+A$r	küstah
+A*n	İzin vermek/istemek, bildirmek. Kulak.
+A*y	eziyet, incitmek
+AHd	bir, kimse, herbir
+ASl	akşam, kök
+ASr	ağır, ağırlık
+A^dam	Âdem
 A^zar	Âzer
+Abb	çayır
+Abd	sürekli, ebedi
+Abl	deve, sürü
+Abq	kaçmıştı
+Abw	Baba, ebeveyn, ana-baba.
+Aby	kaçınmak, direnmek
+Add	pek kötü
+Ady	ödemek
+Aff	yuh, öf
+Afk	çevrilmek, uydurma, iftira
+Afl	batmak
+Afq	ufuk
+Ahl	Kitap ehli. Ev/memleket halkı. Hak sahibi.
+Ajj	acı, tuzlu
+Ajl	süre, ecel, ertelemek
+Ajr	Ücret. Ecir.
+Akl	Yemek, yemiş.
+Alf	bin, birleştirmek
+Alh	İlah, tanrı (cins isim)
+All	yakınlık
+Alm	acı, acıklı
+Alt	eksiltmedik
+Alw	geri durmak, nimet
+Amd	uzun zaman, uzun süre
+Aml	arzu, emel
+Amm	Ümmet. Anne, ümmi. İmam, önder.
+Amn	Güvenmek, inanmak. Emanet, iman, mümin.
+Amr	Emretmek. Emir, iş.
+Amt	tümsek
+Amw	cariye
+Anf	buruna, burun, az önce
+Anm	canlılar için
+Ans	insan, görmek
+Anv	kadın, dişi
+Any	nasıl, nereden, vakit
+ArD	Arz, yeryüzü.
+Arb	ihtiyaç
+Ark	koltuk, divan
+Asf	keder, üzüntü
+Asn	bozulma
+Asr	esir
+Ass	kurulan, kuran
+Asw	örnek, üzülmek
+Aty	Gelmek, getirmek, vermek. Îtâ.
+Avl	acı meyvalı
+Avm	günah
+Avr	tercih etmek, iz, eser
+Avv	giyilecek, döşenecek eşya
+Awb	varılacak yer, dönüşüm, tevbe etmek
+Awd	ağır gelmek
+Awh	içli
+Awl	Aile. Birinci, evvel. Tevil.
+Awy	gidecekleri yer, durak, Me'vâ, barınak
+Ax*	Almak, tutmak. Âhize.
+Axr	Ertelemek. Son, diğer. Ahiret.
+Axw	kardeş
+Ayd	güç, desteklemek
+Aym	bekar
+Ayy	Ayet.
+Azf	yaklaşmak
+Azr	arka
+Azz	kışkırtmak
+DAn	koyun
+DEf	kat kat, iki kat, aciz, zayıf
+DHk	gülmek
+DHw	kuşluk vakti
+DbH	soluk soluğa
+Ddd	zıd
+DfdE	kurbağa
+Dgn	kin
+Dgv	karmakarışık, demet sap
+DhA	benzetmek
+DjE	yatacak yer
+Dll	Dalalet, sapmak.
+Dmm	sokmak
+Dmr	yorgun deve
+Dnk	dar
+Dnn	cimri
+DrE	yalvarmak, kuru diken
+Drb	misal vermek, vurmak
+Drr	zarar vermek, zarar
+DwA	aydınlatmak, ışık
+DyE	zayi etmek
+Dyf	konuklar
+Dyq	daralmak
+Dyr	zarar
+Dyz	insafsızca
+E$r	on, yirmi, onda bir
+E$w	akşam
+E*b	Azap. Tatlı (su).
+E*r	özür, özür dilemek
+EDD	ısırmak
+EDd	yardımcı, pazu
+EDl	engel olmak
+EDw	bölük bölük
+ESb	çetin, topluluk
+ESf	fırtınalı, şiddetli, sap ve yaprak
+ESm	sarılmak, korumak, ismet
+ESr	kasırga, (meyve) sıkmak, asr
+ESw	asa, değnek
+ESy	isyan, karşı gelmek
+ETf	boyun
+ETl	kullanılmaz, başı boş
+ETw	vermek, hediye
+EZm	Azim, yüce. Kemik.
+Eadon	'Adn
+Earafa`t	'Arafât
+EbA	değer vermek
+Ebd	Kul. İbadet.
+Ebqr	döşekler
+Ebr	ibret
+Ebs	surat astı, suratsız
+Ebv	boş yere, eğleniyor (musunuz?)
+Edd	hazırlamak, saymak, iddeti, adet
+Edl	adalet, fidye, eş tutmak
+Eds	mercimeğinden
+Edw	Haddi aşmak. Düşman.
+Eff	utangaçlık, iffet
+Efr	ifrit
+Efw	affetmek
+Ehd	ahd, söz vermek
+Ehn	renkli yün
+Eimora`n	'İmrân
+EiysaY	‘İsâ
+Ejb	hoşuna gitmek, hayret etmek
+Ejf	zayıf inek
+Ejl	buzağı, acele
+Ejm	yabancı
+Ejz	aciz, aciz bırakmak, kütük
+Ekf	ibadete çekilmek
+Elm	Bilmek, öğretmek. İlim. Âlem. Dağ.
+Eln	açık, alenen, açığa vurmak
+Elq	askıda, alaka (embriyo)
+Elw	yüce, büyüklenmek, İlliyyin
+Emd	direk, bile bile yapmak
+Emh	bocalamak
+Eml	Yapmak. Amel.
+Emm	amca, hala
+Emq	uzak
+Emr	ömür, yaşatmak, ömür vermek, umre, bakımlı
+Emy	kör
+Enb	üzüm
+End	Yanında, katında.
+Enkb	örümcek
+Enq	boyun
+Ent	sıkıntı vermek, sıkıntıya düşmek
+Enw	boyun eğmiştir
+Eqb	işin sonu, ökçe, ceza veremek, sarp yokuş
+Eqd	akit, düğüm
+Eql	akıl, düşünmek
+Eqm	kısır, köklerini kesen
+Eqr	kısır, (deveyi) kesmek
+Er$	Arş, taht, çardak
+ErD	sunmak, yüz çevirmek, vazgeçmek, genişlik
+Erb	bedevi Arap, Arapça
+Erf	örf, tanımak, itiraf
+Erj	topal, çıkmak, merdiven
+Erjn	hurma sapı
+Erm	Arim
+Err	isteyen
+Erw	kulp
+Ery	çıplak
+EsEs	sırtını döndüğü
+Esl	bal-
+Esr	güçlük
+Esy	olur ki, umulur ki
+Etb	mazeret istenen
+Etd	hazırlamak
+Etl	sürükleyin, kaba
+Etq	Eski (ev) Kâbe
+Etw	dışına çıkmak, başkaldırmak
+Euzayor	'Uzeyr
+Evr	anlaşılırsa, buldurduk
+Evw	saldırmak
+Ew*	sığınmak
+Ewd	sınırı aşmak, Ad (kavmi)
+Ewj	eğri, eğriltmek
+Ewl	haksızlık etmemeniz için
+Ewm	sene, yıl
+Ewn	yardım istemek
+Ewq	alıkoyanları
+Ewr	mahrem yer, açık
+Ey$	geçim, refah
+Eyb	onu kusurlu yapmak
+Eyl	yoksulluğa düşmekten, fakir
+Eyn	göz, göze (pınar)
+Eyr	kervan
+Eyy	yorulmayan
+Ezb	gizli, gizli kalmak
+Ezl	çekilmek, uzak durmak
+Ezm	azim, yapılması gereken
+Ezr	desteklemek
+Ezw	ayrı ayrı
+Ezz	Aziz, üstün.
+H$r	toplanmak, haşir
+H*r	korku,  sakınmak
+HDD	teşvik etmek
+HDr	hazır, peşin
+HSHS	yerini buldu
+HSb	kasırga
+HSd	hasat
+HSl	devşirildiği (zaman)
+HSn	iffetli, namuslu
+HSr	engellenmiş, kapanıp kalan, kuşatıcı
+HSy	saymak
+HTT	bizi affet
+HTb	odun
+HTm	çerçöp, Hutame
+HZZ	nasip, pay, şans
+HZr	kısıtlanmış, ağılda
+HbT	boşa çıkmak
+Hbb	sevmek, tohum
+Hbk	yol (yörünge)
+Hbl	ip, ahdine (ipine)
+Hbr	alim, haham
+Hbs	alıkoymak
+Hdb	tepeden
+Hdd	sınır, demir, düşman
+Hdq	bahçe
+Hdv	haber vermek, söz
+HfZ	korumak, koruyucu
+Hfd	torunlar
+Hff	etrafını çevirmiştik, dönerek
+Hfr	çukur, eski halimize
+Hfw	lutufkar, sıkıştırmak
+Hjb	perde
+Hjj	delil, tartışma, hacc
+Hjr	taş, yasak, engel
+Hjz	perde, engel
+Hkm	Hüküm, hikmet.
+Hlf	yemin etmek
+Hll	helal, çözmek
+Hlm	halim, yumuşak huylu
+Hlq	tıraş etmek
+Hly	süs, takınmak
+HmA	cıvık balçık
+Hmd	hamd, övgü
+Hml	taşımak, yük, hamal
+Hmm	kaynar su, candan dost
+Hmr	erişemeyecekleri
+Hmy	kızdırmak, gayret, hamiyet
+Hn*	kızartılmış
+Hnf	hanif, dosdoğru
+Hnjr	hançere, gırtlak
+Hnk	hakimiyet
+Hnn	rahmet
+Hnv	yemini bozmak
+Hqb	uzun zaman, çağ
+Hqf	Ahkaf
+Hqq	Hakk. Hakiki. Gerçekleşmek.
+HrD	teşvik etmek, hasta
+HrS	hırslı, düşkün
+Hrb	savaş, mihrab
+Hrd	engellemek
+Hrf	kaydırmak, kenar
+Hrj	sıkıntı, günah, güçlük
+Hrk	depretme
+Hrm	yasaklanmış, haram, mahrum
+Hrq	yakıp kül etmek
+Hrr	hür, ipek
+Hrs	bekçi
+Hrv	ekin, tarla
+Hry	aramışlardır
+Hsb	Hesap, zan.
+Hsd	haset
+Hsm	ardı ardına
+Hsn	Güzel. Hasen. İhsan.
+Hsr	hasret (pişmanlık kaynağı)
+Hss	hissetmek
+Htm	borçtur
+Hunayon	Huneyn
+Hvv	durmadan
+Hw$	haşa
+Hw*	üstünlük sağlamak, kuşatmak
+HwT	kavramak, kuşatmak
+Hwb	günahtır
+Hwj	dilek, arzu, ihtiyaç
+Hwl	çevre, değişiklik
+Hwr	Havari, konuşmak, huri
+Hwt	balık
+Hwy	bağırsaklar, kupkuru siyah
+Hwz	katılmak
+HyD	ay hali
+HyS	sığınacak yer, kaçacak yer
+Hyd	kaçmış
+Hyf	haksızlık yapacak
+Hyn	süre, zaman
+Hyq	kuşatıvermek
+Hyr	şaşkın halde
+Hyv	nerede
+Hyy	Diriltmek. Hayat.
+Hzb	taraftar, parti, hizip
+Hzn	hüzün, üzülmek
+SEd	toprak, yükselmak
+SEq	yıldırım, korkudan bayılmak
+SEr	çevirne
+SHb	arkadaş, halk, sahip
+SHf	sahife
+SbA	sabiiler
+SbE	parmak
+SbH	sabah, oluvermek
+Sbb	dökülmek
+Sbg	boya
+Sbr	Sabır.
+Sbw	kayar, çocuk
+SdE	açıkça söylemek, parçalanmış
+Sdd	alıkoymak, çevirmeğe çalışmak
+Sdf	yüz çevirmek
+Sdq	Doğruluk. Tasdik. Sadaka.
+Sdr	göğüs
+Sdy	el çırpmak, yönelmek
+SfH	hoş görünmek
+SfSf	boş, dümdüz
+Sfd	zincirler, zincirlerle
+Sff	sıra sıra, saf saf
+Sfn	safin (görkemli)
+Sfr	sarı, sararmış
+Sfw	seçmek, süzme
+Sgr	az, aşağılık
+Sgw	meyletsin, sapmış olmasından
+Shr	eritiliyor,sıhr
+Skk	vurarak
+SlH	Sulh. Salih (cins ve özel isim)
+SlSl	kupkuru çamur
+Slb	asmak, bel
+Sld	sert taş
+Slw	namaz
+Sly	girmek
+SmE	manastır
+Smd	Samed
+Smm	sağır
+Smt	susmak
+SnE	yapmak
+Snm	put
+Snw	çatallı
+SrE	serilmiş
+SrH	köşk, kule
+SrSr	dondurucu, uğultulu
+SrT	yol
+Srf	evirip çevirmek
+Srm	devşirmek
+Srr	dondurucu, çığlık, ısrar
+Srx	kurtarmak
+SwE	su tası
+Swb	boşanan yağmur, musibet, isabet
+Swf	yünlerinden
+Swm	oruç
+Swr	şekillendirmek, suret
+Swt	ses
+Sxr	kaya
+Sxx	kulakları sağır eden ses
+SyH	çığlık
+SyS	kaleler
+Syd	avlanma, av
+Syf	yaz
+Syr	dönüş yeri, varılacak yer
+S~afaA	Safâ
+TEm	yemek, doyurmak
+TEn	taşlamak, dil uzatmak
+THw	yuvarlayıp döşemek
+TaAluwt	Tâlût
+TbE	mühürlemek
+Tbq	tabaka tabaka
+TfA	söndürmek
+Tff	hile yapan
+Tfl	çocuk
+Tfq	başlamak
+Tgy	taşkın, Tâğût
+Thr	tertemiz, temizlemek
+TlE	tomurcuk, doğmak
+TlH	muz ağaçları
+Tlb	kovalamak, istemek
+Tll	çisinti
+Tlq	boşanmak
+TmE	ummak
+Tmm	bastıran felaket
+Tmn	tatmin, huzur bulunan
+Tms	yok etmek, silmek
+Tmv	temas
+TrH	bırakın
+Trd	kovmak
+Trf	bakış, taraf, etraf
+Trq	yol
+Trw	taze
+TwE	İsteyerek yapmak. Gücü yetmek.
+Twd	dağ
+Twf	tavaf, takım
+Twl	uzun
+Twq	gücü yetmek
+Twr	dağ, Tur (dağı)
+Twy	dürülmüş, Tuva
+Tyb	güzellikl, temiz
+Tyn	çamur
+Tyr	kurumuş, uğursuzluk
+ZEn	göç
+Zfr	tırnak, zafer
+Zhr	sırt, arka
+Zll	gölge
+Zlm	Zulüm, haksızlık. Karanlık.
+ZmA	susuzluk, susayan
+Znn	inanmak, savurganlar
+b$r	Müjde. Beşer.
+b*r	saçıp savurmak, savurgan
+bAr	kuyu
+bAs	kötü
+bDE	birkaç, sermaye
+bED	Bir kısım, bazı.
+bEd	Uzak, sonra.
+bEl	koca, Ba'l
+bEr	deve
+bEv	diriltmek, göndermek
+bEvr	dışarı atmak
+bHr	denizi
+bHv	eşeleyen
+bSl	soğanından
+bSr	Bakmak. Basîret/basâir. Aydınlatan.
+bT$	tutmak, yakalamak
+bTA	ağır davranmak
+bTl	batıl, boşa çıkarmak, iptal
+bTn	karın, gizli
+bTr	çalım, şımarık
 baAbil	Bâbil
 bador	Bedr
 bak~ap	Bekke
-jaAluwt	Câlût
-jahan~am	Cehennem
-jiboriyl	Cibrîl
-juwdiY~	Cûdiy
+bdA	ilkin yaratmak
+bdE	yoktan var etmek
+bdl	(bir şeyi başka şeyle) değiştirmek
+bdn	beden, kurbanlık
+bdr	tez elden
+bdw	açıklamak, göstermek
+bgD	öfke, kin, nefret
+bgl	katır
+bgt	ansızın
+bgy	aramak, aşırılık, iffetsiz, zulmetmek
+bhj	gönül açıcı
+bhl	gönülden dua
+bhm	dört ayaklı hayvan
+bht	şaşırmak, iftira
+bjs	fışkırdı
+bkm	dilsiz
+bkr	sabah, erken, bakire
+bky	ağlamak
+blE	çek
+bld	şehir, belde
+blg	varmak, ulaşmak, erginlik, tebliğ, duyuru
+bls	umutsuz
+blw	bela, sınav, deneme, imtihan etmek
+bnn	parmak
+bny	Oğul, çocuk.
+bqE	yerdeki
+bql	sebze
+bqr	sığır, inek
+bqy	kalıntı, geri kalan, kalıcı
+brA	yaratıcı, uzak durmak, beraat
+brH	ayrılmak, vazgeçmek
+brS	alacalıyı
+brd	serin
+brhn	delil, burhan
+brj	kale, burç
+brk	bereket, mubarek
+brm	kararlı
+brq	şimşek
+brr	iyilik, iyilik etmek
+brz	bariz, ortaya çıkarmak
+bsT	üstünlük, güç, açmak, uzatmak
+bsl	helake uğrayan
+bsm	tebessüm
+bsq	yüksek
+bsr	kaşlarını çatmak
+bss	serpilmek
+btk	yaracaklar
+btl	yönelmek
+btr	sonu kesik
+bvv	üretmek, yaymak
+bwA	uğramak, yerleştirmek
+bwb	kapı
+bwl	maksat, hal
+bwr	helak
+bxE	helak etmek
+bxl	cimrilik
+bxs	eksiltmek
+byD	beyaz, yumurta
+byE	alışveriş, bi'at etmek
+byd	yok olmak
+byn	Arasında. Açıklamak. Beyan.
+byt	Beyt, ev, gecelemek
+bzg	doğmak
+dAb	durumu gibi
+dEE	iter kakar
+dEw	Dua. Davet, çağırmak.
+dHD	gidermek
+dHr	kovulmuş
+dHw	yayıp yuvarlattı
+daAwud	Dâvûd
+dbb	canlı
+dbr	arkasını dönmek, tedbir
+dfA	ısınmak
+dfE	savmak, def etmek
+dfq	atılan
+dhm	yemyeşil
+dhn	yağlı
+dhq	dolu
+dhr	zaman, uzun devir
+dhy	cidden çok feci
+dkk	darmadağın, dümdüz
+dlk	sarkmasından
+dll	delil,  göstermek
+dlw	atmak, sarkıtmak
+dmE	yaşla, yaş
+dmdm	başlarına geçirmek
+dmg	beynini parçalar
+dmr	yıkmak, darmadağın etmek
+dmw	kan
+dnr	dinar
+dnw	Yakın/aşağı olmak. Dünya.
+drA	atışmak, savmak
+drhm	para
+drj	derece
+drk	yetişmek
+drr	bol yağmur
+drs	ders
+dry	bilmek
+dsr	çivi
+dss	gömmek
+dsw	alçaltan
+dvr	örtüsüne bürünen
+dwl	çevirmek, dolaşan
+dwm	sürekli, daim
+dwn	Aşağı.
+dwr	yurt, diyar, ev
+dxl	Girmek. Dahil.
+dxn	duman
+dxr	sürünmek
+dyn	Borç. Din.
+f$l	korkup bozulmak
+fAd	gönül, kalp
+fAy	topluluk
+fDD	gümüş, dağılmak
+fDH	mahcubetmek
+fDl	Fazl, üstünlük. Erdem.
+fDw	geçmiş
+fEl	Yapmak, fiil.
+fH$	hayasızlık, edepsizlik, fuhuş
+fSH	güzel konuşur
+fSl	ayrılmak, açıklamak, sütten kesmek
+fSm	kopmayan
+fTr	yoktan var etmek, yarılmak
+fZZ	kaba
+fdy	fidye
+fhm	belletmek
 firoEawon	Firavun
 firodawos	Firdevs
-ha%60ma%60n	Hâmân
-Hunayon	Huneyn
-<iboliys	İblîs
-Eimora%60n	'İmrân
-<injiyl	İncîl
-<iram	İrem
-laZaY%60	Lazâ
-luqoma%60n	Lukmân
+fjj	geniş yol, geniş geniş
+fjr	fışkırmak, fecr, tan
+fjw	dehliz
+fkh	meyve, eğlenmek
+fkk	çözmek (azad etmek), bırakmak
+fkr	düşünmek, tefekkür
+flH	felah, iflah, umduğuna eren, kurtuluşa eren
+flk	gemi,felek (yörünge)
+fln	falanı
+flq	karanlığı yarmak
+fnd	bunak demek
+fnn	çeşitli meyva
+fny	yok olmak
+fqE	parlak
+fqd	kaybetmek, teftiş
+fqh	anlamak
+fqr	fakir, muhtaç
+fr$	döşek, pervane
+frD	belirli, farz kılmak
+frE	dalları
+frH	sevinmek
+frT	kusurl, aşırılık
+frd	tek başına, ferd
+frg	dökmek, boşaltmak
+frh	ustalıkla
+frj	ırz, çatlak
+frq	fark, Furkan, ayrılmak, ayrılığa düşmek
+frr	kaçmak, firar
+frt	susuzluğu giderici, tatlı
+frv	fışkı
+fry	uydurmak, iftira
+fsH	yer açın, yer açın ki, genişlik versin
+fsd	kargaşa, bozgunculuk, fesad
+fsq	günaha sapmak, yoldan çıkmak, fasık, fısk
+fsr	açıklamayı
+ftA	sen hâlâ
+ftH	açmak, fetih
+ftl	kıl kadar
+ftn	fitne, sınama, yakılmak
+ftq	biz onları ayırdık
+ftr	ara vermek, hafifletmek
+fty	genç, cariye
+fwD	bırakıyorum
+fwh	ağız
+fwj	topluluk, bölük bölük, dalga dalga
+fwm	sarımsak
+fwq	üstünde
+fwr	ansızın, kaynamak
+fwt	elinden çıkmak, uygunsuzluk
+fwz	kurtuluş, başarı
+fxr	böbürlenmek, övünmek
+fyA	dönmek, ganimet vermek
+fyD	akın etmek
+fyl	fil
+fzE	korku, korkmak
+fzz	yerinden oynat, tedirgin etmek
+g$w	perde, bürümek, örtmek
+gDD	sakınmak
+gDb	gazab, çok kızgın
+gSS	boğazı tırmalayan
+gSb	zorla
+gT$	örtüp karartmak
+gTw	perde
+gbn	aldanmak
+gbr	geride kalan
+gdq	bol
+gdr	bırakmamış, bırakmıyor
+gdw	erken, sabah, yarın
+gfl	gafil, habersiz
+gfr	Bağışlamak. Mağfiret. İstiğfar.
+glZ	katı, sağlam, sert davranmak
+glb	galib gelmek, yenilmek
+glf	perdeli, kılıflı
+gll	bağlamak, demir halka, kin
+glm	erkek çocuk
+glq	kilitlemek
+glw	taşkınlık etmek
+gly	kaynar, kaynamak
+gmD	göz yummak
+gmm	bulut, gam, dert, tasa
+gmr	dalga, gaflet
+gmz	kaş göz etmek
+gnm	ganimet, koyun
+gny	zengin, yarar sağlamak, kendine yeterli, kurtarmak
+grb	batı, batmak
+grf	avuç, yüksek oda
+grm	borçlu, borç
+grq	boğmak
+grr	yanıltmmak, aldatmak, aldatıcı
+grw	üstüne sürmek
+gsl	yıkanmak
+gsq	kararmak, gece
+gvw	sel süprüntüsü, çöp
+gwS	denize dalmak, dalgıç
+gwT	tuvalet
+gwl	sersemletme
+gwr	mağara
+gwv	istemek, sığınmak
+gwy	sapıklık, azdırmak, azgınlık
+gyD	çekilmek, eksiltmek
+gyZ	öfke, kızdırmak
+gyb	gayb, gizli bilgi, kaybolmak
+gyr	Gayrı, başka. Değişmek.
+gyv	yağmur
+gzl	ipliğini
+gzw	savaş
+h$$	silkelemek
+h$m	çöp kırıntıları, kuru ot
+hAt	getirmek
+hDm	hakkını çiğnenmek, yumuşak
+hTE	koşmak
+ha`ma`n	Hâmân
+ha`ruwn	Hârûn
+ha`ruwt	Harut
+hbT	inmek
+hbw	toz zerreleri haline, toz duman
+hdd	yıkılıp
+hdhd	hüdhüd
+hdm	yıkılmak
+hdy	Yol göstermek, hidayet. Muhtedi. Hediye.
+hjE	uyuyor
+hjd	uyanmak, teheccüd
+hjr	hicret etmek, göç
+hlE	hırslı ve huysuz
+hlk	helak, yok etmek
+hll	hilal, boğazlamak
+hmd	kurumuş ölmüş
+hmm	yüz tutmak, yeltenmek
+hmn	kollayıp korumak, Müheymin
+hmr	boşalan
+hms	fısıltıdan
+hmz	kışkırtmak, diliyle çekiştirmek
+hnA	afiyetle
+hrE	koşmak
+hrb	kaçmak
+hwd	yahudi, Hud
+hwn	alçaltmak, alçaklık, hakaret
+hwr	çökecek, yuvarlanan
+hwy	arzu, hevâ
+hyA	hazırlamak
+hyj	(ekin) kurumak
+hyl	dağılan
+hym	şaşkın şaşkın, susuz deve
+hyt	haydi gelsene
+hzA	alay etmek
+hzl	şaka
+hzm	hezimet, bozgun
+hzz	silkelemek, titreşmek
+j**	kesinti, parça
+j*E	dal
+j*w	kor (getiririm)
+jAr	yalvarmak, feryad etmek
+jEl	Yapmak.
+jHd	yalanlamak, inkar etmek
+jHm	Cehennem
+jaAluwt	Câlût
+jahan~am	Cehennem
+jbb	kuyunun
+jbh	onların alınları
+jbl	dağ
+jbn	alnı üzerine
+jbr	zorlayıcı, Cebbâr
+jbt	cibt
+jby	seçmek
+jdd	yepyeni, yeni
+jdl	kavga, savunma, mücadele, tartışma
+jdr	duvar
+jdv	kabir
+jfA	yok olmak
+jfn	leğen
+jfw	uzaklaşır
+jhd	cihat, cihad etmek
+jhl	cahil, bilgisiz
+jhr	açıkça, yüksek sesle
+jhz	yüklemek, yük
+jiboriyl	Cibrîl
+jlb	yaygara, örtü
+jld	deri, cilt
+jll	celal, büyüklük
+jls	meclis, oturum
+jlw	görünmek
+jmE	Toplamak. Cuma.
+jmH	hemen
+jmd	cansız
+jml	deve, güzel, güzellik
+jmm	pek çok
+jnH	günah, kanat
+jnb	yan, kaçınmak
+jnd	ordu
+jnf	hata
+jnn	Cennet. Cin. Cinnet.
+jny	taze
+jrE	yutmak
+jrH	yara, işlemek
+jrd	çekirge
+jrf	uçurum
+jrm	suç işlemek, suçlu
+jrr	çekmek
+jry	akmak
+jrz	kupkuru, otsuz
+jsd	heykel, ceset
+jsm	cisim
+jss	merak
+juwdiY~	Cûdiy
+jvm	diz üstü
+jvv	gövdesi koparılmış
+jvw	diz çökmüş
+jwE	alçaklık
+jwb	karşılık vermek, cevap
+jwd	(saf kan) at
+jwf	göğüs boşluğu
+jwr	komşu, korumak
+jws	araştırmak
+jww	boşluğunda
+jwz	(ırmağı) geçmek
+jyA	Gelmek, getirmek.
+jyb	yırtmaç, cep
+jyd	boynunda
+jzA	parça,bölüm
+jzE	sızlansak da, sızlanır
+jzy	Karşılık, ceza.
+k$T	sıyrılıp açıldığı
+k$f	açmak, kaldırmak
+k*b	Yalan. Kizb, tekzib.
+kAs	kadeh
+kEb	topuk, Kabe
+kZm	yutkunmak, öfke
+kbb	yıkılır, kapanarak
+kbd	zorluk
+kbkb	tepe taklak
+kbr	Büyük, yaşlı. Tekbir, kibir.
+kbt	perişan olmak
+kdH	çabalamak
+kdr	kararıp döküldüğü
+kdy	gerisini elinde tutanı
+kfA	dengi
+kff	hepiniz birlikte, avuç
+kfl	kefil olmak, Zülkifil
+kfr	Nankörlük, inkar, küfür. Kefaret.
+kft	toplanma yeri
+kfy	yeter, kâfi
+khf	Kehf, mağara
+khl	yetişkin
+khn	kahin,kahinin
+klA	koruyacak
+klH	dişleri açıkta
+klb	köpek
+klf	yükümlü tutmak, teklif etmek
+kll	Bütün, hepsi.
+klm	kelime, söz, konuşmak
+klw	her ikisi
+kmh	körü
+kml	kemal, olgunlaştırmak
+kmm	kabuklu, salkımlı
+knd	nankör
+knn	gizlemek, saklı, kılıf
+kns	dönüp saklanan
+knz	yığmak, hazine,
+krb	sıkıntı
+krh	hoşunuza gitmeyen, kerih, iğrenmek
+krm	ikram etmek, kerem, ikram
+krr	kere
+krs	kürsü
+ksb	kazanmak
+ksd	düşmek
+ksf	parça
+ksl	üşenerek
+ksw	giyecek, giydirdmek
+ktb	Yazmak. Kâtip, kitap.
+ktm	gizlemek
+kvb	kum yığınları
+kvr	Çok. Çoğalmak. Kesret.
+kwb	kadeh, testi
+kwd	neredeyse, az daha
+kwkb	yıldız, gezegen
+kwn	Olmak. Kevn. Mekan.
+kwr	örtmek
+kwy	dağlanır
+kyd	tuzak, hile
+kyf	nasıl
+kyl	ölçü
+kyn	boyun eğmek
+l**	lezzetli
+lAlA	inci
+lEb	oyun, şaka
+lEn	lanet
+lHd	doğruluktan sapmak
+lHf	ısrar
+lHm	et
+lHn	üslubundan
+lHq	yetişmek, katılmak
+lHy	sakal
+lTf	latif, lutuf, dikkatli davranmak
+lZy	alev saçan
+laZaY`	Lazâ
+lbb	akıl, sağduyu
+lbd	birbirine geçecek, birçok
+lbn	süt
+lbs	katıştırmak, elbise
+lbv	kalmak
+ldd	azılı
+ldn	kat
+lfH	yalar
+lfZ	söylemek
+lff	sarmaş dolaş
+lft	geriye bakmak
+lfw	bulmak
+lgb	usanç, yorgunluk
+lgw	boş söz, gürültü etmek
+lhb	alev, alevli
+lhm	ilham etmek
+lhv	dilini sarkıtıp solur
+lhw	eğlence
+ljA	sığınacak yer
+ljj	derin, direnmek
+lmH	açıp yumma
+lmm	gelin, küçük hata
+lms	dokunmak
+lmz	sana dil uzatan, çekiştiren
+lqH	aşılayıcı
+lqT	almak
+lqb	lakap
+lqf	yakalayıp yutmak
+lqm	yuttu
+lqy	Karşılaşmak.
+lsn	dil
+luqoma`n	Lukmân
+luwT	Lût
+lw*	birbirinin arkasına gizlenerek
+lwH	levha
+lwm	kınamak
+lwn	onun renk
+lwt	geçmişti
+lwy	eğip bükmek
+lyl	gece
+lyn	yumuşak davranmak
+lys	değil
+lyt	eksiltmek
+lzb	yapışkan
+lzm	gerekli, bağlamak
+m$j	karışık
+m$y	yürümek
+mAy	yüz, iki yüz
+mDg	et parçası
+mDy	geçerli
+mEn	ufak yardım
+mEy	barsak
+mEz	keçi
+mHS	temize çıkarmak
+mHl	tuzak
+mHn	imtihan
+mHq	mahvetmek
+mHw	silmek
+mSr	şehir, Mısır
+mTr	yağmur
+mTw	çalım satarak
+ma>ojuwj	Me'cuc
+ma`ruwt	Marut
 madoyan	Medyen
 mak~ap	Mekke
+manaw`p	Menat
+marowap	Merve
 maroyam	Meryem
 masiyH	Mesîh
-miykaY%60l	Mîkâl
-qa%60ruwn	Kârûn
+mdd	yardım etmek, mürekkep, uzatmak
+mdn	şehir, Medine
+mhd	yatak, beşik
+mhl	erimiş maden, mühlet
+mhn	hakir, aşağılık
+miykaY`l	Mîkâl
+mjd	lütfu bol, yüce
+mjs	mecusi
+mkn	imkan vermek
+mkr	tuzak, tuzak kurmak
+mkv	kalır, ağır ağır, kalacak
+mkw	ıslık çalmadan
+mlA	ileri gelenler, doldurmak
+mlH	tuzlu, acı
+mlk	Mâlik olmak. Melik. Melek.
+mll	millet, din
+mlq	fakirlik korkusuyla, fakirlik
+mlw	süre vermek
+mnE	men etmek, engel olmak
+mnn	minnet, başa kakma, kudret helvası
+mny	arzulamak, kuruntu, temenni, meni
+mqt	(Allah'ın) hışmı, gazabı
+mrA	eşi, karısı
+mrD	hasta, hastalık
+mrH	kabara kabara, böbürlenerek
+mrd	asi, iyice alışmış
+mrj	birbirine salmış, mercan
+mrr	kez, defa, yanından geçmek
+mry	kuşku, şüphe
+msH	sürmek, meshetmek
+msd	hurma lifi
+msk	tutmak, misk
+mss	dokunmak
+msw	akşama geçirmek
+msx	değiştirip dondurmak
+mtE	nimet, geçimlik
+mtn	sağlam
+muwsaY`	Musa
+mvl	Benzetmek. Mesel.
+mwh	su
+mwj	dalga
+mwl	mal
+mwr	çalkalanış
+mwt	Ölüm. Mevt, memât.
+mxD	doğum sancısı
+mxr	denizi yara yara
+myd	sofra, sarsmak
+myl	yöneliş, meyil
+myr	yiyecek getirmek
+myz	ayırmak
+mzj	karışımı
+mzn	bulut
+mzq	parçalanmış, darmadağın
+n$A	yaratmak, inşa etmek
+n$T	çekip almak
+n$r	yaymak, diriltmek
+n$z	huysuzluk
+n*r	Uyarmak. Nezir, adak.
+nAy	uzak durmak
+nDd	birbirini izleyen
+nDj	piştikçe
+nDr	ışıl ışıl
+nDx	fışkıran
+nEj	koyun
+nEl	pabuç, nalın
+nEm	Nimet. Ahır hayvanı.
+nEq	haykıran
+nEs	uyku
+nHb	adak
+nHl	hak olarak, bal arısı
+nHr	kurban kes
+nHs	uğursuz
+nHt	yontmak
+nSH	öğüt vermek, nasihat, yürekten
+nSb	pay, nasip, dikili taş
+nSf	yarısı
+nSr	Yardım.
+nSt	susun
+nSy	perçem
+nTH	boynuzlanmış
+nTf	nutfe (sperm)
+nTq	konuşmak
+nZr	Bakmak. Beklemek, gözlemek. Nazar.
+nb*	bozmak, atmak
+nbA	Haber vermek, bildirmek. Haber, nebi.
+nbE	göze, kaynak
+nbT	içyüzünü araştıran
+nbt	yetiştirmek, bitki
+nbz	birbirini çağırmak
+ndd	eşler, denk
+ndm	pişman
+ndw	seslenmek, yalvarmak, nida
+nf$	yayıldığı, atılmış
+nf*	geçip gitmek
+nfE	yarar veren
+nfH	esinti
+nfd	tükenmek
+nfl	ganimetler, bağış olarak
+nfq	Harcamak. İnfak. Nifak.
+nfr	topluca (savaşa) çıkmak
+nfs	Yarışmak. Nefs, kendi.
+nfv	üfleyen
+nfx	üflemek
+nfy	sürülme
+ngD	alaylı alaylı sallamak
+nhj	yol
+nhr	Nehir. Gündüz.
+nhy	son vermek, vazgeçmek, menetmek
+njd	iki (tepe) yol
+njm	yıldız
+njs	pislik
+njw	kurtarmak, gizli konuşmak
+nkH	evlenmek, nikah
+nkS	(geriye) dönmek
+nkb	omuzlar (yeryüzünde)
+nkd	yararsız bitki
+nkf	çekinmek
+nkl	ibretlik ceza
+nkr	kötülük, korkunç
+nks	döndürülmek
+nkv	yeminlerini bozmak
+nml	parmak uçları, karınca
+nmm	söz
+nq*	kurtarmak
+nqD	bozmak
+nqE	toz
+nqS	noksanlık, eksik
+nqb	başkan, delmek
+nqm	öc almak, intikam
+nqr	çekirdek zerresi
+nsA	ertelemek, değnek
+nsb	soylar, nesep
+nsf	savurmak
+nsk	ibadet yolları, kurban
+nsl	nesil, akın etmek
+nsr	Nesr
+nsw	kadınlar
+nsx	neshetmek
+nsy	unutmak
+ntq	kaldırmak
+nuwH	Nûh
+nvr	saçılmış, saçıldığı
+nw$	elde etmeleri
+nwA	ağır gelmek
+nwS	kurtuluş
+nwb	gönülden (Allah'a) yönelen
+nwm	uyku, uyumak
+nwn	Zünnun, Yunus
+nwq	dişi deve
+nwr	Aydınlatmak. Nur. Nar, ateş.
+nws	İnsan.
+nwy	çekirdek
+nxl	hurma
+nxr	çürümüş
+nyl	ulaşmak, erişmek
+nzE	anlaşmazlık, çekişmek, söküp çıkarmak
+nzf	sarhoş
+nzg	dürtüklemek, kötü düşünce
+nzl	İnmek, indirmek. Konak yeri.
+q$Er	ürperir
+q*f	koymak, atmak
+qDD	yıkılmak
+qDb	yonca
+qDy	hükmetmek, tamamlamak, işini bitirmek
+qEd	temel, koltuk, oturmak
+qEr	köklerinden sökülmüş
+qHm	(cehenneme) girmek
+qSS	kısas, kıssa, anlatmak
+qSd	tutumlu, orta, doğru
+qSf	fırtına
+qSm	kırıp geçirdik
+qSr	kısaltmak, saray
+qSw	uzak, Aksa
+qTE	ayırmak, kesmek, kıt'a
+qTT	bizim (azab) payımızı
+qTf	meyveleri, meyvaları
+qTmr	çekirdeğin zarı
+qTr	katran
+qa`ruwn	Kârûn
+qbD	(rızkı) kısmak, avuç
+qbH	çirkinleştirilen
+qbl	Kabul. Karşılıklı. Önce.
+qbr	mezar, kabir
+qbs	kor
+qdH	çarparak
+qdd	yırtılmış, çeşitli
+qdm	(önden) göndermek, ayak
+qdr	Ayarlamak, kısıtlamak. Kader. Miktar.
+qds	takdis, Kudüs, mukaddes
+qdw	uymak
+qfl	kilit
+qfw	birbiri ardınca göndermek
+qhr	ezici, kahhar
+qlE	tutmak
+qlb	Çevirmek. Kalp.
+qld	gerdanlık(lı kurban), anahtar
+qll	azıcık, az
+qlm	(kura) okları, kalem
+qly	darılmak
+qmE	kamçı
+qmH	başı yukarı kalkık
+qmS	gömlek
+qmTr	çok katı
+qml	kımıl (haşerat)
+qmr	Ay
+qnE	kanaat edip isteyemeyen
+qnT	umut kesenler
+qnTr	kantarlarca
+qnt	boyun eğmiş, gönülden bağlı
+qnw	sarkan
+qny	bol veren
+qrA	Kur'an, okumak
+qrD	borç
+qrE	bela, çarpan olay
+qrH	yara
+qrTs	kağıt üzerine yazılı
+qrb	akraba, yakınlar, yaklaşmak
+qrd	maymunlar
+qrf	işlemek
+qrn	arkadaş, yakın
+qrr	kalmak, durulacak yer
+qry	kasaba, şehir, kent, ülke
+qsT	adalet
+qsTs	terazi ile
+qsm	taksim, kasem
+qsr	aslan-
+qss	keşişler
+qsw	katılaşmak
+qtl	Öldürmek, savaşmak. Katl.
+qtr	eli dar, cimrilik
 qurayo$	Kureyş
+qvA	acur
+qwE	yerlerini, düz arazi
+qwb	uzunluğu kadar
+qwl	Söylemek. Kavl, söz.
+qwm	Kalkmak, yerleşmek. Kavim. Kıyamet. Makam.
+qws	yay
+qwt	karşılığını veren, gıda
+qwy	kuvvet, güçlü
+qyD	musallat ettik, sardırırız
+qyl	gündüz uykusu, dinlenecek yer
+r$d	doğru yol, akıl
+r*l	aşağılık, rezil
+rAf	şefkat
+rAs	baş
+rAy	Görmek. Rüya.
+rDE	emzirmek
+rDw	razı, hoşnut
+rEb	korku
+rEd	gök gürlemesi, gök gürültüsü
+rEy	çoban, otlak
+rHb	genişlik, merhaba
+rHl	yükler
+rHm	Acımak. Rahmet. Merhamet.
+rHq	halis şarap
+rSS	kenetlenmiş
+rSd	gözetlemek
+rTb	yaş, olgun hurma
 ramaDaAn	Ramadân
+rbE	dört, kırk, dörtte bir
+rbH	kâr
+rbS	beklemek, gözetlemek
+rbT	savaşa hazır, bağlamak
+rbb	Rabb (cins isim). Erbâb.
+rbw	riba (faiz), artırmak
+rdA	yardımcı olarak
+rdd	geri döndürürmek, çevirmek, reddetmek
+rdf	birbiri ardınca
+rdm	sağlam engel
+rdy	çukura düşmek
+rfE	kaldırmak, yükseltmek
+rfd	bağış
+rfq	arkadaş, dirsek
+rfrf	yastık
+rft	ufalanmış toprak
+rfv	yaklaşmak
+rgb	arzulamak, yalvarmak
+rgd	bol bol
+rgm	gidecek
+rhT	yakın çevre
+rhb	korkmak,rahip
+rhn	rehin, bağlı
+rhq	bürümek
+rhw	açık
+rjE	Dönmek. Rücû.
+rjf	sarsıntı, deprem
+rjj	sarsılmak
+rjl	erkek, adam
+rjm	kovmak, taşlamak
+rjs	(birer) pislik
+rjw	ummak
+rjz	azab, pislik
+rkD	kaçmak
+rkE	rüku, eğilmek
+rkb	binmek, binek
+rkd	hareketsiz
+rkm	üst üste yığılmış
+rkn	meyletmek, yanaşmak
+rks	baş aşağı
+rkz	cılızsesini
+rmH	mızraklarınızın
+rmd	küle benzer
+rmm	çürümüş, kül gibi
+rmn	nar
+rmy	atmak
+rmz	işaretten
+rqb	köle, gözetlemek, beklemek
+rqd	uyku
+rqm	Rakim, yazılmış
+rqq	ince deri üzerine
+rqy	çıkmak
+rsl	Göndermek. Rasûl. Risâle.
+rss	Res
+rsw	durmak, sabit
+rsx	ileri giden, derinleşmiş
+rtE	gezsin
+rtl	ağır ağır okumak
+rtq	bitişik
+rwD	bahçe
+rwE	korku
+rwH	Ruh, Cebrail
+rwd	İrade. Murad. Düzen kurmak.
+rwg	gizlice sokulmak
+rxw	tatlı tatlı
+ry$	süslenecek elbise
+ryE	tepe (yol üzerine)
+ryb	şüphe
+ryn	paslanmış
+rzq	Rızık. Rezzak.
 r~uwm	Rûm
-S~afaA	Safâ
-marowap	Merve
+sAl	Sormak. Sual. Mes'ûl.
+sAm	üşenmek, usanmak
+sEd	mutlu, mesut
+sEr	çılgın ateş, alevli ateş
+sEy	çalışmak, koşmak
+sHb	bulut
+sHl	sahil
+sHq	uzak
+sHr	sihir, seher vakti, büyü
+sHt	haram
+sTH	yayılıp döşenmiş
+sTr	masal, satır
+sTw	üzerine saldırmak
 saba<	Sebe
+salosabiyl	Zencebîl
 saqar	Sakar
 sayonaA^'	Seynâ
+sbE	yedi, yetmiş
+sbH	tesbih etmek, yüzmek
+sbT	torun
+sbb	sövmek, sebep
+sbg	bol bol verdi, zırh
+sbl	Yol. Sebil.
+sbq	koşmak, öne geçmek
+sbt	cumartesi, dinlenme
+sdd	doğru, sed
+sdr	sedir ağacı, Sidre
+sds	altıncı, altıda bir
+sdy	başı boş
+sfE	yakalamak
+sfH	zinadan kaçınan
+sfh	beyinsiz
+sfk	dökmek
+sfl	en aşağı, alçak
+sfn	gemi
+sfr	sefer, yolculuk
+sgb	açlık
+shl	düzlüklerinde
+shm	kur'a çekti
+shr	uyanıklık
+shw	yanılıp durmak
 siyniyn	Sînîn
-TaAluwt	Tâlût
-t~aworaY%60p	Tevrât
+sjd	secde, mescid
+sjl	çamurdan pişmiş
+sjn	hapsolmak, zindan, Siccin
+sjr	kaynatmak
+sjw	sakinleşen
+skb	fışkıran
+skn	oturmak, mesken, huzur, yoksul
+skr	sarhoş
+skt	dinince
+slH	silah
+slT	zorlayıcı güç
+slb	kapmak
+slf	geçmiş
+slk	girdirmek
+sll	süzmek
+slm	İslam, muslim. Barış, selam, teslim.
+slq	incitmek
+slsl	zincir
+slw	bıldırcın
+slx	sıyrılmak, soyup almak
+smE	Duymak, kulak vermek.
+smd	baş kaldırmak
+smk	kalınlık
+smm	iliklere işleyen
+smn	semiz
+smr	Samiri, geceleyin
+smw	Sema. İsim.
+snbl	başak
+snd	dayatılmış
+snh	bozulmamış
+snm	tesnim
+snn	yasa, sünnet
+snw	yıl, sene
+sqT	düşmek
+sqf	tavan
+sqm	hasta
+sqy	sulamak, içirmek
+srE	yarışmak, çabuk, hızlı
+srH	salıvermek
+srb	serap
+srbl	gömlek, elbise
+srd	dokumasını
+srdq	çadırı
+srf	taşkınlık, israf
+srj	kandil, lamba
+srmd	sürekli
+srq	hırsız, çalmak
+srr	sevinç, sır
+sry	esir, yürütmek
+str	gizli, siper, gizlenmek
+stt	altı, altmış
+sulayoma`n	Suleymân
+swA	Kötü.
+swE	saat (kıyamet), an
+swH	yurt
+swT	kırbaç
+swd	siyah
+swg	boğazından, lezzetli
+swl	aldatıp sürüklemek
+swm	sima, işaretlenmiş
+swq	sürmek, çarşı, sevk
+swr	sure, bilezik
+swy	eşitlemek, düzenlemek, dümdüz etmek
+sxT	hışmına, gazabetmiştir, kızarlar, kızdıran
+sxr	emrine vermek, alay etmek
+syH	dolaşan, seyahat eden
+syb	Sâibe
+syl	çağlayıp aktı, sel
+syr	gezip dolaşmak
+tEs	yıkım
+tHt	altında
+tbE	Uymak, tâbi olmak. Tebâ. Peşpeşe.
+tbb	kayıp, hüsran
+tbr	yıkılmak, helak
+tfv	kirlerini
+tjr	ticaret
+tll	(çocuğu) yıktı
+tlw	okumak
+tmm	tamam, tamamlamak
+tqn	gayet iyi yapan
+trb	toprak, yaşıt
+trf	varlık içinde
+trk	bırakmak, terk
+trq	köprücük kemiklerine
+tsE	dokuz, doksan
 tub~aE	Tubba'
-Euzayor	'Uzeyr
+twb	tevbe etmek, Dönmek
+twr	kez daha
+tyh	şaşkın dolaşmak
+tyn	incir
+t~aworaY`p	Tevrât
+vEb	ejderha
 vamuwd	Semûd
+vbT	durdurmak
+vbr	mahvolmuş, helâki, ölümü
+vbt	sağlam tutmak, kökleştirmek, sebat
+vby	bölük bölük
+vjj	şarıl şarıl
+vll	bölüm
+vlv	üç, üçte bir, otuz
+vmn	bedel, sekiz, seksen
+vmr	ürün, meyve
+vny	iki, istisna
+vqb	delici, parlayan
+vqf	yakalamak
+vql	ağır, ağır gelmek
+vrb	kınama
+vry	toprak
+vwb	sevab, karşılık, giysi
+vwr	sürmek için, alt-üst etmek
+vwy	varacağı yer, durak
+vxn	ağır basmak
+vyb	dul
+w$y	alaca
+w*r	bırakmak
+wAd	diri diri gömülen
+wAl	sığınacak yer
+wDE	doğurmak, bırakmak
+wDn	altın işlenmiş
+wEZ	öğüt
+wEd	Vaad.
+wEy	yükler
+wH$	vahşi hayvan
+wHd	bir, tek
+wHy	vahyetmek, vahiy
+wSb	daima, sürekli
+wSd	üzerine kilitlenmiş
+wSf	nitelemek, vasıflandırmak
+wSl	birleştirmek
+wSy	vasiyet, tavsiye
+wTA	ayak basmak, tesirli
+wTn	yerler, vatan
+wTr	ilişki
+wbl	sağnak, yağmur, vebal
+wbq	tehlikeli uçurum
+wbr	yapağı
+wdE	emanet
+wdd	arzu etmek, sevgi, sevmek
+wdq	yağmur
+wdy	kan parası, vadi
+wfD	koşuyorlar
+wfd	konuk olarak
+wfq	başarmak, uygun
+wfr	mükemmel
+wfy	sözünü tutmak, yerine getirmek, canını almak, vefat, vefa
+whb	vermek, hediye etmek, hibe
+whj	parıl parıl
+whn	gevşemek, yılmak
+why	zayıf
+wjb	düştüğünde
+wjd	Bulmak.
+wjf	sürmek, çarpmak
+wjh	yüz, çevirmek
+wjl	ürpermek
+wjs	içine düştü
+wkA	dayanmak, yaslanmak
+wkd	pekiştirmek
+wkl	dayanıp güvenenmek, tevekkül, vekil
+wkz	yumruk indirdi
+wld	Doğurmak. Doğuran, vâlide. Veled.
+wlj	geçmek, girmek
+wly	Yakın olmak. Dost. Veli.
+wny	gevşeklik etmek
+wq*	vurulmuş
+wqE	ortaya çıkmak, vuku bulmak
+wqb	karanlık çöktü
+wqd	yakmak, tutuşturmak, yakıt
+wqf	durdurmak
+wqr	ağırlık, saygı
+wqt	vakit
+wqy	Korumak, sakınmak. Takva.
+wrd	sürüklemek, damar
+wrq	yaprak
+wrv	miras, varis
+wry	arkası, ötesi
+wsE	genişlik, kaplamak, genişletmek
+wsT	vasat, orta
+wsl	yol,vesile
+wsm	işaret, damgalamak
+wsn	neuyuklama
+wsq	topladığı, dolunay
+wsws	vesvese, fısıldamak
+wtd	kazıklar, birer kazık
+wtn	can damarını
+wtr	ardı ardına
+wvn	putlar
+wvq	bağı
+wzE	sevk etmek
+wzn	tartmak, terazi, mizan
+wzr	taşımak, yük, vezir
+x$E	saygılı, boynu bükük
+x$b	odun
+x$y	korku, korkmak
+x*l	yüzüstü bırakmak
+xDE	eğilip kalmış
+xDd	dikensiz
+xDr	filiz, yeşil
+xSS	tahsis, has
+xSf	üst üste yamayıp örtmek
+xSm	hasım, çekişmek, tartışmak
+xTA	hata, günah
+xTT	Yazmak
+xTb	hitap, konuşmak
+xTf	kapıvermek
+xTw	adım
+xbA	gizlenen
+xbT	çarptığı
+xbl	bozmak, bozgunculuk
+xbr	haber
+xbt	gönülden boyun eğmek
+xbv	kötü şeyler, habis, murdar
+xbw	(ateş) dindiği
+xbz	ekmek
+xdE	aldatmak
+xdd	yüzünü, hendeğin
+xdn	dost, gizli dost
+xfD	indir, alçaltıcı
+xff	hafif, hafifletmek
+xft	gizlemek, gizli
+xfy	gizlemek, gizli
+xlE	çıkar
+xlS	gönülden bağlanmak, halis, ihlas
+xlT	karıştırmak
+xld	ebedi, sürekli
+xlf	Ardından gelmek. Halef. Muhtelif.
+xll	dostluk, dost
+xlq	Yaratmak. Halk. Ahlak.
+xlw	yalnız kalmak, gelip geçmek
+xmS	açlıktan,açlık
+xmT	buruk
+xmd	sönmüş ateş (gibi), sönüverdiler
+xmr	şarap, başörtü
+xms	beş, beşte bir, elli
+xnq	boğulmuş
+xns	gizlenen, sinsi
+xnzr	domuz
+xrS	saçmalamak
+xrTm	hortum, burun
+xrb	harap etmek
+xrdl	hardal
+xrj	Çıkmak. Hariç, ihraç.
+xrq	yırtamak, onu delmek
+xrr	bayılmak, secdeye kapanmak
+xsA	aşağılık, umudu keserek
+xsf	batırmak
+xsr	kaybetmek, ziyan, hüsran
+xtm	mühür, son
+xtr	gaddar
+xwD	dalmak
+xwf	Korkmak.
+xwl	dayı, teyze
+xwn	hain, hiyanet
+xwr	böğürmek
+xwy	çökmüş, içi boş
+xyT	iplik, iğne
+xyb	perişan oldu
+xyl	at
+xym	çadırlar
+xyr	Hayr. Seçmek.
+xzn	hazine, bekçi
+xzy	rezil olmak, perişan 
+yAs	umudu kesmek, ümitsiz, yeis
+ya>ojuwj	Ye'cuc
+yaEoquwb	Ya‘kûb
+yaEuwq	Ye'uk
+yaHoyaY`	Yahya
+yaguwv	Yeğus
 yahuwdiy~	Yehûdiy
 yavorib	Yesrib
-salosabiyl	Zencebîl
+ybs	kuru
+ydy	El.
+ymm	kalkışmak, teyemmüm
+ymn	yemin, sağ, sağ el
+ynE	olgunlaşmak
+yqZ	uyanık
+yqn	kesinlikle, ölüm
+ysr	kolaylık, kolaylaştırmak
+ytm	yetim, sanmak
+yuwnus	Yûnus
+yuwsuf	Yûsuf
+ywm	Gün.
+zEm	zan, zannetmek
+zHf	topluca
+zHzH	uzaklaştırmak
+zakariy~aA	Zekeriyâ
 zayod	Zeyd
+zbd	köpük
+zbn	zebani
+zbr	Zebur
+zff	koşarak
+zfr	korkunç çığlık
+zhd	isteksiz
+zhq	yok olmak
+zhr	süsüne
+zjj	cam
+zjr	sürmek, önlemek
+zjw	değersiz, yürütür, sürer
+zkw	zekat, temizlemek, arınmak
+zlf	yakın, yaklaştırmak
+zll	(ayağını) kaydırmak
+zlm	fal okları
+zlq	kuru toprak
+zlzl	sarsılmak, deprem
+zmhr	dondurucu soğuk
+zml	örtüsüne bürünmek
+zmr	bölük
+znm	damgalı
+zny	zina
+zqm	zakkum
+zrE	ekin, ekinci
+zrq	göğermiş, donuk
+zry	küçük görmek
+zwd	azık
+zwj	eşler, çift
+zwl	zeval
+zwr	yalan, ziyaret
+zxrf	yaldızlı
+zyd	artırmak, ziyade
+zyg	eğrilik, sapmak
+zyl	vazgeçmek, geri durmak
+zyn	süs, süslemek
+zyt	zeytin, zeytinyağı
+{ll~a`t	Lat
+{loEuz~aY`	Uzza
+{loyasaEa	Elyesa‘

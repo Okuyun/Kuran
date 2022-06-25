@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.5p";
+const VERSION = "V4.5T";
 
 /**
  * &ensp; used in Mujam and VerseRef
@@ -147,6 +147,7 @@ async function fetch_text_then(url, callback) {
         let t = await r.text()   //text
         callback(t); return 'OK'
     } catch (err) {
+        console.error('error', err)
         return err
     }
 }
