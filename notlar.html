@@ -55,10 +55,9 @@
 <body>
 
 <h2 title='Her sayfaya notlar eklenebilir'>Sayfa Notları</h2>
-<p>Mushafın her sayfasına o sayfa ile ilgili bir not eklenebilir. 
-Sağ alt köşedeki + (artı) simgesine basmak yeterli.
-</p>
-<div>
+<div id=liste>
+  <p>Mushafın her sayfasına o sayfa ile ilgili bir not eklenebilir. Sayfanın sağ alt köşesindeki + (artı) simgesine dokunun. Notları kapatmak için tekrar dokunun. Aşağıdaki renkli X butonları ile notları tek tek silebilirsiniz.
+  </p>
   <button id=save onclick="doSave()">
     <a id=saveA title="Notları dosyaya kaydet">Kaydet</a>
   </button> &ensp;
@@ -66,35 +65,51 @@ Sağ alt köşedeki + (artı) simgesine basmak yeterli.
     title="Kaydedilmiş dosyadan notları oku" /><br>
 Notları başka bir cihaza aktarmak için önce yerel bir dosyaya kaydedin,
 sonra bu dosyayı diğer cihaza taşıyıp oradan seçin.
+  <p id=notlar></p>
+  <button onclick="doPlain(true)">Düz metin</button><br>
+Notları başka bir yazılıma aktarmak için önce butona basın, ilgili kısmını seçip kopyalayın.
 </div>
-<p id=notlar></p>
+<div id=metin hidden>
+  <p id=text></p>
+  <button onclick="doPlain(false)">Düzenle</button>
+</div>
 
 <script src="code/common.js"></script>
 <script>
 "use strict";
+function doPlain(plain) {
+    liste.hidden = plain; metin.hidden = !plain
+    if (!plain) return
+    text.innerHTML = Object.keys(notes)
+      .map(k => `<b>${k}</b>&ensp; ${notes[k]}`)
+      .join('<br>\n')
+}
 function doSave() {
     let data = localStorage.notesQ
     if (saveA.href) URL.revokeObjectURL(saveA.href)
     let blob = new Blob([data], {type: 'text/plain'})
     saveA.href= URL.createObjectURL(blob)
     let [time] = new Date().toTimeString().split(' ')
-    saveA.download = NAME + time.replace(/:/g, '.')
+    saveA.download = PREF + time.replace(/:/g, '.') + EXT
     console.log('doSave', saveA.download)
 }
 async function fileSelect(f) {
+    let name = f.name
     try {
-      if (!f.name.startsWith(NAME)) throw 'İsim yanlış'
+      if (!name.startsWith(PREF) || !name.endsWith(EXT)) 
+        throw 'İsim yanlış'
       let t = await f.text()
-      let a = Object.getOwnPropertyNames(JSON.parse(t))
+      let a = Object.keys(JSON.parse(t))
+      let number = Object.keys(notes).length
       let msg = 
-      "Listedeki "+number+" adet notunuz silinecek.\n"
-      + "Dosyadan okunan "+a.length+" adet not var.\n"
-      + "Bu işlem geri alınamaz. Devam?"
+`Listedeki ${number} adet notunuz silinecek.
+Dosyadan okunan ${a.length} adet not var.
+Bu işlem geri alınamaz. Devam?`
       if (number && !confirm(msg)) return
       localStorage.notesQ = t; display()
-      console.log('fileSelect', f.name)
-    } catch (e) {
-      alert('Bu dosya olmaz: '+f.name+'\n'+e)
+      console.log('fileSelect', name)
+    } catch (e) { //may fail for various reasons
+      alert(`Bu dosya olmaz: ${name}\n${e}`)
     }
 }
 function remove(c) {
@@ -117,12 +132,11 @@ function display(key='notesQ') {
     return '<div>'+a+x+n+'</div>'
   }
     notes = getStorage(key) //global
-    let a = Object.getOwnPropertyNames(notes)
-    notlar.innerHTML = a.map(anchor).join('\n')
-    number = a.length //global
+    notlar.innerHTML = Object.keys(notes)
+      .map(anchor).join('\n')
 }
-const NAME = 'Notlar '
-var notes, number;
+const PREF = 'Notlar ', EXT = '.json';
+var notes
 display()
 </script>
 
