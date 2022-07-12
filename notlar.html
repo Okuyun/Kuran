@@ -85,7 +85,7 @@ function doPlain(plain) {
       .join('<br>\n')
 }
 function doSave() {
-    let data = localStorage.notesQ
+    let data = localStorage[KEY]
     if (saveA.href) URL.revokeObjectURL(saveA.href)
     let blob = new Blob([data], {type: 'text/plain'})
     saveA.href= URL.createObjectURL(blob)
@@ -94,33 +94,31 @@ function doSave() {
     console.log('doSave', saveA.download)
 }
 async function fileSelect(f) {
-    let name = f.name
     try {
-      if (!name.startsWith(PREF) || !name.endsWith(EXT)) 
+      if (!f.name.startsWith(PREF) || !f.name.endsWith(EXT)) 
         throw 'İsim yanlış'
       let t = await f.text()
       let a = Object.keys(JSON.parse(t))
       let number = Object.keys(notes).length
       let msg = 
 `Listedeki ${number} adet notunuz silinecek.
-Dosyadan okunan ${a.length} adet not var.
+Dosyadan okunan ${a.length} adet not eklenecek.
 Bu işlem geri alınamaz. Devam?`
       if (number && !confirm(msg)) return
-      localStorage.notesQ = t; display()
-      console.log('fileSelect', name)
+      localStorage[KEY] = t; display()
+      console.log('fileSelect', f.name)
     } catch (e) { //may fail for various reasons
-      alert(`Bu dosya olmaz: ${name}\n${e}`)
+      alert(`Bu dosya olmaz: ${f.name}\n${e}`)
     }
 }
 function remove(c) {
-    let key = 'notesQ'
-    let d = getStorage(key)
+    let d = getStorage(KEY)
     if (!d || !d[c]) return
     delete d[c]
-    setStorage(key, d); display()
+    setStorage(KEY, d); display()
     console.log('remove', c)
 }
-function display(key='notesQ') {
+function display(key=KEY) {
   function anchor(p) {
     let a =  //use page p and notes[p]
      '<a href="reader.html#p='+p+'"'
@@ -135,9 +133,14 @@ function display(key='notesQ') {
     notlar.innerHTML = Object.keys(notes)
       .map(anchor).join('\n')
 }
-const PREF = 'Notlar ', EXT = '.json';
+function listener(e) {
+    // console.log(e.key, e.newValue)
+    if (e.key === KEY) display()
+}
+const PREF = 'Notlar ', EXT = '.json', KEY = 'notesQ';
 var notes
-display()
+display(); addEventListener('storage', listener)
+document.querySelector('input').accept = EXT
 </script>
 
 </body>
