@@ -100,13 +100,15 @@
       <button onclick="expert.open=!expert.open">?</button> 
       &ensp; For expert use only
     </summary>
-  <p class=small>
-    <span id=buck class=white>
-    &nbsp; A b t v j H x d * r z s $ S D T Z E g f q k l m n h w y &nbsp;</span><br>
-    <a href="https://en.wikipedia.org/wiki/Buckwalter_transliteration" target=Kuran>
-      Buckwalter transliteration</a>
+  <p>
+  <label>Search using <a href="https://en.wikipedia.org/wiki/Buckwalter_transliteration" target=Kuran>
+      Buckwalter</a></label><br>
+    <input type=text id=buck><br>
+    <span id=code class="white small">
+&nbsp; A b t v j H x d * r z s $ S D T Z E g f q k l m n h w y &nbsp;
+    </span>
   </p>
-  <p class=small><label>Link
+  <p><label>Link
     <span>(hashtag or URL) </span></label><br>
     <input type=text id=omni>
   </p>
@@ -145,7 +147,7 @@ days	innerText	30 gün
 ders	innerText	Dersler
 offline	innerText	Internet kapalı iken bazı özellikler çalışmaz
 summ	title	Buckwalter kodunu göster/gizle
-buck	title	Buckwalter kodu -- alfabetik sıra
+code	title	Buckwalter kodu -- alfabetik sıra
 omni	title	Linki ilk harf belirler: /Mushaf: p=… v=… /Mucem: r=… /Rehber: t=… b=…/`
 
 
@@ -177,7 +179,7 @@ days	innerText	30 gün
 ders	innerText	Dersler
 offline	innerText	Internet is required for some features
 summ	title	Show/Hide Buckwalter code
-buck	title	Buckwalter code -- dictionary order
+code	title	Buckwalter code -- dictionary order
 omni	title	First letter determines the link: /Book: p=… v=… /Mujam: r=… /Finder: t=… b=…/`
 
 
@@ -209,7 +211,7 @@ days	innerText	30 يوم
 ders	innerText	الدورس
 offline	innerText	الاتصال بالإنترنت مطلوب لبعض الميزات
 summ	title	إظهار/إخفاء رمز Buckwalter
-buck	title	Buckwalter code -- ترتيب القاموس
+code	title	Buckwalter code -- ترتيب القاموس
 omni	title	أول حرف يشرح الرابط: /Book: p=… v=… /Mujam: r=… /Finder: t=… b=…/`
 
 const langMgr = new LangManager( //callback on applyLanguage()
@@ -265,16 +267,15 @@ function rootValue() {
     let b = toBuckwalter(r)
     return 'r='+(b.includes('?') ? r : b)
 }
-function textValue() {
-    return 't='+text.value
-}
 function keyToPage(evt) {
     if (evt.key == 'Enter') 
       switch (evt.target) {
         case root:
           doRoot(rootValue()); break;
         case text:
-          doText(textValue()); break;
+          doText('t='+text.value); break;
+        case buck:
+          doText('b='+buck.value); break;
         case page:
           doOpen(pageValue()); break;
         case omni:
@@ -286,7 +287,8 @@ function setOmni(evt) {
     if (page.value) h += '&'+pageValue()
     if (root.value) 
       h += '&'+rootValue().replace(/\s+/g, '&r=')
-    if (text.value) h += '&'+textValue()
+    if (text.value) {h += '&t='+text.value}
+    if (buck.value) {h += '&b='+buck.value}
     if (!h) return
     omni.value = h.substring(1)
     clear.hidden = false
@@ -304,6 +306,7 @@ function init(storage = {}) {
     clear.onclick = clearAll
     root.onchange = setOmni
     text.onchange = setOmni
+    buck.onchange = setOmni
     page.onchange = setOmni
     document.onkeydown = keyToPage
     let p = storage.page
