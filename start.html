@@ -31,8 +31,8 @@
     body, input, button { 
       font: 16px sans-serif;
     }
-    #text, #omni { width: 90%; max-width: 340px; }
-    #page, #root { width: 130px; }
+    .long { width: 90%; max-width: 340px; }
+    .short { width: 130px; }
     button {
       border: 3px solid gray;
       border-radius: 8px;
@@ -67,21 +67,19 @@
   <div id=intro></div>
   <hr />
   <p><label id=lab1></label><br>
-  <input type=text id=page inputmode=decimal>&emsp; 
+  <input type=text id=page class=short inputmode=decimal>&emsp; 
   <button id=star></button>&nbsp;
   <button id=last>
     <span id=lastText></span> <span id=lastPage></span>
   </button>&nbsp;
   </p>
   <p><label id=lab2></label><br>
-  <input type=text id=text>
+  <input type=text id=text class=long>
   </p>
   <p><label id=lab3></label><br>
-  <input type=text id=root>&emsp;
+  <input type=text id=root class=short>&emsp;
   <button id=search></button>&nbsp;
   <button id=clear hidden></button>&nbsp;
-  <!-- <button class=yellow onclick="langMgr.nextLanguage()"
-      title="Change language / Dil değiştir">L</button> -->
   </p>
   <p class="group">
   <button id=topic onclick='location="konular.html"'></button>
@@ -102,15 +100,15 @@
     </summary>
   <p>
   <label>Search using <a href="https://en.wikipedia.org/wiki/Buckwalter_transliteration" target=Kuran>
-      Buckwalter</a></label><br>
-    <input type=text id=buck><br>
+      Buckwalter</a> code</label><br>
+    <input type=text id=buck class=long placeholder="mtY h*A"><br>
     <span id=code class="white small">
 &nbsp; A b t v j H x d * r z s $ S D T Z E g f q k l m n h w y &nbsp;
     </span>
   </p>
   <p><label>Link
     <span>(hashtag or URL) </span></label><br>
-    <input type=text id=omni>
+    <input type=text id=omni class=long>
   </p>
   </details>
 </div>

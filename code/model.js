@@ -205,7 +205,7 @@ class MujamData {
   }
   wordToRoot(w) { return this._word2Root.get(w) }
   rootToList(w) { return this._root2List.get(w) }
-  meaning(w) { return this._meanings.get(w) }
+  meaning(w) { return this._meanings.get(w) || '' }
 }
 
 /** Keeps data related to similarity
