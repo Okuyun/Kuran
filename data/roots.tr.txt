@@ -133,7 +133,7 @@ Amn	Güvenmek, inanmak. Emanet, iman, mümin.
 Amr	Emretmek. Emir, iş.
 Amt	tümsek
 Amw	cariye
-Anf	buruna, burun, az önce
+Anf	burun, az önce
 Anm	canlılar için
 Ans	insan, görmek
 Anv	kadın, dişi
@@ -215,10 +215,10 @@ Ebd	Kul. İbadet.
 Ebqr	döşekler
 Ebr	ibret
 Ebs	surat astı, suratsız
-Ebv	boş yere, eğleniyor (musunuz?)
-Edd	hazırlamak, saymak, iddeti, adet
+Ebv	boşuna, eğlenmek
+Edd	hazırlamak, saymak, iddet, adet
 Edl	adalet, fidye, eş tutmak
-Eds	mercimeğinden
+Eds	mercimek
 Edw	Haddi aşmak. Düşman.
 Eff	utangaçlık, iffet
 Efr	ifrit
@@ -250,10 +250,10 @@ Enkb	örümcek
 Enq	boyun
 Ent	sıkıntı vermek, sıkıntıya düşmek
 Enw	boyun eğmiştir
-Eqb	işin sonu, ökçe, ceza veremek, sarp yokuş
+Eqb	işin sonu, ökçe, ceza vermek, sarp yokuş
 Eqd	akit, düğüm
 Eql	akıl, düşünmek
-Eqm	kısır, köklerini kesen
+Eqm	kısır, köklerini kesmek
 Eqr	kısır, (deveyi) kesmek
 Er$	Arş, taht, çardak
 ErD	sunmak, yüz çevirmek, vazgeçmek, genişlik
@@ -265,13 +265,13 @@ Erm	Arim
 Err	isteyen
 Erw	kulp
 Ery	çıplak
-EsEs	sırtını döndüğü
+EsEs	sırtını dönmek
 Esl	bal-
 Esr	güçlük
 Esy	olur ki, umulur ki
 Etb	mazeret istenen
 Etd	hazırlamak
-Etl	sürükleyin, kaba
+Etl	sürüklemek, kaba
 Etq	Eski (ev) Kâbe
 Etw	dışına çıkmak, başkaldırmak
 Euzayor	'Uzeyr
@@ -286,8 +286,8 @@ Ewn	yardım istemek
 Ewq	alıkoyanları
 Ewr	mahrem yer, açık
 Ey$	geçim, refah
-Eyb	onu kusurlu yapmak
-Eyl	yoksulluğa düşmekten, fakir
+Eyb	kusurlu yapmak
+Eyl	yoksulluğa düşmek, fakir
 Eyn	göz, göze (pınar)
 Eyr	kervan
 Eyy	yorulmayan
@@ -312,11 +312,11 @@ HTT	bizi affet
 HTb	odun
 HTm	çerçöp, Hutame
 HZZ	nasip, pay, şans
-HZr	kısıtlanmış, ağılda
+HZr	kısıtlanmış, ağıl
 HbT	boşa çıkmak
 Hbb	sevmek, tohum
 Hbk	yol (yörünge)
-Hbl	ip, ahdine (ipine)
+Hbl	ip, ahd
 Hbr	alim, haham
 Hbs	alıkoymak
 Hdb	tepeden
@@ -325,8 +325,8 @@ Hdq	bahçe
 Hdv	haber vermek, söz
 HfZ	korumak, koruyucu
 Hfd	torunlar
-Hff	etrafını çevirmiştik, dönerek
-Hfr	çukur, eski halimize
+Hff	etrafını çevirmek, dönmek
+Hfr	çukur, eski hal
 Hfw	lutufkar, sıkıştırmak
 Hjb	perde
 Hjj	delil, tartışma, hacc
@@ -372,7 +372,7 @@ Hsm	ardı ardına
 Hsn	Güzel. Hasen. İhsan.
 Hsr	hasret (pişmanlık kaynağı)
 Hss	hissetmek
-Htm	borçtur
+Htm	borç
 Hunayon	Huneyn
 Hvv	durmadan
 Hw$	haşa
@@ -383,7 +383,7 @@ Hwj	dilek, arzu, ihtiyaç
 Hwl	çevre, değişiklik
 Hwr	Havari, konuşmak, huri
 Hwt	balık
-Hwy	bağırsaklar, kupkuru siyah
+Hwy	barsak, kupkuru siyah
 Hwz	katılmak
 HyD	ay hali
 HyS	sığınacak yer, kaçacak yer
@@ -416,14 +416,14 @@ Sdr	göğüs
 Sdy	el çırpmak, yönelmek
 SfH	hoş görünmek
 SfSf	boş, dümdüz
-Sfd	zincirler, zincirlerle
+Sfd	zincir
 Sff	sıra sıra, saf saf
-Sfn	safin (görkemli)
+Sfn	görkemli
 Sfr	sarı, sararmış
 Sfw	seçmek, süzme
 Sgr	az, aşağılık
 Sgw	meyletsin, sapmış olmasından
-Shr	eritiliyor,sıhr
+Shr	eritilmiş, sıhriyet
 Skk	vurarak
 SlH	Sulh. Salih (cins ve özel isim)
 SlSl	kupkuru çamur
@@ -662,7 +662,7 @@ fkh	meyve, eğlenmek
 fkk	çözmek (azad etmek), bırakmak
 fkr	düşünmek, tefekkür
 flH	felah, iflah, umduğuna eren, kurtuluşa eren
-flk	gemi,felek (yörünge)
+flk	gemi, felek (yörünge)
 fln	falanı
 flq	karanlığı yarmak
 fnd	bunak demek
@@ -686,7 +686,7 @@ frr	kaçmak, firar
 frt	susuzluğu giderici, tatlı
 frv	fışkı
 fry	uydurmak, iftira
-fsH	yer açın, yer açın ki, genişlik versin
+fsH	yer açmak, genişlik vermek
 fsd	kargaşa, bozgunculuk, fesad
 fsq	günaha sapmak, yoldan çıkmak, fasık, fısk
 fsr	açıklamayı
@@ -768,7 +768,7 @@ hDm	hakkını çiğnenmek, yumuşak
 hTE	koşmak
 ha`ma`n	Hâmân
 ha`ruwn	Hârûn
-ha`ruwt	Harut
+ha`ruwt	Hârût
 hbT	inmek
 hbw	toz zerreleri haline, toz duman
 hdd	yıkılıp
@@ -1012,7 +1012,7 @@ mSr	şehir, Mısır
 mTr	yağmur
 mTw	çalım satarak
 ma>ojuwj	Me'cuc
-ma`ruwt	Marut
+ma`ruwt	Mârût
 madoyan	Medyen
 mak~ap	Mekke
 manaw`p	Menat
@@ -1045,7 +1045,7 @@ mrA	eşi, karısı
 mrD	hasta, hastalık
 mrH	kabara kabara, böbürlenerek
 mrd	asi, iyice alışmış
-mrj	birbirine salmış, mercan
+mrj	birbirine salmak, mercan
 mrr	kez, defa, yanından geçmek
 mry	kuşku, şüphe
 msH	sürmek, meshetmek
@@ -1570,7 +1570,7 @@ wsE	genişlik, kaplamak, genişletmek
 wsT	vasat, orta
 wsl	yol,vesile
 wsm	işaret, damgalamak
-wsn	neuyuklama
+wsn	uyuklama
 wsq	topladığı, dolunay
 wsws	vesvese, fısıldamak
 wtd	kazıklar, birer kazık
@@ -1602,10 +1602,10 @@ xbl	bozmak, bozgunculuk
 xbr	haber
 xbt	gönülden boyun eğmek
 xbv	kötü şeyler, habis, murdar
-xbw	(ateş) dindiği
+xbw	(ateş) dinmek
 xbz	ekmek
 xdE	aldatmak
-xdd	yüzünü, hendeğin
+xdd	yanak, hendek
 xdn	dost, gizli dost
 xfD	indir, alçaltıcı
 xff	hafif, hafifletmek
@@ -1621,7 +1621,7 @@ xlq	Yaratmak. Halk. Ahlak.
 xlw	yalnız kalmak, gelip geçmek
 xmS	açlıktan,açlık
 xmT	buruk
-xmd	sönmüş ateş (gibi), sönüverdiler
+xmd	sönmüş ateş, sönüvermek
 xmr	şarap, başörtü
 xms	beş, beşte bir, elli
 xnq	boğulmuş
