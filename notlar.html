@@ -71,7 +71,7 @@ Notları başka bir yazılıma aktarmak için önce butona basın, ilgili kısm�
 </div>
 <div id=metin hidden>
   <p id=text></p>
-  <button onclick="doPlain(false)">Düzenle</button>
+  <button onclick="doPlain(false)">Liste</button>
 </div>
 
 <script src="code/common.js"></script>
@@ -79,13 +79,14 @@ Notları başka bir yazılıma aktarmak için önce butona basın, ilgili kısm�
 "use strict";
 function doPlain(plain) {
     liste.hidden = plain; metin.hidden = !plain
-    if (!plain) return
+    if (!plain || !notes) return
     text.innerHTML = Object.keys(notes)
       .map(k => `<b>${k}</b>&ensp; ${notes[k]}`)
       .join('<br>\n')
 }
 function doSave() {
     let data = localStorage[KEY]
+    if (!data) return
     if (saveA.href) URL.revokeObjectURL(saveA.href)
     let blob = new Blob([data], {type: 'text/plain'})
     saveA.href= URL.createObjectURL(blob)
@@ -93,18 +94,22 @@ function doSave() {
     saveA.download = PREF + time.replace(/:/g, '.') + EXT
     console.log('doSave', saveA.download)
 }
+function confirmRead(n2) {
+    if (!notes) return true
+    let n1 = Object.keys(notes).length
+    let msg = 
+`Listedeki ${n1} adet notunuz silinecek.
+Dosyadan okunan ${n2} adet not eklenecek.
+Bu işlem geri alınamaz. Devam?`
+    return confirm(msg)
+}
 async function fileSelect(f) {
     try {
       if (!f.name.startsWith(PREF) || !f.name.endsWith(EXT)) 
         throw 'İsim yanlış'
       let t = await f.text()
       let a = Object.keys(JSON.parse(t))
-      let number = Object.keys(notes).length
-      let msg = 
-`Listedeki ${number} adet notunuz silinecek.
-Dosyadan okunan ${a.length} adet not eklenecek.
-Bu işlem geri alınamaz. Devam?`
-      if (number && !confirm(msg)) return
+      if (!confirmRead(a.length)) return
       localStorage[KEY] = t; display()
       console.log('fileSelect', f.name)
     } catch (e) { //may fail for various reasons
@@ -130,6 +135,7 @@ function display(key=KEY) {
     return '<div>'+a+x+n+'</div>'
   }
     notes = getStorage(key) //global
+    if (!notes) return
     notlar.innerHTML = Object.keys(notes)
       .map(anchor).join('\n')
 }
