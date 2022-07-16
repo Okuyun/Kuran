@@ -78,7 +78,7 @@ body {
       position: absolute;
       min-width: 95px;
       max-width: 200px;
-      padding: 8px 12px;
+      padding: 0 8px 4px;
       text-align: center;
       color: blue;
       background-color: #ff7;
@@ -334,7 +334,7 @@ button {
 * https://css-tricks.com/snippets/css/css-triangle/
 */
 #rightB, #leftB {
-  margin: 0 6px;
+  margin: 0;
   display: inline-block;
   width: 0; height: 0;
   border-top: 10px solid transparent;
@@ -343,9 +343,11 @@ button {
 }
 #rightB {
   border-left: 20px solid #00f6;
+  margin-left: 12px;
 }
 #leftB {
   border-right: 20px solid #00f6; 
+  margin-right: 12px;
 }
 
 #noteBox {
