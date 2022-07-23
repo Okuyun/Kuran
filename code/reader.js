@@ -15,7 +15,7 @@ Q.qur = new QuranText(0, initialPage)
 Q.simi  = new SimData('data/simi.txt')
 Q.roots = new MujamData('data/words.txt')
 if (currentLanguage() == 'tr') //will move elsewhere
-    Q.roots.setMeanings('/Kuran/data/roots.tr.txt')
+    Q.roots.setMeanings('/Kuran/data/words.tr.txt')
 new TouchHandler({dragStart, dragEnd}, div2)
 var curSura, curPage, bookmarks, lastSelection
 Q.notes = new Notes('notesQ')
@@ -187,7 +187,7 @@ function gotoPage(k=1, adjusting) { // 1<=k<=P
           let r = Q.roots.wordToRoot(b)
           if (!r) continue
           x.tText = toArabic(r)   
-          let m = Q.roots.meaning(r)
+          let m = Q.roots.meaning(removeDiacritical(b))
           if (!m) continue
           x.tText += '<span>'+m+'</span>'
         }

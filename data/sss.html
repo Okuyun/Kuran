@@ -24,6 +24,7 @@
 <div>
     <h3 id=title></h3>
     Count all chars in Quran
+    <button onclick="MENU.count(OSMAN)">Uthmani</button>
     <button onclick="MENU.count(SIMPLE)">Simple</button>
     <button onclick="MENU.count(ABAY)">Abay</button>
     <pre id=output></pre>
@@ -34,6 +35,7 @@
 <script src="https://maeyler.github.io/JS/sss/inspector.js"></script>
 <script>
 "use strict";
+const OSMAN  = "/Rehber/data/quran-uthmani.txt";
 const SIMPLE = "/Rehber/data/quran-simple-clean.txt";
 const ABAY   = "/Rehber/data/tr.abay.txt";
 class Counter extends Menu {

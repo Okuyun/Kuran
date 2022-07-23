@@ -277,8 +277,18 @@ function toBuckwalter(s) {
  * @param {string} s  Buckwalter transliteration
  * @returns {string}  Arabic string
  */
- function toArabic(s) {
+function toArabic(s) {
     return BWC.convert(BWC.b2aMap, s).output
 }
 
-// export {toArabic, toBuckwalter}
+
+/**
+ * Remove diacritical marks from Buckwalter transliteration
+ * 
+ * @param {string} s  Buckwalter transliteration
+ * @returns {string}  diacritical marks are removed
+ */
+function removeDiacritical(s) {
+    return s.replaceAll(/[FNKaui~o\^\#\`@\"\[\,\.\]]/g, '')
+}
+// export {toArabic, toBuckwalter, removeDiacritical}

@@ -38,8 +38,9 @@
 "use strict";
 const data = [0]
 const MD = new MujamData('words.txt')
-MD.setMeanings('roots.en.txt')
-const root2trans = new Map()
+// MD.setMeanings('roots.en.txt')
+// const root2trans = new Map()
+const word2trans = new Map()
 var qur = {}, tt = ''
 async function doPaste() {
     tt = await navigator.clipboard.readText()
@@ -66,7 +67,7 @@ function setData(t) {
       if (X) {  //combine with next word
         text += ar
       } else {  //update
-        count++; text += ar+' '; trans.push(en)
+        count++; text += ar+' '; trans.push(tr) //en
       }
     }
     output()
@@ -75,8 +76,8 @@ function setData(t) {
     qur = new QuranText(0, checkData)
 }
 function checkData() {
-    let toRoot = w => 
-        MD.wordToRoot(toBuckwalter(w)) || ''
+    // let toRoot = w => 
+    //     MD.wordToRoot(toBuckwalter(w)) || ''
     let diff = 0
     for (let i=1; i<data.length; i++) {
         let x = qur.data[i], y = data[i]
@@ -85,7 +86,13 @@ function checkData() {
         if (n>2 && !words[n-1]) { //secde
           n = n-2; words.length = n
         }
-        y.roots = words.map(toRoot)
+        // y.roots = words.map(toRoot)
+        y.words = []; y.roots = []
+        for (let w of words) {
+          let b = toBuckwalter(w)
+          y.words.push(removeDiacritical(b))
+          y.roots.push(MD.wordToRoot(b))  //toRoot
+        }
         if (n != y.count) {
           let cv = y.chap+':'+y.verse
           out2.innerHTML += cv+y.text+'<br>'
@@ -96,6 +103,7 @@ function checkData() {
     out1.innerHTML += data.length+' verses<br><br>'
     if (diff == 0) { process(); report() }
 }
+/* 
 function process() {
     for (let i=1; i<data.length; i++) {
         let { trans, roots } = data[i]
@@ -118,6 +126,30 @@ function report() {
         out1.innerHTML += 
           key.replace('<', '&lt;')+'\t'
           +root2trans.get(key).join(', ')+'<br>'
+    }
+}
+*/
+function process() {
+    for (let i=1; i<data.length; i++) { //
+        if (i%1000 === 0) console.log(i)
+        let { trans, words, roots } = data[i]
+        for (let j = 0; j < roots.length; j++) {
+          let t = trans[j], b = words[j]
+          if (!t || !roots[j]) continue
+          let w = word2trans.get(b)
+          if (!w || t.length<w.length) {
+            word2trans.set(b, t)
+          }
+        }
+    }
+    console.log('process', word2trans.size)
+}
+function report() {
+    let a = [...word2trans.keys()].sort()
+    for (let key of a) {
+        out1.innerHTML += 
+          key.replace('<', '&lt;')+'\t'
+          +word2trans.get(key)+'<br>'
     }
 }
 </script>
