@@ -41,12 +41,17 @@ body {
     }
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 380px) {
     #div3 {
       justify-content: center;
     }
     .center { 
       text-align: center;
+    }
+}
+@media screen and (max-width: 450px) {
+    #cuzS {
+      display: none;
     }
 }
 /** common to all screens **/
@@ -57,7 +62,7 @@ body {
       font-size: 16px;
       border-radius: 50%;
     }
-    #sureS, #pageA {
+    select, #pageA {
       display: inline-block;
       height: 26px;
       margin: 0 2px;

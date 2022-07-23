@@ -16,6 +16,7 @@
 <nav id=div3>
   <b id=vers2></b>
   <select id=sureS></select>  
+  <select id=cuzS></select>  
   <button id=pageA>
     <span id=page1></span> <span id=sayfa></span>
   </button>
@@ -138,6 +139,8 @@ slider	title	Aranan sayfaya geçmek için slider
 rightB	title	Sonraki sayfa
 noteBut	title	Bu sayfa hakkında notlar ekleyin
 sureS	title	Sure seçin (liste mushaf sırasında)
+cuzS	title	Cüz numarası seçin
+cuzS	name	Cüz
 pageA	title	Sayfa ya da ayet seçin
 zoomA	title	Sayfayı geçici olarak büyüt
 starB	innerText	Yıldız Ekle
@@ -169,6 +172,8 @@ slider	title	Slider to view the desired page
 rightB	title	Next page
 noteBut	title	Add comments about this page
 sureS	title	Select chapter
+cuzS	title	Select juz number (20 pages)
+cuzS	name	Juz
 pageA	title	Enter page or verse number
 zoomA	title	Zoom in/out (change size)
 starB	innerText	Add bookmark
@@ -201,6 +206,8 @@ slider	title	شريط تحريك لرؤية الصفحة المطلوبة
 rightB	title	الصفحة التالية
 noteBut	title	أضف تعليقات على هذه الصفحة
 sureS	title	اختر سورة
+cuzS	title	اختر جزء
+cuzS	name	جزء
 pageA	title	أدخل رقم صفحة أو آية
 zoomA	title   تكبير داخلي/خارجي (تغيير الحجم)
 starB	innerText	أضف علامة مرجعية
@@ -218,13 +225,19 @@ pay2	innerText	شارك (آية)...
 kay2	innerText	مصادر خارجية`
 
 function setSuraMenu() {
-    let i = sureS.selectedIndex 
+    let k1 = sureS.selectedIndex 
     sName = suraNames[currentLanguage()]
     let labels = []
     for (let i=1; i<=114; i++)
       labels.push(i+'. '+sName[i])
     sureS.innerHTML = '<option>'+labels.join('<option>')
-    if (i) sureS.selectedIndex = i
+    if (k1) sureS.selectedIndex = k1
+    let k2 = cuzS.selectedIndex 
+    labels = []
+    for (let i=1; i<=30; i++)
+      labels.push(cuzS.name+' '+i)
+    cuzS.innerHTML = '<option>'+labels.join('<option>')
+    if (k2) cuzS.selectedIndex = k2
     LangManager.adjustDirection(infoS)
 }
 const langMgr = new LangManager(setSuraMenu) 

@@ -211,7 +211,8 @@ function gotoPage(k=1, adjusting) { // 1<=k<=P
     if (k > Q.P) k = Q.P;
     k = Number(k);
     sayfa.innerText = k;
-    // if (curPage == k) return;
+    let j = Math. trunc((k-1)/20)
+    cuzS.selectedIndex = Math.min(j, cuzS.length-1)
     let [c] = cvFromPage(k, true)
     setSura(c) //might be previous sura
     if (adjusting == 'slider') return;
@@ -364,6 +365,7 @@ function initReader() {
     // console.log(swipe)  //TouchHandler
     setSuraMenu()
     sureS.onchange = () => {gotoSura(sureS.selectedIndex+1)}
+    cuzS.onchange = () => {gotoPage(cuzS.selectedIndex*20+1)}
     pgNum.onkeydown = keyToPage
     dialogOK.onclick = (e) => {e.key='Enter'; keyToPage(e)}
     pageA.onclick = handlePageNum
