@@ -9,12 +9,14 @@ $AkrA	şükreder
 $An}k	sana buğzeden
 $AqwA	karşı geldiler
 $EA}r	nişanları
+$Eb	dalı
 $EwbA	milletlere
 $Eyb	Şuayb
 $EybA	Şuayb
 $E}r	nişanlarına
 $H	cimriliğinden
 $HwmhmA	yağlarını
+$TTA	saçma sapan
 $T_h	filizini
 $Tr	doğru
 $Trh	o yöne
@@ -22,6 +24,7 @@ $T}	kıyısı-
 $Y'	şey
 $bh	benzer gösterildi
 $dAd	şiddetli
+$dAdA	sağlam
 $dyd	çetin
 $dydA	çetin
 $fA	kenarına
@@ -32,6 +35,7 @@ $fEA'	şefa'atçiler
 $fEA'km	şefaatçilerinizi
 $fEp	şefaat
 $fEthm	onların şefa'ati
+$fEyn	şefa'atçilerimiz
 $fyE	destekçileri
 $gfhA	onun bağrını yakmış
 $gl	bir meşguliyet
@@ -49,13 +53,15 @@ $hdthm	şahidlikleri
 $hdthmA	onların şahidliğinden
 $hdtm	şahidlik ettiniz
 $hdwA	şahidlik ederlerse
-$hdyn	şahitler iken
+$hdwn	görüyorlarken
+$hdyn	şahid
 $hr	ayı
 $hrA	aydır
 $hryn	iki ay
+$hwd	seyrediyorlardı
 $hwdA	şahidiz
 $hwp	şehvetle
-$hyd	şahiddir
+$hyd	gören
 $hydA	şahit
 $hydyn	iki şahidi
 $hyqA	homurtusunu
@@ -66,20 +72,25 @@ $jrt	ağacı
 $jrthA	onun ağacını
 $k	kuşku
 $klh	ona (azaba) benzer
-$kr	şükrederse
+$kr	şükreden
 $krA	şükredin
 $krtm	siz şükreder
-$kwr	karşılık verendir
+$krwn	şükredenlerden
+$kryn	şükredenlerden
+$kwr	şükreden
+$kwrA	teşekkür
 $mA}lhm	sollarından
 $msA	(yakıcı) güneş
 $mxt	yüksek yüksek
 $n_An	duyduğunuz kin
+$qA	güzel bir yarışla
 $qAq	anlaşmazlık
 $qAqY	bana karşı gelmeniz
 $qY	bedbahtttır
 $qqnA	yardık
 $qwA	bedbaht olan(lar)
 $qwtnA	bahtsızlığımız
+$qyA	bahtsız
 $r	fena
 $rA	şer
 $rAb	bir içki
@@ -103,11 +114,12 @@ $rkA'hm	ortak koştuklarını
 $rkA'km	ortaklarınızı
 $rkA}hm	ortakları-
 $rkA}km	ortaklarınız-
+$rqyA	doğu yönünde
 $rqyp	doğudan
 $rwA	sattıkları
 $ryEp	bir şeriat
 $ryk	ortağı
-$tY	dağınıktır
+$tY	her çeşit
 $wAZ	yalın alev
 $wrY	danışma iledir
 $xSp	donup kalır
@@ -119,8 +131,8 @@ $yTn	şeytana
 $yTnA	şeytana
 $yTyn	şeytanlarını
 $yTynhm	şeytanları
-$y_A	biraz
-$ybA	ihtiyarlık aleviyle
+$y_A	hiç
+$ybA	ihtiyar
 $yp	hiçbir alacası
 $ywxA	ihtiyarlar
 $yx	bir ihtiyardır
@@ -157,7 +169,7 @@ $}tmA	dilediğiniz
 'AbA'hm	babaları
 'AbA'km	atalarınızı
 'AbA'nA	atalarımızı
-'AbA}hm	babaları
+'AbA}hm	babaları-
 'AbA}hn	babaları
 'AbA}k	ataların
 'AbA}km	atalarınızın
@@ -180,15 +192,18 @@ $}tmA	dilediğiniz
 'Amnt	iman
 'Amntm	inanmış
 'AmnwA	inanan
-'Amnyn	güven içinde
+'Amnwn	güven içindedirler
+'Amnyn	güven
 'Amrh	emrettiğim
 'Amyn	gelenlere
+'An	kızgın
 'AnA'	saatlerinde
 'AnA}	sa'atlerinden
 'AnfA	az önce
 'Ans	gördü
 'Anst	gördüm
 'Anstm	görürseniz
+'Anyp	kaynamış
 'AsY	acırım
 'AsfwnA	onlar bizi kızdırınca
 'Asn	bozulma
@@ -238,7 +253,7 @@ $}tmA	dilediğiniz
 'Ax*	tutmadığı
 'Ax*yn	alırlar
 'Axr	başka
-'AxrAn	diğer iki kişi
+'AxrAn	diğer iki kişi (şahidlik etsin)
 'Axrh	sonunda
 'Axrwn	başka
 'Axryn	başka
@@ -265,10 +280,14 @@ $}tmA	dilediğiniz
 *hbt	gidenlere
 *hbwA	götürdüler
 *kr	erkek
-*krA	anışla
+*krA	öğüt
 *krAnA	erkekler
 *krY	bir öğüttür
+*krYhA	onun söyleyesin
+*krYhm	öğüt almaları
+*krh	onu düşünür öğüt alır
 *krhm	Zikirleri-
+*krk	şanını
 *krkm	Zikr'iniz bulunan
 *krnA	bizi anmak-
 *krt	andığın
@@ -300,6 +319,7 @@ $}tmA	dilediğiniz
 *rnA	bizi bırak
 *rnY	beni yalnız bırak
 *rp	zerre
+*rwA	savurup
 *rwnA	bizi bırakın
 *rwnY	bırakın beni
 *ryp	soyu-
@@ -330,6 +350,7 @@ $}tmA	dilediğiniz
 <blys	İblis
 <brhm	İbrahim
 <brhym	İbrahim
+<dA	pek kötü
 <drys	İdris'i de
 <fk	yalandan
 <fkA	yalan şeyler
@@ -350,9 +371,12 @@ $}tmA	dilediğiniz
 <mAm	bir sicile
 <mAmA	önder
 <mlq	fakirlik
+<mrA	çok tehlikeli
+<n$A'	(yeni bir) inşa' ile
 <nYh	vaktini
 <ns	insan
 <nsn	insanın
+<nsyA	hiçbir insanla
 <nvA	dişi
 <qAmtkm	ikamet
 <rm	İrem'e?
@@ -362,10 +386,13 @@ $}tmA	dilediğiniz
 <smEyl	İsma'il'i
 <sr'yl	İsrail
 <srAfA	israf ile
+<srArA	sır olarak
+<srArhm	onların gizlediklerini
 <vm	günah
 <vmA	günah
 <vmh	günahı
 <xrAj	(evlerinden) çıkarılmadan
+<xrAjA	mükemmel çıkarışla
 <xrAjhm	onları çıkarmak
 <xrAjkm	çıkarılmanıza
 <xwn	kardeşleri
@@ -376,6 +403,7 @@ $}tmA	dilediğiniz
 <xwp	kardeşler
 <xwtY	kardeşlerim
 <xwtk	kardeşlerine
+<yAbhm	dönüşleri
 <ymnA	imanı
 <ymnh	imanını
 <ymnhA	imanı
@@ -391,11 +419,12 @@ $}tmA	dilediğiniz
 >$hd	şahit tutuyorum
 >$hdthm	onları hazır bulundurmadım
 >$hdwA	şahid mi oldular?
->$hr	ay (29-30 gün)
+>$hr	ay
 >$kr	şükredeyim
 >$kwA	arz ederim
 >$q	daha zordur
->$r	kötülük mü
+>$qYhA	en haydutları
+>$r	küstahtır
 >$rAThA	onun belirtileri
 >$rk	ortak koştu
 >$rknA	biz ortak koşmazdık
@@ -434,6 +463,8 @@ $}tmA	dilediğiniz
 >DEfA	kat kat
 >DHk	güldüren
 >DTrh	onu mahkum ederim
+>Dgnhm	kinlerini
+>Dgnkm	kinlerinizi
 >Dgv	karmakarışık
 >Dl	saptırdığı
 >DlAnA	bizi saptıran
@@ -473,6 +504,7 @@ $}tmA	dilediğiniz
 >Elntm	açığa vurduğunuz
 >EmY	kör
 >Eml	işleri
+>EmlA	işleri bakımından
 >Emlhm	işleri
 >Emlkm	işlerinizi
 >EmlnA	bizim işlerimiz
@@ -502,9 +534,10 @@ $}tmA	dilediğiniz
 >Ezp	şereflilerini
 >HAT	kuşatmıştır
 >HAdyv	efsanelere
+>HDrt	yapıp getirdiğini
 >HSY	daha iyi hesabedeceğini
 >HSYh	onu saymıştır
->HSYhA	her şeyi sayıp döküyor
+>HSYhA	her (yaptığımız) şeyi sayıp döküyor
 >HSYhm	onları kuşatmış
 >HSn	evli
 >HSnt	korumuş
@@ -537,6 +570,7 @@ $}tmA	dilediğiniz
 >Hml	taşıyorum
 >Hmlkm	sizi bindirecek
 >Hq	gerçek mi?
+>HqAbA	çağlar boyu
 >HrS	en düşkünü
 >Hs	sezdi
 >Hsb	-mı sandılar?
@@ -545,6 +579,7 @@ $}tmA	dilediğiniz
 >Hsntm	iyilik ederseniz
 >HsnwA	güzel davrananlar
 >HswA	hissettikleri
+>HwY	kupkuru siyah
 >HyA	yaşatmış
 >HyA'	diri
 >HyAhA	onu dirilten
@@ -552,7 +587,7 @@ $}tmA	dilediğiniz
 >HyT	kuşatıldıklarına
 >Hyhm	kendilerini diriltmişti
 >HyynhA	biz onu dirilttik
->SAb	uğratınca
+>SAb	istediği
 >SAbh	kendisine gelirse
 >SAbhA	değince
 >SAbhm	isabet
@@ -601,6 +636,7 @@ $}tmA	dilediğiniz
 >TlE	çıkarım
 >TmE	umduğum
 >TrAfhA	uçlarından
+>TwArA	aşama aşama
 >TyEwA	ita'at edin
 >Zfrkm	sizi galip getirdikten
 >Zlm	daha zalim
@@ -609,6 +645,7 @@ $}tmA	dilediğiniz
 >b$rA	insana mı?
 >b$rtmwnY	beni mi müjdelediniz?
 >bA	babası
+>bAbyl	sürü sürü
 >bAh	babasından
 >bAhm	babalarına
 >bAkm	babanız
@@ -626,6 +663,7 @@ $}tmA	dilediğiniz
 >bdlh	onu değiştirmem
 >bgY	arayayım
 >bgykm	size arayayım
+>bkArA	bakireler
 >bkm	dilsizdir
 >blg	erişirim
 >blgh	onu ulaştır
@@ -640,6 +678,7 @@ $}tmA	dilediğiniz
 >bnA}hn	oğulları
 >bnA}km	oğullarınızın
 >bq	kaçmıştı
+>bqY	geriye bırakmadı
 >brH	durmayacağım
 >brmwA	kararlaştırdılar (mı?)
 >br}	ben temize çıkarmam
@@ -705,10 +744,12 @@ $}tmA	dilediğiniz
 >fbnEmp	ni'metini mi?
 >fb{lbTl	hâlâ batıla mı?
 >fgyr	başka mı?
+>fk	çevrilen
 >fklmA	öyle mi?
 >fl	(o da) batınca
 >flH	başarmıştır
 >flt	(O da) batınca
+>fnAn	çeşitli ağaçları meyvaları
 >fnDrb	bırakalım mı?
 >fnjEl	biz yapar mıyız?
 >fr'yt	gödün mü?
@@ -726,6 +767,7 @@ $}tmA	dilediğiniz
 >ftrY	uydurdu mu?
 >fttx*wnh	siz onu mu ediniyorsunuz?
 >ftwnY	bana anlatın
+>fwAjA	bölük bölük
 >fwhhm	ağızları
 >fyDwA	biraz da akıtın
 >f{tx*tm	mi edindiniz?
@@ -748,7 +790,7 @@ $}tmA	dilediğiniz
 >hdkm	sizi götüreyim
 >hdykm	ben sizi iletmem
 >hl	ehli
->hlY	benim ailemdendir
+>hlY	ailemden
 >hlh	ailesi
 >hlhA	halkı
 >hlhm	ailelerine
@@ -764,9 +806,11 @@ $}tmA	dilediğiniz
 >hlyhm	ailelerine
 >hlykm	ailenize
 >hmthm	kaygısına düşmüştü
+>hnn	beni alçalttı
 >hwA'	keyiflerine
 >hwA'hm	keyiflerine
 >hwA'km	sizin keyiflerinize
+>hwY	devirip yıktı
 >hwn	daha kolaydır
 >jAj	acıdır
 >jAjA	tuzlu
@@ -782,8 +826,10 @@ $}tmA	dilediğiniz
 >jlhm	süreleri
 >jlhn	süresi
 >jlnA	sonuna
->jlt	verdiğin sürenin
+>jlt	ertelenmiştir
 >jmEwA	toplandıkları
+>jmEwn	bütün
+>jmEyn	tüm
 >jnHp	kanatlar
 >jnp	cenin halinde iken
 >jr	ödül
@@ -812,6 +858,7 @@ $}tmA	dilediğiniz
 >kfArkm	sizin kafirleriniz mi?
 >kflnyhA	onu da bana ver
 >kfr	inkar mı edeceğim?
+>kfrh	nankördür
 >kfrt	inkar mı ediyorsun?
 >kfrtm	inkar ettiniz ha? (denilir)
 >kl	yediği
@@ -830,6 +877,7 @@ $}tmA	dilediğiniz
 >krhtnA	bizi yapmaya zorladığın
 >krmY	ona kıymet ver
 >krmkm	en üstün olanınız
+>krmn	bana ikram etti
 >kvr	çoğu
 >kvrhm	çoğu
 >kvrkm	sizin çoğunuz
@@ -839,13 +887,14 @@ $}tmA	dilediğiniz
 >ld	en azılısıdır
 >lf	bin
 >lfA	bin (kişiyi)
+>lfAfA	birbirine sarmaş dolaş
 >lft	yine de uzlaştıramazdın
 >lfwA	buldular
 >lfyn	iki bin(kafir)i
 >lfynA	biz bulduğumuz
 >lhYkm	sizi oyaladı
 >lq	at
->lqY	attı
+>lqY	atan
 >lqYh	koyunca
 >lqYhA	attığı
 >lqhA	(yere) at onu
@@ -861,18 +910,20 @@ $}tmA	dilediğiniz
 >lwnh	renkleri
 >lwnhA	renkleri
 >lym	acı
->lymA	acıklı
+>lymA	acı
 >lys	değil mi?
 >lzmnh	bağladık
 >m	ana
 >m$Aj	karışık
+>mAmh	ilerisini (kıyameti)
 >mAnY	kuruntuları
 >mAnyhm	onların kuruntusudur
 >mAt	öldüren
 >mAth	onu öldürdü
 >mDY	yürüyeceğim
+>mEA'hm	barsaklarını
 >mTrt	yağmura tutulan
->mdA	bir mesafe
+>mdA	süreyi
 >mdkm	size bol bol veren
 >mh	anası
 >mhA	(ülkelerin) anasına
@@ -880,6 +931,7 @@ $}tmA	dilediğiniz
 >mhthm	onların anaları
 >mhtkm	analarınız
 >mk	annene
+>mlA	umutça da
 >mlk	ben sahip
 >mlyt	biraz süre vermişimdir
 >mm	ümmetler
@@ -908,13 +960,15 @@ $}tmA	dilediğiniz
 >msk	tut
 >mskhmA	onları tutamaz
 >mskn	tuttukları
+>mtA	bir tümsek
 >mtEkn	size (boşanma bedeli) vereyim
 >mtkm	sizin ümmetiniz
 >mtnA	bizi öldürdün
 >mvAlhA	o(getirdiği)nin
 >mvAlkm	sizin gibi
+>mvlhA	onun benzeri sonuçlar
 >mvlhm	onların seçkinleri
->mvlkm	benzerlerinizi
+>mvlkm	sizin gibi
 >mwl	malları
 >mwlA	mal
 >mwlhm	malları
@@ -922,6 +976,7 @@ $}tmA	dilediğiniz
 >mwlnA	mallarımız
 >mwt	öleceğim
 >mwtA	ölüler
+>myn	güvenli
 >mywn	ümmiler
 >n$>	yaratan
 >n$>hA	yaratan
@@ -930,6 +985,7 @@ $}tmA	dilediğiniz
 >n$>nh	onu yaptık
 >n$>nhn	kadınları inşa' etmişizdir
 >n$>tm	yarattınız
+>n$rh	onu diriltip kaldırdı
 >n&mn	inanır mıyız?
 >n*r	uyar
 >n*rhm	onları uyarmıştı
@@ -946,7 +1002,8 @@ $}tmA	dilediğiniz
 >nEmkm	hayvanlarınızı
 >nEmnA	ni'met versek
 >nEmt	verdiğim
->nSAr	yardımcıları
+>nSAr	yardımcı
+>nSArA	yardımcılar
 >nSArY	benim yardımcılarım
 >nSH	öğüt vermek
 >nStwA	susun (dinleyin)
@@ -1001,6 +1058,7 @@ $}tmA	dilediğiniz
 >nsjd	secde eder miyiz hiç?
 >nswkm	size unutturdular
 >nvY	dişi
+>nyb	yöneldim
 >nzl	indir
 >nzlh	indirdiği
 >nzlnA	indirdik
@@ -1015,7 +1073,9 @@ $}tmA	dilediğiniz
 >qTArhA	her yan-
 >qbl	dön
 >qblnA	geldiğimiz
+>qdAmkm	ayaklarınızı
 >qdAmnA	ayaklarımızı
+>qfAlhA	kilitleri (-mi var?)
 >ql	daha az
 >qlEY	sen de tut
 >qlm	kalem
@@ -1034,6 +1094,7 @@ $}tmA	dilediğiniz
 >qsmwA	yemin edenler
 >qtl	öldüreyim
 >qtlt	mı katlettin?
+>qtt	vakit belirlendiği
 >qwl	diyemem
 >qwm	en doğru olana
 >qwthA	gıdalarını
@@ -1091,6 +1152,7 @@ $}tmA	dilediğiniz
 >rkswA	başaşağı atılırlar
 >rnA	bize göster
 >rnY	bana görün
+>rsYhA	oturttu
 >rsl	gönder
 >rslh	onu gönder
 >rslnA	gönderdik
@@ -1118,6 +1180,7 @@ $}tmA	dilediğiniz
 >sfArA	kitaplar
 >sfArnA	seferlerimizin
 >sfl	aşağıların
+>sfr	ağardığında
 >sknt	yerleştirdim
 >sknwhn	onları oturtun
 >slHthm	silahlarını da
@@ -1190,6 +1253,8 @@ $}tmA	dilediğiniz
 >tqn	gayet iyi yapan
 >tqtlwn	öldürüyor musunuz?
 >tqwlwn	mi söylüyorsunuz?
+>trAb	yaşıt dilberler
+>trAbA	hep yaşıt
 >trftm	şımartıldığınız
 >trfwA	bulundukları refahın
 >tryd	-mi istiyorsun?
@@ -1217,7 +1282,9 @@ $}tmA	dilediğiniz
 >tynA	geldik
 >tynhm	biz onlara getirdik
 >tyt	sen getirsen
+>vAmA	cezasını
 >vmr	meyva verdiği
+>vqAlhA	ağırlıklarını
 >vqAlhm	kendi yüklerini
 >vqAlkm	ağırlıklarınızı
 >vqlt	(yükü) ağırlaşınca
@@ -1226,11 +1293,13 @@ $}tmA	dilediğiniz
 >vrp	bir kalıntı
 >vvA	eşyaca
 >vxntmwhm	onları iyice vurup sindirdiğiniz
+>vym	günahkar
+>vymA	günah işleyen
 >w'AbA&nA	atalarımız da mı?
 >w*Y	eziyet edilince
 >w*ynA	bize işkence edildi
 >w>mn	Ya da emin midirler?
->wAb	(Allah'a) yüz tutan
+>wAb	katılırdı
 >wEZt	öğüt versen de
 >wEjbtm	şaştınız mı?
 >wHY	vahyolundu
@@ -1271,6 +1340,7 @@ $}tmA	dilediğiniz
 >wsT	orta derecesinden
 >wsThm	orta yol üzere olanları
 >wt	verilmeseydi
+>wtAdA	birer kazık
 >wtY	verilen
 >wtwA	verilen
 >wtwh	(Kitap) verilmiş olanlar
@@ -1305,20 +1375,22 @@ $}tmA	dilediğiniz
 >xAnA	kardeşimizi
 >xT>nA	yanılırsak
 >xT>tm	yanılarak
->xY	kardeşimin
+>xY	kardeşim
+>xbArhA	haberlerini
 >xbArkm	sizin haberlerinizi
 >xdAn	dost
 >xfY	saklandığını
 >xfyhA	onu gizleyeceğim
 >xfytm	sizin gizlediğiniz
->xlSnhm	onları ihlaslı yaptık
+>xlSnhm	onları ihlaslı (kul) yaptık
 >xld	saplandı
+>xldh	onu ebedi yaşatacağını
 >xlfnA	çıkmadık
 >xlfwA	döndüklerinden
 >xlq	yaratırım
 >xnh	kendisine hainlik etmediğimi
 >xr	başka
->xrY	öteki
+>xrY	ayrı
 >xrYhm	sonrakiler
 >xrYkm	arkanızdan
 >xrj	çıkarsa
@@ -1377,9 +1449,12 @@ $}tmA	dilediğiniz
 >yqAZA	uyanıklar
 >ywb	Eyyub'u
 >ywd	ister mi ki?
+>zA	kışkırttıkça
 >zAg	eğriltti
 >zft	yaklaştı
 >zkY	daha iyi
+>zlft	yaklaştırıldığı
+>zrY	arkamı
 >zwj	çift
 >zwjA	eşler
 >zwjh	eşlerinden
@@ -1388,11 +1463,13 @@ $}tmA	dilediğiniz
 >zwjk	eşlerini
 >zwjkm	eşlerinizi
 >zwjnA	eşlerimizi
+>zyd	daha da artırmamı
 >}fkA	uydurma
 >}mp	önderler
 DAHkA	gülümseyerek
 DAHkp	güleçtir
 DAlA	şaşırmış
+DAlyn	sapık
 DAmr	yorgun deve
 DAqt	dar gelmişti
 DEf	aciz
@@ -1402,6 +1479,9 @@ DEfwA	zayıflık göstermediler
 DEfyn	iki kat
 DEyfA	zayıf
 DHY	kuşluk vakti
+DHYhA	kuşluğunu
+DbHA	soluk soluğa
+DdA	zıd
 DgvA	bir demet sap
 Dl	sapan
 Dll	sapıklık
@@ -1425,6 +1505,7 @@ Drbtm	yolculuk ederken
 DrbwA	misal verdiler
 Drbwh	bunu misal vermediler
 Drh	zararı
+DryE	kuru diken-
 DyA'	bir ışık
 Dyf	konukları-
 DyfY	konuklarım
@@ -1432,8 +1513,9 @@ Dyfh	onun konukları-
 Dyq	sıkıntıya
 DyqA	dar
 Dyr	zarar
+DyzY	insafsızca
 E$A'	akşamleyin
-E$r	on (iki)
+E$r	on
 E$rA	on(yıl)a
 E$rp	on
 E$rwn	yirmi (kişi)
@@ -1456,9 +1538,12 @@ EAbd	ibadet eden
 EAbrY	geçici olmanız
 EAd	Ad
 EAdA	Ad'ı
+EAdwn	sınırı aşan
 EAdytm	düşman olduklarınız
 EAkfA	taptığın
 EAlyA	ululanan
+EAlyn	böbürlenen
+EAlyp	yüksek
 EAm	yıl
 EAmA	yıl
 EAmhm	yıllarından
@@ -1471,23 +1556,34 @@ EAqr	kısırken
 EAqrA	kısırdır
 EArD	bir buluttur
 EArDA	geniş bir bulut halinde
+EAtyp	azgın
+EA}dwn	dönersiniz
 EA}lA	fakir
+EDdA	yardımcı
 EDdk	senin pazunu
 EDwA	ısırırlar
+EDyn	bölük bölük
 ESAY	asa'mdır
 ESAh	asasını
 ESAk	Asanı
 ESAnY	bana karşı gelirse
 ESbp	bir cemaatiz
+ESfA	savuranlara
 ESwA	isyan etmeleri
 ESwk	sana karşı gelirlerse
 ESwnY	bana karşı geldiler
+ESyA	bir zorba
+ESyb	çetin
 ESyt	isyan edersem
 ESyth	O'na isyan edersem
 ETA&nA	bizim ihsanımızdır
 ETA'	hediyesi
 ETfh	boynunu
+ETlt	başı boş bırakıldığı
+EZAmh	kendisinin kemiklerini
 EZmA	kemikler
+EZym	büyük
+EZymA	büyük
 EbAd	bilakis
 EbAdA	kul(lar)
 EbAdY	kullarım
@@ -1500,17 +1596,21 @@ EbAdth	O'na kulluk-
 EbAdtkm	sizin tapınmanız-
 Ebd	kulu
 EbdA	kul
+EbdY	kullarım
 Ebdh	kulu
 EbdnA	kulumuz
 Ebdnhm	biz onlara tapmazdık
 Ebdt	köle yapman
+Ebdtm	sizin taptıklarınıza
 Ebdwn	ibadeti
 Ebdyn	iki kulun
 Ebrp	ibret
 Ebs	surat astı
 EbvA	boş yere
 EbwsA	suratsız
+EdA	bir bir
 Edd	sayısını
+EddA	nice
 Edl	adil
 Edn	Adn
 EdnA	biz de döneriz
@@ -1532,7 +1632,7 @@ Efryt	bir ifrit
 EfwA	çoğaldılar
 EfwnA	affetmiştik
 Ehd	söz
-EhdA	ahitle
+EhdA	söz
 EhdY	ahdim
 Ehdh	sözünden
 Ehdhm	andlaşmalarını
@@ -1540,6 +1640,7 @@ EhdnA	biz emretmiştik
 Ehdt	sen andlaşma yaptığın
 Ehdtm	andlaştıklarınız
 EhdwA	anlaştılarsa
+EjAb	tuhaf
 EjAf	zayıf inek
 EjbA	tuhaf
 Ejbt	sen şaşıyorsun
@@ -1547,10 +1648,12 @@ EjbwA	şaştılar
 Ejl	aceleden
 EjlA	bir buzağı
 EjlnA	çabucak veririz
+EjwlA	pek acelecidir
 Ejwz	bir koca karı
 EjwzA	bir koca karı
-Ekfwn	ibadete çekilmiş iken
-Ekfyn	tapmaktan
+Ejyb	tuhaf
+Ekfwn	taptığınız
+Ekfyn	ibadete
 ElA	ululandı (zorbalığa kalktı)
 ElY	yücedir
 Elm	bildi
@@ -1571,18 +1674,22 @@ Elmtm	bildiniz
 Elmtmwhn	anlarsanız
 ElmtnA	bize öğrettiğin
 ElmwA	gayet iyi biliyorlardı ki
+Elmyn	biliyor
+Elq	alak-
 Elqp	alaka(embriyo)-
 ElwA	yücedir
-ElyA	yücedir
+ElyA	yüce
 ElyhA	üstünü
 Elyhm	üstlerinde vardır
 Elym	bilir
-ElymA	bilendir
+ElymA	bilir
+Elywn	İlliyyin('in)
+Elyyn	İlliyyindedir
 EmY	kördürler
 Emd	direkler
 Emk	amcanın
 Eml	işi
-EmlA	ameli
+EmlA	işi
 EmlY	benim yaptığım
 Emlh	işi
 Emlhm	yaptıkları işi
@@ -1592,6 +1699,7 @@ Emlt	yaptığı
 Emlth	emeğinden
 Emltm	yaptıklarınız
 EmlwA	yaptıktan
+Emlwn	yapıyoruz
 EmrA	belli bir ömür
 Emrh	onun ömrü-
 Emrk	ömründen
@@ -1600,7 +1708,10 @@ EmrwhA	bunların imar ettiklerinden
 Emtk	halalarının
 Emtkm	halalarınızın
 EmwA	kör
+Emwn	kördürler
 EmyA	kör
+Emyn	kör
+Emyq	uzak
 End	göre
 EndY	yanımdadır
 Endh	yanında
@@ -1612,9 +1723,13 @@ EndnA	katımız-
 Enqh	boynuna
 Enqk	boynuna
 Entm	sıkıntıya uğramanız
+Enyd	inatçı
+EnydA	bir inatçı
 EqAb	azab
+EqbA	akıbet
 EqbY	sonu
 Eqbh	kendinden sonrakiler
+EqbhA	bu işin sonundan
 Eqbp	sonu
 EqbthmA	sonları
 Eqbyh	ökçesi
@@ -1622,35 +1737,44 @@ Eqdp	akdi
 Eqdt	bağladığı
 Eqdtm	bilerek yaptığınız
 Eqlwh	düşünüp akıl erdirdikten
+Eqym	kısır
 EqymA	kısır
 Er$	tahtını
 Er$h	O'nun Arş'ı
 Er$hA	tahtını
 Er$k	senin tahtın
 ErD	menfaatini
-ErDA	bir menfaat
+ErDA	açıkça
 ErDhA	genişliği
 ErDhm	onları sunup
 ErDnA	sunduk
 ErDp	engel
-ErDtm	üstü kapalı bildirmenizden
+ErDtm	üstü kapalı biçimde bildirmenizden
 ErbA	sevgililer
 ErbY	Arapça
 ErbyA	Arap
 Erf	bildirmişti
+ErfA	birbiri ardınca
 ErfhA	tanımladığı
 Erft	Arafat-
 ErfwA	tanımalarından
 Erw$hA	çatıları
+EryD	bol bol
+EsEs	sırtını döndüğü
 EsY	belki
 Esl	bal-
-Esr	bir güçlükten
+Esr	çetin
+EsrA	bir güçlük
 Esrp	darlık
+Esyr	çetin
+EsyrA	çetin
 Esytm	belki de
 Etl	kaba
 Ett	baş kaldırdı
 Etw	azgınlık
 EtwA	vazgeçmediler
+EtyA	isyan edeni
+Etyd	hazır
 Evr	anlaşılırsa
 EwAn	orta yaşlı
 Ewj	pürüzü
@@ -1667,29 +1791,38 @@ EynA	göze
 EynAh	gözleri
 EynAk	gözlerin
 EynAn	iki kaynak
+EynY	gözümün
 EynhA	gözü
 Eynyk	gözlerini
+Eynyn	iki göz
 EysY	Îsa
 EywnA	kaynaklar halinde
+EzA	itibar
 Ezlt	ayrıldıklarından
 Ezm	çok önemli
+EzmA	bir azim
 Ezmt	karar verdiğin
 EzmwA	kesin karar verirlerse
 Ezp	bir gurur
+Ezyn	ayrı ayrı gruplar halinde
 Ezyr	Uzeyr
-Ezyz	azizdir
-EzyzA	azizdir
+Ezyz	aziz
+EzyzA	şanlı
 H$	haşa
 H$r	toplamadır
+H$rt	bir araya toplandığı
 H$rtnY	beni haşrettin
+H$ryn	toplayıcılar
 H*r	korkusuyla
 H*rhm	korunma(tedbir)lerini
 H*rkm	korunma tedbirinizi
+H*rwn	ihtiyatlı
 HADrA	hazır
 HADrY	hazır
 HADrp	peşin
 HASbA	bir fırtına
 HAd	düşman
+HAfZ	bir koruyucu
 HAfyn	dönerek
 HAj	tartışan
 HAjk	seninle tartışmaya kalkarsa
@@ -1697,6 +1830,7 @@ HAjp	arzuya
 HAjwk	seninle tartışmaya girişirlerse
 HAjzA	bir perde olarak
 HAm	"ham"
+HAmyp	kızgın
 HArb	savaşan
 HAsd	hasedcinin
 HDr	geldiği
@@ -1708,6 +1842,8 @@ HSdtm	biçtiniz
 HSrt	sıkılarak
 HSwnhm	kalelerinin
 HSydA	biçilmiş hale
+HSyrA	kuşatıcı
+HTbA	odun
 HTmA	çerçöp
 HTp	"affet"
 HY	canlı
@@ -1727,8 +1863,10 @@ HdA}q	bahçeler
 Hdb	tepeden
 Hdwd	sınırlarını
 Hdwdh	O'nun sınırlarını
+Hdyd	demir-
+HdydA	demir
 Hdyv	söze
-HdyvA	bir söz
+HdyvA	söz
 HfY	biliyormuşsun
 HfZ	kendilerini korumasına
 HfZA	koruyan
@@ -1736,8 +1874,11 @@ HfZhmA	onları koru(yup gözet)mek
 HfZp	koruyucu(melek)ler
 HfZt	korurlar
 HfZwA	koruyun
+HfZwn	korurlar
+HfZyn	muhafızları
 Hfrp	bir çukurun
-HfyZ	iyi korur
+HfyA	çok lutufkardır
+HfyZ	koruyan
 HfyZA	bekçi
 Hj	hacceder
 HjAb	perde
@@ -1746,18 +1887,20 @@ HjArp	taş
 Hjj	yıl
 Hjjtm	tartışıyorsunuz
 Hjp	bir delili
-Hjr	dokunulmaz
+Hjr	akıl
 HjrA	yasaktır
 Hjthm	delilleri
 HjtnA	hüccetlerimizdir
 Hjwrkm	birleştiğiniz
+Hjzyn	engel
 Hkm	hükmü
 HkmA	hüküm
 Hkmh	kendi hükmüne
 Hkmp	hikmettir
 Hkmt	hüküm verirsen
 Hkmtm	hükmettiğiniz
-Hkym	Hakîmdir
+Hkym	hakimdir
+HkymA	hakimdir
 Hl	helal
 HlA	helal
 HlAf	yemin edip duran
@@ -1766,6 +1909,7 @@ Hll	helaldir
 HllA	helal
 Hlltm	ihramdan çıktığınız
 Hlyhm	zinetlerinden yapılmış
+Hlym	halim
 HlymA	halimdir
 Hlyp	süs
 Hm<	balçık-
@@ -1783,16 +1927,19 @@ Hmltm	size yükletilen
 HmlwA	yükletilenlerin
 Hmr	yaban eşekleri
 Hmwlp	(kimi) yük taşır
-Hmyd	övgüye layıktır
+Hmyd	övülmüştür
+HmydA	övgüye layıktır
 Hmym	dost
 HmymA	sıcak
 Hmyp	öfke ve gayretini
 Hm}p	kara balçıklı
 HnfA'	birleyerek
+Hny*	kızartılmış
 HnyfA	hanif
 Hnyn	Huneyn
 Hq	hak
 HqA	borç
+HqbA	uzun bir zaman
 Hqh	hakkını
 Hqt	hak oldu
 Hqyq	borçtur
@@ -1819,10 +1966,14 @@ Hrv	ekinine
 Hrvh	onun ekinini
 Hrvkm	tarlanıza
 HryS	düşkün
-HsAbA	bir hesabla
+Hryr	ipektir
+HsAb	hesap
+HsAbA	yeterli
 HsAbh	onun hesabı
 HsAbhm	hesapları
 HsAbk	senin hesabın-
+HsAbyh	hesabım
+HsAn	güzel
 Hsb	-mı sandılar?
 HsbAnA	yıldırımlar
 HsbY	bana yeter
@@ -1834,6 +1985,8 @@ Hsbt	(mi) sandın?
 Hsbth	sandı
 Hsbthm	kendilerini sanırsın
 Hsbtm	siz sandınız
+Hsbyn	hesab gören
+Hsd	hased ettiği
 HsdA	hasetle
 Hsn	güzel
 HsnA	güzel
@@ -1843,11 +1996,14 @@ Hsnt	ne güzel
 Hsrp	dert
 Hsrt	hasretlere
 HswmA	ardı ardına
+HsybA	hesaplayandır
+Hsyr	hor ve bitkin
 HsyshA	onun uğultusunu
 HtmA	bir borçtur
 HvyvA	durmadan
 HwbA	bir günahtır
 Hwl	çevresinde
+HwlA	ayrılmak
 Hwlh	çevresini
 HwlhA	çevresinde
 Hwlhm	çevreleri-
@@ -1856,7 +2012,7 @@ Hwlkm	çevrenizdeki
 Hwlyn	iki yıl
 Hwr	huriler
 HwthmA	balıklarını
-HyA	diri
+HyA	sağ
 HyAtkm	hayatınızda
 HyAtnA	hayatımızdan
 Hylp	hiçbir çareye
@@ -1881,14 +2037,18 @@ SAdq	sadık
 SAdqA	doğru söylüyor
 SAl	girecek
 SAlwA	gireceklerdir
+SEdA	alt eden
 SEqA	düştü
 SEqp	yıldırımı
+SEwdA	dimdik bir yokuşa
 SEydA	bağın
 SHbp	eş
 SHf	sahifeler
 SHfA	sahifeler
+SbA	iyice döküşle
 SbAH	sabahı
 SbAr	sabreden
+SbHA	sabahleyin
 SbHhm	sabah onları yakaladı
 SbbnA	döktük
 Sbgp	boyası
@@ -1900,6 +2060,7 @@ Sbrtm	sabretmenize
 SbrwA	sabrederler
 Sbrwn	sabreden
 SbwA	dökün
+SbyA	çocukla
 Sd	yüz çevirdi
 Sddnkm	engelledik
 Sddtm	engel olduğunuzdan
@@ -1915,24 +2076,31 @@ Sdqthn	mehirlerini
 Sdqtkm	sadakalarınızı
 SdqtnA	bize doğru söylediğini
 SdqwA	durdular
+Sdqyn	doğru
 SdrA	göğsünü
 SdrY	göğsüm
 Sdrh	göğsünü
 Sdrk	göğsün
+SdwdA	büsbütün uzaklaşmakla
 Sdwkm	sizi çevirdiklerinden
 Sdwr	göğüslerde
 Sdwrhm	yürekleri
 Sdwrkm	gönlünüzde
+Sdyd	irin (gibi)
 Sdyq	bir dostumuz
 SdyqA	çok doğru
 Sdyqkm	arkadaşınızın
 Sdyqp	dosdoğruydu
 SfA	sıra
 SfHA	vazgeçip
+SfSfA	boş, dümdüz
+Sfr	sapsarı
 SfrA'	sarı renginde
 Sft	sıra sıra
 SfwAn	şu kayaya
 SgAr	bir aşağılık
+Sgrwn	hor ve hakir olarak
+Sgryn	küçük
 Sgt	sapmış olmasından
 Sgyr	küçük
 SgyrA	az olsun
@@ -1942,18 +2110,23 @@ SlAth	kendi du'asını
 SlAthm	namazları-
 SlH	iyi
 SlHA	iyi
-SlHyn	salih
+SlHyn	iyi
 SlSl	bir çamur-
+SlY	namaz kıldığı
 Slbwh	asmadılar
 SldA	sert bir taş halinde
 SlwA	siz de salat edin
+Slwh	sallayın onu
 Slwp	namazından
 Slwt	bağışlamalar
 Slwthm	namazlarını
 Slwtk	senin du'an
+SlyA	girmeğe
 Sm	sağırdırlar
 SmA	sağır
+Smtwn	susmanız
 SnE	yapısıdır
+SnEA	işlerini
 SnEp	yapmayı
 SnEwA	işledikleri
 SnwAn	çatalı
@@ -1973,10 +2146,12 @@ Srfkm	(Allah) geri çevirdi
 SrfnA	yöneltmiştik
 Srfnh	etraflıca anlattık
 Srft	çevrildiği
+Srmyn	devşirecekseniz
 Srp	çığlık
 Sryx	imdad (eden)
 SwAE	su tasını
-SwAf	sıra halinde dururlarken
+SwAbA	doğruyu
+SwAf	(kurban için) sıra halinde dururlarken
 SwmA	oruç
 SwmE	manastırlar
 Swrkm	şekillerinizi
@@ -1993,38 +2168,48 @@ Syd	avı
 TAEm	yemek
 TAEp	itaatiniz
 TAb	helal
+TAgwn	azgın
 TAl	uzun geldi
 TAlwt	Talut
 TAqp	gücümüz yok
+TA}Eyn	isteyerek
 TA}f	dolaşıcı bir bela
 TA}fp	bölük
 TA}ftAn	iki grup
 TA}ftyn	iki topluluk
 TEAm	yemeğe
 TEAmA	yiyecek
+TEAmh	şu yiyeceğine
 TEAmk	yiyeceğine
 TEmh	tadı
 TEmtm	yemeği yeyince
 TEmwA	yediklerinden
+THYhA	onu yuvarlayıp döşeyene
 TbAqA	tabaka tabaka
 TbE	mühürlediği
 Tbn	bağışlarlarsa
+Tbq	tabaka-
 TbqA	tabakaya
 Tbtm	(ne) hoşsunuz
 TflA	çocuk olarak
 TgA	kabarınca
+TgY	azdı
 TgwA	azmışlardı
+Tgyn	azgın
 TgynA	azgınlık
 Tgynhm	taşkınları
 ThrA	temizlemesini
+ThwrA	tertemiz
 TlE	tomurcukları
 TlEhA	tomurcuğu-
 TlEt	doğduğu
+TlbA	aramaya
 TlqhA	(erkek) yine boşarsa
 Tlqkn	o sizi boşarsa
 Tlqtm	boşarsınız
 Tlqtmwhn	boşarsanız
 TlwE	doğmadan
+Tmst	silindiği
 TrA}q	yollardayız
 Trdthm	onları kovsam
 Trf	göz ucuyla
@@ -2034,19 +2219,22 @@ Trfhm	bakışları
 Trfk	gözünü
 TryA	taze
 Tryq	yola
-TryqA	bir yol
-Tryqp	yol (hayat tarzı)
+TryqA	yola
+Tryqp	yol (hayat tarzı) bakımından
 TwEA	gönüllü
+TwY	Tuva'da
 TwbY	mutluluk
 Twfwn	girip çıkarsınız
-TwlA	mali güce
+TwlA	boyca
 Twr	Tur-i
+TwylA	uzun süre
 TybA	temiz
 Tybp	hoş
 Tybt	iyileri-
 Tybtkm	bütün güzelliklerinizi
 Tybyn	iyi insanlar olarak
 Tyn	çamur-
+TynA	çamur olarak
 Tyr	kuş
 TyrA	kuş
 T}f	bir vesvese
@@ -2061,8 +2249,9 @@ ZEnkm	göç
 Zfr	tırnaklı(ları)
 Zhr	çıktı
 ZhrA	sathi
-Zhrh	(denizin) sırtında
+Zhrh	tarafından
 ZhrhA	onun sırtı
+Zhrk	sırtını
 Zhrp	görünür
 Zhrwhm	onlara yardım eden
 ZhryA	sırt dönerek
@@ -2072,6 +2261,7 @@ ZhwrhA	arkaları-
 Zhwrhm	belleri-
 ZhwrhmA	sırtlarının
 Zhwrkm	sırtlarınız
+Zhyr	yardımcısı
 ZhyrA	arka
 Zl	kesilir
 ZlA	bir gölgeye
@@ -2080,7 +2270,7 @@ ZllA	gölgeler
 Zllh	gölgelerinin
 ZllhA	onun gölgeleri
 Zlm	zulüm
-ZlmA	zulümden
+ZlmA	zulüm
 Zlmh	zulme uğradıktan
 Zlmhm	zulümlerine
 Zlmk	sana zulmetmiştir
@@ -2090,11 +2280,14 @@ Zlmp	zulmeden
 Zlmt	zulmeden
 Zlmtm	zulmettiniz
 ZlmwA	zalimler
+Zlmwn	zalim
 ZlmwnA	bize zulmediyor
+Zlmyn	zalimler
 Zlp	bir gölge
 Zlt	durup ısrarla
 ZlwmA	çok zalimdir
 Zlyl	gölgelendirmez
+ZlylA	(hiç güneş sızmayan) eşsiz
 Zm>	bir susuzluk
 Zn	zanları
 ZnA	zandan
@@ -2204,6 +2397,7 @@ bAdY	sığ (görüşlü)
 bAdwn	çölde bulunmayı
 bAg	saldır-
 bAl	hali
+bAlhm	hallerini
 bAq	kalıcıdır
 bAqyp	kalıcı
 bArd	serin
@@ -2211,6 +2405,7 @@ bArzp	çırılçıplak
 bAr}km	yaratıcınız
 bAsTwA	uzatmış
 bAsqt	yüksek
+bAsrp	asıktır
 bAyEtm	yaptığınız
 bAzgA	doğarken
 bAzgp	doğarken
@@ -2220,11 +2415,13 @@ bDE	birkaç
 bDEp	ticaret için
 bDEthm	sermayelerini
 bDEtnA	sermayemiz
+bDnyn	cimri
 bDr	bir zarar
 bDyA'	ışık
 bE$r	on (tane)
 bE*Ab	azabı
 bE*Abkm	size azabetmeyi
+bEAd	Ad'e
 bED	bazı
 bEDA	bazımızı
 bEDh	birini
@@ -2263,6 +2460,7 @@ bElY	kocam da
 bElhA	kocasının
 bElm	ilmiyle
 bElmh	ilmini
+bElmyn	bilen(kişi)ler
 bEr$hA	onun tahtını
 bEv	gönderdi
 bEvh	diriltti
@@ -2271,6 +2469,7 @@ bEvnA	gönderdik
 bEvnhm	onları dirilttik
 bEvnkm	sizi  tekrar diriltmiştik
 bEvr	dışarı atıldığı
+bEvrt	içi dışına getirildiği
 bEwDp	bir sivrisineği
 bEwlthn	kocalarının
 bEwrp	açık
@@ -2279,9 +2478,10 @@ bEydA	uzak
 bEyr	bir deve
 bEysY	Îsa'yı
 bEzp	şerefine
-bEzyz	aziz
+bEzyz	güç
 bHbl	ipine
 bHdyv	bir söz
+bHfyZ	bekçi
 bHjArp	sertleşmiş taşlar
 bHkmh	hükmünü
 bHmd	överek
@@ -2291,6 +2491,7 @@ bHmlyn	taşıyacak
 bHq	gerçek
 bHr	bir deniz
 bHrb	savaşa açıldığını
+bHsbAn	bir hesap iledir
 bHwr	hurilerle
 bHyrp	"bahîre"
 bS:Tp	üstünlük, güç
@@ -2305,8 +2506,8 @@ bSrh	gözünün
 bSrt	ben gördüm
 bSwtk	sesinle
 bSyr	görür
-bSyrA	görmeye
-bSyrp	basiretle
+bSyrA	görür
+bSyrp	görür
 bS}r	kanıtlar(sunmakta)dır
 bT$	tutuşu
 bT$A	tutuşu
@@ -2315,6 +2516,7 @@ bT$tnA	bizim yakalamamıza  karşı
 bTAnp	kendinize dost
 bTArd	kovacak
 bTA}nhA	astarları
+bTgwYhA	azgınlığı yüzünden
 bTlA	boş yere
 bTn	kapalısına
 bTnY	karnımda
@@ -2347,6 +2549,7 @@ bbAsT	uzatmam
 bbDEp	bir sermaye ile
 bbED	bazı
 bbEDhA	(ineğin) bir parçasıyla
+bbEyd	uzak
 bbTn	göbeğinde
 bbdnk	senin bedenini
 bbdr	Bedir'de
@@ -2356,6 +2559,7 @@ bbkp	Mekke'de
 bblgh	on(un ağzın)a gelmez
 bblgyh	erişemeyecekleri
 bbnY	oğullarını
+bbnyh	oğullarını
 bbyEkm	alışverişinizden
 bbynp	bir belge
 bd'wkm	siz(inle savaş)a başlamış olan
@@ -2367,6 +2571,7 @@ bdEA	türedi biri
 bdEA'	yalvarmakla
 bdEA}k	sana du'a ile
 bdl	değiştirirse
+bdlA	bir değiştirmedir
 bdlh	bunu değiştir
 bdlnA	değiştiririz
 bdlnhm	değiştireceğiz
@@ -2381,6 +2586,8 @@ bdynkm	dininizi
 bfDl	lütfuyla
 bfH$p	fuhuş
 bfkhp	meyva
+bftnyn	saptıracak
+bgA}byn	kaybolacak
 bgDb	gazab
 bgY	saldırdı
 bgfl	gafil
@@ -2389,7 +2596,7 @@ bgm	gam üstüne
 bgrwr	aldatarak
 bgt	saldırırsa
 bgtp	ansızın
-bgyA	çekemeyerek
+bgyA	iffetsiz
 bgyZhm	öfkeleriyle
 bgyZkm	öfkenizden
 bgykm	taşkınlığınız
@@ -2401,6 +2608,7 @@ bhdytkm	hediyenizle
 bhjp	gönül açıcı
 bhtn	bir iftiradır
 bhtnA	bir iftira
+bhyj	güzel
 bhymp	yürüyen
 bj*E	dalını
 bjAlwt	Calut'a
@@ -2419,6 +2627,7 @@ bkAf	kâfi
 bkAhn	kahin
 bkfrhm	inkarlarıyla
 bkfrk	küfrünle
+bkfryn	inkar
 bkl	he
 bklmp	bir kelimeyi
 bklmt	kelimelerle
@@ -2452,34 +2661,49 @@ blsAn	dilinden
 blsAnk	senin diline
 blwnA	bela verdiğimiz
 blwnhm	bunlara da bela verdik
+blygA	güzel
 blyl	geceyi
 bm&mn	inanacak
+bm&mnyn	inanıyor
 bmA'	su ile
 bmAl	mal ile
+bmE*byn	azaba uğratılcak
 bmEjz	aciz bırakacak
-bmEjzyn	aciz bırakacak
+bmEjzyn	engel olacak
 bmErwf	güzelce
 bmSbyH	lambalarla
 bmSr	Mısır'da
 bmSrxY	beni kurtarabilirsiniz
 bmSrxkm	sizi kurtarabilirim
+bmSyTr	zorlayıcı
+bmbEwvyn	diriltilecek
 bmfAzp	kurtulacaklarını
 bmfAzthm	başarılarıyle
 bmgfrp	bir mağfiretle
+bmjnwn	cinli
 bmkrhn	onların hilelerini
 bmlknA	kendi malımızla
+bmlwm	kınanacak
+bmn$ryn	diriltilecek
 bmqEdhm	oturup kalmalarına
+bmqdAr	bir ölçü iledir
+bmsbwqyn	önüne geçilecek
 bmsmE	işittirecek
+bmstyqnyn	inananlardan
 bmvl	gibi
 bmvlh	onun benzerini
 bmvlhA	aynıyla
 bmwqE	yerlerine
 bmwsY	Musa
+bmxrjyn	çıkarılacak
 bmyt	ölemez
+bmytyn	öleceklerden
 bmyvqhm	söz vermeleri için
 bmzHzHh	onu uzaklaştıracak
 bnA'	bina
 bnASythA	onun perçeminden
+bnAn	parmağına
+bnAnh	onun parmak uçlarnı
 bnAt	kızları
 bnAtY	kızlarım
 bnAtk	senin kızlarında
@@ -2490,10 +2714,13 @@ bnSb	bir yorgunluk
 bnSr	yardımıyle
 bnSrh	yardımıyle
 bnY	oğulları
+bnYhA	onu yapana
 bnb<	bir haber
 bnfsk	kendi nefsin
 bnhr	bir ırmakla
+bnmym	söz
 bnwA	oğullarının
+bnwn	oğullar
 bnwr	nuru ile
 bnwrhm	onların nurunu
 bnxl	hurmalarla
@@ -2517,12 +2744,14 @@ bqr'An	bir Kur'an
 bqrbAn	bir kurban
 bqrp	bir inek
 bqrt	inek
+bqryb	yakın
 bqwl	sözü
 bqwm	bir milet
 bqwp	güçle
 bqyEp	düz arazideki
 bqyp	fazilet
 bqyt	bıraktıkları
+br$yd	doğruya yöneltici
 br'&A	uzağız
 br'wskm	başlarınızı
 br>s	başını
@@ -2556,6 +2785,7 @@ brknh	yanını
 brkt	bolluklar
 brq	kamaştığı
 brqh	şimşeğinin
+brrp	iyilik sahibi
 brsl	peygamberlerle
 brslY	elçilerime
 brslnA	elçilerimizi
@@ -2570,10 +2800,13 @@ bryH	bir rüzgârın
 bry_A	bir suçsuzun
 bry_wn	uzaksınız
 brzq	bir azık
+brzqyn	rızıklandırıcı
 brzwA	çıkınca
 brzwn	ortaya çıkarlar
 bs&Al	istemekle
+bsA	serpildikçe
 bsAHthm	yurtlarına
+bsATA	bir sergi
 bsHr	bir büyü
 bsHrh	büyüsüyle
 bsHrhmA	büyüleriyle
@@ -2583,7 +2816,7 @@ bsTp	gücünü
 bsTt	sen uzatırsan
 bsbb	bir sebep(ip)le
 bskrY	sarhoş
-bslTn	bir delil
+bslTn	kudretle
 bslm	selam ile
 bsm	adıyla
 bsmEhm	işitmelerini
@@ -2609,10 +2842,12 @@ bwAd	bir vadiye
 bwHdp	bir tek (şeyi)
 bwjhh	yüzüyle
 bwjwhkm	yüzlerinize
+bwkyl	vekil
 bwldh	çocuğu yüzünden
 bwldhA	çocuğu yüzünden
 bwldtY	anneme
 bwldyh	ana babasına
+bwrA	helaki hak eden
 bwrk	mübarek kılındı
 bwrqkm	gümüş (para) ile
 bxAlSp	samimiyetle
@@ -2632,7 +2867,9 @@ bxs	düşük
 bxsA	eksik verilmesinden
 bxylk	atlılarınla
 bxyr	bir hayır
+bxznyn	depolayan
 byAn	bir açıklamadır
+byAnh	onu açıklamak
 byD	beyaz
 byDA'	berrak
 byE	alışveriş
@@ -2673,9 +2910,11 @@ bywtkn	evlerinizde
 bywtnA	evlerimiz
 bzEmhm	zanlarınca
 bzynp	süslerini
+b{l$fq	akşamın alaca karanlığına
 b{l$hdA'	şahidleri
 b{l$hdp	şahidliği
 b{l$hr	aya karşılıktır
+b{l$kryn	şükredenleri
 b{l$ms	güneşi
 b{l$r	şerre
 b{l'Axrp	ahirete
@@ -2686,16 +2925,19 @@ b{l<vm	günah
 b{l<ymn	imana
 b{l>*n	kulak
 b{l>HqAf	Ahkaf'taki
+b{l>bSr	gözleri
 b{l>fq	ufukta
 b{l>lqb	kötü lakaplarla
 b{l>mn	güvende olmağa
 b{l>nf	burun
 b{l>nvY	kadın ile
+b{l>sHAr	seherlerde
 b{l>xsryn	en çok ziyana uğrayanları
 b{l>zlm	fal oklariyle
 b{lE$Y	akşam
 b{lE*Ab	azabı
 b{lESbp	bir topluluğa
+b{lEbAd	kulları
 b{lEbd	köle ile
 b{lEdl	adaleti
 b{lEdwp	vadinin
@@ -2707,19 +2949,25 @@ b{lErf	iyiliği
 b{lErwp	kulpa
 b{lEyn	göz
 b{lHj	haccı
+b{lHjAb	perde ile
 b{lHkmp	hikmetle
 b{lHq	hakkı
 b{lHr	hür ile
+b{lHsnY	güzellikle
 b{lHsnp	iyilik
 b{lHsnt	iyiliklerle
 b{lHywp	hayatına
 b{lSbr	sabır
 b{lSdq	doğruyu
+b{lSlHyn	iyilere
 b{lSlwp	namazı
+b{lTAgyp	azgın bir vak'a ile
 b{lTgwt	tağut (şeytan)ı
 b{lTyb	temiz olanla
+b{lZlmyn	zalimleri
 b{lb$rY	müjdeyle
 b{lb>sA'	yoksulluk
+b{lbSr	bakış ile
 b{lbTl	batıla
 b{lbnyn	oğulları
 b{lbr	iyiliği
@@ -2727,6 +2975,7 @@ b{lbxl	cimriliği
 b{lbynt	kanıtlar
 b{lbyt	(Eski) Evi [Kâbe'yi]
 b{ldhn	yağlı olarak
+b{ldyn	dini
 b{lfH$A'	kötülüğü
 b{lftH	fetih
 b{lgdw	sabah
@@ -2734,30 +2983,41 @@ b{lgdwp	sabah
 b{lgmm	bulutları
 b{lgyb	gaybda
 b{lhdY	hidayet
+b{lhzl	şaka
 b{ljbt	cibt'e
 b{ljnb	yan(ınız)daki
 b{ljnp	cennetle
 b{ljnwd	ordularla
 b{lkfr	küfre
+b{lkfryn	kafirleri
 b{lktb	Kitaba
 b{llgw	kasıtsız
 b{llh	Allah
-b{lm&mnyn	mü'minlere
+b{lm&mnyn	inanmış
 b{lmErwf	iyi
+b{lmEtdyn	sınırı aşanları
+b{lmfsdyn	bozguncuları
 b{lmgfrp	mağfiret karşılığında
+b{lmhtdyn	doğru yoldadır
+b{lmjrmyn	suçlulara
 b{lml<	topluluk
 b{lmlk	hükümdarlığa
 b{lml}kp	melekleri
 b{lmn	başa kakmakla
 b{lmnkr	kötülüğü
+b{lmrHmp	merhamet
+b{lmtqyn	korunanları
 b{lmwdp	sevgi
-b{ln*r	adaklarını
+b{ln*r	uyarıları
+b{lnASyp	perçeminden
 b{lnAs	insanlara
 b{lnbyn	peygamberler
 b{lnfs	can
 b{lnhAr	gündüzün
 b{lnwSY	alınlar(ın)dan
+b{lqArEp	başa çarpan olayı
 b{lqEwd	oturmağa
+b{lqlm	kalemle
 b{lqr'An	Kur'an ile
 b{lqsT	adaleti
 b{lqsTAs	terazi ile
@@ -2767,19 +3027,26 @@ b{lrsl	peygamberler
 b{lrwH	ruh ile
 b{lsAEp	sa'ati
 b{lsAHl	sahile
+b{lsAhrp	uyanıklık alanındadırlar
+b{lsAq	bacağa
 b{lsn	diş
 b{lsnyn	yıllarca
 b{lsw'	kötü
 b{lswq	bacaklarını
 b{lsy}p	kötülük
+b{ltqwY	korunmayı
 b{ltwrYp	Tevrat'ı
 b{lwAd	vadide
+b{lwEyd	uyarı
 b{lwHY	vahiyle
 b{lwSyd	girişte
+b{lxAT}p	hatalı iş ile
 b{lxlq	yaratışta
+b{lxns	geri kalıp gizlenenlere
 b{lxyr	hayra
 b{lxyrt	hayırlarda
 b{lyl	gece
+b{lymyn	sağını
 b{lywm	gününe
 b{sm	adını
 b{txA*km	(tanrı) edinmekle
@@ -2791,15 +3058,20 @@ dAEY	da'vetçisine
 dAHDp	batıldır
 dAbp	canlı
 dAbr	ardı
+dAfE	def edecek
+dAfq	atılan
 dAmt	durdukça
 dAmwA	onlar olduğu sürece
+dAn	yakındır (kolaydır)
 dAnyp	salkımlar
 dAr	yurdu
 dArhm	yurtlarında
 dArkm	yurdunuzda
 dAwd	Davud
+dAxryn	aşağılık olarak
 dA}byn	düzenli seyreden
 dA}m	süreklidir
+dA}mwn	daimdirler
 dA}rp	bir felaket
 dE&A	yalvarması
 dEA	çağıran
@@ -2823,18 +3095,21 @@ dEwtk	senin çağrına
 dEwtkm	sizi davet etmekten
 dEwtkmA	duanız
 dEytm	çağrıldığınız
+dHYhA	yayıp yuvarlattı
 dHwrA	kovulurlar
 dbr	arkadan
 dbrh	arkasını
 df'	ısınma
 dfE	savunması
 dfEtm	geri verdiğiniz
+dhAqA	dolu
 dkA	sarsıla
 dkA'	yerle bir
 dkp	çarpma ile
 dkt	dümdüz edildiği
 dlhm	göstermedi
 dlwh	kovasını
+dlylA	bir delil
 dmA	kan
 dmA&hA	kanları
 dmA'km	birbirinizin kanını
@@ -2851,6 +3126,7 @@ drjp	derecesi
 drjt	dereceler
 drkA	yetişme(sin)den
 drst	sen ders almışsın
+dsYhA	onu alçaltan
 dwlp	dolaşan bir şey
 dwn	ayrı
 dwnY	benden başka
@@ -2870,9 +3146,13 @@ dxltm	girdiğiniz
 dxltmwh	girerseniz
 dxlwA	girince
 dxlwh	girdikleri
+dxlwn	gireriz
+dxrwn	sürünerek
+dxryn	boyun bükerek
+dyArA	tek kişi
 dyn	din
 dynA	dine
-dynY	benim dinim-
+dynY	dinimi
 dynh	dini-
 dynhm	dinleri
 dynkm	dininiz-
@@ -2942,6 +3222,7 @@ f>dlY	sarkıttı
 f>dxlwA	sokuldular
 f>fwz	kazansaydım
 f>g$ynhm	ve onları kapattık
+f>gnY	zengin etmedi mi?
 f>grqnh	biz de onu boğduk
 f>grqnhm	onları boğduk
 f>grynA	bu yüzden saldık
@@ -2977,6 +3258,7 @@ f>mskwhn	ya onları tutun
 f>mtEh	onu geçindiririm
 f>n$>nA	sonra yetiştirdik
 f>n$rnA	böylece canlandırdık
+f>n*r	ve uyar
 f>n*rtkm	ben sizi uyardım
 f>nZrnY	(bari) beni ertele
 f>nbtnA	bitirdik
@@ -2996,6 +3278,7 @@ f>qAmh	hemen onu doğrulttu
 f>qbl	dönmüş
 f>qblt	sonra geldi
 f>qblwA	hemen gittiler
+f>qbrh	kabre koydurdu
 f>qm	çevir
 f>qmt	kıldırdığın
 f>qymwA	(tam) kılın
@@ -3008,6 +3291,7 @@ f>rsl	gönder
 f>rslh	onu gönder
 f>rslnA	ve gönderdik
 f>rslwA	gönderdiler
+f>rslwn	hemen beni gönderin
 f>rwnY	gösterin bana
 f>sknh	ve onu durdurduk
 f>sqT	o halde düşür
@@ -3035,12 +3319,13 @@ f>vbhm	onlara verdi
 f>vbkm	bundan dolayı size  verdi
 f>vrn	toz koparanlara
 f>wA	o halde sığının
+f>wEY	biriktireni
 f>wHY	işaret etti
 f>wHynA	diye vahyettik
 f>wf	tam ver
 f>wfwA	tam yapın
 f>wjs	içine düşürdü
-f>wlY	daha yakın
+f>wlY	yazık
 f>wqd	ateş yak
 f>wrY	gömmekten
 f>wrdhm	sürükler
@@ -3066,7 +3351,9 @@ fATr	yaratan
 fAh	ağzına
 fAjrA	ahlaksız
 fAlq	yaran
+fAn	yok olacaktır
 fAqE	parlak
+fAqrp	belini kıran(bela)nın
 fArD	yaşlı
 fArqwhn	onlardan ayrılın
 fAsq	bir fasık
@@ -3090,6 +3377,7 @@ fEAqbwA	ceza verin
 fESY	karşı geldi
 fESwA	karşı geldiler
 fEZwhn	öğüt verin
+fEdlk	sana ölçülü bir biçim verdi
 fEdp	sayısınca tutar
 fEdthn	onların bekleme süresi
 fEfwnA	vazgeçtik
@@ -3108,9 +3396,12 @@ fEltk	yaptığın
 fEltm	yaptığınız
 fElwA	yaptıkları
 fElwh	yaptıkları
+fElwn	verirler
+fElyn	yapacak
 fEmwA	kör oldular
 fEmyt	kör olmuştur
 fEnd	çünkü yanında
+fEqr	(deveyi) kesti
 fEqrwA	derken boğazladılar
 fEqrwhA	ve onu kestiler
 fErfhm	o onları tanıdı
@@ -3122,6 +3413,7 @@ fH$r	topladı
 fHAq	ama kuşatıverdi
 fHAsbnhA	biz de onu hesaba çektik
 fHbTt	bu yüzden boşa çıkar
+fHdv	anlat
 fHkmh	hüküm vermek
 fHmlth	ona gebe kaldı
 fHq	hak ettiler
@@ -3136,7 +3428,8 @@ fSdhm	ve onları çevirdi
 fSdqt	kadın doğrudur
 fSdwA	engel oldular
 fSkt	vurarak
-fSl	ayrıldığında
+fSl	ayırdedici
+fSlY	ve namaz kılan
 fSlnA	biz genişçe açıkladık
 fSlnh	anlattık
 fSlt	ayrılınca
@@ -3147,6 +3440,7 @@ fTAf	fakat sardı
 fTAl	ve geçen
 fTbE	bu yüzden mühürlendi
 fTfq	sonra başladı
+fThr	temizle
 fTl	çisinti olur
 fTlqwhn	onları boşayın
 fTmsnA	biz de siliverdik
@@ -3157,6 +3451,7 @@ fTrnA	bizi yaratan
 fTrnY	beni yaratana
 fTrt	yaratmasına
 fTwEt	çağırdı
+fTwr	bozukluk
 fZA	kaba
 fZlmwA	haksızlık ettiler
 fZlt	ve oluverir
@@ -3177,6 +3472,7 @@ f_AtwA	verin
 f_Atwhm	verin
 f_Atwhn	onlara verin
 f_AtynA	biz de verdik
+f_AwY	ve barındırmadı mı?
 f_AwYkm	(Allah) sizi barındırdı
 f_AxrAn	başka iki kişi
 f_Azrh	onu güçlendiren
@@ -3228,8 +3524,10 @@ fg$yhm	örttü (boğdu)
 fgfr	(Allah) bağışladı
 fgfrnA	biz de affettik
 fglbwA	yenildiler
+fglwh	bağlayın onu
+fgwY	ve şaşırdı
 fhb	(Ne olur) lutfet
-fhdY	bunun üzerine iletti
+fhdY	hedefini gösterdi
 fhdynhm	onlara yol gösterdik
 fhzmwhm	derken onları bozdular
 fj	yollardan
@@ -3250,6 +3548,7 @@ fjElnhn	onları yapmışızdır
 fjEltm	ve sizin kıldığınızı
 fjmE	ve topladı
 fjmEnhm	ve onları toplarız
+fjrt	fışkırtıldığı
 fjwp	bir dehlizin
 fjwrhA	bozukluğunu
 fjzA&h	onun cezası
@@ -3267,6 +3566,7 @@ fkAnt	idi
 fkAnwA	oldular
 fkAtbwhm	mükatebe yapın
 fkbkbwA	tepe taklak atılırlar
+fkbr	tekbir et
 fkbt	yıkılır
 fkf	(Allah) çekmişti
 fkfY	şimdi yeter
@@ -3274,7 +3574,8 @@ fkfrt	fakat nankörlük etti
 fkfrth	bunun keffareti
 fkfrwA	ve inkar ettiler
 fkhp	meyva
-fkhyn	sefa sürerler
+fkhwn	eğlenirler
+fkhyn	eğlenerek
 fklA	yeyin
 fklY	ye
 fklwA	yeyin
@@ -3284,6 +3585,7 @@ fkr	düşündü
 fkrhtmwh	işte bundan iğrendiniz
 fkswnA	sonre giydirdik
 fkvrkm	O sizi çoğalttı
+fkydwn	haydi bana hile yapın
 fkydwnY	haydi bana tuzak kurun
 fkyf	nasıl
 fl>mh	anasına düşer
@@ -3355,6 +3657,7 @@ fmAl_wn	dolduracaklar
 fmHwnA	(sonra) sildik
 fmhl	o halde mühlet ver
 fmkv	geldi
+fmlqyh	nihayet O'na varacaksın
 fmn	lutfetti
 fmrt	gezdirdi
 fmstqr	(sizin için) bir karar
@@ -3364,7 +3667,7 @@ fmtEwhn	hemen geçimliklerini verin
 fmvlh	onun durumu
 fn*r	böyle bırakırız
 fnAZrp	ve bakayım
-fnAdY	nihayet yalvardı
+fnAdY	ve bağırdı
 fnAdYhA	ona şöyle seslendi
 fnAdth	ona seslendiler
 fnAdwA	çağırdılar
@@ -3409,7 +3712,7 @@ fqTE	böylece kesildi
 fqbDt	sonra aldım
 fqdmwA	verin
 fqdr	ve daraltsa
-fqdrh	ve takdir etmiştir ona
+fqdrh	sonra ona biçim verdi
 fqdrnA	ve biçimlendirdik
 fql	de ki
 fqlnA	demiştik
@@ -3438,18 +3741,21 @@ frAg	gizlice gitti
 frAq	ayrılmasıdır
 frArA	kaçardın
 frAt	susuzluğu keser
+frAtA	tatlı
 frD	gerekli kılan
 frDnA	gerekli kıldığımız
 frDtm	tesbit ettiğiniz
 frEwn	Fir'avn
 frH	sevinir
 frHwA	sevinirler
+frHwn	sevinirler
 frHyn	sevinirler
+frTA	aşırılık
 frTnA	kusurlarımızdan
 frTt	kusur edişimden
 frTtm	kusurunuz
 frbkm	Rabbiniz
-frdA	tek başıma
+frdA	tek başına
 frdY	tek olarak
 frddnh	böylece onu geri verdik
 frdwA	fakat koydular
@@ -3457,13 +3763,16 @@ frdwh	onu götürün
 frgA	bomboştu
 frgt	boşaldığın (işin bitince)
 frhn	rehinler (yeter)
+frhyn	ustalıkla
 frjAlA	yaya
 frjE	bunun üzerine döndü
 frjEnk	böylece seni geri verdik
 frjEwA	döndüler
 frjhA	ırzını
 frjl	(o zaman) bir erkek
+frjt	yarıldığı
 frq	bölüm
+frqA	ayırdıkça
 frqAnA	iyi ile kötüyü ayırdedici bir anlayış
 frqnA	yarmıştık
 frqnh	parçalara ayırdık
@@ -3474,8 +3783,10 @@ frrtm	kaçıyorsanız
 frt	ürkmüş
 frv	fışkı
 frwH	(O'na) rahatlık (vardır)
+frwj	çatlağı
 frwjhm	ırzlarını
 frwjhn	ırzlarını
+fryA	tuhaf, korkunç
 fryDp	mehir(lerini)
 fryq	bir grup
 fryqA	gruba
@@ -3506,10 +3817,14 @@ fsqA	bir fısk
 fsqY	(Musa) hemen suladı
 fsqnh	böylece onu süreriz
 fsqwA	yoldan çıkanların
+fsqwn	yoldan çıkmıştır
+fsqyn	fasık
 fst*krwn	yakında hatırlayacaksınız
 fstElmwn	bileceksiniz
 fstbSr	göreceksin
 fstrDE	o zaman emzirecektir
+fswY	düzenledi
+fswYhA	onu düzenledi
 fswYhn	onları düzenledi
 fswYk	seni düzenledi
 fswq	kötülük olur
@@ -3527,6 +3842,7 @@ fsyqwlwn	diyecekler
 fsyrY	görecek
 fsyrwA	dolaşın
 ft$bh	benzer (mi) göründü
+ft$qY	sonra yorulursun
 ft*kr	hatırlatması için
 ft*rwhA	ötekini bırakmayın
 ft>kl	yiyecek
@@ -3556,11 +3872,13 @@ ftbArk	ne yücedir
 ftbhthm	onları şaşırtacak
 ftbsm	tebessüm etti
 ftbynwA	onu araştırın
+ftdlY	ve sarktı
 ftf$lwA	yoksa korkuya kapılırsınız da
 ftfjr	fışkırtmalısın
 ftfrq	ayırmasın
 fthAjrwA	göç edeydiniz
 fthjd	uyan (teheccüd kıl)
+ftkfrwn	fakat inkar ederdiniz
 ftkn	ve bulunsa
 ftkwY	dağlanır
 ftkwn	olsun
@@ -3592,9 +3910,11 @@ ftqTEwA	fakat parçalayıp ayırdılar
 ftqbl	kabul buyur
 ftqblhA	kabul buyurdu onu
 ftqwl	ve diyordu
+ftrDY	ve sen razı olacaksın
 ftrY	görürsün
 ftrYh	onu görürsün
 ftrbSwA	gözetleyin
+ftrdY	sonra helak olursun
 ftrkh	onu bırakır
 ftrp	arasının kesildiği sırada
 ftstjybwn	çağrısına uyarsınız
@@ -3606,16 +3926,19 @@ ftwl	yüz çevir
 ftwlY	çevirdi
 ftwlwA	bunun üzerine kaçtılar
 ftwnA	(iyi bir) deneyişle
+ftx$Y	O'ndan korkasın
 ftxTfh	ve kendisini kapıyor
 ftxbt	böylece saygı duysun
 ftxrjwh	çıka(rıp gösterece)ğiniz
 ftyAn	iki genç daha
+ftylA	en ufak
 ftymmwA	teyemmüm edin
 ftyp	gençlerdi
 ftytkm	cariyelerinizi
 ftzl	kayar
 fvbThm	ve onları durdurdu
 fvbtwA	siz pekiştirin
+fwAq	geri dönmesi
 fwHdp	bir tane (alın)
 fwfYh	tam görür
 fwhb	sonra verdi
@@ -3658,6 +3981,8 @@ fxr	çökmüştü
 fxrAj	vergisi
 fxrj	çıkıp
 fxsfnA	nihayet batırdık
+fxwr	övünenleri
+fxwrA	böbürlenen
 fy$fEwA	şefa'at etsinler
 fy&mnwA	ve inansınlar diye
 fy&x*	ve tutulur
@@ -3671,6 +3996,7 @@ fyDlk	sonra seni saptırır
 fyE*bh	ona azab eder
 fyE*bhm	azabedecektir
 fyElmwn	bilirler
+fyEt*rwn	özür dilesinler
 fyHY	ve diriltmesidir
 fyHfkm	ve sizi sıkıştırsaydı
 fyHl	sonra iner
@@ -3683,6 +4009,7 @@ fyTmE	böylece tamah etmesin
 fyZlln	sonra kalırlar
 fy_ws	hemen üzülür
 fybsTh	sonra onu yayar
+fydhnwn	onlar da yağcılık yapsınlar
 fydmgh	onun beynini parçalar
 fydxlhm	onları sokar
 fygfr	bağışlar
@@ -3742,6 +4069,7 @@ f{Ebdh	O'na kulluk et
 f{EbdnY	bana kulluk et
 f{EbdwA	siz de kulluk edin
 f{Ebdwh	O'na tapın
+f{Ebdwn	kulluk edin
 f{EdlwA	adalet yapın
 f{Ef	öyleyse affet
 f{EfwA	affedin
@@ -3754,6 +4082,7 @@ f{Etlwh	sürükleyin
 f{EtrfnA	itiraf ettik
 f{EtrfwA	itiraf ettiler
 f{EtzlwA	çekilin
+f{Etzlwn	benden uzaklaşın
 f{H*rhm	onlardan sakın
 f{H*rwA	sakının
 f{H*rwh	O'ndan sakının
@@ -3788,6 +4117,7 @@ f{gfr	bağışla
 f{gslwA	yıkayın
 f{hbT	öyle ise in
 f{hdwhm	onları götürün
+f{hjr	kaçın
 f{jEl	ve yap
 f{jldwA	vurun
 f{jldwhm	vurun onlara
@@ -3824,6 +4154,7 @@ f{mnn	artık dilediğine ver
 f{msHwA	sürün
 f{mtHnwhn	onları imtihan edin
 f{n$zwA	kalkın ki
+f{nSb	(tekrar) başla
 f{nSrnA	bize yardım eyle
 f{nTlqA	yine yürüdüler
 f{nTlqwA	derken yürüdüler
@@ -3842,6 +4173,7 @@ f{nkHwhn	öyle ise onlarla evlenin
 f{nqlbwA	geri döndüler
 f{nslx	sıyrıldı, çıktı
 f{nt$rwA	dağılın
+f{ntSr	yardım et
 f{ntZrwA	bekleyin
 f{ntb*t	ve çekildi
 f{nthY	(ribadan) vazgeçerse
@@ -3855,6 +4187,8 @@ f{qTEwA	kesin
 f{qr'wA	artık okuyun
 f{qtlwA	öldürün
 f{qtlwhm	hemen onları öldürün
+f{rgb	niyaz et yalvar
+f{rhbwn	korkun
 f{rjE	döndür de (bak)
 f{rjEnA	bizi geri döndür
 f{rjEwA	dönün
@@ -3868,6 +4202,8 @@ f{sjd	secde et
 f{sjdwA	haydi secde edin
 f{slk	sok (bindir)
 f{slkY	ve yürü
+f{slkwh	vurun onu
+f{smEwn	beni dinleyin
 f{st$hdwA	şahid getirin
 f{stE*	sığın
 f{stESm	o reddetti
@@ -3894,7 +4230,7 @@ f{stmtEwA	onlar zevklerine baktılar
 f{stqm	dosdoğru olun
 f{stqymA	doğru yolda devam edin
 f{stqymwA	artık doğrulun
-f{stwY	derken dikilen
+f{stwY	ve doğruldu
 f{stxf	küçümsedi
 f{tbAE	artık uymalıdır
 f{tbE	izle
@@ -3905,6 +4241,7 @@ f{tbEwh	ona uyun
 f{tbEwnY	bana uyun ki
 f{tlwhA	ve okuyun
 f{tqwA	korkun
+f{tqwn	sakının
 f{tx*	(balık) tuttu
 f{tx*h	yalnız O'nu edin
 f{tx*t	çekmişti
@@ -3920,27 +4257,35 @@ f{xtlfwA	sonradan ayrılığa düştüler
 f}p	topluluk
 f}tkm	topluluğunuz
 f}tyn	şu iki toplulukta
+g$Y	sardırdığını
 g$wp	perde
-g$yhm	onları sardığı
+g$yhm	onları örten
 g$yp	sargın bir belanın
 gAfr	bağışlayandır
 gAlb	yenecek
 gAsq	gecenin
 gA}bp	gizli
+gA}byn	onlardan uzak
 gDb	gazaba
 gDbY	gazabım
 gDbn	kızgın
 gDbwA	kızdıkları
+gSbA	zorla
 gSp	boğazı tırmalayan
 gTA'	perde
 gTA'k	perdeni
+gbrp	tozlanmış
 gdA	yarın
 gdA'nA	kahvaltımızı
+gdqA	bol
 gdwA	sabah
 gdwhA	sabah gidişi
 gdwt	sen erkenden
+gfArA	çok bağışlayandır
 gflA	gafil
 gflp	gaflet
+gflwn	gafil(ler)
+gflyn	gafil
 gfr	bağışladığını
 gfrAnk	bağışlamanı dileriz
 gfwr	Gafurdur
@@ -3949,6 +4294,7 @@ gl	kin-
 glA	bir kin
 glAZ	gayet katı
 glZp	bir katılık
+glbA	iri ve gür
 glbhm	yenilgilerinden
 glbt	yendi
 glbwA	gâlip gelenler
@@ -3959,6 +4305,7 @@ glmA	bir çocuğa
 glmAn	civanlar
 glt	bağlandı
 glyZ	katı
+glyZA	sağlam
 gm	(o) gamdan
 gmA	gam
 gmp	bir dert
@@ -3972,20 +4319,27 @@ gnmtm	aldığınız ganimetten
 gnyA	zengin
 gr	aldatmış
 grAbA	bir karga
+grAmA	sargındır
 grbt	battığı
 grbyp	batıdan
 grf	odalar
 grfA	yüksek odalara
 grfp	bir avuç
 grk	seni aldatan
+grqA	şiddetle
 grwbhA	batmasından
-grwrA	aldatmak için
+grwr	derin bir gaflet ve aldanma
+grwrA	aldatmadan
+gslyn	irin-
 gsq	kararmasına
 gvA'	bir çöpe
 gwA$	(ateşten) örtüler
+gwY	azmadı
 gwl	sersemletme
 gwrA	dibe
+gwyn	azmıştık
 gwynA	kendimiz azdığımız
+gyA	kötülük
 gyZ	öfkesini
 gyb	gaybı
 gybh	gizli bilgisini
@@ -3999,6 +4353,7 @@ gyv	bir yağmura
 gzY	savaşa çıktıkları
 gzlhA	ipliğini
 h$ymA	çöp kırıntıları
+hAd	yol gösteren
 hAdY	yol gösteren
 hAdwA	Yahudi
 hAdyA	yol gösterici olarak
@@ -4009,8 +4364,12 @@ hAlk	helak olacaktır
 hAmdp	kurumuş ölmüş
 hAr	çökecek
 hAtwA	getirin
+hAwyp	haviye(uçurum)dur
+hDmA	hakkının çiğnenmesinden
+hDym	yumuşak
 hb	ver
 hbA'	toz duman
+hdA	yıkılıp
 hdAY	benim hidayetime
 hdY	bir yol
 hdYhA	hidayetini
@@ -4027,14 +4386,19 @@ hdytnA	bizi doğru yola ilettikten
 hjrA	bir ayrılışla
 hlk	ölen
 hlm	gelin
+hlwEA	hırslı (ve huysuz)
 hm	yeltenmişti
 hmAz	kötüleyip duran
+hmsA	fısıltıdan
 hmt	yüz tutmuştu
 hmzp	diliyle çekiştiren
 hmzt	kışkırtmaları-
 hny_A	afiyetle
+hrbA	kaçmakla
 hrwn	Harun
 hrwt	Harut
+hwA'	bomboştur
+hwY	aşağı kaydığı
 hwYh	keyfine
 hwd	Hud
 hwdA	Hud'u
@@ -4073,9 +4437,10 @@ jAbwA	oyan
 jAlwt	Calut'u
 jAmE	bütün
 jAmdp	cansız
-jAn	bir yılan
-jAnb	yanında
+jAn	cin
+jAnb	yandan
 jAr	yanınızdayım
+jAryp	akan
 jAvyp	toplanmış
 jAwzA	orayı geçip gittiklerinde
 jAwzh	(ırmağı) geçince
@@ -4096,6 +4461,7 @@ jElth	onu ediyordu
 jEltm	yaptınız
 jElwA	ettiler
 jHdwA	inkar etti
+jHym	cehenneme
 jbAhhm	onların alınları
 jbAl	dağlar-
 jbAr	zorba
@@ -4114,27 +4480,33 @@ jdltnA	bizimle tartıştın
 jdlwk	seninle mücadele ederlerse
 jdr	duvarların
 jdyd	yeni
+jdydA	yeni
 jfA'	yok olup
 jhAdA	bir cihadla
 jhAdh	cihadın
+jhArA	açıkça
 jhd	güçlü
 jhdA	cihadetmek için
 jhdAk	seni  zorlarlarsa
 jhdhm	güçlerinin
 jhdwA	cihadettiler
+jhlwn	cahiller
 jhnm	cehennem
 jhr	açık (söyleyen)
 jhrp	açıkça
+jhwlA	çok cahildir
 jhzhm	yükletti
+jlYhA	onu (güneşi) ortaya çıkaran
 jlbybhn	örtülerini
 jldp	değnek
 jlwd	derileri
 jlwdA	derileri
 jlwdhm	derileri
 jlwdkm	derilerinizin
+jmA	pek çok
 jmAl	bir güzellik
 jmE	yığdı
-jmEA	cemaati bulunan
+jmEA	hepsini
 jmEh	onu toplamak
 jmEhm	onları toplamağa
 jmEkm	topluluğunuzun
@@ -4146,6 +4518,7 @@ jmlt	bir halattır
 jmyE	hepsi
 jmyEA	tümü
 jmyl	güzelce
+jmylA	güzel
 jn	basınca
 jnAH	günah
 jnAHk	böğrüne
@@ -4153,11 +4526,13 @@ jnHwA	onlar yanaşırlarsa
 jnb	uzaktan
 jnbA	cünüp
 jnd	ordu
+jndA	adamları
 jndnA	bizim ordumuz
 jnfA	hata(sından)
 jnp	kalkan
 jnt	bahçeler
 jntAn	iki bahçe
+jntY	cennetime
 jnth	bağına
 jntk	bağına
 jntyn	iki bağ
@@ -4167,11 +4542,15 @@ jnwbkm	yanlarınız
 jnwd	ordular
 jnwdA	askerler
 jnwdh	orduları
+jnyA	taze
 jrAd	çekirgeler
 jrHtm	işlediğiniz
 jrf	bir uçurum
 jrm	şüphe
+jrzA	kupkuru
 jsdA	heykeli
+jvmyn	diz üstü
+jvyA	diz çökmüş vaziyette
 jw	boşluğunda
 jwAb	cevabı
 jwE	açlık-
@@ -4186,6 +4565,7 @@ jz'A	bir parça
 jzA&hm	cezaları
 jzA&km	cezanız
 jzA'	cezası
+jzwEA	sızlanır
 jzynhm	onları cezalandırdık
 jzythm	onlara verdim
 j}nA	getireceğiz
@@ -4199,11 +4579,13 @@ j}tkm	size getirdim
 j}tm	siz bulundunuz
 j}tmwnA	bize geldiniz
 j}tnA	sen bize geldikten
+k$Tt	sıyrılıp açıldığı
 k$f	gidermeye
 k$fnA	kaldırdık
 k$ft	kaldırırsan
 k$jrp	bir ağaç gibidir
-k*Ab	yalancıdır
+k*Ab	yalancı
+k*AbA	tekzib ile
 k*b	yalancı
 k*bA	yalan
 k*bh	yalanı
@@ -4214,6 +4596,8 @@ k*bwA	yalanlayan
 k*bwh	onlar onu yalanladılar
 k*bwk	seni yalanlarlarsa
 k*bwkm	sizi yalanladılar
+k*bwn	yalanlamaları
+k*byn	yalancı
 k*krkm	andığınız gibi
 k>Hd	herhangi biri gibi
 k>lf	bin (yıl) gibidir
@@ -4221,7 +4605,9 @@ k>mvl	gibi
 k>s	bir kadeh-
 k>sA	kadehten
 kA$f	açacak
+kA$fp	açacak kimse
 kA$fwA	kaldırırız
+kA*bp	yalanlayacak
 kAd	nerdeyse
 kAdH	çabalamaktasın
 kAdt	neredeyse
@@ -4229,6 +4615,7 @@ kAdwA	az daha
 kAfp	bütün
 kAfr	kafirdir
 kAfrp	nankördü
+kAfwrA	kâfûr
 kAhn	bir kahinin
 kAlwhm	kendileri onlara bir şey ölçtükleri
 kAmlp	tamamı
@@ -4249,7 +4636,10 @@ kSyb	boşanan yağmur gibi
 kTY	dürer gibi
 kZlmt	karanlıklar gibidir
 kZmyn	yutkunur dururlar
+kZym	yutkunuyordu
+kbArA	büyük büyük
 kbA}r	büyük günahlardan
+kbd	zorluk
 kbr	ağır
 kbrh	en büyüğünü
 kbrt	ne büyük (küstahça)
@@ -4257,7 +4647,7 @@ kbsT	uzatan kimse gibidir
 kbt	tepelendikleri
 kbtwA	tepeleneceklerdir
 kbyr	büyük
-kbyrA	büyük
+kbyrA	çok
 kbyrhm	büyükleri
 kbyrp	büyük
 kb}r	büyük
@@ -4268,8 +4658,9 @@ kdnA	bir çare öğrettik
 kdt	neredeyse
 kf	çeken
 kfAr	kafir
-kfArA	kafirler olarak
+kfArA	inkarcı
 kfArp	keffaret olur
+kfAtA	toplanma yeri
 kfY	yeter
 kfft	savmıştım
 kfl	bir payı
@@ -4284,7 +4675,11 @@ kfrp	keffareti
 kfrt	reddetmiştim
 kfrtm	inkar etmeniz
 kfrwA	inkar
+kfrwn	tanımayız
+kfryn	kafir
 kfwA	dengi
+kfwr	nankörü
+kfwrA	inkarda
 kfyh	ellerini
 kfylA	kefil (şahid)
 kfynk	sana yeteriz
@@ -4296,6 +4691,7 @@ kjhr	yüksek sesle konuştuğunuz gibi
 kl	he
 klA	hepsini
 klAhmA	her ikisi
+klHwn	dişleri açıkta kalır
 klY	ye
 klbhm	köpekleridir
 klh	bütün
@@ -4333,12 +4729,16 @@ krh	hoşlanmadı
 krhA	zorla
 krhtmwhn	onlardan hoşlanmazsanız
 krhwA	hoşlanmamışlardır
+krhwn	hoşlanmıyorlar
+krhyn	istemezsek
 krmAd	küle benzer
 krmnA	biz çok ikram ettik
 krmt	üstün yaptığını
 krp	bir dönüştür
 krsyh	tahtının
 krtyn	iki kez daha
+krym	bol
+krymA	bol
 ksAdhA	düşmesinden
 ksAlY	üşene üşene
 ksb	kazanır
@@ -4359,6 +4759,9 @@ ktbk	Kitabını
 ktbnA	yazdık
 ktbnhA	biz yazmamıştık
 ktbt	yazdın
+ktbwn	yazmaktayız
+ktbyh	Kitabım
+ktbyn	yazıcılar
 ktm	gizleyen
 kvr	çoğundan
 kvrp	çokluğu
@@ -4372,6 +4775,7 @@ kwkb	bir yıldız
 kwkbA	yıldız
 kwnY	ol
 kwnwA	olun
+kwrt	büzüldüğü
 kx$yp	korkar gibi
 kxlqh	O'nun yarattığı gibi
 kxyftkm	çekindiğiniz gibi
@@ -4387,29 +4791,39 @@ kydwn	bana tuzak kurun
 kyf	ne
 kyl	yükü
 kzrE	bir ekin gibidir
+k{l>Elm	dağlar gibi
 k{l>EmY	körün durumu gibidir
 k{l>nEm	hayvanlar gibidir
 k{l>nvY	kız gibi
 k{lEhn	renkli yün gibi
 k{lErjwn	hurma sapına benzer
 k{lHjArp	taş gibi
+k{lSrym	simsiyah
 k{lTwd	bir dağ gibi
 k{lZll	gölgeler gibi
+k{ldhAn	erimiş yağ gibi
+k{lfjAr	yoldan çıkanlar gibi (mi?)
 k{lfrA$	pervaneler gibi
+k{lfxAr	kiremit gibi
 k{ljbAl	dağlar gibi
 k{ljwAb	havuzlar kadar (geniş)
 k{lmElqp	askıda (kocasızmış) gibi
 k{lmfsdyn	bozgunculuk yapanlar gibi (mi?)
 k{lmhl	erimiş maden gibi
+k{lmjrmyn	suçlular gibi
+k{lqSr	kütük gibi
+k{lrmym	kül gibi
 l$AEr	bir şair için
 l$AY'	hiçbir şey için
 l$Y'	bir şeyi
-l$dyd	pek çetindir
+l$dyd	şiddetlidir
 l$hdtnA	mutlaka bizim şahidliğimiz
+l$hyd	şahiddir
 l$r	en kötü
 l$r*mp	topluluktur
 l$rkA}hm	ortaklarına ait
 l$rkA}nA	ortaklarımızındır
+l$tY	çeşit çeşittir
 l$wbA	bir içkileri
 l&l&	inci
 l&l&A	inci
@@ -4426,6 +4840,7 @@ l'Ayp	ibret
 l'Ayt	ayetler
 l'AytnA	bizim ayetlerimize karşı
 l*A}qwA	tadacaksınız
+l*A}qwn	tadacağız
 l*hb	götürürdü
 l*kr	zikrine
 l*krY	bir öğüt
@@ -4507,7 +4922,9 @@ l>zwjk	eşlerine
 l>zydnkm	elbette size daha fazla veririm
 l>zynn	andolsun (günahları) süsleyeceğim
 lAhyp	eğlencededir
+lAzb	yapışkan
 lA}m	hiçbir kınayıcının
+lDAlwn	sapıklardır
 lE*bhm	mutlaka onlara azabederdi
 lE*bnA	elbette azab ederdik
 lEAd	Ad
@@ -4520,6 +4937,7 @@ lEbAdh	kullarına
 lEbAdnA	kullarımıza
 lEbdth	O'na kullukta
 lEbrp	ibret
+lEbyn	eğlence için
 lEdthn	iddetleri içinde
 lEfw	affedendir
 lEjl	çabuklaştırırdı
@@ -4542,6 +4960,8 @@ lHb	sevgisine
 lHbT	boşa giderdi
 lHdwd	sınırlarını
 lHdyv	söze
+lHfZwn	koruruz
+lHfZyn	koruyucular
 lHkm	hükmüne
 lHkmh	O'nun hükmünü
 lHkmhm	onların hükümlerine
@@ -4553,13 +4973,19 @@ lHq	gerçektir
 lHsn	güzel
 lHsrp	elbette hasrettir
 lHwmhA	onların etleri
+lHyAtY	bu hayatım için
+lSAdq	mutlaka doğrudur
 lSAlwA	elbette gireceklerdir
 lSHbh	arkadaşı
+lSdqwn	doğru söylüyoruz
 lSwt	sesidir
 lTmsnA	silerdik
 lTyf	latiftir
 lTyfA	latiftir
+lZY	alevlenen bir ateştir
 lZlm	bir zulümdür
+lZlmwn	zulmedenler (oluruz)
+lZlmyn	zalim kimseler
 lZlwA	başlarlar
 lZlwm	çok haksızlık edendir
 lb$r	insana
@@ -4571,6 +4997,7 @@ lbAshmA	elbiselerini
 lbED	bazı
 lbEvnA	gönderirdik
 lbEwlthn	kocaları
+lbdA	birçok
 lbgwA	azarlardı
 lbld	bir ülkeye
 lblgA	elbette bir öğüt
@@ -4590,7 +5017,9 @@ lbvyn	kalacaklardır
 lbws	zırh
 lbyt	elbette evidir
 lbywthm	evlerine
+lb{lmrSAd	gözetleme yerindedir
 lb}s	ne kötü
+ldA	inatçı
 ldAwd	Davud'a
 ldlwk	sarkmasından
 ldn	katından
@@ -4600,6 +5029,7 @@ ldnh	kendi katı-
 ldnk	katından
 lf$ltm	çekinirdiniz
 lfDlh	O'nun lütfunu
+lfElwn	mutlaka yapacağız
 lfrEwn	Fir'avn'a
 lfrH	şımarık
 lfrwjhm	ırzlarını
@@ -4607,20 +5037,28 @@ lfryqA	bir grup (var ki)
 lfsdt	bozulurdu
 lfsdtA	ikisi de bozulup gitmişti
 lfsq	yoldan çıkmadır
+lfsqwn	yoldan çıkmışlardır
+lfsqyn	yoldan çıkmış
 lftHnA	açardık
 lftYh	uşağına
 lftynh	uşaklarına
+lfyfA	bir araya
+lgA}Zwn	kızdırmaktadırlar
 lgd	yarın için
 lgfAr	çok bağışlayıcıyımdır
+lgflwn	habersizdirler
+lgflyn	habersiz
 lgfwr	bağışlayandır
 lglmyn	çocuğun
 lgnY	zengindir
 lgw	saçmalama
 lgwA	boş söz
 lgwY	bir azgınsın
+lgwb	bir usanç
+lgyp	boş söz
 lgyr	başkası
 lhAd	mutlaka iletir
-lhb	Leheb'in
+lhb	alevli
 lhdY	hidayet verirdi
 lhdYkm	doğru yola iletirdi
 lhdmt	yıkılırdı
@@ -4646,50 +5084,68 @@ ljmyE	bir cemaatiz
 ljnbh	yan yatarken
 ljp	derin bir su
 ljwA	onlar direnmektedirler
+lk*bwn	yalancılardır
 lkAn	elbette olurdu
 lkbyrkm	büyüğünüzdür
 lkbyrp	ağır gelir
 lkfrnA	örterdik
-lkfwr	bir nankördür
+lkfrwn	inkar etmektedirler
+lkfwr	çok nankördür
 lkl	her
 lklmt	sözlerinde
 lklmth	O'nun sözlerini
 lknA	biz olurduk
 lknt	ben olurdum
 lkntm	elbette olurdunuz
+lknwd	çok nankördür
+lkrhwn	bundan hoşlanmıyordu
 lktb	bir Kitaptır
 lkvyr	çoğuna
 ll$hdp	şahidlik için
 ll$ms	güneşe
 ll$rbyn	içenlere
+ll$wY	derileri
 ll$yTn	şeytanın
 ll$yTyn	şeytanlar için
+ll'Aklyn	yiyenlerin
 ll'Axrp	son da
+ll'Axryn	sonradan gelenlerin
 ll*kr	erkeğe
+ll*kryn	ibret alanlara
 ll<nsn	insana
 ll<slm	İslam'a
 ll<ymn	imana
 ll>*qAn	çeneleri üstüne
+ll>brAr	iyiler için
+ll>nAm	canlılar için
 ll>wbyn	tevbe edenleri
-llEbAd	kullar için
+llEbAd	kullara
+llEbdyn	ibadet edenler için
+llEbyd	kullara
 llElmyn	alemlere
+llEsrY	en güç(yolda gitmey)i
 llHY	o diri olana
 llHq	hakka
 llHrb	savaş için
 llHsnY	daha güzel şeyler
 llHwAryn	havarilere
+llSbryn	sabredenler için
 llSlwp	namaz için
 llTA}fyn	tavaf edenler için
 llTgyn	azgınların
 llTybt	iyi kadınlara
 llTybyn	iyi erkeklere
 llZlmyn	zalimlere
+llb$r	insanı
 llbv	kalırdı
 lldyn	dine
 llfqrA'	fakirler içindir
+llgAwyn	azgınların
 llgyb	gaybın
 llh	Allah'a
+llhdY	doğru yola iletmek
 lljbl	dağa
+lljbyn	alnı üzerine
 lljwA	yine devam ederlerdi
 llk*b	yalana
 llkfr	küfre
@@ -4699,13 +5155,23 @@ llm$rkyn	müşrikler için
 llm&mnt	inanan kadınlara
 llm&mnyn	mü'minlere
 llmHsnt	güzel hareket edenlere
+llmHsnyn	güzel davrananlara
+llmSlyn	namaz kılanların
+llmTffyn	ölçü ve tartıda hile yapanların
 llmjrmyn	suçlulara
+llmk*byn	yalanlayanların
 llml<	ileri gelenlere
 llml}kp	meleklere
+llmqwyn	çölden gelip geçenlere
+llmslmyn	müslümanlara
 llmsrfyn	aşırıya gidenlere
-llmtqyn	muttakilere
+llmtkbryn	kibirlenenler için
+llmtqyn	korunanlara
+llmtwsmyn	işaretten anlayanlara
+llmwqnyn	kesin inanacaklar için
 llmxlfyn	geride kalanlara
 llnAs	halka da
+llnZryn	bakanlara
 llnbY	peygambere
 llqmr	aya
 llqsyp	katılaşmış olanlara
@@ -4717,6 +5183,7 @@ llrjAl	erkeklere vardır
 llrsl	elçilere
 llsAEp	kıyametin
 llsA}l	dilenci için
+llsA}lyn	soranlar için
 llsHt	haram
 llslm	barışa
 llsmE	dinlemeğe mahsus
@@ -4727,24 +5194,41 @@ llxbyvt	kötü kadınlara
 llxbyvyn	kötü erkeklere
 llxrwj	çıkmak için
 llxyr	hayra
+llysrY	en kolayı
 llytmY	öksüzlere karşı
 llzkwp	zekatı
+lm$rkwn	müşriklerden (olursunuz)
 lm&mn	bir mü'minin
+lmA	hırsla
+lmEzwlwn	uzaklaştırılmışlardır
+lmHDrwn	(azaba) getirileceklerdir
 lmHY	diriltir
+lmHjwbwn	perdelenmişlerdir
 lmHyTp	kuşatacaktır
 lmbEwvwn	diriltilecek
+lmblsyn	umutsuz(dular)
+lmbtlyn	(onları) sınıyorduk
+lmdrkwn	işte yakalandık
 lmdyn	Medyen (halkı)
+lmdynwn	cezalanacağız
+lmfEwlA	mutlaka yerine getirilir
 lmgfrp	bağışlaması vardır
+lmgrmwn	borçlandık
 lmhlkhm	onları helak etmek için
+lmhtdwn	yola geleceğiz
 lmjmwEwn	mutlaka toplanacaklardır
+lmjnwn	delisin
 lmkr	bir tuzaktır
 lmnjwhm	onları kurtaracağız
+lmnqlbwn	döneceğiz
 lmqt	(size) kızması
 lmrdwdwn	döndürülecek (miyiz?)
+lmrslwn	gönderilmiş elçileriz
 lmsjd	mescid (ise)
 lmskm	size mutlaka dokunurdu
 lmskyn	yoksulların
 lmsnA	dokunduk
+lmsrfwn	israf etmektedirler
 lmstm	dokunmuşsa
 lmstqr	karar bulacağı yere
 lmsxnhm	değiştirip dondururduk
@@ -4754,9 +5238,13 @@ lmvlh	böyle bir şeye
 lmvwbp	sevabı
 lmwEdhm	onların buluşma yeridir
 lmwfwhm	vereceğiz
+lmwsEwn	genişleticiyiz
 lmwsY	Musa'ya
+lmxrjwn	(diriltilip) çıkarılacağız
 lmyqt	belirlenen vaktinde
 lmyqtnA	tayin ettiğimiz vakitte
+lmytwn	öleceksiniz
+lmzp	kaş göz işaretleriyle alay eden
 ln&mnn	muhakkak inanacağız
 ln*hbn	tamamen gideririz
 ln*yqhm	taddırmak için
@@ -4766,6 +5254,7 @@ lnH$rnhm	onları mutlaka toplayacağız
 lnHDrnhm	onları bulunduracağız
 lnHY	diriltelim diye
 lnHrqnh	biz onu yakacağız
+lnSHwn	öğüt verenleriz
 lnSdqn	elbette sadaka vereceğiz
 lnSrf	çevirmek istedik
 lnZnk	zannediyoruz ki sen
@@ -4787,6 +5276,7 @@ lnhdynhm	biz elbette iletiriz
 lnhlkn	mutlaka helak edeceğiz
 lnhtdY	(doğruyu) bulamazdık
 lnjElhA	onu yapalım diye
+lnkbwn	sapıyorlar
 lnkfrn	mutlaka örteceğiz
 lnkwnn	elbette oluruz
 lnnSr	yardım ederiz
@@ -4816,11 +5306,14 @@ lnxrjnkm	ya sizi mutlaka çıkarırız
 lnzlnA	elbette gönderirdik
 lqA'	kavuşmayı
 lqA'nA	bize kavuşmayı
+lqAdr	elbette kadirdir
 lqAl	yine derlerdi
 lqAlwA	derlerdi
 lqA}h	onun ulaşması-
 lqDY	bitirilmişti
 lqTEnA	keserdik
+lqdrwn	kadiriz
+lqdyr	kadirdir
 lqlnA	biz de söyleriz
 lqlwbkm	sizin kalbleriniz için
 lqmn	Lokman
@@ -4873,11 +5366,13 @@ lsmyE	işitendir
 lsnp	yasasında
 lsnt	yasasında
 lsntnA	bizim yasamızda
+lsrqwn	hırsızsınız
 lsryE	çabuk
 lst	değilsin
 lstm	olmadığınız
 lstn	siz değilsiniz
 lt$hdwn	şahidlik ediyor musunuz?
+lt$qY	güçlük çekesin diye
 lt$rk	ortak koşman için
 lt&mnn	mutlaka inanacak
 lt&mnwA	inanmağa
@@ -4939,7 +5434,9 @@ ltnzyl	indirmesidir
 ltqr>h	okuman için
 ltqtlnY	beni öldürmek için
 ltqwlwn	söylüyorsunuz
+ltrDY	razı olman için
 ltrDwA	razı olmanız için
+ltrdyn	beni de alçaltacaktın
 ltrkbn	siz mutlaka bineceksiniz
 ltrkbwA	binmeniz için
 ltrkbwhA	binmeniz için
@@ -4957,9 +5454,11 @@ ltxrj	çıkarman için
 ltxrjnA	bizi çıkarmak için
 ltxrjwA	çıkarmak için
 ltzwl	yerinden kaldıracak
+lvmwd	Semud halkı
 lwA*A	birbirinin arkasına gizlenerek
 lwAHp	yakar kavurur
 lwH	bir levhadadır
+lwHd	elbette birdir
 lwT	Lut
 lwTA	Lut
 lwjdwA	bulurlardı
@@ -4970,14 +5469,17 @@ lwlyh	velisine
 lwlyt	mutlaka dönüp
 lwmp	kınamasından
 lwnhA	onun rengi
+lwqE	olacaktır
 lwqEthA	onun oluşunu
 lwqH	aşılayıcı olarak
 lwqthA	tam zamanında
 lwwA	çevirirler
+lxT_yn	suç işlemiştik
 lxbyr	haber alandır
 lxlq	yaratmak
 lxrjnA	çıkardık
 lxsf	yere batırırdı
+lxsrwn	ziyana uğrarsınız
 lxznp	bekçilerine
 ly$hdwA	şahit olmaları için
 ly$trwA	satmak için
@@ -5006,6 +5508,7 @@ lyDyE	zayi edecek
 lyE*b	azab etsin diye
 lyE*bhm	onlara azabetmeyi
 lyEbdwA	ibadet etmeleri
+lyEbdwn	bana kulluk etmeleri
 lyEjzh	engelleyecek
 lyElm	bilir
 lyElmwA	bilsinler diye
@@ -5024,6 +5527,7 @@ lySdwnhm	onları engellerler
 lySrmnhA	bahçeyi mutlaka devşireceklerine
 lyTAE	ita'at edilmekten
 lyTf_wA	söndürmek
+lyTgY	azar
 lyThrkm	sizi temizlemek
 lyTlEkm	sizi vâkıf kılacak
 lyTm}n	tatmin olması için
@@ -5089,7 +5593,7 @@ lyqrbwnA	bizi yaklaştırmaları
 lyqtlwk	seni öldürmek için
 lyqwln	der
 lyqwlwA	demeleri için
-lyqwlwn	söylüyorlar
+lyqwlwn	diyorlar ki
 lyqwm	yerine getirsinler diye
 lyqymwA	kılsınlar diye
 lyrDwkm	gönlünüzü hoş etmek için
@@ -5153,30 +5657,45 @@ l{tx*nh	edinirdik
 l{tx*wk	seni edinirlerdi
 l{xtlftm	buluşamazdınız
 m$A'	götürüp getiren
-m$fqwn	korkarlar
+m$fqwn	titrerler
 m$fqyn	korkarak
 m$hd	görmekten
+m$hwd	herkesin tanık olacağı
+m$hwdA	görülecek şeydir
+m$kwrA	teşekküre layık
 m$rbhm	içeceği yeri
 m$rk	müşrik erkek-
 m$rkp	müşrik kadından
-m$rkyn	ortak koşmadan
+m$rkwn	ortak koşmaları
+m$rkyn	ortak koşanlar
 m$rq	doğularına
+m$rqyn	güneş doğarken
 m$tbhA	(kimi) birbirine benzer
+m$trkwn	ortaksınız
 m$wA	yürürler
+m$yd	sağlam
 m$ydp	sağlam
 m$yk	yürüyüşünde
 m&*n	bir tellal
+m&Sdp	üzerlerine kilitlenmiş
 m&jlA	belirli bir süreye göre
 m&mn	inanan
 m&mnA	mü'min
 m&mnp	inanan
 m&mnt	inanan
 m&mnwn	inanmış
-m&mnyn	mü'minler
+m&mnyn	iman
 m*'wmA	yerilmiş olarak
+m*Enyn	ita'at ederek
 m*b*byn	yalpalayıp dururlar
+m*kr	öğüt verensin
+m*kwrA	anılan
+m*mwm	kınananrak
 m*mwmA	kınanmış olarak
+m>kwl	yenmiş
 m>mnh	güvenli bir yere
+m>mwn	güven
+m>tyA	yerine gelecektir
 m>wYhm	durağı
 m>wYkm	varacağınız yer
 mA&hA	suyu
@@ -5187,7 +5706,9 @@ mA'k	suyunu
 mAl	mal
 mAlA	mal
 mAlh	malı
+mAlyh	malım
 mAnEthm	koruyacağını
+mArd	ita'at dışına çıkan
 mArj	dumanı olmayan alev-
 mAt	ölen
 mAtwA	ölenler
@@ -5207,38 +5728,50 @@ mE*bwhA	ona azab ederiz
 mE*byn	biz azab edecek
 mE*rp	ma'zeret için
 mE*rthm	mazeretleri
+mEA$A	geçim zamanı
 mEA*	sığınırım
+mEA*yrh	özürler
 mEAd	varılacak yere
 mETlp	kullanılmaz olmuştur
+mEdwd	belirli
 mEdwdp	sayılı
 mEdwdt	sayılı
 mEjzY	aciz bırakacak
 mEjzyn	aciz bırakacak
 mEkwfA	bekletilen
 mElm	öğretilmiştir
+mElwm	belli
 mElwmt	bilinen
 mEmr	canlıya
 mEqb	iptal edecek
 mEqbt	izleyenler
+mErDwn	aldırmayarak
+mErDyn	yüz çevirici
 mErp	bir eziyet
 mErw$t	çardaklı
 mErwf	güzel
-mErwfA	iyilikle
+mErwfA	güzel
 mErwfp	malumdur
 mEtd	saldırgan
 mEy$	geçimlikler
 mEy$p	bir geçim
 mEy$thA	refah içinde
 mEy$thm	onların geçimliklerini
+mEyn	akar
 mEzl	bir kenarda
 mH$wrp	toplanıp gelen
+mH*wrA	cidden korkunçtur
 mHDrA	hazır
+mHDrwn	hazırlanmış
 mHSnp	müstahkem
 mHSnt	iffetli yaşamaları
 mHSnyn	iffetli yaşamak
+mHZwrA	kısıtlanmış
 mHbp	bir sevgi
 mHdv	yeni
+mHfwZ	korunan
 mHfwZA	korunmuş
+mHjwrA	yasaklanmıştır
 mHkmp	hükmü açık
 mHkmt	muhkemdir (ki)
 mHlY	helal saymamak şartiyle
@@ -5246,31 +5779,45 @@ mHlh	yerine
 mHlhA	onların varacakları yer
 mHlqyn	traş ederek
 mHmd	Muhammed
+mHmwdA	güzel
 mHrm	yasaklanmış iken
 mHrmA	bir haramlık
 mHrmp	yasaklandı
 mHrrA	tam hür olarak
+mHrwmwn	yoksun bırakıldık
 mHryb	kaleler-
 mHsn	güzel davranarak
+mHsnwn	iyilik eden(lerle)
+mHsnyn	güzel davranan
+mHswrA	hasret içinde
+mHtDr	hazır bulunsun (suyunu alsın)
 mHyAhm	yaşamaları
-mHyT	tamamen kuşatmıştır
+mHyS	kaçacak yer
+mHySA	kaçmak (imkanı)
+mHyT	kuşatmıştı
+mHyTA	kuşatmıştır
 mSAnE	köşkler (ve müstahkem kaleler)
 mSbAH	lamba
+mSbHyn	sabahleyin
 mSdq	doğrulayan
 mSdqA	doğrulayan
 mSfY	süzme
 mSfrA	sapsarı
-mSfwfp	sıra sıra dizilmiş
+mSfwfp	dizilmiş
+mSlHwn	ıslah edici
 mSlY	bir namaz yeri
 mSr	Mısır
 mSrA	bir şehre
+mSrfA	kaçacak bir yer
 mSrwfA	geri çevrilecek
 mSybhA	onun başına gelecektir
 mSybp	musibet
+mSyrA	bir gidiş yeridir
 mSyrkm	gideceğiniz yer
 mTAE	ita'at edilendir
 mThrp	tertemiz
 mTlE	ağarıncaya
+mTlEwn	bakar mısınız?
 mTm}n	mutmain olduğu halde
 mTm}np	huzur içinde
 mTm}nyn	uslu uslu
@@ -5278,27 +5825,38 @@ mTr	yağmur
 mTrA	yağmur
 mTwyt	dürülmüştür
 mZlmA	kapkaranlık
+mZlmwn	karanlıkta kalıverirler
 mZlwmA	haksızlıkla
+m_Ab	gelecek
+m_AbA	bir yol
 m_Arb	ihtiyaçlarım
 mb$rA	müjdeleyici olmak
 mb$rt	müjdeler olarak
 mb$ryn	müjdeciler
 mbArk	mubarek
 mbArkA	mübarek
+mbEdwn	uzaklaştırılmışlardır
 mbEwvwn	diriltileceksiniz
 mbSrA	görmeniz için
 mbSrp	aydınlatıcı
+mbSrwn	(gerçeği) görürler
+mbTlwn	iptal edenler(den)
 mbdl	değiştirecek
 mbdyh	açığa vuracağı
 mblghm	onların erişebilecekleri
+mblswn	umutsuzdurlar
 mbnyp	yapılmış
 mbr'wn	uzaktırlar
 mbrk	mübarek
 mbrkA	bereketli
 mbrkp	mübarek
+mbrmwn	kararlıyız
 mbswTtAn	açıktır
 mbtlykm	sizi deneyecektir
+mbvwvp	serilmiş
 mbw>	bir yere
+mbyn	açık
+mbynA	açık
 mbynp	açık
 mbynt	açık açık
 md	uzattı
@@ -5307,21 +5865,32 @@ mdAdA	mürekkep
 mdHwrA	ve kovulmuş olarak
 mdbrA	dönüp
 mdbryn	kaçarsınız
+mddA	yardım için
 mddnhA	yaydık
+mdhAmtAn	yemyeşildirler
+mdhnwn	küçümsüyorsunuz
+mdkr	öğüt alan
 mdrArA	bol bol
+mdt	uzatıldığı
 mdthm	tanıdığınız süreye
 mdxl	girdirişiyle
 mdxlA	bir yere
 mdyn	Medyen
+mdynyn	cezalandırılmayacak
 mfAtH	anahtarları
 mfAtHh	anahtarlarına
-mfEwlA	yapılması gereken
+mfAzA	başarı ödülü
+mfEwlA	yapılır
 mfSlA	açıklanmış olarak
 mfSlt	ayrı ayrı
+mfrTwn	ona sürüleceklerdir
+mfrwDA	belirli
 mfsdwn	bozgunculuk yapıyorlar
+mfsdyn	bozgunculukla
 mftHp	açılmış
 mftr	iftira ediyorsun
 mftrY	uydurulmuş
+mftrwn	yalan uyduranlarsınız
 mftryt	uydurulmuş
 mgAnm	ganimetler
 mgDbA	kızarak
@@ -5332,29 +5901,44 @@ mgnwn	savabilir
 mgrb	battığı yere
 mgrm	borç-
 mgrmA	angarya
+mgrqwn	boğulacak
 mgrt	mağaralar
 mgtsl	yıkanacak
 mgyrA	değiştirmez
 mhAd	bir döşek
 mhAjr	hicret edeceğim
 mhAjrA	göç etmek amacıyle
+mhAnA	hor ve hakir olarak
 mhTEyn	koşarlar
 mhdA	beşik
 mhjrt	göç ederek
+mhjwrA	terk edilmiş
 mhlk	helakine
 mhlkY	helak edici
 mhlkhm	helak edeceği
 mhlkwA	helak edeceğiz
 mhlkwhA	onu yok ederiz
 mhtd	doğru yolda olanlar
-mhyn	aşağılıktır
+mhtdwn	gidiyoruz
+mhtdyn	yola gelici
+mhylA	dağılan
+mhyn	âdi
+mhynA	alçaltıcı
 mhzwm	bozguna uğratılacak
+mj*w*	kesinti
 mjmE	birleştiği yere
 mjmwE	toplanacağı
-mjnwn	cinlenmiştir
+mjnwn	mecnun
 mjr-YhA	yüzmesi de
 mjrmA	suçlu olarak
+mjrmwn	suç işleyen
 mjrmyhA	(oranın) suçluları
+mjrmyn	suçlu
+mjtmEwn	toplanıyor
+mjyb	kabul edendir
+mjyd	şerefli
+mk*byn	yalanlayıcıları
+mk*wb	yalanlanmayacak
 mkA'	ıslık çalmadan
 mkAn	yer-
 mkAnA	yeri
@@ -5362,23 +5946,29 @@ mkAnh	yerinde
 mkAnkm	(haydi) yerlerinize!
 mkAnthm	onları oldukları yerde
 mkAntkm	durumunuza
+mkZwm	sıkıntıdan yutkunarak
 mkbA	kapanarak
 mklbyn	avcı
 mknA	güçlü kıldık
 mknY	beni bulundurduğu imkanlar
 mknhm	onlara imkan vermiştik
 mknkm	size vermediğimiz
+mknwn	saklı
 mkp	Mekke'nin
 mkr	hileleri
 mkrA	bir tuzak
 mkrhm	tuzakları
 mkrm	değer veren
+mkrmp	değer verilen
+mkrmwn	değerli
 mkrtmwh	kurduğunuz
 mkrwA	onlar kurdular
+mkrwhA	hoş görülmeyen şeylerdir
 mktwbA	yazılı
 mkv	ağır ağır
+mkvwn	kalacaksınız
 mkvyn	kalacaklardır
-mkyn	mevki sahibisin
+mkyn	sağlam
 ml'	dolusu
 ml>	ileri gelenler
 mlEwnyn	la'netlenirler
@@ -5391,32 +5981,49 @@ mlkA	melek
 mlkh	mülkünü
 mlkt	bulunanlar
 mlktm	sahip olduğunuzun
+mlkwn	malik olmaktadırlar
 mlkwt	melekutunu
 mlkyn	ikiniz de birer melek
 mlp	dinine
 mlq	karşılaşacağımı
 mlqwA	kavuşacaklardır
 mlqwh	O'na kavuşacaksınız
+mlqwn	atacağınız
 mlqykm	sizi bulacaktır
+mltHdA	sığınacak kimse
 mlthm	kendi dinlerine
 mltkm	sizin dininize
 mltnA	dinimize
 mlwkA	krallar
 mlwmA	kınanmış
+mlwmyn	kınanacak
+mlyA	uzun süre
 mlyk	padişahın
+mlym	kendi kendini kınıyordu
 ml}kp	melekler
 ml}t	doldurulmuş
 mmTrnA	bize yağmur yağdıracak
+mmddp	uzatılmış
 mmdkm	size yardım edeceğim
+mmdwd	uzamış
+mmdwdA	uzun boylu
 mmlwkA	başkasının malı olan
+mmnwEp	yasaklanmayan
+mmnwn	kesinti
 mmrd	cilalı
 mmsk	tutan
 mmskt	durduracaklar
 mmzq	dağılıp
 mn	lutfetti
+mn$rp	açılan
+mn$wr	yayılmış
+mn$wrA	açılmış olarak
 mn*r	uyarıcısın
+mn*rwn	uyarıcıları
+mn*ryn	uyarıcılar
 mnA	başa kakmayan
 mnAE	engel olan
+mnAS	kurtuluş
 mnAdyA	bir davetçi
 mnAkbhA	onun omuzlarında (yeryüzünde)
 mnAmhA	uykularında
@@ -5424,53 +6031,93 @@ mnAmk	uykunda
 mnAmkm	uyumanızdır
 mnAsknA	ibadet yollarımızı
 mnAzl	konaklar
+mnDwd	meyvaları dizili
 mnE	men eden
 mnEhm	engel olan
 mnEk	seni alıkoyan
 mnEnA	bizi alıkoyan
+mnSwrA	kendisine yardım edilmiştir
 mnTq	dili
 mnY	meni-
+mnZrwn	süre verilerlerden
+mnZryn	mühletleri
+mnbvA	dağılan
 mnfE	faydalar
 mnfTr	yarılır
 mnfkyn	bırakılacak
 mnfqwn	münafıklar
+mnhmr	boşalan
 mnjwk	seni kurtaracağız
 mnkr	kötülük-
 mnkrA	çirkin (olanı)
 mnkrp	inkarcıdır
+mnkrwn	inkar
 mnnA	lutuflarda bulunduk
+mnqEr	köklerinden sökülmüş
 mnqlb	bir devrimle
+mnqlbA	bir akıbet
+mnqlbwn	döneceğiz
+mnqwS	eksik
 mns>th	değneğini
 mnskA	ibadet şekli
 mnskkm	ibadetlerinizi
+mnsyA	unutulanlar gibi
+mnt$r	yayılan
+mntSr	muzaffer (yenilmez)
+mntSrA	kendisinine yardım edilen
+mntSryn	yardım edilen
+mntZrwn	beklemekteyiz
+mnthYhA	onun bilgisi
+mnthwn	vazgeçtiniz
+mntqmwn	öc alırız
+mnvwrA	saçılmış
+mnwEA	eli sıkıdır
+mnyb	yönelen
 mnybA	içtenlikle yönelerek
 mnybyn	yönelin
+mnyr	aydınlatıcı
+mnyrA	aydınlatıcı
 mnzl	indirilmiştir
 mnzlA	bir inişle
 mnzlhA	onu indireceğim
 mnzlwn	indireceğiz
+mnzlyn	indirici
 mqAlyd	anahtarları
 mqAm	makam-
 mqAmA	makamı
 mqAmY	makamımdan
 mqAmhmA	onların yerine
 mqAmk	makamın-
+mqDyA	kesin
 mqEd	yerleştiriyordun
 mqSwrt	kapanmış
 mqTwE	kesilecektir
 mqTwEp	tükenmeyen
 mqbwDp	alınan
 mqdArh	miktarı
+mqdwrA	takdir edilmiş
 mqmE	kamçılar
+mqmHwn	kafaları kalkıktır
 mqnEY	dikerek
+mqrbp	akraba olan
 mqrnyn	bağlı olarak
+mqswm	ayrılmıştır
 mqtA	gazabı
 mqtHm	(cehenneme) girecek
 mqtSd	orta gidendir
 mqtSdp	tutumlu
+mqtdr	güçlü
+mqtdrA	kadirdir
+mqtdrwn	gücümüz yeter
+mqtdwn	uyarız
 mqtkm	sizin kızmanız-
-mqym	kılanlardan
+mqtrfwn	işledikleri suçları
+mqtrnyn	yakın
+mqylA	dinlenecekleri yer
+mqym	kalıcı
+mqytA	gözetip karşılığını verendir
 mr	uğramıştı
+mr$dA	yol gösteren
 mrA'	tartışma
 mrD	hastalık
 mrDA	hastalıklarını
@@ -5479,39 +6126,68 @@ mrDAtY	benim rızamı
 mrDEp	emziren
 mrDY	hasta
 mrDt	hastalandığım
+mrDyA	beğenilmişlerden
+mrDyp	rızasını kazanarak
 mrHA	böbürlenerek
 mrHbA	merhaba
+mrSAdA	gözetleme yeri
 mrSd	gözetleme yerinde
+mrSwS	kenetlenmiş
 mrd	geri dönecek
+mrdA	varılacak yer bakımından
+mrdfyn	birbiri ardınca
 mrdnA	bizim dönüşümüz
 mrdwA	iyice alışmış
-mrfwEp	(saygı ile) yükseltilen
+mrdwd	geri çevrilmeyecek
+mrfqA	yararlı bir şey
+mrfwEp	yükseltilmiş
 mrgmA	gidecek
 mrj	salıverdi
 mrjEhm	dönüşleri
 mrjEkm	dönüşü
 mrjwA	ümit beslenen biri
 mrjwn	bırakılmışlardır
+mrkwm	üst üste yığılmış
 mrp	kez
 mrqdnA	yattığımız yer-
-mrsYhA	gelip çatması
+mrqwm	yazılmış
+mrsYhA	demir atacak
 mrsl	salıverecek
 mrslA	gönderilmiş bir elçi
 mrslp	göndereyim
 mrslwA	onlara göndereceğiz
+mrslwn	gönderilen elçileriz
+mrslyn	elçi göndericiyiz
 mrt	vakitte
+mrtAb	şüpheci
 mrtAn	iki defadır
+mrtfqA	ağırlanma
+mrtqbwn	beklemektedirler
 mrtyn	iki kez
 mrwA	rastlarlar
 mryDA	hasta
+mry_A	iç huzuruyla
+mryb	derin
+mryd	kaba (şarlatan)
+mrydA	asi
+mryj	çalkantılı
 mrym	Meryem
 mryp	şüphe
 ms	dokunduğu
 msAs	bana dokunmayın!
 msHA	okşamağa
+msHwrA	büyülenmiş
+msHwrwn	büyülenmiş
+msTwr	satır satır yazılmış
+msTwrA	yazılmıştır
+ms_wlA	sorumlu
+ms_wlwn	sorguya çekileceklerdir
+msd	hurma lifi-
 msfHt	zina etmemeleri
 msfHyn	zina etmemek
+msfrp	parıl parıl
 msfwHA	akıtılmış
+msgbp	açlık
 msh	dokunduğu
 mshm	kendilerine dokunduğu
 msjd	mescidde
@@ -5521,44 +6197,65 @@ mskm	size dokunduğu
 mskn	yerlerinde
 msknhm	yurtlarında
 msknkm	yuvalarınıza
+mskwb	fışkıran
 mskwnp	oturulmayan
 mskyn	fakiri
 mskynA	fakiri
 mslmA	bir müslüman
 mslmp	kusursuz
 mslmt	(kendisini Allah'a) teslim eden
-mslmyn	teslim olanlardan
+mslmwn	Müslüman
+mslmyn	müslüman
 msmE	dinlemez olası
 msmY	belli
 msnA	bize dokundu
 msnY	dokundurdu
 msndp	dayatılmış
+msnwn	değişmiş
 msrf	aşırı giden
+msrfwn	haddi aşan
+msrfyn	aşırı giden
+msrwrA	sevinçli
 mstDEfwn	hırpalanıyordunuz
 mstDEfyn	biz  aciz düşürülmüştük
+mstTr	satır satır yazılmıştır
+mstTyrA	salgın
 mst_nsyn	dalmayın
+mstb$rp	sevinçlidir
+mstbSryn	görenlerden
 msth	ona dokunan
 msthm	onlara dokunsa
+msthz'wn	(onlarla) alay ediyoruz
 mstkbrA	büyüklük taslar
+mstkbrwn	büyüklük taslarlar
 mstkbryn	kibirlenerek
 mstmEhm	dinleyenleri
+mstmEwn	dinliyoruz
+mstmr	süregelen
+mstmskwn	sarılıyorlar
+mstnfrp	kaçan
 mstqbl	yönelerek geldiğini
 mstqr	kalmak
 mstqrA	yerleşmiş
 mstqrhA	onun karar kıldığı yeri
-mstqym	dosdoğru
+mstqym	doğru
 mstqymA	doğru
+mstslmwn	teslim olmuşlardır
+mstwrA	gizli
 mstxf	gizlenendir
 mstxlfyn	hakim
 mswdA	kapkara
 mswdp	kapkara
 mswmp	işaretlenmiş (taşlar)
+mswmyn	nişanlı
 msxrt	boyun eğdirilmiştir
 mt	öldüğüm
 mt$bh	ve benzemez
 mt$bhA	ona benzer
 mt$bht	müteşabihdir
 mt$kswn	birbiriyle çekişen
+mtAb	tevbem/dönüşüm
+mtAbA	tevbesi kabul edilmiş olarak
 mtE	eşya
 mtEA	bir şey
 mtEhm	(zahire) yüklerini
@@ -5571,6 +6268,7 @@ mtEthm	sen onları ni'metlendirdin
 mtHrfA	bir tarafa çekilmek
 mtHyzA	katılmak
 mtSdEA	parçalanmış
+mtbEwn	takibedileceksiniz
 mtbr	yıkılmıştır
 mtbrjt	göstermeden
 mtfrqp	ayrı ayrı
@@ -5578,23 +6276,30 @@ mtfrqwn	çeşitli
 mtjAnf	istekle yönelmeden
 mtjwrt	birbirine komşu
 mtk_A	dayanacak yastıklar
+mtk_wn	yaslanmışlardır
 mtk_yn	yaslanarak
 mtkbr	kibirli
 mtm	ölür
 mtnA	öldüğümüz
+mtqblyn	karşılıklı
 mtqlbkm	dönüp dolaşacağınız yeri
 mtrAkbA	birbiri üzerine binmiş
 mtrbS	gözetlemektedir
+mtrbSwn	gözetenleriz
+mtrbp	hiçbir şeyi olmayan
 mtrfwhA	oranın zenginleri
 mtrfyhA	onun varlıklılarına
 mtrfyhm	varlıklılarını
+mtrfyn	varlık içinde şımartılmış
 mttAbEyn	ardı ardına
 mtwfyk	senin canını alacağım
 mtx*	edinmiş
 mtx*Y	ve tutmayan
 mtx*t	ve (gizli) edinmemeleri
+mtyn	sağlamdır
 mvAbp	toplanma yeri
 mvAnY	ikişerli
+mvbwrA	mahvolmuş
 mvl	gibi
 mvlA	örnek
 mvlh	benzeri
@@ -5608,6 +6313,7 @@ mvlyhm	kendilerinin iki katı
 mvnY	ikişer
 mvqAl	kadar
 mvqlp	yükü ağır gelen kimse
+mvqlwn	yükü altında (mıdır?)
 mvwAY	bana baktı
 mvwY	yeri
 mvwYh	iyi bak
@@ -5617,9 +6323,12 @@ mwADEh	yerleri-
 mwATn	yerlerde
 mwAqEwhA	içine düşeceklerini
 mwAxr	(denizi) yarıp gittiğini
+mwDwEp	konulmuş
+mwDwnp	altın ve cevahirle işlenmiş
 mwEZp	bir öğüt
 mwEd	va'dedilen bir zaman
-mwEdA	buluşma zamanı
+mwEdA	bir vade
+mwEdY	bana verdiğiniz sözden
 mwEdh	kendisine vaadedilen
 mwEdhm	buluşma zamanları
 mwEdk	senin sözünden
@@ -5627,7 +6336,9 @@ mwEdkm	buluşma zamanınız
 mwEdp	bir söz-
 mwS	vasiyyet eden-
 mwT}A	bir yere
+mwbqA	tehlikeli bir uçurum
 mwdp	sevgi
+mwfwrA	mükemmel
 mwhn	zayıflatır
 mwj	bir dalga
 mwlY	dost
@@ -5637,8 +6348,12 @@ mwlYkm	Mevlanız
 mwlYnA	bizim sahibimiz
 mwlwd	baba
 mwlyhA	yöneldiği
+mwqnwn	kesin olarak inandık
+mwqnyn	kesin olarak inanıyor
 mwqwfwn	tutuklanmış
+mwqwtA	vakitli olarak
 mwqyt	vakit ölçüleridir
+mwrA	bir çalkalanış
 mwsY	Musa
 mwtA	öldüremeye
 mwth	ölümünden
@@ -5648,46 +6363,65 @@ mwttnA	ölümümüz
 mwtwA	ölün
 mwvqA	kesin söz
 mwvqhm	sözlerini
+mwzwn	ölçülü mütenasib
 mwzynh	tartıları
+mw}lA	sığınacak bir yer
+mx*wlA	ve yalnız başına bırakılmış olarak
 mxDrp	yemyeşil
+mxDwd	dikensiz
 mxlSA	içi temiz
+mxlSwn	gönülden bağlananlarız
 mxlSyn	has kılarak
 mxldwn	ölümsüz
 mxlf	cayar
 mxlqp	biçimlenmiş
 mxmSp	açlıktan
 mxrj	çıkarışiyle
+mxrjA	bir çıkış
+mxrjwn	(yeniden hayata) çıkarılacağınızı
 mxtAl	kendini beğenenleri
 mxtAlA	kurumlu
 mxtlf	türlü
 mxtlfA	çeşitli
+mxtlfwn	ayrılığa düşmektedirler
+mxtlfyn	ihtilaf etmekten
+mxtwm	mühürlü
 mxzY	rezil, perişan edecektir
 myEAd	belirtilmiş
 mylA	bir sapıklığa
 mylp	baskın
 myqt	buluşma vakti
+myqtA	belirlenmiş bir vakittir
 myqthm	varacağı gündür
 myrv	mirası
 mysrp	bir kolaylığa
+myswrA	yumuşak
 myt	ölü
 mytA	ölü
 mytp	ölü
+mytwn	ölecekler
 myvq	söz
 myvqA	söz
 myvqh	iyice pekiştirdikten
 myvqhm	sözünü
 myvqkm	sizin sözünüzü
 mzAjhA	karışımı
+mzdjr	önleyici
 mzjYp	değersiz
 mzqtm	siz parçalandığınız
+mzyd	daha
 n!jY	biz kurtarırız
 n$&A	istediğimiz
 n$>	dilesek
 n$A'	istesek
+n$TA	usulca
 n$hd	tanıklık ederiz
+n$rA	yaydıkça
 n$rH	açmadık mı?
 n$rk	ortak koşmağa
+n$rt	açılıp yayıldığı
 n$trY	satmayacağız
+n$wrA	kalkıp çalışma zamanı
 n$wzA	huysuzluğundan
 n$wzhn	hırçınlık etmelerinden
 n&mn	inanırız
@@ -5701,26 +6435,32 @@ n*hbn	biz alıp götürsek
 n*l	rezil olmadan
 n*qh	ona taddırırız
 n*r	adak olarak
+n*rA	uyarı
 n*rt	adadım
 n*rtm	(ne) adarsanız
 n*wrhm	adaklarını
 n*yqhm	tattırırız
 n*yr	uyarıcı
-n*yrA	uyarıcıdır
+n*yrA	uyarıcı
 n>kl	yemeyi
 n>t	getiririz
 n>tY	gelip
 n>tykm	size getiremeye
 n>x*	almaktan
 nA$}p	kalkmak
+nADrp	ışıl ışıl parlar
+nAEmp	ni'met içinde mutludur
 nASH	bir öğütçüyüm
+nASbp	yorulur
 nASr	yardım eden
 nASrA	yardım edeni
 nASyp	perçem(den)
+nAZrp	bakar
 nAdY	yalvarmıştı
 nAdYh	ona seslenmişti
 nAdYnA	bize yalvarmıştı
 nAdwA	çağırın
+nAdyh	meclisini
 nAdykm	toplantılarınızda
 nAdynA	seslendiğimiz
 nAdytm	çağırıldığınız
@@ -5732,11 +6472,14 @@ nAqp	devesi
 nAr	ateş
 nArA	ateş
 nAskwh	uydukları
+nA}mwn	uyurlarken
+nDAxtAn	fışkıran
 nDTrhm	süreriz
 nDjt	piştikçe
 nDrbhA	anlatıyoruz
 nDrp	parlaklık
 nDyE	zayi etmeyiz
+nDyd	birbirine girmiş
 nE*b	azab edeceğiz
 nE*bh	ona azab edeceğiz
 nEAjh	kendi koyunlarına
@@ -5770,7 +6513,7 @@ nEql	düşünseydik
 nEwd	dönmemiz
 nEydh	onu iade ederiz
 nEydkm	döndürürüz
-nEym	nimetler
+nEym	ni'met
 nEymA	bir ni'met
 nH$r	toplarız
 nH$rhm	topladığımız
@@ -5781,8 +6524,11 @@ nHs	uğursuzluğu
 nHsAt	uğursuz
 nSHY	öğüdüm
 nSHwA	öğüt verdikleri
+nSHwn	öğüt verecek
 nSb	bir yorgunluk
+nSbA	yorgunluk
 nSbr	biz  dayanamayız
+nSbt	dikilmiş
 nSf	yarısı
 nSfh	onun yarısında
 nSlyh	onu sokacağız
@@ -5797,11 +6543,14 @@ nSrhm	onlara yardım etmeğe
 nSrkm	size yardım etmeye
 nSrnA	yardımımız
 nSrwhm	yardım etseler bile
+nSryn	yardımcı
 nSwHA	yürekten
-nSyb	bir pay
+nSyb	nasibi
 nSybA	bir pay
 nSybhm	nasipleri
 nSybk	nasibini
+nSyr	yardımcısı
+nSyrA	yardımcı
 nTEm	yediren
 nTEmkm	size yediriyoruz
 nTbE	mühürleriz
@@ -5813,7 +6562,7 @@ nTyE	ita'at etmeyiz
 nZn	sanıyoruz ki
 nZnk	biz seni sanıyoruz
 nZnkm	zannediyoruz ki siz
-nZr	bakarlar
+nZr	baktı
 nZrp	göz atarak
 nZryn	gözetleyiciler
 nb$rk	sana müjdeleriz
@@ -5846,7 +6595,7 @@ nbrH	vazgeçmeyeceğiz
 nbtgY	biz istemeyiz
 nbthl	gönülden la'netle du'a edelim de
 nbtlyh	imtihan etmek için
-nbyA	bir peygamber olarak
+nbyA	nebi
 nbyhm	peygamberleri
 nbyn	açıklıyoruz
 nb}	haber ver
@@ -5857,9 +6606,12 @@ ndE	çağıralım
 ndEwA	tapıyor
 ndEwh	yalnız O'na yalvarır
 ndlkm	size gösterelim
+ndmyn	pişman
 ndrY	bilmiyoruz
 ndxlhA	oraya girmeyiz
+ndyA	meclisi (mevkii)
 nf$t	yayıldığı
+nfAd	bitip tükenmesi
 nfAqA	iki yüzlülük
 nfEA	yarar
 nfEh	faydası-
@@ -5875,7 +6627,7 @@ nfqh	biz anlamıyoruz
 nfqp	bir masraf
 nfqthm	sadakalarının
 nfr	geri kalmaları
-nfrA	bir topluluğu
+nfrA	adamca da
 nfrq	ayırım yapmayız
 nfs	can
 nfsA	kişiye
@@ -5883,9 +6635,11 @@ nfsY	kendi
 nfsh	kendi
 nfshA	kendisini
 nfsk	canın
+nfwrA	kaçarlar
 nfwskm	içlerinizdeki
 nfx	üflenir
 nfxp	üfleme
+nfyrA	savaşçılarınızı
 ngAdr	bırakmamışızdır
 ngfr	bağışlayalım
 ngrqhm	onları (suda) boğarız
@@ -5895,6 +6649,7 @@ nhYkm	size yasakladı
 nhYkmA	sizi men'etti
 nhdY	doğru yola ilettiğimiz
 nhlk	helak etmek
+nhrA	bir ırmak
 nhwA	yasak kılınan
 nhyt	men'olundum
 njA	kurtulanı
@@ -5935,6 +6690,8 @@ nklA	ibret verici
 nklf	yüklemeyiz
 nklm	konuşuruz
 nkn	biz de
+nkr	görülmemiş tanınmamış
+nkrA	çirkin
 nkrhm	onlardan hoşlanmadı
 nkrwA	tanınmaz hale getirin
 nkswA	döndürüldüler
@@ -5944,6 +6701,7 @@ nktm	gizlemeyeceğiz
 nkv	ahdini bozarsa
 nkvwA	bozan
 nkwn	olalım
+nkyr	inkar
 nlEnhm	onları da la'netlememizden
 nmd	uzatırız
 nmdhm	kendilerine verdiğimiz
@@ -5971,11 +6729,13 @@ nnzlh	biz indirmeyiz
 nq*f	biz atarız
 nqDhm	bozmaları
 nqDt	çözen kadın
+nqEA	toz
 nqEd	oturur
 nqS	anlatıyoruz
 nqSS	anlatmadık
 nqSShm	anlatmadığımız
 nqSh	anlattıklarımız
+nqbA	delmeye
 nqdr	güç yetiremeyeceğiz
 nqmwA	öc almadılar
 nqr	üflendiği
@@ -5986,6 +6746,7 @@ nqwl	deriz
 nqyD	sardırırız
 nqybA	başkan
 nqym	kurmayız
+nqyrA	zerre kadar
 nrY	görünceye
 nrYk	görmüyoruz
 nrbk	biz seni yetiştirmedik mi?
@@ -6014,6 +6775,8 @@ ns_lk	biz senden istemiyoruz
 nsbA	nesep
 nsbH	tesbih ediyor
 nsbHk	seni tesbih edelim
+nsfA	ufalayıp
+nsft	ufalanıp savrulduğu
 nsk	kurbandan
 nslh	onun neslini
 nslkh	onu sokarız
@@ -6022,6 +6785,7 @@ nsmE	işitmiyoruz
 nsqT	düşürürüz
 nsqY	biz sulayamayız
 nsqykm	size içiriyoruz
+nstEyn	yardım isteriz
 nstHw*	biz üstünlük sağlamadık mı
 nstbq	yarışıyorduk
 nstnsx	yazıyor
@@ -6033,7 +6797,7 @@ nswq	sürüyoruz
 nswykm	sizi eşit tutuyorduk
 nsxr	alay edeceğiz
 nsxthA	onlardaki yazıda
-nsyA	unutulsa
+nsyA	unutkan
 nsynA	unutursak
 nsynkm	sizi unuttuk
 nsyr	yürütürüz
@@ -6085,6 +6849,7 @@ nxlfh	caymayacağımız
 nxlqkm	sizi yaratmadık mı?
 nxrj	çıkarıyoruz
 nxrjkm	sizi çıkarırız
+nxrp	çürümüş
 nxsf	batırırız
 nxtm	mühürleriz
 nxwD	dalardık
@@ -6095,7 +6860,7 @@ nzEnhA	onu geri alsak
 nzd	artırırız
 nzg	fitne soktuktan
 nzl	indirdi
-nzlA	ağırlanırlar
+nzlA	konak olarak
 nzlh	onu indirdi
 nzlhm	onların ağırlanışı
 nzlnA	indirdik
@@ -6123,16 +6888,22 @@ qAntA	O'na ita'at eden
 qArEp	bir bela
 qA}l	bir sözcü
 qA}lhA	onun söylediği
+qA}lwn	gündüz uyurlarken
 qA}m	durup
 qA}mA	ayakta
 qA}mp	dikili
+qA}mwn	yaparlar
 qDY	kesince
 qDYhA	açığa çıkardı
 qDwA	kestikleri
 qDynA	yaptığımız
 qDyt	kıldığınız
 qDytm	bitirince
+qEdwn	oturuyoruz
+qEwd	oturmuşlardı
+qEyd	oturan
 qSAS	kısas
+qSSA	ta'kibederek
 qSShm	onların hikayelerinde
 qSSnA	anlattık
 qSSnhm	anlattığımız
@@ -6140,13 +6911,16 @@ qSd	doğru
 qSmnA	kırıp geçirdik
 qSrt	(eşlerine) diken
 qSwrA	saraylar
+qSyA	uzak
 qSyh	onu takip et
 qTE	kıt'alar
 qTEA	parçalarıyla
 qTEn	kesen
 qTEt	biçildi
 qTEtm	kesmeniz
+qTmyr	bir çekirdek zarı-
 qTnA	bizim (azab) payımızı
+qTrA	erimiş katran
 qTrAn	katran-
 qTwfhA	meyveleri
 qbDA	yavaş yavaş
@@ -6154,7 +6928,7 @@ qbDnh	çekip aldık
 qbDp	bir avuç
 qbDth	O'nun avucu içindedir
 qbl	önce
-qblA	karşılarına
+qblA	açıkça
 qblY	benden önce
 qblh	önce
 qblhA	daha önce
@@ -6167,14 +6941,17 @@ qblthm	kıbleleri-
 qbltk	senin kıblene
 qbrh	onun kabri
 qbs	koru
+qbylA	karşımıza
 qd	yırtılmış
+qdHA	çarparak
+qddA	çeşitli
 qdm	ayak
 qdmt	öne sürdüğü
 qdmtm	önceden (biriktirdiklerinizi)
 qdmtmwh	bunu önümüze getirdiniz
 qdmwA	öne sürdükleri
 qdr	bir süreye
-qdrA	bir kaderdir
+qdrA	bir ölçü
 qdrh	kadrini
 qdrnA	takdir eden
 qdrnh	tayin ettik
@@ -6183,9 +6960,13 @@ qdrwA	tanıyamadılar
 qdrwhA	onları takdir etmişlerdir
 qdrwn	kadir olduklarını
 qdryn	gücümüz yeter
+qdym	eski
 qdyr	kadirdir
+qdyrA	güçlüdür
 qfynA	ardarda gönderdik
+qhrwn	eziciler olacağız
 ql	az
+qlY	darılmadı
 qlb	kalbi
 qlbY	kalbimin
 qlbh	kalbini
@@ -6205,21 +6986,27 @@ qlwbnA	kalblerimiz
 qlyl	azı
 qlylA	az
 qlylp	az olan
+qlylwn	az bir
 qm	kalk
+qmTryrA	çok katı
 qmtm	dur(mak iste)diğiniz
 qmySh	gömleği
 qnTArA	kantarlarca (mal)
 qnTwA	umutlarını kestikten
 qnt	ibadet eden
 qntt	ita'atkar olup
+qntwn	boyun eğmiştir
+qntyn	gönülden bağlılık ve saygı ile
 qnwAn	sarkan
+qnwT	ümitsiz olur
 qr'An	Kur'an
 qr'AnA	okunan
+qr'Anh	onun okunuşunu
 qr'nA	bir Kur'an
 qr>nh	O'nu okuduğumuz
 qr>t	okuduğun
 qrATys	parça parça kağıtlar
-qrAr	oturmaya uygun
+qrAr	kararı (kökü)
 qrArA	durulacak yer
 qrDA	bir borç
 qrH	bir yara
@@ -6239,8 +7026,10 @@ qrt	aydınlığı
 qrw'	kur' (üç adet veya üç temizlik süresi)
 qrwn	Karun
 qrwnA	nesiller
+qry$	Kureyşi
 qryb	yakın
 qrybA	yakın
+qryn	bir arkadaşım
 qrynA	arkadaşı
 qrynh	arkadaşı
 qryp	kent
@@ -6253,6 +7042,7 @@ qsmnA	taksim ettik
 qsmp	bir taksimdir
 qst	katılaştı
 qswp	katıdır
+qswrp	aslan-
 qsyp	kaskatı
 qsysyn	keşişler
 qtAl	savaş
@@ -6262,7 +7052,7 @@ qtlh	onu öldürürse
 qtlhm	onları öldürdü
 qtlkm	sizinle savaşsalardı
 qtlnA	biz öldürdük
-qtlt	öldürdüğün
+qtlt	öldürüldü
 qtltm	öldürülür
 qtltmwhm	onları öldürdünüz
 qtlwA	savaşın
@@ -6270,12 +7060,16 @@ qtlwh	onu öldürmediler
 qtlwhm	onlarla savaşın (ki)
 qtlwkm	sizinle savaşan
 qtr	karanlık
+qtrp	karanlık
+qtwrA	çok cimridir
 qwA	koruyun
+qwAmA	dengeli
 qwAryr	şeffaf sırça-
-qwAryrA	billurlar ki
+qwAryrA	billur
 qwY	güçlüdür
 qwl	söz
 qwlA	söz
+qwlY	sözümü
 qwlh	sözü
 qwlhA	onun sözüne
 qwlhm	sözleri
@@ -6301,10 +7095,12 @@ qwtlwA	onlarla savaşılsa
 qwyA	güçlüdür
 qyAm	kalkmış
 qyl	dendi
-qylA	denilir
+qylA	sözlü
 qymA	ayakta
-r$dA	bir olgunluk
+qymp	doğru, değerli
+r$dA	akıl
 r$dh	doğru yolu bulma yeteneğini
+r$yd	aklı başında
 r'A	görünce
 r'Ah	onu görünce
 r'AhA	görünce
@@ -6330,28 +7126,35 @@ r>ynh	O'nu görünce
 r>yt	görürsün
 r>ythm	görürsün
 r>ytmwh	onu gördünüz
-rADyp	razı olarak
+rADyp	memnun
 rAbEhm	dördüncüleri
 rAbyA	üste çıkan
+rAbyp	şiddeti gittikçe artan
 rAd	geri çevirecek
 rAdwh	onu tekrar geri vereceğiz
+rAfEp	yükselticidir
 rAkEA	eğilerek (secdeye)
 rAn	paslanmıştır
+rAq	efsun yapar
 rAsyt	sabit
 rDY	razı olmuştur
 rDwA	hoşlanırlar
 rDwn	rızasına
 rDwnh	rızasına
+rDyA	razı olduklarından
 rDytm	razı olmuştunuz
 rEAythA	riayet ederek
+rEbA	korku
 rEnA	Ra'ina (bizi gözet yahut: kaba söz)
 rEwhA	ona uymadılar
+rEwn	gözetirler
 rHAlhm	yüklerinin
 rHbt	genişliğine
 rHl	yükünün
 rHlh	yükünde
 rHlp	yolculuğuna
 rHm	acıdığı
+rHmA	merhamete
 rHmA'	merhametlidirler
 rHmh	(Allah) ona acımıştır
 rHmnA	bize acısa da
@@ -6362,8 +7165,10 @@ rHmtY	benim rahmetim-
 rHmth	rahmeti-
 rHmtk	rahmetinin
 rHmtnA	rahmetimiz-
-rHym	çok rahmet edendir
+rHym	Rahimdir
+rHymA	çok acır
 rHyq	halis bir şarap-
+rSdA	gözetleyen
 rTb	yaş
 rTbA	olgun hurma
 rb	Rab-
@@ -6390,6 +7195,7 @@ rddnh	onu çevirdik
 rddt	döndürülsem bile
 rdf	ardınıza takılmıştır
 rdhA	onu reddetmeye
+rdmA	sağlam bir engel
 rdt	geri verilmiş
 rdwA	götürülseler
 rdwh	onu götürselerdi
@@ -6397,15 +7203,22 @@ rdwhA	getirin onları
 rfE	yükseltti
 rfEh	onu yükseltti
 rfEhA	yükseltti
+rfEt	yükseltilmiş
 rfrf	yastıklar
 rfv	kadına yaklaşmak
 rfyE	yükselten
+rfyqA	arkadaştır
 rgbA	umarak
+rgbwn	rağbet ederiz
 rgdA	bol bol
 rhT	kişi
 rhTk	yakın çevren olmasaydı
 rhbp	korkunuz
+rhqA	şımarıklığını
 rhwA	açık
+rhyn	bağlıdır
+rhynp	rehin alınmıştır
+rjA	şiddetle sarsılarak
 rjAl	erkekler
 rjAlA	erkek
 rjAlkm	erkekleriniz-
@@ -6416,6 +7229,7 @@ rjEnA	dönersek
 rjEt	götürülmüş olsam bile
 rjEtm	döndüğünüz
 rjEwA	döndükleri
+rjEwn	döneceğiz
 rjl	erkeğin
 rjlA	adam
 rjlAn	iki adam
@@ -6426,24 +7240,30 @@ rjsA	pislik
 rjshm	pisliklerine
 rjt	sarsıldığı
 rjwmA	taşlamalar
+rjym	kovuldun
 rjz	pisliğini
 rjzA	bir azab
 rkAb	deve
 rkAmA	birbiri üstüne
 rkEA	rüku' ederek
+rkEwn	rüku'a varan
 rkbA	bindikleri
 rkbAnA	binmiş olarak
+rkbk	( o şekilde) seni terkib etti
 rkbwA	bindikleri
 rkn	bir yere
 rkwbhm	binekleridir
+rkzA	cılız bir sesini
 rmDAn	ramazan
 rmY	attı
+rmym	çürümüş
 rmyt	attığın
 rmzA	işaretten
 rq	ince deri üzerine
 rqbp	bir köle
 rqwd	uyudukları halde
-rqyb	gözetleyiciler
+rqyb	gözetliyorum
+rqybA	gözetleyicidir
 rsAlp	mesajlarını
 rsAlth	mesajını
 rsl	elçiler
@@ -6476,6 +7296,7 @@ rwdtn	murad almak istediğiniz
 rwdtnY	murad almak istedi
 rwdwh	murad almağa kalkıştılar
 rwsY	dağlar
+rwydA	birazcık
 rxA'	tatlı tatlı
 ryE	tepeye (yol üzerine)
 ryH	kokusunu
@@ -6527,6 +7348,7 @@ sAbqwA	koşun
 sAdshm	altıncıları
 sAdtnA	beylerimize
 sAflhA	altına
+sAhwn	gaflet ederler
 sAjdA	secde ederek
 sAknA	durgun
 sAq	bacakların
@@ -6541,6 +7363,7 @@ sA}q	bir sürücü
 sEY	çalışır
 sEdwA	mutlu olan(lar)
 sEp	genişlik
+sErt	alevlendirildiği
 sEth	genişliğine
 sEw	çalışan(lar)
 sEwA	çalışanlar-
@@ -6549,6 +7372,7 @@ sEyh	onun çalışması
 sEyhA	yaraşır biçimde
 sEyhm	çalışmalarının
 sEykm	çalışmanız
+sEyrA	çılgın alevi
 sHAb	bir bulut
 sHAbA	bulutu
 sHAr	büyücüleri
@@ -6556,6 +7380,8 @@ sHr	büyüdür
 sHrAn	iki büyü!
 sHrhm	büyülerinden
 sHrwA	büyülediler
+sHyq	uzak
+sTHt	yayılıp döşenmiş
 sY'	fenalaştı
 s_Atykm	size getireyim
 s_AwY	sığınacağım
@@ -6567,21 +7393,25 @@ sbEp	yedi
 sbEwn	yetmiş
 sbEyn	yetmiş
 sbH	tesbih et
-sbHA	uğraşacağın şeyler
+sbHA	yüzerek
 sbHAn	şanı yücedir
 sbHn	yücedir
 sbHnh	O yücedir
 sbHnk	sen yücesin
 sbHwA	tesbih edin
+sbbA	bir yol
 sbgt	geniş zırhlar
 sbl	yollarına
 sblA	yollar
 sblnA	yollarımızı
 sbq	geçmiş
+sbqA	yarışarak
 sbqkm	sizden önce
 sbqt	geçmiş
 sbqwA	kaçabileceklerini
+sbqwn	önde giderler
 sbqwnA	bizden önce
+sbqyn	geçip gidecek
 sbthm	cumartesi
 sbyl	yol
 sbylA	yol
@@ -6591,20 +7421,28 @@ sbylhm	yollarını
 sbylk	senin yolun-
 sbylnA	bizim yolumuza
 sdA	bir sed
+sdY	başı boş
 sdr	sedir ağacı
 sdrp	Sidretü'l
+sdydA	doğru
 sfAhp	beyinsizlik
 sfh	sefih kılan
 sfhA	beyinsizce
+sflyn	aşağısına
 sfr	sefer
 sfrnA	yolculuğumuzdan
+sfrp	yazıcıların
 sfyhA	aklı ermez
 sfyhnA	bizim beyinsiz
 sfynp	gemiyi
 shwlhA	O'nun düzlüklerinde
+sjY	sakinleşen
 sjdA	secdeye
 sjdwA	secde edince
-sjyl	balçıktan pişirilmiş
+sjdyn	secdeye
+sjrt	kaynatıldığı
+sjyl	çamur-
+sjyn	Siccin('in)
 skn	barınan
 sknA	oturma yeri
 skntm	oturduğunuz
@@ -6621,6 +7459,7 @@ sl	sor
 slTn	güç
 slTnA	bir güç
 slTnh	onun gücü
+slTnyh	gücüm (saltanatım)
 slf	geçmişte
 slfA	geçmiş ataları
 slhm	sor onlara
@@ -6630,9 +7469,12 @@ sllp	süzmesi-
 slm	Selam
 slmA	Selam
 slmtm	verdikten
+slmwn	sağlam iken
 slqwkm	sizi incitirler
+slsbylA	Selsebil
 slslA	zincirler
 slslp	zincire
+slym	tertemiz
 slymn	Süleyman
 sm	deliği
 smA'	göğe
@@ -6649,14 +7491,17 @@ smEtmwh	onu işittiğiniz
 smEwA	işitirler
 smEwn	kulak verirler
 smYkm	size adını verdi
+smdwn	baş kaldırıyorsunuz
 smkhA	kalınlığını
 smrA	geceleyin
 smwAt	gök
 smwhm	onları isimlendirin
 smwm	iliklere işleyen bir ateş
 smwt	göğü
+smyA	adaş
 smyE	işitendi
 smyEA	işitici
+smyn	semiz
 smythA	ona adını verdim
 smytmwhA	isimlendirdiği
 sn$d	kuvvetlendireceğiz
@@ -6693,21 +7538,27 @@ sqT	düşürüldü
 sqTwA	düşmüşlerdir
 sqfA	tavanlar
 sqnh	onu yollarız
+sqr	Sekar'a
+sqym	hastayım
 sqyt	sulamanın
 srA	gizli
 srAEA	hızlı hızlı
 srAHA	bir salışla
+srAbA	bir serab
 srAbylhm	gömlekleri
 srAdqhA	çadırı
 srAjA	bir lamba
 srHwhn	bırakın
+srbA	sıyrılıp
 srbyl	elbiseler
 srhm	onların sırlarını
 srjA	bir kandil
 srkm	sizin gizlinizi
 srmdA	sürekli
 srq	çalmıştı
+srqyn	hırsız
 srr	tahtlar
+sryA	bir su arkı
 sryE	çabuktur
 st*krwnhn	onları anacağınızı
 stdEwn	siz yakında da'vet edileceksiniz
@@ -6716,6 +7567,7 @@ stjdnY	beni bulursun
 stjdwn	bulacaksınız
 stktb	yazılacaktır
 stp	altı
+strA	bir siper
 styn	altmış
 sw'	kötü
 sw'A	kötülük
@@ -6725,8 +7577,11 @@ sw'tkm	çirkin yerlerinizi
 swA'	düz
 swAEA	Suva'ı
 swT	kırbacını
+swY	uygun
 swYh	ona biçim verdi
+swYhA	onu biçimlendirene
 swYk	seni biçimlendireni
+swd	kara
 swl	sürüklemiştir
 swlt	süsledi
 swqh	gövdesinin
@@ -6761,7 +7616,9 @@ sydhA	kadının kocasına
 sydxlhm	onları sokacaktır
 sydxlwn	gireceklerdir
 sygfr	(nasıl olsa) bağışlanacağız
+syglbwn	yeneceklerdir
 syhdyhm	onları doğru yola iletecektir
+syhdyn	bana yol gösterecektir
 syhzm	bozulacak
 syjEl	yaratacaktır
 syjzwn	cezasını çekeceklerdir
@@ -6772,8 +7629,10 @@ syl	selini
 symAhm	nişanları vardır
 synA'	Sinâ-
 synAlhm	erişecektir
+synyn	sina
 syqwl	diyecekler
 syqwlwn	diyecekler
+syrA	bir yürüyüş
 syrHmhm	onlara rahmet edecektir
 syrt	yürütüldüğü
 syrthA	durumuna
@@ -6784,20 +7643,25 @@ sy}h	kötü
 sy}p	kötülük
 s}Ht	seyahat eden
 s}l	istedikleri
+s}lt	sorulduğu
 s}lwA	istenseydi
 t$A'	dilediği
 t$A'wn	siz dileyemezsiniz
+t$Erwn	siz farkında
 t$TT	haksızlık etme
 t$bh	müteşabih
 t$bht	birbirine benzedi
 t$hd	sen şahidlik etme
+t$hdwn	şahidsiniz
 t$krwA	şükrederseniz
+t$krwn	şüketmez-
 t$mt	güldürme
 t$qq	yarılır
 t$qwn	düşmanlık
+t$rbwn	içtiğiniz
 t$rk	ortak koşma
 t$rkwA	ortak koşmayı
-t$rkwn	sizin ortak koştuğunuz
+t$rkwn	ortak koştuğunuz
 t$thY	çektiği
 t$thyh	canların çektiği
 t$trwA	satmayın
@@ -6808,10 +7672,12 @@ t&*wnnY	beni incitiyorsunuz
 t&Ax*nA	bizi sorumlu tutma
 t&Ax*nY	beni kınama
 t&dwA	vermenizi
+t&fkwn	çevriliyorsunuz
 t&mn	iman etmesi
 t&mnwA	inanır
 t&mnwn	inanıyor
 t&mr	emrolunduğun
+t&mrwn	size emredilen
 t&tY	verir
 t&twA	vermeyin
 t&twh	verilmezse
@@ -6822,10 +7688,13 @@ t&zhm	onları kışkırtıyorlar
 t*bHwA	kesmenizi
 t*hb	gitmesin
 t*hbwA	götürmeniz
+t*hbwn	gidiyorsunuz
 t*hl	unutur
 t*kr	anıyorsun
 t*krp	bir öğüt
 t*krwA	düşünürler
+t*krwn	öğüt alırsınız
+t*lylA	aşağı eğdirilerek
 t*r	bırakma
 t*rhm	onları bırakırsan
 t*rn	bırakmayın
@@ -6845,9 +7714,10 @@ t>mnh	ona versen
 t>mrhm	emrediyor
 t>mrk	sana emrediyor
 t>mrnA	senin bize emrettiğin
-t>mrwn	emrediyorsunuz
+t>mrwn	buyurursunuz
 t>mrwnY	bana emrediyorsunuz
 t>mrwnnA	bize emrediyordunuz
+t>mryn	buyurursan
 t>s	sen üzülme
 t>swA	üzülmemeniz
 t>tY	gelir
@@ -6859,7 +7729,10 @@ t>twnnA	bize gelirdiniz
 t>tyhm	gelmesini
 t>tykm	size geliyor
 t>tynA	bize gelmez
+t>vym	günaha sokma
+t>vymA	günaha sokan bir laf
 t>wyl	içyüzü
+t>wylA	sonuç bakımından
 t>wylh	yorumu
 t>x*	tutma
 t>x*h	O'nu tutmaz
@@ -6880,8 +7753,11 @@ tDArwhn	onlara zarar vermeyin
 tDE	doğurmaz
 tDEwA	bırakmanızda
 tDEwn	çıkar(ıp yat)acağınız
+tDHY	sıcaktan etkilenmeyeceksin
+tDHkwn	daima gülüyordunuz
 tDl	şaşırırsa
 tDlwA	şaşırırsınız
+tDlyl	boşa
 tDrEA	yalvararak
 tDrEwA	yalvarsalardı
 tDrbwA	benzetmeler yapmayın
@@ -6896,15 +7772,19 @@ tEDlwhn	engel olmayın
 tEZwn	öğüt veriyorsunuz
 tEbd	tapma
 tEbdwA	tapmayın
-tEbdwn	taptıklarınız
+tEbdwn	kulluk
+tEbrwn	ta'bir ediyorsanız
+tEbvwn	eğleniyor (musunuz?)
 tEd	sapmasın
 tEdl	verse
 tEdlwA	adaletten
 tEdnA	bize vaadettiğin
 tEdwA	saysanız
+tEdwn	sizin hesabınızca
 tEfwA	affederseniz
 tEjb	şaşacaksan
 tEjbk	hoşuna gider
+tEjbwn	şaşıyorsunuz
 tEjl	acele etme
 tElY	yücedir
 tElm	biliyor
@@ -6921,11 +7801,13 @@ tElwA	ululanmayın
 tEmY	kör olur
 tEmdt	bile bile yaptığında
 tEml	işler yapıyor
-tEmlwn	yapsanız
+tEmlwn	yapmış
+tEqlwn	düşünüyor
 tErD	yüz çevirirsen
 tErDn	yüz çevirecek olursan
 tErDwA	doğruyu söylemezseniz
 tErDwn	arz olunursunuz
+tErY	çıplak kalmak
 tErf	anlarsın
 tErfhm	onları tanırsın
 tErj	çıkar
@@ -6935,16 +7817,22 @@ tEtdwhA	sakın bunları aşmayın
 tEtdwnhA	sayacağınız
 tEvwA	karışıklık çıkarmayın
 tEwdwA	dönerseniz
+tEwdwn	O'na döneceksiniz
+tEwlwA	haksızlık etmemeniz için
 tEzmwA	ve kalkışmayın
+tH$rwn	toplanacağınız
+tH*rwn	çekindiğiniz
 tHAjwn	tartışıyorsunuz
 tHAwrkmA	ikinizin konuşmanızı
 tHDwn	teşvik etmiyorsunuz
 tHSnA	namuslu kalmayı
+tHSnwn	sakladığınız
 tHSwh	sizin onu sayamayacağınızı
 tHSwhA	sayamazsınız
 tHT	kavrayamadığın
 tHY	dirilttiğini
 tHbT	yoksa boşa gider
+tHbrwn	ağırlanıp sevindirileceksiniz
 tHbswnhmA	onları tutarsınız
 tHbwA	hoşlandığınız
 tHbwn	sevdiğiniz
@@ -6953,6 +7841,7 @@ tHbwnhm	onları seversiniz
 tHdv	söyler
 tHkm	hükmedersin
 tHkmwA	hükmetmenizi
+tHkmwn	hükmederseniz
 tHl	konar
 tHlp	çözmeyi
 tHlqwA	tıraş etmeyin
@@ -6960,11 +7849,13 @@ tHlwA	saygısızlık etmeyin
 tHml	varsan
 tHmlh	taşıdığı
 tHmlnA	bize yükleme
+tHmlwn	taşınırsınız
 tHnv	yeminini bozma
 tHrS	ne kadar istesen de
 tHrk	depretme
 tHrm	haram kılıyorsun
 tHrmwA	haram etmeyin
+tHrvwn	ektiğinizi
 tHrwA	aramışlardır
 tHryr	hürriyete kavuşturmaktır
 tHs	hissediyor-
@@ -6983,31 +7874,41 @@ tHth	altında
 tHthA	altları
 tHthm	altlarından
 tHtk	alt tarafında
+tHwylA	bir sapma
 tHyTwA	anlamadığınız halde
+tHyd	kaçmış
 tHyp	bir sağlık dileği
 tHythm	karşılanırlar
 tHywn	yaşayacaksınız
 tHzn	üzülme
 tHznY	üzülme
 tHznwA	üzülmeyin
+tHznwn	üzülecek de
 tSEdwn	boyuna uzaklaşıyordunuz
 tSEr	çevirne
 tSHbnY	bana arkadaş
+tSTlwn	ısınırsınız
+tSbHwn	sabaha erdiğiniz
 tSbhm	onlara erişirse
 tSbk	sana ulaşsa
 tSbkm	size dokunsa
 tSbr	dayanabilirsin
 tSbrwA	sabreder
+tSdY	yöneliyorsun
 tSdq	bağışlarsa
 tSdqwA	sadaka olarak bağışlarsanız
+tSdqwn	doğrulamanız
 tSdwn	çevirmeğe çalışıyorsunuz
 tSdwnA	bizi çevirmek
 tSdyq	doğrulayıcıdır
 tSf	nitelendirmesinden
+tSfwn	dediğinize
 tSl	namaz kılma
 tSlHwA	arayı düzeltir
 tSlY	girerler
+tSnEwn	yapıyorsunuz
 tSrf	savmazsan
+tSrfwn	çevriliyorsunuz
 tSwmwA	oruç tutmanız
 tSybhm	isabet etmesi
 tSybn	erişmekle kalmaz
@@ -7023,6 +7924,7 @@ tT_whm	tepelediğiniz
 tTgwA	aşırı gitmeyin
 tThrhm	kendilerini temizleyeceğin
 tThrn	temizlendikleri
+tThyrA	tertemiz
 tTlE	işler
 tTm}n	huzur bulur
 tTrd	kovma
@@ -7034,19 +7936,26 @@ tZhrA	birbirine destek olan
 tZhrwn	birleşiyorsunuz
 tZlm	eksik etmemişti
 tZlmwA	zulmetmeyin
-tZlmwn	ne haksızlık edersiniz
+tZlmwn	zulmedilmezsiniz
 tZm&A	susamayacaksın
 tZn	anlar
+t_wyh	kendisini barındıran
 tb$rwhn	(kadınlara) yaklaşmayın
+tb$rwn	müjdeliyorsunuz
 tb*r	saçıp savurma
+tb*yrA	savurarak
+tbAb	hüsrandan
+tbArA	helaki
 tbArk	yücedir
 tbAyEtm	alışveriş yaptığınız
 tbE	uyan
 tbEA	tabi
 tbEk	sana uyan
 tbEnY	bana uyarsa
+tbEvwn	diriltileceksiniz
 tbEwA	uyacak
 tbSrp	basirettir
+tbSrwn	göre göre
 tbTlwA	boşa çıkarmayın
 tbd	açıklanır
 tbdl	değiştirmen
@@ -7060,6 +7969,7 @@ tbg	isteme
 tbgY	saldıran tarafla
 tbgwA	artık aramayın
 tbgwnhA	göstermeğe yeltenerek
+tbkwn	ağlamıyorsunuz
 tblY	yoklanacağı
 tblg	erişemezsin
 tblwA	hesabını verir
@@ -7080,14 +7990,17 @@ tbtgY	ara ki
 tbtgwA	istemeniz
 tbtgwn	gözeterek
 tbtm	tevbe ederseniz
+tbtylA	bütün gönlünle
 tbt}s	üzülme
 tbw'A	hazırlayın
 tbw'w	yerleşen(ler)
 tbw>	sen yüklenip
+tbwr	batmayacak
 tbw}	ayrılmıştın
 tbxlwA	cimrilik ederdiniz
 tbxswA	kısmayın
 tbyD	ağarır
+tbyEA	izleyip koruyacak birini
 tbyd	yok olacağını
 tbyn	belli olunca
 tbynA	açıklayan
@@ -7105,9 +8018,11 @@ tdEwnnA	bizi çağırdığınız
 tdEwnnY	siz beni çağırıyorsunuz
 tdhn	sen yağcılık yapasın
 tdmr	yıkar mahveder
+tdmyrA	yıkılışla
 tdrY	bilmez
 tdrk	erişmesi
 tdrkh	O'nu görmez
+tdrswn	öğretiyor
 tdrwn	bilmezsiniz
 tdwr	dönerek
 tdxl	sokarsan
@@ -7116,34 +8031,49 @@ tdxlwhA	oraya girmeyin
 tdxrwn	biriktirdiğinizi
 tdyrwnhA	hemen alıp vereceğiniz
 tf$lA	korkup bozulmaya
+tfDHwn	beni mahcubetmeyin
+tfDylA	tam bir üstünlükle
 tfEl	bunu yapmazsan
 tfElwA	yapmanız
 tfElwh	eğer bunu yapmazsanız
+tfElwn	yapıyorsunuz
+tfSylA	açık açık
 tfY'	dönünceye
 tfdwhm	fidyelerini veriyorsunuz
 tfjr	fışkırtıncaya
+tfjyrA	gürül gürül
+tfkhwn	sızlanıp
 tflHwA	iflah olamazsınız
+tflHwn	felaha erersiniz
+tfndwn	bana bunak demezseniz
+tfqdwn	kaybettiniz
 tfqhwn	siz anlamazsınız
 tfrDwA	belirlemeden
 tfrH	şımarma
 tfrHwA	şımarmamanız (için)
-tfrHwn	şımarmanızdan
+tfrHwn	sevinirsiniz
 tfrq	ayrılığa düşmediler
 tfrqwA	bölünüp
 tfrwn	sizin kaçtığınız
 tfsHwA	yer açın
 tfsdwA	bozgunculuk
+tfsqwn	ve yoldan çıkmanızdan
+tfsyrA	açıklamayı
 tft&A	sen hâlâ
 tftH	açılmayacak
 tftnY	beni fitneye düşürme
+tftnwn	sınanan
 tftrwA	uydurmayın
+tftrwn	uyduruyorlar
 tfvhm	kirlerini
+tfwr	kaynıyor
 tfwt	aykırılık, uygunsuzluk
 tfyD	akarak
 tfyDwn	siz daldığınız
 tg$YhA	eşini sarıp örtünce
 tgflwn	siz gaflet etseniz de
 tgfr	bağışlarsan
+tglbwn	ona galib gelirsiniz
 tglwA	taşkınlık etmeyin
 tgmDwA	göz yummadan
 tgn	sağlamaz
@@ -7155,8 +8085,10 @@ tgyD	eksilttiğini
 tgyZA	öfkesini
 thdY	yola ileteceksin
 thdwA	doğru yola iletmek
+thjrwn	saçmalıyordunuz
 thnwA	gevşemeyin
 thtdwA	doğru yolu bulasınız
+thtdwn	yola gelirsiniz
 thtz	titreştiğini
 thwY	hevesine
 tjEl	yapma
@@ -7165,53 +8097,68 @@ tjElnY	beni tutma
 tjElwA	vermek
 tjElwnh	siz onu haline getirip
 tj_rwA	artık feryadetmeyin
+tj_rwn	yalvarırsınız
 tjd	bulacaktır
 tjdl	savunma
 tjdlk	seninle tartışan
 tjdlwA	tartışmayın
 tjdwA	bulamazsanız
 tjdwh	bulursunuz
+tjhlwn	cahil
 tjhr	pek bağırma
 tjhrwA	yüksek sesle konuşmayın
 tjlY	görününce
 tjmEwA	ve almanız
 tjrY	akan
+tjrmwn	sizin suçlarınız-
 tjrp	ticaret
 tjrthm	ticaretleri
+tjryAn	akıp giden
 tjsswA	merak etmeyin
 tjtnbwA	kaçınırsanız
 tjwE	acıkmak
 tjzY	cezalanır
 tjzwn	cezalandırılıyor
 tk	sen
+tk*bAn	yalanlıyorsunuz
 tk*bwA	yalanlarsanız
-tk*bwn	siz yalanlıyorsunuz
+tk*bwn	yalanlıyor
+tk*yb	bir yalanlama
 tkAd	neredeyse
+tkbyrA	tam bir yüceltme ile
 tkfr	sakın küfre girmeyin
 tkfrwA	inkar ederseniz
-tkfrwn	inkar edersiniz
+tkfrwn	inkar
 tklf	yükümlü tutulmaz
 tklm	konuşamaz
 tklmhm	o onlara söyler
+tklmwn	bana bir şey söylemeyin
+tklymA	sözle
 tkn	olma
+tknzwn	yığıyor(lar)
 tkrh	zorlayacaksın
 tkrhwA	zorlamayın
 tkrmwn	siz ikram etmiyorsunuz
 tksb	kazanmaz
+tksbwn	kazanıyor
 tktbwh	yazmaktan
 tktbwhA	onu yazmamanızdan
 tktmwA	gizlemeyin
+tktmwn	gizlemiş
 tktmwnh	gizlemeyeceksiniz
 tkwn	olan
 tkwnA	olursunuz
 tkwnn	olma
 tkwnwA	siz
 tlAwth	okuyuşla
+tlYhA	onu izleyen
+tlZY	alev saçan
 tlbswA	ve katıştırmayın
 tlbswn	karıştırıyorsunuz
 tlbswnhA	takındığınız
 tlbvwA	gecikmezlerdi
 tlfH	yalar
+tlhY	ilgilenmiyorsun
 tlhkm	sizi alıkoymasın
 tlhyhm	kendilerini alıkoymaz
 tlmzwA	kusur aramayın
@@ -7235,17 +8182,20 @@ tm$wn	yürüyeceğiniz
 tmAmA	(ni'metimizi) tamamlamak için
 tmAr	münakaşaya girme
 tmdn	dikme
+tmhydA	bir döşeyişle
+tmkrwn	sizin hilelerinizi
 tmlY	yazdırılıyor
 tmlk	malik olmadığı
 tmlkhm	onlara hükümdarlık eden
 tmlkwn	sahip olsaydınız
 tmnEhm	onları koruyacak
-tmnY	temenni ettiği
+tmnY	atıldığı
 tmnhA	kaktığın
 tmnn	başa kakma
 tmnwA	ve isteyenler
 tmnwn	arzuluyordunuz
 tmr	yürümektedir
+tmrHwn	böbürlenmiş
 tmskwA	tutmayın
 tmskwhn	onları (yanınızda) tutmayın
 tmsnA	bize dokunmayacak
@@ -7259,6 +8209,7 @@ tmtE	yaşa
 tmtEwA	yaşayın
 tmtEwn	yaşatılmazsınız
 tmtrn	şüphe etmeyin
+tmtrwn	kuşkulanmış
 tmwr	çalkanır
 tmwt	ölmek
 tmwtn	ölmeyin
@@ -7268,11 +8219,16 @@ tmylwA	sizin düşmenizi
 tmyz	çatlayacak
 tn*r	uyarırsın
 tn*rhm	uyarmasan da
+tnASrwn	birbirinize yardım etmiyorsunuz
 tnAbzwA	birbirinizi çağırmayın
 tnAlh	erişeceği
 tnAlwA	eremezsiniz
+tnHtwn	yonttuğunuz
 tnSrwA	siz yardım ederseniz
 tnSrwh	siz ona yardım etmezseniz
+tnSrwn	yardım olunmaz
+tnTqwn	konuştuğunuz
+tnZrwn	görüyordunuz
 tnb_wnh	siz haber mi veriyorsunuz?
 tnbt	biten
 tnbtwA	bitirmeniz
@@ -7287,7 +8243,9 @@ tnfd	tükenmeden
 tnfqwA	verseniz
 tnfqwn	sadaka vermeye
 tnfrwA	sefere çıkmayın
+tnfs	soluk almağa başladığı
 tnhY	men'eder
+tnhr	azarlama
 tnhrhmA	onları azarlama
 tnhwn	size yasaklanan
 tnjykm	sizi kurtaracak
@@ -7295,6 +8253,9 @@ tnjytm	aranızda gizli konuştuğunuz
 tnkH	(kadın) nikahlanıncaya
 tnkHwA	evlenmeyin
 tnkHwhn	kendileriyle evlenmek
+tnkSwn	dönüyordunuz
+tnkrwn	inkar ediyorsunuz
+tnkylA	cezası
 tnq*	kurtaracaksın
 tnqDwA	bozmayın
 tnqS	eksilttiğini
@@ -7302,7 +8263,10 @@ tnqSwA	eksik tutmayın
 tnqm	öc almıyorsun
 tnqmwn	hoşlanmıyorsunuz
 tns	unutma
+tnsY	unutmayacaksın
 tnswA	unutmayın
+tnt$rwn	yayılıyorsunuz
+tntSrAn	başaramazsınız
 tnth	vazgeçmezsen
 tnthwA	vazgeçerseniz
 tnyA	gevşeklik etmeyin
@@ -7312,7 +8276,7 @@ tnzEwA	birbirinizle çekişmeyin
 tnzl	indirmeni
 tnzlt	indirmedi
 tnzyl	indirilişi
-tnzylA	(O) indirilmiştir
+tnzylA	parça parça
 tq	sen korursan
 tq$Er	ürperir
 tqAsmwA	and içerek
@@ -7331,10 +8295,13 @@ tqdm	geçmiş
 tqdmwA	geçmeyin
 tqdrwA	ele geçirmenizden
 tqdyr	takdiridir
+tqdyrA	istedikleri ölçüde
 tqf	ardına düşme
+tqhr	ezme
 tql	deme
 tqlb	çevrildiği
 tqlbhm	dönüp dolaşırlarken
+tqlbwn	çevrilirsiniz
 tqm	durma
 tqnTwA	umut kesmeyin
 tqr	aydın olsun
@@ -7345,6 +8312,7 @@ tqrbkm	sizi yaklaştıran
 tqrbwA	yaklaşmayın
 tqrbwhA	bunlara yaklaşmayın
 tqrbwhn	onlara yaklaşmayın
+tqrbwn	(bir daha) bana yaklaşmayın
 tqsTwA	adaleti sağlayamıyacağınızdan
 tqsmwA	yemin etmeyin
 tqtl	çarpışıyordu
@@ -7354,7 +8322,9 @@ tqtlwh	onu öldürmeyin
 tqtlwhm	onlarla savaşmayın
 tqtlwn	öldürüyorsunuz
 tqtlwnhm	onlarla savaşırsınız
+tqtylA	şiddetle
 tqwY	korku
+tqwYhm	korunmalarını
 tqwl	diyordun
 tqwlh	onu uydurdu (mu?)
 tqwln	deme
@@ -7362,6 +8332,8 @@ tqwlwA	demeyin
 tqwlwn	söylüyor
 tqwm	koptuğu
 tqwmwA	kalkın
+tqwym	biçimde
+tqyA	korkuyor
 tqykm	sizi koruyan
 tqymwA	uygulayıncaya
 tr	görmedin mi
@@ -7377,6 +8349,7 @@ trDwA	anlaştıkları
 trDwn	razı olduğunuz
 trDwnhA	hoşlandığınız
 trDytm	karşılıklı anlaşmanız
+trHmwn	esirgenirsiniz
 trY	gördüğü
 trYhm	onları görürsün
 trYnY	sen beni göremezsin
@@ -7385,6 +8358,7 @@ trbS	bekleme (hakkı) vardır
 trbSwA	gözetleyin
 trbSwn	gözetiyor musunuz?
 trd	reddedilmesinden
+trdY	çukura düştüğü
 trdn	istiyorsanız
 trdwn	döndürüleceksiniz
 trfE	yükseltilmesine
@@ -7395,15 +8369,17 @@ trhqhm	onları kaplar
 trhqnY	bana çıkarma
 trjE	döndürülür
 trjEwhn	onları geri döndürmeyin
-trjEwn	döndürüleceğiniz
+trjEwn	döndürülürsünüz
 trjEwnhA	onu geri döndürsenize
 trjY	geri bırakır
 trjf	sarsar
+trjmwn	beni taşla(yıp öldür)menizden
 trjwA	umuyor
 trjwhA	umduğun
 trjwn	ummuyorsunuz
 trk	bıraktıysa
 trkDwA	(boşuna) kaçmayın
+trkbwn	bineceğiniz
 trkn	yanaşacaktın
 trknA	biz bırakmışızdır
 trknhA	onu bıraktık
@@ -7419,6 +8395,7 @@ trqY	çıkmalısın
 trqb	tutmadın
 trtAbwA	kuşkulanmamanız için
 trtdwA	dönmeyin
+trtylA	ağır ağır
 trvwA	miras yoluyla almanız
 trwA	görmediniz mi?
 trwd	murad almak istemiş
@@ -7436,7 +8413,10 @@ ts&hm	onları tasalandırır
 ts&km	hoşunuza gitmeyecek
 tsA'lwn	birbirinizden dilekte bulunduğunuz
 tsE	dokuz
+tsEA	dokuz (yıl)
+tsEY	koşan
 tsEp	dokuz
+tsHrwn	büyüleniyorsunuz
 tsTE	senin güç yetiremediğin
 ts_l	sen sorumlu
 ts_lhm	sen istemiyorsun
@@ -7446,6 +8426,7 @@ ts_lwA	sormayın
 ts_lwn	sorulacak
 ts_mwA	üşenmeyin
 tsbH	tesbih ederler
+tsbHwn	tesbih etmeniz
 tsbq	geçebilir
 tsbwA	sövmeyin ki
 tsbyHhm	onların tesbihlerini
@@ -7454,13 +8435,18 @@ tsjd	secde etmekten
 tsjdwA	secde etmeyin
 tskn	oralarda oturulmadı
 tsknwn	dinleneceğiniz
+tslmwn	teslim (müslüman) olursunuz
+tslymA	içtenlikle
 tsmE	dinlersin
 tsmEwA	dinlemeyin
+tsmEwn	işittiğiniz halde
 tsmY	adına denir
 tsmyp	adlarını
+tsnym	tesnim-
 tsqT	düşmez
 tsqY	ve sulamaz
 tsr	sevinç verir
+tsrHwn	sabahleyin götürdüğünüz
 tsrfwA	israf etmeyin
 tsrwn	gizlediğiniz
 tsryH	salıvermek
@@ -7475,10 +8461,15 @@ tstTyEwn	gücünüz yetmez
 tst_xrwn	geri kalmazsınız
 tstft	bir şey sorma
 tstftHwA	fetih istiyorsanız
+tstftyAn	sorduğunuz
 tstgfr	af dilesen
 tstgfrwn	mağfiret dilemeniz
 tstgyvwn	siz yardım istiyordunuz
-tstkbrwn	büyüklük taslamanızdan
+tsthz'wn	alay ediyordunuz
+tstkbrwn	büyüklük taslamanız
+tstkvr	verdiğini çok bularak
+tstmEwn	işitiyor musunuz?
+tstqdmwn	ileri geçemezsiniz
 tstqsmwA	ve kısmet (şans) aramanız
 tstrDEwA	(sütannesi tutup) emzirtmek
 tsttrwn	gizleniyor
@@ -7487,6 +8478,9 @@ tstxfwnhA	kolayca kullanacağınız hafif
 tswY	bir olmayı
 tswrwA	tırmanmışlardı
 tsxrwA	alay ederseniz
+tsxrwn	sizin alay ettiğiniz
+tsymwn	hayvanları otlattığınız
+tt*krwn	düşünüyorsunuz
 ttbE	uyma
 ttbEAn	uymayın
 ttbEhA	takip eder
@@ -7495,19 +8489,23 @@ ttbEwA	uyarak
 ttbEwn	siz uyuyorsunuz
 ttbEwnA	siz bizimle gelemezsiniz
 ttbdlwA	değiştirmeyin
+ttbyb	kayıplarını
+ttbyrA	helakla
 ttfkrwA	düşünün ki
+ttfkrwn	düşünürsünüz
 ttfrqwA	ayrılığa düşmeyin
 ttjAfY	uzaklaşır
 ttkbr	büyüklük taslamak
 ttlY	okunduğu
 ttlwA	okuyan
 ttlwn	okuduğunuz halde
+ttmArY	kuşku duyuyorsun
 ttmnwA	göz dikmeyin
 ttnjwA	konuşmayın
 ttnzl	iner
 ttqlb	ters döneceği
 ttqwA	korunmanız
-ttqwn	kendinizi kurtaracaksınız
+ttqwn	korunursunuz
 ttrA	ardı ardına
 ttrkh	onu bıraksan
 ttrkwA	bırakılacağınızı
@@ -7517,6 +8515,7 @@ ttwlwA	dönerseniz
 ttx*	davranırsın
 ttx*wA	edinin
 ttx*wn	ediniyorsunuz
+tvbytA	sağlamlıkta
 tvqfnhm	onları yakalarsan
 tvryb	kınama
 tvyr	sürmek için
@@ -7526,7 +8525,7 @@ twAb	tevbeyi çok kabul edendir
 twAbA	affedici
 twArt	(atlar) gizlendi
 twEZwn	size öğütlenen
-twEdwn	tehdit ederek
+twEdwn	va'dedilen
 twSwn	yapacağınız
 twSyp	bir vasiyete
 twbp	tevbe ile
@@ -7555,8 +8554,12 @@ twlwA	dönen
 twlwhm	dost olmanızdan
 twlwn	arkanızı dönüp
 twlytm	döndünüz
+twqdwn	yakıyorsunuz
+twqnwn	kesin olarak inanırsınız
+twrwn	çıkardığınız
 twsws	fısıldadığını
 tx$E	saygı duymasının
+tx$Y	endişe etme
 tx$Yh	çekinmene
 tx$wA	korkmayın
 tx$wh	kendisinden korkmanıza
@@ -7582,32 +8585,39 @@ txfwh	gizleseniz de
 txfwhA	onları gizler
 txfwn	gizlemiş
 txfyf	bir hafifletme
+txldwn	ebedi yaşarsınız diye
 txlf	caymazsın
 txlfh	kurtulamayacaksın
 txlq	yaratıyor
 txlqwnh	onu yaratıyorsunuz
+txrSwn	saçmalıyorsunuz
 txrj	çıkan
 txrjwA	çıkmayacaksınız
 txrjwhn	onları çıkarmayın
-txrjwn	çıkarmayacaksınız
+txrjwn	çıkıyorsunuz
 txrq	yırtamazsın
 txsrwA	eksiklik yapmayın
+txsyr	kaybımı artırmaktan
 txtAnwn	yazık ediyorsunuz
 txtSmwA	çekişmeyin
-txtlfwn	ayrılığa düştünüğünüz
+txtSmwn	davalaşacaksınız
+txtlfwn	ayrılığa düşmüş
 txwf	bir korku
 txwnwA	hiyanet etmeyin
+txwyfA	korkutmak
+txyrwn	istediğiniz
 txznA	bizi rezil, perişan etme
 txznY	beni utandırma
 txzwn	beni rezil etmeyin
 tymmwA	kalkışmayın
 tysr	kolayınıza gelen
 tzAl	daima
+tzEmwn	sandığınız
 tzd	artırma
 tzdAd	artırdığını
 tzdrY	küçük gördükleri
 tzg	eğriltme
-tzkY	ma'nen arınıp yücelirse
+tzkY	arınan
 tzkwA	övüp yüceltmeyin
 tzr	çekmez
 tzrEwn	siz (ürünü) ekin
@@ -7621,12 +8631,14 @@ t}bt	tevbe eden
 vAbt	sabit
 vAlv	üçüncüsüdür
 vAnY	ikincisiydi
+vAqb	delici
 vAwyA	oturmuş
 vEbAn	bir ejderha
 vbAt	bölük bölük
 vbtnk	biz seni sağlamlaştırmış
-vbwrA	helâki
+vbwrA	ölümü
 vbwthA	sağlam bastıktan
+vjAjA	şarıl şarıl
 vlp	bir bölümü
 vlv	üç
 vlvA	üçte ikisi
@@ -7648,6 +8660,7 @@ vqAlA	ağır ağır
 vqftmwhm	bulursanız
 vqfwA	bulunsalar
 vqlt	ağır gelirse
+vqylA	ağır
 vwAb	sevabı
 vwAbA	sevapça
 vwb	cezalandılar-
@@ -7664,10 +8677,16 @@ w$Awrhm	ve onlara danış
 w$Y'	ve içinde
 w$ddnA	güçlendirmiştik
 w$fA'	ve bir şifa
+w$ftyn	ve iki dudak
+w$hbA	ve ışınlarla
 w$hd	ve görüp
 w$hdwA	ve gördükten
+w$hyd	ve şahidle
+w$hyq	ve inlemeleri
 w$jrp	ve bir ağaç
 w$mAl	ve soldan
+w$qAq	ve ayrılık
+w$rAb	ve içki
 w$rAbk	ve içeceğine
 w$rkA&km	ve ortak koştuklarınız
 w$rkA'km	ortaklarınızla
@@ -7775,6 +8794,7 @@ w>Elm	ve bilirim
 w>EmY	ve kör ettiği
 w>EnAb	ve üzümler(den)
 w>Enb	ve üzüm
+w>EnbA	ve bağlar
 w>ErD	yüz çevir
 w>EtdnA	ve hazırladık
 w>Etdt	ve hazırladı
@@ -7794,6 +8814,7 @@ w>Hlt	ve size helal kılınmıştır
 w>HlwA	ve konduranları
 w>Hsn	ve en güzel
 w>HsnwA	ve iyilik edin
+w>HyA	ve yaşatan
 w>HyT	derken yok edildi
 w>HyynA	ve can verdik
 w>HyytnA	ve dirilttin
@@ -7806,25 +8827,33 @@ w>SlHA	ve uslanırlarsa
 w>SlHnA	ve ıslah ettik
 w>SlHwA	uslananlar
 w>SrwA	ve direttiler
+w>SylA	akşam
 w>TEmwA	ve yedirin
 w>TEn	ve ita'at edin
 w>TEnA	ve ita'at ettik
+w>TgY	ve azgın
 w>Thr	ve daha temizdir
 w>TrAf	ve taraflarında
 w>TyEwA	ita'at edin
+w>TyEwn	ve bana ita'at edin
 w>Zhrh	ve onu muttali kıldı
 w>b$rwA	fakat sevinin
+w>bA	ve çayır
 w>bSr	ne güzel görürler
 w>bSrA	ve gözler
 w>bSrhm	ve gözleri
 w>bSrkm	ve gözlerinizi
+w>bY	ve dayattı
+w>bkArA	ve bakire
+w>bkY	ve ağlatan
 w>blgkm	ve ben size tebliğ ediyorum
 w>bnA&km	ve oğullarınız
 w>bnA'km	ve oğullarınızı
 w>bnA}nA	ve oğullarımız(ın arasın)dan
-w>bqY	ve daha kalıcıdır
+w>bqY	ve sürekli imiş
 w>br}	ve iyileştiririm
 w>bwnA	ve babamız da
+w>byh	ve babası(ndan)
 w>dA'	ve (diyeti) ödemelidir
 w>dEwA	ve yalnız yalvarıyorum
 w>dbr	ve arkalarında
@@ -7861,6 +8890,7 @@ w>jmEwA	ve karar verdiler
 w>jr	ve ecir
 w>jrA	ve mükafat
 w>kbr	ve daha büyüktür
+w>kdY	ve gerisini elinde tutanı
 w>klhm	ve yemede
 w>kn	ve olurum
 w>kvr	ve daha çok
@@ -7901,10 +8931,12 @@ w>mtEtkm	ve eşyanızdan
 w>mwl	ve mallar
 w>mwlA	ve mallar
 w>mwlhm	ve mallarını
+w>mwtA	ve ölüler (için)
 w>myt	ve öldürürüm
 w>n$>nA	ve yarattık
 w>n*r	ve uyar
 w>n*rhm	onları uyar
+w>nAb	ve (bize) döndü
 w>nAbwA	ve yönelenlere
 w>nAsY	ve insanlardan
 w>nEm	ve hayvanlar
@@ -7935,6 +8967,7 @@ w>qblwA	dönerek
 w>ql	ve daha azdır
 w>qm	ve kıl
 w>qmn	ve kılın
+w>qnY	ve bol veren
 w>qrDtm	ve borç verirseniz
 w>qrDwA	ve borç verin
 w>qrb	ve daha yakınını
@@ -7945,6 +8978,7 @@ w>qymwA	ve kılın
 w>rAdwA	ve istediler
 w>rD	ve yeri
 w>rDA	ve bir toprağı
+w>rY	ve görürüm
 w>rjlhm	ve ayakları
 w>rjlhn	ve ayakları
 w>rjlkm	ve ayaklarınızı
@@ -7964,6 +8998,7 @@ w>srHkn	ve sizi salayım
 w>srrt	ve gizli söyledim
 w>srwA	gizleyin
 w>srwh	ve onu sakladılar
+w>syrA	ve esire
 w>tYhm	ve onlara gelmişti
 w>tbEnhm	ve onların ardına taktık
 w>tbEwA	ve uğradılar
@@ -8009,6 +9044,7 @@ w>xAf	ve korkarım
 w>xAh	ve kardeşi
 w>xY	ve kardeşimi
 w>xbtwA	ve gönülden boyun eğenler
+w>xfY	ve daha gizlisini
 w>xlSwA	ve yapanlar
 w>xr	diğeri de
 w>xrY	öteki de
@@ -8019,6 +9055,7 @@ w>xrjt	ve çıkardığı (zaman)
 w>xrjwA	ve çıkarılanlar
 w>xrjwhm	ve onları çıkarın
 w>xrjwkm	ve sizi çıkaran
+w>xrt	ve geride bırakmıştır
 w>xwh	ve kardeşi
 w>xwk	ve kardeşin
 w>xwtkm	ve bacılarınız
@@ -8039,13 +9076,18 @@ w>zwj	ve eşler
 w>zwjh	ve onun eşleri
 w>zwjhm	ve eşleri
 w>zwjkm	ve eşleriniz
+wASb	sürekli
 wASbA	daima
 wAbl	yağmur
 wAd	vadide
 wAdyA	vadiyi
+wAhyp	zayıftır
+wAjfp	çarpar
+wAl	koruyucuları
 wAld	baba
 wAldh	babası
-wAqE	üstlerine düşecek
+wAq	koruyan
+wAqE	vuku bulacak
 wArdhA	oraya gitmeyecek
 wArdhm	sucularını
 wAvqkm	verdiniz
@@ -8058,6 +9100,7 @@ wDEf	ve kat kat
 wDEhA	koydu
 wDEt	doğurduğunu
 wDEthA	onu doğurdum
+wDHYhA	ve onun aydın sabahına
 wDl	ve saptı
 wDlwA	ve şaşmış
 wDrb	ve anlattı
@@ -8067,7 +9110,7 @@ wDyA'	ve bir ışık
 wE$rA	ve on (gün)
 wE$yA	ve akşam
 wE$yrtkm	ve hısım akrabanız
-wE*Ab	ve bir azab
+wE*Ab	ve azab
 wE*AbA	ve bir azab
 wE*b	ve azab etti
 wE*bnhA	ve ona azabettik
@@ -8087,6 +9130,7 @@ wEbd	ve tapanlar
 wEbqrY	ve döşeklere
 wEd	sözü
 wEdA	sözdür
+wEddh	ve onu saydı durdu
 wEdh	va'di
 wEdhA	verdiği
 wEdhm	ve onları saymıştır
@@ -8124,6 +9168,7 @@ wEmlh	ve onun (kötü) işinden
 wEmlwA	ve yapan
 wEmrwhA	ve onu imar etmişlerdi
 wEmtkm	ve halalarınız
+wEmyAnA	ve kör
 wEnb	ve üzümlerden
 wEnbA	ve üzüm
 wEnd	ve yanında
@@ -8138,7 +9183,10 @@ wErbY	arab olana
 wEsY	ve olur ki
 wEtw	ve haddi aştılar
 wEtwA	ve dışına çıktılar
+wEyd	tehdidimi
+wEyp	belleyen
 wEysY	ve Îsa
+wEywn	ve çeşmeler
 wEznY	ve bana ağır bastı
 wEzrtmwhm	ve onlara yardım ederseniz
 wEzrwh	ve O'na saygı gösterenler
@@ -8150,6 +9198,7 @@ wHAl	bu sırada girdi
 wHAq	ve kuşatır
 wHSl	ve devşirildiği (zaman)
 wHSwrA	ve nefsine hakim
+wHSyd	(bazıları ise) tamamen silinmiştir
 wHY	vahiy(den)
 wHb	ve daneler
 wHbT	ve boşa gitmiştir
@@ -8175,18 +9224,22 @@ wHmlnh	Onu (Nuh'u) taşıdık
 wHmlnhm	ve onları taşıdık
 wHmlt	yerlerinden kaldırıldığı
 wHmr	ve kırmızı
+wHmym	ve kaynar su
 wHnAnA	ve bir rahmet
 wHq	ve gerekli oldu
+wHqt	kendisine yaraştığı üzere
 wHrD	ve teşvik et
 wHrm	ve yasaklandı
 wHrmnA	ve haram etmiştik
 wHrmwA	ve haram kılanlar
 wHrv	ve ekinlerdir
+wHryrA	ve ipektir
 wHsbwA	ve sandılar
 wHsn	ve güzel
 wHsnt	ve ne güzel
 wHwr	ve huriler
 wHyA	vahiy
+wHydA	tek olarak
 wHyh	vahyedilmesi
 wHyl	perde çekildi
 wHyn	ve zaman
@@ -8275,6 +9328,7 @@ wbkfrhm	ve küfürlerinden (ötürü)
 wbklmY	ve konuşmamla
 wbkm	ve dilsizdirler
 wbkmA	ve dilsiz
+wbkyA	ağlayarak
 wblg	ve varınca
 wblgnA	ve ulaştık
 wblgt	ve dayanmıştı
@@ -8286,6 +9340,7 @@ wbnEmp	ve ni'metine
 wbnEmt	ve ni'metine
 wbnY	ve oğullarımı
 wbnt	ve kızlar
+wbnyh	ve oğulları(ndan)
 wbnyn	ve oğullar
 wbnynA	ve bina ettik
 wbqyp	ve bir kalıntı
@@ -8300,10 +9355,12 @@ wbrswlY	ve elçime
 wbrswlh	ve elçisini
 wbrzt	ve karşısına çıkarılır
 wbrzwA	ve gelirler
+wbsr	kaşlarını çattı
 wbst	ve serpildiği (zaman)
 wbv	ve yaydı
 wbw>km	ve sizi yerleştirdi
 wbyE	ve kiliseler
+wbylA	ağır
 wbyn	arasına
 wbynh	onun arasında
 wbynhm	ve aralarında
@@ -8316,6 +9373,7 @@ wb{l'Axrp	ve ahirete de
 wb{l>sHAr	seherlerde
 wb{lHq	ve hak ile
 wb{lktb	ve Kitap
+wb{lm&mnyn	ve mü'minleri
 wb{lnjm	ve yıldız(lar)la
 wb{lrswl	ve Rasule
 wb{lwldyn	ve ana babaya
@@ -8334,13 +9392,16 @@ wdEk	seni bırakmadı
 wdm	ile kan
 wdmrnA	ve yıktık
 wdrswA	ve öğrenmediler mi?
+wdsr	ve çivilerle
 wdt	istedi ki
 wdwA	isterler
+wdwd	çok sevendir
 wdwn	ve olmayan
 wdxl	ve girdi
 wdyn	ve din ile
 wdyp	ve bir diyet
 wdyrhm	ve yurtlarını
+wfAqA	uygun
 wfAr	ve kaynayınca
 wfDl	ve lutfun
 wfDlA	ve lutuf
@@ -8349,6 +9410,8 @@ wfElt	ve yaptın
 wfSl	ve ayırd edici
 wfSlh	ve sütten kesilmesi
 wfSylth	ve tüm ailesini
+wfY	çok vefalıdır
+wfdA	konuk olarak
 wfdynh	ve fidye olarak ona verdik
 wfjrnA	ve akıttık
 wfkhp	ve meyva
@@ -8377,8 +9440,12 @@ wgrhm	ve onları yanıltmıştır
 wgrkm	ve sizi aldattı
 wgrthm	onları aldattı
 wgrtkm	ve sizi aldattı
+wgsAq	ve kokuşmuşdur
+wgsAqA	ve irin
+wgwAS	ve dalgıcı
 wgyD	ve çekildi
 wgyr	ve
+whAjA	parıl parıl parlayan
 whAjrwA	ve hicret ettiler
 whb	ve ver
 whbnA	biz armağan ettik
@@ -8423,6 +9490,7 @@ wjElnkm	ve yaptık sizi
 wjElt	ve verdim
 wjElwA	ve yaptılar
 wjHdwA	ve inkar ettiler
+wjHymA	ve cehennem
 wjbryl	ve Cebrail'e
 wjbt	düştüğünde
 wjd	buldu
@@ -8454,6 +9522,7 @@ wjht	çevirdim
 wjlp	ürpererek
 wjlt	titrer
 wjlwdhm	ve derileri
+wjlwn	korkuyoruz
 wjmE	toplayıp
 wjnY	ve toplanması (meyvelerin)
 wjnp	ve cennete
@@ -8469,7 +9538,7 @@ wjwhA	bazı yüzleri
 wjwhhm	yüzleri
 wjwhkm	yüzünüzü
 wjwznA	ve geçirdik
-wjyhA	yüzdedir (şereflidir)
+wjyhA	itibarlı
 wjz&A	ve cezası
 wjzYhm	onların ödülleri
 wj}nA	ve geldik
@@ -8493,7 +9562,7 @@ wkf	ve çekti
 wkfY	yeter
 wkflhA	ve onun bakımını üstlendi
 wkfr	ve ört
-wkfrA	ve küfrünü
+wkfrA	ve küfür
 wkfrhm	ve inkar etmeleri
 wkfrnA	ve inkar ettik
 wkfrt	ve inkar etti
@@ -8529,6 +9598,8 @@ wkvyr	ve çoğu
 wkwAEb	ve göğüsleri tomurcuklanmış
 wkwnwA	ve olun
 wkyf	ve nasıl
+wkyl	vekildir
+wkylA	vekil
 wl&l&A	ve inci(ler)
 wl'Amrnhm	ve onlara emredeceğim
 wl*kr	elbette anmak
@@ -8544,6 +9615,7 @@ wl>gwynhm	ve onları azdıracağım
 wl>jr	elbette ödülü
 wl>mnynhm	ve mutlaka onları boş kuruntulara sokacağım
 wl>mp	bir cariye
+wl>nEmkm	ve hayvanlarınız için
 wl>tm	ve tamamlayayım
 wl>wDEwA	ve hemen sokulurlardı
 wl>xY	ve kardeşimi
@@ -8717,6 +9789,7 @@ wlyxzY	ve cezalandırması içindir
 wlyzydn	ve artıracaktır
 wlzwjk	ve eşine
 wm$Arb	ve içecekler
+wm$hwd	ve şahidlik edilene
 wm>jwj	ve Me'cuc
 wm>wYh	ve yeri
 wm>wYhm	ve varacakları yer
@@ -8726,9 +9799,11 @@ wmAtwA	ölen
 wmDY	ve geçti
 wmEArj	ve merdivenler
 wmESyt	ve isyan
+wmEyn	ve suyu bulunan
 wmHrm	ve haramdır
 wmHyAY	ve hayatım
 wmSdqA	ve doğrulayan
+wmSyrA	ve varış yeri
 wmThrk	ve seni temizleyeceğim
 wmb$rA	ve müjdeci
 wmgAnm	ve ganimetler (bahşeyledi)
@@ -8753,8 +9828,10 @@ wmnfE	ve menfaatler
 wmnhAjA	ve bir yol
 wmnwp	ve Menat'ı?
 wmqAm	ve yer(lerinden)
+wmqAmA	ve makamdır
 wmqSryn	ve(ya) kısaltarak
 wmqtA	ve (Allah'ın) hışm(ı)dır
+wmrEYhA	ve otlağını
 wmrsYhA	ve durması da
 wmrwt	ve Marut (isimli)
 wmrym	ve Meryem'i
@@ -8771,6 +9848,7 @@ wmvl	durumu
 wmvlA	ve örneği
 wmvlh	ve bir misli daha
 wmvlhm	ve bir eşini
+wmvwYkm	ve varıp duracağınız yeri
 wmwEZp	ve öğüt
 wmwlykm	ve dostlarınızdır
 wmwsY	ve Musa'ya
@@ -8793,6 +9871,7 @@ wnElm	ve bilmeyi
 wnEm	ve ne güzel
 wnEmh	ve ona ni'met verse
 wnEmp	ve ni'metdir
+wnEym	ve ni'metler
 wnH$r	ve toplarız
 wnH$rh	ve onu haşrederiz
 wnH$rhm	ve onları süreriz
@@ -8806,9 +9885,11 @@ wnSrnh	ve onu koruduk
 wnSrnhm	ve onlara yardım ettik
 wnSrwA	ve yardım ettiler
 wnSrwh	ve O'na yardım edenler
+wnSyrA	ve yardımcı olarak
 wnTbE	ve mühürleriz
 wnTmE	umarken
 wn_A	döner
+wnbAtA	ve bitki(ler)
 wnblwA	ve sınayacağız
 wnblwkm	ve sizi imtihan ederiz
 wnbyA	ve bir peygamber olacak
@@ -8821,9 +9902,12 @@ wnfAqA	ve iki yüzlülükte
 wnfDl	ama üstün yaparız
 wnfSl	ve uzun uzun açıklıyoruz
 wnfs	ve nefse andolsun
+wnfwr	ve nefret
 wnfx	ve üfledi
 wnfxt	ve üflediğim
+wnhArA	ve gündüz
 wnhY	ve men'etmişse
+wnhr	ve ırmaklar(ın kenarın)dadırlar
 wnhwA	ve vazgeçirmeğe çalışırlar
 wnjEl	ve vereceğiz
 wnjElhm	ve onları yapmayı
@@ -8862,6 +9946,7 @@ wnsA'nA	ve kadınlarımızı
 wnsY	unutarak
 wnskY	ve ibadetim
 wnsqyh	ve onunla sulayalım diye
+wnsrA	ve Nesr'i
 wnstHY	ve sağ bırakacağız
 wnswA	ve unuttular
 wnswh	onlar ise onu unutmuşlardır
@@ -8873,9 +9958,11 @@ wnwdwA	onlara seslenildi
 wnwr	ve nur
 wnwrhm	ve nurları
 wnxl	ve hurma
+wnxlA	ve hurma
 wnxrj	ve çıkarırız
 wnxwfhm	biz onları korkutuyoruz
 wnxyl	ve hurmalıklar
+wnxzY	ve alçak (olmadan)
 wnysrk	ve sana kolaylaştıracağız
 wnzE	ve çıkardı
 wnzEnA	ve çıkarırız
@@ -8889,9 +9976,11 @@ wqAl	dedi
 wqAlA	ve dediler
 wqAlt	ve dedi
 wqAlwA	ve derler
+wqArA	saygı
 wqAsmhmA	ve onlara yemin etti
 wqA}mA	ve ayakta durarak
 wqDY	ve emretti
+wqDbA	ve yonca
 wqDynA	ve bildirdik
 wqE	düşer
 wqEd	ve oturdular
@@ -8903,6 +9992,7 @@ wqSr	ve saraylar
 wqTEn	ve kestiler
 wqTEnA	ve kestik
 wqTEnhm	ve onları ayırdık
+wqb	karanlığı çöktüğü
 wqbA}l	ve kabilelere
 wqbl	ve önce
 wqbylh	ve kabilesi
@@ -8930,7 +10020,8 @@ wqnA	ve bizi koru
 wqr	bir ağırlık
 wqr'An	ve Kur'an'ın
 wqr'AnA	ve Kur'an'ı
-wqrA	ağırlık
+wqr'Anh	ve okumak
+wqrA	ağır
 wqrY	ve aydın olsun
 wqrbnh	ve onu yaklaştırdık
 wqrn	ve vakarla oturun
@@ -8957,7 +10048,9 @@ wqwmwA	ve durun
 wqyDnA	ve biz musallat ettik
 wqyl	ve dendi
 wqylh	ve onun demesi(ne andolsun)
+wqymA	ve (Onun divanında) durarak
 wr'A	ve gördüler
+wr'yA	ve gösterişce
 wr>wA	gördüler
 wr>yt	ve gördüğün (zaman)
 wr>ythm	ve onları görürsün
@@ -8994,9 +10087,11 @@ wrbnA	ve Rabbimiz
 wrbt	ve kabarır
 wrb}bkm	üvey kızlarınız
 wrd	varınca
+wrdA	yaya ve susuz olarak
 wrdp	kıpkırmızı bir gül
 wrdwA	ve döndürülmüşlerdir
 wrdwhA	oraya girmezlerdi
+wrdwn	gireceksiniz
 wrfE	ve çıkardı
 wrfEnA	ve kaldırdık
 wrfEnh	onu yükseltmiştik
@@ -9008,6 +10103,7 @@ wrhbnhm	ve rahiplerini
 wrjlA	ve bir adam
 wrjlk	ve yayalarınla
 wrmAHkm	ve mızraklarınızın
+wrmAn	ve nar
 wrq	yaprağı-
 wrqp	yaprak
 wrslA	ve elçilere
@@ -9043,7 +10139,10 @@ wsEA	(ni'meti) geniştir
 wsEY	ve çalışırsa
 wsEhA	gücünün yetiğinden
 wsEp	bol
+wsEr	ve çılgınlık
 wsEt	kaplamıştır
+wsEyd	(kimi de) mutludur
+wsEyrA	ve alevli bir ateş
 wsTA	vasat
 ws_l	ve sor
 ws_lhm	onlara sor
@@ -9069,12 +10168,15 @@ wsmEnA	ve işittik
 wsnjzY	ve mükafatlandıracağız
 wsnqwl	ve söyleyeceğiz
 wsnzyd	ve daha fazlasını vereceğiz
+wsq	topladığı
 wsqYhm	ve onlara içirmiştir
 wsqwA	ve içirildiği
+wsqyhA	ve onun su içmesini
 wsrAjA	ve bir lamba
 wsrHwhn	ve onları serbest bırakın
 wsrbyl	ve elbiseler
 wsrrA	ve koltuklar
+wsrwrA	ve sevinç
 wstrdwn	sonra döndürüleceksiniz
 wswA'	birdir
 wsxr	ve boyun eğdirdi
@@ -9131,7 +10233,7 @@ wtSryf	ve estirmesinde
 wtTm}n	ve iyice yatışmasını
 wtZnwn	ve sanırsınız
 wt_wY	ve alırsın
-wtb	ve tevbemizi kabul et
+wtb	zaten kurudu da
 wtbArk	ve ne yücedir
 wtbgwnhA	ve onun arayarak
 wtbr}	ve iyileştiriyordun
@@ -9177,6 +10279,7 @@ wtqTEwn	ve kesiyorsunuz
 wtqbl	kabul buyur
 wtqlbk	ve eğilip doğrulurken
 wtqsTwA	ve adaletli davranmaktan
+wtqwYhA	ve korunmasını
 wtqwl	ve der
 wtqwlwA	ve (şöyle) demeniz için
 wtqwlwn	ve söylüyorsunuz
@@ -9197,6 +10300,7 @@ wtsEwn	doksan (dokuz)
 wtsbHwh	ve O'nu tesbih edesiniz
 wtsbyHh	ve tesbihini
 wtslmwA	ve selam vermeden
+wtslymA	ve teslimiyetlerini
 wtstxrjwA	ve çıkarmanız için
 wtstxrjwn	ve çıkarırsınız
 wtswd	kararır
@@ -9210,9 +10314,10 @@ wtwbwA	ve tevbe edin
 wtwdwn	siz de istiyordunuz
 wtwfY	ve tam karşılığı verilir
 wtwfnA	ve bizi öldür
+wtwfyqA	ve uzlaştırmak
 wtwkl	ve dayan
 wtwl	ve uzaklaş
-wtwlY	ve yüzünü çevirdi
+wtwlY	ve döndü
 wtwlj	ve sokarsın
 wtwlwA	ve döndüler
 wtwqrwh	Ona saygı gösteresiniz
@@ -9220,6 +10325,7 @@ wtx$Y	ve çekiniyordun
 wtxfY	fakat gizliyordun
 wtxfwn	ve gizliyorsunuz
 wtxlqwn	ve uyduruyorsunuz
+wtxlt	ve boşaldığı
 wtxr	ve dağılacak
 wtxrj	ve çıkarırsın
 wtxrjwn	ve çıkarıyorsunuz
@@ -9256,6 +10362,7 @@ wwjd	ve buldu
 wwjdk	ve seni bulmadı mı?
 wwjdwA	ve bulmuşlardır
 wwjwh	ve yüzler vardır
+wwldA	ve evlad
 wwldh	ve çocuğu
 wwqE	ve vuku bulmuştur
 wwqYhm	ve onları korur
@@ -9336,6 +10443,7 @@ wyEml	ve yaparsa
 wyEmlwn	ve yapan
 wyEqwb	ve Ya'kub
 wyEwq	ve Ye'uk'u
+wyEyd	sonra yeniden devam eden
 wyH*rkm	ve sizi sakındırır
 wyHY	ve diriltir
 wyHb	ve sever
@@ -9366,6 +10474,7 @@ wyTyEwn	ve ita'at ederler
 wy_Adm	Adem
 wyb$r	ve müjdeler
 wybS:T	açar da
+wybSrwn	onlar da görecekler
 wybTl	ve ortadan kaldırsın
 wybgwn	ve saldıranlar
 wybgwnhA	ve onu isterler
@@ -9459,6 +10568,7 @@ wyqwlwn	ve derler
 wyqwm	kavmim
 wyqymwA	ve kılmaları
 wyqymwn	ve kılarlar
+wyrDY	ve razı olduğu
 wyrDyn	ve razı olmalarına
 wyrHm	ve acır
 wyrY	ve görürler
@@ -9472,6 +10582,7 @@ wyrydwn	ve isterler
 wyrykm	size gösteriyor
 wyrzqh	ve onu rızıklandırır
 wysEwn	ve koşarlar
+wys_lwn	ve (bundan) sorulacaklardır
 wys_lwnk	ve sana sorarlar
 wysbH	ve tesbih ederler
 wysbHwnh	ve O'nu tesbih ederler
@@ -9480,6 +10591,7 @@ wyslmwA	ve teslim olmadıkça
 wysmA'	gök
 wysqY	kendisine içirilir
 wysqwn	ve onlara içirilir
+wysqyn	ve içiren
 wysr	ve kolaylaştır
 wysrEwn	ve koşarlar
 wystEjlwnk	senden çabuk istiyorlar
@@ -9546,15 +10658,19 @@ wzAdh	ve onun artırdı
 wzAdhm	ve onların artırır
 wzAdkm	ve size verdi
 wzdnhm	biz de onların artırmıştık
+wzfyrA	ve homurtusunu
 wzhq	ve gitti
 wzkryA	ve Zekeriyya'ya
 wzkwp	ve temizlik
 wzlfA	ve yakın vakitlerinde
 wzlzlwA	ve sarsılmışlardı
+wznA	bir terazi
 wznwA	tartın
 wznwhm	tarttıkları
 wzr	yükünü
+wzrA	(ağır) bir günah
 wzrE	ve ekinler
+wzrk	yükünü
 wzrwE	ve ekinler(den)
 wzwjh	ve karısının
 wzwjk	ve eşin
@@ -9568,7 +10684,7 @@ wzynh	ve onu süsledi
 wzynhA	ve onu süsledik
 wzynp	ve süstür
 wzynthA	ve süsünü
-wzyrA	bir vezir
+wzyrA	vezir
 wzytwnA	ve zeytin
 w{$dd	ve bağla
 w{$hd	şahid ol
@@ -9653,20 +10769,25 @@ w{l$jrp	ve ağacı
 w{l$mA}l	ve soldan
 w{l$ms	ve güneş
 w{l$yTyn	ve şeytanları
-w{l'ASAl	ve akşam
+w{l'ASAl	akşam
 w{l'Axr	ve sondur
 w{l'Axrp	ve ahiret
+w{l'Axryn	ve sonrakiler de
 w{l*kr	ve Zikir(Kitap)dandır
 w{l*krt	ve zikreden kadınlar
 w{l*kryn	zikreden erkekler
 w{l*ryt	kaldıran(rüzgar)lara andolsun
+w{l<$rAq	ve sabah
 w{l<Hsn	ve ihsanı
+w{l<bkr	sabah
+w{l<krAm	ve ikram
 w{l<njyl	ve İncil
 w{l<ns	ve insan
 w{l<vm	ve günahı
 w{l<ymn	ve iman
 w{l>*Y	ve eziyet etmekle
 w{l>*n	ve kulağa
+w{l>EnAq	ve boyunlarını
 w{l>Enb	ve üzümler
 w{l>HbAr	ve alimlere
 w{l>HzAb	ve kollar
@@ -9683,19 +10804,24 @@ w{l>nSAr	ve Ensarı
 w{l>nf	ve buruna
 w{l>nfs	ve canlarınızın
 w{l>nvY	kadın
+w{l>qdAm	ve ayaklar(ın)dan
 w{l>qrbwn	ve akrabanın
 w{l>qrbyn	ve yakınlar
 w{l>rD	yerin
 w{l>rHAm	ve akrabalık(bağlarını kırmak)tan
 w{l>sbAT	ve sıbtlara
+w{l>wlY	ilk de
 w{l>wld	ve evladda
+w{l>wlyn	ve öncekileri
 w{l>zlm	ve şans okları
+w{lDHY	kuşluk vaktine andolsun
 w{lDfAdE	ve kurbağalar
 w{lDll	ve bir sapıklık
 w{lDrA'	ve darlıkta
 w{lE$Y	akşam
 w{lE*Ab	ve azab
 w{lEAfyn	ve affederler
+w{lESr	asra andolsun ki
 w{lESyAn	ve isyanı
 w{lEbd	köle
 w{lEdwn	ve düşmanlık
@@ -9708,6 +10834,7 @@ w{lEnhm	ve onlara la'net eyle
 w{lEqbp	ve sonuç
 w{lEyn	ve göze
 w{lEyr	ve kervana
+w{lEzY	ve 'Uzza'yı
 w{lHb	ve dane(ler)
 w{lHfZt	ve koruyan kadınlar
 w{lHfZwn	ve koruyanlar
@@ -9736,9 +10863,12 @@ w{lSft	andolsun
 w{lSlH	ve barış
 w{lSlHyn	ve iyileri
 w{lSlwp	ve namazı
+w{lSyf	ve yaz
 w{lS}mt	ve oruç tutan kadınlar
 w{lS}myn	oruç tutan erkekler
+w{lTArq	ve tarık'a
 w{lTgwt	ve tağut'a
+w{lTwr	andolsun Tur'a
 w{lTyb	temiz
 w{lTybt	ve güzel
 w{lTybwn	iyi erkekler
@@ -9750,7 +10880,7 @@ w{lbATn	ve batındır
 w{lbAd	ve dışarıdan gelen
 w{lbHr	ve denize
 w{lbSr	ve göz
-w{lbSyr	ve gören
+w{lbSyr	gören
 w{lbTl	ve batılı
 w{lbdn	kurbanlık develeri
 w{lbgAl	ve katırları
@@ -9767,11 +10897,14 @@ w{ldwAb	ve hayvanlar
 w{lf&Ad	ve gönül
 w{lfDp	ve gümüşü
 w{lfH$A'	ve fuhşu
+w{lfjr	andolsun fecre
 w{lflk	ve gemileri
 w{lfrqAn	ve furkan
 w{lfswq	ve fıskı
+w{lftH	ve fetih
 w{lftnp	ve fitne
 w{lfwH$	ve çirkin işlerden
+w{lgAwn	ve azgınlar
 w{lgnm	ve koyunun
 w{lgrmyn	ve borçlulara
 w{lgwA	ve gürültü edin
@@ -9780,6 +10913,7 @@ w{ljAn	ve Cinleri
 w{ljAr	ve komşuya
 w{ljbAl	ve dağlar
 w{ljblp	ve nesilleri
+w{ljlwd	ve derileri
 w{ljn	ve cin
 w{ljrAd	ve çekirge
 w{ljrwH	ve yaralara
@@ -9802,8 +10936,10 @@ w{lm&tfkt	ve yerlebir olanların
 w{lm&twn	verenler
 w{lmEtr	ve isteyene
 w{lmHSnt	ve namuslu kadınlar
+w{lmHrwm	ve yoksul için
 w{lmSdqt	ve sadaka veren kadınlar
 w{lmTlqt	boşanmış kadınlar
+w{lmTlwb	istenen de
 w{lmgfrp	ve mağfirete
 w{lmgrb	batı da
 w{lmhjryn	ve Muhacirleri
@@ -9818,6 +10954,7 @@ w{lmnkr	ve kötülüğü
 w{lmnxnqp	ve boğulmuş
 w{lmqymY	ve kılarlar
 w{lmqymyn	O kılanlar
+w{lmrjAn	ve mercan
 w{lmrjfwn	kötü haberler yayanlar
 w{lmrslt	andolsun gönderilenlere
 w{lmrwp	ve Merve
@@ -9882,6 +11019,7 @@ w{lrqym	ve Rakim
 w{lrswl	ve Elçi
 w{lrsxwn	ileri gidenler
 w{lrwH	ve ruh
+w{lryHAn	ve hoş kokulu bitkiler
 w{lsAEp	ve sa'atte
 w{lsArq	ve hırsızlık eden erkeğin
 w{lsArqp	ve hırsızlık eden kadının
@@ -9903,11 +11041,13 @@ w{lsw'	ve kötülük
 w{lsy_At	ve kötülüklerle
 w{ltft	ve dolaşır
 w{ltqwY	ve takva
+w{ltrA}b	ve kaburga kemikleri
 w{ltwrYp	ve Tevrat'ı
 w{ltyn	incire andolsun
 w{lvmrt	ve ürünlerinizin
 w{lwldn	ve çocuklar
 w{lwldt	ve anneler
+w{lwtr	ve tek'e
 w{lwzn	ve tartı
 w{lx$Et	ve  saygılı kadınlar
 w{lx$Eyn	saygılı erkekler
@@ -9937,6 +11077,7 @@ w{msHwA	ve meshedin
 w{mtzwA	şöyle ayrılın
 w{n$q	ve yarıldı
 w{n$qt	yarılmıştır
+w{nHr	ve kurban kes
 w{nSrnA	bize yardım eyle
 w{nSrwA	ve yardım edin
 w{nTlq	ve fırladı
@@ -9951,7 +11092,7 @@ w{ntZrwA	ve bekleyin
 w{qEdwA	ve otur(up) bekleyin
 w{qSd	ve tutumlu ol
 w{qtlwhm	ve öldürün
-w{qtrb	ve yaklaşır
+w{qtrb	ve yaklaş
 w{rEwA	ve otlatın
 w{rHm	ve acı
 w{rHmnA	ve bize acı
@@ -9984,7 +11125,7 @@ w{stgfrY	(kadın) sen de bağışlanmasını dile
 w{stgfrh	ve O'ndan mağfiret dile
 w{stgfrwA	ve mağfiret dileyin
 w{stgfrwh	ve O'ndan mağfiret dileyin
-w{stgnY	muhtaç olmadığını gösterdi
+w{stgnY	ve kendini zengin görürse
 w{stkbr	ve kibirlendi
 w{stkbrt	ve büyüklük tasladın
 w{stkbrtm	siz tenezzül etmemişseniz
@@ -10006,7 +11147,7 @@ w{tbEwh	O'na uyun ki
 w{tbEwn	ve bana uyun
 w{tl	oku
 w{tq	ve kork
-w{tqY	ve (günahtan) korunursa
+w{tqY	korunursa
 w{tqwA	korkun
 w{tqwh	ve O'ndan korkun
 w{tqwn	ve benden sakının
@@ -10023,12 +11164,15 @@ w{xtAr	ve seçti
 w{xtlf	ve değişmesinde
 w{xtlfwA	ve ihtilaf edenler
 w{zdAdwA	ve ilave ettiler
+w{zdjr	ve o menedildi
 w{zynt	ve süslendiği
 x$EA	korkarak
 x$Ep	korkulu
+x$Ewn	saygılıdırlar
 x$Eyn	saygılıdırlar
 x$Y	korkanlar
 x$b	odunlar
+x$wEA	derin saygısını
 x$yp	saygı-
 x$yt	korktum
 x$yth	O'nun korkusu-
@@ -10036,29 +11180,39 @@ x*	al
 x*hA	al onu
 x*wA	alın
 x*wh	tutun onu
+x*wlA	yüzüstü bırakandır
 xADwA	dalanlar
 xASp	yalnızca
 xATbhm	kendilerine laf atarsa
+xAT}p	günahkar
 xAb	perişan olmuştur
 xAf	korkan
 xAfDp	o alçaltıcıdır
 xAft	korkarsa
 xAfwA	çekinsinler
+xAfyp	hiçbir giz
 xAlSA	halis
 xAlSp	yalnız
 xAlk	dayının
 xAnwA	hainlik yapmışlardı
+xAsrp	ziyanlı
 xAs}A	umudu keserek
-xAwyp	çökmüştür
+xAwyp	içi boş
+xA}byn	umutsuz olarak
 xA}fA	korka korka
 xA}fyn	korka korka
 xA}np	hainlik
+xDEyn	eğilip kalmış
 xDr	yeşil
 xDrA	yeşil
 xSASp	ihtiyaçları
 xSmAn	iki hasım taraf
+xSmwn	kavgacı
 xSym	bir hasım
+xSymA	savunucusu
+xTAbA	konuşmaya
 xT_A	günahtır
+xT_yn	günah işledik
 xTbk	senin amacın
 xTbkm	işiniz
 xTbkmA	sizin işiniz
@@ -10075,9 +11229,10 @@ xTyhm	onların hataları-
 xTykm	hatalarınızı
 xTynA	hatalarımızı
 xbAlA	bozmaktan
+xbrA	ilmimizle
 xbt	(ateş) dindiği
 xbv	kötü
-xbyr	haberdardır
+xbyr	habirdir
 xbyrA	bilir
 xbyvp	kötü
 xbzA	ekmek
@@ -10089,13 +11244,15 @@ xff	hafifletti
 xft	korktum
 xftkm	sizden korkunca
 xftm	korkarsanız
+xfyA	gizli
 xfyfA	hafif
 xlA	(gelip) geçmiş
 xlSwA	(bir kenara) çekildiler
 xlTwA	birbirine karıştırdılar
 xld	ebedi kalan
 xldA	sürekli kalacağı
-xldyn	kalırlar
+xldwn	kalıcıdırlar
+xldyn	ölümsüz
 xlf	çapraz
 xlfA'	hakimler
 xlfh	arkası-
@@ -10107,13 +11264,13 @@ xlfnA	arkamızda
 xlfp	birbirini izler
 xlftmwnY	arkamdan
 xlfwA	geri bırakılan
-xll	aralarına girip
+xll	bir dostluk
 xllh	arası-
 xllhA	arasında
 xllhmA	aralarından
 xllkm	aranıza
 xlp	dostluğun
-xlq	yarattı
+xlq	nasibi
 xlqA	yaratık
 xlqh	yarattığı
 xlqhA	yarattı
@@ -10137,8 +11294,11 @@ xltk	teyzelerinin
 xltkm	teyzelerinizin
 xlwA	geçenler
 xlyfp	hükümdar
+xlylA	dost
 xl}f	halifeler
 xmT	buruk
+xmdwn	sönüverdiler
+xmdyn	sönmüş ateş (gibi)
 xmr	şarap-
 xmrA	şarap
 xmsh	beşte biri
@@ -10156,10 +11316,14 @@ xrjwA	çıkan
 xrqhA	onu deliverdi
 xrwA	kapanırlardı
 xrwj	çıkmak için
+xsArA	ziyan
+xs_yn	aşağılık
 xsfnA	batırdık
-xsr	o kaybetmiştir
+xsr	ziyan
+xsrA	bir ziyan
 xsrAnA	bir ziyanla
 xsrwA	ziyan edenlerdir
+xsryn	ziyanda
 xtAr	gaddarlardan
 xtm	mühürlemiştir
 xtmh	ki onun sonu
@@ -10194,14 +11358,17 @@ y$Aq	karşı gelirse
 y$Aqq	karşı gelir
 y$Erkm	şuurunda
 y$Ern	sezdirmesin
-y$Erwn	bilmezler
+y$Erwn	farkında
 y$Eyb	Şuayb
 y$fE	destek olursa
 y$fEwn	şefa'at edemezler
+y$fyn	bana şifa veren
 y$hd	şahidtir
 y$hdh	ona tanık olurlar
-y$hdwn	şahidlik edecek
+y$hdwn	tanık olsunlar
 y$kr	şükreder
+y$krwn	şükreden
+y$qY	bir sıkıntı
 y$qq	çatlayıverir de
 y$rH	açar
 y$rY	satar
@@ -10209,7 +11376,7 @@ y$rb	içerler
 y$rbwn	içerler
 y$rk	ortak koşan
 y$rkn	ortak koşmamaları
-y$rkwn	ortak koşmayacaklar
+y$rkwn	ortak koşarlar
 y$rwn	satan(lar)
 y$thwn	arzu ettikleri
 y$trY	satın alır
@@ -10224,11 +11391,13 @@ y&Ax*hm	onları hemen cezalandırsaydı
 y&Ax*km	sorumlu tutar
 y&dh	onu öder
 y&fk	çevriliyor
+y&fkwn	çevriliyorlar
 y&lf	birleştirir
 y&lwn	yaklaşmamağa yemin edenler
 y&mn	inanan
 y&mnwA	inanmazlar
-y&mnwn	inanan
+y&mnwn	zaman
+y&mrwn	emredildikleri
 y&t	verilen
 y&tY	verir
 y&tkm	size verir
@@ -10237,6 +11406,7 @@ y&twn	verilir
 y&tyh	vereceği
 y&tyhm	verecektir
 y&tyn	bana verebilir
+y&vr	rivayet edilip öğretilen
 y&x*	alınmaz
 y&xr	ertelemez
 y&xrhm	ertelemektedir
@@ -10259,6 +11429,7 @@ y>*n	izin verinceye
 y>b	kaçınmasınlar
 y>bAnA	babamız
 y>bt	babacığım
+y>fkwn	onların uydurdukları
 y>hl	ehli
 y>jwj	Ye'cuc
 y>kl	yer
@@ -10322,6 +11493,7 @@ yDEf	artırılır
 yDEfh	onu kat kat yapar
 yDEfhA	onu kat kat yapar
 yDEn	bırakıncaya
+yDHkwn	gülerler
 yDY'	ışık verir
 yDh_wn	benzetiyorlar
 yDl	sapar
@@ -10335,17 +11507,19 @@ yDlwn	sapan(lara)
 yDlwnhm	saptırdıkları kimselerin
 yDlwnkm	sizi saptırsınlar
 yDr	ziyan veremez
+yDrEwn	yalvarıp yakarsınlar
 yDrb	anlatır
 yDrbn	vurmasınlar
 yDrbwn	gezip
 yDrh	ona zarar veremeyen
 yDrhm	zarar veren
 yDrk	sana zararı dokunmayan
-yDrkm	size zarar vermez
+yDrkm	zarar vermeyen
 yDrnA	ve zarar vermeyen
 yDrwA	zarar vermezler
 yDrwk	sana zarar veremezler
 yDrwkm	size zarar veremezler
+yDrwn	zarar verebiliyorlar( mı)?
 yDrwnk	sana zarar veremezler
 yDyE	ecirlerini
 yDyfwhmA	onları konuklamaktan
@@ -10361,6 +11535,7 @@ yES	karşı gelir
 yESmk	seni korur
 yESmkm	sizi koruyacak
 yESmnY	o beni korur
+yESrwn	(insanlar meyve) sıkarlar
 yESwn	karşı gelmeyen
 yESynk	sana karşı gelmemeleri
 yETwA	verecekleri
@@ -10374,11 +11549,12 @@ yEbAd	kullarım
 yEbAdY	kullarım
 yEbd	tapıyor
 yEbdwhA	kulluk etmekten
-yEbdwn	taptıkları
+yEbdwn	tapılacak
 yEbdwnnY	bana kulluk edecekler
 yEd	va'detmiyorlar
 yEdhm	sözü
 yEdkm	size vaad eder
+yEdlwn	adalet yapan
 yEdwn	onlar haddi aşıyorlardı
 yEfw	affetmesi
 yEfwA	vazgeçmesi
@@ -10386,6 +11562,7 @@ yEfwn	(kadının) vazgeçmesi
 yEjb	hoşuna gider
 yEjbk	senin hoşuna gider
 yEjl	acele verseydi
+yEjzwn	(bizi) aciz bırakamazlar
 yEkfwn	tapan
 yElm	bilir
 yElmAn	onlar öğretmezlerdi
@@ -10393,16 +11570,18 @@ yElmh	onu bilir
 yElmhA	onun bilgisi
 yElmhm	bildiği
 yElmwA	tanımamaya
-yElmwn	bilmeyen
-yElnwn	açığa vurdukları
+yElmwn	bilen
+yElnwn	açığa vurduğunu
+yEmhwn	bocalamaya
 yEml	yapan
 yEmlwn	yapan
 yEmr	ömür
 yEmrwA	imar etmeleri
 yEqb	geri dönmedi
 yEqlhA	onları düşünüp anlamaz
-yEqlwn	düşünmeyen
+yEqlwn	düşünen
 yEqwb	Ya'kub
+yEr$wn	kurdukları çardaklardan
 yErD	sunulacakları
 yErDwA	yüz çevirirler
 yErDwn	sunulurlar
@@ -10414,12 +11593,15 @@ yErfwnh	onu tanırlar
 yErfwnhA	bunun farkına varırlar
 yErfwnhm	tanıdıkları
 yErj	çıkar
+yErjwn	çıkacak
 yEt*rwn	özür dilerler
 yEtSm	sarılırsa
+yEtdwn	sınırı aşmış
 yEtzlwkm	sizden uzak durmazlarsa
 yEw*wn	sığınırlardı
 yEwdwA	dönerlerse
 yEwdwn	dönenler
+yEyd	geri getiremez
 yEydh	onu iade eden
 yEydkm	sizi gönderip
 yEydnA	bizi tekrar döndürebilir
@@ -10431,9 +11613,11 @@ yH$rhm	bir araya toplar
 yH$rwA	toplanacaklardır
 yH$rwn	toplanacak
 yH*r	korkan
+yH*rwn	korkmuş
 yHAT	kuşatılıp engellenmeniz
 yHAdd	karşı koymağa kalkarsa
 yHAdwn	karşı gelen(ler)
+yHAfZwn	korurlar
 yHAjwkm	(aleyhinize) deliller getireceklerinden (mi?)
 yHAjwn	tartışan(ların)
 yHArbwn	savaşanların
@@ -10442,11 +11626,13 @@ yHAsbkm	sizi hesaba çeker
 yHAwrh	konuşan
 yHD	teşvik etmez
 yHDn	henüz adet görmeyenler
+yHDrwn	yanıma uğramalarından
 yHTmnkm	sizi ezmesinler
 yHY	yaşatır
 yHb	sever
 yHbbkm	sizi sevsin
 yHbhm	onları seven
+yHbrwn	neş'elendirilirler
 yHbsh	onu alıkoyan
 yHbwn	seven
 yHbwnhm	onları severler
@@ -10456,6 +11642,7 @@ yHfZwnh	onu korurlar
 yHkm	hükmeder
 yHkmAn	onlar hükmediyorlardı
 yHkmwk	seni hakem yaparak
+yHkmwn	hüküm veriyorlar
 yHkmwnk	seni hakem yapıyorlar
 yHl	insin
 yHlfwn	yemin ederler
@@ -10468,6 +11655,7 @@ yHml	taşıyan
 yHmlnhA	onu yüklenmekten
 yHmlwhA	onu taşımayanların
 yHmlwn	taşıyan(lar)
+yHmwm	kara duman-
 yHq	gerçekleştirmek
 yHrfwn	kaydırıyorlar
 yHrfwnh	onu değiştirirlerdi
@@ -10484,19 +11672,25 @@ yHsrtY	vah (bana)
 yHsrtnA	vah bize
 yHtsb	ummadığı
 yHtsbwA	ummadıkları
+yHtsbwn	hesabetmedikleri
 yHwl	girer
+yHwr	dönmeyeceğini
 yHyTwA	kavrayamadıkları
 yHyTwn	kavrayamazlar
-yHyY	Yahya'yı
+yHyY	yaşam
 yHyf	haksızlık yapacak
 yHyk	selamlamadığı
 yHyq	dolanmaz
 yHyyhA	onları diriltecek
 yHyykm	diriltecek
+yHyyn	diriltecek olan
 yHzn	tasalanmamalarına
 yHznhm	onları tasalandırmaz
 yHznk	seni üzmesin
+yHznwn	hüzün
 ySEd	çıkar
+ySEqwn	korkudan bayılacakları
+ySHbwn	sahip çıkılır
 ySTfY	seçer
 ySTrxwn	feryadederler
 ySYHbY	arkadaşlarım
@@ -10515,10 +11709,12 @@ ySdqwA	bağışlamaları
 ySdqwn	tasdik ederler
 ySdr	çıkarlar
 ySdwn	menedip
+ySfwn	nitelendirdikleri
 yShr	eritiliyor
 ySl	ulaşır
 ySlH	Salih
 ySlHA	düzeltmelerinde
+ySlHwn	düzeltmezlerdi
 ySlY	girer
 ySlYhA	ona girmez
 ySlbwA	asılmaları
@@ -10526,8 +11722,10 @@ ySlwA	namaz kılmayan
 ySlwn	sığınan(lar)
 ySlwnhA	yaslanacakları
 ySnE	yapageldiği
+ySnEwn	yapmakta
 ySr	direnir
 ySrf	çevrilip savılırsa
+ySrfwn	çevriliyorlar
 ySrwA	ve onlar ısrar etmezler
 ySrwn	ısrar
 ySwrkm	sizi şekillendiren
@@ -10535,19 +11733,23 @@ ySyb	verir
 ySybhm	onların çekmeleri
 ySybkm	ulaştırmasını
 ySybnA	ulaşmaz
+yTAE	sözü tutulur
 yTAf	dolaştırılır
 yTE	ita'at ederse
 yTEm	besleyen
 yTEmh	yiyen kimse
 yTEmhA	yiyemez
 yTEmnY	bana yediren
+yTEmwn	beni beslemelerini
 yT_wn	ayak basmaları
 yTbE	mühürler
 yTf_wA	söndürmek
+yTgY	iyice azar
 yThr	temizlemesini
 yThrn	temizleninceye
 yTlbh	onu kovalayan
 yTmE	hırsla ister
+yTmEwn	beklemektedirler
 yTmvhn	onlara temas etmemiştir
 yTwf	dolaşır
 yTwfwn	dolaşırlar
@@ -10560,11 +11762,12 @@ yZhrwA	arka çıkmayanlar
 yZhrwh	onu aşmaya
 yZhrwn	zıhar eden(ler)
 yZlm	zulmetmez
-yZlmwn	zulmedenler
+yZlmwn	zulm
 yZn	sanıyor
 yZnwn	bilirler
 y_Adm	Adem
 y_wdh	O'na ağır gelmez
+y_wsA	umutsuzluğa düşer
 yb$r	müjdelediğidir
 yb$rY	müjde!
 yb$rhm	onları müjdeler
@@ -10577,10 +11780,11 @@ ybEvhm	onları diriltir
 ybEvk	seni ulaştırır
 ybEvkm	sizi diriltir
 ybEvwA	diriltilmeyeceklerini
+ybEvwn	dirileceklerini
 ybHv	eşeleyen
 ybSr	görmeyen
 ybSrwA	onların görmedikleri
-ybSrwn	görecekleri
+ybSrwn	görmezler
 ybSrwnhm	birbirlerine gösterilirler
 ybT$	yakalamak
 ybT$wn	tutacakları
@@ -10597,7 +11801,9 @@ ybdyn	göstermesinler
 ybd}	başlatıyor
 ybgwn	arıyorlar
 ybgwnkm	sizi düşürmek için
+ybgyAn	(birbirine) geçip karışmıyorlar
 ybkwn	ağlayarak
+yblY	yok olmayacak
 yblg	varıncaya
 yblgA	onlar (büyüyüp) ersinler
 yblgn	ulaşırsa
@@ -10613,9 +11819,11 @@ ybsTwA	uzatmağa (saldırmaya)
 ybtg	ararsa
 ybtgwn	arayan
 ybv	yaymakta olduğunda
+ybwr	bozulacaktır
 ybxl	cimrilik eden
 ybxlwn	cimrilik ederler
 ybxs	eksik etmesin
+ybxswn	bir noksanlık yapılmaz
 ybyn	açıklar
 ybynhA	açıklamaktadır
 ybytwn	gecelerini geçirirler
@@ -10661,39 +11869,43 @@ ydynwn	ve din edinmeyenlerle
 yfEl	yapan
 yfElh	bunu yaparsa
 yfElwA	yapacakları
-yfElwn	yaptıkları
+yfElwn	yaparlar
 yfSl	ayırır
 yfjrwnhA	akıtırlar
 yflH	iflah
+yflHwn	iflah olmazlar
 yfqhwA	anlasınlar
 yfqhwh	onu anlamalarına
-yfqhwn	anlamaya
+yfqhwn	anlayan
 yfr	kaçar
 yfrEwn	Fir'avn
 yfrH	sevinir(ler)
 yfrHwA	sevinirler
 yfrHwn	sevinen
 yfrT	taşkınlık eder
+yfrTwn	hiç geri kalmazlar
 yfrq	ayırdedilir
 yfrqwA	ayırmak
 yfrqwn	ayıran
 yfsH	genişlik versin
 yfsd	bozgunculuk yapan
 yfsdwn	bozgunculuk yapan
+yfsqwn	fenalık
 yftH	çözecektir
 yftdY	fidye versin
 yftnhm	kötülük etmeleri
 yftnkm	size bir kötülük yapmalarından
 yftnnkm	sizi bir belaya düşürmesin
 yftnwk	seni şaşırtmalarından
-yftnwn	sınandıklarını
+yftnwn	sınanmadan
 yftr	hafifletilmeyecektir
 yftrY	uydurur
-yftrwn	uyduruyorlar
+yftrwn	uydurmuş
 yftrynh	bir iftira
 yftykm	size şöyle açıklıyor
 yg$Y	örter
 yg$Yh	ki üstünü örten
+yg$YhA	onu örten
 yg$Yhm	onları örter
 yg$ykm	sizi bürüyordu
 ygAdr	bırakmıyor
@@ -10704,6 +11916,7 @@ ygDwA	sakınsınlar
 ygDwn	kısan(lar)
 ygfr	bağışlar
 ygfrwA	affetsinler
+ygfrwn	affederler
 ygl	hiyanet etmesi
 yglY	kaynar
 yglb	galib gelirse
@@ -10715,6 +11928,7 @@ ygnY	savamaz
 ygnhm	onları zengin eder
 ygnwA	savamazlar
 ygnyA	(kocaları) savamadı
+ygnyh	kendisine yeter
 ygnyhm	kendilerini zengin edinceye
 ygnykm	sizi zengin edecektir
 ygrnk	seni aldatmasın
@@ -10724,7 +11938,7 @@ ygtb	arkasından çekiştirmesin
 ygwSwn	denize dalan
 ygwv	ve Yeğus'u
 ygwykm	sizi azgınlığa düşürmeyi
-ygyZ	öfkelendirecek
+ygyZ	öfkelendiği
 ygyr	(durumlarını) değiştirmez
 ygyrwA	değiştirmediği
 yhAjr	göç eder
@@ -10739,8 +11953,9 @@ yhdwnnA	bize yol gösterecek
 yhdyh	doğru yola iletmek
 yhdyhm	doğru yola iletir
 yhdykm	size yol gösteren
-yhdyn	beni ulaştırmasını
+yhdyn	bana yol gösteren
 yhdynY	beni iletir
+yhjEwn	uyuyor(lar)
 yhlk	yok eder
 yhlknA	bizi helak etmiyor
 yhlkwn	mahvediyorlar
@@ -10750,10 +11965,11 @@ yhrEwn	koşarak
 yhrwn	Harun
 yhtdY	seçmiş olur
 yhtdwA	doğru yola gelmezler
-yhtdwn	ve (göç için) bulamayan
+yhtdwn	tanımayan
 yhwd	Hud
 yhwdyA	yahudi
 yhyj	kurur
+yhymwn	şaşkın şaşkın dolaşırlar
 yjAr	korunup kollanmayan
 yjAwrwnk	senin yanında kalamazlar
 yjEl	yapar
@@ -10762,7 +11978,8 @@ yjElnY	ve beni yapmadı
 yjElwh	atmaya
 yjElwn	tıkarlar
 yjHd	inkar etmez
-yjHdwn	bile bile inkar ediyorlardı
+yjHdwn	inkara
+yj_rwn	feryada başlarlar
 yjb	uymazsa
 yjbAl	dağlar
 yjbY	toplanıp getirildiği
@@ -10779,9 +11996,12 @@ yjdwnh	buldukları
 yjhd	cihad eder
 yjhdwA	cihadetmekten
 yjhdwn	cihad ederler
+yjhlwn	cahillik ederler
 yjlyhA	Onu açığa çıkaramaz
 yjmE	toplayacak
 yjmEkm	sizi topladığı
+yjmEwn	biriktirdikleri
+yjmHwn	hemen
 yjrY	akıp gider
 yjrh	çekmeye başladı
 yjrmnkm	sizi itmesin
@@ -10800,7 +12020,7 @@ yk$f	açılacağı, sıvanacağı
 yk*b	yalanlayan
 yk*bk	sana yalanlatan
 yk*bwk	seni yalanlıyorlarsa
-yk*bwn	yalanlamaktadırlar
+yk*bwn	yalancı
 yk*bwnk	seni yalanlamıyorlar
 ykAd	nerdeyse
 ykAdwn	neredeyse
@@ -10816,7 +12036,7 @@ ykflwnh	onun bakımını üstlenecek
 ykfr	inkar
 ykfrwA	inkar etmek
 ykfrwh	inkar edilmeyecektir
-ykfrwn	inkar ederler
+ykfrwn	inkar ediyor
 ykfwn	savamayacakları
 ykfykm	size yetmez mi?
 ykl&km	sizi koruyacak?
@@ -10830,9 +12050,9 @@ ykrhhn	onları zorlarsa
 ykrhwn	hoşlanmadıkları
 yksb	işlerse
 yksbh	onu kazanır
-yksbwn	kazananlar
+yksbwn	kazanıyor
 yktb	yazmaktan
-yktbwn	yazıyorlar
+yktbwn	yazarlar
 yktm	gizleyen
 yktmhA	onu gizleyen
 yktmn	gizlemeleri
@@ -10843,6 +12063,7 @@ ykwnwA	olmaya
 ykwnwn	oluyorlardı
 ykwr	örter
 ykydwn	kuruyorlar
+ylEbwn	eğlenerek
 ylEn	la'netlerse
 ylEnhm	la'net eder
 ylHdwn	nisbet ettikleri
@@ -10869,6 +12090,7 @@ ylqwnh	kendisine kavuştukları
 yltft	geriye dönüp bakmasın
 yltkm	size eksiltmez
 yltqTh	onu (görüp) alsın
+yltqyAn	birbirine kavuşuyorlar
 ylwT	Lut
 ylwn	eğip bükerler
 ylwnkm	yakınınızda bulunan
@@ -10882,12 +12104,14 @@ ymddkm	size yardım eder
 ymdh	ona katılsa
 ymdkm	size yardım etmesi
 ymdwnhm	onları çekerler
+ymhdwn	hazırlamaktadırlar
 ymkr	tuzak kuruyorlardı
-ymkrwn	tuzak kuranlara
+ymkrwn	hilelerine
 yml	kendisi yazdırmaya
 ymlk	malik
 ymlkwn	sahip
 ymn	lutfeder
+ymnY	dökülen
 ymnwn	başına kakıyorlar
 ymrwn	uğrarlar da
 ymrym	Meryem
@@ -10902,6 +12126,8 @@ ymssk	sana verirse
 ymsskm	size dokunduysa
 ymssnY	bana dokunmadı
 ymtEkm	sizi yararlandırsın
+ymtEwn	yaşatılıyor
+ymtrwn	şüphe etmekte
 ymwj	dalgalanır bir halde
 ymwsY	Musa
 ymwt	ölen
@@ -10913,7 +12139,9 @@ ymytnY	beni öldürecek olan
 ymyz	ayırıncaya
 yn$&A	yetiştirilen
 yn$r	yaysın (bollaştırsın)
+yn$rwn	diriltecek
 yn$}	yapacaktır
+yn*rwn	uyarıldıkları
 ynAd	çağırır
 ynAdY	çağıran
 ynAdwn	çağırılıyorlar
@@ -10933,18 +12161,21 @@ ynSrh	kendine yardım eden
 ynSrkm	size yardım ederse
 ynSrnA	bizi kurtarır?
 ynSrnY	bana yardım edebilir?
+ynSrwn	hiçbir yardım
 ynSrwnh	ona yardım edecek
 ynSrwnhm	onlara yardım etmezler
 ynSrwnkm	size yardım ediyorlar-
 ynTlq	açılmıyor
 ynTq	söyleyen
+ynTqwn	konuşmazlar
 ynZr	bakar
 ynZrwA	bakmadılar mı?
-ynZrwn	bakarlar
+ynZrwn	gözetme
 ynb&A	haber verilir
 ynb>	haber verilmedi mi?
 ynbgY	yaraşır
 ynbt	bitirmektedir
+ynbwEA	bir göze
 ynbyE	kaynaklara
 ynb}hm	onlara haber verir
 ynb}k	hiç kimse sana haber veremez
@@ -10963,9 +12194,11 @@ ynfqwn	verirler
 ynfqwnhA	onları harcamayanlar
 ynfwA	sürülmeleridir
 ynfx	üflenir
+ynhY	men'edeni
 ynhYhm	menetmeleri
 ynhYkm	sizi men'eder
 ynhwn	alıkoyan
+ynjyh	kendisini kurtarsın
 ynjykm	sizi kurtarıyor
 ynkH	evlenmez
 ynkHhA	evlenmez
@@ -10973,21 +12206,30 @@ ynkHn	evlenmelerine
 ynkr	inkar eden(ler)
 ynkrwnhA	bunu inkar ederler
 ynkv	bozmuş olur
+ynkvwn	yeminlerini bozarlar
+ynq*wn	kurtarılmazlar
 ynqD	yıkılmağa
 ynqDwn	bozarlar
 ynqS	azaltılmaz
 ynqSwkm	size eksik bırakmayan
 ynqlb	döner
+ynqlbwn	devrileceklerini
 ynsA'	kadınları
+ynsY	unutmaz
 ynsfhA	onları savuracak
+ynslwn	koşuyorlar
 ynsynk	sana (bunu) unutturursa
+yntSrwn	savunurlar
 yntZr	(şehidlik) beklemektedir
 yntZrwn	bekliyorlar
 ynth	vazgeçmezlerse
 ynthwA	vazgeçerlerse
+ynthwn	vazgeçerler
 ynwH	Nuh
+ynyb	(O'na) yönelen
 ynzE	soyarak
 ynzEnk	seninle çekişmesinler
+ynzfwn	sarhoş
 ynzg	girer
 ynzgnk	seni dürtüklerse
 ynzl	inen
@@ -10997,6 +12239,7 @@ yqD	yerine getirmedi
 yqDY	hükmeder
 yqDwn	hüküm veremezler
 yqS	(O) anlatır
+yqSrwn	yakalarını bırakmazlar
 yqSwn	anlatan
 yqTEwn	bir geçmeleri
 yqbD	(rızkı) kısar da
@@ -11007,6 +12250,7 @@ yqdrwn	ele geçiremezler
 yql	derse
 yqlb	çevirir
 yqnT	umut keser
+yqnTwn	umutsuzluğa düşerler
 yqnt	ita'ate devam ederse
 yqr'wn	okurlar
 yqrD	borç verecek
@@ -11022,6 +12266,7 @@ yqtlwn	savaşan
 yqtlwnkm	sizinle savaşmaktan
 yqtlwnnY	beni öldürüyorlardı
 yqtrf	yaparsa
+yqtrfwn	yapmış
 yqtrwA	cimrilik
 yqttlAn	öldüresiye dövüşürlerken
 yqwl	der
@@ -11035,8 +12280,12 @@ yqwmwn	kalkamazlar
 yqymA	koruyamamaktan
 yqymwA	kılsınlar
 yqymwn	kılan
+yqyn	gerçek
+yqynA	yakinen
 yr	görmedi mi?
+yr$dwn	doğru yola erişirler
 yrA'wn	gösteriş yaparlar
+yrAd	arzu edilen
 yrDEn	emzirirler
 yrDY	razı olmaz
 yrDh	ona razı olur
@@ -11045,7 +12294,7 @@ yrDwnh	razı olacakları
 yrDwnkm	sizi razı ederler
 yrHmkm	size acır
 yrHmnA	bize acımazsa
-yrY	görselerdi
+yrY	gören
 yrYhA	onu dahi göremez
 yrYk	seni görür
 yrYkm	sizi görüyor
@@ -11061,14 +12310,18 @@ yrfE	yükseltsin
 yrfEh	onu yükseltir
 yrgb	yüz çevirir
 yrgbwA	kaygısına düşmeleri
-yrh	kendisini görmediğini-
+yrh	onu görür
+yrhbwn	korkanlar
 yrhq	bürümez
 yrhqhmA	onlara sarmasından
 yrjE	dönemez
-yrjEwn	döndürül(üp götürül)dükleri
+yrjEwn	dönecek
 yrjmwkm	taşlayarak öldürürler
 yrjwA	umuyor
 yrjwn	umarlar
+yrkDwn	kaçıyorlardı
+yrkEwn	rüku' etmezler
+yrkbwn	binecekleri
 yrm	üstüne atarsa
 yrmwn	zina iftirası
 yrqbwA	gözetirlerdi
@@ -11099,11 +12352,12 @@ yrykmwhm	onları gösteriyor
 yrzq	rızık verir
 yrzqhA	onları da besler
 yrzqkm	sizi rızıklandıran
-yrzqwn	kendilerine rızık verilir
+yrzqwn	rızıklanmaktadırlar
 ysAqwn	sürülüyorlarmış
 ysEY	koşar
 ysEwn	çalışanlara gelince
 ysHbwn	sürüklenecekler
+ysTrwn	yazdıklarına
 ysTwn	üzerine saldıracaklar
 ys_l	sormaz
 ys_lh	O'ndan isterler
@@ -11113,16 +12367,19 @@ ys_lkmwhA	onları isteseydi
 ys_lwn	sorarlar
 ys_lwnk	sana sorarlar
 ys_m	usanmaz
+ys_mwn	usanmazlar
 ysbH	tesbih etmeyen
 ysbHn	tesbih eden
-ysbHwn	tesbih ederler
+ysbHwn	yüzmektedir
 ysbqwnA	bizi geçeceklerini
 ysbqwnh	O'ndan önce söylemezler
 ysbtwn	cumartesi dışındaki
 ysjd	secde ederler
+ysjdAn	secde etmektedirler
 ysjdwA	secde etmezler mi?
-ysjdwn	secde aderlerken
+ysjdwn	secde ederler
 ysjn	hapsolunmaktan
+ysjrwn	yakılacaklardır
 yskn	durdurur da
 yslT	musallat eder
 yslbhm	onlardan kapsa
@@ -11133,14 +12390,18 @@ yslmwn	(onlar) müslüman olurlar
 ysmE	işitir
 ysmEhA	onları hiç işitmemiş
 ysmEwA	işitmezler
-ysmEwn	duyarlar
+ysmEwn	duyan
 ysmEwnkm	onlar sizi işitiyorlar-
 ysmn	o beslemez
+ysmrY	Samiri
 ysqY	(bunların hepsi) sulanır
 ysqwn	onlara içirilir
+ysr	gitmekte olan
+ysrA	kolayca
 ysrEwn	koşarlar
 ysrf	aşırı gitmesin
 ysrfwA	israf etmezler
+ysrh	ona kolaylaştırdı
 ysrnA	biz kolaylaştırdık
 ysrnh	O'nu kolaylaştırdık
 ysrq	çaldıysa
@@ -11151,10 +12412,13 @@ ystDEf	eziyordu
 ystDEfwn	hor görülüp ezilmekte
 ystEffn	sakınmaları
 ystEjl	acele ediyorlar
+ystEjlwn	acele istiyorlar
 ystEjlwnk	senden çabucak istiyorlar
 ystEtbwA	affedilmek isterlerse
+ystEtbwn	mazeret istenenlerden
 ystHY	utanmaz
 ystHbwn	tercih ederler
+ystHsrwn	yorulmazlar
 ystSrxh	yine feryadediyor
 ystTE	gücü yetmeyen
 ystTyE	gücü yeter-
@@ -11162,8 +12426,8 @@ ystTyEwn	güçleri
 yst_*nk	senden izin isterler
 yst_*nwh	ondan izin alıncaya
 yst_*nwnk	senden izin isteyen
-yst_xrwn	öne alınırlar
-ystb$rwn	müjdelerler (sevinirler)
+yst_xrwn	geri kalır
+ystb$rwn	sevinerek
 ystbdl	yerinize getirir
 ystftHwn	yardım istedikleri
 ystftwnk	senden fetva istiyorlar
@@ -11171,8 +12435,10 @@ ystfzhm	onları sürüp çıkarmak
 ystg$wn	bürünseler
 ystgfr	mağfiret dilerse
 ystgfrwA	mağfiret dilemek
+ystgfrwn	istiğfar ederlerdi
 ystgyvAn	sığınarak
 ystgyvwA	feryad edip yardım isteseler
+ysthz'wn	alay
 ysthz}	alay eder
 ystjyb	icabet eder
 ystjybwA	uymayan(lar)
@@ -11184,23 +12450,35 @@ ystnbTwnh	işin içyüzünü araştıran(lar)
 ystnkHhA	kendisini nikahlamayı
 ystnkf	çekinmez
 ystnq*wh	bunu kurtaramazlar
+ystqdmwn	öne geçemezler
+ystqym	doğru hareket etmek
+ystsxrwn	alay ederler
+ystvnwn	istisna da etmiyorlardı
 ystwY	eşit
+ystwfwn	ölçüyü tam yaparlar
 ystwn	eşit
 ystwyAn	eşit
 ystxfnk	seni telaşa düşürmesin
 ystxfwn	gizleniyorlar
 yswmhm	yapacak
 yswmwnkm	onlar size reva görüyor
+ysxTwn	kızarlar
 ysxr	alay etmesin
 ysygh	boğazından
+ysyr	az
+ysyrA	kolay
 ysyrkm	sizi gezdiren
 ysyrwA	gezmediler mi?
 yt*kr	anlar
+yt*krwn	düşünürler
+yt>xr	geri kalmak
+ytDrEwn	yalvarırlar diye
 ytEArfwn	tanışırlar
 ytEd	aşarsa
 ytHAjwn	birbirleriyle tartışırlarken
 ytHAkmwA	hakem olarak başvurmak
 ytThrwA	temizlenmeyi
+ytThrwn	fazla temizlenen
 ytb	tevbe etmezse
 ytbE	uyan
 ytbEhA	peşinden gelen
@@ -11215,20 +12493,26 @@ ytfDl	üstün gelmek
 ytfTrn	çatlayacak
 ytfjr	fışkırır
 ytfkrwA	düşünmediler mi ki
+ytfkrwn	düşünen
 ytfrqA	(eşler) ayrılırlarsa
+ytfrqwn	ayrılırlar
 ytfy&A	döndüğünü
+ytgAmzwn	birbirlerine kaş göz ederlerdi
 ytgyr	değişmeyen
 ytjrEh	onu yutmağa çalışır
+ytk_wn	yaslanacakları
 ytkbrwn	büyüklenenleri
 ytklm	söylüyor
 ytklmwn	konuşamaz
 ytlY	okunan
 ytlqY	kaydetmektedir
 ytlwA	okuyan
+ytlwmwn	kınamağa
 ytlwn	okuyan
 ytlwnh	onu okuyanlar
 ytm	tamamlamak
 ytmAsA	temaslarından
+ytmTY	çalım satarak
 ytmY	öksüz
 ytmnwh	fakat (ölümü) istemezler
 ytmnwnh	temenni etmezler
@@ -11240,14 +12524,16 @@ ytq	korkarsa
 ytqY	korunmağa çalışan
 ytqbl	kabul eder
 ytqdm	ileri gitmek
-ytqwn	korunanlar
+ytqwn	sakınan
 ytrAjEA	tekrar birbirlerine dönmelerinde
 ytrbSn	gözetlerler
 ytrbSwn	gözetleyip dururlar
+ytrddwn	bocalayıp duranlar
 ytrk	bırakılacağını
 ytrkm	zayi etmeyecektir
 ytrkwA	bırakılacaklarını
 ytrqb	kollayarak
+ytsA'lwn	sorar
 ytsllwn	sıvışıp gidenleri
 ytsnh	bozulmamış
 ytwb	döner
@@ -11259,6 +12545,7 @@ ytwfYkm	öldürür
 ytwfwn	ölen
 ytwfwnhm	canlarını alırken
 ytwkl	dayanırsa
+ytwklwn	dayananlar
 ytwl	dost tutarsa
 ytwlY	yönetir
 ytwlhm	onları veli tanırsa
@@ -11273,8 +12560,9 @@ ytx*wn	tutuyorlar
 ytx*wnk	seni edinmezler
 ytxTfkm	sizi kapıp götürmesinden
 ytxbTh	çarptığı
-ytxftwn	gizli gizli derler
+ytxftwn	fısıldaşıyorlardı
 ytxlfwA	geri kalmaları
+ytxyrwn	beğendikleri
 ytyhwn	şaşkın şaşkın dolaşacaklar
 ytymA	yetim
 ytymyn	iki yetim
@@ -11287,7 +12575,8 @@ yvxn	ağır basıncaya
 ywAdwn	dostluk eder
 ywEZ	öğütlenen
 ywEZwn	öğütlenen
-ywEdwn	va'dedildikleri
+ywEdwn	uyarıldıkları
+ywEwn	içlerinde gizledikleri
 ywH	vahyedilmemiş iken
 ywHY	vahyeder
 ywSY	yapılan
@@ -11298,11 +12587,13 @@ ywbqhn	onları helak eder
 ywd	ister
 ywdwA	arzu ederlerdi
 ywf	tastamam verilir
+ywfDwn	koşuyorlar
 ywfY	ödenecektir
 ywfq	bulur
 ywfwn	yerine getirirler
 ywfyhm	onlara tam verir
 ywjhh	onu gönderse
+ywld	doğurulmamıştır
 ywlhm	döner(kaçar)sa
 ywlj	sokar
 ywlwkm	size dönüp kaçarlar
@@ -11317,14 +12608,17 @@ ywq	korunursa
 ywqE	sokmak
 ywqd	yakılır
 ywqdwn	yak(ıp erit)tikleri madenlerden de
+ywqnwn	iyi bilen
 ywrY	örtecek
 ywrv	miras bırakan
 ywrvhA	onu verir
 ywsf	Yusuf
 ywsws	fısıldar
 ywvq	bağ vuramaz
+ywzEwn	sevk ediliyordu
 yx$	korkmayan
-yx$Y	(gereğince) korkar
+yx$Y	korkar
+yx$YhA	ondan korkacak
 yx$wn	korkarlar
 yx*lkm	sizi yüz üstü bırakırsa
 yxAf	korkan
@@ -11334,20 +12628,23 @@ yxAfwA	korkmalarına
 yxAfwn	korkarlar
 yxAlfwn	aykırı davranan(lar)
 yxSfAn	örtmeğe
+yxSmwn	çekişip dururlarken
 yxTf	kapıverecek
 yxdEwk	sana hile yapmak
 yxdEwn	aldatamazlar
-yxfY	gizli kalmaz
+yxfY	gizli
 yxff	hafifletmek
 yxfwn	gizlemekte
 yxfyn	gizledikleri
 yxl	yönelsin
 yxlf	dönmez
 yxlfh	onun yerine başkasını verir
+yxlfwn	yerinize geçen
 yxlq	yaratır
 yxlqkm	ve sizi yaratmaktadır
 yxlqwA	yaratamazlar
 yxlqwn	yaratılan
+yxrSwn	saçmalıyorlar
 yxrbwn	harap ediyorlardı
 yxrj	çıkar
 yxrjAkm	sizi çıkarsınlar
@@ -11364,9 +12661,11 @@ yxrwA	davranmazlar
 yxrwn	onlar derhal kapanırlar
 yxsf	geçirmeyeceğinden
 yxsr	hüsrana uğrayacaktır
+yxsrwn	eksik yaparlar
 yxtAnwn	hainlik eden(leri)
 yxtS	has kılar
-yxtlfwn	ihtilaf ettiklerini
+yxtSmwn	çekişerek
+yxtlfwn	ihtilaf halinde
 yxtm	mühür basar
 yxwDwA	dalsınlar
 yxwDwn	(münasebetsizliğe) dalanları
@@ -11381,6 +12680,7 @@ yzAlwn	durmazlar
 yzEmwn	zanneden(leri)
 yzdh	artırmayan
 yzdhm	onların artırmadı
+yzfwn	koşarak
 yzg	sapsa
 yzjY	sürer
 yzkY	yüceltir
@@ -11389,9 +12689,11 @@ yzkwn	övüp yüceltenleri
 yzkyhm	ve onları yüceltmeyecektir
 yznwn	zina etmezler
 yznyn	zina etmemeleri
+yzrwn	yükleniyorlar
 yzwjhm	onları çift (ikiz) yapar
 yzyd	artırır
 yzydhm	artırmıyor
+yzydwn	daha fazlasına
 yzyg	kaymağa yüz tutmuş
 y}s	umudu kestiği
 y}sn	kesilenler
@@ -11412,40 +12714,55 @@ zAnyp	zina eden kadından
 zEm	sandılar
 zEmt	zannettiğin
 zEmtm	sandığınız
+zEym	kefilim
 zHfA	toplu halde
 zHzH	çekilip kurtarılır
 zbd	bir köpük
 zbdA	köpüğü
 zbr	kütleleri
 zbrA	Kitaplara
+zbwrA	Zebur'u
 zd	artır
 zdnY	artır bana
 zdnhm	artırırız onlara
 zfyr	bir inleme
 zhrp	süsüne
+zhwqA	yok olmağa mahkumdur
 zjAjp	cam
+zjrA	bağırıp
 zjrp	haykırıştır
 zkY	temizlemezdi
+zkYhA	nefsini yücelten
 zkryA	Zekeriyya
 zkwp	zekat-
+zkyA	tertemiz
 zkyp	tertemiz
 zlfY	mertebece
 zlfp	yakından
 zlltm	kayarsanız
+zlqA	kupkuru bir toprak
 zltm	geri durmadınız
 zlzAlA	bir sarsıntı ile
+zlzAlhA	yaman sarsıntı ile
 zlzlp	depremi
 zlzlt	sarsıldığı
+zmhryrA	dondurucu soğuk
 zmrA	bölük bölük
+znym	kötülükle damgalı
+zqwm	Zakkum
 zrE	ekin
 zrEA	ekin
+zrqA	kör bir durumda
 zrtm	ziyaret ettiniz
+zwAl	zeval
 zwj	çifti
 zwjA	kocaya
+zwjAn	iki çift
 zwjh	eşini
 zwjhA	eşini
 zwjk	eşini
 zwjnkhA	biz onu sana nikahladık
+zwjt	çiftleştirildiği
 zwjyn	çift
 zxrf	yaldızlı
 zxrfhA	güzelliğini
@@ -11566,7 +12883,7 @@ zytwnp	zeytin
 {hbTA	inin
 {hbTwA	inin
 {hdnA	bizi ilet
-{htdY	yola gelirse
+{htdY	yola gelen
 {htdwA	yola gelen(lerin)
 {htdyt	yolu bulursam
 {htdytm	siz doğru yolda olduğunuz
@@ -11593,16 +12910,21 @@ zytwnp	zeytin
 {ktsbwA	kazandıkları
 {kttbhA	onları yazmış
 {l$Er	şiir
+{l$ErY	Şi'ra'nın
 {l$H	cimriliğe
-{l$dyd	şiddetli
+{l$dyd	çetin
 {l$fEp	şefa'at
+{l$fEyn	şefa'atçilerin
 {l$hdA'	şahidler
 {l$hdp	şahidliği
+{l$hdyn	görenler-
 {l$hr	ayı
 {l$hwr	ayların
 {l$hwt	zevklere
 {l$jr	ağaç-
 {l$jrp	ağaca
+{l$kryn	şükredenleri
+{l$kwr	şükreden
 {l$mAl	solun
 {l$ms	güneş
 {l$qp	aşılacak mesafe
@@ -11614,10 +12936,14 @@ zytwnp	zeytin
 {l$yTn	şeytan
 {l$yTyn	şeytanlar
 {l'AfAq	ufuklarda
+{l'Aflyn	batanları
 {l'Alhp	tanrıları
+{l'Amnyn	güvende olanlar-
 {l'Amrwn	emredip
+{l'Avmyn	günahkar
 {l'Axr	ahiret
 {l'Axrp	son
+{l'Axryn	ötekileri
 {l'Ayp	mu'cizeyi
 {l'Ayt	ayetler
 {l'Azfp	yaklaşan
@@ -11625,13 +12951,14 @@ zytwnp	zeytin
 {l*hb	altın
 {l*kr	Zikr
 {l*krAn	erkeklere
-{l*krY	öğüt almak
+{l*krY	öğüt
+{l*kwr	erkekler
 {l*l	küçülme
 {l*lp	alçaklık
 {l*nb	günahı
 {l*nwb	günahları
 {l*}b	kurt
-{l<Hsn	iyiliğin
+{l<Hsn	iyilik
 {l<SbAH	sabahı ortaya çıkarmış
 {l<SlH	ıslah etmek
 {l<bl	deveden
@@ -11645,9 +12972,14 @@ zytwnp	zeytin
 {l<ymn	iman
 {l>$hd	şahitler
 {l>$hr	aylar
+{l>$qY	bahtsız olan
+{l>$r	küstahın
+{l>$rAr	kötüler-
 {l>*l	alçak olanı
+{l>*lyn	en alçaklar
 {l>*qAn	çenelere kadar dayanır
 {l>EdA'	düşmanları
+{l>Ejmyn	yabancılardan
 {l>ElY	yüce
 {l>Elwn	galip durumda
 {l>EmY	kör
@@ -11663,16 +12995,20 @@ zytwnp	zeytin
 {l>HmAl	gebe
 {l>HyA'	dirilerle
 {l>HzAb	ordular
+{l>SfAd	zincirler
+{l>SnAm	putlara
 {l>SwAt	sesler
 {l>Swt	seslerin
 {l>Tfl	çocuklarınız
-{l>bSr	gözler
+{l>bSr	akıl
 {l>brAr	iyiler
+{l>btr	sonu kesik olandır
 {l>bwb	kapıları
 {l>byD	beyaz
 {l>dbAr	arkalarını
 {l>dbr	arkalarına
 {l>dnY	daha yakın
+{l>f_dp	gönüllere
 {l>gll	halkalar
 {l>gnyA'	zenginler
 {l>hlp	hilallerden
@@ -11681,9 +13017,12 @@ zytwnp	zeytin
 {l>jlyn	süreyi
 {l>kbr	büyük
 {l>kl	ürünlerinde
+{l>kmAm	salkımlı
 {l>kmh	körü
+{l>krm	en büyük kerem sahibidir
 {l>lbb	akıl
 {l>lwAH	levhalara
+{l>lym	acı
 {l>mAnY	kuruntular
 {l>mAnp	emaneti
 {l>mY	ümmi
@@ -11693,10 +13032,10 @@ zytwnp	zeytin
 {l>mn	güven
 {l>mnt	emanetleri
 {l>mr	iş
-{l>mvAl	meseller
+{l>mvAl	misaller
 {l>mvl	misaller
 {l>mwl	malda
-{l>mwr	nice işleri
+{l>mwr	işlerin
 {l>mwt	ölüler
 {l>myn	ümmiler
 {l>nAml	parmak uçlarını
@@ -11706,27 +13045,44 @@ zytwnp	zeytin
 {l>nfAl	ganimetler
 {l>nfs	canları
 {l>nhr	ırmaklar
+{l>nvY	kadın
 {l>nvyyn	iki kadının
+{l>qAwyl	laflar uydurup
 {l>qSA	Aksa'ya
+{l>qdAm	ayakları(nızı)
+{l>qdmwn	eski
+{l>qrbyn	en yakın
+{l>r*lwn	bayağı kimseler
 {l>rA}k	divanlar
 {l>rD	yer
 {l>rHAm	rahimlerde
+{l>sbAb	bağları
+{l>sbb	sebeplere
 {l>sfl	en aşağı
+{l>sflyn	alçaklar-
 {l>smA'	isimler
 {l>srY	esirler-
 {l>swAq	çarşılarda
 {l>swd	siyah
+{l>tqY	en muttaki olan
+{l>vym	günahkarların
+{l>wfY	tastamam
 {l>wl	ilk
 {l>wlY	ilk
-{l>wlwn	ilk olanlar
-{l>wlyn	daha layık
+{l>wlwn	önceki
+{l>wlyn	ilk
+{l>wtAd	kazıklar
 {l>wvn	putlar-
 {l>x	kardeş
 {l>xDr	yeşil
+{l>xdwd	hendeğin
 {l>xlA'	dostlar
 {l>xrY	öteki
+{l>xsrwn	ziyana uğrayanlardır
+{l>xsryn	hüsrana
 {l>xt	kızkardeş
 {l>xtyn	iki kızkardeşi
+{l>xyAr	iyiler-
 {l>yAm	günler
 {l>yd	güç
 {l>ydY	kuvvet
@@ -11735,6 +13091,7 @@ zytwnp	zeytin
 {l>zwj	çiftleri
 {lD>n	koyun-
 {lDAlwn	sapıklar
+{lDAlyn	sapık
 {lDEf	kat kat fazlası
 {lDEf&A	zayıflar
 {lDEfA'	zayıflar
@@ -11745,14 +13102,20 @@ zytwnp	zeytin
 {lDrr	özür
 {lE$A'	yatsı
 {lE$Ar	on aylık gebe develer
+{lE$yr	bir arkadaştır
 {lE*Ab	azab
+{lEAdwn	haddi aşanlardır
+{lEAdyn	sayanlara
 {lEAjlp	acele olanı
+{lEAlyn	yüceler-
 {lESf	saplı ve yapraklı
 {lEZAm	kemiklere
 {lEZm	kemiklere
-{lEbAd	şu kullara
+{lEZym	ulu
+{lEbAd	kullar
 {lEbd	kuldu
 {lEbdwn	ibadet edenler
+{lEbdyn	tapanların
 {lEdAwp	düşmanlık
 {lEdp	sayıyı
 {lEdw	düşmandır
@@ -11764,28 +13127,43 @@ zytwnp	zeytin
 {lElY	ulu
 {lElm	ilim
 {lElm&A	bilginler
+{lElmwn	bilenlerden
+{lElmyn	alemler
 {lElqp	alaka(embriyo)yı
 {lElyA	yüce olandır
 {lElym	bilen
+{lEmAd	sütunlu
 {lEmY	körü
+{lEmlwn	çalışanlar
+{lEmlyn	çalışanların
 {lEmr	ömür
 {lEnkbwt	örümcek
 {lEnt	sıkıntıya düşmekten
 {lEqAb	azabı
 {lEqbp	sonuç
+{lEqd	düğümlere
+{lEqym	köklerini kesen
 {lEr$	Arş
 {lErm	Arim
 {lEsr	güçlük
 {lEsrp	güçlük
+{lEtyq	Eski (Evi) [Kâbe'yi]
 {lEyn	gözlerinin
 {lEyr	kervan
+{lEywn	çeşmeler-
 {lEzm	azim (ve irade)
 {lEzp	şeref
 {lEzyz	Aziz
 {lH$r	haşirde
+{lHAfrp	eski halimize
 {lHAj	hacılara
+{lHAqp	gerçekleşen
+{lHSyd	biçilecek
+{lHTb	odun
+{lHTmp	Hutame
 {lHY	diri
 {lHb	daneyi
+{lHbk	yolları (yörüngeleri)
 {lHdyd	demir
 {lHdyv	söze
 {lHj	Hac
@@ -11796,15 +13174,19 @@ zytwnp	zeytin
 {lHkAm	hakimler(in önün)e
 {lHkm	hüküm
 {lHkmp	Hikmet
-{lHkym	hakimdir
+{lHkmyn	hükmedenlerin
+{lHkym	hakim
 {lHlm	erginliğe
+{lHlqwm	boğaza
 {lHlym	yufka yürekli
 {lHlyp	süs
 {lHmAr	eşeğin
 {lHmd	Hamd
 {lHmdwn	hamdedenler
+{lHmyd	övülen
 {lHmym	kaynar su
 {lHmyp	öfke ve gayreti
+{lHmyr	eşeklerin
 {lHnAjr	hançerelere
 {lHnv	günah (işlemek)
 {lHq	hak
@@ -11813,7 +13195,10 @@ zytwnp	zeytin
 {lHrb	harb
 {lHrm	haram
 {lHrv	ekin
-{lHsAb	hesabı
+{lHrwr	sıcaklık
+{lHryq	yangın
+{lHsAb	hesap
+{lHsbyn	hesap görenlerin
 {lHsnY	güzel
 {lHsnp	güzel
 {lHsnt	iyilikler
@@ -11828,28 +13213,35 @@ zytwnp	zeytin
 {lHywp	dünya
 {lHzbyn	iki zümreden
 {lHzn	keder-
+{lSAfwn	o saf saf dizilenler
+{lSAxp	kulakları sağır eden o ses
 {lSEqp	yıldırım
 {lSHf	defterler
 {lSbH	sabah
 {lSbrwn	sabredenlere
 {lSbryn	sabredenler
+{lSdE	çatlayan
 {lSdfyn	iki dağın
 {lSdq	doğru
 {lSdqt	sadakalar
+{lSdqwn	doğru olanlar
 {lSdqyn	sadıklara
-{lSdwr	gönüllerde
+{lSdwr	göğüsler
 {lSdyq	çok doğru söyleyen
 {lSdyqwn	sıddikler
 {lSfA	Safa
 {lSfH	bir hoşgörü ile
 {lSfnt	safin (görkemli)
+{lSgryn	alçalanlardan
 {lSlH	iyi
 {lSlHt	salih
-{lSlHwn	iyiler (de)
+{lSlHwn	iyi
+{lSlHyn	iyi
 {lSlb	bel
 {lSlwp	namaz
 {lSlwt	namazları
 {lSm	sağıra
+{lSmd	Samed'dir
 {lSrH	köşke
 {lSrT	yola
 {lSwEq	yıldırımlar
@@ -11861,6 +13253,7 @@ zytwnp	zeytin
 {lSyd	av
 {lTAlb	isteyen de
 {lTAmp	herşeyi bastıran o felaket
+{lTArq	tarık
 {lTA}ftyn	iki topluluktan
 {lTEAm	yemek
 {lTfl	çocuklara
@@ -11880,27 +13273,32 @@ zytwnp	zeytin
 {lZhyrp	öğle vakti
 {lZl	gölgeyi
 {lZlmt	karanlıklar
-{lZlmwn	zalimler
-{lZlmyn	zalimler
+{lZlmwn	zalim
+{lZlmyn	zalim
 {lZlp	gölge
 {lZm_An	susayan
 {lZn	zan
+{lZnwnA	türlü düşüncelerle
 {lb$r	insanlar-
 {lb$rY	müjde
 {lb$yr	müjdeci
 {lb>s	savaş
 {lb>sA'	sıkıntı
 {lbAb	kapıdan
+{lbAqyn	kalıcı
 {lbAr}	Bâri'dir (var eden)
 {lbA}s	sıkıntı içinde bulunan
 {lbEv	dirilme
+{lbEyd	uzak
 {lbHAr	denizler
 {lbHr	deniz
 {lbHrAn	iki deniz
 {lbHryn	iki deniz
 {lbSr	göz
+{lbSyr	gören
 {lbT$p	vuruşla
 {lbTl	batıl
+{lbTwn	karınlarda
 {lbdw	çöl-
 {lbgA'	fuhşa
 {lbgDA'	öfke
@@ -11913,19 +13311,27 @@ zytwnp	zeytin
 {lblgp	üstün olan
 {lbnAt	kızlar
 {lbnt	kızlar
+{lbnwn	oğullar
+{lbnyn	oğlanlara
 {lbqEp	yerdeki
 {lbqr	o inek
 {lbr	kara
 {lbrq	şimşek
+{lbrwj	burçlar
+{lbryp	yaratılmışların
 {lbsT	açarak
+{lbwAr	helak
+{lbyAn	beyanı
 {lbyE	alışverişi
+{lbynp	açık kanıt
 {lbynt	açık deliller
 {lbyt	ev
 {lbywt	evlere
 {ldAE	çağırana
 {ldAEY	çağrıcıya
 {ldAr	yurdu
-{ldEA'	çağrıyı
+{ldEA'	du'ayı
+{ldbr	geriye
 {ldhr	zamandan
 {ldmA'	kan
 {ldmE	yaş
@@ -11934,39 +13340,62 @@ zytwnp	zeytin
 {ldrk	tabakasındadırlar
 {ldwAb	canlıların
 {ldwA}r	belalar gelmesini
+{ldxlyn	girenlerle
 {ldyAr	evlerin
-{ldyn	din
+{ldyn	Din
 {lf&Ad	gönül
+{lfA}zwn	kazananlar
 {lfDl	lutuf
 {lfH$A'	edepsizlikten
 {lfH$p	fuhuş
 {lfSl	hüküm
+{lfSlyn	ayırdedenlerin
 {lfjAr	kötüler
 {lfjr	sabah
+{lfjrp	Hak'tan sapanlardır
 {lflk	gemi
+{lflq	karanlığı yarıp sabahı ortaya çıkaran
 {lfqr	fakirliği
 {lfqrA'	fakirlere
+{lfqyr	fakire
+{lfrAq	ayrılık zamanı olduğunu
 {lfrAr	kaçmak
+{lfrHyn	şımarıkları
 {lfrdws	Firdevs
 {lfrqAn	ayrılma
 {lfryDp	hakkın kesiminden
 {lfryqyn	iki topluluğun
 {lfsAd	fesat
+{lfsqwn	fasıklardan
+{lfsqyn	fasıklardan
 {lfswq	fısk
 {lftAH	sorunları en güzel çözümleyendir
 {lftH	fetih
+{lftHyn	aç(ığa çıkar)anlanın
 {lftnp	fitne
 {lftyp	o gençler
 {lfwH$	fuhuşlara
 {lfwz	başarı
+{lfyl	fil
 {lfzE	korku
 {lf}tAn	iki topluluk
+{lg$yp	sarıp kaplayacak olanın
 {lgAr	mağarada
+{lgAwn	azgınlara
+{lgAwyn	azgınlar-
 {lgA}T	tuvalet-
+{lgA}byn	kayıplardan-
 {lgDb	öfkesi
 {lgY	azgınlık
+{lgbryn	kalacaklar-
 {lgflt	bir şeyden habersiz
+{lgflwn	gafiller
+{lgflyn	bilmeyen
+{lgfr	çok bağışlayana
+{lgfryn	bağışlayanların
 {lgfwr	bağışlayanım
+{lglbwn	üstün gelen
+{lglbyn	üstün gelen
 {lglm	çocuğa
 {lgm	tasadan
 {lgmAm	bulutu
@@ -11977,22 +13406,29 @@ zytwnp	zeytin
 {lgrfp	saraylarda
 {lgrft	saraylarda
 {lgrq	boğulma
+{lgrwb	batmadan
+{lgrwr	aldatıcı
 {lgyZ	öfke-
 {lgyb	gayb
 {lgyv	yağmuru
+{lgywb	gaybleri
 {lhdY	kurban
 {lhdhd	hüdhüdü
-{lhwY	keyfinize
+{lhlkyn	helak olanlar-
+{lhwY	heva-
 {lhwn	alçaklık
+{lhym	susuz develerin
 {ljAhl	bilmeyenler
 {ljAn	cin'i
-{ljHym	cehennem
+{ljAryp	akıp gidende (gemi)
+{ljHym	ateşe
 {ljb	kuyunun
 {ljbAl	dağlar
 {ljbAr	Cebbâr'dır (istediğini zorla yaptıran)
 {ljbl	dağa
 {ljdAr	duvar
 {ljhlwn	cahiller
+{ljhlyn	cahiller-
 {ljhlyp	cahiliyye
 {ljhr	açığı
 {ljlA'	sürgünü
@@ -12001,110 +13437,170 @@ zytwnp	zeytin
 {ljmEAn	iki topluluk
 {ljmEp	Cuma
 {ljml	deve
+{ljmyl	güzel
 {ljn	cin
 {ljnAt	cennet
 {ljnb	uzak
 {ljnp	bahçe
 {ljntyn	bağ (da)
+{ljnwd	orduların
 {ljrz	kuru otsuz
 {ljwAr	gemiler
 {ljwArH	hayvanların
 {ljwE	açlık
 {ljwdY	Cudi'nin
+{ljyAd	(saf kan Arap) atları
 {ljzA'	karşılığı
 {ljzyp	cizye
 {lk*Ab	yalancı
 {lk*b	yalan
+{lk*bwn	yalancılar
+{lk*byn	yalancılar-
 {lkAfr	kafir
 {lkEbp	Ka'be'ye
 {lkEbyn	topuklara
 {lkbr	ihtiyarlık
 {lkbrY	büyük
 {lkbryA'	ululuk
-{lkbyr	büyüktür
+{lkbyr	büyük
 {lkfAr	kafirler
 {lkfl	ve Zülkifil'i
 {lkfr	küfrü
 {lkfrp	kafirlerdir
-{lkfrwn	kâfirler
+{lkfrwn	kafir
 {lkfryn	kafirler
+{lkfwr	inkar edenden
 {lkhf	Kehf
 {lklb	şu köpeğin
 {lkllp	kelale
 {lklm	söz
+{lkns	dönüp saklananlara
 {lknwz	hazineler-
 {lkrb	sıkıntı-
 {lkrp	tekrar
+{lkrym	Kerim
 {lktb	Kitap
 {lkwAfr	kafir kadınların
 {lkwAkb	yıldızlar
+{lkwvr	Kevser'i
 {lkyl	ölçü
 {ll&l&	inci
+{llEbyn	şaka mı yapıyorsun?
 {llEnp	la'net
+{llEnwn	bütün la'net edebilenler
 {llTyf	latiftir
 {llgw	boş söz
 {llh	Alah
+{llhb	alev-
 {llhm	Allah'ım
 {llhw	eğlence-
 {llmm	küçük hatalar
 {llt	Lat
+{llwAmp	daima kendini kınayan
 {lm$Er	Meş'ar-i
+{lm$Hwn	dolu
 {lm$_mp	solun
 {lm$rkt	müşrik (Allah'a ortak koşan) kadınlarla
-{lm$rkwn	ortak koşanlar
+{lm$rkwn	müşrikler
 {lm$rkyn	müşrikler-
 {lm$rq	doğu
 {lm$rqyn	iki doğu
 {lm&mn	Mü'min'dir (güvenlik veren)
 {lm&mnt	inanmış
 {lm&mnwn	Mü'minler
-{lm&mnyn	mü'minler
-{lm>wY	durulmağa değer
+{lm&mnyn	inanan
+{lm>wY	barınağı
 {lmA'	su
+{lmAEwn	en ufak bir yardımı
 {lmAl	mal
 {lmDAjE	yataklar-
+{lmDEfwn	kat kat artıranlardır
 {lmDTr	darda kalmışa
 {lmDgp	bir çiğnemlik eti
 {lmDlyn	yoldan şaşırtanları
+{lmE*byn	azabedilenler-
 {lmE*rwn	özür bahane eden
+{lmEArj	yüksek makamların
 {lmESrt	sıkışan(bulut)lar-
+{lmElwm	bilinen
+{lmEmwr	bakımlı
 {lmErwf	iyilikten
+{lmEtbyn	affedilenler-
+{lmEtdwn	saldırganlar
+{lmEtdyn	haddi aşanları
 {lmEwqyn	alıkoyanları
 {lmEz	keçi-
+{lmHAl	tuzağı (cezası)
+{lmHDryn	getirilecekler-
 {lmHSnt	hür kadınlar
 {lmHrAb	mihraba
 {lmHrm	mukaddes
-{lmHsnyn	iyilik edenlerin
+{lmHsnyn	harcamaları
+{lmHtZr	ağıldaki
 {lmHyD	adet
+{lmS;yTrwn	hakim olan
 {lmSTfyn	seçkinlerdendir
 {lmSbAH	lamba
-{lmSdqyn	sadaka veren erkekler
+{lmSdqyn	doğrulayan(lar)
 {lmSlH	ıslah eden-
+{lmSlHyn	arabulucular-
+{lmSlyn	namaz kılanlar
 {lmSwr	Musavvir'dir (biçim veren)
+{lmSyr	dönüş
+{lmThrwn	temizlerden
+{lmThryn	temizlenenleri
+{lmTm}np	huzura eren
 {lmTwEyn	gönülden verenleri
+{lm_Ab	varılacak yer
 {lmb*ryn	savurganlar
+{lmbTlwn	iptalciler
 {lmbrkp	mübarek
+{lmbvwv	yayılmış
+{lmbyn	açık
 {lmdA}n	kentlere
+{lmdHDyn	yenilenlerden
+{lmdvr	örtüsüne bürünen
 {lmdynp	şehre
+{lmflHwn	kurtulanlardır
+{lmflHyn	kurtuluşa erenler-
+{lmfr	kaçacak yer
 {lmfsd	bozanı
 {lmfsdwn	bozgunculardır
+{lmfsdyn	bozguncu
+{lmftryn	iftiracıları
+{lmftwn	fitnelenmiştir
 {lmg$Y	baygınlık çökmüş
 {lmgDwb	gazabedilmiş olanların
 {lmgfrp	affı
 {lmgrb	batı-
+{lmgrbyn	iki batının
+{lmgrqyn	boğulanlar-
+{lmhAd	bir döşektir
 {lmhd	beşikte
+{lmhdwn	döşeyiciyiz
 {lmhjryn	Muhacirler-
+{lmhlkyn	helak edilenler-
 {lmhtd	yolu bulmuştur
 {lmhtdY	yolu bulan
+{lmhtdwn	doğru yolu bulanlar
+{lmhtdyn	yola gelenlerden
 {lmhymn	Müheymin'dir (kollayıp koruyan)
+{lmhyn	küçültücü
 {lmjhdyn	mücahidleri
 {lmjls	meclislerde
 {lmjrm	suçlu olan
 {lmjrmwn	suçlular
-{lmjrmyn	suçlular
-{lmk*byn	yalanlayıcılar-
+{lmjrmyn	suçlu
+{lmjybwn	kabul buyurmuştuk
+{lmjyd	yücedir
+{lmk*bwn	yalanlayıcılar
+{lmk*byn	yalanlayanlara
+{lmknwn	saklı
 {lmkr	tuzak
+{lmkrmyn	ağırlanan
+{lmkryn	tuzak kurandır
 {lmkyAl	ölçüyü
+{lmkydwn	tuzağa düşecek olanlar
 {lml&A	ileri gelenler
 {lml<	melekleri
 {lml>	bir grup
@@ -12112,95 +13608,164 @@ zytwnp	zeytin
 {lmlk	mülk
 {lmlkyn	iki meleğe
 {lmlp	dinde
+{lmlqyn	(önce) atanlar
 {lmlwk	hükümdarlar
 {lml}kp	melekle
 {lmmAt	ölümü
+{lmmtryn	kuşkulananlar-
 {lmn	kudret helvası
 {lmn$_At	inşa edilmiş
+{lmn$_wn	yaratanlar
+{lmn*ryn	uyarıcılar-
 {lmnAd	o ünleyici
 {lmnAm	uykuda
+{lmnSwrwn	zafere ulaştırılanlar
+{lmnZryn	süre verilenler-
 {lmnfqwn	Münafıklar
 {lmnfqyn	münafıklar
+{lmnfw$	atılmış
 {lmnkr	kötülük-
+{lmntSryn	kendini kurtaranlar-
+{lmntZryn	bekleyenlerdenim
+{lmnthY	Müntehâ'nın
+{lmnwn	zamanın
+{lmnyr	aydınlatıcı
+{lmnzlwn	indirenler
+{lmnzlyn	konukseverlerin
+{lmqAbr	kabirleri
 {lmqAmp	durulacak
+{lmqbwHyn	çirkinleştirilenler-
 {lmqds	kutsal
 {lmqdsp	Kutsal
 {lmqnTrp	yığılmış
-{lmqrbwn	(Allah'a) yaklaştırılmış
+{lmqrbwn	yaklaştırılanlar
+{lmqrbyn	yakınlar(ım)
+{lmqsTyn	adalet yapanları
 {lmqtr	eli dar olan da
+{lmqtsmyn	kısımlara ayıranlara
 {lmr'	eşi
 {lmrADE	süt anneleri
 {lmrAfq	dirseklere
 {lmrDY	hastalar
+{lmrEY	otlağı
+{lmrfwE	yükseltilmiş
+{lmrfwd	verilen bu bağış
+{lmrjwmyn	taşlananlar-
+{lmrslwn	elçiler
 {lmrslyn	elçileri
 {lmryD	hasta
 {lms	dokunup
+{lmsAq	sevk
+{lmsHryn	iyice büyülenmişler-
 {lmsY'	kötülük yapan
+{lmsbHwn	o tesbih edenler
+{lmsbHyn	tesbih edenlerden
 {lmsjd	Mescid-i
+{lmsjwnyn	zindana atılanlar-
+{lmsjwr	kaynatılmış
 {lmsknp	miskinlik (damgası)
+{lmskyn	yoksulu
 {lmslmwn	müslümanlar
-{lmslmyn	müslümanlar
-{lmsrfyn	aşırı gidenler
+{lmslmyn	müslüman
+{lmsrfyn	aşırıların
 {lmstDEfyn	gerçekten zayıf
 {lmstEAn	yardım istenir
+{lmst_xryn	geri kalanları da
+{lmstbyn	açık ifadeli
+{lmsthz'yn	alay edenler(e karşı)
+{lmstkbryn	büyüklük taslayanları
 {lmstqdmyn	önce geçenleri
+{lmstqr	varıp durulacak yer
 {lmstqym	doğru
 {lmswmp	salma
 {lmsxr	emre hazır bekleyen
 {lmsyH	Mesih
+{lmtEAl	yücedir
+{lmtSdqyn	tasadduk edenleri
+{lmtThryn	temizlenenleri
 {lmtkbr	Mütekebbir'dir (çok ulud)
+{lmtkbryn	kibirlenenlerin
+{lmtklfyn	yapmacık yapanlar-
 {lmtlqyAn	iki alıcı (melek)
-{lmtqwn	korunanlara
+{lmtnfswn	yarışanlar
+{lmtqwn	muttakiler
 {lmtqyn	muttakiler
+{lmtrbSyn	gözetleyenlerdenim
+{lmtwklwn	tevekkül edenler
+{lmtwklyn	kendine dayanıp güvenenleri
+{lmtyn	sağlam
 {lmvAnY	ikililerden
 {lmvl	durum
+{lmvlY	örnek
 {lmvlt	benzerleri
 {lmw'dp	o diri diri toprağa gömülen kıza
+{lmwEwd	va'dedilen
 {lmwdp	arzu ediyorum
 {lmwj	dalgalar
 {lmwlY	sahip
 {lmwlwd	babanın
+{lmwqdp	tutuşturulmuş
+{lmwqnyn	inananlar-
+{lmwrwd	vardıkları yer
 {lmwsE	eli geniş olan
 {lmwt	ölüm
 {lmwtY	ölüler
 {lmwtp	ölümden
 {lmwzyn	terazileri
 {lmxAD	doğum sancısı
+{lmxbtyn	samimi insanları
+{lmxlSyn	halis
 {lmxlfwn	muhalefet ederek
+{lmxrjyn	sürülenler-
+{lmxsryn	eksiltenler-
+{lmyEAd	sözünden
 {lmyEd	sözleştiğiniz vakitte
 {lmyl	yönelişle
 {lmymnp	sağın
 {lmyt	ölü
 {lmytp	leş
+{lmyvq	andlaşmayı
+{lmyzAn	mizanı
+{lmzml	örtüsüne bürünen
 {lmzn	bulut-
 {ln$>p	yaratmak
-{ln*r	uyarıcılar-
+{ln$wr	dönüş
+{ln*r	uyarılar
 {ln*yr	uyarıcı
 {lnAqp	dişi deveyi
+{lnAqwr	Sur'a (boruya)
 {lnAr	ateş
 {lnAs	halk
 {lnEAs	hafif bir uyku
 {lnEm	hayvan-
 {lnEmp	ni'met
+{lnEym	naim
 {lnHl	bal arısına
+{lnSHyn	öğüt verenleri
 {lnSb	dikili taşlar
 {lnSf	(mirasın) yarısı
 {lnSr	yardım
 {lnSrY	Hıristiyanlar
+{lnSryn	yardımcıların
+{lnSyr	yardımcıdır
 {lnTfp	nutfeyi
+{lnZryn	bakanlara
 {lnb<	haber-
 {lnbY	peygamber
 {lnbwp	peygamberlik
 {lnbyn	peygamberleri
 {lnbywn	peygamberler
 {lndAmp	pişmanlıklarını
+{lndmyn	pişman olanlar-
 {lnfAq	iki yüzlülüğe
 {lnfs	cana
 {lnfvt	üfleyenlerin
 {lnfws	nefisler
 {lnhAr	günün
+{lnhY	akıl
+{lnjdyn	iki (tepe) yol
 {lnjm	yıldızdır
-{lnjwY	gizli konuşma
+{lnjwY	konuştular
 {lnjwm	yıldızlar
 {lnjwp	kurtuluşa
 {lnkAH	nikah
@@ -12213,31 +13778,43 @@ zytwnp	zeytin
 {lnxl	hurma
 {lnxlp	hurma
 {lnxyl	hurma ağaçlarının
+{lqADyp	işimi bitirmiş
 {lqAdr	kadirdir
 {lqAhr	tam hakimdir
+{lqAlyn	kızanlardanım
 {lqAnE	kanaat edip isteyemeyene
+{lqArEp	çarpan olay
 {lqEdwn	yerlerinde oturanlar
-{lqEdyn	oturanlardan
+{lqEdyn	oturanlarla
 {lqSAS	kısas
 {lqSS	hikayeyi
 {lqSwY	uzak kenarında idiler
 {lqTr	katran
 {lqblp	bir kıble
-{lqbwr	kabirlerin
+{lqbwr	kabirler
 {lqdr	kadir
+{lqdrwn	biçim vereniz biz
 {lqds	Kudüs
 {lqdws	mukaddes
+{lqdym	eski
+{lqdyr	gücü yetendir
+{lqhAr	kahreden
+{lqhr	kahredendir
 {lqlb	yürekli
 {lqlwb	kalbler
 {lql}d	gerdanlık(lı kurban)lara
-{lqmr	aya
+{lqmr	ay
+{lqnTyn	umut kesenler-
+{lqntyn	gönülden ita'at edenler-
 {lqr'An	Kur'an
+{lqrAr	durak
 {lqrH	bir yara
 {lqrY	o kent
 {lqrbY	yakın
 {lqrdp	maymunlar
 {lqrnyn	Zu'l-Karneyn
 {lqrwn	kuşaklar
+{lqryn	arkadaş(mışsın)
 {lqryp	ülke
 {lqrytyn	iki kent-
 {lqsT	adalet
@@ -12252,12 +13829,17 @@ zytwnp	zeytin
 {lqwm	kavmi
 {lqwp	kuvvet
 {lqym	doğru
-{lqymp	kıyamet
+{lqymp	doğru
 {lqywm	koruyup yöneticidir
+{lr$Ad	doğru
 {lr$d	doğru
+{lr$dwn	doğru yolda olanlar
+{lr$yd	akıllı
 {lr'yA	rüyayı
 {lr>Y	(sığ) görüşlü
 {lr>s	başım
+{lrAdfp	ardından (başka gürültü)
+{lrAjfp	o sarsıntı
 {lrDAEp	emzirmeyi
 {lrDEp	süt
 {lrEA'	çobanlar
@@ -12265,7 +13847,8 @@ zytwnp	zeytin
 {lrEd	gök gürültüsü
 {lrHmn	Rahman
 {lrHmp	rahmet
-{lrHym	çok esirgeyendir
+{lrHmyn	acıyanların
+{lrHym	Rahim
 {lrbE	dörtte biri
 {lrbnywn	Rabbanilerin
 {lrbwA	riba
@@ -12273,35 +13856,47 @@ zytwnp	zeytin
 {lrfv	yaklaşmak
 {lrhb	korkudan (açılan)
 {lrjAl	erkekler
+{lrjE	dönüşlü
+{lrjEY	dönüş
 {lrjfp	deprem
 {lrjs	pis
+{lrjym	kovulmuş
 {lrjz	azab
 {lrkEwn	rüku edenler
+{lrkEyn	eğilenlerle
 {lrqAb	kölelere
 {lrqyb	gözetleyen
 {lrs	Res
 {lrsl	elçiler
 {lrswl	Elçi
+{lrswlA	elçiye
 {lrsxwn	derinleşmiş olanlar
 {lrwE	korku
 {lrwH	Ruh
+{lrwm	Rum(lar)
 {lryAH	rüzgarları
 {lryH	rüzgar
 {lrzAq	rızık veren
 {lrzq	rızkı
+{lrzqyn	rızık verenlerin
 {lsAEp	Sa'at
 {lsAHr	büyücü
+{lsAmrY	Samiri
 {lsAq	bacak
 {lsA}l	dilenciyi
 {lsEY	koşma çağına
+{lsEyr	alevli
 {lsHAb	bulutun
 {lsHr	sihri
 {lsHrp	büyücüler
+{lsHrwn	sihirbazlar
 {lsHt	haram
 {lsbE	yedi
 {lsbl	yollara
+{lsbqwn	öne geçenler
 {lsbt	cumartesi
 {lsbyl	yol
+{lsbylA	yoldan
 {lsdrp	Sidre'yi
 {lsds	altıda birdir
 {lsdyn	iki sed
@@ -12309,6 +13904,7 @@ zytwnp	zeytin
 {lsflY	alçak
 {lsfynp	gemi
 {lsjdwn	secde edenler
+{lsjdyn	secde edenle
 {lsjl	tomarlarını
 {lsjn	zindan
 {lsjwd	secde
@@ -12316,6 +13912,7 @@ zytwnp	zeytin
 {lslm	selam
 {lsmA'	gök
 {lsmE	kulak
+{lsmwm	nüfuz eden
 {lsmwt	gök
 {lsmyE	işiten
 {lsnyn	yılların
@@ -12323,10 +13920,12 @@ zytwnp	zeytin
 {lsqf	tavan
 {lsr	gizliyi
 {lsrA'	bollukta
+{lsrA}r	sırların
 {lsrd	dokumasını
 {lsw'	kötü
 {lsw>Y	çok kötü
 {lswY	düzgün
+{lsxryn	alay edenlerden
 {lsyArp	kervanlardan
 {lsy_At	kötülükler
 {lsyl	sel
@@ -12340,13 +13939,17 @@ zytwnp	zeytin
 {ltgAbn	aldanma
 {lthlkp	tehlikeye
 {ltjrp	ticaretten
+{ltkAvr	çokluk yarışı
+{ltlAq	buluşma
 {ltmAvyl	heykeller
+{ltnAd	o çağırma
 {ltnAw$	elde etmeleri
 {ltqY	karşılaştığı
 {ltqtA	karşılaşan
 {ltqwY	takva
 {ltqytm	karşılaştığınız
 {ltrAb	toprağa
+{ltrAqY	köprücük kemiklerine
 {ltrAv	mirası
 {ltwAb	tevbeleri kabul eden
 {ltwb	tevbeyi
@@ -12356,53 +13959,86 @@ zytwnp	zeytin
 {lt}bwn	tevbe edenler
 {lvAbt	sağlam
 {lvAlvp	üçüncüsünü
+{lvAqb	parlayan
 {lvlv	üçte bir
 {lvlvAn	üçte ikisi
 {lvlvp	üçünün (kişinin)
 {lvmn	sekizde biri
 {lvmrt	meyvası
+{lvqAl	ağır (yüklü)
+{lvqlAn	iki yük sahibi (insan ve cin)
+{lvrY	toprağın
 {lvwAb	sevap
 {lwAd	vadinin
+{lwAqEp	olacak olan
 {lwArv	mirasçının
+{lwEZyn	öğüt verenler-
 {lwEd	va'd
 {lwEyd	tehditleri
 {lwHd	tek
 {lwHw$	vahşi hayvanlar
 {lwSyp	vasiyyet
 {lwdq	yağmurun
+{lwdwd	sevendir
+{lwhAb	çok lutfeden
 {lwjwh	yüzleri
+{lwkyl	vekildir
 {lwlY	velidir
 {lwldAn	ana babanın
 {lwldn	çocuklar
 {lwldyn	ana babanızın
 {lwlyp	velilik (koruyuculuk)
 {lwqt	vaktin
+{lwqwd	tutuşturulmuş yakıt
 {lwrd	bir yerdir
+{lwrvwn	varis olacaklar
+{lwrvyn	mirasçı
+{lwryd	şah damarı-
 {lwsTY	orta
 {lwswAs	vesvesecinin
 {lwsylp	yol
+{lwtyn	can damarını
 {lwvAq	bağı
 {lwvqY	sağlam
 {lwzn	tartıyı
+{lx$Eyn	saygı gösterenlerden
+{lxAT_yn	günahkarlardan
 {lxAlS	halis
-{lxSAm	mücadelede
+{lxAlyp	geçmiş
+{lxA}Dyn	boş şeylere dalanlar
+{lxA}nyn	hainleri
+{lxSAm	hasımların
 {lxSm	davacıların
+{lxTAb	konuşma
+{lxT_wn	hata işleyenlerden
 {lxTfp	bir söz
 {lxb'	gizleneni
+{lxbyr	haber alan
 {lxbyv	murdarı
 {lxbyvt	kötü kadınlar
 {lxb}v	çirkin
 {lxlTA'	karıştıran(ortak)ların
 {lxld	ebedi
+{lxldwn	ebedi (mi kalacaklar?)
+{lxldyn	ebedi kalıcılar-
+{lxlfyn	geri kalanlarla
 {lxlq	yaratma
+{lxlqwn	yaratanlar
+{lxlqyn	yaratanların
+{lxlwd	süreklilik
 {lxmr	şarap
+{lxnAs	sinsi
 {lxnzyr	domuz
-{lxrwj	çıkmak
+{lxrSwn	yalancılar
+{lxrTwm	burnunun
+{lxrwj	çıkış
 {lxsrAn	ziyan
-{lxsryn	ziyan edenlerdir
+{lxsrwn	kaybedecektir
+{lxsryn	kaybedenler-
 {lxwAlf	geri kalan kadınlarla
 {lxwf	korku
 {lxyAT	iğne
+{lxyAm	çadırlar
 {lxyT	iplik
 {lxyl	atlar
 {lxyr	mal
@@ -12412,23 +14048,29 @@ zytwnp	zeytin
 {lyhwd	Yahudiler
 {lyl	gece
 {lym	su
-{lymyn	sağ-
+{lymyn	sağ
+{lyqyn	ölüm
 {lysr	kolaylık
 {lytmY	öksüzler-
-{lytym	öksüzü
+{lytym	yetime
 {lywm	gün
 {lzAd	azığın
 {lzAnY	zina eden erkek
 {lzAnyp	zina eden kadına
+{lzbAnyp	zebanileri
 {lzbd	köpük
+{lzbr	Kitaplarda
 {lzbwr	Zebur'da
+{lzhdyn	isteksiz
 {lzjAjp	cam
 {lzkwp	zekat
 {lznY	zinaya
+{lzqwm	zakkum
 {lzrAE	ekincilerin
 {lzrE	ekinler
+{lzrEwn	bitirenler
 {lzwjyn	iki çifti
-{lzwr	yalan ve boş söze
+{lzwr	yalan
 {lzynp	süs (bayram)
 {l{sm	adı
 {m$wA	yürüyün
@@ -12458,8 +14100,10 @@ zytwnp	zeytin
 {nbEv	ayaklandığı
 {nfDwA	dağılıp
 {nfSAm	kopmayan
+{nfTrt	yarıldığı
 {nfrwA	savaşa gidin
 {nfxwA	üfleyin!
+{nkdrt	kararıp döküldüğü
 {nqS	eksilt
 {nqlb	döner
 {nqlbtm	yanlarına geldiğiniz
@@ -12469,7 +14113,9 @@ zytwnp	zeytin
 {ntZrwA	bekleyin
 {ntb*t	o ayrılıp çekilmişti
 {nthwA	buna son verin
+{ntqAm	intikam
 {ntqmnA	biz de öc aldık
+{ntvrt	saçıldığı
 {q*fyh	onu koy
 {qDwA	uygulayın
 {qEdwA	oturun
@@ -12489,6 +14135,7 @@ zytwnp	zeytin
 {rjE	dön
 {rjEY	dön
 {rjEwA	dönün
+{rjEwn	beni geri döndür
 {rkD	(yere) vur
 {rkEwA	rüku' edin
 {rkb	gel bin
@@ -12508,6 +14155,7 @@ zytwnp	zeytin
 {stDEfwnY	beni hırpaladılar
 {stEjAlhm	acele istemeleri gibi
 {stEjltm	sizin acele gelmesini istediğinizdir
+{stElY	üstün gelen
 {stEynwA	yardım isteyin
 {stHbwA	seviyorlarsa
 {stHfZwA	korumakla görevlendirildiklerinden
@@ -12530,6 +14178,7 @@ zytwnp	zeytin
 {stgfAr	mağfiret dilemesi
 {stgfr	(ister) af dile
 {stgfrwA	mağfiret dileyin
+{stgnY	zengin (kendine yeterli)
 {sthwth	ayartarak
 {sthz'wA	siz alay edin
 {sthz}	alay edildi
@@ -12538,7 +14187,7 @@ zytwnp	zeytin
 {stjyb	kabul ettikten
 {stjybwA	uyun
 {stkAnwA	boyun eğmediler
-{stkbArA	büyüklük taslama(larını)
+{stkbArA	kibirle
 {stkbr	o büyüklük tasladı
 {stkbrtm	büyüklük taslayarak
 {stkbrwA	büyüklük taslayan
@@ -12586,6 +14235,7 @@ zytwnp	zeytin
 {tqY	sakınan
 {tqwA	korkun
 {tqytn	(Allah'tan) sakınıyorsanız
+{tsq	dolunay olduğu
 {tx*	alan
 {tx*Y	edin
 {tx*hA	onu edinir
@@ -12614,6 +14264,7 @@ zytwnp	zeytin
 {xtlfA	birbirini tutmaz
 {xtlftm	ayrılığa düştüğünüz
 {xtlfwA	ayrılığa düşen
+{xtlq	uydurma(dan)
 {xtrnhm	biz onları üstün kıldık
 {xtrtk	seni seçtim
 {zdAdwA	arttı
