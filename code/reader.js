@@ -102,13 +102,19 @@ function displayWord(evt) {
     evt.preventDefault(); //hideMenus()
     let t = evt.target 
     t.classList.add('gri')  //mark target
-    if (!t.tText ) {
-      hideElement(bilgi); return
+    hideElement(bilgi)  //setPosition() displays bilgi
+    let b = t.tText; if (!b) return
+    if (t.id) { //verse number
+      bilgi.innerHTML = b
+    } else { //word just clicked
+      let r = Q.roots.wordToRoot(b); if (!r) return
+      bilgi.innerHTML = toArabic(r) 
+      let m = Q.dict.meaning(removeDiacritical(b))
+      if (m) bilgi.innerHTML += '<span>'+m+'</span>'
     }
-    bilgi.innerHTML = t.tText 
     let y = //t.offsetTop + t.offsetHeight
       t.getBoundingClientRect().bottom + window.pageYOffset
-    setPosition(bilgi, t.offsetLeft+24, y-6, 105)
+    setPosition(bilgi, t.offsetLeft+24, y+4, 105)
 }
 function selectWord(evt) {
     evt.preventDefault(); hideMenus()
@@ -126,9 +132,9 @@ function selectWord(evt) {
         s.removeAllRanges(); s.addRange(range);
       }
       // console.log(evt.offsetY, evt.clientY, evt.pageY)
-      let y = t.getBoundingClientRect().top
-            + window.pageYOffset - 24
-      setPosition(menuC, evt.clientX, y, 220)
+      let y = 
+        t.getBoundingClientRect().top + window.pageYOffset
+      setPosition(menuC, evt.clientX, y-36, 220)
     }
 }
 function hideWord(evt) {
@@ -182,13 +188,8 @@ function gotoPage(k=1, adjusting) { // 1<=k<=P
             .map(x => '<div>'+x+'</div>').join('');
           x.classList.add('mavi')
         } else { // x is a word
-          let b = toBuckwalter(x.innerText.trim())
-          let r = Q.roots.wordToRoot(b)
-          if (!r) continue
-          x.tText = toArabic(r)   
-          let m = Q.dict.meaning(removeDiacritical(b))
-          if (!m) continue
-          x.tText += '<span>'+m+'</span>'
+          // content is filled in displayWord()
+          x.tText = toBuckwalter(x.innerText.trim())
         }
       }
   }
@@ -541,7 +542,6 @@ function handleKeyEvent(evt) {
   }
   div1.onmouseenter = hideMenus
   div3.onmouseenter = hideMenus
-  // text.onmouseenter = hideMenus
 }
 /**
 * End of menu functions 
