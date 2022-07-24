@@ -14,8 +14,7 @@ Q.kur = new KuranText(snum, initialPage)
 Q.qur = new QuranText(0, initialPage)
 Q.simi  = new SimData('data/simi.txt')
 Q.roots = new MujamData('data/words.txt')
-if (currentLanguage() == 'tr') //will move elsewhere
-    Q.roots.setMeanings('/Kuran/data/words.tr.txt')
+// Q.dict = Dictionary.newInstance() moved to languageItems()
 new TouchHandler({dragStart, dragEnd}, div2)
 var curSura, curPage, bookmarks, lastSelection
 Q.notes = new Notes('notesQ')
@@ -187,7 +186,7 @@ function gotoPage(k=1, adjusting) { // 1<=k<=P
           let r = Q.roots.wordToRoot(b)
           if (!r) continue
           x.tText = toArabic(r)   
-          let m = Q.roots.meaning(removeDiacritical(b))
+          let m = Q.dict.meaning(removeDiacritical(b))
           if (!m) continue
           x.tText += '<span>'+m+'</span>'
         }
@@ -363,7 +362,7 @@ function initReader() {
     vers1.innerText = 'Iqra '+VERSION
     vers2.innerHTML = 'Iqra '+VERSION+'&emsp;'
     // console.log(swipe)  //TouchHandler
-    setSuraMenu()
+    languageItems()
     sureS.onchange = () => {gotoSura(sureS.selectedIndex+1)}
     cuzS.onchange = () => {gotoPage(cuzS.selectedIndex*20+1)}
     pgNum.onkeydown = keyToPage

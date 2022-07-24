@@ -224,7 +224,7 @@ add2hs	title	تثبيت الصفحة كتطبيق
 pay2	innerText	شارك (آية)...
 kay2	innerText	مصادر خارجية`
 
-function setSuraMenu() {
+function languageItems() {
     let k1 = sureS.selectedIndex 
     sName = suraNames[currentLanguage()]
     let labels = []
@@ -239,8 +239,9 @@ function setSuraMenu() {
     cuzS.innerHTML = '<option>'+labels.join('<option>')
     if (k2) cuzS.selectedIndex = k2
     LangManager.adjustDirection(infoS)
+    if (window.Q) Q.dict = Dictionary.newInstance()
 }
-const langMgr = new LangManager(setSuraMenu) 
+const langMgr = new LangManager(languageItems) 
 </script>
 <script src="code/utilities.js"></script>
 <script src="code/reader.js"></script>

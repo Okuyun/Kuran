@@ -186,26 +186,42 @@ class MujamData {
     if (!MujamData.instance) { //singleton
       this._root2List = new Map()
       this._word2Root = new Map()
-      this._meanings  = new Map()
       fetch_text_then(url, toWords)
       MujamData.instance = this
     }
     return MujamData.instance
   }
-  setMeanings(url) {
-    let toList = (t) => {
-      for (let s of t.split('\n')) {
-        let [root, m] = s.split('\t')
-        this._meanings.set(root, m)
-      }
-      console.log('setMeanings', url, t.length)
-    }
-    if (fetch_text_then(url, toList) !== 'OK') 
-        this._meanings.clear()
-  }
   wordToRoot(w) { return this._word2Root.get(w) || '' }
   rootToList(w) { return this._root2List.get(w) || [] }
+}
+
+/** Keys: words
+ *  Values: meanings
+ *  Usage: D = new Dictionary(url)
+ *     or  D = Dictionary.newInstance()
+ *  D.meaning('$hryn') => "iki ay"
+ */
+class Dictionary {
+  constructor(url) {
+    let toList = (t) => {
+      for (let s of t.split('\n')) {
+        let i = s.indexOf('\t')
+        if (i <= 0) continue
+        // let [key, m] = s.split('\t')
+        let key = s.substring(0, i)
+        let m = s.substring(i+1)
+        this._meanings.set(key, m)
+      }
+      console.log('Dictionary', url, t.length)
+    }
+    this._meanings = new Map()
+    fetch_text_then(url, toList)
+  }
   meaning(w) { return this._meanings.get(w) || '' }
+  static newInstance() {
+    return new Dictionary
+      ('/Kuran/data/words.'+currentLanguage()+'.txt')
+  }
 }
 
 /** Keeps data related to similarity
