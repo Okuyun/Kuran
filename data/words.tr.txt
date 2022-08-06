@@ -2610,6 +2610,7 @@ bhtn	bir iftiradır
 bhtnA	bir iftira
 bhyj	güzel
 bhymp	yürüyen
+b{l>ms	önceki gün
 bj*E	dalını
 bjAlwt	Calut'a
 bjAnb	yanında

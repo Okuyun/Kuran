@@ -2610,6 +2610,7 @@ bhtn	(is) a slander
 bhtnA	a slander
 bhyj	beautiful
 bhymp	beast
+b{l>ms	previous day
 bj*E	trunk
 bjAlwt	against Jalut
 bjAnb	on side
