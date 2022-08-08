@@ -149,7 +149,7 @@ class QuranText extends KuranText {
     constructor(id, callback) { super(id, callback) }
     /** override 4 methods below */
     chapName(c)   { return ' سورة '+aName[c] }
-    get besmele() { return 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ' }
+    get besmele() { return 'بسم الله الرحمن الرحيم' }
     get secde()   { return ' ۩ ' }
     verseToHTML(cls, s) {
       let cv = cls.substring(1).replace('_', ':') 
