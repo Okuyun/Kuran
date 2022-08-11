@@ -510,8 +510,17 @@ function menuFn() {
     Q.kur = new KuranText(k, setTrans) //current
   }
   menuK.onclick = (evt) => { //menu button
-      evt.preventDefault()
-      openSitePage(evt.target.innerText[0], curPage)
+    let t = parent.finder? evt.target : ''
+    switch (t) {
+      case topic: 
+        parent.finder.location="konular.html"; break;
+      case notes: 
+        parent.finder.location="notlar.html"; break;
+      case ders: 
+        parent.finder.location="/Kitap/ders/"; break;
+      default: openSitePage(t.innerText[0], curPage)
+    }
+    
   }
   function openSite(s) {
       if (!menuV.cv) return
