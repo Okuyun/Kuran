@@ -359,6 +359,23 @@ function makeMenu(button, menu, callback) {
       button.onclick = showOrHide
     }
 }
+function openHash(evt) {
+  // iqra.location.hash = '#'+h;
+    if (evt.key !== 'Enter') return
+    let str = ''
+    switch (evt.target) {
+      case rootD: 
+        str = 'mujam.html#r='+rootD.value.replace(/\s+/g, '&r=')
+        break;
+      case textD: 
+        str = FINDER+'#w='+textD.value; break
+      case buckD: 
+        str = FINDER+'#b='+buckD.value; break 
+      default: return
+    }
+    window.open(str, 'finder'); hideElement(bkgd)
+    evt.stopPropagation(); evt.preventDefault()
+}
 function initReader() {
     vers1.innerText = 'Iqra '+VERSION
     vers2.innerHTML = 'Iqra '+VERSION+'&emsp;'
@@ -368,6 +385,9 @@ function initReader() {
     cuzS.onchange = () => {gotoPage(cuzS.selectedIndex*20+1)}
     pgNum.onkeydown = keyToPage
     dialogOK.onclick = (e) => {e.key='Enter'; keyToPage(e)}
+    rootD.onkeydown = openHash
+    textD.onkeydown = openHash
+    buckD.onkeydown = openHash
     pageA.onclick = handlePageNum
     bkgd.onclick = (e) => e.target===bkgd? hideElement(bkgd) : 0
     makeMenu(starA, menuS, makeStarMenu)
@@ -524,14 +544,14 @@ function handleKeyEvent(evt) {
             if (!evt.altKey && !evt.ctrlKey && !evt.metaKey)
               {nextPage(); evt.preventDefault()}
             break
-          case 'T':
-            toggleTrans(); break
-          case '*':
-            toggleStar(); break
-          case 'M': //case '.':
-            toggleMenuK(); break
-          case 'Z': case '+':
-            toggleZoom(evt);  break
+          // case 'T':
+          //   toggleTrans(); break
+          // case '*':
+          //   toggleStar(); break
+          // case 'M': //case '.':
+          //   toggleMenuK(); break
+          // case 'Z': case '+':
+          //   toggleZoom(evt);  break
           default: return
       }
   }

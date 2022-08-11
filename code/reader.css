@@ -239,15 +239,21 @@ body {
     z-index: 5;
   }
   .dialog {
-    width: 190px;
-    padding: 20px;
+    width: 300px;
+    padding: 18px;
     display: block;
     margin: 40px auto;
     background: white;
     border: 5px double orange;
   }
+  .long { width: 90%; max-width: 340px; }
+  .short { width: 130px; }
+  .yellow { background: #ff7; }
+  .white { background: white; }
+  .small { font-size: smaller; }
+  .expert { color: red; }
   pre {
-    text-align: left;
+    margin: 0;
   }
 
 /* Menu Style

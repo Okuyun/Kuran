@@ -31,14 +31,31 @@
     <span id=page2></span>
     <input id=pgNum type=text inputmode=decimal>
     <button id=dialogOK title="OK">✔</button>
-<pre><span id=dia1></span>
+    <button onclick="explain.hidden=!explain.hidden" class=large>?</button>
+<pre id=explain hidden>
+<span id=dia1></span>
 <span id=dia2></span>
 <span id=dia3></span>
-<span id=dia4></span></pre>
-<hr>Load simi.txt: <br>
-<input type="file" onchange="fileSelect(this)" accept=".txt">
+<span id=dia4></span></pre><br>
+    <p><label id=lab2></label><br>
+    <input type=text id=textD class=long>
+    <p><label id=lab3></label>
+    <input type=text id=rootD class=short>
+    <hr />
+    <details id=expert class=expert>
+      <summary id=summD>For expert use only
+      </summary><p>
+    <label>Search using <a href="https://en.wikipedia.org/wiki/Buckwalter_transliteration" target=Kuran>
+        Buckwalter</a> code</label><br>
+      <input type=text id=buckD class=long placeholder="mtY h*A"><br>
+      <span id=codeD class="white small">
+  &nbsp; A b t v j H x d * r z s $ S D T Z E g f q k l m n h w y &nbsp;
+      </span>
+    </details>  
+  </div>
 </div>
-</div>
+<!--  <hr>Load simi.txt: <br>
+<input type="file" onchange="fileSelect(this)" accept=".txt"> -->
 
 <div id=div2 class="center">
   <div id=text class=hiddenNarrow>Türkçe meal yükleniyor</div>
@@ -155,7 +172,16 @@ pay1	innerText	Paylaş (sayfa)
 kay1	innerText	Dış kaynaklar:
 add2hs	title	Web sayfasını uygulama olarak aç
 pay2	innerText	Paylaş (ayet)...
-kay2	innerText	Dış kaynaklar`
+kay2	innerText	Dış kaynaklar
+lab2	innerText	Rehberde bul (Arapça ya da meal) 
+textD	placeholder	Aranacak metin
+textD	title	Bu alana girilen metin Rehber yazılımı ile aranır
+lab3	innerText	Mucemde bul
+rootD	placeholder	ktb Elm
+rootD	title	Birden fazla kök aranacaksa boşluk ile ayrılmalı
+offline	innerText	Internet kapalı iken bazı özellikler çalışmaz
+summD	title	Buckwalter kodunu göster/gizle
+codeD	title	Buckwalter kodu -- alfabetik sıra`
 
 localization.en = 
 `page1	innerText	Page
@@ -188,7 +214,16 @@ pay1	innerText	Share (page)
 kay1	innerText	External sources:
 add2hs	title	Install web page as application
 pay2	innerText	Share (verse)...
-kay2	innerText	External sources`
+kay2	innerText	External sources
+lab2	innerText	Search using Finder
+textD	placeholder	text to find
+textD	title	Text entered here will be searched verbatim using Finder
+lab3	innerText	Search using Mujam
+rootD	placeholder	ktb Elm
+rootD	title	Use space to separate roots (in Buckwalter code)
+offline	innerText	Internet is required for some features
+summD	title	Show/Hide Buckwalter code
+codeD	title	Buckwalter code -- dictionary order`
 
 
 localization.ar = 
@@ -222,7 +257,16 @@ pay1	innerText	شارك (صفحة)
 kay1	innerText	مصادر خارجية:
 add2hs	title	تثبيت الصفحة كتطبيق
 pay2	innerText	شارك (آية)...
-kay2	innerText	مصادر خارجية`
+kay2	innerText	مصادر خارجية
+lab2	innerText	ابحث باستخدام الباحث القرآني
+textD	placeholder	النص المراد البحث عنه
+textD	title	النص المدخل هنا سيتم البحث عنه بالباحث القرآني
+lab3	innerText	ابحث باستخدام المعجم
+rootD	placeholder	كتب علم
+rootD	title	استخدم الفراغ للفصل بين الجذور
+offline	innerText	الاتصال بالإنترنت مطلوب لبعض الميزات
+summD	title	إظهار/إخفاء رمز Buckwalter
+codeD	title	Buckwalter code -- ترتيب القاموس`
 
 function languageItems() {
     let k1 = sureS.selectedIndex 
@@ -239,6 +283,7 @@ function languageItems() {
     cuzS.innerHTML = '<option>'+labels.join('<option>')
     if (k2) cuzS.selectedIndex = k2
     LangManager.adjustDirection(infoS)
+    LangManager.adjustDirection(bkgd)
     if (window.Q) Q.dict = Dictionary.newInstance()
 }
 const langMgr = new LangManager(languageItems) 
