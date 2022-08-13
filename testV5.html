@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"    content="width=device-width">
+    <meta name="theme-color" content="#59b" />
+    <meta name="author"      content="M A Eyler, Istanbul, 2020" />
+    <meta name="description" content="Reader for the Quran" />
+    <link rel="apple-touch-icon" href="image/icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="image/icon.png">
+    <title>Iqra V4</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #59b;
+      min-height: 90vh;
+    }
+    iframe {
+      display: inline-block;
+      position: absolute;
+      box-sizing: border-box;
+      border: none;
+      height: 100%;
+      min-width: 100px;
+      margin: auto;
+    }
+    #findFrm {
+      z-index: 1;
+      transition: all 0.8s ease-out;
+    }
+    button {
+      position: fixed;
+      background-color: #ff7;
+      transition: all 0.4s ease-out;
+      border: 1px solid black;
+      border-radius: 15px;
+      cursor: pointer;
+      user-select: none;
+    }
+    #lang {
+      height: 28px; width: 28px;
+      top: 3px; left: 0; 
+      /* flaticon.com/free-icon/language_1246334 */
+      background-image: url(image/language.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      border: none;
+    }
+    #lang:hover {
+      height: 32px; width: 32px;
+    }
+    #openM {
+      height: 28px; width: 28px;
+      top: 3px; right: 0;
+      z-index: 5;
+    }
+    #openM:hover {
+      width: 36px;
+    }
+    #openM.upside {
+      transform: rotate(180deg);
+    }
+    #sizer {
+      bottom: -18px;
+      cursor: col-resize;
+      z-index: 5;
+    }
+    #sizer.sizing {
+      border: 12px solid #ff7;
+      border-radius: 25px;
+      bottom: -28px;
+    }
+  @media screen and (max-width: 850px) {
+    #findFrm {
+      width: 100%;
+    }
+  }
+  @media screen and (min-width: 851px) {
+    #openM {
+      top: initial; bottom: 3px; left: 0;
+    }
+    #findFrm {
+   /* resize: both; Chrome bug not resolved */
+      width: 50%;
+      max-height: 100%;
+      border-left: 1px solid #59b;
+      border-right: 1px solid #59b;
+    }
+  }
+  </style>
+  </head>
+  <body>
+
+  <iframe id=findFrm src='start.html'
+   name=finder title="Arama paneli"></iframe>
+  <iframe id=readFrm src='reader.html'
+   name=iqra title="Mushaf paneli"></iframe>
+
+  <button id=lang onclick="langMgr.nextLanguage()"
+     title="Language / اللغة / Dil &#010;English / العربي / Türkçe"></button>
+  <button id=closeM hidden>x</button>  <!-- NOT USED -->
+  <button id=openM><svg>
+    <path d="M8.59,16.59L13.17,12L8.59,7.41L10,6l6,6l-6,6L8.59,16.59z"></path>
+    <path fill="none" d="M0,0h24v24H0V0z"></path>
+  </svg></button>
+  <button id=sizer>⇔<br>&nbsp;</button>
+  <p id=dummy hidden></p>
+
+<script src="code/languages.js"></script>
+<script>//localization strings
+const localization = {};
+
+localization.tr =
+`closeM	title	Arama panelini kapat
+openM	title	Arama panelini aç/kapat
+sizer	title	Arama panelini ayarla`
+
+localization.en = 
+`closeM	title	Close the search panel
+openM	title	Open/close the search panel
+sizer	title	Adjust panel width`
+
+localization.ar = 
+`closeM	title	أغلق نافذة البحث
+openM	title	عد لنافذة البحث
+sizer	title	ضبط عرض النافذة`
+
+let langMgr = new LangManager()
+function applyLanguage() {
+    // console.log('applyLanguage', currentLanguage())
+    langMgr.applyLanguage()
+    iqra.postMessage("language", "*")
+    finder.postMessage("language", "*")
+}
+function applyTranslation() {
+    let k = getStorage('settings', 'source')
+    // console.log('applyTranslation', k)
+    iqra.postMessage("translation", "*")
+    finder.postMessage("translation", "*")
+}
+</script>
+<script src="code/common.js"></script>
+<script src="code/model.js"></script>
+<script src="code/utilities.js"></script>
+<script>
+sizer.style.display = 'none' //invisible
+const swipe = new TouchHandler({dragStart, dragEnd}, dummy)
+function dragStart(evt) {
+    // console.log("dragStart", window.name)
+    return true
+}
+function dragEnd(a) { //delegate all work to parent listener
+    console.log("dragEnd", a)
+    if (!parent.toggleFinder) //should not happen
+      { alert("swipe "+a); return }
+    switch (a) {
+      case 0: case 12: //swipe left -- A button
+        parent.toggleFinder()
+        if (!iqra.transIsChecked())
+          iqra.toggleTrans()
+        return true
+      case 3: case 6: //swipe up or right
+        parent.toggleFinder()
+        if (iqra.transIsChecked())
+          iqra.toggleTrans()
+        return true
+      default: //angle not supported
+        return false
+    }
+}
+function addListener(frm) {
+  frm.contentWindow.addEventListener('hashchange', reportHash)
+  console.log('* addListener *', frm.name)
+  if (frm.name !== 'finder') return
+  let b = finder.document.querySelector('body')
+  b.ontouchstart = dummy.ontouchstart
+  b.ontouchend   = dummy.ontouchend
+}
+function reportHash(e) { //hashchange in one of the panes
+  let s = '[Iqra]', h = ''
+  if (e.target.name == 'iqra') {
+    s = e.target.document.title
+    h = e.target.location.hash
+    console.log('hash:', h, '  curPage:', iqra.curPage)
+    if (hashToPage(h) === iqra.curPage) return
+    if (finderIsShown() && singlePanel()) hideFinder()
+  } else { // finder
+    // lang.hidden = !isStartPage
+    if (e.target.document) {
+      s = e.target.document.title
+      h = e.target.location.hash
+    }
+    if (!finderIsShown()) showFinder() 
+  }
+  document.title = VERSION +' '+ s
+  // console.log('* reportHash *', h, location.hash)
+  if (h=='' || window.location.hash == h) return
+  window.location.hash = h
+  hashInProgress = true
+}
+function hashModified() {
+  let h = decodedHash()
+  // console.log('** hashInProgress='+hashInProgress, h)
+  if (hashInProgress || !h || h.length<3) {
+    hashInProgress = false; return 
+  } 
+  let [c, d] = h.split('=')
+  switch (c) { //first char
+    case 'p': case 'v':
+      window.open('reader.html#'+h, 'iqra'); hideFinder()
+      break;
+    case 'r':
+      window.open('mujam.html#'+h, 'finder')
+      break;
+    case 'b': case 'w': case 't':
+      window.open('/Rehber/finder.html#'+h, 'finder')
+      break
+    case 'c':
+      window.open('/Kitap/cuma/'+d+'.html', 'finder')
+      break;
+    case 'd':
+      window.open('/Kitap/ders/'+d+'.html', 'finder')
+      break;
+    case 'g':
+      window.open('/Kitap/garibce/'+d+'.html', 'finder')
+      break;
+    case 'm':
+      window.open('/Kitap/rama/'+d+'.html', 'finder')
+      break;
+    default: 
+      if (c.length > 1)
+        window.open('konular.html#'+h, 'finder')
+      else console.error('wrong char '+c)
+  }
+}
+function finderIsShown() {
+  return !findFrm.style.left.startsWith('-')
+}
+function toggleFinder() {
+  if (finderIsShown()) hideFinder() 
+  else showFinder()
+}
+function hideFinder() {
+  setPosition(findFrm, -finderWidth, finderWidth)
+  // closeM.hidden=true; openM.hidden=false
+  resize()
+}
+function showFinder() {
+  setPosition(findFrm, 0, finderWidth)
+  // closeM.hidden=false; openM.hidden=true
+  resize()
+}
+function setPosition(e, x, w) {
+  e.style.left  = (x == 0)? 0 : x+'px'
+  if (w) e.style.width = (w == WIDTH)? '100%' : w+'px'
+  // if (e===readFrm) console.log('setPosition', x, w)
+}
+function singlePanel() {
+  return (WIDTH <= 850)
+}
+function threePanels() {
+  return (WIDTH > finderWidth+850)
+}
+
+  function resize() {
+    WIDTH = Math.min(window.innerWidth, screen.width)
+    if (!finderWidth) {
+      let fw = getStorage('iqra', 'finderWidth') || WIDTH/2
+      finderWidth = Number(fw)
+    }
+    openM.hidden = threePanels()
+    if (singlePanel() && finderIsShown())
+         readFrm.style.display = 'none'
+    else readFrm.style.display = ''
+    if (threePanels()) { //wide screen
+        setPosition(findFrm, 0, finderWidth)
+        setPosition(readFrm, finderWidth, WIDTH-finderWidth)
+    } else if (singlePanel()) {
+      if (finderIsShown())  //either panel is full width
+           setPosition(findFrm, 0, WIDTH) 
+      else setPosition(readFrm, 0, WIDTH)
+    } else {
+      if (finderIsShown())  //two panels with finder
+        setPosition(readFrm, finderWidth, WIDTH-finderWidth)
+      else setPosition(readFrm, 0, WIDTH)
+    }
+    lang.style.left = readFrm.style.left
+    if (finderIsShown())
+         openM.classList.add('upside')
+    else openM.classList.remove('upside')
+    if (readFrm.style.left.startsWith('0')) {
+        sizer.style.display = 'none'
+    } else {
+        sizer.style.display = ''
+        setPosition(sizer, finderWidth-15)
+    }
+  }
+  function sourceChanged(e) {
+    try {
+      let p = finder.location.pathname
+      if (lastPath != p) {
+        lastPath = p; addListener(findFrm)
+      }
+    } catch (err) {
+      lastPath = null // cannot read location
+    }
+    console.log('* sourceChanged *', lastPath)
+    reportHash(e)
+  }
+  function initReader(e) { // Window.postMessage()
+    console.log('* initReader *', iqra.location.hash)
+    if (e.data !== "initialized") return
+    showFinder(); addListener(readFrm)
+    hashModified()
+  }
+  var lastPath,  // finder location
+    hashInProgress = false,
+    // initialHash = decodedHash(),
+    WIDTH = Math.min(window.innerWidth, screen.width),
+    finderWidth;
+  console.log('* start *', location.hash)
+  // readFrm.style.display = 'none' //hide iqra frame
+  window.name = 'iqraTop'
+  window.onresize = resize
+  window.onhashchange = hashModified
+  // closeM.onclick = startPane //hideFinder
+  openM.onclick  = toggleFinder //showFinder
+  // readFrm.onload = initReader
+  findFrm.onload = sourceChanged
+  iqra.addEventListener('hashchange', reportHash)
+
+var id //indicates a drag event is active
+var x0 //clientX of the latest drag
+function resizeStart(e) {
+  // e.preventDefault()
+  let p = e.touches? e.touches[0] : e
+  x0 = Math.round(p.clientX)
+  id = setTimeout(resizeEnd, 1500) //global
+  console.log(e.type, x0, id)
+  sizer.classList.add('sizing')
+}
+function drag(e) {
+  // e.preventDefault()
+  if (!id) return
+  clearTimeout(id)
+  id = setTimeout(resizeEnd, 1000) //global
+  let p = e.touches? e.touches[0] : e
+  let x1 = Math.round(p.clientX)
+  let f0 = finderWidth
+  let fw = f0 + (x1 - x0); x0 = x1
+  let W = Math.min(window.innerWidth, screen.width)
+  finderWidth = Math.min(Math.max(fw, 350), W-350)
+  if (fw !== f0) resize()  //else do not move
+  // console.log(e.type, fw)
+}
+function resizeEnd(e) {
+  // if (e) e.preventDefault()
+  if (!id) return
+  clearTimeout(id); id = undefined
+  setStorage('iqra', 'finderWidth', finderWidth)
+  console.log(e? e.type : 'cancel', finderWidth)
+  sizer.classList.remove('sizing')
+}
+  sizer.onmousedown = resizeStart
+  sizer.onmousemove = drag
+  sizer.onmouseup = resizeEnd
+  sizer.ontouchstart = resizeStart
+  sizer.ontouchmove = drag
+  sizer.ontouchend = resizeEnd
+  // resizable iframe has a bug
+  // new ResizeObserver(setWidth).observe(findFrm)
+  window.addEventListener("message", initReader)
+  window.onbeforeinstallprompt = (e) => {
+    iqra.beforeinstallCB(e)
+    console.log('beforeinstallprompt event')
+  }
+</script>
+    
+  </body>
+</html>
