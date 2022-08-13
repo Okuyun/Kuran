@@ -26,7 +26,6 @@
       margin: auto;
     }
     #findFrm {
-      z-index: 1;
       transition: all 0.8s ease-out;
     }
     button {
@@ -53,7 +52,7 @@
     #openM {
       height: 28px; width: 28px;
       top: 3px; right: 0;
-      z-index: 5;
+      font-weight: bold;
     }
     #openM:hover {
       width: 36px;
@@ -64,7 +63,6 @@
     #sizer {
       bottom: -18px;
       cursor: col-resize;
-      z-index: 5;
     }
     #sizer.sizing {
       border: 12px solid #ff7;
@@ -100,10 +98,7 @@
   <button id=lang onclick="langMgr.nextLanguage()"
      title="Language / اللغة / Dil &#010;English / العربي / Türkçe"></button>
   <button id=closeM hidden>x</button>  <!-- NOT USED -->
-  <button id=openM><svg>
-    <path d="M8.59,16.59L13.17,12L8.59,7.41L10,6l6,6l-6,6L8.59,16.59z"></path>
-    <path fill="none" d="M0,0h24v24H0V0z"></path>
-  </svg></button>
+  <button id=openM>&gt;</button>
   <button id=sizer>⇔<br>&nbsp;</button>
   <p id=dummy hidden></p>
 
@@ -269,7 +264,6 @@ function threePanels() {
       let fw = getStorage('iqra', 'finderWidth') || WIDTH/2
       finderWidth = Number(fw)
     }
-    openM.hidden = threePanels()
     if (singlePanel() && finderIsShown())
          readFrm.style.display = 'none'
     else readFrm.style.display = ''
@@ -277,7 +271,7 @@ function threePanels() {
         setPosition(findFrm, 0, finderWidth)
         setPosition(readFrm, finderWidth, WIDTH-finderWidth)
     } else if (singlePanel()) {
-      if (finderIsShown())  //either panel is full width
+      if (finderIsShown())  //one panel is full width
            setPosition(findFrm, 0, WIDTH) 
       else setPosition(readFrm, 0, WIDTH)
     } else {
@@ -285,7 +279,9 @@ function threePanels() {
         setPosition(readFrm, finderWidth, WIDTH-finderWidth)
       else setPosition(readFrm, 0, WIDTH)
     }
+    lang.hidden = singlePanel() && finderIsShown()
     lang.style.left = readFrm.style.left
+    openM.hidden = threePanels()
     if (finderIsShown())
          openM.classList.add('upside')
     else openM.classList.remove('upside')
