@@ -17,21 +17,23 @@
       min-height: 90vh;
     }
     iframe {
-      display: inline-block;
+      /* display: inline-block; */
       position: absolute;
       box-sizing: border-box;
       border: none;
       height: 100%;
       min-width: 100px;
       margin: auto;
+      transition: all 0.8s ease-out;
     }
     #findFrm {
-      transition: all 0.8s ease-out;
+      max-width: 800px;
+      width: 100%;
     }
     button {
       position: fixed;
       background-color: #ff7;
-      transition: all 0.4s ease-out;
+      transition: all 0.8s ease-out;
       border: 1px solid black;
       border-radius: 15px;
       cursor: pointer;
@@ -61,26 +63,19 @@
       transform: rotate(180deg);
     }
     #sizer {
-      bottom: -18px;
+      box-sizing: border-box;
+      bottom: 3px;
+      border-radius: 5px;
+      font-weight: bold;
       cursor: col-resize;
     }
-    #sizer.sizing {
-      border: 12px solid #ff7;
-      border-radius: 25px;
-      bottom: -28px;
+    #ruler.sizing {
+      position: absolute;
+      width: 0px; height: 99vh;
+      border: 2px solid #ff7;
     }
-  @media screen and (max-width: 850px) {
-    #findFrm {
-      width: 100%;
-    }
-  }
   @media screen and (min-width: 851px) {
-    #openM {
-      top: initial; bottom: 3px; left: 0;
-    }
     #findFrm {
-   /* resize: both; Chrome bug not resolved */
-      width: 50%;
       max-height: 100%;
       border-left: 1px solid #59b;
       border-right: 1px solid #59b;
@@ -92,14 +87,14 @@
 
   <iframe id=findFrm src='start.html'
    name=finder title="Arama paneli"></iframe>
-  <iframe id=readFrm src='reader.html'
+  <iframe id=readFrm src='reader.html' hidden
    name=iqra title="Mushaf paneli"></iframe>
 
   <button id=lang onclick="langMgr.nextLanguage()"
      title="Language / اللغة / Dil &#010;English / العربي / Türkçe"></button>
-  <button id=closeM hidden>x</button>  <!-- NOT USED -->
   <button id=openM>&gt;</button>
-  <button id=sizer>⇔<br>&nbsp;</button>
+  <button id=sizer>⇔</button>
+  <div id=ruler></div>
   <p id=dummy hidden></p>
 
 <script src="code/languages.js"></script>
@@ -107,18 +102,15 @@
 const localization = {};
 
 localization.tr =
-`closeM	title	Arama panelini kapat
-openM	title	Arama panelini aç/kapat
-sizer	title	Arama panelini ayarla`
+`openM	title	Arama panelini göster/gizle
+sizer	title	Arama paneli genişliğini ayarla`
 
 localization.en = 
-`closeM	title	Close the search panel
-openM	title	Open/close the search panel
-sizer	title	Adjust panel width`
+`openM	title	Hide/show the search panel
+sizer	title	Adjust the panel width`
 
 localization.ar = 
-`closeM	title	أغلق نافذة البحث
-openM	title	عد لنافذة البحث
+`openM	title	عد لنافذة البحث
 sizer	title	ضبط عرض النافذة`
 
 let langMgr = new LangManager()
@@ -139,26 +131,29 @@ function applyTranslation() {
 <script src="code/model.js"></script>
 <script src="code/utilities.js"></script>
 <script>
-sizer.style.display = 'none' //invisible
+const TEST_VERSION = 'Test.6';
 const swipe = new TouchHandler({dragStart, dragEnd}, dummy)
+var lastPath,  // finder URL path
+    hashInProgress = false,
+    finderIsShown = true,
+    WIDTH = Math.min(window.innerWidth, screen.width),
+    finderWidth = Number(getStorage('iqra', 'finderWidth') || WIDTH/2);
+
+sizer.hidden = true
 function dragStart(evt) {
     // console.log("dragStart", window.name)
     return true
 }
 function dragEnd(a) { //delegate all work to parent listener
     console.log("dragEnd", a)
-    if (!parent.toggleFinder) //should not happen
-      { alert("swipe "+a); return }
     switch (a) {
-      case 0: case 12: //swipe left -- A button
-        parent.toggleFinder()
-        if (!iqra.transIsChecked())
-          iqra.toggleTrans()
+      case 0: case 12: //swipe left
+      case 6: //swipe right
+        if (parent.toggleFinder) 
+          parent.toggleFinder() //yellow button
         return true
-      case 3: case 6: //swipe up or right
-        parent.toggleFinder()
-        if (iqra.transIsChecked())
-          iqra.toggleTrans()
+      case 3: //swipe up
+        window.open('start.html', 'finder')
         return true
       default: //angle not supported
         return false
@@ -179,14 +174,15 @@ function reportHash(e) { //hashchange in one of the panes
     h = e.target.location.hash
     console.log('hash:', h, '  curPage:', iqra.curPage)
     if (hashToPage(h) === iqra.curPage) return
-    if (finderIsShown() && singlePanel()) hideFinder()
+    if (finderIsShown && singlePanel()) hideFinder()
+    readFrm.hidden = false
   } else { // finder
     // lang.hidden = !isStartPage
     if (e.target.document) {
       s = e.target.document.title
       h = e.target.location.hash
     }
-    if (!finderIsShown()) showFinder() 
+    if (!finderIsShown) showFinder() 
   }
   document.title = VERSION +' '+ s
   // console.log('* reportHash *', h, location.hash)
@@ -229,27 +225,23 @@ function hashModified() {
       else console.error('wrong char '+c)
   }
 }
-function finderIsShown() {
-  return !findFrm.style.left.startsWith('-')
-}
 function toggleFinder() {
-  if (finderIsShown()) hideFinder() 
+  if (finderIsShown) hideFinder() 
   else showFinder()
 }
 function hideFinder() {
-  setPosition(findFrm, -finderWidth, finderWidth)
+  finderIsShown = false
   // closeM.hidden=true; openM.hidden=false
   resize()
 }
 function showFinder() {
-  setPosition(findFrm, 0, finderWidth)
+  finderIsShown = true
   // closeM.hidden=false; openM.hidden=true
   resize()
 }
 function setPosition(e, x, w) {
   e.style.left  = (x == 0)? 0 : x+'px'
   if (w) e.style.width = (w == WIDTH)? '100%' : w+'px'
-  // if (e===readFrm) console.log('setPosition', x, w)
 }
 function singlePanel() {
   return (WIDTH <= 850)
@@ -260,36 +252,35 @@ function threePanels() {
 
   function resize() {
     WIDTH = Math.min(window.innerWidth, screen.width)
-    if (!finderWidth) {
-      let fw = getStorage('iqra', 'finderWidth') || WIDTH/2
-      finderWidth = Number(fw)
+    if (!singlePanel()) { //two or three panels
+        let x = (threePanels() || finderIsShown)? finderWidth : 0
+        setPosition(findFrm, x-finderWidth, finderWidth)
+        setPosition(readFrm, x, WIDTH-x)
+        readFrm.style.opacity = 1
+        readFrm.hidden = false
+    } else if (finderIsShown) { //findFrm is full width
+        setPosition(findFrm, 0, WIDTH)
+        readFrm.style.opacity = 0
+        console.log('readFrm is hidden')
+        setTimeout(() => {readFrm.hidden = true}, 800)
+    } else { //readFrm is full width
+        setPosition(findFrm, -finderWidth, finderWidth)
+        setPosition(readFrm, 0, WIDTH)
+        readFrm.hidden = false
+        console.log('readFrm not hidden')
+        setTimeout(() => {readFrm.style.opacity = 1}, 200)
     }
-    if (singlePanel() && finderIsShown())
-         readFrm.style.display = 'none'
-    else readFrm.style.display = ''
-    if (threePanels()) { //wide screen
-        setPosition(findFrm, 0, finderWidth)
-        setPosition(readFrm, finderWidth, WIDTH-finderWidth)
-    } else if (singlePanel()) {
-      if (finderIsShown())  //one panel is full width
-           setPosition(findFrm, 0, WIDTH) 
-      else setPosition(readFrm, 0, WIDTH)
-    } else {
-      if (finderIsShown())  //two panels with finder
-        setPosition(readFrm, finderWidth, WIDTH-finderWidth)
-      else setPosition(readFrm, 0, WIDTH)
-    }
-    lang.hidden = singlePanel() && finderIsShown()
+    lang.hidden = singlePanel() && finderIsShown
     lang.style.left = readFrm.style.left
     openM.hidden = threePanels()
-    if (finderIsShown())
+    if (finderIsShown)
          openM.classList.add('upside')
     else openM.classList.remove('upside')
     if (readFrm.style.left.startsWith('0')) {
-        sizer.style.display = 'none'
+        sizer.hidden = true
     } else {
-        sizer.style.display = ''
-        setPosition(sizer, finderWidth-15)
+        sizer.hidden = false
+        setPosition(sizer, finderWidth-15, 28)
     }
   }
   function sourceChanged(e) {
@@ -307,20 +298,17 @@ function threePanels() {
   function initReader(e) { // Window.postMessage()
     console.log('* initReader *', iqra.location.hash)
     if (e.data !== "initialized") return
-    showFinder(); addListener(readFrm)
-    hashModified()
+    addListener(readFrm); hashModified()
+    // if (!iqra.location.hash) 
+    resize()
+    iqra.vers1.textContent = TEST_VERSION
+    iqra.vers2.textContent = TEST_VERSION
   }
-  var lastPath,  // finder location
-    hashInProgress = false,
-    // initialHash = decodedHash(),
-    WIDTH = Math.min(window.innerWidth, screen.width),
-    finderWidth;
+
   console.log('* start *', location.hash)
-  // readFrm.style.display = 'none' //hide iqra frame
   window.name = 'iqraTop'
   window.onresize = resize
   window.onhashchange = hashModified
-  // closeM.onclick = startPane //hideFinder
   openM.onclick  = toggleFinder //showFinder
   // readFrm.onload = initReader
   findFrm.onload = sourceChanged
@@ -328,18 +316,22 @@ function threePanels() {
 
 var id //indicates a drag event is active
 var x0 //clientX of the latest drag
+var num //of drag events
 function resizeStart(e) {
-  // e.preventDefault()
+  if (e.target !== sizer) return
   let p = e.touches? e.touches[0] : e
   x0 = Math.round(p.clientX)
   id = setTimeout(resizeEnd, 1500) //global
-  console.log(e.type, x0, id)
-  sizer.classList.add('sizing')
+  num = 0
+  console.log(e.type, finderWidth, x0)
+  // sizer.classList.add('sizing')
+  setPosition(sizer, finderWidth-60, 120)
+  ruler.classList.add('sizing')
 }
 function drag(e) {
   // e.preventDefault()
   if (!id) return
-  clearTimeout(id)
+  clearTimeout(id); num++
   id = setTimeout(resizeEnd, 1000) //global
   let p = e.touches? e.touches[0] : e
   let x1 = Math.round(p.clientX)
@@ -347,7 +339,8 @@ function drag(e) {
   let fw = f0 + (x1 - x0); x0 = x1
   let W = Math.min(window.innerWidth, screen.width)
   finderWidth = Math.min(Math.max(fw, 350), W-350)
-  if (fw !== f0) resize()  //else do not move
+  if (fw !== f0) setPosition(ruler, finderWidth-2)
+  //resize()  no need to display each step
   // console.log(e.type, fw)
 }
 function resizeEnd(e) {
@@ -355,8 +348,10 @@ function resizeEnd(e) {
   if (!id) return
   clearTimeout(id); id = undefined
   setStorage('iqra', 'finderWidth', finderWidth)
-  console.log(e? e.type : 'cancel', finderWidth)
-  sizer.classList.remove('sizing')
+  console.log(e? e.type : 'cancel', finderWidth, num)
+  // sizer.classList.remove('sizing')
+  ruler.classList.remove('sizing')
+  resize() //once at the end of resize
 }
   sizer.onmousedown = resizeStart
   sizer.onmousemove = drag

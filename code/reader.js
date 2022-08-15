@@ -514,6 +514,7 @@ function menuFn() {
       case ders: 
         parent.finder.location="/Kitap/ders/"; break;
       default: openSitePage(t.innerText[0], curPage)
+      hideMenus()
     }
     
   }
