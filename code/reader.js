@@ -268,16 +268,11 @@ function dragStart(evt) {
 function dragEnd(a) {
     switch (a) {
       case 0: case 12: //swipe left
-        if (!parent.toogleFinder) return false
-        if (!transIsChecked())
-          parent.toogleFinder() //yellow button
-        else toggleTrans() //T button
+        toggleTrans() //Translate button
         return true
       case 6: //swipe right
-        if (!parent.toogleFinder) return false
-        if (transIsChecked())
-          parent.toogleFinder() //yellow button
-        else toggleTrans() //T button
+        if (parent.toggleFinder) 
+          parent.toggleFinder() //yellow button
         return true
       case 9: //swipe down
         prevPage(); return true

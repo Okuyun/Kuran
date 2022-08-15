@@ -141,20 +141,13 @@ function dragStart(evt) {
 }
 function dragEnd(a) { //delegate all work to parent listener
     console.log("dragEnd", a)
-    if (!parent.toogleFinder) //should not happen
-      { alert("swipe "+a); return }
     switch (a) {
-      case 0: case 12: //swipe left -- A button
-        parent.toogleFinder()
-        if (!iqra.transIsChecked())
-          iqra.toggleTrans()
+      case 0: case 12: //swipe left
+      case 6: //swipe right
+        if (parent.toggleFinder) 
+          parent.toggleFinder() //yellow button
         return true
-      case 6: //swipe right -- A button
-        parent.toogleFinder()
-        if (iqra.transIsChecked())
-          iqra.toggleTrans()
-        return true
-      case 3: //swipe up -- x button
+      case 3: //swipe up
         parent.startPane()
         return true
       default: //angle not supported
@@ -239,7 +232,7 @@ function startPane() {
     isStartPage = true
   } 
 }
-function toogleFinder() {
+function toggleFinder() {
   if (closeM.hidden) showFinder() 
   else hideFinder()
 }
