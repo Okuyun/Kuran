@@ -26,10 +26,6 @@
       margin: auto;
       transition: all 0.8s ease-out;
     }
-    #findFrm {
-      max-width: 800px;
-      width: 100%;
-    }
     button {
       position: fixed;
       background-color: #ff7;
@@ -76,6 +72,8 @@
     }
   @media screen and (min-width: 851px) {
     #findFrm {
+   /* resize: both; Chrome bug not resolved */
+      width: 50%;
       max-height: 100%;
       border-left: 1px solid #59b;
       border-right: 1px solid #59b;
@@ -87,7 +85,7 @@
 
   <iframe id=findFrm src='start.html'
    name=finder title="Arama paneli"></iframe>
-  <iframe id=readFrm src='reader.html' hidden
+  <iframe id=readFrm src='reader.html'
    name=iqra title="Mushaf paneli"></iframe>
 
   <button id=lang onclick="langMgr.nextLanguage()"
@@ -131,9 +129,9 @@ function applyTranslation() {
 <script src="code/model.js"></script>
 <script src="code/utilities.js"></script>
 <script>
-const TEST_VERSION = 'Test.6';
+const TEST_VERSION = 'Test.5';
 const swipe = new TouchHandler({dragStart, dragEnd}, dummy)
-var lastPath,  // finder URL path
+var lastPath,  // finder location
     hashInProgress = false,
     finderIsShown = true,
     WIDTH = Math.min(window.innerWidth, screen.width),
@@ -175,7 +173,6 @@ function reportHash(e) { //hashchange in one of the panes
     console.log('hash:', h, '  curPage:', iqra.curPage)
     if (hashToPage(h) === iqra.curPage) return
     if (finderIsShown && singlePanel()) hideFinder()
-    readFrm.hidden = false
   } else { // finder
     // lang.hidden = !isStartPage
     if (e.target.document) {
@@ -242,6 +239,7 @@ function showFinder() {
 function setPosition(e, x, w) {
   e.style.left  = (x == 0)? 0 : x+'px'
   if (w) e.style.width = (w == WIDTH)? '100%' : w+'px'
+  // if (e===readFrm) console.log('setPosition', x, w)
 }
 function singlePanel() {
   return (WIDTH <= 850)
@@ -261,14 +259,12 @@ function threePanels() {
     } else if (finderIsShown) { //findFrm is full width
         setPosition(findFrm, 0, WIDTH)
         readFrm.style.opacity = 0
-        console.log('readFrm is hidden')
         setTimeout(() => {readFrm.hidden = true}, 800)
     } else { //readFrm is full width
         setPosition(findFrm, -finderWidth, finderWidth)
         setPosition(readFrm, 0, WIDTH)
         readFrm.hidden = false
-        console.log('readFrm not hidden')
-        setTimeout(() => {readFrm.style.opacity = 1}, 200)
+        setTimeout(() => {readFrm.style.opacity = 1}, 100)
     }
     lang.hidden = singlePanel() && finderIsShown
     lang.style.left = readFrm.style.left
@@ -298,14 +294,17 @@ function threePanels() {
   function initReader(e) { // Window.postMessage()
     console.log('* initReader *', iqra.location.hash)
     if (e.data !== "initialized") return
-    addListener(readFrm); hashModified()
-    // if (!iqra.location.hash) 
-    resize()
+    addListener(readFrm)
+    // if (singlePanel() && iqra.location.hash) 
+    //      hideFinder()     else 
+    showFinder()
+    hashModified()
     iqra.vers1.textContent = TEST_VERSION
     iqra.vers2.textContent = TEST_VERSION
   }
 
   console.log('* start *', location.hash)
+  // readFrm.style.display = 'none' //hide iqra frame
   window.name = 'iqraTop'
   window.onresize = resize
   window.onhashchange = hashModified
@@ -324,7 +323,7 @@ function resizeStart(e) {
   id = setTimeout(resizeEnd, 1500) //global
   num = 0
   console.log(e.type, finderWidth, x0)
-  // sizer.classList.add('sizing')
+  sizer.classList.add('sizing')
   setPosition(sizer, finderWidth-60, 120)
   ruler.classList.add('sizing')
 }
@@ -349,7 +348,7 @@ function resizeEnd(e) {
   clearTimeout(id); id = undefined
   setStorage('iqra', 'finderWidth', finderWidth)
   console.log(e? e.type : 'cancel', finderWidth, num)
-  // sizer.classList.remove('sizing')
+  sizer.classList.remove('sizing')
   ruler.classList.remove('sizing')
   resize() //once at the end of resize
 }
