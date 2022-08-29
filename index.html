@@ -17,64 +17,65 @@
       min-height: 90vh;
     }
     iframe {
-      display: inline-block;
+      /* display: inline-block; */
       position: absolute;
       box-sizing: border-box;
       border: none;
       height: 100%;
       min-width: 100px;
       margin: auto;
+      transition: all 0.8s ease-out;
+    }
+    #findFrm {
+      max-width: 800px;
+      width: 100%;
     }
     button {
       position: fixed;
       background-color: #ff7;
+      transition: all 0.8s ease-out;
       border: 1px solid black;
-      transition: all 0.4s ease-out;
       border-radius: 15px;
+      cursor: pointer;
       user-select: none;
     }
-    #closeM, #openM, #lang {
-      height: 28px; width: 28px;
-      top: 3px; right: 0;
-      cursor: pointer;
-    }
     #lang {
-      left: 0; 
+      height: 28px; width: 28px;
+      top: 3px; left: 0; 
       /* flaticon.com/free-icon/language_1246334 */
       background-image: url(image/language.png);
       background-size: contain;
       background-repeat: no-repeat;
       border: none;
     }
-    #openM {
-      /* flaticon.com/free-icon/house_845022
-      Home button icons created by Kiranshastry */
-      background-image: url(image/house.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      border: none;
-    }
-    #closeM:hover, #openM:hover, #lang:hover {
+    #lang:hover {
       height: 32px; width: 32px;
     }
+    #openM {
+      height: 28px; width: 28px;
+      top: 3px; right: 0;
+      font-weight: bold;
+    }
+    #openM:hover {
+      width: 36px;
+    }
+    #openM.upside {
+      transform: rotate(180deg);
+    }
     #sizer {
-      bottom: -18px;
+      box-sizing: border-box;
+      bottom: 3px;
+      border-radius: 5px;
+      font-weight: bold;
       cursor: col-resize;
     }
-    #sizer.sizing {
-      border: 12px solid #ff7;
-      border-radius: 25px;
-      bottom: -28px;
+    #ruler.sizing {
+      position: absolute;
+      width: 0px; height: 99vh;
+      border: 2px solid #ff7;
     }
-  @media screen and (max-width: 850px) {
-    #findFrm {
-      width: 100%;
-    }
-  }
   @media screen and (min-width: 851px) {
     #findFrm {
-   /* resize: both; Chrome bug not resolved */
-      width: 50%;
       max-height: 100%;
       border-left: 1px solid #59b;
       border-right: 1px solid #59b;
@@ -86,14 +87,14 @@
 
   <iframe id=findFrm src='start.html'
    name=finder title="Arama paneli"></iframe>
-  <iframe id=readFrm src='reader.html'
+  <iframe id=readFrm src='reader.html' hidden
    name=iqra title="Mushaf paneli"></iframe>
 
   <button id=lang onclick="langMgr.nextLanguage()"
      title="Language / اللغة / Dil &#010;English / العربي / Türkçe"></button>
-  <button id=closeM>x</button>
-  <button id=openM hidden></button>
-  <button id=sizer>⇔<br>&nbsp;</button>
+  <button id=openM>&gt;</button>
+  <button id=sizer>⇔</button>
+  <div id=ruler></div>
   <p id=dummy hidden></p>
 
 <script src="code/languages.js"></script>
@@ -101,18 +102,15 @@
 const localization = {};
 
 localization.tr =
-`closeM	title	Arama panelini kapat
-openM	title	Arama paneline dön
-sizer	title	Arama panelini ayarla`
+`openM	title	Arama panelini göster/gizle
+sizer	title	Arama paneli genişliğini ayarla`
 
 localization.en = 
-`closeM	title	Close the search panel
-openM	title	Back to the search panel
-sizer	title	Adjust panel width`
+`openM	title	Hide/show the search panel
+sizer	title	Adjust the panel width`
 
 localization.ar = 
-`closeM	title	أغلق نافذة البحث
-openM	title	عد لنافذة البحث
+`openM	title	عد لنافذة البحث
 sizer	title	ضبط عرض النافذة`
 
 let langMgr = new LangManager()
@@ -133,8 +131,17 @@ function applyTranslation() {
 <script src="code/model.js"></script>
 <script src="code/utilities.js"></script>
 <script>
-sizer.style.display = 'none' //invisible
 const swipe = new TouchHandler({dragStart, dragEnd}, dummy)
+var lastPath,  // finder URL path
+    hashInProgress = false,
+    finderIsShown = true,
+    WIDTH = Math.min(window.innerWidth, screen.width),
+    finderWidth; setFinderWidth();
+
+function setFinderWidth(w) {
+  if (!w) w = getStorage('iqra', 'finderWidth') || WIDTH/2
+  finderWidth = Math.min(Math.max(w, 350), WIDTH-350)
+}
 function dragStart(evt) {
     // console.log("dragStart", window.name)
     return true
@@ -148,7 +155,7 @@ function dragEnd(a) { //delegate all work to parent listener
           parent.toggleFinder() //yellow button
         return true
       case 3: //swipe up
-        parent.startPane()
+        window.open('start.html', 'finder')
         return true
       default: //angle not supported
         return false
@@ -165,24 +172,19 @@ function addListener(frm) {
 function reportHash(e) { //hashchange in one of the panes
   let s = '[Iqra]', h = ''
   if (e.target.name == 'iqra') {
+    readFrm.hidden = false
     s = e.target.document.title
     h = e.target.location.hash
     console.log('hash:', h, '  curPage:', iqra.curPage)
     if (hashToPage(h) === iqra.curPage) return
-    if (readFrm.style.display == 'none') hideFinder()
+    if (finderIsShown && singlePanel()) hideFinder()
   } else { // finder
-    try {
-      let p = finder.location.pathname //may fail
-      isStartPage = p.includes("start.html")
-    } catch (e) {
-      isStartPage = false //external page
-    }
-    lang.hidden = !isStartPage
+    // lang.hidden = !isStartPage
     if (e.target.document) {
       s = e.target.document.title
       h = e.target.location.hash
     }
-    if (findFrm.style.display == 'none') showFinder() 
+    if (!finderIsShown) showFinder() 
   }
   document.title = VERSION +' '+ s
   // console.log('* reportHash *', h, location.hash)
@@ -225,66 +227,57 @@ function hashModified() {
       else console.error('wrong char '+c)
   }
 }
-function startPane() {
-  if (isStartPage) hideFinder()
-  else {
-    window.open('start.html', 'finder')
-    isStartPage = true
-  } 
-}
 function toggleFinder() {
-  if (closeM.hidden) showFinder() 
-  else hideFinder()
+  if (finderIsShown) hideFinder() 
+  else showFinder()
 }
 function hideFinder() {
-  closeM.hidden=true; openM.hidden=false
+  finderIsShown = false
+  // closeM.hidden=true; openM.hidden=false
   resize()
 }
 function showFinder() {
-  closeM.hidden=false; openM.hidden=true
-  // if (!findFrm.src) findFrm.src = 'mujam.html'
+  finderIsShown = true
+  // closeM.hidden=false; openM.hidden=true
   resize()
 }
+function setPosition(e, x, w) {
+  e.style.left  = (x == 0)? 0 : x+'px'
+  if (w) e.style.width = (w == WIDTH)? '100%' : w+'px'
+}
+function singlePanel() {
+  return (WIDTH <= 850)
+}
+function threePanels() {
+  return (WIDTH > finderWidth+850)
+}
 
-  var WIDTH = 590  //can be modified in dev tools
   function resize() {
-    const HIDE = 'none', SHOW = ''
-    let W = Math.min(window.innerWidth, screen.width)
-    if (W >= 1200) { //wide screen
-        finderShown(860, false) //display all
-    } else if (closeM.hidden) { //hideFinder
-        finderHidden()
-    } else { //showFinder
-        finderShown(WIDTH, W<=850)
+    WIDTH = Math.min(window.innerWidth, screen.width)
+    if (!singlePanel()) { //two or three panels
+        let x = (threePanels() || finderIsShown)? finderWidth : 0
+        setPosition(findFrm, x-finderWidth, finderWidth)
+        setPosition(readFrm, x, WIDTH-x)
+        readFrm.style.opacity = 1
+        readFrm.hidden = false
+    } else if (finderIsShown) { //findFrm is full width
+        setPosition(findFrm, 0, WIDTH)
+        readFrm.style.opacity = 0
+        setTimeout(() => {readFrm.hidden = true}, 800)
+    } else { //readFrm is full width
+        setPosition(findFrm, -finderWidth, finderWidth)
+        setPosition(readFrm, 0, WIDTH)
+        readFrm.hidden = false
+        setTimeout(() => {readFrm.style.opacity = 1}, 200)
     }
-    function finderHidden() {
-      setStyle(findFrm.style, HIDE)
-      let x2 = 0, w2 = W
-      if (W>600 && W<=850) { //single column
-        x2 = Math.trunc((W-WIDTH)/2); w2 = WIDTH
-      }
-      setStyle(readFrm.style, SHOW, x2, w2)
-      sizer.style.display = HIDE
-    }
-    function finderShown(w2, single) {
-      let x2 = W  //if single
-      if (!single) {
-        if (!finderWidth) finderWidth =
-          getStorage('iqra', 'finderWidth') || W - w2;
-        x2 = finderWidth; w2 = W - finderWidth
-      }
-      setStyle(findFrm.style, SHOW, 0, x2)
-      let d = single? HIDE : SHOW
-      setStyle(readFrm.style, d, x2, w2)
-      closeM.style.right = single? '' : w2+'px'  
-      sizer.style.right = (w2-15)+'px'
-      sizer.style.display = d
-    }
-    function setStyle(s, d, x, w) {
-      s.display = d; if (d == HIDE) return
-      s.left  = (x == 0)? 0 : x+'px'
-      s.width = (w == W)? '100%' : w+'px'
-    }
+    lang.hidden = singlePanel() && finderIsShown
+    if (!lang.hidden) lang.style.left = readFrm.style.left
+    openM.hidden = threePanels()
+    if (finderIsShown)
+         openM.classList.add('upside')
+    else openM.classList.remove('upside')
+    sizer.hidden = singlePanel() || !(threePanels()||finderIsShown)
+    if (!sizer.hidden) setPosition(sizer, finderWidth-15, 28)
   }
   function sourceChanged(e) {
     try {
@@ -301,47 +294,47 @@ function showFinder() {
   function initReader(e) { // Window.postMessage()
     console.log('* initReader *', iqra.location.hash)
     if (e.data !== "initialized") return
-    showFinder(); addListener(readFrm)
-    hashModified()
+    addListener(readFrm); hashModified()
+    resize()
+    // iqra.vers1.textContent = TEST_VERSION
+    // iqra.vers2.textContent = TEST_VERSION
   }
-  var lastPath,  // finder location
-    isStartPage = true, // is shown?
-    hashInProgress = false,
-    // initialHash = decodedHash(),
-    finderWidth;
+
   console.log('* start *', location.hash)
-  readFrm.style.display = 'none' //hide iqra frame
   window.name = 'iqraTop'
   window.onresize = resize
   window.onhashchange = hashModified
-  closeM.onclick = startPane  //hideFinder
-  openM.onclick  = showFinder
+  openM.onclick  = toggleFinder //showFinder
   // readFrm.onload = initReader
   findFrm.onload = sourceChanged
   iqra.addEventListener('hashchange', reportHash)
 
 var id //indicates a drag event is active
 var x0 //clientX of the latest drag
+var num //of drag events
 function resizeStart(e) {
-  // e.preventDefault()
+  if (e.target !== sizer) return
   let p = e.touches? e.touches[0] : e
   x0 = Math.round(p.clientX)
   id = setTimeout(resizeEnd, 1500) //global
-  console.log(e.type, x0, id)
-  sizer.classList.add('sizing')
+  num = 0
+  console.log(e.type, finderWidth, x0)
+  // sizer.classList.add('sizing')
+  setPosition(sizer, finderWidth-60, 120)
+  ruler.classList.add('sizing')
 }
 function drag(e) {
   // e.preventDefault()
   if (!id) return
-  clearTimeout(id)
+  clearTimeout(id); num++
   id = setTimeout(resizeEnd, 1000) //global
   let p = e.touches? e.touches[0] : e
   let x1 = Math.round(p.clientX)
   let f0 = finderWidth
   let fw = f0 + (x1 - x0); x0 = x1
-  let W = Math.min(window.innerWidth, screen.width)
-  finderWidth = Math.min(Math.max(fw, 350), W-350)
-  if (fw !== f0) resize()  //else do not move
+  setFinderWidth(fw)
+  if (fw !== f0) setPosition(ruler, finderWidth-2)
+  //resize()  no need to display each step
   // console.log(e.type, fw)
 }
 function resizeEnd(e) {
@@ -349,8 +342,10 @@ function resizeEnd(e) {
   if (!id) return
   clearTimeout(id); id = undefined
   setStorage('iqra', 'finderWidth', finderWidth)
-  console.log(e? e.type : 'cancel', finderWidth)
-  sizer.classList.remove('sizing')
+  console.log(e? e.type : 'cancel', finderWidth, num)
+  // sizer.classList.remove('sizing')
+  ruler.classList.remove('sizing')
+  resize() //once at the end of resize
 }
   sizer.onmousedown = resizeStart
   sizer.onmousemove = drag

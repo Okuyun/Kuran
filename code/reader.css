@@ -131,6 +131,7 @@ body {
       padding: 4px 8px;
       vertical-align: top;
       max-width: 590px;
+      margin: auto;
     }
     #text { 
       text-align: left;

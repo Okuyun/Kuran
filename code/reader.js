@@ -506,6 +506,7 @@ function menuFn() {
   }
   menuK.onclick = (evt) => { //menu button
     let t = parent.finder? evt.target : ''
+    hideMenus()
     switch (t) {
       case topic: 
         parent.finder.location="konular.html"; break;
@@ -514,7 +515,6 @@ function menuFn() {
       case ders: 
         parent.finder.location="/Kitap/ders/"; break;
       default: openSitePage(t.innerText[0], curPage)
-      hideMenus()
     }
     
   }
