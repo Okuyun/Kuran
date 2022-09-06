@@ -319,6 +319,17 @@ function gotoHashPage() {
   }
   return true
 }
+function fetchPushTime(callback, save) {
+  function saveTime(t) {
+    let t1 = JSON.parse(t).pushed_at
+    let t0 = getStorage('iqra', 'pushed_at')
+    if (t1 === t0) return
+    if (save) setStorage('iqra', 'pushed_at', t1)
+    callback(t1, t0)
+  }
+    let url = "https://api.github.com/repos/Okuyun/Kuran"
+    fetch_text_then(url, saveTime)
+}
 function initialPage() {
     if (Q.kur.loaded && Q.qur.loaded) {
 //https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage    
@@ -327,6 +338,7 @@ function initialPage() {
       console.log("initialPage", {hash, wide})
       if (!hash && (parent===window || wide)) gotoPage(1) 
       checkTrans()
+      fetchPushTime(t => console.log('new version', t), true) 
     }
 }
 function makeMenu(button, menu, callback) {
@@ -407,7 +419,9 @@ function initReader() {
         console.log('Start', new Date())
       } else {
         let dt = Date.now()/1000 - prevTime
-        if (dt > 1000) console.log("invisible "+timeString(dt))
+        if (dt < 1000) return //less than 16 minutes
+        console.log("invisible "+timeString(dt))
+        fetchPushTime(reportNewVersion)
       }
     }
     bookmarks = new Set()
@@ -415,6 +429,13 @@ function initReader() {
     window.onhashchange = gotoHashPage
     window.name = "iqra" //by A Rajab
     readSettings()
+}
+function reportNewVersion(t1, t0) {
+    let s1 = t1.substring(0,10)
+    let s0 = t0.substring(0,10)
+    alert(`New version found:
+current: ${s0}
+new: ${s1}`)
 }
 /********************
  * Start of Menu functions -- added by Abdurrahman Rajab - FSMVU
