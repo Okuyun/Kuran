@@ -245,12 +245,16 @@ body {
     background: white;
     border: 5px double orange;
   }
-  .long { width: 90%; max-width: 340px; }
+  .long { width: 85%; max-width: 340px; }
   .short { width: 130px; }
   .yellow { background: #ff7; }
   .white { background: white; }
   .small { font-size: smaller; }
   .expert { color: red; }
+  #but2 {
+    min-width: initial;
+    padding: 0;
+  }
   pre {
     margin: 0;
   }

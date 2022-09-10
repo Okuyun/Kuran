@@ -16,7 +16,7 @@ Q.simi  = new SimData('data/simi.txt')
 Q.roots = new MujamData('data/words.txt')
 // Q.dict = Dictionary.newInstance() moved to languageItems()
 new TouchHandler({dragStart, dragEnd}, div2)
-var curSura, curPage, bookmarks, lastSelection
+var curSura, curPage, bookmarks, lastSelection, recognition
 Q.notes = new Notes('notesQ')
 //https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList
 Q.hasMouse = matchMedia('(pointer:fine)').matches
@@ -381,6 +381,7 @@ function openHash(evt) {
       default: return
     }
     window.open(str, 'finder'); hideElement(bkgd)
+    if (!evt.type) return
     evt.stopPropagation(); evt.preventDefault()
 }
 function initReader() {
@@ -429,7 +430,25 @@ function initReader() {
     window.onhashchange = gotoHashPage
     window.name = "iqra" //by A Rajab
     readSettings()
-}
+    if (!webkitSpeechRecognition) return
+    recognition = new webkitSpeechRecognition()
+    but2.hidden = false
+    but2.onclick = () => {
+      textD.value = ''; recog2.hidden = false
+      recognition.start()
+    }
+    recognition.lang = 'ar-AR'
+    recognition.onspeechend = () => {
+      // recognition.stop(); recog2.hidden = true
+    }
+    recognition.onresult = (e) => {
+      let a = e.results[0][0]; //use first result
+      console.log(a.transcript, a.confidence.toFixed(2)) 
+      textD.value = a.transcript; recog2.hidden = true
+      // e.key = 'Enter'; e.target = textD
+      openHash({key: 'Enter', target: textD})
+    }
+  }
 function reportNewVersion(t1, t0) {
     let s1 = t1.substring(0,10)
     let s0 = t0.substring(0,10)
