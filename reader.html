@@ -113,7 +113,6 @@
 </div>
 
 <div id=menuK class="menu bubble">
-   <span id=topic class="menuK"></span>
    <span id=yardim class="menuK"></span>
    <span id=pay1 class="menuK"></span>
    <hr><div id=kay1 class="black"></div>
@@ -122,10 +121,12 @@
    <span class="menuK">diyanet.gov.tr</span>
    <span class="menuK">kuranmeali.com</span>
    <hr><div class="black" id=vers1></div>
-   <span class="menuK" id=add2hs hidden>Install PWA</span>
+   <span class="menuK" id=reload>Reload — F5</span>
+   <span class="menuK" id=add2hs>Install PWA</span>
    <!-- display property overrides the hidden attribute -->
-   <span id=ders class="menuK"></span>
+   <hr><span id=topic class="menuK"></span>
    <span id=notes class="menuK"></span>
+   <span id=ders class="menuK"></span>
 </div>
 
 <div id=menuV class=menu>
@@ -351,6 +352,7 @@ function beforeinstallCB(e) {
 }
 window.onbeforeinstallprompt = beforeinstallCB
 add2hs.style.display = 'none' //hide button at start
+reload.style.display = 'none' 
 </script>
 </body>
 </html>

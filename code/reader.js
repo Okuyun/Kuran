@@ -322,13 +322,13 @@ function gotoHashPage() {
 function fetchPushTime(callback, save) {
   function saveTime(t) {
     let t1 = JSON.parse(t).pushed_at
-    let t0 = getStorage('iqra', 'pushed_at')
+    let t0 = getStorage('pushed_at')
     if (t1 === t0) return
-    if (save) setStorage('iqra', 'pushed_at', t1)
+    if (save) setStorage('pushed_at', t1)
     callback(t1, t0)
   }
     let url = "https://api.github.com/repos/Okuyun/Kuran"
-    fetch_text_then(url, saveTime)
+    if (navigator.onLine) fetch_text_then(url, saveTime)
 }
 function initialPage() {
     if (Q.kur.loaded && Q.qur.loaded) {
@@ -338,7 +338,7 @@ function initialPage() {
       console.log("initialPage", {hash, wide})
       if (!hash && (parent===window || wide)) gotoPage(1) 
       checkTrans()
-      fetchPushTime(t => console.log('new version', t), true) 
+      fetchPushTime(t => console.log('pushed_at:', t), true) 
     }
 }
 function makeMenu(button, menu, callback) {
@@ -425,6 +425,7 @@ function initReader() {
         fetchPushTime(reportNewVersion)
       }
     }
+    reload.onclick = () => location.reload()
     bookmarks = new Set()
     // window.onresize = resize
     window.onhashchange = gotoHashPage
@@ -439,7 +440,7 @@ function initReader() {
     }
     recognition.lang = 'ar-AR'
     recognition.onspeechend = () => {
-      // recognition.stop(); recog2.hidden = true
+      recognition.stop(); recog2.hidden = true
     }
     recognition.onresult = (e) => {
       let a = e.results[0][0]; //use first result
@@ -450,11 +451,11 @@ function initReader() {
     }
   }
 function reportNewVersion(t1, t0) {
+    if (!t1 || !t2 || t1===t0) return
     let s1 = t1.substring(0,10)
     let s0 = t0.substring(0,10)
-    alert(`New version found:
-current: ${s0}
-new: ${s1}`)
+    reload.style.display = '' 
+    console.log(`Version: current: ${s0} new: ${s1}`)
 }
 /********************
  * Start of Menu functions -- added by Abdurrahman Rajab - FSMVU
