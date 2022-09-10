@@ -321,13 +321,14 @@ function gotoHashPage() {
 }
 function fetchPushTime(callback, save) {
   function saveTime(t) {
-    let t1 = JSON.parse(t).pushed_at
+    // let t1 = JSON.parse(t).pushed_at
+    let t1 = JSON.parse(t)[0].commit.author.date
     let t0 = getStorage('pushed_at')
     if (t1 === t0) return
     if (save) setStorage('pushed_at', t1)
     callback(t1, t0)
   }
-    let url = "https://api.github.com/repos/Okuyun/Kuran"
+    let url = "https://api.github.com/repos/Okuyun/Kuran/commits"
     if (navigator.onLine) fetch_text_then(url, saveTime)
 }
 function initialPage() {
@@ -412,6 +413,11 @@ function initReader() {
     rightB.onclick = () => {nextPage()}
     noteBut.onclick = () => {Q.notes.edit()} //in common.js
     menuFn(); 
+  function reportNewVersion(t1, t0) {
+    if (!t1 || !t0 || t1===t0) return
+    reload.style.display = '' //menu becomes visible
+    console.log(`Modified -- current: ${t0} new: ${t1}`)
+  }
     var prevTime
     document.onvisibilitychange = () => {
       if (document.hidden) {
@@ -450,13 +456,6 @@ function initReader() {
       openHash({key: 'Enter', target: textD})
     }
   }
-function reportNewVersion(t1, t0) {
-    if (!t1 || !t2 || t1===t0) return
-    let s1 = t1.substring(0,10)
-    let s0 = t0.substring(0,10)
-    reload.style.display = '' 
-    console.log(`Version: current: ${s0} new: ${s1}`)
-}
 /********************
  * Start of Menu functions -- added by Abdurrahman Rajab - FSMVU
  * Ref: https://dev.to/iamafro/how-to-create-a-custom-context-menu--5d7p
