@@ -220,8 +220,8 @@ function gotoPage(k=1, adjusting) { // 1<=k<=P
     hideMenus(); 
     if (curPage) { //await animate(curPage < k)
       let h = (curPage < k? '-' : '+')+div2.clientHeight
-      setTrans("transform 0.4s", "translate(0, "+h+"px)")
-      setTimeout(setTrans, 410)
+      setTrans("transform 0.5s", "translate(0, "+h+"px)")
+      setTimeout(setTrans, 510)
     }
     curPage = k; slider.value = k;
     text.innerHTML = Q.kur.pageToHTML(k)

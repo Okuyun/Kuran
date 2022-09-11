@@ -176,7 +176,7 @@ function reportHash(e) { //hashchange in one of the panes
     readFrm.hidden = false
     s = e.target.document.title
     h = e.target.location.hash
-    console.log('hash:', h, '  curPage:', iqra.curPage)
+    // console.log('hash:', h, '  curPage:', iqra.curPage)
     if (hashToPage(h) === iqra.curPage) return
     if (finderIsShown && singlePanel()) hideFinder()
   } else { // finder
