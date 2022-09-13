@@ -385,6 +385,14 @@ function openHash(evt) {
     if (!evt.type) return
     evt.stopPropagation(); evt.preventDefault()
 }
+function reportNewVersion(t1, t0) {
+  if (!t1 || !t0 || t1===t0) return
+    update.style.display = '' //menu item becomes visible
+    linkA.style.background='none' //button is modified
+    download.innerText = '🡇'
+    download.style.fontSize='larger'
+    console.log(`Modified: ${t0} => ${t1}`)
+}
 function initReader() {
     vers1.innerText = 'Iqra '+VERSION
     vers2.innerHTML = 'Iqra '+VERSION+'&emsp;'
@@ -403,6 +411,7 @@ function initReader() {
     makeMenu(tranA, menuT)
     makeMenu(linkA, menuK)
     yardim.onclick  = () => {openSitePage('Y')}
+    update.onclick = () => location.reload()
     starB.onclick = starH.onclick = toggleStar
     tranB.onclick = tranH.onclick = toggleTrans
     zoomA.onclick  = toggleZoom
@@ -413,11 +422,6 @@ function initReader() {
     rightB.onclick = () => {nextPage()}
     noteBut.onclick = () => {Q.notes.edit()} //in common.js
     menuFn(); 
-  function reportNewVersion(t1, t0) {
-    if (!t1 || !t0 || t1===t0) return
-    reload.style.display = '' //menu becomes visible
-    console.log(`Modified -- current: ${t0} new: ${t1}`)
-  }
     var prevTime
     document.onvisibilitychange = () => {
       if (document.hidden) {
@@ -431,7 +435,6 @@ function initReader() {
         fetchPushTime(reportNewVersion)
       }
     }
-    reload.onclick = () => location.reload()
     bookmarks = new Set()
     // window.onresize = resize
     window.onhashchange = gotoHashPage
