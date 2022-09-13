@@ -438,12 +438,15 @@ function initReader() {
     window.name = "iqra" //by A Rajab
     readSettings()
     if (!webkitSpeechRecognition) return
-    recognition = new webkitSpeechRecognition()
     but2.hidden = false
     but2.onclick = () => {
       textD.value = ''; recog2.hidden = false
+      if (!recognition) initRecognition()
       recognition.start()
     }
+}
+function initRecognition() {
+    recognition = new webkitSpeechRecognition()
     recognition.lang = 'ar-AR'
     recognition.onspeechend = () => {
       recognition.stop(); recog2.hidden = true
@@ -455,7 +458,7 @@ function initReader() {
       // e.key = 'Enter'; e.target = textD
       openHash({key: 'Enter', target: textD})
     }
-  }
+}
 /********************
  * Start of Menu functions -- added by Abdurrahman Rajab - FSMVU
  * Ref: https://dev.to/iamafro/how-to-create-a-custom-context-menu--5d7p
