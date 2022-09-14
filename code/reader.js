@@ -339,7 +339,7 @@ function initialPage() {
       console.log("initialPage", {hash, wide})
       if (!hash && (parent===window || wide)) gotoPage(1) 
       checkTrans()
-      fetchPushTime(t => console.log('pushed_at:', t), true) 
+      fetchPushTime(t => console.log('Last Commit:', t), true) 
     }
 }
 function makeMenu(button, menu, callback) {
@@ -388,9 +388,7 @@ function openHash(evt) {
 function reportNewVersion(t1, t0) {
   if (!t1 || !t0 || t1===t0) return
     update.style.display = '' //menu item becomes visible
-    linkA.style.background='none' //button is modified
-    download.innerText = '🡇'
-    download.style.fontSize='larger'
+    linkA.classList.add('checked') //button is hilited
     console.log(`Modified: ${t0} => ${t1}`)
 }
 function initReader() {
@@ -441,9 +439,9 @@ function initReader() {
     window.name = "iqra" //by A Rajab
     readSettings()
     if (!webkitSpeechRecognition) return
-    but2.hidden = false
-    but2.onclick = () => {
-      textD.value = ''; recog2.hidden = false
+    recog0.hidden = false
+    recog0.onclick = () => {
+      textD.value = ''; recog1.hidden = false
       if (!recognition) initRecognition()
       recognition.start()
     }
@@ -452,12 +450,13 @@ function initRecognition() {
     recognition = new webkitSpeechRecognition()
     recognition.lang = 'ar-AR'
     recognition.onspeechend = () => {
-      recognition.stop(); recog2.hidden = true
+      recognition.stop(); recog1.hidden = true
     }
+    recog3.onclick = recognition.onspeechend
     recognition.onresult = (e) => {
       let a = e.results[0][0]; //use first result
       console.log(a.transcript, a.confidence.toFixed(2)) 
-      textD.value = a.transcript; recog2.hidden = true
+      textD.value = a.transcript; recog1.hidden = true
       // e.key = 'Enter'; e.target = textD
       openHash({key: 'Enter', target: textD})
     }
