@@ -409,7 +409,7 @@ function initReader() {
     makeMenu(tranA, menuT)
     makeMenu(linkA, menuK)
     yardim.onclick  = () => {openSitePage('Y')}
-    update.onclick = () => location.reload()
+    update.onclick = () => parent.location.reload()
     starB.onclick = starH.onclick = toggleStar
     tranB.onclick = tranH.onclick = toggleTrans
     zoomA.onclick  = toggleZoom
