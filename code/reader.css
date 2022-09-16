@@ -42,7 +42,7 @@ body {
 }
 
 @media screen and (max-width: 470px) {
-    #cuzS {
+    #cuzS, #search {
       display: none;
     }
 }
