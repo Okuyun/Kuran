@@ -2064,7 +2064,7 @@ SbyA	çocukla
 Sd	yüz çevirdi
 Sddnkm	engelledik
 Sddtm	engel olduğunuzdan
-Sdq	iyi
+Sdq	doğru, iyi
 SdqA	doğruluk
 Sdqhm	doğrulukları-
 Sdqkm	size doğruladı
@@ -4738,8 +4738,8 @@ krmt	üstün yaptığını
 krp	bir dönüştür
 krsyh	tahtının
 krtyn	iki kez daha
-krym	bol
-krymA	bol
+krym	bol, önemli, kerim
+krymA	bol, önemli, kerim
 ksAdhA	düşmesinden
 ksAlY	üşene üşene
 ksb	kazanır
@@ -5977,7 +5977,7 @@ mlH	tuzlu
 mlj<	sığınacak yer
 mlj>	bir çare
 mlj_A	sığınacak bir yer
-mlk	mülkü
+mlk	mülk, mâlik
 mlkA	melek
 mlkh	mülkünü
 mlkt	bulunanlar
