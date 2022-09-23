@@ -369,11 +369,16 @@ function makeMenu(button, menu, callback) {
 }
 function openHash(evt) {
   // iqra.location.hash = '#'+h;
+    function rootValue() {
+      let r = rootD.value
+      let b = toBuckwalter(r)
+      return (b.includes('?') ? r : b)
+    }
     if (evt.key !== 'Enter') return
     let str = ''
     switch (evt.target) {
       case rootD: 
-        str = 'mujam.html#r='+rootD.value.replace(/\s+/g, '&r=')
+        str = LINKM+rootValue().replace(/\s+/g, '&r=')
         break;
       case textD: 
         str = FINDER+'#w='+textD.value; break

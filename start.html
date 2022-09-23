@@ -263,13 +263,13 @@ function pageValue() {
 function rootValue() {
     let r = root.value
     let b = toBuckwalter(r)
-    return 'r='+(b.includes('?') ? r : b)
+    return (b.includes('?') ? r : b)
 }
 function keyToPage(evt) {
     if (evt.key == 'Enter') 
       switch (evt.target) {
         case root:
-          doRoot(rootValue()); break;
+          doRoot('r='+rootValue()); break;
         case text:
           doText('t='+text.value); break;
         case buck:
@@ -284,7 +284,7 @@ function setOmni(evt) {
     let h = ''
     if (page.value) h += '&'+pageValue()
     if (root.value) 
-      h += '&'+rootValue().replace(/\s+/g, '&r=')
+       h += '&r='+rootValue().replace(/\s+/g, '&r=')
     if (text.value) {h += '&t='+text.value}
     if (buck.value) {h += '&b='+buck.value}
     if (!h) return
