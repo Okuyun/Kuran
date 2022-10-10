@@ -289,6 +289,7 @@ function toArabic(s) {
  * @returns {string}  diacritical marks are removed
  */
 function removeDiacritical(s) {
-    return s.replaceAll(/[FNKaui~o\^#`@",.\[\]]/g, '')
+    //g flag makes global replace -- no need for replaceAll
+    return s.replace(/[FNKaui~o\^#`@",.\[\]]/g, '')
 }
 // export {toArabic, toBuckwalter, removeDiacritical}
