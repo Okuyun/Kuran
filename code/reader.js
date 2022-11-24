@@ -660,11 +660,13 @@ function toggleTrans() {
     hideMenus(); saveSettings()
 }
 function makeStarMenu() {
-    const span = '<span class="menuK">'
-    let t = '', p = langMgr.PAGE0
-    let a = [...bookmarks].reverse()
-    for (let k of a) if (k != curPage)
-        t += span+p+nameFromPage(k)+'</span>\n'
+  //invoked whenever star menu is shown
+  let t = ''
+  for (let k of [...bookmarks].reverse()) {
+    let c = (k==curPage? ' checked' : '')
+    let p = langMgr.PAGE0+nameFromPage(k)
+      t += `<span class="menuK${c}">${p}</span>\n`
+    }
     starred.innerHTML = t
 }
 function handlePageNum() {
