@@ -31,17 +31,18 @@
 <div id="bkgd">
   <div class="dialog">
     <span id=page2></span>
+    <span id=question class=large>?</span>
     <input id=pgNum type=text inputmode=decimal>
-    <button id=dialogOK title="OK">✔</button>
-    <button onclick="explain.hidden=!explain.hidden" class=large>?</button>
+    <span id=checkMark title="OK" class=large>✔</span>
 <pre id=explain hidden>
 <span id=dia1></span>
 <span id=dia2></span>
 <span id=dia3></span>
-<span id=dia4></span></pre><br>
-    <p><label id=lab2></label><br>
+<span id=dia4></span>
+</pre>
+    <p><label id=lab2></label>
+    <span id=recog0 class=large hidden>🎤</span><br>
     <input type=text id=textD class=long>
-    <button id=recog0 hidden>🎤</button>
     <span id=recog1 hidden>
       <span id=recog2 class=expert></span> &emsp;
       <input id=recog3 type=button value="x">

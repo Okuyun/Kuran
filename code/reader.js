@@ -403,11 +403,12 @@ function initReader() {
     languageItems()
     sureS.onchange = () => {gotoSura(sureS.selectedIndex+1)}
     cuzS.onchange = () => {gotoPage(cuzS.selectedIndex*20+1)}
-    pgNum.onkeydown = keyToPage
-    dialogOK.onclick = (e) => {e.key='Enter'; keyToPage(e)}
-    rootD.onkeydown = openHash
-    textD.onkeydown = openHash
-    buckD.onkeydown = openHash
+    const moveCheckMark = e => e.target.after(checkMark)
+    checkMark.onclick = doCheckMark
+    question.onclick = () => explain.hidden = !explain.hidden
+    pgNum.onkeydown = keyToPage; pgNum.onfocus = moveCheckMark
+    for (let x of [textD, rootD, buckD])
+      {x.onkeydown = openHash; x.onfocus = moveCheckMark}
     pageA.onclick = handlePageNum
     bkgd.onclick = (e) => e.target===bkgd? hideElement(bkgd) : 0
     makeMenu(starA, menuS, makeStarMenu)
@@ -451,6 +452,17 @@ function initReader() {
       recognition.start()
     }
 }
+function doCheckMark(e) {
+    let t = checkMark.previousSibling
+    if (t === pgNum) {
+      e.key = 'Enter'; keyToPage(e)
+    } else {
+      enterKeyOn(t)
+    }
+}
+function enterKeyOn(target) {
+    openHash({key: 'Enter', target})
+}
 function initRecognition() {
     recognition = new webkitSpeechRecognition()
     recognition.lang = 'ar-AR'
@@ -463,7 +475,7 @@ function initRecognition() {
       console.log(a.transcript, a.confidence.toFixed(2)) 
       textD.value = a.transcript; recog1.hidden = true
       // e.key = 'Enter'; e.target = textD
-      openHash({key: 'Enter', target: textD})
+      enterKeyOn(textD)
     }
 }
 /********************
@@ -577,8 +589,7 @@ function menuFn() {
       evt.preventDefault()
       openSite(evt.target.innerText[0])
   }
-document.onkeydown = handleKeyEvent
-function handleKeyEvent(evt) {
+document.onkeydown = evt => {
       let k = evt.key.toUpperCase()
       if (evt.key == 'Escape') 
           hideMenus()

@@ -72,7 +72,6 @@ body {
     }
     #pgNum {
       width: 50px;
-      margin-top: 6px;
       font-size: large;
     }
     #bilgi { 
@@ -142,9 +141,6 @@ body {
     #text, #div3, #infoS { 
       font-family: sans-serif, arial;
     }
-    .dialog { 
-      font: 14px sans-serif, arial;
-    }
     #html, #bilgi { 
       font-family: Zekr, serif;
       line-height: 1.9;
@@ -170,7 +166,7 @@ body {
       margin: 0;
     }
     input[type="range" i] { /* added by A Rajab */
-      -webkit-appearance: none;
+      /* -webkit-*/ appearance: none;
       background: rgba(113, 171, 181, 0.3);
       outline-color:#59b;
       cursor: pointer;
@@ -244,6 +240,15 @@ body {
     margin: 40px auto;
     background: white;
     border: 5px double orange;
+    font: 14px sans-serif, arial;
+  }
+  .dialog input {
+    margin-top: 6px;
+  }
+  .dialog span.large {
+    display: inline-block;
+    margin: 0 8px;
+    cursor: pointer;
   }
   .long { width: 85%; max-width: 340px; }
   .short { width: 130px; }
