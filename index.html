@@ -22,7 +22,7 @@
       box-sizing: border-box;
       border: none;
       height: 100%;
-      min-width: 100px;
+      min-width: 330px;
       margin: auto;
       transition: all 0.8s ease-out;
     }
@@ -251,6 +251,7 @@ function showFinder() {
 function setPosition(e, x, w) {
   e.style.left  = (x == 0)? 0 : x+'px'
   if (w) e.style.width = (w == WIDTH)? '100%' : w+'px'
+  e.style.minWidth = e.style.width
 }
 function singlePanel() {
   return (WIDTH <= 850)
