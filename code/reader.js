@@ -590,6 +590,7 @@ function menuFn() {
       openSite(evt.target.innerText[0])
   }
 document.onkeydown = evt => {
+      if (!evt.key) return
       let k = evt.key.toUpperCase()
       if (evt.key == 'Escape') 
           hideMenus()
