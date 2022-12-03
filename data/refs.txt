@@ -1062,10 +1062,9 @@ Ew* 17
 Eu*o 10	1222682r034y34z47k4f657h5sy5t3
 maEaA* 2	28z2aj
 {sotaEi*o 4	1w22jj48d4a6
-Ewd 63
+Ewd 39
 >uEiydu 18	22022u22u2ls2ma2o02tt2ur2zv30p3hj3lb3n03ng3pv3tj5715ki
 EaA^}iduwn 1	4f1
-EaAd2 24	1sb1sk20926b26k26l26l2cv31938d3cv3lu42m47o49j49l4hv4kz4n04qa4r453z5415mn
 EaAda 18	17u1l81mp1rb1sy1sz1sz1wr1wr1xa2cz2kl2kl3583603w04xv4y0
 Eiyd 1	1lr
 maEaAd 1	3kp
@@ -2012,9 +2011,8 @@ ba`Eido 1	3sp
 buEod 7	26526l26t27k33e33h4d7
 muboEaduwn 1	2zs
 baEod 7	1581ls1we2cg3cs4id5pl
-bEl 7
+bEl 6
 baEol 6	16j1h926x36e36e36e
-baEol2 1	40p
 bEr 2
 baEiyr 2	2a52ac
 bEv 67
@@ -3327,8 +3325,7 @@ m~uka*~ibiyn 21	1by1m82ht4cu4nu4vq4wv52n55858e5cl5cp5cu5cy5d45d75da5df5dh5dj5iq
 tako*iyb 1	5ko
 kAs 6
 ka>os 6	3yh4o64ut5bg5bs5ei
-kEb 4
-kaEobap 2	1l81la
+kEb 2
 kaEobayon 1	1ir
 kawaAEib 1	5eh
 kZm 6
@@ -3386,7 +3383,6 @@ kfr 525
 >akofara 1	5gf
 kaAfir 27	11c13814o1681ao1e71k620720c21n21q2cl38u4j74k44k44rt4xj4zc4zd4zf50h51i5eo5h45je5jg
 kaAfirap 1	18i
-kaAfuwr 1	5bg
 ka`firuwn 129	10q10v11512o12p12x13315i17517917j18518x1911ax1bs1c21c81eq1gi1gj1hk1hl1hm1hm1hp1hw1hw1i61jt1k31kg1kh1lf1oe1pb1pj1rj1rr1rw1sm1t31tb1wf1wm1wq1yd1z11z71zc1zo1zu20o21s21y24a25g26329d2ar2bt2ce2co2hk2j42js2kl2q82qa2st2xz31b35i38138r39z3gy3jo3km3kq3m33ma3mo3mx3n23ny3pl3q63qd3rh3rx3t43ur3ur3wv42e44c45m46d46p47747i48748v49649d49k4be4ct4cz4hg4ij4ik4jo4ko4qu4xw4xx4zn52552d55955d57958x59i5bf5l85sg
 kafara 289	10d10x10z11a11w12k12o12o12p12q12y13113113113413k13p14f14o14y16317817b17c17d18918f18h18o18q19o19o19p1a31a51aj1an1ao1au1av1ay1b31b31b91bc1bd1bo1ca1cc1ch1d31dl1ev1f41f91fd1ft1g11g61g61gi1gj1hc1hh1hi1hi1hl1hv1hv1ic1id1if1io1iq1iv1ix1j21jl1kl1km1km1kr1kt1kz1lg1ln1ls1ly1m41mm1mr1nv1oe1sc1t01wk1wn1x21x71x81x81xa1xm1xo1xr1xv1y11y91ye1z11z51zc1zf1zf1zt20520d20j20n20t22022023u25425e25o26l26t2bk2bm2c62c92ca2cb2cc2cm2ct2cu2cv2cz2d42d82e42hw2ic2it2j52j92jr2jx2ma2n32o92oh2p02qa2qd2qe2rj2sj2sn2ss2xt2xz2y22zo30m30s31m31o32332332x33636m37237437f3873gv3gv3hm3jo3l43lf3lh3m83mm3mn3n53nn3nx3o43ob3op3p03q43qu3s93sd3sn3t13t33t33td3tn3tv3u23ue3uo3ur3w83wp41y42c43143144x46h46p46x46z47347347547f47z49549f49w49x49z4ab4ak4am4d24gk4h44hd4hh4hk4hl4hu4i84i84ia4ic4id4ih4il4j54j74jx4k04k04k14nj4op4r04xe4xi4yg4yp4yu4yu4z34z44z64z74zt50750k50l50m50p51g51j51r52c53u56b58k59i5k25ko5me5nu5qb5qg
 kafuwr 12	2562l42m831531x3p93sn3uo4c04ck5be5bz
@@ -3504,7 +3500,7 @@ ktm 21
 katama 21	11411d12714314914m15116j1821821a41cs1dc1eq1ev1ka1lc1lj30136c47l
 kvb 1
 kaviyb 1	58h
-kvr 167
+kvr 166
 >akovar 80	12z16y1b71e11k81lg1my1p01p51qz1tc1tc1u51vp1x61yj20822w23f23k25e28x29e29g2a82b72ba2bg2hv2iw2j42jm2kj2mu2oe2oy2xn34738j38p39o3bb3cb3ct3db3du3ea3eq3fn3hg3hs3hv3ip3jx3ki3mj3mv3my3nj3nv3p23sy3t53t63tb3v43z745j46348e48g48i49349a4eb4fp4gz4k84ou4xz
 >akovaru 2	25t5mt
 kaviyr 63	10x10x13817o19a1c71db1dq1e81fz1gh1gv1i51j01j01jh1jy1kb1kd1kf1kh1kk1kq1kt1ku1og1p81pq1vh1xf1xh1z920l24g27g2dm2mb2u52u630l30l31737p38d38o3fr3g63mx3qq3r43ra3wn42y49s4bi4bm4kb4kg4xf4xp4xq503577
@@ -3512,7 +3508,6 @@ kaviyrap 11	1701741gb1z032s32u43p4e64ju4jv4v7
 kavorap 2	1ld1z0
 kavura 2	1dw1wr
 kav~ara 1	1sw
-kawovar 1	5sd
 t~akaAvur 2	4xj5rd
 {sotakovaro 3	1ph1vq58t
 kwb 4
@@ -5337,8 +5332,6 @@ snd 1
 m~usan~adap 1	508
 snh 1
 yatasan~aho 1	17e
-snm 1
-tasoniym 1	5j7
 snn 21
 m~asonuwn 3	2es2eu2ez
 sun~ap 16	1by1ef1xa2ef2mi2mi2oz3r73rv3rv3uv3uv3uv4964jy4jy
@@ -6453,9 +6446,21 @@ zyt 7
 zayot 1	36i
 zayotuwnap 1	36i
 z~ayotuwn 5	1oo1pu2h45gr5pf
-{ll~a`t 1
+la`t 1
 {ll~a`t 1	4pf
-{loEuz~aY` 1
+Euz~aY` 1
 {loEuz~aY` 1	4pf
 {loyasaEa 2
 {loyasaEa 2	1ob43m
+EaAdN 24
+EaAdN 24	1sb1sk20926b26k26l26l2cv31938d3cv3lu42m47o49j49l4hv4kz4n04qa4r453z5415mn
+baEol 1
+baEolFA 1	40p
+kaEobap 2
+{lokaEobap 2	1l81la
+kaAfuwr 1
+kaAfuwrFA 1	5bg
+kawovar 1
+kawovar 1	5sd
+tasoniym 1
+tasoniym 1	5j7
