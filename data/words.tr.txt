@@ -2455,8 +2455,8 @@ bEhdh	sözünü
 bEhdhm	andlaşmalarını
 bEhdkm	size verdiğim sözü
 bEjl	bir buzağı
-bElA	Ba'l'e
-bElY	kocam da
+bElA	Ba'l
+bElY	kocam
 bElhA	kocasının
 bElm	ilmiyle
 bElmh	ilmini
@@ -7453,9 +7453,9 @@ skrp	sarhoşluğu
 skrt	döndürüldü
 skrthm	sarhoşlukları
 skt	dinince
-skynA	birer bıçak
-skynp	bir huzur bulunan
-skynth	sekinetini
+skynA	bıçak
+skynp	huzur, sekine
+skynth	huzur, sekine
 sl	sor
 slTn	güç
 slTnA	bir güç
@@ -8443,7 +8443,7 @@ tsmEwA	dinlemeyin
 tsmEwn	işittiğiniz halde
 tsmY	adına denir
 tsmyp	adlarını
-tsnym	tesnim-
+tsnym	Tesnim
 tsqT	düşmez
 tsqY	ve sulamaz
 tsr	sevinç verir
@@ -13909,7 +13909,7 @@ zytwnp	zeytin
 {lsjl	tomarlarını
 {lsjn	zindan
 {lsjwd	secde
-{lskynp	huzur
+{lskynp	huzur, sekine
 {lslm	selam
 {lsmA'	gök
 {lsmE	kulak
@@ -14275,3 +14275,6 @@ zytwnp	zeytin
 {}twA	gelin
 {}twnY	bana getirin
 {}tyA	gelin
+znjbylA	Zencebil
+{ltnwr	Tennur (tandır)
+{ltAbwt	sandık

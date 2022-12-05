@@ -14276,3 +14276,6 @@ zytwnp	an olive
 {}twA	come
 {}twnY	Bring me
 {}tyA	Come both of you
+znjbylA	Zanjabil
+{ltnwr	Tannur (oven)
+{ltAbwt	Ark, chest
