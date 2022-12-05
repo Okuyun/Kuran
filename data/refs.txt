@@ -6464,3 +6464,9 @@ kawovar 1
 kawovar 1	5sd
 tasoniym 1
 tasoniym 1	5j7
+zanjabiyl 1
+zanjabiyl 1	5bs
+tan~uwr 2
+{lt~an~uwr 2	261330
+taAbuwt 2
+{lt~aAbuwt 2	1732ub
