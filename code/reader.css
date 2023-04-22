@@ -41,11 +41,6 @@ body {
     }
 }
 
-@media screen and (max-width: 470px) {
-    #cuzS, #search {
-      display: none;
-    }
-}
 /** common to all screens **/
     #div3 {
       justify-content: center;
@@ -391,4 +386,9 @@ button {
   background-image: url(../image/add.png);
   background-size: contain;
   border: none;
+}
+@media screen and (max-width: 470px) {
+  #cuzS, #search {
+    display: none;
+  }
 }
