@@ -42,6 +42,12 @@
     .group button {
       min-width: 84px;
     }
+  @media screen and (max-width: 470px) {
+    .group button {
+      min-width: 68px;
+      font-size: small;
+    }
+  }
     .yellow { background: #ff7; }
     .white { background: white; }
     .small { font-size: smaller; }
@@ -84,11 +90,13 @@
   <p class="group">
   <button id=topic onclick='location="konular.html"'></button>
   <button id=notes onclick='location="notlar.html"'></button>
+  <button id=esma onclick='location="/Kitap/esma/"'></button>
   <button id=help onclick='window.open("guideQ.html","Kuran")'></button>
   </p>
   <p id=kitap class="group">
   <button id=mark onclick='location="bookmarks.html"'></button>
   <button id=days onclick='location="/Kitap/rama/"'></button>
+  <button id=levh onclick='location="/Kitap/esma/Husna"'></button>
   <button id=ders onclick='location="/Kitap/ders/"'></button>
   </p>
   <p id=offline hidden class=expert></p>
@@ -142,6 +150,8 @@ help	innerText	Yardım
 mark	title	Yer işaretlerini yönetin
 mark	innerText	Yıldızlar
 days	innerText	30 gün
+esma	innerText	Esma
+levh	innerText	Levha
 ders	innerText	Dersler
 offline	innerText	Internet kapalı iken bazı özellikler çalışmaz
 summ	title	Buckwalter kodunu göster/gizle
@@ -174,6 +184,8 @@ help	innerText	Help
 mark	title	Manage bookmarks
 mark	innerText	Stars
 days	innerText	30 gün
+esma	innerText	Asma
+levh	innerText	Image
 ders	innerText	Dersler
 offline	innerText	Internet is required for some features
 summ	title	Show/Hide Buckwalter code
@@ -206,6 +218,8 @@ help	innerText	مساعدة
 mark	title	إدارة العلامات
 mark	innerText	العلامات
 days	innerText	30 يوم
+esma	innerText	الأسماء
+levh	innerText	الحسنى
 ders	innerText	الدورس
 offline	innerText	الاتصال بالإنترنت مطلوب لبعض الميزات
 summ	title	إظهار/إخفاء رمز Buckwalter
