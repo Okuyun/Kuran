@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"    content="width=device-width">
+    <meta name="author"      content="M A Eyler, Istanbul, 2020" />
+    <meta name="description" content="Reader for the Quran" />
+    <link rel="icon" href="image/icon.png">
+    <title>Kuran-ı Kerim </title>
+
+  <style>
+    body {
+      min-height: 90vh;
+    }
+    #dataDiv {
+      max-width: 420px;
+      background: #f9f4e8;
+      margin: auto;
+      padding: 12px;
+    }
+    body, h2, h3 { margin: 12px; }
+    h2 {
+      margin-bottom: 16px;
+      text-align: center;
+      font-family: Zekr, serif;
+    }
+    @font-face {
+      font-family: Zekr;
+      src: url("/Rehber/style/ZEKRQURAN.TTF");
+    }
+    body, input, button { 
+      font: 16px sans-serif;
+    }
+    .long { width: 90%; max-width: 360px; }
+    .short { width: 130px; }
+    button {
+      border: 3px solid gray;
+      border-radius: 8px;
+      cursor: pointer;
+      background: lightgray;
+    }
+    .group button, #main {
+      min-width: 84px;
+    }
+  @media screen and (max-width: 400px) {
+    .group button {
+      min-width: 68px;
+      font-size: small;
+    }
+  }
+    .yellow { background: #ff7; }
+    .white { background: white; }
+    .small { font-size: smaller; }
+    .expert { color: darkred; }
+    #star {
+      position: relative;
+      top: 10px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-image: url(image/star.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2 id=head title='innehû lequr-ânun kerîm &#010;fî kitâbin meknûn'></h2>
+
+<div id=dataDiv>
+  <div id=intro></div>
+  <br>
+  <p>
+    <input type=search id=input class=long><br>
+    <button id=main>Sayfa</button>&emsp; 
+    <button id=star></button>&emsp; 
+    <button onclick="explain.hidden=!explain.hidden">?</button> 
+  </p>
+  <pre id=explain hidden>Arama yöntemleri
+  sayfa: 378 (1-604 arası)
+  ayet: 27.30 (nokta/boşluk)
+  kök: ktb Elm (Mucem'de ara)
+  diğer: (Rehber'de ara) </pre>
+  <hr />
+  <p class="group">
+  <button id=topic onclick='location="konular.html"'></button>
+  <button id=notes onclick='location="notlar.html"'></button>
+  <button id=esma onclick='location="/Kitap/esma/"'></button>
+  <button id=help onclick='window.open("guideQ.html","Kuran")'></button>
+  </p>
+  <p id=kitap class="group">
+  <button id=mark onclick='location="bookmarks.html"'></button>
+  <button id=days onclick='location="/Kitap/rama/"'></button>
+  <button id=levh onclick='location="/Kitap/esma/Husna"'></button>
+  <button id=ders onclick='location="/Kitap/ders/"'></button>
+  </p>
+  <p id=offline hidden class=expert></p>
+  <hr />
+  <details id=expert class=expert>
+    <summary id=summ>
+      <button onclick="expert.open=!expert.open">?</button> 
+      &ensp; For expert use only
+    </summary>
+  <p>
+  <label>Search using Buckwalter code</label><br>
+    <!-- <a href="https://en.wikipedia.org/wiki/Buckwalter_transliteration" target=Kuran></a>  -->
+    <input type=text id=buck class=long placeholder="mtY h*A"><br>
+    <span id=code class="white small">
+&nbsp; A b t v j H x d * r z s $ S D T Z E g f q k l m n h w y &nbsp;
+    </span>
+  </p>
+  <p><label>Link
+    <span>(hashtag or URL) </span></label><br>
+    <input type=text id=omni class=long>
+  </p>
+  </details>
+</div>
+
+<script src="code/languages.js"></script>
+<script>//localization strings
+const localization = {};
+
+localization.tr =
+`head	innerText	Kuran-ı Kerim
+intro	innerText	Iqra yazılımı ile Kuran-ı Kerim'i farklı yollardan keşfedin: İstenen sayfayı/ayeti gösterin, aradığınız kelimeleri bulun, ya da Arapça kelime kökleri ile arayın. Aşağıda istediğiniz yöntemle başlayabilirsiniz.
+main	data2	Sure
+main	data3	Ayet
+main	data4	Mucem
+main	data5	Rehber
+input	placeholder	378 veya 27.30
+input	title	sayfa numarası, sure-ayet numaraları, aranacak metim
+star	title	En son işaretlenen sayfa
+topic	innerText	Konular
+notes	innerText	Notlar
+help	innerText	Yardım
+mark	title	Yer işaretlerini yönetin
+mark	innerText	Yıldızlar
+days	innerText	30 gün
+esma	innerText	Esma
+levh	innerText	Levha
+ders	innerText	Dersler
+offline	innerText	Internet kapalı iken bazı özellikler çalışmaz
+summ	title	Buckwalter kodunu göster/gizle
+code	title	Buckwalter kodu -- alfabetik sıra
+omni	title	Linki ilk harf belirler: /Mushaf: p=… v=… /Mucem: r=… /Rehber: t=… b=…/`
+
+
+localization.en = 
+`head	innerText	The Noble Quran
+intro	innerText	Discover the Noble Quran using Iqra software: Display the desired page/verse, search some text in the Book, or find derivatives of given roots. You may start with any method shown below.
+main	data2	Surah
+main	data3	Verse
+main	data4	Mujam
+main	data5	Finder
+input	placeholder	378 or 27.30
+input	title	Page number or Chapter and verse or text to search
+star	title	Page with the latest bookmark
+topic	innerText	Topics
+notes	innerText	Notes
+help	innerText	Help
+mark	title	Manage bookmarks
+mark	innerText	Stars
+days	innerText	30 gün
+esma	innerText	Asma
+levh	innerText	Image
+ders	innerText	Dersler
+offline	innerText	Internet is required for some features
+summ	title	Show/Hide Buckwalter code
+code	title	Buckwalter code -- dictionary order
+omni	title	First letter determines the link: /Book: p=… v=… /Mujam: r=… /Finder: t=… b=…/`
+
+
+localization.ar = 
+`head	innerText	القرآن الكريم
+intro	innerText	اكتشف القرآن الكريم باستخدام برنامج اقرأ: اعرض الصفحة المطلوبة ، أو ابحث عن نص في الكتاب ، أو ابحث عن مشتقات من جذور معينة. يمكنك البدء بأي طريقة مبينة أدناه.
+main	data2	سورة
+main	data3	آية
+main	data4	معجم
+main	data5	باحث
+input	placeholder	378 أو 27.30
+input	title	رقم الصفحة أو رقم السورة والجزء
+star	title	صفحة آخر علامة 
+topic	innerText	المواضيع
+notes	innerText	ملاحظات
+help	innerText	مساعدة
+mark	title	إدارة العلامات
+mark	innerText	العلامات
+days	innerText	30 يوم
+esma	innerText	الأسماء
+levh	innerText	الحسنى
+ders	innerText	الدورس
+offline	innerText	الاتصال بالإنترنت مطلوب لبعض الميزات
+summ	title	إظهار/إخفاء رمز Buckwalter
+code	title	Buckwalter code -- ترتيب القاموس
+omni	title	أول حرف يشرح الرابط: /Book: p=… v=… /Mujam: r=… /Finder: t=… b=…/`
+
+const langMgr = new LangManager( //callback on applyLanguage()
+        () => LangManager.adjustDirection(dataDiv)
+      )
+
+</script>
+<script src="code/common.js"></script>
+<script src="code/buckwalter.js"></script>
+<script>
+function doRoot(h) {
+    if (!h) return
+    h = h.replace(/\s+/g, '&r=')
+    window.open('mujam.html#'+h, 'finder')
+}
+function doText(h) {
+    if (!h) return
+    window.open(FINDER+'#'+h, 'finder')
+}
+function doOpen(h) {
+    if (!h) return
+    window.open('reader.html#'+h, 'iqra')
+}
+function doOmni() {
+    let t = omni.value
+    if (/^[vp]=/.test(t))
+      doOpen(t) //t starts with v or p
+    else if (/^r=/.test(t))
+      doRoot(t) //t starts with r
+    else if (/^[bt]=/.test(t))
+      doText(t) //t starts with b or t
+    else window.open(t, 'finder') //t contains URL
+}
+function pageValue(str) {
+    //find numbers, \D means not digit
+    let [c, v] = str.split(/\D/)
+    let hash = '', text = main.data3 //verse
+    if (v === '') {
+        v = 1; text = main.data2 //chapter
+    }
+    if (c < 1) c = '1'
+    if (v) { //c:v
+      if (c>114) c = '114'
+      hash = 'v='+c+':'+v
+    } else { //page
+      if (c>604) c = '604'
+      hash = 'p='+c; text = langMgr.PAGE
+    }
+    return {hash, text}
+}
+function checkRoots(str) {
+    if (/^[A-Za-z*$]{3}$/.test(str))
+        return 'r='+str
+    return false
+}
+function doKey(evt) {
+    let str = input.value
+    if (str.length == 0) {
+        main.disabled = true
+        omni.value = ''; return
+    }
+    main.disabled = false
+    // \W stands for "negated word character"
+    // \s stands for "whitespace character"
+    // \D is the same as [^\d] "negated digit"
+    if (/^\d+(\D\d*)?$/.test(str)) { //number
+        let {hash, text} = pageValue(str)
+        main.innerText = text
+        omni.value = hash
+    } else { //text
+        let x = checkRoots(str)
+        main.innerText = x ? main.data4 : main.data5
+        omni.value = x || 't='+str
+    }
+}
+function rootValue() {
+    let r = root.value
+    let b = toBuckwalter(r)
+    return (b.includes('?') ? r : b)
+}
+function keyToPage(evt) {
+    if (evt.key == 'Enter') 
+      switch (evt.target) {
+        case buck:
+          doText('b='+buck.value); break;
+        case input: case omni:
+          doOmni(); break;
+      }
+}
+function init(storage = {}) {
+  function hideButtons(b) {
+    kitap.hidden = b; offline.hidden = !b
+    console.log(b ? 'offline' : 'online')
+  }
+    onoffline = () => hideButtons(true)
+    ononline  = () => hideButtons(false)
+    hideButtons(!navigator.onLine)
+    console.log(storage)
+    main.onclick = doOmni
+    document.onkeydown = keyToPage
+    input.onkeyup = doKey
+    let p = storage.page
+    input.value = p || '1'; input.focus()
+    input.selectionStart = 0
+    input.selectionEnd = input.value.length
+    let m = storage.marks
+    if (m && m.length) {
+      let h = m.pop()
+      star.onclick = () => doOpen('p='+h)
+    } else {
+      star.style.visibility = "hidden"
+      mark.style.visibility = "hidden"
+    }
+}
+window.name = "finder"
+document.title = head.innerText
+init(getStorage('iqra'))
+</script>
+
+</body>
+</html>
