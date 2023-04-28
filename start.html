@@ -31,7 +31,7 @@
     body, input, button { 
       font: 16px sans-serif;
     }
-    .long { width: 90%; max-width: 340px; }
+    .long { width: 90%; max-width: 360px; }
     .short { width: 130px; }
     button {
       border: 3px solid gray;
@@ -39,10 +39,10 @@
       cursor: pointer;
       background: lightgray;
     }
-    .group button {
+    .group button, #main {
       min-width: 84px;
     }
-  @media screen and (max-width: 470px) {
+  @media screen and (max-width: 400px) {
     .group button {
       min-width: 68px;
       font-size: small;
@@ -71,22 +71,19 @@
 
 <div id=dataDiv>
   <div id=intro></div>
+  <br>
+  <p>
+    <input type=search id=input class=long><br>
+    <button id=main>Sayfa</button>&emsp; 
+    <button id=star></button>&emsp; 
+    <button onclick="explain.hidden=!explain.hidden">?</button> 
+  </p>
+<pre id=explain hidden><span id=dia1></span>
+<span id=dia2></span>
+<span id=dia3></span>
+<span id=dia4></span>
+</pre>
   <hr />
-  <p><label id=lab1></label><br>
-  <input type=text id=page class=short inputmode=decimal>&emsp; 
-  <button id=star></button>&nbsp;
-  <button id=last>
-    <span id=lastText></span> <span id=lastPage></span>
-  </button>&nbsp;
-  </p>
-  <p><label id=lab2></label><br>
-  <input type=text id=text class=long>
-  </p>
-  <p><label id=lab3></label><br>
-  <input type=text id=root class=short>&emsp;
-  <button id=search></button>&nbsp;
-  <button id=clear hidden></button>&nbsp;
-  </p>
   <p class="group">
   <button id=topic onclick='location="konular.html"'></button>
   <button id=notes onclick='location="notlar.html"'></button>
@@ -107,8 +104,8 @@
       &ensp; For expert use only
     </summary>
   <p>
-  <label>Search using <a href="https://en.wikipedia.org/wiki/Buckwalter_transliteration" target=Kuran>
-      Buckwalter</a> code</label><br>
+  <label>Search using Buckwalter code</label><br>
+    <!-- <a href="https://en.wikipedia.org/wiki/Buckwalter_transliteration" target=Kuran></a>  -->
     <input type=text id=buck class=long placeholder="mtY h*A"><br>
     <span id=code class="white small">
 &nbsp; A b t v j H x d * r z s $ S D T Z E g f q k l m n h w y &nbsp;
@@ -127,23 +124,18 @@ const localization = {};
 
 localization.tr =
 `head	innerText	Kuran-ı Kerim
-intro	innerText	Iqra yazılımı ile Kuran-ı Kerim'i farklı yollardan keşfedin: İstenen sayfayı gösterin, aradığınız kelimeleri bulun, ya da Arapça kelime kökleri ile arayın. Aşağıda istediğiniz yöntemle başlayabilirsiniz.
-lab1	innerText	Mushafta göster (Sayfa veya Sure:Ayet)
-page	placeholder	378 veya 27:30
-page	title	1-604 arasında sayfa numarası ya da sure-ayet numaraları
+intro	innerText	Iqra yazılımı ile Kuran-ı Kerim'i farklı yollardan keşfedin: İstenen sayfayı/ayeti gösterin, aradığınız kelimeleri bulun, ya da Arapça kelime kökleri ile arayın. Aşağıda istediğiniz yöntemle başlayabilirsiniz.
+dia1	innerText	  sayfa: 378 (1-604 arası)
+dia2	innerText	  ayet: 27.30 (nokta/boşluk)
+dia3	innerText	  kök: ktb Elm (Mucem'de ara)
+dia4	innerText	  diğer: (Rehber'de ara)
+main	data2	Sure
+main	data3	Ayet
+main	data4	Mucem
+main	data5	Rehber
+input	placeholder	sayfa, ayet, kök, metin
+input	title	sayfa ya da sure-ayet numaraları; aranacak kök ya da metin
 star	title	En son işaretlenen sayfa
-last	title	En son açılan sayfa
-lastText	innerText	Sayfa
-lab2	innerText	Rehberde bul (Arapça ya da meal) 
-text	placeholder	Aranacak metin
-text	title	Bu alana girilen metin Rehber yazılımı ile aranır
-lab3	innerText	Mucemde bul
-root	placeholder	ktb Elm
-root	title	Birden fazla kök aranacaksa boşluk ile ayrılmalı
-search	title	Link adresini kullan
-search	innerText	Bul
-clear	title	Girilen verileri sil
-clear	innerText	Sil
 topic	innerText	Konular
 notes	innerText	Notlar
 help	innerText	Yardım
@@ -161,23 +153,18 @@ omni	title	Linki ilk harf belirler: /Mushaf: p=… v=… /Mucem: r=… /Rehber: 
 
 localization.en = 
 `head	innerText	The Noble Quran
-intro	innerText	Discover the Noble Quran using Iqra software: Display the desired page, search some text in the Book, or find derivatives of given roots. You may start with any method shown below.
-lab1	innerText	Display in the Book
-page	placeholder	378 or 27:30
-page	title	Page number (1-604) or Chapter and verse numbers
+intro	innerText	Discover the Noble Quran using Iqra software: Display the desired page/verse, search some text in the Book, or find derivatives of given roots. You may start with any method shown below.
+dia1	innerText	  page: 378 (within 1-604)
+dia2	innerText	  verse: 27.30 (period/space)
+dia3	innerText	  root: ktb Elm (in Mujam)
+dia4	innerText	  other: (in Finder)
+main	data2	Surah
+main	data3	Verse
+main	data4	Mujam
+main	data5	Finder
+input	placeholder	page, verse, root, or text
+input	title	Page or verse number; root or text to search
 star	title	Page with the latest bookmark
-last	title	Page opened latest
-lastText	innerText	Page
-lab2	innerText	Search using Finder
-text	placeholder	text to find
-text	title	Text entered here will be searched verbatim using Finder
-lab3	innerText	Search using Mujam
-root	placeholder	ktb Elm
-root	title	Use space to separate roots (in Buckwalter code)
-search	title	Use the address shown in the Link below
-search	innerText	Search
-clear	title	Clear all data entered on this page
-clear	innerText	Clear
 topic	innerText	Topics
 notes	innerText	Notes
 help	innerText	Help
@@ -196,22 +183,17 @@ omni	title	First letter determines the link: /Book: p=… v=… /Mujam: r=… /F
 localization.ar = 
 `head	innerText	القرآن الكريم
 intro	innerText	اكتشف القرآن الكريم باستخدام برنامج اقرأ: اعرض الصفحة المطلوبة ، أو ابحث عن نص في الكتاب ، أو ابحث عن مشتقات من جذور معينة. يمكنك البدء بأي طريقة مبينة أدناه.
-lab1	innerText	أظهر في الكتاب
-page	placeholder	378 أو 27:30
-page	title	رقم الصفحة أو رقم السورة والجزء
+dia1	innerText	  صفحة: 378 (1-604)
+dia2	innerText	  آية: 27.30 
+dia3	innerText	  المعجم: كتب علم
+dia4	innerText	  النص المراد البحث عنه
+main	data2	سورة
+main	data3	آية
+main	data4	المعجم
+main	data5	الباحث
+input	placeholder	378 أو 27.30
+input	title	رقم الصفحة أو رقم السورة والجزء
 star	title	صفحة آخر علامة 
-last	title	آخر صفحة مفتوحة
-lastText	innerText	صفحة
-lab2	innerText	ابحث باستخدام الباحث القرآني
-text	placeholder	النص المراد البحث عنه
-text	title	النص المدخل هنا سيتم البحث عنه بالباحث القرآني
-lab3	innerText	ابحث باستخدام المعجم
-root	placeholder	كتب علم
-root	title	استخدم الفراغ للفصل بين الجذور
-search	title   استخدم الرابط المظاهر أدناه
-search	innerText	ابحث
-clear	title   إزالة جميع البيانات المدخلة في هذه الصفحة
-clear	innerText	إزالة
 topic	innerText	المواضيع
 notes	innerText	ملاحظات
 help	innerText	مساعدة
@@ -232,80 +214,8 @@ const langMgr = new LangManager( //callback on applyLanguage()
 </script>
 <script src="code/common.js"></script>
 <script src="code/buckwalter.js"></script>
+<script src="code/search.js"></script>
 <script>
-function doRoot(h) {
-    if (!h) return
-    h = h.replace(/\s+/g, '&r=')
-    window.open('mujam.html#'+h, 'finder')
-}
-function doText(h) {
-    if (!h) return
-    window.open(FINDER+'#'+h, 'finder')
-}
-function doOpen(h) {
-    if (!h) return
-    window.open('reader.html#'+h, 'iqra')
-}
-function doOmni() {
-    let t = omni.value
-    if (/^[vp]=/.test(t))
-      doOpen(t) //t starts with v or p
-    else if (/^r=/.test(t))
-      doRoot(t) //t starts with r
-    else if (/^[bt]=/.test(t))
-      doText(t) //t starts with b or t
-    else window.open(t, 'finder') //t contains URL
-}
-function clearAll() {
-  document.querySelectorAll('input').forEach(x => x.value='')
-  clear.hidden = true
-}
-function pageValue() {
-    //find numbers, \D means not digit
-    let [c, v] = page.value.split(/\D+/)
-    if (v === '') v = 1
-    if (v) { //c:v
-      page.value = c+':'+v
-      return 'v='+page.value
-    } else { //page
-      if (c < 1) c = '1'
-      if (c>604) c = '604'
-      page.value = c
-      return 'p='+c
-    }
-}
-function rootValue() {
-    let r = root.value
-    let b = toBuckwalter(r)
-    return (b.includes('?') ? r : b)
-}
-function keyToPage(evt) {
-    if (evt.key == 'Enter') 
-      switch (evt.target) {
-        case root:
-          doRoot('r='+rootValue()); break;
-        case text:
-          doText('t='+text.value); break;
-        case buck:
-          doText('b='+buck.value); break;
-        case page:
-          doOpen(pageValue()); break;
-        case omni:
-          doOmni(); break;
-      }
-}
-function setOmni(evt) {
-    let h = ''
-    if (page.value) h += '&'+pageValue()
-    if (root.value) 
-       h += '&r='+rootValue().replace(/\s+/g, '&r=')
-    if (text.value) {h += '&t='+text.value}
-    if (buck.value) {h += '&b='+buck.value}
-    if (!h) return
-    omni.value = h.substring(1)
-    clear.hidden = false
-    // console.log(omni.value)
-}
 function init(storage = {}) {
   function hideButtons(b) {
     kitap.hidden = b; offline.hidden = !b
@@ -314,20 +224,13 @@ function init(storage = {}) {
     onoffline = () => hideButtons(true)
     ononline  = () => hideButtons(false)
     hideButtons(!navigator.onLine)
-    search.onclick = doOmni
-    clear.onclick = clearAll
-    root.onchange = setOmni
-    text.onchange = setOmni
-    buck.onchange = setOmni
-    page.onchange = setOmni
-    document.onkeydown = keyToPage
+    console.log(storage)
+    main.onclick = doOmni
+    document.onkeydown = enterKey
+    input.onkeyup = inputKey
     let p = storage.page
-    if (p && parent.iqra && parent.iqra.curPage!=p) {
-      last.onclick = () => doOpen('p='+p)
-      lastPage.innerText = p
-    } else {
-      last.style.visibility = "hidden"
-    }
+    input.value = p || '1'
+    inputKey(); setFocus(input)
     let m = storage.marks
     if (m && m.length) {
       let h = m.pop()
@@ -337,6 +240,7 @@ function init(storage = {}) {
       mark.style.visibility = "hidden"
     }
 }
+window.name = "finder"
 document.title = head.innerText
 init(getStorage('iqra'))
 </script>

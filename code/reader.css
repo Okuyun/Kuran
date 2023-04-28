@@ -48,7 +48,7 @@ body {
     .center { 
       text-align: center;
     }
-    button {
+    nav>button {
       min-width: 36px;
       height: 36px;
       cursor: pointer;
@@ -249,7 +249,7 @@ body {
     margin: 0 8px;
     cursor: pointer;
   }
-  .long { width: 85%; max-width: 340px; }
+  .long { width: 98%; max-width: 350px; }
   .short { width: 130px; }
   .yellow { background: #ff7; }
   .white { background: white; }
@@ -327,7 +327,7 @@ body {
 from <a href=https://www.flaticon.com/>www.flaticon.com</a>
 */
 img { width: 32px; }
-button {
+nav>button {
     background-size: contain;
     background-repeat: no-repeat;
     background-color: Transparent;

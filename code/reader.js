@@ -367,29 +367,6 @@ function makeMenu(button, menu, callback) {
       button.onclick = showOrHide
     }
 }
-function openHash(evt) {
-  // iqra.location.hash = '#'+h;
-    function rootValue() {
-      let r = rootD.value
-      let b = toBuckwalter(r)
-      return (b.includes('?') ? r : b)
-    }
-    if (evt.key !== 'Enter') return
-    let str = ''
-    switch (evt.target) {
-      case rootD: 
-        str = LINKM+rootValue().replace(/\s+/g, '&r=')
-        break;
-      case textD: 
-        str = FINDER+'#w='+textD.value; break
-      case buckD: 
-        str = FINDER+'#b='+buckD.value; break 
-      default: return
-    }
-    window.open(str, 'finder'); hideElement(bkgd)
-    if (!evt.type) return
-    evt.stopPropagation(); evt.preventDefault()
-}
 function reportNewVersion(t1, t0) {
   if (!t1 || !t0 || t1===t0) return
     update.style.display = '' //menu item becomes visible
@@ -403,13 +380,12 @@ function initReader() {
     languageItems()
     sureS.onchange = () => {gotoSura(sureS.selectedIndex+1)}
     cuzS.onchange = () => {gotoPage(cuzS.selectedIndex*20+1)}
-    const moveCheckMark = e => e.target.after(checkMark)
-    checkMark.onclick = doCheckMark
-    question.onclick = () => explain.hidden = !explain.hidden
-    pgNum.onkeydown = keyToPage; pgNum.onfocus = moveCheckMark
-    for (let x of [textD, rootD, buckD])
-      {x.onkeydown = openHash; x.onfocus = moveCheckMark}
     pageA.onclick = handlePageNum
+    //functions defined in search.js
+    main.onclick = doOmni
+    input.onkeydown = enterKey
+    input.onkeyup = inputKey
+    input.onchange = inputKey
     bkgd.onclick = (e) => e.target===bkgd? hideElement(bkgd) : 0
     makeMenu(starA, menuS, makeStarMenu)
     makeMenu(tranA, menuT)
@@ -447,21 +423,10 @@ function initReader() {
     if (!webkitSpeechRecognition) return
     recog0.hidden = false
     recog0.onclick = () => {
-      textD.value = ''; recog1.hidden = false
+      input.value = ''; recog1.hidden = false
       if (!recognition) initRecognition()
       recognition.start()
     }
-}
-function doCheckMark(e) {
-    let t = checkMark.previousSibling
-    if (t === pgNum) {
-      e.key = 'Enter'; keyToPage(e)
-    } else {
-      enterKeyOn(t)
-    }
-}
-function enterKeyOn(target) {
-    openHash({key: 'Enter', target})
 }
 function initRecognition() {
     recognition = new webkitSpeechRecognition()
@@ -473,9 +438,10 @@ function initRecognition() {
     recognition.onresult = (e) => {
       let a = e.results[0][0]; //use first result
       console.log(a.transcript, a.confidence.toFixed(2)) 
-      textD.value = a.transcript; recog1.hidden = true
-      // e.key = 'Enter'; e.target = textD
-      enterKeyOn(textD)
+      input.value = a.transcript; recog1.hidden = true
+      inputKey(); setFocus(input)
+      // e.key = 'Enter'; e.target = input
+      // enterKeyOn(input)
     }
 }
 /********************
@@ -633,23 +599,6 @@ document.onkeydown = evt => {
 /**
 * End of menu functions 
 ***********************************************/
-function keyToPage(evt) {
-    evt.stopPropagation()
-    if (evt.key == 'Escape') {
-      hideMenus()
-    } else if (evt.key == 'Enter') {
-      let [c, v] = pgNum.value.split(/\D+/)
-      if (v === '') v = 1
-      if (v) { //c:v
-        let p = pageOf(Number(c), Number(v))
-        gotoPage(p)
-        markVerse(c+':'+v)
-      } else { //page
-        gotoPage(Number(c))
-      }
-      hideElement(menuS)
-    }
-}
 function checkTrans() {
   function handleCheck(e) {
     let s = SOURCE[e.id]  //defined in model.js
@@ -683,8 +632,10 @@ function makeStarMenu() {
 }
 function handlePageNum() {
     bkgd.style.display = "block"
-    pgNum.value = curPage
-    setFocus(pgNum)
+    //input defined in search.js
+    input.value = curPage
+    inputKey(); setFocus(input)
+    recog0.hidden = !(recognition && navigator.onLine)
 }
 function toggleStar() {
     if (starA.classList.toggle('checked')) {

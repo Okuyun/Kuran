@@ -30,44 +30,41 @@
 
 <div id="bkgd">
   <div class="dialog">
-    <span id=page2></span>
-    <span id=question class=large>?</span>
-    <input id=pgNum type=text inputmode=decimal>
-    <span id=checkMark title="OK" class=large>✔</span>
-<pre id=explain hidden>
-<span id=dia1></span>
-<span id=dia2></span>
-<span id=dia3></span>
-<span id=dia4></span>
-</pre>
-    <p><label id=lab2></label>
-    <span id=recog0 class=large hidden>🎤</span><br>
-    <input type=search id=textD class=long>
+    <label id=dia0 class=large></label>
+    <input type=search id=input class="long large">
+    <p>
+    <button id=main>Sayfa</button>&ensp;
+    <span id=recog0 class=large hidden>🎤</span>&ensp;
+    <button onclick="explain.hidden=!explain.hidden">?</button><br>
     <span id=recog1 hidden>
       <span id=recog2 class=expert></span> &emsp;
       <input id=recog3 type=button value="x">
     </span>
-    <p><label id=lab3></label>
-    <input type=search id=rootD class=short>
+    </p>
+<pre id=explain hidden><span id=dia1></span>
+<span id=dia2></span>
+<span id=dia3></span>
+<span id=dia4></span>
+</pre>
     <hr />
     <details id=expert class=expert>
       <summary id=summD>For expert use only
       </summary><p>
-    <label>Search using <a href="https://en.wikipedia.org/wiki/Buckwalter_transliteration" target=Kuran>
-        Buckwalter</a> code</label><br>
-      <input type=search id=buckD class=long placeholder="mtY h*A"><br>
+    <label>Search using Buckwalter code</label><br>
+      <input type=search id=buck class=long placeholder="mtY h*A"><br>
       <span id=codeD class="white small">
   &nbsp; A b t v j H x d * r z s $ S D T Z E g f q k l m n h w y &nbsp;
       </span>
-    </details>  
+      <input type=text id=omni class=long>
+    </details>
   </div>
 </div>
 <!--  <hr>Load simi.txt: <br>
 <input type="file" onchange="fileSelect(this)" accept=".txt"> -->
 
 <div id=div2 class="center">
-  <div id=text class=hiddenNarrow>Türkçe meal yükleniyor</div>
-  <div id=html readonly>Kuran metni yükleniyor</div>
+  <div id=text class=hiddenNarrow>Menülerden sayfa/ayet seçebilirsiniz</div>
+  <div id=html readonly>Select page/verse from the menus</div>
   <div id=div0></div>
 </div>
 
@@ -158,11 +155,17 @@ const localization = {};
 
 localization.tr = 
 `page1	innerText	Sayfa
-page2	innerText	Sayfa/Ayet
-dia1	innerText	36   = Sayfa 36
-dia2	innerText	36.  = Sure 36 (Yasin)
-dia3	innerText	36.8 = Yasin 8. ayet
-dia4	innerText	(nokta ya da boşluk)
+dia0	innerText	  Ara ve Bul
+dia1	innerText	  sayfa: 378 (1-604 arası)
+dia2	innerText	  ayet: 27.30 (nokta/boşluk)
+dia3	innerText	  kök: ktb Elm (Mucem'de ara)
+dia4	innerText	  diğer: (Rehber'de ara)
+main	data2	Sure
+main	data3	Ayet
+main	data4	Mucem
+main	data5	Rehber
+input	placeholder	sayfa, ayet, kök, metin
+input	title	sayfa ya da sure-ayet numaraları; aranacak kök ya da metin
 copy	innerText	Kopyala
 mujm	innerText	Mucem
 fndr	innerText	Rehber
@@ -191,23 +194,23 @@ kay2	innerText	Dış kaynaklar
 topic	innerText	Konular
 notes	innerText	Notlar
 ders	innerText	Dersler
-lab2	innerText	Rehberde bul (Arapça ya da meal) 
-textD	placeholder	Aranacak metin
-textD	title	Bu alana girilen metin Rehber yazılımı ile aranır
 recog2	innerText	Arapça dinliyorum...
-lab3	innerText	Mucemde bul
-rootD	placeholder	ktb Elm
-rootD	title	Birden fazla kök aranacaksa boşluk ile ayrılmalı
 summD	title	Buckwalter kodunu göster/gizle
 codeD	title	Buckwalter kodu -- alfabetik sıra`
 
 localization.en = 
 `page1	innerText	Page
-page2	innerText	Page/Verse
-dia1	innerText	36   = Page 36
-dia2	innerText	36.  = Chap 36 (Yasin)
-dia3	innerText	36.8 = Yasin, verse #8
-dia4	innerText	(period or space)
+dia0	innerText	  Search and Find
+dia1	innerText	  page: 378 (within 1-604)
+dia2	innerText	  verse: 27.30 (period/space)
+dia3	innerText	  root: ktb Elm (in Mujam)
+dia4	innerText	  other: (in Finder)
+main	data2	Surah
+main	data3	Verse
+main	data4	Mujam
+main	data5	Finder
+input	placeholder	page, verse, root, or text
+input	title	Page or verse number; root or text to search
 copy	innerText	Copy
 mujm	innerText	Mujam
 fndr	innerText	Finder
@@ -236,26 +239,25 @@ kay2	innerText	External sources
 topic	innerText	Topics
 notes	innerText	Notes
 ders	innerText	Work (Turkish)
-lab2	innerText	Search using Finder
-textD	placeholder	text to find
-textD	title	Text entered here will be searched verbatim using Finder
 recog2	innerText	Listening in Arabic...
-lab3	innerText	Search using Mujam
-rootD	placeholder	ktb Elm
-rootD	title	Use space to separate roots (in Buckwalter code)
 summD	title	Show/Hide Buckwalter code
 codeD	title	Buckwalter code -- dictionary order`
 
-
 localization.ar = 
 `page1	innerText	صفحة
-page2	innerText	صفحة/آية
-dia1	innerText	36   = صفحة 36
-dia2	innerText	36.  = سورة 36 (ياسين)
-dia3	innerText	36.8 = ياسين, آية #8
-dia4	innerText	(نقطة أو مسافة)
+dia0	innerText	  البحث والعثور
+dia1	innerText	  صفحة: 378 (1-604)
+dia2	innerText	  آية: 27.30 
+dia3	innerText	  المعجم: كتب علم
+dia4	innerText	  النص المراد البحث عنه
+main	data2	سورة
+main	data3	آية
+main	data4	المعجم
+main	data5	الباحث
+input	placeholder	378 أو 27.30
+input	title	رقم الصفحة أو رقم السورة والجزء
 copy	innerText	انسخ
-mujm	innerText	معجم
+mujm	innerText	المعجم
 fndr	innerText	باحث قرآني
 leftB	title	صفحة سابقة
 slider	title	شريط تحريك لرؤية الصفحة المطلوبة
@@ -282,13 +284,7 @@ kay2	innerText	مصادر خارجية
 topic	innerText	المواضيع
 notes	innerText	ملاحظات
 ders	innerText	الدورس
-lab2	innerText	ابحث باستخدام الباحث القرآني
-textD	placeholder	النص المراد البحث عنه
-textD	title	النص المدخل هنا سيتم البحث عنه بالباحث القرآني
 recog2	innerText	يتم تسجيل الصوت...
-lab3	innerText	ابحث باستخدام المعجم
-rootD	placeholder	كتب علم
-rootD	title	استخدم الفراغ للفصل بين الجذور
 summD	title	إظهار/إخفاء رمز Buckwalter
 codeD	title	Buckwalter code -- ترتيب القاموس`
 
@@ -312,6 +308,7 @@ function languageItems() {
 }
 const langMgr = new LangManager(languageItems) 
 </script>
+<script src="code/search.js"></script>
 <script src="code/utilities.js"></script>
 <script src="code/reader.js"></script>
 
