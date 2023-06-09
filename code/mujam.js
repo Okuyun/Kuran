@@ -6,9 +6,9 @@
 // import {toArabic, toBuckwalter} from "./buckwalter.js"
 
 /**
- * Do not show word list initially
+ * Do show word list initially
  */
-var showList = false;
+var showList = true;
 /**
  * div element that shows page info
  */
