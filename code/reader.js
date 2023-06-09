@@ -421,12 +421,13 @@ function initReader() {
     window.name = "iqra" //by A Rajab
     readSettings()
     if (!webkitSpeechRecognition) return
-    recog0.hidden = false
+    recog0.style.display = ''
     recog0.onclick = () => {
       input.value = ''; recog1.hidden = false
-      if (!recognition) initRecognition()
+      // if (!recognition) initRecognition()
       recognition.start()
     }
+    initRecognition()
 }
 function initRecognition() {
     recognition = new webkitSpeechRecognition()
@@ -635,7 +636,8 @@ function handlePageNum() {
     //input defined in search.js
     input.value = curPage
     inputKey(); setFocus(input)
-    recog0.hidden = !(recognition && navigator.onLine)
+    recog0.style.display 
+      = (recognition && navigator.onLine)? '' : 'none'
 }
 function toggleStar() {
     if (starA.classList.toggle('checked')) {
