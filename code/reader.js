@@ -241,8 +241,8 @@ function gotoPage(k=1, adjusting) { // 1<=k<=P
         idx++; doVerse(e)
     }
     for (let e of text.children) doVerse(e)
-    if (hashToPage(location.hash) !== curPage) 
-        location.hash = '#p='+curPage
+    if (hashToPage(location.hash) !== curPage)
+      location.hash = '#p='+curPage
     saveSettings(); scrollTo(0, 0)
 }
 function setSura(c) { // 1<=c<=M
@@ -294,7 +294,7 @@ function gotoHashPage() {
     switch (e.charAt(0)) {
       case 'p': // p=245
         if (curPage != s) gotoPage(s)
-        document.title = langMgr.PAGE0+nameFromPage(s)
+        setTitle(langMgr.PAGE0+nameFromPage(s))
         break
       case 'r': // r=Sbr
         let L = Q.roots.rootToList(s)
@@ -310,7 +310,7 @@ function gotoHashPage() {
         c = Number(c); v = Number(v)
         let p = pageOf(c, v)
         if (curPage != p) gotoPage(p)
-        document.title = sName[c]+' '+s
+        setTitle(sName[c]+' '+s)
         markVerse(s); break
       default: 
         console.log("wrong hash" + e)

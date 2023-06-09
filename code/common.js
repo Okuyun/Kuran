@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.7t";
+const VERSION = "V4.7p";
 
 /**
  * &ensp; used in Mujam and VerseRef
@@ -16,6 +16,15 @@ const EM_SPACE = String.fromCharCode(8194) //8195
  */
 var FINDER = '/Rehber/finder.html'
 
+/**
+ *  set title of the iframe and its parent 
+ */
+function setTitle(t) {
+    t = '[Iqra] '+t
+    document.title = t
+    if (parent === window) return
+    parent.document.title = t
+}
 /**
  * Use the hash part of URL in the address bar
  *

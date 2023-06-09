@@ -376,10 +376,7 @@ function displayTable(set) {
     let last = tablo.querySelector('#last')
     last.append(nb) //to the table again
     tablo.oncontextmenu = showMenuK
-    document.title = TITLE + " -- " + set.name
-    // let str = numP +' '
-    //     +(numP>1? langMgr.PAGES : langMgr.PAGE)
-    // out2.innerText = str
+    setTitle(set.name)
     out3.innerText = set.name
     // console.log(set)
     for (let x of tablo.querySelectorAll('td')) {
