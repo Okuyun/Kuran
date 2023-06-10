@@ -40,11 +40,11 @@
       background: lightgray;
     }
     .group button, #main {
-      min-width: 84px;
+      min-width: 90px;
     }
   @media screen and (max-width: 400px) {
     .group button {
-      min-width: 68px;
+      min-width: 72px;
       font-size: small;
     }
   }
@@ -85,15 +85,15 @@
 </pre>
   <hr />
   <p class="group">
-  <button id=topic onclick='location="konular.html"'></button>
-  <button id=notes onclick='location="notlar.html"'></button>
-  <!-- <button id=esma onclick='location="/Kitap/esma/"'></button> -->
+  <button id=topic onclick='location="konular.html"'></button>&ensp;
+  <button id=notes onclick='location="notlar.html"'></button>&ensp;
+  <button hidden id=esma onclick='location="/Kitap/esma/"'></button>
   <button id=help onclick='window.open("guideQ.html","Kuran")'></button>
   </p>
   <p id=kitap class="group">
-  <button id=mark onclick='location="bookmarks.html"'></button>
-  <!-- <button id=days onclick='location="/Kitap/rama/"'></button> -->
-  <button id=levh onclick='location="/Kitap/esma/Husna"'></button>
+  <button id=mark onclick='location="bookmarks.html"'></button>&ensp;
+  <button hidden id=days onclick='location="/Kitap/rama/"'></button>
+  <button id=levh onclick='location="/Kitap/esma/Husna"'></button>&ensp;
   <button id=ders onclick='location="/Kitap/ders/"'></button>
   </p>
   <p id=offline hidden class=expert></p>
@@ -143,7 +143,7 @@ mark	title	Yer işaretlerini yönetin
 mark	innerText	Yıldızlar
 days	innerText	30 gün
 esma	innerText	Esma
-levh	innerText	Levha
+levh	innerText	Levhalar
 ders	innerText	Dersler
 offline	innerText	Internet kapalı iken bazı özellikler çalışmaz
 summ	title	Buckwalter kodunu göster/gizle
@@ -172,7 +172,7 @@ mark	title	Manage bookmarks
 mark	innerText	Stars
 days	innerText	30 gün
 esma	innerText	Asma
-levh	innerText	Image
+levh	innerText	Images
 ders	innerText	Dersler
 offline	innerText	Internet is required for some features
 summ	title	Show/Hide Buckwalter code
