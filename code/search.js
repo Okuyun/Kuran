@@ -73,18 +73,20 @@ function inputKey(evt) {
         main.innerText = text
         omni.value = hash
     } else { //text
-        let x = checkRoots(str)
-        main.innerText = x ? main.data4 : main.data5
-        omni.value = x || 't='+str
+        let x = checkRoots(str) //roots or false
+        main.innerText = x ? main.data4 :
+          expert.open ? "Buck" : main.data5
+        omni.value = x ? x :
+          expert.open ? 'b='+str : 't='+str
     }
 }
 function enterKey(evt) {
     evt.stopPropagation()
     if (evt.key == 'Enter') 
       switch (evt.target) {
-        case buck:
-          doText('b='+buck.value); break;
         case input: case omni:
           doOmni(); break;
       }
 }
+
+expert.ontoggle = inputKey;
