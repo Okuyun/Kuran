@@ -50,10 +50,8 @@ function checkRoots(str) {
   }
     let a = []
     for (let s of str.split(/\s/)) {
-        let n = s.length
-        if (n<3 || n>4) return false
         let t = toBuck(s)
-        if (!t) return false
+        if (!t || !Q.roots.contains(t)) return false
         a.push('r='+t)
     }
     return a.join('&')

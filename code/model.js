@@ -193,6 +193,7 @@ class MujamData {
   }
   wordToRoot(w) { return this._word2Root.get(w) || '' }
   rootToList(w) { return this._root2List.get(w) || [] }
+  contains(w)   { return this._root2List.has(w) }
 }
 
 /** Keys: words
