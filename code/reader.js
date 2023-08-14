@@ -596,6 +596,8 @@ document.onkeydown = evt => {
   }
   div1.onmouseenter = hideMenus
   div3.onmouseenter = hideMenus
+  div2.onclick = e => 
+    { if (e.target.tagName !== 'SPAN') hideMenus() }
 }
 /**
 * End of menu functions 
