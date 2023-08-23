@@ -16,7 +16,7 @@ Q.simi  = new SimData('data/simi.txt')
 Q.roots = new MujamData('data/words.txt')
 // Q.dict = Dictionary.newInstance() moved to languageItems()
 new TouchHandler({dragStart, dragEnd}, div2)
-var curSura, curPage, bookmarks, lastSelection, recognition
+var curSura, curPage, bookmarks, lastCV, lastSelection, recognition
 Q.notes = new Notes('notesQ')
 //https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList
 Q.hasMouse = matchMedia('(pointer:fine)').matches
@@ -132,9 +132,11 @@ function selectWord(evt) {
         s.removeAllRanges(); s.addRange(range);
       }
       // console.log(evt.offsetY, evt.clientY, evt.pageY)
-      let y = 
-        t.getBoundingClientRect().top + window.pageYOffset
-      setPosition(menuC, evt.clientX, y-36, 220)
+      let x = evt.pageX  //t.getBoundingClientRect().left
+      let y = evt.pageY  //t.getBoundingClientRect().top
+   // setPosition(menuC, evt.clientX, y-36, 220)
+      setPosition(menuC, x, y+12, 80)
+      lastCV = t.parentElement.className   //global
     }
 }
 function hideWord(evt) {
@@ -477,6 +479,13 @@ function menuFn() {
               if (a.length > 0) openMujam(...a)
               else alert('Mucemde bulunamadı')
               break
+          case 'mufr':
+              if (!lastCV) break
+              let [, c, v] = lastCV.split(/[c_ ]/)
+              let url = `https://kuranmeali.com/Elfaz.php?sure=${c}&ayet=${v}`
+              console.log(url)
+              window.open(url, "Kuran")
+              break
           case 'fndr':
               window.open(LINKF + s, "finder")
               break
@@ -563,8 +572,6 @@ document.onkeydown = evt => {
           hideMenus()
       else if (evt.key == 'F1') 
           openSitePage('Y') //Yardım
-      // else if (menuC.style.display)
-      //     menuItem(k)
       else if (menuK.style.display)
           openSitePage(k, curPage)
       else if (menuV.style.display)
