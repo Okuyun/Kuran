@@ -48,6 +48,7 @@
     <li><a href="#benzerlik">Benzerlik</a>
     <li><a href="#panel">Paneller</a>
     <li><a href="#sss">Sorular</a>
+    <li><a href="#kullanım">Kullanım</a>
     <li><a href="history.html">Tarihçe</a>
     <li><a href="#tesekkur">Teşekkür</a>
   </ul>
@@ -72,7 +73,7 @@
   <img src="docs/start.png" alt="Start ekranı">
 </p>
 <ul>
-  <li>Sarı Dünya simgesi dil değiştirir, sarı ok mushaf panelini açar</li>
+  <li>Sarı Dünya simgesi dil değiştirir, sarı ok mushaf paneline geçer</li>
   <li>Mushafta göster: Sayfa veya ayet numarası ile belirtilen yeri,<br>
     veya yıldız simgesi ile son işaretlenen sayfayı göster
   </li>
@@ -92,11 +93,12 @@ Mushaf açıkken, sonraki ya da önceki sayfaya geçmek, başka bir sure, cüz, 
   <li><a href="index.html#v=27:28&r=ktb" target="iqraTop">
   #v=27:28</a> (27. surenin 28. ayeti &ndash; aşağıda birinci resim)</li>
   <li><a href="index.html#p=378" target="iqraTop">
-  #p=378</a> (numarası verilen sayfa &ndash; ikinci resim)</li>
+  #p=578</a> (numarası verilen sayfa &ndash; ikinci resim)</li>
 </ul>
 
 <p>
-  <img src="docs/Iqra_ktb.png" alt="Iqra ekranı" class=large />
+  <img src="docs/Iqra_ktb.png" alt="Iqra ekranı" style="max-width: min(100%, 604px)"><br>
+Bu resimde, sayfa menüsü, tıklanan kelime bilgisi, ayrıca 25. ayette secde ayetleri için kullanılan işaret görülüyor.
 </p>
 
 <p>Sağ üstte görünen butonların anlamı:
@@ -104,22 +106,16 @@ Mushaf açıkken, sonraki ya da önceki sayfaya geçmek, başka bir sure, cüz, 
   <li>☆ &nbsp; Yer işareti ekle/sil/seç</li>
   <li>T &nbsp; Tercüme göster/gizle/seç</li>
   <li><xs>A</xs>A &nbsp;Yazı boyu büyük/normal (dar ekranda görünmez)</li>
-  <li>☰ &nbsp; Sayfa menüsü: Dış kaynaklar, Sürüm, Yardım</li>
+  <li>☰ &nbsp; Sayfa menüsü: Yardım, Paylaş, Dış kaynaklar, Sürüm... </li>
   <li>&gt; &nbsp; Diğer panele geç (<s>Pembe tuş</s> Sarı ok)</li>
 </ul>
 
 </p>
-<p>Arapça kelimelerin kökü, bilgisayarda mouse ile kelimeye tıklayarak, mobilde dokunarak bulunur. Arama panelinde (Mucem veya Rehber) seçilen ayetler ve kelimeler renkli gösterilir.</p>
-<p>Dar ekranlara hem ayet hem de meal sütunları bir arada sığmaz, ayetler ile anlamlar arasındaki geçiş için T menüsüne basmak gerekiyor. Fontlar ekran genişliği ile orantılı olduğundan, telefonu yan tutmak daha iyi görüntü verecektir.</p>
-
+<p>Arapça kelimelerin kökü ve anlamı, bilgisayarda mouse ile kelimeye tıklayarak, mobilde dokunarak bulunur. Arama panelinde (Mucem veya Rehber) bulunan ayetler ve kelimeler bu panelde renkli gösterilir. Dar ekranlara hem ayet hem de meal sütunları bir arada sığmaz, ayetler ile meal arasındaki geçiş için T menüsü (ya da ekran kaydırma) gerekiyor. Fontlar ekran genişliği ile orantılı olduğundan, telefonu yan tutmak daha iyi görüntü verecektir.</p>
 <p>
-  <img src="docs/Iqra_dar.png" alt="Iqra dar" />
-</p>
-
-Bu resimde, iki kelime seçildikten sonra bağlam menüsü, ayrıca 25. ayette
-secde ayetleri için kullanılan işaret görülüyor.
-</p>
-<p>Bağlam menüsü için: mouse varsa sağ-tıklayın, yoksa kelimeye uzunca basın, ya da iki parmakla dokunun. Seçilen metin panoya kopyalanır ya da arama modüllerine gönderilir.
+  <img src="docs/Iqra_dar.png" alt="Iqra dar" /><br>
+Bu resimde, iki kelime seçildikten sonra bağlam menüsü görülüyor.
+Bağlam menüsü için: mouse varsa sağ-tıklayın, yoksa kelimeye uzunca basın, ya da iki parmakla dokunun. Seçilen metin panoya kopyalanır ya da arama modüllerine gönderilir.
 
 <h3 id="arama">2. Arama yöntemleri</h3>
 <p>Yazılım üç türlü aramayı destekliyor:</p>
@@ -244,7 +240,8 @@ Başlangıç, Rehber, Mucem, Konular, Notlar, Yıldızlar, Kitap...
     <p>Her kelimenin hangi ayetlerde geçtiğini gösteren bir fihrist</p>
   </li>
   <li>Mucem verilerinin kaynağı?
-    <p><a href="https://corpus.quran.com/download/">corpus.quran.com</a></p>
+    <p><a href="https://corpus.quran.com/download/">corpus.quran.com</a>
+    (GNU License is included below)</p>
   </li>
   <li>Mucem tablosunun anlamı?
     <p>Her sayfa bir kutu, her cüz bir satır</p>
@@ -257,9 +254,24 @@ Başlangıç, Rehber, Mucem, Konular, Notlar, Yıldızlar, Kitap...
   </li>
 </ul>
 
-<h3>5. <a href="history.html">Yazılımın tarihçesi</a></h3>
+<h3 id="kullanım">5. Kullanım alanları</h3>
+<ul>
+  <li>Günlük okuma: son kaldığım yere yıldız koyarım, ertesi gün yıldızlı sayfadan devam ederim
 
-<h3 id="tesekkur">6. Teşekkürler</h3>
+  <li>Araştırma: kelimelerin anlamı ve kökü, Mucem, benzer ayetler
+  
+  <li>Ayet bulma: klavyeden yazarak, ya da sesli arama
+  
+  <li>Dış kaynaklar: Mufredat ve sesli okuma gibi eksik özellikleri tamamlar
+  
+  <li>Konular: seçilen bir grup ayetin hepsini bir arada görmek
+  
+  <li>Dersler: muhtelif konularda yazılmış sayfalardan ayetlere doğrudan erişim
+</ul>
+
+<h3>6. <a href="history.html">Yazılımın tarihçesi</a></h3>
+
+<h3 id="tesekkur">7. Teşekkürler</h3>
 <ul>(zaman sırasında)
 <li>İlk günden beri fikirler veren eşim Seher Eyler,
 <li>CSS, PWA gibi kavramları ilk tanıtan <a href="https://github.com/Okuyun/Kuran/search?q=cpenbe&type=issues" target="NewTab">Celalettin Penbe</a>,
