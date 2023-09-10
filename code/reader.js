@@ -427,7 +427,7 @@ function initReader() {
     recog0.onclick = () => {
       input.value = ''; recog1.hidden = false
       // if (!recognition) initRecognition()
-      recognition.start()
+      recognition.start(); expert.open = false
     }
     initRecognition()
 }
