@@ -315,7 +315,7 @@ function gotoHashPage() {
         setTitle(sName[c]+' '+s)
         markVerse(s); break
       default: 
-        console.log("wrong hash" + e)
+        console.log("wrong hash: " + e)
         return false
     }
   }

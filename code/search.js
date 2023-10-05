@@ -25,19 +25,24 @@ function doOmni() {
 function checkNumber(str) {
     //find numbers, \D means not digit
     let [c, v] = str.split(/\D/)
-    let hash = '', text = main.data3 //verse
-    if (v === '') {
-        v = 1; text = main.data2 //chapter
-    }
     if (c < 1) c = '1'
-    if (v) { //c:v
+    let hash, text, info
+    if (v === '') {
+      hash = 'v='+c+':1'
+      text = main.data2 //chapter
+      info = sName[c]
+    } else if (v) { //c:v
       if (c>114) c = '114'
       hash = 'v='+c+':'+v
+      text = main.data3 //verse
+      info = sName[c] +' '+v
     } else { //page
       if (c>604) c = '604'
-      hash = 'p='+c; text = langMgr.PAGE
+      hash = 'p='+c
+      text = langMgr.PAGE
+      info = c
     }
-    return {hash, text}
+    return {hash, text, info}
 }
 function checkRoots(str) {
   function toBuck(s) {
@@ -67,13 +72,16 @@ function inputKey(evt) {
     // \s stands for "whitespace character"
     // \D is the same as [^\d] "negated digit"
     if (/^\d+(\D\d*)?$/.test(str)) { //number
-        let {hash, text} = checkNumber(str)
+        let {hash, text, info} = checkNumber(str)
+        info2.innerText = info
         main.innerText = text
         omni.value = hash
     } else { //text
         let x = checkRoots(str) //roots or false
         main.innerText = x ? main.data4 :
           expert.open ? "Buck" : main.data5
+        info2.innerText = x || expert.open ?
+          toArabic(str) : ''
         omni.value = x ? x :
           expert.open ? 'b='+str : 't='+str
     }
@@ -88,3 +96,4 @@ function enterKey(evt) {
 }
 
 expert.ontoggle = inputKey;
+question.onclick= () => {explain.hidden = !explain.hidden}

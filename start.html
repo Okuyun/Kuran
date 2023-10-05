@@ -62,6 +62,10 @@
       background-size: contain;
       background-repeat: no-repeat;
     }
+    #info2 {
+      font-family: Zekr, serif;
+      font-size: large;
+    }
   </style>
 </head>
 
@@ -74,9 +78,10 @@
   <br>
   <p>
     <input type=search id=input class=long><br>
-    <button id=main>Sayfa</button>&emsp; 
+    <button id=question>?</button>&emsp;
     <button id=star></button>&emsp; 
-    <button onclick="explain.hidden=!explain.hidden">?</button> 
+    <button id=main>Sayfa</button>&emsp; 
+    <span id=info2 class=large></span>
   </p>
 <pre id=explain hidden><span id=dia1></span>
 <span id=dia2></span>
