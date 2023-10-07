@@ -135,7 +135,7 @@ function selectWord(evt) {
       let x = evt.pageX  //t.getBoundingClientRect().left
       let y = evt.pageY  //t.getBoundingClientRect().top
    // setPosition(menuC, evt.clientX, y-36, 220)
-      setPosition(menuC, x, y+12, 80)
+      setPosition(menuC, x, y+40, 80)
       lastCV = t.parentElement.className   //global
     }
 }
