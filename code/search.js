@@ -81,7 +81,7 @@ function inputKey(evt) {
         main.innerText = x ? main.data4 :
           expert.open ? "Buck" : main.data5
         info2.innerText = x || expert.open ?
-          toArabic(str) : ''
+          toArabic(str) : ' ' //&nbsp;
         omni.value = x ? x :
           expert.open ? 'b='+str : 't='+str
     }
