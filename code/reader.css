@@ -291,11 +291,7 @@ body {
       padding: 8px 14px;
       min-width: 100px;
     }
-    .menuC {
-      display: inline-block;
-      padding: 10px 12px;
-    }
-    img:hover, .menuC:hover, .menuK:hover {
+    .hareke:hover, .menuK:hover {
       background-color: rgba(0, 0, 0, 0.2);
     }
     #menuS {
@@ -326,7 +322,6 @@ body {
 <a href=https://www.flaticon.com/authors/kiranshastry>Kiranshastry</a> 
 from <a href=https://www.flaticon.com/>www.flaticon.com</a>
 */
-img { width: 32px; }
 nav>button {
     background-size: contain;
     background-repeat: no-repeat;
@@ -398,4 +393,20 @@ nav>button {
 .dialog button {
   border: 2px solid gray;
   border-radius: 5px;
+}
+.hareke {
+  display: inline-block;
+  width: 25px; height: 30px;
+  margin: 0 4px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#hare1 {
+  background-image: url(../image/hareke1.png);
+}
+#hare2 {
+  background-image: url(../image/hareke2.png);
+}
+#hare3 {
+  background-image: url(../image/hareke3.png);
 }

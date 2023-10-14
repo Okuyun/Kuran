@@ -8,10 +8,9 @@
 var Q = {} //keep globals here
 Q.M = 114  //suras
 Q.P = 604  //pages
-let snum = getStorage('settings', 'source')
-if (!snum || snum<=0 || snum>=SOURCE.length) snum = 5
-Q.kur = new KuranText(snum, initialPage)
-Q.qur = new QuranText(0, initialPage)
+let {snum, tnum} = readSource()
+Q.kur = new KuranText(SOURCE[snum], initialPage)
+Q.qur = new QuranText(QTEXT[tnum], initialPage)
 Q.simi  = new SimData('data/simi.txt')
 Q.roots = new MujamData('data/words.txt')
 // Q.dict = Dictionary.newInstance() moved to languageItems()
@@ -61,6 +60,13 @@ function readSettings() {
     if (s) setFontFamily(s.fontType) 
     if (save) saveSettings()
     return x
+}
+function readSource() {
+    let x = getStorage('settings')
+    if (!x) x = {}
+    let snum = x.source || '8' //pickthall.txt
+    let tnum = x.tashkeel || '3'
+    return {snum, tnum}
 }
 function setFontFamily(f){
     html.style.fontFamily = bilgi.style.fontFamily = f
@@ -509,27 +515,22 @@ function menuFn() {
       if (Number(k)) gotoPage(Number(k))
   }
   menuT.onclick = (evt) => { //translation menu
-    function toggleText(simple) {
-      let n = simple? 0 : 1
-      // let s = simple? 'gizle' : 'göster'
-      Q.qur = new QuranText(n, refreshPage)
-      if (simple) {
-        classFromTo('hidden', hareH, hareB)
-      } else {
-        classFromTo('hidden', hareB, hareH)
-      }
-    }
       hideElement(menuT); //evt.preventDefault()
       let t = evt.target, k = Number(t.id)
-      if (k) {
+      if (k) { //modify translation source
         console.log(k, t.textContent)
         if (!transIsChecked()) toggleTrans()
         setStorage('settings', 'source', k)
         if (parent.applyTranslation) 
           parent.applyTranslation()
         else postMessage("translation", "*")
-      } else if (t === hareB || t === hareH) {
-        toggleText(Q.qur.url.includes('simple'))
+      } else if (t.classList.contains('hareke')) {
+        let h = Number(t.id[4])
+        if (h<0 || h>QTEXT.length) return
+        Q.qur = new QuranText(QTEXT[h], refreshPage)
+        setStorage('settings', 'tashkeel', h)
+        if (transIsChecked()) toggleTrans()
+        checkTrans()
       }
   }
   addEventListener("message", translationListener)
@@ -539,8 +540,8 @@ function menuFn() {
       checkTrans()
     }
     if (evt.data !== "translation") return
-    let k = getStorage('settings', 'source')
-    Q.kur = new KuranText(k, setTrans) //current
+    let {snum} = readSource()
+    Q.kur = new KuranText(SOURCE[snum], setTrans)
   }
   menuK.onclick = (evt) => { //menu button
     let t = parent.finder? evt.target : ''
@@ -554,7 +555,6 @@ function menuFn() {
         parent.finder.location="/Kitap/ders/"; break;
       default: openSitePage(t.innerText[0], curPage)
     }
-    
   }
   function openSite(s) {
       if (!menuV.cv) return
@@ -611,9 +611,11 @@ document.onkeydown = evt => {
 ***********************************************/
 function checkTrans() {
   function handleCheck(e) {
-    let s = SOURCE[e.id]  //defined in model.js
-    e.classList.toggle('checked', s === Q.kur.url)
+    let check = e.classList.contains('hareke')? 
+        e.id[4] == tnum : e.id == snum
+    e.classList.toggle('checked', check)
   }
+    let {snum, tnum} = readSource()
     menuT.querySelectorAll('[id]').forEach(handleCheck)
 }
 function classFromTo(cls, e1, e2) {
