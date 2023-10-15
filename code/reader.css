@@ -397,7 +397,7 @@ nav>button {
 .hareke {
   display: inline-block;
   width: 25px; height: 30px;
-  margin: 0 4px;
+  padding: 2px 5px;
   background-size: contain;
   background-repeat: no-repeat;
 }

@@ -214,16 +214,17 @@ offline	innerText	الاتصال بالإنترنت مطلوب لبعض المي
 summ	title	إظهار/إخفاء رمز Buckwalter
 code	title	Buckwalter code -- ترتيب القاموس
 omni	title	أول حرف يشرح الرابط: /Book: p=… v=… /Mujam: r=… /Finder: t=… b=…/`
-
-const langMgr = new LangManager( //callback on applyLanguage()
-        () => LangManager.adjustDirection(dataDiv)
-      )
 </script>
 <script src="code/common.js"></script>
 <script src="code/buckwalter.js"></script>
 <script src="code/search.js"></script>
 <script src="code/model.js"></script>
 <script>
+const langMgr = new LangManager( //callback on applyLanguage()
+   () => {
+      LangManager.adjustDirection(dataDiv)
+      sName = suraNames[currentLanguage()]
+   })
 const Q = parent.iqra && parent.iqra.Q ? 
   parent.iqra.Q : {roots: new MujamData('data/words.txt')}
 function init(storage = {}) {
