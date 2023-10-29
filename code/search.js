@@ -28,7 +28,7 @@ function checkNumber(str) {
     if (c < 1) c = '1'
     let hash, text, info
     if (v === '') {
-      hash = 'v='+c+':1'
+      hash = 'p='+pageOf(c, 1)
       text = main.data2 //chapter
       info = sName[c]
     } else if (v) { //c:v
