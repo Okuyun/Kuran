@@ -56,8 +56,9 @@ function readSettings() {
     if (x.zoom) toggleZoom()
     if (parent.name == 'iqraTop' && x.finderWidth)
       parent.finderWidth = x.finderWidth
-    let s = getStorage('settings')
-    if (s) setFontFamily(s.fontType) 
+    let s = getStorage('settings') || {}
+    if (s.fontType) setFontFamily(s.fontType) 
+    if (s["dark-mode"]) toggleDarkMode()
     if (save) saveSettings()
     return x
 }
@@ -680,6 +681,19 @@ function toggleZoom() {
       e.classList.remove('zoomWide')
     }
     hideMenus(); saveSettings()
+  }
+function toggleDarkMode(mode) {
+    toggleNight(sureS, mode)
+    toggleNight(cuzS, mode)
+    toggleNight(pageA, mode)
+    toggleNight(div2, mode)
+    toggleNight(text, mode)
+    toggleNight(html, mode)
+    toggleNight(div0, mode)
+    toggleNight(dialog, mode)
+}
+function toggleNight(elt, mode) {
+    elt.classList.toggle('night', mode)
 }
 
 initReader()

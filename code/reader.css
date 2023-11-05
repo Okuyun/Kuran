@@ -60,7 +60,6 @@ body {
       height: 26px;
       margin: 0 2px;
       padding: 4px;
-      background-color: #eee;
       border-radius: 10px;
       border: none;
       font-size: 15px;
@@ -119,7 +118,6 @@ body {
       #div0 { height: 14px; }
   }
     #text, #html {
-      background-color: #f9f4e8;
       padding: 4px 8px;
       vertical-align: top;
       max-width: 590px;
@@ -182,12 +180,22 @@ body {
     .besmele { 
       line-height: 1.5;
     }
+    .night {
+      color: white !important;
+      background-color: black !important;
+    }
+    .paper {
+      background-color: #f9f4e8;
+    }
     .divider, .besmele, .ayetno { 
       text-align: center;
-      color: #82672D;
+      color: #b74;
     }
     .mavi { 
-      color: blue;
+      color: #22f;
+    }
+    .beyaz { 
+      background-color : #eee;
     }
     .gri { 
       background-color : #bbb;
