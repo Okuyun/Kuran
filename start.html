@@ -56,16 +56,13 @@
     .yellow { background: #ff7; }
     .white { background: white; }
     .small { font-size: smaller; }
-    .expert { color: darkred; }
-    #star {
-      position: relative;
-      top: 10px;
+    .expert { color: red; }
+    #moon, #star {
+      min-width: initial;
+      font-size: larger;
       width: 36px;
-      height: 36px;
+      aspect-ratio: 1;
       border-radius: 50%;
-      background-image: url(image/star.png);
-      background-size: contain;
-      background-repeat: no-repeat;
     }
     #info2 {
       font-family: Zekr, serif;
@@ -81,10 +78,10 @@
 <div id=dataDiv>
   <div id=intro></div>
   <br>
+  <input type=search id=input class=long><br>
   <p>
-    <input type=search id=input class=long><br>
     <button id=question>?</button>&emsp;
-    <button id=star></button>&emsp; 
+    <button id=star class=round>☆</button>&emsp; 
     <button id=main>Sayfa</button>&nbsp; 
     <span id=info2 class=large></span>
   </p>
@@ -97,12 +94,11 @@
   <p class="group">
   <button id=topic onclick='location="konular.html"'></button>&ensp;
   <button id=notes onclick='location="notlar.html"'></button>&ensp;
-  <button hidden id=esma onclick='location="/Kitap/esma/"'></button>
-  <button id=help onclick='window.open("guideQ.html","Kuran")'></button>
+  <button id=help onclick='window.open("guideQ.html","Kuran")'></button>&ensp;
+  <button id=moon class=round>☾</button> 
   </p>
   <p id=kitap class="group">
   <button id=mark onclick='location="bookmarks.html"'></button>&ensp;
-  <button hidden id=days onclick='location="/Kitap/rama/"'></button>
   <button id=levh onclick='location="/Kitap/esma/Husna"'></button>&ensp;
   <button id=ders onclick='location="/Kitap/ders/"'></button>
   </p>
@@ -143,13 +139,12 @@ main	data5	Rehber
 input	placeholder	sayfa, ayet, kök, metin
 input	title	sayfa ya da sure-ayet numaraları; aranacak kök ya da metin
 star	title	En son işaretlenen sayfa
+moon	title	Karanlık mod
 topic	innerText	Konular
 notes	innerText	Notlar
 help	innerText	Yardım
 mark	title	Yer işaretlerini yönetin
 mark	innerText	Yıldızlar
-days	innerText	30 gün
-esma	innerText	Esma
 levh	innerText	Levhalar
 ders	innerText	Dersler
 offline	innerText	Internet kapalı iken bazı özellikler çalışmaz
@@ -172,13 +167,12 @@ main	data5	Finder
 input	placeholder	page, verse, root, or text
 input	title	Page or verse number; root or text to search
 star	title	Page with the latest bookmark
+moon	title	Dark mode
 topic	innerText	Topics
 notes	innerText	Notes
 help	innerText	Help
 mark	title	Manage bookmarks
 mark	innerText	Stars
-days	innerText	30 gün
-esma	innerText	Asma
 levh	innerText	Images
 ders	innerText	Dersler
 offline	innerText	Internet is required for some features
@@ -201,13 +195,12 @@ main	data5	الباحث
 input	placeholder	378 أو 27.30
 input	title	رقم الصفحة أو رقم السورة والجزء
 star	title	صفحة آخر علامة 
+moon	title	Dark mode
 topic	innerText	المواضيع
 notes	innerText	ملاحظات
 help	innerText	مساعدة
 mark	title	إدارة العلامات
 mark	innerText	العلامات
-days	innerText	30 يوم
-esma	innerText	الأسماء
 levh	innerText	الحسنى
 ders	innerText	الدورس
 offline	innerText	الاتصال بالإنترنت مطلوب لبعض الميزات
@@ -251,6 +244,22 @@ function init(storage = {}) {
       star.style.visibility = "hidden"
       mark.style.visibility = "hidden"
     }
+    let displayDarkMode = (d) => {
+      if (d == undefined) 
+        d = getStorage("settings", "dark-mode")
+      let s = document.body.style
+      s.color = d? "wheat" : ""
+      s.background = d? "#222" : ""
+      dataDiv.style.background = d? "black" : ""
+    }
+    let toggleDarkMode = () => {
+      let d = !getStorage("settings", "dark-mode")
+      setStorage("settings", "dark-mode", d)
+      if (parent.iqra) parent.iqra.toggleDarkMode()
+      displayDarkMode(d)
+    }
+    moon.onclick = toggleDarkMode
+    displayDarkMode()
 }
 window.name = "finder"
 document.title = head.innerText

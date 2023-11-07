@@ -58,7 +58,7 @@ function readSettings() {
       parent.finderWidth = x.finderWidth
     let s = getStorage('settings') || {}
     if (s.fontType) setFontFamily(s.fontType) 
-    if (s["dark-mode"]) toggleDarkMode()
+    if (s["dark-mode"]) toggleDarkMode(true)
     if (save) saveSettings()
     return x
 }
