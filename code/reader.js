@@ -683,17 +683,23 @@ function toggleZoom() {
     hideMenus(); saveSettings()
   }
 function toggleDarkMode(mode) {
+  function setBackground(elt, col) {
+    elt.style.background = col
+  }
+  function toggleNight(elt, mode) {
+    elt.classList.toggle('night', mode)
+  }
     toggleNight(sureS, mode)
     toggleNight(cuzS, mode)
     toggleNight(pageA, mode)
-    toggleNight(div2, mode)
     toggleNight(text, mode)
     toggleNight(html, mode)
-    toggleNight(div0, mode)
     toggleNight(dialog, mode)
-}
-function toggleNight(elt, mode) {
-    elt.classList.toggle('night', mode)
+ // toggleNight(div0, mode)
+ // toggleNight(div2, mode)
+    let c = mode? "#333" : ""
+    setBackground(div0, c)
+    setBackground(div2, c)
 }
 
 initReader()
