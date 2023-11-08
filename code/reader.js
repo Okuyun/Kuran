@@ -551,7 +551,7 @@ function menuFn() {
       case topic: 
         parent.finder.location="konular.html"; break;
       case notes: 
-        parent.finder.location="notlar.html"; break;
+        parent.finder.location="start.html"; break;
       case ders: 
         parent.finder.location="/Kitap/ders/"; break;
       default: openSitePage(t.innerText[0], curPage)
