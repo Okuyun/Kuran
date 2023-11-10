@@ -58,11 +58,13 @@
     .small { font-size: smaller; }
     .expert { color: red; }
     #moon, #star {
-      min-width: initial;
-      font-size: larger;
-      width: 36px;
-      aspect-ratio: 1;
-      border-radius: 50%;
+      top: 3px;
+      position: relative;
+      display: inline;
+      font-size: 24px;
+      cursor: pointer;
+    }#star {
+      font-size: 30px;
     }
     #info2 {
       font-family: Zekr, serif;
@@ -81,7 +83,7 @@
   <input type=search id=input class=long><br>
   <p>
     <button id=question>?</button>&emsp;
-    <button id=star class=round>☆</button>&emsp; 
+    <span id=star>☆</span>&emsp; 
     <button id=main>Sayfa</button>&nbsp; 
     <span id=info2 class=large></span>
   </p>
@@ -95,7 +97,7 @@
   <button id=topic onclick='location="konular.html"'></button>&ensp;
   <button id=notes onclick='location="notlar.html"'></button>&ensp;
   <button id=help onclick='window.open("guideQ.html","Kuran")'></button>&ensp;
-  <button id=moon class=round>☾</button> 
+  <span id=moon>🌗</span> 
   </p>
   <p id=kitap class="group">
   <button id=mark onclick='location="bookmarks.html"'></button>&ensp;
