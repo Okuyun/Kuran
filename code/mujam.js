@@ -327,9 +327,11 @@ function displayTable(set) {
         return s
     }
     // get colour based on the number of verses in a page.
+    const DARK = getStorage("settings", "dark-mode")
     function toColor(n) {
         if (n == 0) return "''"
-        let L = 96 - 6 * Math.min(n, 16)
+        n = Math.min(n, 10) // 1≤n≤10
+        let L = DARK? 25+7*n : 100-8*n
         return "'background-color: hsl("+HUE+", 100%, "+L+"%)'"
     }
     indexToArray(set.list)
