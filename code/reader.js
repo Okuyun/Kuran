@@ -355,7 +355,7 @@ function makeMenu(button, menu, callback) {
   function showMenu() {
     hideMenus();
     menu.style.display = 'block'
-    let x = button.offsetLeft+14
+    let x = button.offsetLeft+13
     let y = button.offsetTop+34
     if (callback) callback()
     setPosition(menu, x, y, 110)
@@ -364,7 +364,9 @@ function makeMenu(button, menu, callback) {
     menu.style.display = '' 
   }
   function showOrHide(e) {
-    if (e.target !== button) return
+    let t = e.target  //starA contains a SPAN
+    if (t.tagName == 'SPAN') t = t.parentElement
+    if (t !== button) return
     if (menu.style.display) hideMenu()
     else showMenu()
   }
