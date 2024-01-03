@@ -102,9 +102,10 @@ body {
     }
     #div1 {
       justify-content: center;
-      width: 98%;
+      width: 100%;
       position: fixed;
-      bottom: 4px;
+      bottom: 0;
+      padding-bottom: 4px;
     }
     #div0 {
       height: 36px;
@@ -331,26 +332,28 @@ body {
 from <a href=https://www.flaticon.com/>www.flaticon.com</a>
 */
 nav>button {
-    background-size: contain;
-    background-repeat: no-repeat;
     background-color: Transparent;
     border: none;
 }
 #bilgi div:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
-#starA {
-    background-image: url(../image/star.png);
+.huge {
+    font-size: 30px;
+    position: relative;
+    top: -5px;
 }
 #tranA {
-    background-image: url(../image/Tee.png);
+    font-weight: bold;
+    font-size: 24px;
 }
 #linkA {
-    background-image: url(../image/menu.png);
+    font-size: 28px;
 }
 #zoomA {
-    background-image: url(../image/zoom.png);
+    font-size: 20px;
 }
+.tiny { font-size: 14px; }
 
 /* CSS triangles using transparent border
 * https://css-tricks.com/snippets/css/css-triangle/

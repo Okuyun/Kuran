@@ -355,8 +355,8 @@ function makeMenu(button, menu, callback) {
   function showMenu() {
     hideMenus();
     menu.style.display = 'block'
-    let x = button.offsetLeft+10
-    let y = button.offsetTop+33
+    let x = button.offsetLeft+14
+    let y = button.offsetTop+34
     if (callback) callback()
     setPosition(menu, x, y, 110)
   }
@@ -695,10 +695,9 @@ function toggleDarkMode(mode) {
     toggleNight(text, mode)
     toggleNight(html, mode)
     toggleNight(dialog, mode)
- // toggleNight(div0, mode)
- // toggleNight(div2, mode)
     let c = mode? "#333" : ""
     setBackground(div0, c)
+    setBackground(div1, c)
     setBackground(div2, c)
 }
 
