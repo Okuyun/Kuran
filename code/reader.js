@@ -555,7 +555,7 @@ function menuFn() {
       case notes: 
         parent.finder.location="start.html"; break;
       case ders: 
-        parent.finder.location="/Kitap/ders/"; break;
+        parent.finder.location="/Kitap/"; break;
       default: openSitePage(t.innerText[0], curPage)
     }
   }
