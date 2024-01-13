@@ -53,16 +53,18 @@ body {
       height: 36px;
       cursor: pointer;
       font-size: 16px;
-      border-radius: 50%;
+      background-color: transparent;
     }
     select, #pageA {
       display: inline-block;
       height: 26px;
       margin: 0 2px;
       padding: 4px;
+      font-size: 15px;
+    }
+    select, nav>button {
       border-radius: 10px;
       border: none;
-      font-size: 15px;
     }
     #pgNum {
       width: 50px;
@@ -327,14 +329,7 @@ body {
 
 /* End of menu style */
 
-/* Icons made by 
-<a href=https://www.flaticon.com/authors/kiranshastry>Kiranshastry</a> 
-from <a href=https://www.flaticon.com/>www.flaticon.com</a>
-*/
-nav>button {
-    background-color: Transparent;
-    border: none;
-}
+/* Icons are unicode chars */
 #bilgi div:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
