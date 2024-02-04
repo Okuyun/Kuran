@@ -164,7 +164,7 @@ function dragEnd(a) { //delegate all work to parent listener
 }
 function addListener(frm) {
   frm.contentWindow.addEventListener('hashchange', reportHash)
-  console.log('* addListener *', frm.name)
+  // console.log('* addListener *', frm.name)
   if (frm.name !== 'finder') return
   let b = finder.document.querySelector('body')
   b.ontouchstart = dummy.ontouchstart
@@ -299,7 +299,7 @@ function threePanels() {
     } catch (err) {
       lastPath = null // cannot read location
     }
-    console.log('* sourceChanged *', lastPath)
+    // console.log('* sourceChanged *', lastPath)
     reportHash(e)
   }
   function initReader(e) { // Window.postMessage()
