@@ -300,7 +300,7 @@ body {
     .black, .menuK {
       display: block;
       padding: 8px 14px;
-      min-width: 100px;
+      min-width: 102px;
     }
     .hareke:hover, .menuK:hover {
       background-color: rgba(0, 0, 0, 0.2);
@@ -363,11 +363,11 @@ body {
   cursor: pointer;
 }
 #rightB {
-  border-left: 20px solid #00f6;
+  border-left: 20px solid #06f;
   margin-left: 12px;
 }
 #leftB {
-  border-right: 20px solid #00f6; 
+  border-right: 20px solid #06f; 
   margin-right: 12px;
 }
 
