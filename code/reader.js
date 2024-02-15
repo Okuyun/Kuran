@@ -181,26 +181,32 @@ function refreshPage() {
 }
 function gotoPage(k=1, adjusting) { // 1<=k<=P
 //This is the only place where hash is set
-  function doVerse(e) {
-      e.onmouseenter = toggleVerse
-      e.onmouseleave = toggleVerse
-      for (let x of e.children) {
-        x.onclick = displayWord
-        x.onmouseleave = hideWord
-        x.oncontextmenu = selectWord
-        if (x.id) { // x is a verse separator
-          let s = Q.simi.similarTo(idx)
-          if (!s) {
-            x.classList.add('ayetno'); return
+function processVerse(elt) {
+    function doVerse(e) {
+        e.onmouseenter = toggleVerse
+        e.onmouseleave = toggleVerse
+        for (let x of e.children) {
+          x.onclick = displayWord
+          x.onmouseleave = hideWord
+          x.oncontextmenu = selectWord
+          if (x.id) { // x is a verse separator
+            let s = Q.simi.similarTo(x.id)
+            if (!s) {
+              x.classList.add('ayetno'); return
+            }
+            x.tText = s.split(' ')
+              .map(x => '<div>'+x+'</div>').join('');
+            x.classList.add('mavi')
+          } else { // x is a word
+            // content is filled in displayWord()
+            x.tText = toBuckwalter(x.innerText.trim())
           }
-          x.tText = s.split(' ')
-            .map(x => '<div>'+x+'</div>').join('');
-          x.classList.add('mavi')
-        } else { // x is a word
-          // content is filled in displayWord()
-          x.tText = toBuckwalter(x.innerText.trim())
         }
-      }
+    }
+    for (let e of elt.children) {
+        if (e.tagName != 'SPAN') continue
+        doVerse(e)
+    }
   }
   function animate(down, ms=400) {
   //not used -- fails in Safari
@@ -243,13 +249,7 @@ function gotoPage(k=1, adjusting) { // 1<=k<=P
     alert(e)
   }
     let wc = html.childElementCount
-    let idx = index[curPage]  //better than cvToIndex
-    // console.log('Page '+k, wc+' verses', idx)
-    for (let e of html.children) {
-        if (e.tagName != 'SPAN') continue
-        idx++; doVerse(e)
-    }
-    for (let e of text.children) doVerse(e)
+    processVerse(html); processVerse(text)
     if (hashToPage(location.hash) !== curPage)
       location.hash = '#p='+curPage
     saveSettings(); scrollTo(0, 0)
