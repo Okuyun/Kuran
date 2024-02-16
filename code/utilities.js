@@ -373,20 +373,6 @@ const
 6157,6176,6193,6207,6221,6236], 
     nPage = index.length - 2;
 
-/**
- * labels are removed.
- *  
- */
-function init() {
-    console.log('init', nChap + " suras -> " + nVerse);
-    // for (let p = 1; p <= nPage; p++) {
-    //     let v = new VerseRef(index[p]+1)
-    //     labels.push(v.toString())
-    // }
-}
-
- init()
-
  /**
  * Convert seconds to usual units
  * 

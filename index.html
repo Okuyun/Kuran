@@ -307,11 +307,9 @@ function threePanels() {
     if (e.data !== "initialized") return
     addListener(readFrm); hashModified()
     resize()
-    // iqra.vers1.textContent = TEST_VERSION
-    // iqra.vers2.textContent = TEST_VERSION
   }
 
-  console.log('* start *', location.hash)
+  // console.log('* start *', location.hash)
   window.name = 'iqraTop'
   window.onresize = resize
   window.onhashchange = hashModified

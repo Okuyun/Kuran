@@ -329,6 +329,7 @@ const langMgr = new LangManager(languageItems)
 
 <script>
 "use strict";
+console.log('init', nChap + " suras -> " + nVerse);
 const RDR = new FileReader()
 RDR.onload = () => {
   Q.simi.setData(RDR.result, refreshPage)

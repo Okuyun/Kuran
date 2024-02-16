@@ -256,7 +256,8 @@ class SimData {
       this._data[indx] = s.trim().substring(k+1)
     }
     this.loaded = true; //Object.freeze(this)
-    console.log('SimData', this._data.length+' verses')
+    let kk = Object.getOwnPropertyNames(this._data)
+    console.log('SimData', kk.length+' verses')
     if (callback) callback(t)
   }
   similarTo(i) { return this._data[i] }
