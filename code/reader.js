@@ -128,7 +128,7 @@ function selectWord(evt) {
     let t = evt.target
     if (t.id) { // t is a verse separator
       let y = Math.max(evt.offsetY-150, 0)
-      menuV.cv = t.id
+      menuV.idx = Number(t.id) //index
       setPosition(menuV, evt.clientX, y)
     } else { // t is a word
       let s = window.getSelection()
@@ -560,8 +560,9 @@ function menuFn() {
     }
   }
   function openSite(s) {
-      if (!menuV.cv) return
-      let [c, v] = menuV.cv.substring(2).split(':')
+      if (!menuV.idx) return
+      let [c, v] = toCV(menuV.idx)
+      //menuV.idx.substring(2).split(':')
       openSiteVerse(s, c, v)
   }
   menuV.onclick = (evt) => { //external source menu
