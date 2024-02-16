@@ -127,7 +127,7 @@ function openSiteVerse(s, c, v) {
         url = "https://tanzil.net/#"+c+':'+v
         break
     case 'Q':
-        url = "https://quran.com/"+c+'/'+v
+        url = "https://previous.quran.com/"+c+'/'+v
         break
     case 'A':
         url = "https://acikkuran.com/"+c+'/'+v
