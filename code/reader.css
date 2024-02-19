@@ -197,6 +197,9 @@ body {
     .mavi { 
       color: #88f;
     }
+    #text .mavi, #text .ayetno {
+      font-weight: bold;
+    }
     .beyaz { 
       background-color : #eee;
     }

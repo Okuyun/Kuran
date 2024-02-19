@@ -1,7 +1,7 @@
     body {
         max-width: 600px;
         min-width: 450px;
-        margin: 0;
+        margin: auto;
         font-size: 12px;
         font-family: arial, sans-serif;
     }
