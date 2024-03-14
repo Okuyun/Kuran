@@ -37,7 +37,7 @@
 
 <body>
 
-<h3 id=title></h3>
+<h2><span id=title></span> &emsp; <button id=backbutton>◀</button></h2>
 <img id=image>
 <p>
   Bu cihazda yıldızla işaretlediğiniz sayfaları, 
@@ -257,6 +257,7 @@ async function displayMarks() {
 }
 title.innerText = document.title
 gapi.load("client:auth2", init);
+backbutton.onclick = () => {location.pathname = "/Kuran/start.html"}
 </script>
 </body>
 </html>
