@@ -55,7 +55,7 @@ function readSettings() {
     if (x.trans) toggleTrans()
     if (x.zoom) toggleZoom()
     if (parent.name == 'iqraTop' && x.finderWidth)
-      parent.finderWidth = x.finderWidth
+      parent.finderWidth = Math.max(x.finderWidth, 350)
     let s = getStorage('settings') || {}
     if (s.fontType) setFontFamily(s.fontType) 
     if (s["dark-mode"]) toggleDarkMode(true)
