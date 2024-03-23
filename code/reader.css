@@ -226,6 +226,10 @@ body {
 	  src: url(../image/me_quran.ttf)
 	}
   @font-face {
+    font-family: kufi;
+    src:url("../image/MushafFontu.ttf");
+  }
+  @font-face {
     font-family: Zekr;
     src: url("/Rehber/style/ZEKRQURAN.TTF");
   }
