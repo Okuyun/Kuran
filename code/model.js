@@ -168,7 +168,7 @@ class QuranText extends KuranText {
       let num = ' ﴿'+numberToArabic(n)+'﴾ '
       s = a.map(w => '<span>'+w+'</span>').join(' ')
         + '<span id='+idx+'>'+num+'</span>' 
-      if (idx == 1) s = s+'<BR>' //special case for verse 1:1
+      //if (idx == 1) s = s+'<BR>' special case for verse 1:1
       return '<span class='+cls+'>'+s+'</span>'
     }
 }
