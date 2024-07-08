@@ -649,7 +649,7 @@ function makeStarMenu() {
 function handlePageNum() {
     bkgd.style.display = "block"
     //input defined in search.js
-    input.value = curPage || "1"
+    input.value = curSura+' '
     inputKey(); setFocus(input)
     recog0.style.display 
       = (recognition && navigator.onLine)? '' : 'none'

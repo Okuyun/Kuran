@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.8b";
+const VERSION = "V4.8c";
 
 /**
  * &ensp; used in Mujam and VerseRef
@@ -249,8 +249,7 @@ class Notes {
 }
 function setFocus(elt) {
     if (!elt || elt.value == undefined) return
-    elt.selectionEnd = elt.value.length
-    elt.selectionStart = 0; elt.focus()
+    elt.focus(); elt.select()
 }
 
 /**
