@@ -8,9 +8,14 @@
 var Q = {} //keep globals here
 Q.M = 114  //suras
 Q.P = 604  //pages
-let {snum, tnum} = readSource()
+let readSourceData = (tn, cb) => {
+  setFontFamily(tn==1? 'kufi' : 'Zekr')
+  tn = tn<3? 1 : 3 //tashkeel #2 uses #1 data
+  return new QuranText(QTEXT[tn], cb)
+}
+let {snum, tnum} = getSourceSettings()
 Q.kur = new KuranText(SOURCE[snum], initialPage)
-Q.qur = new QuranText(QTEXT[tnum], initialPage)
+Q.qur = readSourceData(tnum, initialPage)
 Q.simi  = new SimData('data/simi.txt')
 Q.roots = new MujamData('data/words.txt')
 // Q.dict = Dictionary.newInstance() moved to languageItems()
@@ -57,12 +62,13 @@ function readSettings() {
     if (parent.name == 'iqraTop' && x.finderWidth)
       parent.finderWidth = Math.max(x.finderWidth, 350)
     let s = getStorage('settings') || {}
-    if (s.fontType) setFontFamily(s.fontType) 
+    // Arabic font is set in readSourceData()
+    // if (s.fontType) setFontFamily(s.fontType) 
     if (s["dark-mode"]) toggleDarkMode(true)
     if (save) saveSettings()
     return x
 }
-function readSource() {
+function getSourceSettings() {
     let x = getStorage('settings')
     if (!x) x = {}
     let snum = x.source || '8' //pickthall.txt
@@ -530,7 +536,7 @@ function menuFn() {
       } else if (t.classList.contains('hareke')) {
         let h = Number(t.id[4])
         if (h<0 || h>QTEXT.length) return
-        Q.qur = new QuranText(QTEXT[h], refreshPage)
+        Q.qur = readSourceData(h, refreshPage)
         setStorage('settings', 'tashkeel', h)
         if (transIsChecked()) toggleTrans()
         checkTrans()
@@ -543,7 +549,7 @@ function menuFn() {
       checkTrans()
     }
     if (evt.data !== "translation") return
-    let {snum} = readSource()
+    let {snum} = getSourceSettings()
     Q.kur = new KuranText(SOURCE[snum], setTrans)
   }
   menuK.onclick = (evt) => { //menu button
@@ -619,7 +625,7 @@ function checkTrans() {
         e.id[4] == tnum : e.id == snum
     e.classList.toggle('checked', check)
   }
-    let {snum, tnum} = readSource()
+    let {snum, tnum} = getSourceSettings()
     menuT.querySelectorAll('[id]').forEach(handleCheck)
 }
 function classFromTo(cls, e1, e2) {
