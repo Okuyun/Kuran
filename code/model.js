@@ -162,15 +162,25 @@ class QuranText extends KuranText {
     chapName(c)   { return ' سورة '+aName[c] }
     get besmele() { return 'بسم الله الرحمن الرحيم' }
     get secde()   { return ' ۩ ' }
+    verseNumber(n) { return ' ﴿'+numberToArabic(n)+'﴾ ' }
+    filter(s) { return s }
     verseToHTML(cls, s) {
       let idx = (this.classToIndex(cls))
-      let [n, ...a] = s.split(/\.? /)  //divide into words
-      let num = ' ﴿'+numberToArabic(n)+'﴾ '
+      //filter text of the verse and divide it into words
+      let [n, ...a] = this.filter(s).split(/\.? /) 
       s = a.map(w => '<span>'+w+'</span>').join(' ')
-        + '<span id='+idx+'>'+num+'</span>' 
+        + '<span id='+idx+'>'+this.verseNumber(n)+'</span>' 
       //if (idx == 1) s = s+'<BR>' special case for verse 1:1
       return '<span class='+cls+'>'+s+'</span>'
     }
+}
+/** Reads undotted Quran text, displayed in Kufi font */
+class KufiText extends QuranText {
+    constructor(url, callback) { super(url, callback) }
+    //no need for the numbers, just a divider
+    verseNumber() { return ' ﴿ '  }
+    //Kufi font has a problem with dotted ya 
+    filter(s) { return s.replaceAll('ي ', 'ى ') }
 }
 
 /** Keeps data related to words and roots
