@@ -180,7 +180,8 @@ class KufiText extends QuranText {
     //no need for the numbers, just a divider
     verseNumber() { return ' ﴿ '  }
     //Kufi font has a problem with dotted ya 
-    filter(s) { return s.replaceAll('ي ', 'ى ') }
+    //replace with undotted ya at the end of a word
+    filter(s) { return s.replaceAll(/ي( |ء)/g, 'ى$1') }
 }
 
 /** Keeps data related to words and roots
