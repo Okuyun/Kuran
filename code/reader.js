@@ -14,8 +14,8 @@ let readSourceData = (tn, cb) => {
   switch (tn) {
     case 1: return new KufiText(QTEXT[1], cb)
     case 2: return new QuranText(QTEXT[1], cb)
-    case 3: return new QuranText(QTEXT[3], cb)
-    default:
+    case 3: 
+    default:return new QuranText(QTEXT[3], cb)
   }
 }
 let {snum, tnum} = getSourceSettings()
