@@ -465,8 +465,8 @@ function initMujam() {
   */
 function menuFn() {
   function menuItem(m) {
-      if (m == 'Y' || m == '?')
-        openSitePage('Y')
+      if (m == 'help' || m == '?')
+        openSitePage('help')
       let s = bilgi.innerText
       if (!s) return
       let [nam, refs] = s.split(EM_SPACE)
@@ -478,7 +478,7 @@ function menuFn() {
   }
   menuK.onclick = (evt) => {
       evt.preventDefault()
-      menuItem(evt.target.innerText[0])
+      menuItem(evt.target.id)
   }
   document.onclick = (evt) => {
       if (!menuK.style.display) {
@@ -490,9 +490,9 @@ function menuFn() {
   document.onkeydown = (evt) => {
     if (evt.key == 'Escape') hideMenus()
     else if (evt.key == 'F1') 
-      openSitePage('Y') //Yardım
-    else if (menuK.style.display) 
-      menuItem(evt.key.toUpperCase())
+      openSitePage('help') //Yardım
+    // else if (menuK.style.display) 
+    //   menuItem(evt.key.toUpperCase())
   }
   window.hideMenus = () => { 
       hideElement(menuK); hideElement(bilgi)

@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.8d";
+const VERSION = "V4.8e";
 
 /**
  * &ensp; used in Mujam and VerseRef
@@ -71,21 +71,19 @@ function hideElement(elt) {
 /**
  * Open remote site -- goto page p
  * 
- * @param {string} s site -- uppercase char
+ * @param {string} s site -- String
  * @param {number} p page
  */
 function openSitePage(s, p) {
     let url; hideMenus()
     let name = "Kuran"; 
-    switch (s.toUpperCase()) {
-    // case 'B':  //Yer işaretleri -- Bookmarks
-    //     url = 'bookmarks.html'; name = 'finder'; break
-    case 'Y': case '?':  //Yardım
+    switch (s) {
+    case 'help': case '?':
         url = 'guideQ.html'; break
-    case 'K':
+    case 'kuranm':
         url = "https://kuranmeali.com/Sayfalar.php?sayfa="+p
         break
-    case 'P':
+    case 'pay1':
         url = "https://okuyun.github.io/Kuran/#p="
         doShare(p+'. sayfa', url+p)
         return
@@ -105,34 +103,37 @@ function doShare(text, url) {
 /**
  * Open remote site -- goto (c, v)
  * 
- * @param {string} s site -- uppercase char
+ * @param {string} s site -- String
  * @param {number} c chapter
  * @param {number} v verse
  */
 function openSiteVerse(s, c, v) {
   let url; hideMenus()
   let name = "Kuran"; 
-  switch (s.toUpperCase()) {
-    case 'K':
+  switch (s) {
+    case 'kuranm':
         url = "https://kuranmeali.com/AyetKarsilastirma.php?sure="+c+"&ayet="+v
         break
-    case 'C':
+    case 'corpus':
         url = "http://corpus.quran.com/wordbyword.jsp?chapter="+c+"&verse="+v
         break
-    case 'D':
+    case 'coranc':
+        url = "https://corpuscoranicum.de/en/verse-navigator/sura/"+c+"/verse/"+v+"/variants"
+        break
+    case 'diyant':
         url = "https://kuran.diyanet.gov.tr/mushaf/kuran-1/"
                 +sName[c]+"-suresi-"+c+"/ayet-"+v+"/kuran-yolu-meali-5"
         break
-    case 'T':
+    case 'tanzil':
         url = "https://tanzil.net/#"+c+':'+v
         break
-    case 'Q':
+    case 'quranc':
         url = "https://previous.quran.com/"+c+'/'+v
         break
-    case 'A':
+    case 'acikur':
         url = "https://acikkuran.com/"+c+'/'+v
         break
-    case 'P':
+    case 'pay2':
         url = "https://okuyun.github.io/Kuran/#v="
         doShare(sName[c]+' Suresi '+v+'. ayet', url+c+':'+v)
         return

@@ -412,7 +412,7 @@ function initReader() {
     makeMenu(starA, menuS, makeStarMenu)
     makeMenu(tranA, menuT)
     makeMenu(linkA, menuK)
-    yardim.onclick  = () => {openSitePage('Y')}
+    yardim.onclick  = () => {openSitePage('help')}
     update.onclick = () => parent.location.reload()
     starB.onclick = starH.onclick = toggleStar
     tranB.onclick = tranH.onclick = toggleTrans
@@ -558,7 +558,10 @@ function menuFn() {
     Q.kur = new KuranText(SOURCE[snum], setTrans)
   }
   menuK.onclick = (evt) => { //menu button
-    let t = parent.finder? evt.target : ''
+    let t = evt.target
+    if (!parent.finder) { //no finder
+      openSitePage(t.id, curPage); return
+    }
     hideMenus()
     switch (t) {
       case topic: 
@@ -567,31 +570,20 @@ function menuFn() {
         parent.finder.location="start.html"; break;
       case ders: 
         parent.finder.location="/Kitap/"; break;
-      default: openSitePage(t.innerText[0], curPage)
+      default: openSitePage(t.id, curPage)
     }
-  }
-  function openSite(s) {
-      if (!menuV.idx) return
-      let [c, v] = toCV(menuV.idx)
-      //menuV.idx.substring(2).split(':')
-      openSiteVerse(s, c, v)
   }
   menuV.onclick = (evt) => { //external source menu
       evt.preventDefault()
-      openSite(evt.target.innerText[0])
+      if (!menuV.idx) return
+      let [c, v] = toCV(menuV.idx)
+      openSiteVerse(evt.target.id, c, v)
   }
 document.onkeydown = evt => {
       if (!evt.key) return
-      let k = evt.key.toUpperCase()
-      if (evt.key == 'Escape') 
-          hideMenus()
-      else if (evt.key == 'F1') 
-          openSitePage('Y') //Yardım
-      else if (menuK.style.display)
-          openSitePage(k, curPage)
-      else if (menuV.style.display)
-          openSite(k)
-      else switch (k) {
+      else switch (evt.key.toUpperCase()) {
+          case 'F1': openSitePage('help'); break
+          case 'ESCAPE': hideMenus(); break
           case 'ARROWUP': case 'ARROWLEFT': 
             if (!evt.altKey && !evt.ctrlKey && !evt.metaKey)
               {prevPage(); evt.preventDefault()}
