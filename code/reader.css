@@ -307,7 +307,7 @@ body {
     .black, .menuK {
       display: block;
       padding: 8px 14px;
-      min-width: 102px;
+      /* min-width: 102px; */
     }
     .hareke:hover, .menuK:hover {
       background-color: rgba(0, 0, 0, 0.2);

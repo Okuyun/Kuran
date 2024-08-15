@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.8e";
+const VERSION = "V4.8f";
 
 /**
  * &ensp; used in Mujam and VerseRef
@@ -129,6 +129,12 @@ function openSiteVerse(s, c, v) {
         break
     case 'quranc':
         url = "https://previous.quran.com/"+c+'/'+v
+        break
+    case 'awaken':
+        url = "https://islamawakened.com/quran/"+c+'/'+v
+        break
+    case 'elktbn':
+        url = "https://elktb.net/Mushaflar/MushafGoruntule?mushaf=HUSEYNI&sureNo="+c+"&ayetNo="+v
         break
     case 'acikur':
         url = "https://acikkuran.com/"+c+'/'+v
