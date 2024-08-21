@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.8f";
+const VERSION = "V4.8g";
 
 /**
  * &ensp; used in Mujam and VerseRef
@@ -83,6 +83,9 @@ function openSitePage(s, p) {
     case 'kuranm':
         url = "https://kuranmeali.com/Sayfalar.php?sayfa="+p
         break
+    case 'quranc':
+        url = "https://quran.com/page/"+(p+1)
+        break
     case 'pay1':
         url = "https://okuyun.github.io/Kuran/#p="
         doShare(p+'. sayfa', url+p)
@@ -117,8 +120,13 @@ function openSiteVerse(s, c, v) {
     case 'corpus':
         url = "http://corpus.quran.com/wordbyword.jsp?chapter="+c+"&verse="+v
         break
-    case 'coranc':
-        url = "https://corpuscoranicum.de/en/verse-navigator/sura/"+c+"/verse/"+v+"/variants"
+    case 'coranv':
+        url = "https://corpuscoranicum.de/en/verse-navigator/sura/"
+        +c+"/verse/"+v+"/variants"
+        break
+    case 'coranp':
+        url = "https://corpuscoranicum.de/en/verse-navigator/sura/"
+        +c+"/verse/"+v+"/print"
         break
     case 'diyant':
         url = "https://kuran.diyanet.gov.tr/mushaf/kuran-1/"
