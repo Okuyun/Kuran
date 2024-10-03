@@ -248,6 +248,31 @@ class Dictionary {
   }
 }
 
+/** Keys: chap:verse (cv)
+ *  Values: variants
+ *  Usage: V = new VariantData(url)
+ *  V.variants(65) => {'2:58', 16, 1, 'yuġfar', '', 'يغفر'}
+ */
+class VariantData {
+  constructor(url) {
+    let toList = (t) => {
+      for (let s of t.split('\n')) {
+        let i = s.indexOf('\t')
+        if (i <= 0) continue
+        let [cv, num, rdr, word, rgn, rasm] = s.split('\t')
+        let indx = cvToIndex(cv)
+        num = Number(num) - 1  //zero based
+        this._data[indx] = {cv, num, rdr, word, rgn, rasm}
+      }
+      let kk = Object.getOwnPropertyNames(this._data)
+      console.log('VariantData', kk.length-1, 'verses')
+    }
+    this._data = new Array(6237) // index 0 not used
+    fetch_text_then(url, toList)
+  }
+  variants(indx) { return this._data[indx] || '' }
+}
+
 /** Keeps data related to similarity
  *  Usage: SD = new SimData()
  *    SD.similarTo(1) => [1, 223, ...]
@@ -255,7 +280,7 @@ class Dictionary {
  */
 class SimData {
   constructor(url) { //singleton
-    if (SimData.instance) SimData.instance
+    if (SimData.instance) return
     this._data = new Array(6237) // index 0 not used
     fetch_text_then(url, t => this.setData(t))
     SimData.instance = this

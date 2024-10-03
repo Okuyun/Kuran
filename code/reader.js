@@ -23,6 +23,7 @@ Q.kur = new KuranText(SOURCE[snum], initialPage)
 Q.qur = readSourceData(tnum, initialPage)
 Q.simi  = new SimData('data/simi.txt')
 Q.roots = new MujamData('data/words.txt')
+Q.vary  = new VariantData('data/variants.txt')
 // Q.dict = Dictionary.newInstance() moved to languageItems()
 new TouchHandler({dragStart, dragEnd}, div2)
 var curSura, curPage, bookmarks, lastCV, lastSelection, recognition
@@ -190,6 +191,18 @@ function nextPage() {
 function refreshPage() {
     gotoPage(curPage)
 }
+function handleVariants(p) {
+  let i = index[p]+1 //first verse on page
+  let k = index[p+1] //last verse on page
+  while (i <= k) { //for each verse x
+    let v = Q.vary.variants(i++)
+    if (!v) continue
+    console.log('Variant', v.cv, v.num, v.word)
+    let a = html.querySelector('.c'+v.cv.replace(':','_'))
+    if (a.childElementCount <= v.num) continue
+    a.children[v.num].classList.add('besmele')
+  }
+}
 function gotoPage(k=1, adjusting) { // 1<=k<=P
 //This is the only place where hash is set
 function processVerse(elt) {
@@ -252,6 +265,7 @@ function processVerse(elt) {
     curPage = k; slider.value = k;
     text.innerHTML = Q.kur.pageToHTML(k)
     html.innerHTML = Q.qur.pageToHTML(k)
+    handleVariants(k)
     if (starIsChecked() !== bookmarks.has(k)) toggleStar()
     // starA.classList.toggle('checked', bookmarks.has(k))
     Q.notes.display(k) //in common.js
@@ -259,7 +273,7 @@ function processVerse(elt) {
     console.error(e)
     alert(e)
   }
-    let wc = html.childElementCount
+    // let wc = html.childElementCount
     processVerse(html); processVerse(text)
     if (hashToPage(location.hash) !== curPage)
       location.hash = '#p='+curPage
