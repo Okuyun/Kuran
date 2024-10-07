@@ -4,10 +4,10 @@
 2:83	7	2 6 7	yaʿbudūna		يعبدون
 2:116	1	4	qâlû	S	قالوا
 2:132	1	1 4	veevsâ	S M	وأوصى
-2:140	2	1 2 3 5a	yaqūlūna		يقولون
+2:140	2	1235a	yaqūlūna		يقولون
 2:144	34	4 6 7	taʿmalūna		تعملون
 2:149	17	3	yaʿmalūna		يعملون
-2:158	19	6 7	yaṭṭawwaʿ		يطوا
+2:158	19	6 7	yaṭṭawwaʿ		يطوع
 2:165	18	1 4	tara		ترى
 2:219	8	6 7	kaṯīrun	*	كثير
 2:259	53	1 2 3	nunširuhā	*	ننشرها
@@ -28,7 +28,7 @@
 10:22	3	4	yenşurukum	S	ينشركم
 17:93	19	2 4	qâle	S C	قال 
 18:36	11	1 2 4	minhumâ	S C M	منهما
-18:95	3	2	mekkeneniy	C	مكنني
+18:95	3	2	mekkeneniy	C	مكننى
 21:4	1	1234	qul	S B C M	قل
 21:30	1	2	elem	C	الم
 23:87	2	3	allâh	B	الله
@@ -37,15 +37,15 @@
 23:114	1	2 6 7	qul	S B C M	قال 
 25:25	5	2	venunzilu	C	وننزل
 26:217	1	1 4	fetevekkel	S M	فتوكل
-27:21	7	2	liye-tiyenneniy	C	ليأتينني
+27:21	7	2	liye-tiyenneniy	C	ليأتيننى
 28:37	1	2	qâle	C	قال 
 36:35	5	5a 6 7	amilet	K	عملت
-39:64	4	4	te-murûneniy	S	تأمرونني
+39:64	4	4	te-murûneniy	S	تأمروننى
 40:21	16	4	minkum	S	منكم
 40:26	13	123467	veen	S B C M	وأن
 42:30	5	1 4	bimâ	S M	بما
 43:68	1	1 3 4	yâ'ibâdiy	S M	يعبادي
-43:71	9	235a67	teştehî	B K C	تشتهي
+43:71	9	235a67	teştehî	B K C	تشتهى
 46:15	4	1234	husnen	S B C M	حسنا
 47:18	6	x	te-tihim	K C	تأتهم
 55:12	2	4	zel-'asfi	S	ذا العصف

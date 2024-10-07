@@ -121,19 +121,21 @@ function displayWord(evt) {
     evt.preventDefault(); //hideMenus()
     let t = evt.target 
     t.classList.add('gri')  //mark target
-    hideElement(bilgi)  //setPosition() displays bilgi
+    hideElement(wordInfo)  //setPosition() displays wordInfo
     let b = t.tText; if (!b) return
     if (t.id) { //verse number
-      bilgi.innerHTML = b
+      bilgi.innerHTML = ''
+      anlam.innerHTML = b
+      variant.innerHTML = ''
     } else { //word just clicked
       let r = Q.roots.wordToRoot(b); if (!r) return
       bilgi.innerHTML = toArabic(r) 
-      let m = Q.dict.meaning(removeDiacritical(b))
-      if (m) bilgi.innerHTML += '<span>'+m+'</span>'
+      anlam.innerHTML = Q.dict.meaning(removeDiacritical(b))
+      variant.innerHTML = Q.vary.toHTML(t.dataset.indx)
     }
     let y = //t.offsetTop + t.offsetHeight
       t.getBoundingClientRect().bottom + window.pageYOffset
-    setPosition(bilgi, t.offsetLeft+24, y+4, 105)
+    setPosition(wordInfo, t.offsetLeft+24, y+4, 105)
 }
 function selectWord(evt) {
     evt.preventDefault(); hideMenus()
@@ -200,7 +202,10 @@ function handleVariants(p) {
     console.log('Variant', v.cv, v.num, v.word)
     let a = html.querySelector('.c'+v.cv.replace(':','_'))
     if (a.childElementCount <= v.num) continue
-    a.children[v.num].classList.add('besmele')
+    let elt = a.children[v.num]
+    elt.dataset.indx = i-1 //i is incremented above
+    elt.classList.add('besmele')
+    // elt.dataset.word = v.word
   }
 }
 function gotoPage(k=1, adjusting) { // 1<=k<=P
@@ -431,7 +436,7 @@ function initReader() {
     starB.onclick = starH.onclick = toggleStar
     tranB.onclick = tranH.onclick = toggleTrans
     zoomA.onclick  = toggleZoom
-    bilgi.onclick  = doClick
+    wordInfo.onclick  = doClick
     leftB.onclick  = () => {prevPage()}
     slider.oninput = () => {adjustPage(true)}
     slider.onchange= () => {adjustPage(false)} //committed
@@ -619,7 +624,7 @@ document.onkeydown = evt => {
   }
   window.hideMenus = () => { 
       hideElement(menuC); hideElement(menuK); hideElement(menuS); 
-      hideElement(menuT); hideElement(bilgi); hideElement(menuV); 
+      hideElement(menuT); hideElement(wordInfo); hideElement(menuV); 
       hideElement(bkgd); //linkA.classList.remove('checked')
   }
   div1.onmouseenter = hideMenus

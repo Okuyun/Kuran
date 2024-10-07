@@ -270,7 +270,13 @@ class VariantData {
     this._data = new Array(6237) // index 0 not used
     fetch_text_then(url, toList)
   }
-  variants(indx) { return this._data[indx] || '' }
+  variants(indx) { return this._data[indx] || null }
+  toHTML(indx) {
+    let v = this._data[indx]
+    if (!v) return ''
+    let sp = '<span class="kufi">'+v.rasm+'</span>'
+    return '<br>'+v.rdr+'&emsp;'+v.word+'<br>'+v.rgn+sp
+  }
 }
 
 /** Keeps data related to similarity

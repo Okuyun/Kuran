@@ -11,7 +11,7 @@ body {
       font-size: 3.3vw;
       font-size: min(max(3.3vw, 13px), 20px);
     }
-    #html, #bilgi { 
+    #html, #bilgi, .kufi { 
       font-size: 4.5vw;
       font-size: min(max(4.5vw, 19px), 27px);
     }
@@ -36,7 +36,7 @@ body {
     #text { 
       font-size: 14px;
     }
-    #html, #bilgi { 
+    #html, #bilgi, .kufi { 
       font-size: 19px;
     }
 }
@@ -70,31 +70,39 @@ body {
       width: 50px;
       font-size: large;
     }
-    #bilgi { 
+    #wordInfo { 
       display: none;
       user-select: none;
       position: absolute;
       min-width: 95px;
-      max-width: 200px;
+      max-width: 220px;
       padding: 0 8px 4px;
       text-align: center;
-      color: blue;
       background-color: #ff7;
       border: black 1px solid;
-      cursor: pointer;
+      cursor: default;
       z-index: 1;
     }
-    #bilgi div {
+    #bilgi {
+      margin: 6px;
+    }
+    #anlam, #bilgi {
+      color: blue;
+    }
+    #wordInfo div {
       display: inline-block;
       padding: 8px;
+    }
+    #wordInfo span {
+      display: inline-block;
+      min-width: 95px;
+      margin: 6px;
+    }
+    #anlam, #variant {
       font: 13px/1.2 sans-serif;
     }
-    #bilgi span {
-      display: block;
-      font: 13px/1.2 sans-serif;
+    #variant {
       color: black;
-      cursor: default;
-      margin-top: 10px;
     }
     nav {
       display: flex;
@@ -137,8 +145,15 @@ body {
     #text, #div3, #infoS { 
       font-family: sans-serif, arial;
     }
-    #html, #bilgi { 
+    #bilgi, .kufi {
+      cursor: pointer;
+    }
+    #html, #bilgi {
       font-family: Zekr, serif;
+      line-height: 1.87;
+    }
+    .kufi {
+      font-family: Kufi, serif;
       line-height: 1.87;
     }
     #search {
@@ -307,7 +322,7 @@ body {
     .black, .menuK {
       display: block;
       padding: 8px 14px;
-      /* min-width: 102px; */
+      min-width: 102px;
     }
     .hareke:hover, .menuK:hover {
       background-color: rgba(0, 0, 0, 0.2);
@@ -337,7 +352,7 @@ body {
 /* End of menu style */
 
 /* Icons are unicode chars */
-#bilgi div:hover {
+#wordInfo div:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .huge {
