@@ -9,7 +9,7 @@ var Q = {} //keep globals here
 Q.M = 114  //suras
 Q.P = 604  //pages
 let readSourceData = (tn, cb) => {
-  setFontFamily(tn==1? 'kufi' : 'Zekr')
+  setFontFamily(tn==1? 'Kufi' : 'Zekr')
   //tashkeel #1 and #2 use the same data
   switch (tn) {
     case 1: return new KufiText(QTEXT[1], cb)
@@ -124,18 +124,25 @@ function displayWord(evt) {
     hideElement(wordInfo)  //setPosition() displays wordInfo
     let b = t.tText; if (!b) return
     if (t.id) { //verse number
-      bilgi.innerHTML = ''
+      bilgi.innerText = ''
       anlam.innerHTML = b
-      variant.innerHTML = ''
+      variant.style.display = 'none'
     } else { //word just clicked
-      let r = Q.roots.wordToRoot(b); if (!r) return
-      bilgi.innerHTML = toArabic(r) 
-      anlam.innerHTML = Q.dict.meaning(removeDiacritical(b))
-      variant.innerHTML = Q.vary.toHTML(t.dataset.indx)
+      let r = Q.roots.wordToRoot(b)
+      let i = t.dataset.indx
+      if (!r && !i) return
+      bilgi.innerText = r? toArabic(r) : ''
+      anlam.innerText = Q.dict.meaning(removeDiacritical(b))
+      variant.style.display = i? '' : 'none'
+      let [rdr, word, rgn, rasm] = Q.vary.getData(i) || []
+      rdrV.innerText = rdr || ''
+      wordV.innerText = word || ''
+      rgnV.innerText = rgn || ''
+      rasmV.innerText = rasm || ''
     }
     let y = //t.offsetTop + t.offsetHeight
       t.getBoundingClientRect().bottom + window.pageYOffset
-    setPosition(wordInfo, t.offsetLeft+24, y+4, 105)
+    setPosition(wordInfo, t.offsetLeft+24, y+4, 160)
 }
 function selectWord(evt) {
     evt.preventDefault(); hideMenus()
@@ -174,14 +181,16 @@ function adjustPage(adj) {
     }
 }
 function doClick(evt) {
-    if (evt.target.tagName == 'DIV') { // verse separator
+    if (evt.target.tagName == 'DIV') { // similarity
       let t = evt.target.innerText
       if (t.length > 6) return
       console.log(location.hash+' to '+t)
       location.hash = '#v='+t
-    } else if (evt.target === bilgi) { // a word
+    } else if (evt.target === bilgi) { // Mujam
       let w = bilgi.firstChild.textContent
       if (w) openMujam(toBuckwalter(w))
+    } else if (evt.target === variant) { // variants
+      //do what??
     }
 }
 function prevPage() {

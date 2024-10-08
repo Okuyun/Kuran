@@ -248,6 +248,23 @@ class Dictionary {
   }
 }
 
+let RDR_DATA 
+= `Nāfiʿ	Qālūn	Warš
+Ibn Kaṯīr	Qunbul	al-Bazzī
+Abū ʿAmr	al-Dūrī	al-Sūsī
+Ibn ʿĀmir	Ibn Ḏakwān	Hišām
+ʿĀṣim	Šuʿbah	Ḥafṣ
+Ḥamzah	Ḫalaf	Ḫallād
+al-Kisāī	al-Dūrī	al-Layṯ`
+let READER = {}, n = 0
+for (let s of RDR_DATA.split('\n')) {
+  let [a0, a1, a2] = s.split('\t')
+  n++; READER[n] = a0 
+  READER[n+'a'] = a1; READER[n+'b'] = a2
+}
+let REGION 
+= { M:"Medina", C:"Mecca", B:"Baṣrah", S:"Syria", K:"Kufa" }
+
 /** Keys: chap:verse (cv)
  *  Values: variants
  *  Usage: V = new VariantData(url)
@@ -271,11 +288,12 @@ class VariantData {
     fetch_text_then(url, toList)
   }
   variants(indx) { return this._data[indx] || null }
-  toHTML(indx) {
+  getData(indx) {
     let v = this._data[indx]
     if (!v) return ''
-    let sp = '<span class="kufi">'+v.rasm+'</span>'
-    return '<br>'+v.rdr+'&emsp;'+v.word+'<br>'+v.rgn+sp
+    let readers = v.rdr.split(' ').map(x => READER[x]).join(', ')
+    let regions = v.rgn.split(' ').map(x => REGION[x]).join(', ')
+    return [readers, v.word, regions, v.rasm]
   }
 }
 

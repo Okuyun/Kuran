@@ -11,7 +11,7 @@ body {
       font-size: 3.3vw;
       font-size: min(max(3.3vw, 13px), 20px);
     }
-    #html, #bilgi, .kufi { 
+    #html, #bilgi, #rasmV { 
       font-size: 4.5vw;
       font-size: min(max(4.5vw, 19px), 27px);
     }
@@ -36,7 +36,7 @@ body {
     #text { 
       font-size: 14px;
     }
-    #html, #bilgi, .kufi { 
+    #html, #bilgi, #rasmV { 
       font-size: 19px;
     }
 }
@@ -72,7 +72,6 @@ body {
     }
     #wordInfo { 
       display: none;
-      user-select: none;
       position: absolute;
       min-width: 95px;
       max-width: 220px;
@@ -103,6 +102,10 @@ body {
     }
     #variant {
       color: black;
+      background: wheat;
+    }
+    #wordV {
+      font-weight: bold;
     }
     nav {
       display: flex;
@@ -145,14 +148,14 @@ body {
     #text, #div3, #infoS { 
       font-family: sans-serif, arial;
     }
-    #bilgi, .kufi {
+    #bilgi {
       cursor: pointer;
     }
     #html, #bilgi {
       font-family: Zekr, serif;
       line-height: 1.87;
     }
-    .kufi {
+    #rasmV {
       font-family: Kufi, serif;
       line-height: 1.87;
     }
@@ -241,7 +244,7 @@ body {
 	  src: url(../image/me_quran.ttf)
 	}
   @font-face {
-    font-family: kufi;
+    font-family: Kufi;
     src:url("../image/MushafFontu.ttf");
   }
   @font-face {
