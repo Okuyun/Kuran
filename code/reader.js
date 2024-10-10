@@ -142,7 +142,7 @@ function displayWord(evt) {
     }
     let y = //t.offsetTop + t.offsetHeight
       t.getBoundingClientRect().bottom + window.pageYOffset
-    setPosition(wordInfo, t.offsetLeft+24, y+4, 160)
+    setPosition(wordInfo, t.offsetLeft+24, y+6, 160)
 }
 function selectWord(evt) {
     evt.preventDefault(); hideMenus()
@@ -208,7 +208,7 @@ function handleVariants(p) {
   while (i <= k) { //for each verse x
     let v = Q.vary.variants(i++)
     if (!v) continue
-    console.log('Variant', v.cv, v.num, v.word)
+    console.log('Variant', v.cv, v.num+1, v.word)
     let a = html.querySelector('.c'+v.cv.replace(':','_'))
     if (a.childElementCount <= v.num) continue
     let elt = a.children[v.num]
