@@ -271,7 +271,7 @@ let REGION
  *  V.variants(65) => {'2:58', 16, 1, 'yuġfar', '', 'يغفر'}
  */
 class VariantData {
-  constructor(url) {
+  constructor(url, callback) {
     let toList = (t) => {
       for (let s of t.split('\n')) {
         let i = s.indexOf('\t')
@@ -283,6 +283,7 @@ class VariantData {
       }
       let kk = Object.getOwnPropertyNames(this._data)
       console.log('VariantData', kk.length-1, 'verses')
+      if (callback) callback()
     }
     this._data = new Array(6237) // index 0 not used
     fetch_text_then(url, toList)
