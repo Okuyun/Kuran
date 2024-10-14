@@ -74,8 +74,8 @@ body {
       display: none;
       position: absolute;
       min-width: 95px;
-      max-width: 220px;
-      padding: 0 8px 4px;
+      max-width: 200px;
+      padding: 0 0 4px;
       text-align: center;
       background-color: #ff7;
       border: black 1px solid;

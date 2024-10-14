@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.8t";
+const VERSION = "V4.8T";
 
 /**
  * &ensp; used in Mujam and VerseRef

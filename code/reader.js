@@ -139,10 +139,11 @@ function displayWord(evt) {
       wordV.innerText = word || ''
       rgnV.innerText = rgn || ''
       rasmV.innerText = rasm || ''
+      if (i) t.classList.remove('gri')
     }
     let y = //t.offsetTop + t.offsetHeight
       t.getBoundingClientRect().bottom + window.pageYOffset
-    setPosition(wordInfo, t.offsetLeft+24, y+6, 160)
+    setPosition(wordInfo, t.offsetLeft+24, y+6, 190)
 }
 function selectWord(evt) {
     evt.preventDefault(); hideMenus()
