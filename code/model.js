@@ -273,13 +273,19 @@ let REGION
 class VariantData {
   constructor(url, callback) {
     let toList = (t) => {
+      let crnt = [{cv:''}]
       for (let s of t.split('\n')) {
         let i = s.indexOf('\t')
         if (i <= 0) continue
         let [cv, num, rdr, word, rgn, rasm] = s.split('\t')
         let indx = cvToIndex(cv)
         num = Number(num) - 1  //zero based
-        this._data[indx] = {cv, num, rdr, word, rgn, rasm}
+        let v = {cv, num, rdr, word, rgn, rasm}
+        if (crnt[0].cv === cv) {
+          crnt.push(v)
+        } else {
+          crnt = this._data[indx] = [v]
+        }
       }
       let kk = Object.getOwnPropertyNames(this._data)
       console.log('VariantData', kk.length-1, 'verses')
@@ -289,9 +295,11 @@ class VariantData {
     fetch_text_then(url, toList)
   }
   variants(indx) { return this._data[indx] || null }
-  getData(indx) {
-    let v = this._data[indx]
-    if (!v) return ''
+  getData(indx, num) {
+    let d = this._data[indx]
+    if (!d) return []
+    let v = d.find(x => x.num == num)
+    if (!v) return []
     let readers = v.rdr.split(' ').map(x => READER[x]).join(', ')
     let regions = v.rgn.split(' ').map(x => REGION[x]).join(', ')
     return [readers, v.word, regions, v.rasm]

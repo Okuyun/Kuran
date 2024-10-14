@@ -50,8 +50,8 @@
 46:15	4	1 2 3 4	husnen	M C B S	حسنا
 47:18	6	x	te-tihim	C K	تأتهم
 48:9	4	2 3	wa-yuʿazzirūhu		
-48:9	4	2 3	wa-yuwaqqirūhu		
-48:9	4	2 3	wa-yusabbiḥūhu		
+48:9	5	2 3	wa-yuwaqqirūhu		
+48:9	6	2 3	wa-yusabbiḥūhu		
 48:10	23	1 2 4	fa-sanuʾtīhi			
 48:17	25	1 4	nuʿaḏḏibhu		
 48:24	18	3	yaʿmalūna		

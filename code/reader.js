@@ -130,11 +130,12 @@ function displayWord(evt) {
     } else { //word just clicked
       let r = Q.roots.wordToRoot(b)
       let i = t.dataset.indx
-      if (!r && !i) return
+      let n = t.dataset.num
+      if (!r && (!i || !n)) return
       bilgi.innerText = r? toArabic(r) : ''
       anlam.innerText = Q.dict.meaning(removeDiacritical(b))
       variant.style.display = i? '' : 'none'
-      let [rdr, word, rgn, rasm] = Q.vary.getData(i) || []
+      let [rdr, word, rgn, rasm] = Q.vary.getData(i, n)
       rdrV.innerText = rdr || ''
       wordV.innerText = word || ''
       rgnV.innerText = rgn || ''
@@ -204,18 +205,22 @@ function refreshPage() {
     gotoPage(curPage)
 }
 function handleVariants(p) {
+  function markWord(v) {
+    console.log('Variant', v.cv, v.num+1, v.word)
+    let a = html.querySelector('.c'+v.cv.replace(':','_'))
+    if (a.childElementCount <= v.num) return
+    let elt = a.children[v.num]
+    elt.dataset.indx = i
+    elt.dataset.num = v.num
+    elt.classList.add('besmele')
+    // elt.dataset.word = v.word
+  }
   let i = index[p]+1 //first verse on page
   let k = index[p+1] //last verse on page
   while (i <= k) { //for each verse x
-    let v = Q.vary.variants(i++)
-    if (!v) continue
-    console.log('Variant', v.cv, v.num+1, v.word)
-    let a = html.querySelector('.c'+v.cv.replace(':','_'))
-    if (a.childElementCount <= v.num) continue
-    let elt = a.children[v.num]
-    elt.dataset.indx = i-1 //i is incremented above
-    elt.classList.add('besmele')
-    // elt.dataset.word = v.word
+    let d = Q.vary.variants(i)
+    if (d) d.forEach(markWord)
+    i++
   }
 }
 function gotoPage(k=1, adjusting) { // 1<=k<=P
