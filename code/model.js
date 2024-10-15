@@ -277,10 +277,10 @@ class VariantData {
       for (let s of t.split('\n')) {
         let i = s.indexOf('\t')
         if (i <= 0) continue
-        let [cv, num, rdr, word, rgn, rasm] = s.split('\t')
+        let [cv, num, rdr, word, rgn, rasm, std] = s.split('\t')
         let indx = cvToIndex(cv)
         num = Number(num) - 1  //zero based
-        let v = {cv, num, rdr, word, rgn, rasm}
+        let v = {cv, num, rdr, word, rgn, rasm, std}
         if (crnt[0].cv === cv) {
           crnt.push(v)
         } else {
