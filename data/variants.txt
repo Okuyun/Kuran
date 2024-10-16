@@ -46,7 +46,7 @@
 27:21	7	2	liye-tiyenneniy	C	ليأتيننى
 27:63	10	1 2 3 4 6 7	nušuran	*		bušran
 28:37	1	2	qâle	C	قال 
-29:58	5	6 7	la-nuṯwiyanna	*		la-nubawwiʾanna
+29:58	5	6 7	nuṯwiyanna	*		nubawwiʾanna
 33:68	8	1 2 3 4 6 7	kaṯīran	*		kabīran
 36:35	5	5a 6 7	amilet	K	عملت
 39:64	4	4	te-murûneniy	S	تأمروننى
@@ -56,12 +56,23 @@
 43:19	5	1b 2 4	ʿinda	*		ʿibādu
 43:68	1	1 3 4	yâ'ibâdiy	M S	يعبادى
 43:71	9	2 3 5a 6 7	teştehî	C B K	تشتهى
+43:85	13	2 6 7	yurjaʿūna			turjaʿūna
+43:89	6	1 4	taʿlamūna			yaʿlamūna
+44:45	2	1 3 4 5a 6 7	taġlī			yaġlī
+45:6	12	4 5a 6 7	tuʾminūna			yuʾminūna
+45:14	10	3 6 7	li-najziya			li-yajziya
+46:12	12	1 2a 4	li-tunḏira			li-yunḏira
 46:15	4	1 2 3 4	husnen	M C B S	حسنا
+46:16	3	1 2 3 4 5a	yutaqabbalu			nataqabbalu
+46:16	8	1 2 3 4 5a	wa-yutajāwazu			wa-natajāwazu
+46:19	5	1 4a 6 7	nuwaffiyahum			yuwaffiyahum
 47:18	6	x	te-tihim	C K	تأتهم
+47:31	1	5a	yabluwannakum			nabluwannakum
+47:31	3	5a	yaʿlama			naʿlama
 48:9	1	2 3	li-yuʾminū			li-tuʾminū
-48:9	4	2 3	wa-yuʿazzirūhu			wa-tuʿazzirūhu
-48:9	5	2 3	wa-yuwaqqirūhu			wa-tuwaqqirūhu
-48:9	6	2 3	wa-yusabbiḥūhu			wa-tusabbiḥūhu
+48:9	4	2 3	yuʿazzirūhu			tuʿazzirūhu
+48:9	5	2 3	yuwaqqirūhu			tuwaqqirūhu
+48:9	6	2 3	yusabbiḥūhu			tusabbiḥūhu
 48:10	23	1 2 4	fa-sanuʾtīhi			fa-sayuʾtīhi
 48:17	17	1 4	nudḫilhu			yudḫilhu
 48:17	25	1 4	nuʿaḏḏibhu			yuʿaḏḏibhu
