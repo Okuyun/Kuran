@@ -19,15 +19,18 @@
 5:53	1	1 2 4	yaqûlu	M C S	يقول
 5:54	5	1 4	yertedid	M S	يرتدد
 6:32	7	4	veledâru	S	ولدار
+6:57	18	3 4 6 7	yaqḍī	*		yaquṣṣu
 6:63	12	1 2 3 4	enceytenâ	M C B S	أنجيتنا
 6:137	8	4	şurekâihim	S	شركائهم
 7:3	14	4	yetezekkerûn	S	يتذكرون
 7:43	17	4	mâ kunnâ	S	ما كنا
+7:57	5	1 2 3 4 6 7	nušuran	*		bušran
 7:75	1	4	veqâle	S	وقال
 7:141	2	4	encâkum	S	انجاكم
 9:100	18	2	min tahtihâ	C	من تحتها
 9:107	1	1 4	ellezîne	M S	الذين
 10:22	3	4	yenşurukum	S	ينشركم
+10:30	2	6 7	tatlū	*		tablū
 17:93	19	2 4	qâle	S C	قال 
 18:36	11	1 2 4	minhumâ	M C S	منهما
 18:95	3	2	mekkeneniy	C	مكننى
@@ -38,14 +41,19 @@
 23:112	1	2 6 7	qul	M C B S	قال 
 23:114	1	2 6 7	qul	M C B S	قال 
 25:25	5	2	venunzilu	C	وننزل
+25:48	5	1 2 3 4 6 7	nušuran	*		bušran
 26:217	1	1 4	fetevekkel	M S	فتوكل
 27:21	7	2	liye-tiyenneniy	C	ليأتيننى
+27:63	10	1 2 3 4 6 7	nušuran	*		bušran
 28:37	1	2	qâle	C	قال 
+29:58	5	6 7	la-nuṯwiyanna	*		la-nubawwiʾanna
+33:68	8	1 2 3 4 6 7	kaṯīran	*		kabīran
 36:35	5	5a 6 7	amilet	K	عملت
 39:64	4	4	te-murûneniy	S	تأمروننى
 40:21	16	4	minkum	S	منكم
 40:26	13	1 2 3 4 6 7	veen	M C B S	وأن
 42:30	5	1 4	bimâ	M S	بما
+43:19	5	1b 2 4	ʿinda	*		ʿibādu
 43:68	1	1 3 4	yâ'ibâdiy	M S	يعبادى
 43:71	9	2 3 5a 6 7	teştehî	C B K	تشتهى
 46:15	4	1 2 3 4	husnen	M C B S	حسنا
@@ -54,7 +62,7 @@
 48:9	4	2 3	wa-yuʿazzirūhu			wa-tuʿazzirūhu
 48:9	5	2 3	wa-yuwaqqirūhu			wa-tuwaqqirūhu
 48:9	6	2 3	wa-yusabbiḥūhu			wa-tusabbiḥūhu
-48:10	23	1 2 4	fa-sanuʾtīhi			fa-sayuʾtīhi	
+48:10	23	1 2 4	fa-sanuʾtīhi			fa-sayuʾtīhi
 48:17	17	1 4	nudḫilhu			yudḫilhu
 48:17	25	1 4	nuʿaḏḏibhu			yuʿaḏḏibhu
 48:24	18	3	yaʿmalūna			taʿmalūna
@@ -69,7 +77,7 @@
 55:31	1	6 7	sa-yafruġu			sa-nafruġu
 55:78	4	4	ḏu-ljalāli	S	ذو الجلال
 57:10	30	4	wa-kullun	S	وكل
-57:15	3	3	tuʾḫaḏu			yuʾḫaḏu		
+57:15	3	3	tuʾḫaḏu			yuʾḫaḏu
 57:24	10	1 4	l-ġaniyyu	M S	الغنى
 59:7	19	4b	takūna			yakūna
 63:11	11	5a	yaʿmalūna			taʿmalūna
@@ -80,14 +88,14 @@
 69:18	4	6 7	lā yaḫfā			lā taḫfā
 69:41	7	2 4	yuʾminūna			tuʾminūna
 69:42	6	2 4	yaḏḏakkarūna			taḏakkarūna
-91:15	1	1 4	fa-lā	M S	فلا
-70:4	1	7	yaʿruǧu			taʿruǧu
+70:4	1	7	yaʿruju			taʿruju
 72:17	8	1 2 3 4	naslukhu			yaslukhu
 74:56	2	1	taḏkurūna			yaḏkurūna
 75:20	3	2 3 4	yuḥibbūna			tuḥibbūna
-75:21	1	2 3 4	wa-yaḏarūna			wa-taḏarūna				
-75:37	6	1 2 3 5a 6 7	tumnā			yumnā
+75:21	1	2 3 4	wa-yaḏarūna			wa-taḏarūna
+75:37	6	1 2 3 4 5a 6 7	tumnā			yumnā
 76:30	2	2 3 4	yašāʾūna			tašāʾūna
+81:24	5	2 3 7	bi-ẓanīn	*		bi-ḍanīn
 87:16	2	2	yuʾṯirūna			tuʾṯirūna
 89:17	4	3	yukrimūna			tukrimūna
 89:18	2	3	yaḥuḍḍūna			taḥāḍḍūna
