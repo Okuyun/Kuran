@@ -118,8 +118,12 @@ function toggleVerse(evt, color='yesil') {
     p.querySelector(cls).classList.toggle(color)
 }
 function displayWord(evt) {
+  function setVariant(elt, txt) {
+    elt.style.display = txt? '' : 'none'
+    elt.innerText = txt || ''
+  }
     evt.preventDefault(); //hideMenus()
-    let t = evt.target 
+    let t = evt.target, mw = 95
     t.classList.add('gri')  //mark target
     hideElement(wordInfo)  //setPosition() displays wordInfo
     let b = t.tText; if (!b) return
@@ -135,16 +139,17 @@ function displayWord(evt) {
       bilgi.innerText = r? toArabic(r) : ''
       anlam.innerText = Q.dict.meaning(removeDiacritical(b))
       variant.style.display = i? '' : 'none'
-      let [rdr, word, rgn, rasm] = Q.vary.getData(i, n)
-      rdrV.innerText = rdr || ''
-      wordV.innerText = word || ''
-      rgnV.innerText = rgn || ''
-      rasmV.innerText = rasm || ''
-      if (i) t.classList.remove('gri')
+      if (i) {
+        let [rdr, word, rgn, rasm] = Q.vary.getData(i, n)
+        setVariant(rdrV, rdr); setVariant(wordV, word)
+        setVariant(rgnV, rgn); setVariant(rasmV, rasm)
+        mw = 180; t.classList.remove('gri')   
+      }
     }
     let y = //t.offsetTop + t.offsetHeight
       t.getBoundingClientRect().bottom + window.pageYOffset
-    setPosition(wordInfo, t.offsetLeft+24, y+6, 190)
+    wordInfo.style.width = (mw)+'px'
+    setPosition(wordInfo, t.offsetLeft+24, y+6, mw)
 }
 function selectWord(evt) {
     evt.preventDefault(); hideMenus()

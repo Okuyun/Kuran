@@ -84,7 +84,7 @@
 50:30	2	1 5a	yaqūlu			naqūlu
 50:32	3	2	yūʿadūna			tūʿadūna
 52:21	3	3	wa-atbaʿnāhum			wa-ttabaʿathum
-55:12	1	4	wa-lḥabba ḏa-lʿaṣfi	S	ذا العصف
+55:12	2	4	wa-lḥabba ḏa-lʿaṣfi	S	ذا العصف
 55:31	1	6 7	sa-yafruġu			sa-nafruġu
 55:78	4	4	ḏu-ljalāli	S	ذو الجلال
 57:10	30	4	wa-kullun	S	وكل
