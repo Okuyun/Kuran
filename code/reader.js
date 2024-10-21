@@ -217,7 +217,7 @@ function handleVariants(p) {
     let elt = a.children[v.num]
     elt.dataset.indx = i
     elt.dataset.num = v.num
-    elt.classList.add('besmele')
+    elt.classList.add('variant')
     // elt.dataset.word = v.word
   }
   let i = index[p]+1 //first verse on page

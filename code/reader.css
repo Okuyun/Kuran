@@ -200,7 +200,6 @@ body {
     }
     .besmele { 
       line-height: 1.5;
-      font-weight: bold;
     }
     .night {
       color: white !important;
@@ -209,9 +208,15 @@ body {
     .paper {
       background-color: #f9f4e8;
     }
-    .divider, .besmele, .ayetno { 
+    .divider, .besmele, .variant { 
       text-align: center;
       color: #c85;
+    }
+    .variant { 
+      font-weight: bold;
+    }
+    .ayetno { 
+      color: gray;
     }
     .mavi { 
       color: #88f;
