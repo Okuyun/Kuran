@@ -12,14 +12,35 @@
 2:165	18	1 4	tara			yara
 2:219	8	6 7	kaṯīrun	*		kabīrun
 2:259	53	1 2 3	nunširuhā	*		nunšizuhā
+3:12	4	6 7	sa-yuġlabūna			sa-tuġlabūna
+3:12	5	6 7	wa-yuḥšarūna			wa-tuḥšarūna
+3:13	15	1	taraunahum			yaraunahum
+3:21	10	6	yuqātilūna			yaqtulūna
+3:48	1	2 3 4 6 7	nuʿallimuhu			yuʿallimuhu
+3:57	6	1 2 3 4 5a 6 7	nuwaffīhim			yuwaffīhim
+3:83	4	2 3 4 6 7	tabġūna			yabġūna
+3:83	14	2 3 4 6 7	turjaʿūna			yurjaʿūna
+3:115	2	1 2 3 4 5a	tafʿalū			yafʿalū
+3:115	6	1 2 3 4 5a	tukfarūhu			yukfarūhu
 3:133	1	1 4	sâri'û	M S	سارعوا
+3:154	9	6 7	taġšā			yaġšā
+3:157	14	1 2 3 4 5a 6 7	tajmaʿūna			yajmaʿūna
+3:169	2	4b	yaḥsabanna			taḥsabanna
+3:178	2	6	taḥsabanna			yaḥsabanna
+3:179	11	6 7	yumayyiza			yamīza
+3:180	29	2 3	yaʿmalūna			taʿmalūna
+3:181	12	6	sa-yuktabu			sa-naktubu
+3:181	19	6	wa-yaqūlu			wa-yaqūlu	
 3:184	10	4	vebiz-zuburi	S	وبالزبر
+3:187	8	2 3 5a	yubayyinunna			tubayyinunna
+3:187	11	2 3 5a	yaktumūnahū			taktumūnahū
+3:188	14	2 3	yaḥsibunnahum			taḥsabannahum
 4:66	15	4	qalîlen	S	قليلا
 4:94	9	6 7	fa-taṯabbatū	*		fa-tabayyanū
 5:53	1	1 2 4	yaqûlu	M C S	يقول
 5:54	5	1 4	yertedid	M S	يرتدد
 6:32	7	4	veledâru	S	ولدار
-6:57	18	3 4 6 7	yaqḍī	*		yaquṣṣu
+6:57	18	3 4 6 7	yaqḍi	*		yaquṣṣu
 6:63	12	1 2 3 4	enceytenâ	M C B S	أنجيتنا
 6:137	8	4	şurekâihim	S	شركائهم
 7:3	14	4	yetezekkerûn	S	يتذكرون
@@ -47,7 +68,17 @@
 27:63	10	1 2 3 4 6 7	nušuran	*		bušran
 28:37	1	2	qâle	C	قال 
 29:58	5	6 7	nuṯwiyanna	*		nubawwiʾanna
+33:2	11	3	yaʿmalūna			taʿmalūna
+33:30	8	2 4	nuḍaʿʿif			yuḍāʿaf
+33:31	6	6 7	wa-yaʿmal			wa-taʿmal
+33:31	8	6 7	yuʾtihā			nuʾtihā
+33:36	12	1 2 3 4a	takūna			yakūna
+33:52	2	3	yaḥillu			taḥillu
 33:68	8	1 2 3 4 6 7	kaṯīran	*		kabīran
+34:9	13	6 7	yašaʾ			našaʾ		
+34:9	14	6 7	yaḫsif			naḫsif
+34:9	18	6 7	yusqiṭ			nusqiṭ
+34:17	6	1 2 3 4 5a	yujāzā			nujāzī
 36:35	5	5a 6 7	amilet	K	عملت
 39:64	4	4	te-murûneniy	S	تأمروننى
 40:21	16	4	minkum	S	منكم
