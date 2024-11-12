@@ -277,10 +277,10 @@ class VariantData {
       for (let s of t.split('\n')) {
         let i = s.indexOf('\t')
         if (i <= 0) continue
-        let [cv, num, rdr, word, rgn, rasm, std] = s.split('\t')
+        let [cv, num, std, rdr, word, rgn, rasm] = s.split('\t')
         let indx = cvToIndex(cv)
         num = Number(num) - 1  //zero based
-        let v = {cv, num, rdr, word, rgn, rasm, std}
+        let v = {cv, num, std, rdr, word, rgn, rasm}
         if (crnt[0].cv === cv) {
           crnt.push(v)
         } else {
@@ -288,7 +288,8 @@ class VariantData {
         }
       }
       let kk = Object.getOwnPropertyNames(this._data)
-      console.log('VariantData', kk.length-1, 'verses')
+      kk.pop() //remove length (last key in kk)
+      this._keys = kk
       if (callback) callback()
     }
     this._data = new Array(6237) // index 0 not used
