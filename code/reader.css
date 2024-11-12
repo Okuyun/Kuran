@@ -221,7 +221,7 @@ body {
     .mavi { 
       color: #88f;
     }
-    #text .mavi, #text .ayetno {
+    #text .mavi, #html .mavi {
       font-weight: bold;
     }
     .beyaz { 
