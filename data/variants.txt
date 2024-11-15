@@ -18,6 +18,7 @@
 3:21	10	yaqtulūna	6	yuqātilūna		
 3:48	1	yuʿallimuhu	2 3 4 6 7	nuʿallimuhu		
 3:57	6	yuwaffīhim	1 2 3 4 5a 6 7	nuwaffīhim		
+3:81	7	ātaitukum	1	ātainākum		
 3:83	4	yabġūna	2 3 4 6 7	tabġūna		
 3:83	14	yurjaʿūna	2 3 4 6 7	turjaʿūna		
 3:115	2	yafʿalū	1 2 3 4 5a	tafʿalū		
@@ -36,13 +37,21 @@
 3:187	8	tubayyinunna	2 3 5a	yubayyinunna		
 3:187	11	taktumūnahū	2 3 5a	yaktumūnahū		
 3:188	14	taḥsabannahum	2 3	yaḥsibunnahum		
+4:13	8	yudḫilhu	1 4	nudḫilhu		
+4:14	7	yudḫilhu	1 4	nudḫilhu		
 4:66	15	qalīlun	4	qalīlan	S	قليلا
+4:73	9	takun	1 3 4 5a 6 7	yakun		
+4:77	47	tuẓlamūna	2 6 7	yuẓlamūna		
 4:94	9	fa-tabayyanū	6 7	fa-taṯabbatū	*	
+4:114	24	nuʾtīhi	3 6	yuʾtīhi	
+4:152	12	yuʾtīhim	1 2 3 4 5a 6 7	nuʾtīhim		
+4:162	24	sa-nuʾtīhim	6	sa-yuʾtīhim		
 5:53	1	wa-yaqūlu	1 2 4	yaqūlu	M C S	يقول
 5:54	5	yartadda	1 4	yartadid	M S	يرتدد
 6:32	7	wa-lad-dāru	4	wa-la-dāru	S	ولدار
 6:57	18	yaquṣṣu	3 4 6 7	yaqḍi	*	
 6:63	12	anjānā	1 2 3 4	anjaitanā	M C B S	أنجيتنا
+6:128	2	yaḥšuruhum	1 2 3 4 5a 6 7	naḥšuruhum		
 6:137	8	šurakāʾuhum	4	šurakāʾihim	S	شركائهم
 7:3	14	taḏakkarūna	4	yataḏakkarūna	S	يتذكرون
 7:43	17	wa-mā kunnā	4	mā kunnā	S	ما كنا
@@ -72,16 +81,28 @@
 33:31	6	wa-taʿmal	6 7	wa-yaʿmal		
 33:31	8	nuʾtihā	6 7	yuʾtihā		
 33:36	12	yakūna	1 2 3 4a	takūna		
-33:52	2	taḥillu	3	yaḥillu		
+33:52	2	yaḥillu	3	taḥillu		
 33:68	8	kabīran	1 2 3 4 6 7	kaṯīran	*	
 34:9	13	našaʾ	6 7	yašaʾ		
 34:9	14	naḫsif	6 7	yaḫsif		
 34:9	18	nusqiṭ	6 7	yusqiṭ		
 34:17	6	nujāzī	1 2 3 4 5a	yujāzā		
+34:40	2	yaḥšuruhum	1 2 3 4 5a 6 7	naḥšuruhum		
+34:40	5	yaqūlu	1 2 3 4 5a 6 7	naqūlu		
 36:35	5	ʿamilathu	5a 6 7	ʿamilat	K	عملت
+36:68	7	yaʿqilūna	1 4a	taʿqilūna		
+36:70	1	li-yunḏira	1 4	li-tunḏira		
+38:53	3	tūʿadūna	2 3	yūʿadūna		
 39:64	4	taʾmurūnnī	4	taʾmurūnanī	S	تأمروننى
+40:20	5	yadʿūna	1 4	tadʿūna		
 40:21	16	minhum	4	minkum	S	منكم
 40:26	13	aw an	1 2 3 4 6 7	wa-an	M C B S	وأن
+40:52	3	yanfaʿu	2 3 4	tanfaʿu		
+40:58	13	tataḏakkarūna	1 2 3 4	yataḏakkarūna		
+41:19	2	yuḥšaru	1	naḥšuru		
+42:5	1	takādu	1 7	yakādu		
+42:5	3	yatafaṭṭarna	3 5a	yanfaṭirna		
+42:25	12	tafʿalūna	1 2 3 4 5a	yafʿalūna		
 42:30	5	fa-bi-mā	1 4	bi-mā	M S	بما
 43:19	5	ʿibādu	1b 2 4	ʿinda	*	
 43:68	1	yā-ʿibādi	1 3 4	yā-ʿibādī	M S	يعبادى
@@ -114,7 +135,6 @@
 50:30	2	naqūlu	1 5a	yaqūlu		
 50:32	3	tūʿadūna	2	yūʿadūna		
 52:21	3	wa-ttabaʿathum	3	wa-atbaʿnāhum		
-55:12	2	wal-ḥabbu	4	wal-ḥabba	S	ذا العصف
 55:12	2	ḏul-ʿaṣfi	4	ḏal-ʿaṣfi	S	ذا العصف
 55:31	1	sa-nafruġu	6 7	sa-yafruġu		
 55:78	4	ḏil-jalāli	4	ḏul-jalāli	S	ذو الجلال
