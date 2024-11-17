@@ -149,7 +149,7 @@ function displayWord(evt) {
       let txt = pay2.textContent
       pay2.textContent = txt.replace(/\(.+\)/, cv)
       simInfo.style.display = b? '' : 'none'
-      if (b) simInfo.innerHTML = b
+      if (b) simiList.innerHTML = b
       setPosition(verseMenu, 0, 35)
     } else { //word just clicked
       selectWord()
@@ -449,7 +449,7 @@ function initReader() {
     zoomA.onclick  = toggleZoom
     bilgi.onclick  = clickWord
     // varInfo.onclick  = clickVariant
-    simInfo.onclick  = clickSimilar
+    simiList.onclick  = clickSimilar
     leftB.onclick  = () => {prevPage()}
     slider.oninput = () => {adjustPage(true)}
     slider.onchange= () => {adjustPage(false)} //committed

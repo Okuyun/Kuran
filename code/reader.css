@@ -100,25 +100,23 @@ body {
       z-index: 1;
     }
     #bilgi {
-      margin: 6px;
-    }
-    #bilgi {
       color: blue;
     }
     .info span {
       display: block;
-      margin: 16px;
+      padding: 8px 12px;
     }
     .plainSmall {
       font: 13px sans-serif;
     }
-    #simInfo:before {
-      content: 'Similar';
-      color: black;
-    }
     #simInfo {
       width: 70px;
-      padding-top: 10px;
+    }
+    #similar {
+      padding-block: 8px;
+      color: black;
+    }
+    #simiList {
       color: blue;
       cursor: pointer;
     }
@@ -132,10 +130,11 @@ body {
       width: inherit;
       border: 1px solid;
       border-top: none;
+      cursor: default;
     }
     #varInfo span {
       display: block;
-      margin: 6px;
+      margin: 3px;
     }
     nav {
       display: flex;
@@ -345,6 +344,7 @@ body {
       color: blue;
       background-color: #eee;
       font: 13px sans-serif, arial;
+      cursor: pointer;
       user-select: none;
       overflow-y: auto;
       max-height: 90vh; /* for overflow */
@@ -360,7 +360,8 @@ body {
       display: block;
       padding: 8px 14px;
     }
-    .hareke:hover, .menuK:hover {
+    .hareke:hover, .menuK:hover,
+    #simiList span:hover, #bilgi:hover {
       background-color: rgba(0, 0, 0, 0.2);
     }
     #menuS {
@@ -390,11 +391,10 @@ body {
 /* End of menu style */
 
 /* Icons are unicode chars */
-#wordInfo div:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-}
 .huge {
     font-size: 30px;
+}
+#starA .huge {
     position: relative;
     top: -5px;
 }
