@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.8T";
+const VERSION = "V4.9pre";
 
 /**
  * &ensp; used in Mujam and VerseRef
@@ -54,7 +54,7 @@ function setPosition(elt, x, y, mw=200) {
     x = Math.min(x, cw-mw) // x < cw-mw
     elt.style.left = (x)+'px'
     elt.style.top  = (y)+'px'
-    elt.style.display = 'block'
+    elt.style.display = ''
 }
 
 /**
@@ -65,7 +65,7 @@ function setPosition(elt, x, y, mw=200) {
 function hideElement(elt) {
     // let d = elt.closest('details')
     // if (d) d.open = false
-    elt.style.display = '' 
+    elt.style.display = 'none' 
 }
 
 /**
@@ -76,7 +76,6 @@ function hideElement(elt) {
  */
 function openSitePage(s, p) {
     let url; hideMenus()
-    let name = "Kuran"; 
     switch (s) {
     case 'help': case '?':
         url = 'guideQ.html'; break
@@ -94,7 +93,7 @@ function openSitePage(s, p) {
         let [c, v] = toCV(index[p]+1)
         openSiteVerse(s, c, v); return
   }
-  window.open(url, name)
+  window.open(url, "Kuran")
 }
 
 function doShare(text, url) {
@@ -111,11 +110,14 @@ function doShare(text, url) {
  * @param {number} v verse
  */
 function openSiteVerse(s, c, v) {
-  let url; hideMenus()
-  let name = "Kuran"; 
+  let url = ''; hideMenus()
+  console.log(s, c, v)
   switch (s) {
     case 'kuranm':
         url = "https://kuranmeali.com/AyetKarsilastirma.php?sure="+c+"&ayet="+v
+        break
+    case 'mufrdt':
+        url = `https://kuranmeali.com/Elfaz.php?sure=${c}&ayet=${v}`
         break
     case 'corpus':
         url = "http://corpus.quran.com/wordbyword.jsp?chapter="+c+"&verse="+v
@@ -154,7 +156,7 @@ function openSiteVerse(s, c, v) {
     default:  return
   }
   console.log(s, url)
-  window.open(url, name)
+  window.open(url, "Kuran")
 }
 
 /**

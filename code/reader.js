@@ -26,7 +26,7 @@ Q.roots = new MujamData('data/words.txt')
 Q.vary  = new VariantData('data/variants.txt')
 // Q.dict = Dictionary.newInstance() moved to languageItems()
 new TouchHandler({dragStart, dragEnd}, div2)
-var curSura, curPage, bookmarks, lastCV, lastSelection, recognition
+var curSura, curPage, bookmarks, lastSelection, recognition
 Q.notes = new Notes('notesQ')
 //https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList
 Q.hasMouse = matchMedia('(pointer:fine)').matches
@@ -118,65 +118,54 @@ function toggleVerse(evt, color='yesil') {
     p.querySelector(cls).classList.toggle(color)
 }
 function displayWord(evt) {
-  function setVariant(elt, txt) {
+  function selectWord() {
+    let s = window.getSelection()
+    lastSelection = s.toString().trim()
+    if (!lastSelection) { //select word
+      let range = document.createRange();
+      range.selectNodeContents(t);
+      s.removeAllRanges(); s.addRange(range);
+    }
+  }
+  function displayOrHide(elt, txt) {
     elt.style.display = txt? '' : 'none'
     elt.innerText = txt || ''
   }
-    evt.preventDefault(); //hideMenus()
-    let t = evt.target, mw = 95
-    t.classList.add('gri')  //mark target
-    hideElement(wordInfo)  //setPosition() displays wordInfo
-    let b = t.tText; if (!b) return
+  function setVariant(i, n) {
+    let [std, rdr, word, rgn, rasm] = Q.vary.getData(i, n)
+    displayOrHide(stdV, std)
+    displayOrHide(rdrV, rdr)
+    displayOrHide(wordV, word)
+    displayOrHide(rgnV, rgn)
+    displayOrHide(rasmV, rasm)
+  }
+    evt.preventDefault(); hideMenus()
+    let t = evt.target
+    let b = t.tText
     if (t.id) { //verse number
-      bilgi.innerText = ''
-      anlam.innerHTML = b
-      variant.style.display = 'none'
+      menuV.idx = Number(t.id) //index
+      let [c, v] = toCV(t.id)
+      let cv = '('+c+':'+v+')'
+      let txt = pay2.textContent
+      pay2.textContent = txt.replace(/\(.+\)/, cv)
+      simInfo.style.display = b? '' : 'none'
+      if (b) simInfo.innerHTML = b
+      setPosition(verseMenu, 0, 35)
     } else { //word just clicked
+      selectWord()
       let r = Q.roots.wordToRoot(b)
       let i = t.dataset.indx
       let n = t.dataset.num
       if (!r && (!i || !n)) return
       bilgi.innerText = r? toArabic(r) : ''
       anlam.innerText = Q.dict.meaning(removeDiacritical(b))
-      variant.style.display = i? '' : 'none'
-      if (i) {
-        let [rdr, word, rgn, rasm] = Q.vary.getData(i, n)
-        setVariant(rdrV, rdr); setVariant(wordV, word)
-        setVariant(rgnV, rgn); setVariant(rasmV, rasm)
-        mw = 180; t.classList.remove('gri')   
-      }
+      varInfo.style.display = i? '' : 'none'
+      if (i) setVariant(i, n)
+      let y = t.offsetTop + t.offsetHeight
+        //t.getBoundingClientRect().bottom + window.pageYOffset
+      // wordMenu.style.width = (mw)+'px'
+      setPosition(wordMenu, t.offsetLeft, y+6)
     }
-    let y = //t.offsetTop + t.offsetHeight
-      t.getBoundingClientRect().bottom + window.pageYOffset
-    wordInfo.style.width = (mw)+'px'
-    setPosition(wordInfo, t.offsetLeft+24, y+6, mw)
-}
-function selectWord(evt) {
-    evt.preventDefault(); hideMenus()
-    let t = evt.target
-    if (t.id) { // t is a verse separator
-      let y = Math.max(evt.offsetY-150, 0)
-      menuV.idx = Number(t.id) //index
-      setPosition(menuV, evt.clientX, y)
-    } else { // t is a word
-      let s = window.getSelection()
-      lastSelection = s.toString().trim()
-      if (!lastSelection) { //select word
-        let range = document.createRange();
-        range.selectNodeContents(evt.target);
-        s.removeAllRanges(); s.addRange(range);
-      }
-      // console.log(evt.offsetY, evt.clientY, evt.pageY)
-      let x = evt.pageX  //t.getBoundingClientRect().left
-      let y = evt.pageY  //t.getBoundingClientRect().top
-   // setPosition(menuC, evt.clientX, y-36, 220)
-      setPosition(menuC, x, y+40, 80)
-      lastCV = t.parentElement.className   //global
-    }
-}
-function hideWord(evt) {
-    // evt.target.style.backgroundColor = ''
-    evt.target.classList.remove('gri') 
 }
 function adjustPage(adj) {
     if (!Q.kur.loaded || !Q.qur.loaded) return
@@ -187,18 +176,20 @@ function adjustPage(adj) {
         +langMgr.PAGE0+slider.value
     }
 }
-function doClick(evt) {
-    if (evt.target.tagName == 'DIV') { // similarity
-      let t = evt.target.innerText
-      if (t.length > 6) return
-      console.log(location.hash+' to '+t)
-      location.hash = '#v='+t
-    } else if (evt.target === bilgi) { // Mujam
-      let w = bilgi.firstChild.textContent
-      if (w) openMujam(toBuckwalter(w))
-    } else if (evt.target === variant) { // variants
-      //do what??
-    }
+function clickWord(evt) {
+    let w = bilgi.textContent
+    if (w) openMujam(toBuckwalter(w))
+}
+function clickVariant(evt) {
+    let [c, v] = evt.target.innerText.split(':')
+    //open corpuscoranicum
+    openSiteVerse('coranv', c, v) 
+}
+function clickSimilar(evt) {
+    let t = evt.target.innerText
+    if (t.length > 6) return
+    console.log(location.hash+' to '+t)
+    location.hash = '#v='+t
 }
 function prevPage() {
     gotoPage(curPage==1? Q.P : curPage-1)
@@ -236,15 +227,15 @@ function processVerse(elt) {
         e.onmouseleave = toggleVerse
         for (let x of e.children) {
           x.onclick = displayWord
-          x.onmouseleave = hideWord
-          x.oncontextmenu = selectWord
+          // x.onmouseleave = hideWord
+          // x.oncontextmenu = selectWord
           if (x.id) { // x is a verse separator
             let s = Q.simi.similarTo(x.id)
             if (!s) {
               x.classList.add('ayetno'); return
             }
             x.tText = s.split(' ')
-              .map(x => '<div>'+x+'</div>').join('');
+              .map(x => '<span>'+x+'</span>').join('');
             x.classList.add('mavi')
           } else { // x is a word
             // content is filled in displayWord()
@@ -317,11 +308,11 @@ function gotoSura(c) {
     gotoPage(pageOf(c, 1));
 }
 function dragStart(evt) {
-    if (menuK.style.display || menuC.style.display 
-      || menuS.style.display || menuT.style.display
-      || bkgd.style.display)  {
-        hideMenus(); evt.preventDefault(); return false
-    }
+    // if (menuK.style.display || wordMenu.style.display 
+    //   || menuS.style.display || menuT.style.display
+    //   || bkgd.style.display)  {
+    //     hideMenus(); evt.preventDefault(); return false
+    // }
     return true
 }
 function dragEnd(a) {
@@ -404,20 +395,20 @@ function initialPage() {
 function makeMenu(button, menu, callback) {
   function showMenu() {
     hideMenus();
-    menu.style.display = 'block'
+    menu.style.display = ''
     let x = button.offsetLeft+13
     let y = button.offsetTop+34
     if (callback) callback()
     setPosition(menu, x, y, 110)
   }
   function hideMenu() {
-    menu.style.display = '' 
+    menu.style.display = 'none' 
   }
   function showOrHide(e) {
     let t = e.target  //starA contains a SPAN
     if (t.tagName == 'SPAN') t = t.parentElement
     if (t !== button) return
-    if (menu.style.display) hideMenu()
+    if (!menu.style.display) hideMenu()
     else showMenu()
   }
     button.append(menu)
@@ -456,13 +447,15 @@ function initReader() {
     starB.onclick = starH.onclick = toggleStar
     tranB.onclick = tranH.onclick = toggleTrans
     zoomA.onclick  = toggleZoom
-    wordInfo.onclick  = doClick
+    bilgi.onclick  = clickWord
+    // varInfo.onclick  = clickVariant
+    simInfo.onclick  = clickSimilar
     leftB.onclick  = () => {prevPage()}
     slider.oninput = () => {adjustPage(true)}
     slider.onchange= () => {adjustPage(false)} //committed
     rightB.onclick = () => {nextPage()}
     noteBut.onclick = () => {Q.notes.edit()} //in common.js
-    menuFn(); 
+    menuFn(); hideMenus()
     var prevTime
     document.onvisibilitychange = () => {
       if (document.hidden) {
@@ -511,6 +504,7 @@ function initRecognition() {
  * Ref: https://dev.to/iamafro/how-to-create-a-custom-context-menu--5d7p
  *
  * Menu elements: menuC (context)  menuK (button)  menuV (verse)
+ * combined with info panels on click -- remove context menu 2024
  *
  */
 var LINKF = FINDER+'#w=', LINKM = 'mujam.html#r='
@@ -538,23 +532,14 @@ function menuFn() {
               if (a.length > 0) openMujam(...a)
               else alert('Mucemde bulunamadı')
               break
-          case 'mufr':
-              if (!lastCV) break
-              let [, c, v] = lastCV.split(/[c_ ]/)
-              let url = `https://kuranmeali.com/Elfaz.php?sure=${c}&ayet=${v}`
-              console.log(url)
-              window.open(url, "Kuran")
-              break
           case 'fndr':
               window.open(LINKF + s, "finder")
               break
-          case 'B':
-              alert('Similar pages -- not implemented yet')
           default:  return
       }
       hideMenus()
   }
-  menuC.onclick = (evt) => { //context menu
+  menuC.onclick = (evt) => { //word menu
       evt.preventDefault()
       menuItem(evt.target.id)
   }
@@ -614,6 +599,7 @@ function menuFn() {
   }
   menuV.onclick = (evt) => { //external source menu
       evt.preventDefault()
+      console.log('external', menuV.idx, evt.target.id)
       if (!menuV.idx) return
       let [c, v] = toCV(menuV.idx)
       openSiteVerse(evt.target.id, c, v)
@@ -643,9 +629,8 @@ document.onkeydown = evt => {
       }
   }
   window.hideMenus = () => { 
-      hideElement(menuC); hideElement(menuK); hideElement(menuS); 
-      hideElement(menuT); hideElement(wordInfo); hideElement(menuV); 
-      hideElement(bkgd); //linkA.classList.remove('checked')
+      hideElement(wordMenu); hideElement(menuK); hideElement(menuS); 
+      hideElement(menuT); hideElement(verseMenu); hideElement(bkgd);
   }
   div1.onmouseenter = hideMenus
   div3.onmouseenter = hideMenus

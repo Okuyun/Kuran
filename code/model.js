@@ -303,7 +303,7 @@ class VariantData {
     if (!v) return []
     let readers = v.rdr.split(' ').map(x => READER[x]).join(', ')
     let regions = v.rgn.split(' ').map(x => REGION[x]).join(', ')
-    return [readers, v.word, regions, v.rasm]
+    return [v.std, readers, v.word, regions, v.rasm]
   }
 }
 

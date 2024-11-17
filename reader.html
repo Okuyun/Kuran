@@ -78,16 +78,47 @@
 </nav>
 <textarea id=noteBox hidden></textarea>
 
-<div id=wordInfo>
-  <span id=bilgi>root of the word</span><br>
-  <span id=anlam>meaning of the word</span><br>
-  <span id=variant>
-    <span id=rdrV>readers</span>
-    <span id=wordV>reading</span>
-    <span id=rgnV>regions</span>
+<div id=wordMenu>
+  <div id=menuC class=menu>
+    <span id=copy class="menuK"></span>
+    <span id=mujm class="menuK"></span>
+    <span id=fndr class="menuK"></span>
+  </div>
+  <div id=wordInfo class=info>
+    <span id=bilgi>root of the word</span>
+    <span id=anlam class=plainSmall>meaning</span>
+  </div>
+  <div id=varInfo>
+    <span id=stdV class=boldText>text</span> ⇒
+    <span id=rdrV class=plainSmall>readers</span>
+    <span id=wordV class=boldText>reading</span>
+    <span id=rgnV class=plainSmall>regions</span>
     <span id=rasmV>rasm</span>
-  </span>
+  </div>
 </div>
+
+<div id=verseMenu>
+  <div id=menuV class=menu>
+    <span id=pay2 class="menuK"></span>
+    <hr>
+    <div id=kay2 class="black"></div>
+    <span id="tanzil" class="menuK">tanzil.net</span>
+    <span id="quranc" class="menuK">quran.com</span>
+    <span id="awaken" class="menuK">islamawakened</span>
+    <span id="corpus" class="menuK">corpus.quran.com</span>
+    <span id="coranv" class="menuK">corpuscoranicum</span>
+    <hr>
+    <span id="acikur" class="menuK">acikkuran.com</span>
+    <span id="diyant" class="menuK">diyanet.gov.tr</span>
+    <span id="kuranm" class="menuK">kuranmeali.com</span>
+    <span id="mufrdt" class="menuK">el-mufredat</span>
+    <span id="elktbn" class="menuK">elktb.net</span>
+  </div>
+  <div id=simInfo class="info plainSmall">
+    similar verses
+  </div>
+</div>
+
 <div id=menuS class="menu bubble">
   <span id=starB class="menuK">Yıldız Ekle</span>
   <span id=starH class="menuK hidden">Yıldız Kaldır</span>
@@ -120,14 +151,6 @@
   </span>
 </div>
 
-<div id=menuC class=menu>
-   <span id=copy class="menuK"></span>
-   <span id=mujm class="menuK"></span>
-   <span id=mufr class="menuK"></span>
-   <span id=fndr class="menuK"></span>
-   <!--span class="menuC">Benzer</span-->
-</div>
-
 <div id=menuK class="menu bubble">
    <span id=yardim class="menuK"></span>
    <span id=pay1 class="menuK"></span>
@@ -154,22 +177,6 @@
    <span id=ders class="menuK"></span>
 </div>
 
-<div id=menuV class=menu>
-   <span id=pay2 class="menuK"></span>
-   <hr>
-   <div id=kay2 class="black"></div>
-   <span id="tanzil" class="menuK">tanzil.net</span>
-   <span id="quranc" class="menuK">quran.com</span>
-   <span id="awaken" class="menuK">islamawakened</span>
-   <span id="corpus" class="menuK">corpus.quran.com</span>
-   <span id="coranv" class="menuK">corpuscoranicum</span>
-   <hr>
-   <span id="acikur" class="menuK">acikkuran.com</span>
-   <span id="diyant" class="menuK">diyanet.gov.tr</span>
-   <span id="kuranm" class="menuK">kuranmeali.com</span>
-   <span id="elktbn" class="menuK">elktb.net</span>
-</div>
-
 <script src="code/languages.js"></script>
 <script src="code/buckwalter.js"></script>
 <script src="code/common.js"></script>
@@ -192,7 +199,7 @@ input	placeholder	sayfa, ayet, kök, metin
 input	title	sayfa ya da sure-ayet numaraları; aranacak kök ya da metin
 copy	innerText	Kopyala
 mujm	innerText	Mucem
-mufr	innerText	Mufredat
+mufrdt	innerText	el-Mufredat
 fndr	innerText	Rehber
 leftB	title	Önceki sayfa
 slider	title	Aranan sayfaya geçmek için slider
@@ -239,7 +246,7 @@ input	placeholder	page, verse, root, or text
 input	title	Page or verse number; root or text to search
 copy	innerText	Copy
 mujm	innerText	Mujam
-mufr	innerText	Mufradat
+mufrdt	innerText	al-Mufradat
 fndr	innerText	Finder
 leftB	title	Previous page
 slider	title	Slider to view the desired page
@@ -286,7 +293,7 @@ input	placeholder	378 أو 27.30
 input	title	رقم الصفحة أو رقم السورة والجزء
 copy	innerText	انسخ
 mujm	innerText	المعجم
-mufr	innerText	المفردات
+mufrdt	innerText	المفردات
 fndr	innerText	باحث قرآني
 leftB	title	صفحة سابقة
 slider	title	شريط تحريك لرؤية الصفحة المطلوبة

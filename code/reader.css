@@ -1,3 +1,4 @@
+* { box-sizing: border-box; }
 html { overscroll-behavior: contain }
 body { 
   margin: 0;
@@ -70,42 +71,71 @@ body {
       width: 50px;
       font-size: large;
     }
-    #wordInfo { 
-      display: none;
+    #wordMenu {
       position: absolute;
-      min-width: 120px;
-      max-width: 180px;
-      padding: 0 0 4px;
+      display: flex;
+      flex-wrap: wrap;
+      width: 200px;
+    }
+    #menuC {
+      position: static;
+      width: 85px;
+    }
+    #wordInfo {
+      width: 115px;
+    }
+    #verseMenu { 
+      position: fixed;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #menuV {
+      position: static;
+    }
+    .info {
       text-align: center;
       background-color: #ff7;
-      border: black 1px solid;
-      cursor: default;
+      border: 1px solid;
+      border-left: none;
       z-index: 1;
     }
     #bilgi {
       margin: 6px;
     }
-    #anlam, #bilgi {
+    #bilgi {
       color: blue;
     }
-    #wordInfo div {
-      display: inline-block;
-      padding: 8px;
+    .info span {
+      display: block;
+      margin: 16px;
     }
-    #wordInfo span {
-      display: inline-block;
-      min-width: 95px;
-      margin: 6px;
+    .plainSmall {
+      font: 13px sans-serif;
     }
-    #anlam, #variant {
-      font: 13px/1.2 sans-serif;
-    }
-    #variant {
+    #simInfo:before {
+      content: 'Similar';
       color: black;
-      background: #bfd;
     }
-    #wordV {
-      font-weight: bold;
+    #simInfo {
+      width: 70px;
+      padding-top: 10px;
+      color: blue;
+      cursor: pointer;
+    }
+    .boldText {
+      font: bold 14px serif;
+    }
+    #varInfo {
+      padding: 6px;
+      background: lightgrey;
+      text-align: center;
+      width: inherit;
+      border: 1px solid;
+      border-top: none;
+    }
+    #varInfo span {
+      display: block;
+      margin: 6px;
     }
     nav {
       display: flex;
@@ -309,7 +339,6 @@ body {
   Ref: https://dev.to/iamafro/how-to-create-a-custom-context-menu--5d7p
 */
     .menu {
-      display: none;
       position: absolute;
       text-align: left;
       border: black 1px solid;
@@ -319,7 +348,6 @@ body {
       user-select: none;
       overflow-y: auto;
       max-height: 90vh; /* for overflow */
-      box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
       z-index: 1;
     }
     .black {
@@ -331,7 +359,6 @@ body {
     .black, .menuK {
       display: block;
       padding: 8px 14px;
-      min-width: 102px;
     }
     .hareke:hover, .menuK:hover {
       background-color: rgba(0, 0, 0, 0.2);
@@ -348,6 +375,8 @@ body {
 */
     .bubble {
       padding-top: 8px;
+      min-width: 102px;
+      box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
     }
     .bubble:before {
       border: 8px solid transparent;
