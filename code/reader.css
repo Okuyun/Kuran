@@ -250,7 +250,7 @@ body {
     .mavi { 
       color: #88f;
     }
-    #text .mavi, #html .mavi {
+    .mavi[id] {
       font-weight: bold;
     }
     .beyaz { 
@@ -463,7 +463,7 @@ body {
 }
 .hareke {
   display: inline-block;
-  width: 25px; height: 30px;
+  width: 35px; height: 35px;
   padding: 2px 5px;
   background-size: contain;
   background-repeat: no-repeat;
