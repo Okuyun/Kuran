@@ -26,7 +26,7 @@ Q.roots = new MujamData('data/words.txt')
 Q.vary  = new VariantData('data/variants.txt')
 // Q.dict = Dictionary.newInstance() moved to languageItems()
 new TouchHandler({dragStart, dragEnd}, div2)
-var curSura, curPage, bookmarks, lastSelection, recognition
+var curSura, curPage, bookmarks, recognition
 Q.notes = new Notes('notesQ')
 //https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList
 Q.hasMouse = matchMedia('(pointer:fine)').matches
@@ -86,8 +86,8 @@ function setFontFamily(f){
 }
 function forceSelection() {
     //trim for Windows -- thank you Rajab
-    let s = window.getSelection() // fixed for Safari
-    s = s.toString().trim() || lastSelection
+    let s = window.getSelection().toString().trim()
+    // || lastSelection // fixed for Safari
     if (s) return s
     else alert("Önce Arapça bir kelime seçin")
 }
@@ -120,8 +120,8 @@ function toggleVerse(evt, color='yesil') {
 function displayWord(evt) {
   function selectWord() {
     let s = window.getSelection()
-    lastSelection = s.toString().trim()
-    if (!lastSelection) { //select word
+    let txt = s.toString().trim()
+    if (!txt || evt.type == "click") {
       let range = document.createRange();
       range.selectNodeContents(t);
       s.removeAllRanges(); s.addRange(range);
@@ -140,8 +140,12 @@ function displayWord(evt) {
     displayOrHide(rasmV, rasm)
   }
     evt.preventDefault(); hideMenus()
+    Q.evt = evt  //keep last event
     let t = evt.target
     let b = t.tText
+    let x = t.offsetLeft
+    let y = t.offsetTop + t.offsetHeight 
+      // t.getBoundingClientRect().bottom + window.scrollY
     if (t.id) { //verse number
       menuV.idx = Number(t.id) //index
       let [c, v] = toCV(t.id)
@@ -150,21 +154,20 @@ function displayWord(evt) {
       pay2.textContent = txt.replace(/\(.+\)/, cv)
       simInfo.style.display = b? '' : 'none'
       if (b) simiList.innerHTML = b
-      setPosition(verseMenu, 0, 35)
+      let h = b? 90 : 40
+      setPosition(verseMenu, x-h, Math.max(y-380, 35))
     } else { //word just clicked
       selectWord()
       let r = Q.roots.wordToRoot(b)
       let i = t.dataset.indx
       let n = t.dataset.num
-      if (!r && (!i || !n)) return
+      // if (!r && (!i || !n)) return
       bilgi.innerText = r? toArabic(r) : ''
       anlam.innerText = Q.dict.meaning(removeDiacritical(b))
+      wordInfo.style.display = r? '' : 'none'
       varInfo.style.display = i? '' : 'none'
       if (i) setVariant(i, n)
-      let y = t.offsetTop + t.offsetHeight
-        //t.getBoundingClientRect().bottom + window.pageYOffset
-      // wordMenu.style.width = (mw)+'px'
-      setPosition(wordMenu, t.offsetLeft, y+6)
+      setPosition(wordMenu, x+24, y+6)
     }
 }
 function adjustPage(adj) {
@@ -227,8 +230,7 @@ function processVerse(elt) {
         e.onmouseleave = toggleVerse
         for (let x of e.children) {
           x.onclick = displayWord
-          // x.onmouseleave = hideWord
-          // x.oncontextmenu = selectWord
+          x.oncontextmenu = displayWord
           if (x.id) { // x is a verse separator
             let s = Q.simi.similarTo(x.id)
             if (!s) {

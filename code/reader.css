@@ -79,13 +79,22 @@ body {
     }
     #menuC {
       position: static;
-      width: 85px;
+      width: inherit;
+    }
+    #menuC span {
+      display: inline-block;
+      width: 63px;
     }
     #wordInfo {
-      width: 115px;
+      width: inherit;
+      border-top: none;
+    }
+    #wordInfo span {
+      display: inline-block;
+      width: 90px;
     }
     #verseMenu { 
-      position: fixed;
+      position: absolute;
       display: flex;
       flex-wrap: wrap;
     }
@@ -96,7 +105,6 @@ body {
       text-align: center;
       background-color: #ff7;
       border: 1px solid;
-      border-left: none;
       z-index: 1;
     }
     #bilgi {
@@ -111,6 +119,7 @@ body {
     }
     #simInfo {
       width: 70px;
+      border-left: none;
     }
     #similar {
       padding-block: 8px;
