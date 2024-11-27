@@ -36,6 +36,8 @@
 3:187	8	tubayyinunna	2 3 5a	yubayyinunna		
 3:187	11	taktumūnahū	2 3 5a	yaktumūnahū		
 3:188	14	taḥsabannahum	2 3	yaḥsibunnahum		
+3:195	25	wa-qātalū	6 7	wa-qutilū		
+3:195	26	wa-qutilū	6 7	wa-qātalū		
 4:13	8	yudḫilhu	1 4	nudḫilhu		
 4:14	7	yudḫilhu	1 4	nudḫilhu		
 4:66	15	qalīlun	4	qalīlan	S	قليلا
@@ -69,14 +71,37 @@
 6:145	14	yakūna	2 4 6	takūna		
 6:158	5	taʾtiyahum	6 7	yaʾtiyahum		
 7:3	14	taḏakkarūna	4	yataḏakkarūna	S	يتذكرون
+7:38	40	taʿlamūna	5a	yaʿlamūna		
+7:40	8	tufattaḥu	3	tuftaḥu		
+7:40	8	tufattaḥu	6 7	yuftaḥu		
 7:43	17	wa-mā kunnā	4	mā kunnā	S	ما كنا
-7:57	5	bušran	1 2 3 4 6 7	nušuran	*	
+7:57	5	bušran	1 2 3	nušuran	*	
+7:57	5	bušran	4 6 7	našran	*	
 7:75	1	qāla	4	wa-qāla	S	وقال
 7:141	2	anjainākum	4	anjākum	S	انجاكم
+7:149	12	yarḥamnā	6 7	tarḥamnā		
+7:149	14	wa-yaġfir	6 7	wa-taġfir		
+7:161	16	naġfir	1 4	tuġfar		
+7:169	40	taʿqilūna	2 3 5a 6 7	yaʿqilūna		
+7:172	19	taqūlū	3	yaqūlū		
+7:173	2	taqūlū	3	yaqūlū		
+7:186	7	yaḏaruhum	6 7	yaḏarhum		
+7:186	7	yaḏaruhum	1 2 4	naḏaruhum		
+8:50	4	yatawaffa	4	natawaffa		
+8:59	2	yaḥsabanna	1 2 3 5a 7	taḥsibanna		
+8:65	15	yakun	1 2 4	takun		
+8:66	10	yakun	1 2 3 4	takun		
+8:66	17	yakun	1 2 3 4	takun		
+8:67	5	yakūna	3	takūna		
+9:30	3	ʿuzairun	1 2 3 4 6	ʿuzairu		
+9:66	8	naʿfu	1 2 3 4 6 7	yuʿfa		
+9:66	12	nuʿaḏḏib	1 2 3 4 6 7	tuʿaḏḏab		
 9:100	18	taḥtaha	2	min taḥtiha	C	من تحتها
 9:107	1	wa-llaḏīna	1 4	allaḏīna	M S	الذين
 9:111	15	fa-yaqtulūna	6 7	fa-yuqtalūna		
 9:111	16	wa-yuqtalūna	6 7	wa-yaqtulūna		
+9:117	17	yazīġu	1 2 3 4 5a 7	tazīġu		
+9:126	2	yarauna	6	tarauna		
 10:22	3	yusayyirukum	4	yanšurukum	S	ينشركم
 10:30	2	tablū	6 7	tatlū	*	
 18:36	11	minhā	1 2 4	minhumā	M C S	منهما
