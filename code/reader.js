@@ -154,7 +154,7 @@ function displayWord(evt) {
       pay2.textContent = txt.replace(/\(.+\)/, cv)
       simInfo.style.display = b? '' : 'none'
       if (b) simiList.innerHTML = b
-      let h = b? 90 : 40
+      let h = b? 90 : 30
       setPosition(verseMenu, x-h, Math.max(y-380, 35))
     } else { //word just clicked
       selectWord()
@@ -167,7 +167,7 @@ function displayWord(evt) {
       wordInfo.style.display = r? '' : 'none'
       varInfo.style.display = i? '' : 'none'
       if (i) setVariant(i, n)
-      setPosition(wordMenu, x+24, y+6)
+      setPosition(wordMenu, x+24, y+12)
     }
 }
 function adjustPage(adj) {

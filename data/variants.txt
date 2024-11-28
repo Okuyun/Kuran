@@ -72,28 +72,27 @@
 6:158	5	taʾtiyahum	6 7	yaʾtiyahum		
 7:3	14	taḏakkarūna	4	yataḏakkarūna	S	يتذكرون
 7:38	40	taʿlamūna	5a	yaʿlamūna		
-7:40	8	tufattaḥu	3	tuftaḥu		
 7:40	8	tufattaḥu	6 7	yuftaḥu		
+7:40	8	tufattaḥu	3	tuftaḥu		
 7:43	17	wa-mā kunnā	4	mā kunnā	S	ما كنا
-7:57	5	bušran	1 2 3	nušuran	*	
-7:57	5	bušran	4 6 7	našran	*	
+7:57	5	bušran	1 2 3 4	nušuran	*	
+7:57	5	bušran	6 7	našran	*	
 7:75	1	qāla	4	wa-qāla	S	وقال
-7:141	2	anjainākum	4	anjākum	S	انجاكم
+7:141	2	anjainākum	4	anjākum	S	أنجيكم
 7:149	12	yarḥamnā	6 7	tarḥamnā		
 7:149	14	wa-yaġfir	6 7	wa-taġfir		
 7:161	16	naġfir	1 4	tuġfar		
 7:169	40	taʿqilūna	2 3 5a 6 7	yaʿqilūna		
 7:172	19	taqūlū	3	yaqūlū		
 7:173	2	taqūlū	3	yaqūlū		
-7:186	7	yaḏaruhum	6 7	yaḏarhum		
 7:186	7	yaḏaruhum	1 2 4	naḏaruhum		
+7:186	7	yaḏaruhum	6 7	yaḏarhum		
 8:50	4	yatawaffa	4	natawaffa		
 8:59	2	yaḥsabanna	1 2 3 5a 7	taḥsibanna		
 8:65	15	yakun	1 2 4	takun		
 8:66	10	yakun	1 2 3 4	takun		
 8:66	17	yakun	1 2 3 4	takun		
 8:67	5	yakūna	3	takūna		
-9:30	3	ʿuzairun	1 2 3 4 6	ʿuzairu		
 9:66	8	naʿfu	1 2 3 4 6 7	yuʿfa		
 9:66	12	nuʿaḏḏib	1 2 3 4 6 7	tuʿaḏḏab		
 9:100	18	taḥtaha	2	min taḥtiha	C	من تحتها
@@ -110,10 +109,12 @@
 23:87	2	li-llāhi	3	allāhu	B	الله
 23:89	2	li-llāhi	3	allāhu	B	الله
 25:25	5	wa-nuzzila	2	wa-nunzilu	C	وننزل
-25:48	5	bušran	1 2 3 4 6 7	nušuran	*	
+25:48	5	bušran	1 2 3 4	nušuran	*	
+25:48	5	bušran	6 7	našran	*	
 26:217	1	wa-tawakkal	1 4	fa-tawakkal	M S	فتوكل
 27:21	7	yaʾtiyannī	2	yaʾtiyannanī	C	ليأتيننى
-27:63	10	bušran	1 2 3 4 6 7	nušuran	*	
+27:63	10	bušran	1 2 3 4	nušuran	*	
+27:63	10	bušran	6 7	našran	*	
 28:37	1	wa-qāla	2	qāla	C	قال 
 29:58	5	nubawwiʾanna	6 7	nuṯwiyanna	*	
 33:2	11	taʿmalūna	3	yaʿmalūna		
