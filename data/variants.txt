@@ -101,8 +101,25 @@
 9:111	16	wa-yuqtalūna	6 7	wa-yaqtulūna		
 9:117	17	yazīġu	1 2 3 4 5a 7	tazīġu		
 9:126	2	yarauna	6	tarauna		
+10:5	20	yufaṣṣilu	1 4 5a 6 7	nufaṣṣilu		
+10:18	29	yušrikūna	6 7	tušrikūna		
 10:22	3	yusayyirukum	4	yanšurukum	S	ينشركم
 10:30	2	tablū	6 7	tatlū	*	
+10:45	2	yaḥšuruhum	1 2 3 4 5a 6 7	naḥšuruhum		
+10:58	10	yajmaʿūna	4	tajmaʿūna		
+10:100	9	wa-yajʿalu	5a	wa-najʿalu		
+11:123	16	taʿmalūna	2 3 5a 6 7	yaʿmalūna		
+12:12	4	yartaʿ	2 3 4	nartaʿ		
+12:12	5	wa-yalʿab	2 3 4	wa-nalʿab		
+12:49	11	yaʿṣirūna	6 7	taʿṣirūna		
+12:56	9	yašāʾu	2	našāʾu		
+12:62	2	fityānihi	1 2 3 4 5a	fityātihi		
+12:63	13	naktal	6 7	yaktal		
+12:109	7	nūḥī	1 2 3 4 5a 6 7	yūḥā		
+12:109	29	taʿqilūna	2 3 6 7	yaʿqilūna		
+12:110	11	fa-nujjiya	1 4	fa-nunjī		
+16:1	9	yušrikūna	6 7	tušrikūna		
+16:3	7	yušrikūna	6 7	tušrikūna		
 18:36	11	minhā	1 2 4	minhumā	M C S	منهما
 18:95	3	makkannī	2	makkananī	C	مكننى
 21:30	1	a-wa-lam	2	a-lam	C	الم
@@ -117,6 +134,7 @@
 27:63	10	bušran	6 7	našran	*	
 28:37	1	wa-qāla	2	qāla	C	قال 
 29:58	5	nubawwiʾanna	6 7	nuṯwiyanna	*	
+30:33	18	yušrikūna	6 7	tušrikūna		
 33:2	11	taʿmalūna	3	yaʿmalūna		
 33:30	8	yuḍāʿaf	2 4	nuḍaʿʿif		
 33:31	6	wa-taʿmal	6 7	wa-yaʿmal		
