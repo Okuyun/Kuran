@@ -391,7 +391,7 @@ function displayTable(set) {
 }
 
 function hideBilgi() {
-    if (!menuK.style.display) hideElement(bilgi);
+    if (menuK.style.display) hideElement(bilgi);
 }
 
 /**
@@ -401,7 +401,7 @@ function hideBilgi() {
  */
 function doClick(evt) {
     //do not handle if menuK is on
-    if (menuK.style.display) return
+    if (!menuK.style.display) return
     evt.preventDefault()
     let [p, , refs] = bilgi.innerText.split(EM_SPACE)
     p = p.substring(1) //remove first char
@@ -457,7 +457,7 @@ function initMujam() {
     menu2.onchange = () => {selectRoot()}
     noteBut.onclick= () => {notes.edit()} //in common.js
     combine.onclick= () => {hideList(true)}
-    menuFn()
+    menuFn(); hideElement(menuK)
 }
 
   /**
@@ -481,7 +481,7 @@ function menuFn() {
       menuItem(evt.target.id)
   }
   document.onclick = (evt) => {
-      if (!menuK.style.display) {
+      if (menuK.style.display) {
         let t = evt.target.tagName
         if (t=="A" || t=="TD" || t=="SPAN") return
       }
@@ -491,8 +491,6 @@ function menuFn() {
     if (evt.key == 'Escape') hideMenus()
     else if (evt.key == 'F1') 
       openSitePage('help') //Yardım
-    // else if (menuK.style.display) 
-    //   menuItem(evt.key.toUpperCase())
   }
   window.hideMenus = () => { 
       hideElement(menuK); hideElement(bilgi)
@@ -510,7 +508,7 @@ function getPageOf(td) {
     return p
 }
 function doHover(evt) {  //listener for each td and span element
-    if (menuK.style.display) return
+    if (!menuK.style.display) return
     let cls, ref, cw
     { // TD
         let p = getPageOf(evt.target)

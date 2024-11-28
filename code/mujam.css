@@ -125,7 +125,7 @@
     .menu {
       box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
       position: fixed;
-      display: none;
+      display: block;
       border: black 1px solid;
       /* text-align: center; */
       color: blue;
