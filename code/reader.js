@@ -127,17 +127,24 @@ function displayWord(evt) {
       s.removeAllRanges(); s.addRange(range);
     }
   }
-  function displayOrHide(elt, txt) {
-    elt.style.display = txt? '' : 'none'
-    elt.innerText = txt || ''
-  }
   function setVariant(i, n) {
-    let [std, rdr, word, rgn, rasm] = Q.vary.getData(i, n)
-    displayOrHide(stdV, std)
-    displayOrHide(rdrV, rdr)
-    displayOrHide(wordV, word)
-    displayOrHide(rgnV, rgn)
-    displayOrHide(rasmV, rasm)
+    function text(t1, aa, t2, cls) {
+      let txt = t1.split(' ').map(x => aa[x]).join(', ')
+      return `<span class=plainSmall>${txt}</span>
+              <span class=${cls}>${t2}</span><br>`
+    }
+    function rdrText(v) {
+      return text(v.rdr, READER, v.word, 'boldText')
+    }
+    function rgnText(v) {
+      return text(v.rgn, REGION, v.rasm, 'Kufi')
+    }
+    let [v1, v2] = Q.vary.getData(i, n)
+    if (!v1) return //should not happen
+    stdText.innerText = v1.std
+    varText.innerHTML = rdrText(v1)
+    if (v1.rasm) varText.innerHTML += rgnText(v1)
+    if (v2) varText.innerHTML += rdrText(v2)
   }
     evt.preventDefault(); hideMenus()
     Q.evt = evt  //keep last event

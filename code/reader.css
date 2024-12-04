@@ -12,7 +12,7 @@ body {
       font-size: 3.3vw;
       font-size: min(max(3.3vw, 13px), 20px);
     }
-    #html, #bilgi, #rasmV { 
+    #html, #bilgi, .Kufi { 
       font-size: 4.5vw;
       font-size: min(max(4.5vw, 19px), 27px);
     }
@@ -37,7 +37,7 @@ body {
     #text { 
       font-size: 14px;
     }
-    #html, #bilgi, #rasmV { 
+    #html, #bilgi, .Kufi { 
       font-size: 19px;
     }
 }
@@ -193,7 +193,7 @@ body {
       font-family: Zekr, serif;
       line-height: 1.87;
     }
-    #rasmV {
+    .Kufi {
       font-family: Kufi, serif;
       line-height: 1.87;
     }

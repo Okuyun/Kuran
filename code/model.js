@@ -265,10 +265,10 @@ for (let s of RDR_DATA.split('\n')) {
 let REGION 
 = { M:"Medina", C:"Mecca", B:"Baṣrah", S:"Syria", K:"Kufa" }
 
-/** Keys: chap:verse (cv)
+/** Keys: verse index
  *  Values: variants
  *  Usage: V = new VariantData(url)
- *  V.variants(65) => {'2:58', 16, 1, 'yuġfar', '', 'يغفر'}
+ *  V.variants(65) => [{'2:58', 16, 'naġfir', 1, 'yuġfar'}...]
  */
 class VariantData {
   constructor(url, callback) {
@@ -297,13 +297,9 @@ class VariantData {
   }
   variants(indx) { return this._data[indx] || null }
   getData(indx, num) {
-    let d = this._data[indx]
+    let d = this.variants(indx)
     if (!d) return []
-    let v = d.find(x => x.num == num)
-    if (!v) return []
-    let readers = v.rdr.split(' ').map(x => READER[x]).join(', ')
-    let regions = v.rgn.split(' ').map(x => REGION[x]).join(', ')
-    return [v.std, readers, v.word, regions, v.rasm]
+    return d.filter(x => x.num == num)
   }
 }
 
