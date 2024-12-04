@@ -87,9 +87,9 @@ function setFontFamily(f){
 function forceSelection() {
     //trim for Windows -- thank you Rajab
     let s = window.getSelection().toString().trim()
-    // || lastSelection // fixed for Safari
+        || Q.selection  // fixed for Safari
     if (s) return s
-    else alert("Önce Arapça bir kelime seçin")
+    alert("Önce Arapça bir kelime seçin")
 }
 function markWord(w, root) {
     for (let x of html.querySelectorAll('span')) {
@@ -125,7 +125,7 @@ function displayWord(evt) {
       let range = document.createRange();
       range.selectNodeContents(t);
       s.removeAllRanges(); s.addRange(range);
-    }
+    } else Q.selection = txt
   }
   function setVariant(i, n) {
     function text(t1, aa, t2, cls) {
@@ -526,6 +526,7 @@ function openMujam(...a) { //array of roots in Buckwalter
 function menuFn() {
   function menuItem(m) {
       let s = forceSelection() //s is not empty
+      if (!s) return
       switch (m) {
           case 'copy':
               navigator.clipboard.writeText(s)
