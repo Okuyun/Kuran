@@ -169,14 +169,13 @@
 21:30	2	yara	2	tara		
 21:80	5	li-tuḥṣinakum	1 2 3	li-yuḥṣinakum		
 21:80	5	li-tuḥṣinakum	5a	li-nuḥṣinakum		
-21:112	1	qāla	1 2 3 4 5a 6 7	qul		
 22:45	4	ʾahlaknāhā	3	ʾahlaktuhā		
 22:47	14	taʿuddūna	2 6 7	yaʿuddūna		
 22:62	8	yadʿūna	1 2 4 5a	tadʿūna		
 23:87	2	li-llāhi	3	allāhu	B	الله
 23:89	2	li-llāhi	3	allāhu	B	الله
 23:112	1	qāla	2 6 7	qul	M C B S	قال
-23:114	1	qāla	2 6 7	qul	M C B S	قال
+23:114	1	qāla	6 7	qul	M C B S	قال
 24:24	2	tašhadū	6 7	yašhadū		
 24:35	17	yūqadu	2 3	tawaqqada		
 24:35	17	yūqadu	5a 6 7	tūqadu		
@@ -193,11 +192,33 @@
 26:197	2	yakun	4	takun		
 26:217	1	wa-tawakkal	1 4	fa-tawakkal	M S	فتوكل
 27:21	7	yaʾtiyannī	2	yaʾtiyannanī	C	ليأتيننى
+27:25	12	tuḫfūna	1 2 3 4 5a 6	yuḫfūna		
+27:25	14	tuʿlinūna	1 2 3 4 5a 6	yuʿlinūna		
+27:59	12	yušrikūna	1 2 4 6 7	tušrikūna		
+27:62	16	taḏakkarūna	1 2 4a 5a	taḏḏakkarūna		
+27:62	16	taḏakkarūna	3 4b	yaḏḏakkarūna		
 27:63	10	bušran	1 2 3 4	nušuran	*	
 27:63	10	bušran	6 7	našran	*	
+27:80	6	tusmiʿu	2	yasmaʿu		
+27:81	3	bi-hādilʿumyi	6	tahdi-lʿumā		
+27:88	18	tafʿalūna	2 3 4	yafʿalūna		
+27:93	11	taʿmalūna	2 3 5a 6 7	yaʿmalūna		
+28:6	5	wa-nuriya	6 7	wa-yarē		
 28:37	1	wa-qāla	2	qāla	C	قال 
+28:37	11	takūnu	6 7	yakūnu		
+28:57	14	yujbā	1	tujbā		
+29:19	2	yarau	5a 6 7	tarau		
+29:42	5	yadʿūna	1 2 4 6 7	tadʿūna		
+29:55	9	wa-yaqūlu	2 3 4	wa-naqūlu		
+29:57	7	turjaʿūna	5a	yurjaʿūna		
 29:58	5	nubawwiʾanna	6 7	nuṯwiyanna	*	
+30:11	8	turjaʿūna	3 5a	yurjaʿūna		
+30:41	10	li-yuḏīqahum	2a	li-nuḏīqahum		
 30:33	18	yušrikūna	6 7	tušrikūna		
+30:52	6	tusmiʿu	2	yasmaʿu		
+30:57	3	yanfaʿu	1 2 3 4	tanfaʿu		
+31:20	15	niʿamahū	2 4 5a 6 7	niʿmatan		
+31:30	8	yadʿūna	1 2 4 5a	tadʿūna		
 33:2	11	taʿmalūna	3	yaʿmalūna		
 33:30	8	yuḍāʿaf	2 4	nuḍaʿʿif		
 33:31	6	wa-taʿmal	6 7	wa-yaʿmal		
