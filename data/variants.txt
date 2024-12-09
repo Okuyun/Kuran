@@ -9,7 +9,7 @@
 2:144	34	yaʿmalūna	4 6 7	taʿmalūna		
 2:149	17	taʿmalūna	3	yaʿmalūna		
 2:158	19	taṭawwaʿa	6 7	yaṭṭawwaʿ		
-2:165	18	yara	1 4	tara		
+2:165	18	yarā	1 4	tarā		
 2:219	8	kabīrun	6 7	kaṯīrun	*	
 2:259	53	nunšizuhā	1 2 3	nunširuhā	*	
 3:12	4	sa-tuġlabūna	6 7	sa-yuġlabūna		
@@ -36,8 +36,8 @@
 3:187	8	tubayyinunna	2 3 5a	yubayyinunna		
 3:187	11	taktumūnahū	2 3 5a	yaktumūnahū		
 3:188	14	taḥsabannahum	2 3	yaḥsibunnahum		
-3:195	25	wa-qātalū	6 7	wa-qutilū		
-3:195	26	wa-qutilū	6 7	wa-qātalū		
+3:195	25	wa-qātalū	6 7	wa-qutilū	x	
+3:195	26	wa-qutilū	6 7	wa-qātalū	x	
 4:13	8	yudḫilhu	1 4	nudḫilhu		
 4:14	7	yudḫilhu	1 4	nudḫilhu		
 4:66	15	qalīlun	4	qalīlan	S	قليلا
@@ -87,7 +87,7 @@
 7:173	2	taqūlū	3	yaqūlū		
 7:186	7	yaḏaruhum	1 2 4	naḏaruhum		
 7:186	7	yaḏaruhum	6 7	yaḏarhum		
-8:50	4	yatawaffa	4	natawaffa		
+8:50	4	yatawaffā	4	natawaffā		
 8:59	2	yaḥsabanna	1 2 3 5a 7	taḥsibanna		
 8:65	15	yakun	1 2 4	takun		
 8:66	10	yakun	1 2 3 4	takun		
@@ -95,10 +95,10 @@
 8:67	5	yakūna	3	takūna		
 9:66	8	naʿfu	1 2 3 4 6 7	yuʿfa		
 9:66	12	nuʿaḏḏib	1 2 3 4 6 7	tuʿaḏḏab		
-9:100	18	taḥtaha	2	min taḥtiha	C	من تحتها
+9:100	18	taḥtahā	2	min taḥtihā	C	من تحتها
 9:107	1	wa-llaḏīna	1 4	allaḏīna	M S	الذين
-9:111	15	fa-yaqtulūna	6 7	fa-yuqtalūna		
-9:111	16	wa-yuqtalūna	6 7	wa-yaqtulūna		
+9:111	15	fa-yaqtulūna	6 7	fa-yuqtalūna	x	
+9:111	16	wa-yuqtalūna	6 7	wa-yaqtulūna	x	
 9:117	17	yazīġu	1 2 3 4 5a 7	tazīġu		
 9:126	2	yarauna	6	tarauna		
 10:5	20	yufaṣṣilu	1 4 5a 6 7	nufaṣṣilu		
@@ -273,9 +273,9 @@
 48:17	25	yuʿaḏḏibhu	1 4	nuʿaḏḏibhu		
 48:24	18	taʿmalūna	3	yaʿmalūna		
 49:6	8	fa-tabayyanū	6 7	fa-taṯabbatū	*	
-49:11	27	tanābazū	2b	ittanābazū		
-49:12	13	tajassasū	2b	ittajassasū		
-49:13	11	litaʿārafū	2b	littaʿārafū		
+49:11	27	tanābazū	2b	ittanābazū	x	
+49:12	13	tajassasū	2b	ittajassasū	x	
+49:13	11	litaʿārafū	2b	littaʿārafū	x	
 50:30	2	naqūlu	1 5a	yaqūlu		
 50:32	3	tūʿadūna	2	yūʿadūna		
 52:21	3	wa-ttabaʿathum	3	wa-atbaʿnāhum		
