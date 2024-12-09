@@ -127,7 +127,7 @@
 16:1	9	yušrikūna	6 7	tušrikūna		
 16:3	7	yušrikūna	6 7	tušrikūna		
 16:11	1	yunbitu	5a	nunbitu		
-16:20	2	yadʿūna	1 2 3 4 5a 6 7	tadʿūna		
+16:20	2	yadʿūna	1 2 3 4 6 7	tadʿūna		
 16:28	2	tatawaffāhum	6	yatawaffāhum		
 16:43	7	nūḥī	1 2 3 4 5a 6 7	yūḥā		
 16:48	2	yarau	6 7	tarau		
@@ -147,6 +147,7 @@
 17:69	8	fa-yursila	2 3	fa-nursila		
 17:69	13	yuġriqakum	2 3	nuġriqakum		
 17:93	19	qul	2 4	qāla	C S	قال
+18:26	20	yušriku	4	tušrik		
 18:36	11	minhā	1 2 4	minhumā	M C S	منهما
 18:43	2	takun	6 7	yakun		
 18:47	2	nusayyiru	2 3 4	tusayyiru		
@@ -182,7 +183,7 @@
 24:57	2	taḥsabanna	1 2 3 7	taḥsibanna		
 24:57	2	taḥsabanna	4 6	yaḥsabanna		
 25:8	9	yaʾkulu	6 7	naʾkulu		
-25:17	2	yaḥšuruhum	1 2 3 4 5a 6 7	naḥšuruhum		
+25:17	2	yaḥšuruhum	1 3 4 5a 6 7	naḥšuruhum		
 25:17	8	fa-yaqūlu	4	fa-naqūlu		
 25:19	6	tastaṭīʿūna	1 2 3 4 5a 6 7	yastaṭīʿūna		
 25:25	5	wa-nuzzila	2	wa-nunzilu	C	وننزل
