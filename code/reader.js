@@ -10,9 +10,9 @@ Q.M = 114  //suras
 Q.P = 604  //pages
 let readSourceData = (tn, cb) => {
   setFontFamily(tn==1? 'Kufi' : 'Zekr')
-  //tashkeel #1 and #2 use the same data
+  //tashkeel #1 and #3 use the same data
   switch (tn) {
-    case 1: return new KufiText(QTEXT[1], cb)
+    case 1: return new KufiText(QTEXT[3], cb)
     case 2: return new QuranText(QTEXT[1], cb)
     case 3: 
     default:return new QuranText(QTEXT[3], cb)

@@ -181,7 +181,10 @@ class KufiText extends QuranText {
     verseNumber() { return ' ﴿ '  }
     //Kufi font has a problem with dotted ya 
     //replace with undotted ya at the end of a word
-    filter(s) { return s.replaceAll(/ي( |ء)/g, 'ى$1') }
+    filter(s) { //return s.replaceAll(/ي( |ء)/g, 'ى$1') 
+      s = s.replaceAll('ٱ', 'ا').replaceAll('ء', '')
+      return toArabic(removeDiacritical(toBuckwalter(s)))
+    }
 }
 
 /** Keeps data related to words and roots
