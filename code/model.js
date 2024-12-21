@@ -179,11 +179,17 @@ class KufiText extends QuranText {
     constructor(url, callback) { super(url, callback) }
     //no need for the numbers, just a divider
     verseNumber() { return ' ﴿ '  }
-    //Kufi font has a problem with dotted ya 
-    //replace with undotted ya at the end of a word
-    filter(s) { //return s.replaceAll(/ي( |ء)/g, 'ى$1') 
-      s = s.replaceAll('ٱ', 'ا').replaceAll('ء', '')
-      return toArabic(removeDiacritical(toBuckwalter(s)))
+    filter(s) {
+      let t = ''
+      for (let i = 0; i < s.length; i++) {
+        let c = s.charCodeAt(i)
+        if (c === 1649) t += 'ا'  //replace 'ٱ'
+        if (c === 1769) t += '۩'  //secde
+        if (c === 1569) continue  //skip 'ء'
+        if (c > 1610) continue    //removeDiacritical 
+        t += s[i]
+      }
+      return t
     }
 }
 
