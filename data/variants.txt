@@ -1,3 +1,4 @@
+1:4	1	māliki	1 2 3 4 6	maliki	x	
 2:48	10	yuqbalu	2 3	tuqbalu		
 2:58	16	naġfir	1	yuġfar		
 2:58	16	naġfir	4	tuġfar		
