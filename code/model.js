@@ -259,9 +259,9 @@ class Dictionary {
 
 let RDR_DATA 
 = `Nāfiʿ	Qālūn	Warš
-Ibn Kaṯīr	Qunbul	al-Bazzī
-Abū ʿAmr	al-Dūrī	al-Sūsī
-Ibn ʿĀmir	Ibn Ḏakwān	Hišām
+Ibn&nbsp;Kaṯīr	Qunbul	al-Bazzī
+Abū&nbsp;ʿAmr	al-Dūrī	al-Sūsī
+Ibn&nbsp;ʿĀmir	Ibn&nbsp;Ḏakwān	Hišām
 ʿĀṣim	Šuʿbah	Ḥafṣ
 Ḥamzah	Ḫalaf	Ḫallād
 al-Kisāī	al-Dūrī	al-Layṯ`
