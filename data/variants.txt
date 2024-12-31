@@ -234,8 +234,23 @@
 34:17	6	nujāzī	1 2 3 4 5a	yujāzā		
 34:40	2	yaḥšuruhum	1 2 3 4 5a 6 7	naḥšuruhum		
 34:40	5	yaqūlu	1 2 3 4 5a 6 7	naqūlu		
+36:1	1	yā-sīn	5a 6 7	yē-sīn	x	
+36:5	1	tanzīla	1 2 3 5a	tanzīlu	x	
+36:9	5	saddan	1 2 3 4 5a	suddan	x	
+36:9	8	saddan	1 2 3 4 5a	suddan	x	
+36:14	6	fa-ʿazzaznā	5a	fa-ʿazaznā	x	
+36:32	3	lammā	1 2 3 7	lamā	x	
 36:35	5	ʿamilathu	5a 6 7	ʿamilat	K	عملت
+36:39	1	wal-qamara	1 2 3	wal-qamaru	x	
+36:41	5	ḏurriyyatahum	1 4	ḏurriyyātihim	x	
+36:49	8	yaḫiṣṣimūna	1b 2 4b	yaḫaṣṣimūna	x	
+36:49	8	yaḫiṣṣimūna	1a 3 6	yaḫṣimūna	x	
+36:56	4	ẓilālin	6 7	ẓulalin	x	
+36:62	4	jibillan	3 4	jublan	x	
+36:62	4	jibillan	2 6 7	jubulan	x	
+36:67	5	makānatihim	5a	makānātihim	x	
 36:68	7	yaʿqilūna	1 4a	taʿqilūna		
+36:68	3	nunakkishu	1 2 3 4 7	nankushu	x	
 36:70	1	li-yunḏira	1 4	li-tunḏira		
 38:53	3	tūʿadūna	2 3	yūʿadūna		
 39:64	4	taʾmurūnnī	4	taʾmurūnanī	S	تأمروننى
