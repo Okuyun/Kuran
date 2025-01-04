@@ -191,6 +191,7 @@
 25:48	5	bušran	1 2 3 4	nušuran	*	
 25:48	5	bušran	6 7	našran	*	
 25:60	11	taʾmurunā	6 7	yaʾmurunā		
+26:176	5	aṣḥābul-ʾaikati	1 2 4	aṣḥābu laikata	x	
 26:197	2	yakun	4	takun		
 26:217	1	wa-tawakkal	1 4	fa-tawakkal	M S	فتوكل
 27:21	7	yaʾtiyannī	2	yaʾtiyannanī	C	ليأتيننى
@@ -215,12 +216,70 @@
 29:57	7	turjaʿūna	5a	yurjaʿūna		
 29:58	5	nubawwiʾanna	6 7	nuṯwiyanna	*	
 30:11	8	turjaʿūna	3 5a	yurjaʿūna		
-30:41	10	li-yuḏīqahum	2a	li-nuḏīqahum		
-30:33	18	yušrikūna	6 7	tušrikūna		
 30:52	6	tusmiʿu	2	yasmaʿu		
 30:57	3	yanfaʿu	1 2 3 4	tanfaʿu		
+30:10	3	ʿāqibata	1 2 3	ʿāqibatu	x	
+30:11	8	turjaʿūna	3 5a	yurjaʿūna		
+30:19	4	al-mayyiti	2 3 4 5a	al-maiti	x	
+30:19	6	al-mayyita	2 3 4 5a	al-maita	x	
+30:19	14	tuḫrajūna	6 7	taḫrujūna	x	
+30:22	13	lil-ʿālimīna	1 2 3 4 5a 6 7	lil-ʿālamīna	x	
+30:32	3	farraqū	6 7	fāraqū	x	
+30:33	18	yušrikūna	6 7	tušrikūna		
+30:39	2	ʾātaitum	2	ʾataitum	x	
+30:39	5	li-yarbuwa	1	li-turbū		
+30:41	10	li-yuḏīqahum	2a	li-nuḏīqahum		
+30:48	4	ar-riyāḥa	2 6 7	ar-rīḥa	x	
+30:48	13	kisafan	4b	kisfan	x	
+30:50	3	ʾāṯāri	1 2 3 5a	ʾaṯari	x	
+30:52	6	tusmiʿu	2	yasmaʿu		
+30:54	5	ḍaʿfin	1 2 3 4 7	ḍuʿfin	x	
+30:54	10	ḍaʿfin	1 2 3 4 7	ḍuʿfin	x	
+30:54	17	ḍaʿfan	1 2 3 4 7	ḍuʿfan	x	
+30:57	3	yanfaʿu	1 2 3 4	tanfaʿu		
+31:3	2	wa-raḥmatan	6	wa-raḥmatun	x	
+31:6	7	li-yuḍilla	2 3	li-yaḍilla	x	
+31:6	13	wa-yattaḫiḏahā	1 2 3 4 5a	wa-yattaḫiḏuhā	x	
+31:6	14	huzuwan	6	huzʾan	x	
+31:6	14	huzuwan	1 2 3 4 5a 7	huzuʾan	x	
+31:13	7	yā-bunayya	2	yā-bunai	x	
+31:16	1	yā-bunayya	2b	yā-bunayyi	x	
+31:16	1	yā-bunayya	2a	yā-bunai	x	
+31:16	5	miṯqāla	1	miṯqālu	x	
+31:18	2	tuṣaʿʿir	1 3 6 7	tuṣāʿir	x	
 31:20	15	niʿamahū	2 4 5a 6 7	niʿmatan		
+31:27	8	wal-baḥru	3	wal-baḥra	x	
 31:30	8	yadʿūna	1 2 4 5a	tadʿūna		
+31:34	6	wa-yunazzilu	2 3 6 7	wa-yunzilu	x	
+32:7	5	ḫalaqahū	2 3 4	ḫalqahū	x	
+32:17	5	uḫfiya	6	uḫfī	x	
+32:24	3	aʾimmatan	1 2 3	aimmatan	x	
+32:24	3	aʾimmatan	4b	āʾimmatan	x	
+33:2	11	taʿmalūna	3	yaʿmalūna		
+33:4	12	allāʾī	1b 2b 3	allā	x	
+33:4	12	allāʾī	1a 2a	allāʾi	x	
+33:4	13	tuẓāhirūna	1 2a 2b 3	taẓẓahharūna	x	
+33:4	13	tuẓāhirūna	4	taẓẓāharūna	x	
+33:4	13	tuẓāhirūna	6 7	taẓāharūna	x	
+33:13	8	muqāma	1 2 3 4 5a 6 7	maqāma	x	
+33:14	9	la-ʾātauhā	1 2	la-ʾatauhā	x	
+33:21	7	uswatun	1 2 3 4 6 7	iswatun	x	
+33:26	12	ar-ruʿba	4 7	ar-ruʿuba	x	
+33:30	8	yuḍāʿaf	2 4	nuḍaʿʿif		
+33:30	2	an-nabiyyi	1	an-nabīʾi	x	
+33:30	7	mubayyinatin	2 5a	mubayyanatin	x	
+33:30	10	al-ʿaḏābu	4	al-ʿaḏāba	x	
+33:31	6	wa-taʿmal	6 7	wa-yaʿmal		
+33:31	8	nuʾtihā	6 7	yuʾtihā		
+33:36	12	yakūna	1 2 3 4a	takūna		
+33:40	11	wa-ḫātama	1 2 3 4 6 7	wa-ḫātima	x	
+33:40	12	an-nabiyyīna	1		an-nabīʾīna	x	
+33:49	12	tamassūhunna	6 7	tumāssūhunna	x	
+33:52	2	yaḥillu	3	taḥillu		
+33:52	9	tabaddala	2b	ittabaddala		
+33:67	5	sādatanā	4	sādātinā	x	
+33:67	8	as-sabīla	1 4 5a	as-sabīlā	x	
+33:68	8	kabīran	1 2 3 4 6 7	kaṯīran	*	
 33:2	11	taʿmalūna	3	yaʿmalūna		
 33:30	8	yuḍāʿaf	2 4	nuḍaʿʿif		
 33:31	6	wa-taʿmal	6 7	wa-yaʿmal		
@@ -228,23 +287,54 @@
 33:36	12	yakūna	1 2 3 4a	takūna		
 33:52	2	yaḥillu	3	taḥillu		
 33:68	8	kabīran	1 2 3 4 6 7	kaṯīran	*	
+34:3	11	ʿālimi	1 4	ʿālimu	x	
+34:3	11	ʿālimi	6 7	ʿallāma	x	
+34:3	14	yaʿzubu	7	yaʿzibu	x	
+34:5	5	muʿājizīna	2	muʿajjizīna	x	
+34:5	11	ʾalīmun	1 3 4 6 7	ʾalīmin	x	
 34:9	13	našaʾ	6 7	yašaʾ		
 34:9	14	naḫsif	6 7	yaḫsif		
 34:9	18	nusqiṭ	6 7	yusqiṭ		
+34:9	20	kisafan	1 2 3 4 5a 6 7	kisfan	x	
+34:12	2	ar-rīḥa	5a	ar-rīḥu	x	
+34:14	13	minsaʾatahū	1 3	minsātahū	x	
+34:14	13	minsaʾatahū	4a	minsaʾtahū	x	
+34:15	3	li-sabaʾin	2a	li-sabaʾ	x	
+34:15	3	li-sabaʾin	2b 3	li-sabaʾa	x	
+34:15	5	maskanihim	1 2 3 4 5a	masākinihim	x	
+34:15	5	maskanihim	7	maskinihim	x	
+34:16	10	ʾukulin	1 2	ʾuklin	x	
+34:16	10	ʾukulin	3	ʾukuli	x	
 34:17	6	nujāzī	1 2 3 4 5a	yujāzā		
+34:17	8	al-kafūra	1 2 3 4 5a	al-kafūru	x	
+34:19	3	bāʿid	2 3 4b	baʿʿid	x	
+34:20	2	ṣaddaqa	1 2 3 4	ṣadaqa	x	
+34:23	7	ʾaḏina	3 6 7	ʾuḏina	x	
+34:23	11	fuzziʿa	4	fazzaʿa	x	
+34:37	22	al-ġurufāti	6	al-ġurufati	x	
 34:40	2	yaḥšuruhum	1 2 3 4 5a 6 7	naḥšuruhum		
 34:40	5	yaqūlu	1 2 3 4 5a 6 7	naqūlu		
+34:52	6	at-tanāwušu	3 5a 6 7	at-tanāʾušu	x	
+35:3	10	ġairu	6 7	ġairi	x	
+35:9	4	ar-riyāḥa	2 6 7	ar-rīḥa	x	
+35:33	10	mayyitin	2 3 4 5a 6 7	maitin	x	
+35:36	16	najzī	3	yujzā	x	
+35:36	17	kulla	3	kullu	x	
+35:40	2	a-raʾaitum	7	a-raitum	x	
+35:43	24	bayyinatin	1 4 5a 7	bayyanātin	x	
 36:1	1	yā-sīn	5a 6 7	yē-sīn	x	
 36:5	1	tanzīla	1 2 3 5a	tanzīlu	x	
 36:9	5	saddan	1 2 3 4 5a	suddan	x	
 36:9	8	saddan	1 2 3 4 5a	suddan	x	
 36:14	6	fa-ʿazzaznā	5a	fa-ʿazaznā	x	
 36:32	3	lammā	1 2 3 7	lamā	x	
+36:35	3	ṯamarihī	6 7	ṯumurihī	x	
 36:35	5	ʿamilathu	5a 6 7	ʿamilat	K	عملت
 36:39	1	wal-qamara	1 2 3	wal-qamaru	x	
 36:41	5	ḏurriyyatahum	1 4	ḏurriyyātihim	x	
 36:49	8	yaḫiṣṣimūna	1b 2 4b	yaḫaṣṣimūna	x	
 36:49	8	yaḫiṣṣimūna	1a 3 6	yaḫṣimūna	x	
+36:55	6	šuġulin	1 2 3	šuġlin	x	
 36:56	4	ẓilālin	6 7	ẓulalin	x	
 36:62	4	jibillan	3 4	jublan	x	
 36:62	4	jibillan	2 6 7	jubulan	x	
@@ -252,7 +342,37 @@
 36:68	7	yaʿqilūna	1 4a	taʿqilūna		
 36:68	3	nunakkishu	1 2 3 4 7	nankushu	x	
 36:70	1	li-yunḏira	1 4	li-tunḏira		
+36:76	2	yaḥzunka	1	yuḥzinka	x	
+37:6	5	bi-zīnatin	1 2 3 4 7	bi-zīnati	x	
+37:6	6	al-kawākibi	5a	al-kawākiba	x	
+37:8	2	yassammaʿūna	1 2 3 4 5a	yasmaʿūna	x	 
+37:12	2	ʿajibta	6 7	ʿajibtu	x	 
+37:17	1	awa-ābāʾuna	1a 4	au ābāʾuna	x	
+37:47	7	yunzafūna	6 7	yunzifūna	x	
+37:94	3	yaziffūna	6	yuziffūna	x	
+37:102	6	yā-bunayya	1 2 3 4 5a 6 7	yā-bunayyi	x	
+37:102	7	innī	1 2 3	inniya	x	
+37:102	11	annī	1 2 3	anniya	x	
+37:102	15	tarā	1b 3	tarē	x	
+37:102	15	tarā	6 7	turī	x	
+37:102	17	yā-abati	4	yā-abata	x	
+37:102	21	sa-tajidunī	1	sa-tajiduniya	x	
+37:123	2	ʾilyāsa	4a	ilyāsa	x	
+37:126	1	allāha	1 2 3 4 5a	allāhu	x	
+37:126	2	rabbakum	1 2 3 4 5a	rabbukum	x	
+37:126	3	wa-rabba	1 2 3 4 5a	wa-rabbu	x	
+37:130	3	il yāsīn	1 4	āl yāsīn	x	
+38:13	5	aṣḥābul-ʾaikati	1 2 4	aṣḥābu laikata	x	
+38:15	10	fawāqin	6 7	fuwāqin	x	
+38:45	2	ʿibādanā	2	ʿabdanā	x	
+38:46	3	bi-ḫāliṣatin	1 4b	bi-ḫāliṣati	x	
+38:48	3	wal-yasaʿa	6 7	wal-laisaʿa	x	
 38:53	3	tūʿadūna	2 3	yūʿadūna		
+38:57	4	wa-ġassāqun	1 2 3 4 5a	wa-ġasāqun	x	
+38:58	1	wa-ʾāḫaru	3	wa-ʾuḫaru	x	
+38:63	1	ʾa-ttaḫaḏnāhum	3 6 7	ittaḫaḏnāhum	x	
+38:63	2	siḫriyyan	1 6 7	suḫriyyan	x	
+38:84	2	fal-ḥaqqu	1 2 3 4 7	fal-ḥaqqa	x	
 39:64	4	taʾmurūnnī	4	taʾmurūnanī	S	تأمروننى
 40:20	5	yadʿūna	1 4	tadʿūna		
 40:21	16	minhum	4	minkum	S	منكم
