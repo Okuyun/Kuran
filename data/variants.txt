@@ -590,7 +590,7 @@
 58:2	2	yuẓāhirūna	1 2 3	yaẓẓahharūna	x	
 58:2	2	yuẓāhirūna	4 6 7	yaẓẓāharūna	x	
 58:2	12	allāʾī	1b 2b 3	allā	x	
-58:8	13	wa-yatanājauna	6	wa-yantajūna	x	
+58:8	13	wa-yatanājauna	6	wa-yantajūna		
 58:11	9	al-majālisi	1 2 3 4 5a 6 7	al-majlisi	x	
 58:11	16	unšuzū	2 3 5a 6 7	inšizū	x	
 58:11	17	fa-nšuzū	2 3 5a 6 7	fa-nšizū	x	
@@ -605,7 +605,6 @@
 60:3	8	yafṣilu	4	yufaṣṣalu	x	
 60:3	8	yafṣilu	6 7	yufaṣṣilu	x	
 60:4	4	uswatun	1 2 3 4 6 7	iswatun	x	
-60:6	7	ibrāhīma	4b	ibrāhāma	x	
 60:10	39	tumsikū	3	tumassikū	x	
 60:10	42	wa-sʾalū	2 7	wa-salū	x	
 61:6	22	baʿdi	1 2 3 4a 5a	baʿdiya	x	
@@ -747,3 +746,5 @@
 106:1	1	li-ʾīlāfi	4	li-ʾilāfi	x	
 111:1	4	lahabin	2	lahbin	x	
 111:4	2	ḥammālata	1 2 3 4 6 7	ḥammālatu	x	
+112:4	4	kufuwan	6	kufʾan	x	
+112:4	4	kufuwan	1 2 3 4 5a 7	kufuʾan	x	

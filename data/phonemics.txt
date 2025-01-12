@@ -31,6 +31,7 @@
 53:50	4	al-ʾūlā	6 7	al-ʾūlē	x	
 53:51	3	abqā	1b 3	abqæ	x	
 53:51	3	abqā	6 7	abqē	x	
+60:6	7	ibrāhīma	4b	ibrāhāma	x	
 61:6	17	at-taurāti	1b 6	at-tauræti	x	
 61:6	17	at-taurāti	3 4a 7	at-taurēti	x	
 70:15	3	laẓā	1a 3	laẓæ	x	
@@ -60,5 +61,3 @@
 96:7	3	istaġnā	6 7	istaġnē	x	
 101:10	2	adrāka	1a	adræka	x	
 101:10	2	adrāka	3 4a 5a 6 7	adrēka	x	
-112:4	4	kufuwan	6	kufʾan	x	
-112:4	4	kufuwan	1 2 3 4 5a 7	kufuʾan	x	
