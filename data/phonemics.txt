@@ -1,3 +1,19 @@
+2:20	24	šaiʾin	1b	šaiyʾin	x	
+2:29	16	wa-huwa	1a 3 7	wa-hwa	x	
+2:61	38	ʿalaihimu	6	ʿalaihumu	x	
+2:61	52	an-nabiyyīna	1	an-nabīʾīna	x	
+2:62	7	wa-ṣ-ṣābiʾīna	1	wa-ṣ-ṣābīna	x	
+2:173	13	fa-mani	1 2 4 7	fa-manu	x	
+2:177	18	wa-n-nabiyyīna	1	wa-n-nabiyyīna	x	
+2:185	6	al-qurʾānu	2	al-qurānu	x	
+2:245	14	wa-yabsuṭu	1 2b 4a 5a 6b 7	wa-yabṣuṭu		
+2:246	13	li-nabiyyin	1	li-nabīʾin	x	
+2:249	19	minnī	1 3	minniya	x	
+2:258	16	rabbiya	6	rabbī	x	
+2:258	21	ʾana	1	ʾanā	x	
+2:259	42	yatasannah	6 7	yatasanna	x	
+2:265	13	bi-rabwatin	1 2 3 6 7	bi-rubwatin	x	
+2:265	17	ʾukulahā	1 2 3 6 7	ʾuklahā	x	
 25:8	17	masḥūran-i	1 2 4b 7	masḥūran-u	x	
 25:69	1	yuḍāʿaf	2	yuḍaʿʿaf	x	
 25:69	1	yuḍāʿaf	4	yuḍaʿʿafu	x	
