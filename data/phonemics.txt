@@ -1,3 +1,28 @@
+25:8	17	masḥūran-i	1 2 4b 7	masḥūran-u	x	
+25:69	1	yuḍāʿaf	2	yuḍaʿʿaf	x	
+25:69	1	yuḍāʿaf	4	yuḍaʿʿafu	x	
+25:69	1	yuḍāʿaf	5a	yuḍāʿafu	x	
+25:69	6	wa-yaḫlud	2 4 5a	wa-yaḫludu	x	
+26:1	1	ṭā-sīn-mīm	ṭē-sīn-mīm	x	
+26:61	2	tarāʾa	6	tarēʾa	x	
+27:7	5	ʾinnī	1 2 3	ʾinniya	x	
+27:25	1	ʾallā	7	ʾalā	x	
+27:40	7	ʾana	1	ʾanā	x	
+27:66	1	bali	2 3	bal	x	
+27:67	4	ʾa-ʾiḏā	1	ʾiḏā	x	
+27:67	4	ʾa-ʾiḏā	2 3	ʾa-yiḏā	x	
+27:67	8	ʾa-ʾinnā	1b 2	ʾa-yinnā	x	
+27:67	8	ʾa-ʾinnā	4 7	ʾinnanā	x	
+27:67	8	ʾa-ʾinnā	1a 3	ʾā-yinnā	x	
+28:26	3	yā-ʾabati	4	yā-ʾabata	x	
+28:29	13	li-ʾahlihi	6	li-ʾahlihu	x	
+28:29	15	ʾinnī	1 2 3	ʾinniya	x	
+28:29	18	laʿallī	1 2 3 4	laʿalliya	x	
+28:34	8	maʿiya	1 2 3 4 5a 6 7	maʿī	x	
+28:34	11	ʾinnī	1 2 3 ʾinniya	x	
+28:59	9	ʾummihā	6 7	ʾimmihā	x	
+28:61	5	fa-huwa	1a 3 7	fa-hwa	x	
+28:61	13	huwa	1a 7	hwa	x	
 36:1	1	yā-sīn	5a 6 7	yē-sīn	x	
 40:1	1	ḥā-mīm	1b 3	ḥæ-mīm	x	
 40:1	1	ḥā-mīm	4a 5a 6 7	ḥē-mīm	x	
