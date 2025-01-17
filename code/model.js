@@ -257,14 +257,14 @@ class Dictionary {
   }
 }
 
-let RDR_DATA 
+let RDR_DATA  //use &nbsp; and non-breaking hyphen ‑
 = `Nāfiʿ	Qālūn	Warš
-Ibn&nbsp;Kaṯīr	Qunbul	al-Bazzī
-Abū&nbsp;ʿAmr	al-Dūrī	al-Sūsī
+Ibn&nbsp;Kaṯīr	Qunbul	al‑Bazzī
+Abū&nbsp;ʿAmr	al‑Dūrī	al‑Sūsī
 Ibn&nbsp;ʿĀmir	Ibn&nbsp;Ḏakwān	Hišām
 ʿĀṣim	Šuʿbah	Ḥafṣ
 Ḥamzah	Ḫalaf	Ḫallād
-al-Kisāī	al-Dūrī	al-Layṯ`
+al‑Kisāī	al‑Dūrī	al‑Layṯ`
 let READER = {}, n = 0
 for (let s of RDR_DATA.split('\n')) {
   let [a0, a1, a2] = s.split('\t')

@@ -3,8 +3,10 @@
 2:61	38	ʿalaihimu	6	ʿalaihumu	x	
 2:61	52	an-nabiyyīna	1	an-nabīʾīna	x	
 2:62	7	wa-ṣ-ṣābiʾīna	1	wa-ṣ-ṣābīna	x	
+2:67	13	huzuwan	6	huzʾan	x	
+2:67	13	huzuwan	1 2 3 4 5a 7	huzūʾan	x	
 2:173	13	fa-mani	1 2 4 7	fa-manu	x	
-2:177	18	wa-n-nabiyyīna	1	wa-n-nabiyyīna	x	
+2:177	18	wa-n-nabiyyīna	1	wa-n-nabīʾīna	x	
 2:185	6	al-qurʾānu	2	al-qurānu	x	
 2:245	14	wa-yabsuṭu	1 2b 4a 5a 6b 7	wa-yabṣuṭu		
 2:246	13	li-nabiyyin	1	li-nabīʾin	x	
@@ -14,6 +16,16 @@
 2:259	42	yatasannah	6 7	yatasanna	x	
 2:265	13	bi-rabwatin	1 2 3 6 7	bi-rubwatin	x	
 2:265	17	ʾukulahā	1 2 3 6 7	ʾuklahā	x	
+3:21	7	an-nabiyyīna	1	an-nabīʾīna	x	
+3:79	9	wa-n-nubuwwata	1	wa-n-nubūʾata	x	
+3:80	6	wan-nabiyyīna	1	wan-nabīʾīna	x	
+3:81	5	an-nabiyyīna	1	an-nabīʾīna	x	
+3:146	1	wa-ka-ʾayyin	2	wa-kā-ʾin	x	
+3:146	3	nabiyyin	1	nabīʾin	x	
+3:161	3	li-nabiyyin	1	li-nabīʾin	x	
+4:49	14	fatīlan-i	1 2 4b 7	fatīlan-u	x	
+4:66	5	ʾani	1 2 4 7	ʾanu	x	
+4:66	8	ʾawi	1 2 3 4 7	ʾawu	x	
 25:8	17	masḥūran-i	1 2 4b 7	masḥūran-u	x	
 25:69	1	yuḍāʿaf	2	yuḍaʿʿaf	x	
 25:69	1	yuḍāʿaf	4	yuḍaʿʿafu	x	
@@ -39,7 +51,13 @@
 28:59	9	ʾummihā	6 7	ʾimmihā	x	
 28:61	5	fa-huwa	1a 3 7	fa-hwa	x	
 28:61	13	huwa	1a 7	hwa	x	
+31:6	14	huzuwan	6	huzʾan	x	
+31:6	14	huzuwan	1 2 3 4 5a 7	huzuʾan	x	
+33:26	12	ar-ruʿba	4 7	ar-ruʿuba	x	
+33:30	2	an-nabiyyi	1	an-nabīʾi	x	
+33:40	12	an-nabiyyīna	1	an-nabīʾīna	x	
 36:1	1	yā-sīn	5a 6 7	yē-sīn	x	
+39:69	8	bin-nabiyyīna	1	bin-nabīʾīna	x	
 40:1	1	ḥā-mīm	1b 3	ḥæ-mīm	x	
 40:1	1	ḥā-mīm	4a 5a 6 7	ḥē-mīm	x	
 41:1	1	ḥā-mīm	1b 3	ḥæ-mīm	x	
@@ -52,6 +70,8 @@
 44:1	1	ḥā-mīm	4a 5a 6 7	ḥē-mīm	x	
 45:1	1	ḥā-mīm	1b 3	ḥæ-mīm	x	
 45:1	1	ḥā-mīm	4a 5a 6 7	ḥē-mīm	x	
+45:35	6	huzuwan	1 2 3 4 5a 7	huzuʾan	x	
+45:35	6	huzuwan	6	huzʾan	x	
 46:1	1	ḥā-mīm	1b 3	ḥæ-mīm	x	
 46:1	1	ḥā-mīm	4a 5a 6 7	ḥē-mīm	x	
 48:29	28	at-taurāti	1b 6	at-tauræti	x	
@@ -74,9 +94,16 @@
 53:50	4	al-ʾūlā	6 7	al-ʾūlē	x	
 53:51	3	abqā	1b 3	abqæ	x	
 53:51	3	abqā	6 7	abqē	x	
+56:47	3	a-ʾiḏā	1 2 3	ā-yiḏā	x	
+56:47	4	mitnā	2 3 4 5a	mutnā	x	
+56:47	8	a-ʾinnā	1 7	innā	x	
+56:47	8	a-ʾinnā	2 3	ā-yinnā	x	
 60:6	7	ibrāhīma	4b	ibrāhāma	x	
 61:6	17	at-taurāti	1b 6	at-tauræti	x	
 61:6	17	at-taurāti	3 4a 7	at-taurēti	x	
+65:1	2	an-nabiyyu	1	an-nabīʾu	x	
+66:3	3	an-nabiyyu	1	an-nabīʾu	x	
+66:8	25	an-nabiyya	1	an-nabīʾa	x	
 70:15	3	laẓā	1a 3	laẓæ	x	
 70:15	3	laẓā	6 7	laẓē	x	
 70:16	2	liš-šawā	1a 3	liš-šawæ	x	
@@ -106,3 +133,5 @@
 96:7	3	istaġnā	6 7	istaġnē	x	
 101:10	2	adrāka	1a	adræka	x	
 101:10	2	adrāka	3 4a 5a 6 7	adrēka	x	
+112:4	4	kufuwan	6	kufʾan	x	
+112:4	4	kufuwan	1 2 3 4 5a 7	kufuʾan	x	
