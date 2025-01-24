@@ -139,12 +139,12 @@ function displayWord(evt) {
     function rgnText(v) {
       return text(v.rgn, REGION, v.rasm, 'Kufi')
     }
-    let [v1, v2] = Q.vary.getData(i, n)
+    let [v1, ...av] = Q.vary.getData(i, n)
     if (!v1) return //should not happen
     stdText.innerText = v1.std
     varText.innerHTML = rdrText(v1)
     if (v1.rasm) varText.innerHTML += rgnText(v1)
-    if (v2) varText.innerHTML += rdrText(v2)
+    av.forEach(v => varText.innerHTML += rdrText(v))
   }
     evt.preventDefault(); hideMenus()
     Q.evt = evt  //keep last event

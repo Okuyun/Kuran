@@ -26,7 +26,7 @@
 3:79	9	wa-n-nubuwwata	1	wa-n-nubūʾata	x	
 3:80	6	wan-nabiyyīna	1	wan-nabīʾīna	x	
 3:81	5	an-nabiyyīna	1	an-nabīʾīna	x	
-3:146	1	wa-ka-ʾayyin	2	wa-kā-ʾin	x	
+3:146	1	wa-ka-ʾajyyin	2	wa-kā-ʾin	x	
 3:146	3	nabiyyin	1	nabīʾin	x	
 3:154	55	buyūtikum	1a 2 3 4 5a 6 7	biyūtikum	x	
 3:161	3	li-nabiyyin	1	li-nabīʾin	x	
@@ -41,12 +41,12 @@
 6:90	6	qtadih	4a	qtadihī	x	
 6:90	6	qtadih	4b	qtadihi	x	
 6:90	6	qtadih	6 7	qtadi	x	
-6:153	3	ṣirāṭī	2a	s(ṣ)irāṭī	x	
+6:145	30	fa-mani		1 2 4 7	fa-manu	x	
+6:153	3	ṣirāṭī	2a	sirāṭī	x	
 6:153	3	ṣirāṭī	4	ṣirāṭiya	x	
-6:153	3	ṣirāṭī	6a	z(ṣ)irāṭī	x	
-6:161	6	ṣirāṭin	2a	s(ṣ)irāṭīn	x	
-6:161	6	ṣirāṭin	6a	z(ṣ)irāṭīn	x	
-25:8	17	masḥūran-i	1 2 4b 7	masḥūran-u	x	
+6:153	3	ṣirāṭī	6a	zirāṭī	x	
+6:161	6	ṣirāṭin	2a	sirāṭīn	x	
+6:161	6	ṣirāṭin	6a	zirāṭīn	x	
 25:69	1	yuḍāʿaf	2	yuḍaʿʿaf	x	
 25:69	1	yuḍāʿaf	4	yuḍaʿʿafu	x	
 25:69	1	yuḍāʿaf	5a	yuḍāʿafu	x	
@@ -55,8 +55,11 @@
 26:61	2	tarāʾa	6	tarēʾa	x	
 26:149	4	buyūtan	1b 2 4 5a 6 7	biyūtan	x	
 27:7	5	ʾinnī	1 2 3	ʾinniya	x	
+27:22	1	fa-makaṯa	1 2 3 4 6 7	fa-makuṯa	x	
 27:25	1	ʾallā	7	ʾalā	x	
 27:40	7	ʾana	1	ʾanā	x	
+27:49	11	mahlika	1 2 3 4 6 7	muhlaka	x	
+27:49	11	mahlika	5a	mahlaka	x	
 27:66	1	bali	2 3	bal	x	
 27:67	4	ʾa-ʾiḏā	1	ʾiḏā	x	
 27:67	4	ʾa-ʾiḏā	2 3	ʾa-yiḏā	x	
@@ -129,6 +132,8 @@
 56:47	4	mitnā	2 3 4 5a	mutnā	x	
 56:47	8	a-ʾinnā	1 7	innā	x	
 56:47	8	a-ʾinnā	2 3	ā-yinnā	x	
+58:11	16	unšuzū	2 3 5a 6 7	inšizū	x	
+58:11	17	fa-nšuzū	2 3 5a 6 7	fa-nšizū	x	
 59:2	34	buyūtahum	1a 2 4 5a 6 7	biyūtahum	x	
 60:6	7	ibrāhīma	4b	ibrāhāma	x	
 61:6	17	at-taurāti	1b 6	at-tauræti	x	

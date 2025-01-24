@@ -333,7 +333,6 @@
 6:143	7	al-maʿzi	2 3 4	l-maʿazi	x	
 6:145	14	yakūna	2 4 6	takūna		
 6:145	15	maitatan	4	maitatun	x	
-6:145	30	fa-mani		1 2 4 7	fa-manu	x	
 6:152	35	taḏakkarūna	1 2 3 4 5a	taḏḏakkarūna	x	
 6:153	1	wa-anna	6 7	wa-inna	x	
 6:153	1	wa-anna	4	wa-an	x	
@@ -346,7 +345,8 @@
 7:40	8	tufattaḥu	6 7	yuftaḥu		
 7:40	8	tufattaḥu	3	tuftaḥu		
 7:43	17	wa-mā kunnā	4	mā kunnā	S	ما كنا
-7:57	5	bušran	1 2 3 4	nušuran	*	
+7:57	5	bušran	1 2 3	nušuran	*	
+7:57	5	bušran	4	nušran	*	
 7:57	5	bušran	6 7	našran	*	
 7:75	1	qāla	4	wa-qāla	S	وقال
 7:141	2	anjainākum	4	anjākum	S	أنجيكم
@@ -531,7 +531,8 @@
 25:25	2	tašaqqaqu	1 2 4	taššaqqaqu	x	
 25:25	6	al-malāʾikatu	2	al-malāʾikata	x	
 25:38	2	wa-ṯamūda	1 2 3 4 5a 7	wa-ṯamūdan	x	
-25:48	5	bušran	1 2 3 4	nušuran	*	
+25:48	5	bušran	1 2 3	nušuran	*	
+25:48	5	bušran	4	nušran	*	
 25:48	5	bušran	6 7	našran	*	
 25:60	11	taʾmurunā	6 7	yaʾmurunā		
 25:61	9	sirājan	6 7	surujan	x	
@@ -555,7 +556,6 @@
 27:21	7	yaʾtiyannī	2	yaʾtiyannanī	C	ليأتيننى
 27:7	13	bi-šihābin	1 2 3 4	bi-šihābi	x	
 27:21	7	yaʾtiyannī	2	yaʾtiyannanī	C	ليأتيننى
-27:22	1	fa-makaṯa	1 2 3 4 6 7	fa-makuṯa	x	
 27:22	12	sabaʾin	2b 3	sabaʾa	x	
 27:22	12	sabaʾin	2a	sabaʾ	x	
 27:25	12	tuḫfūna	1 2 3 4 5a 6	yuḫfūna		
@@ -566,15 +566,14 @@
 27:44	11	sāqaihā	2a	saʾqaihā	x	
 27:49	4	nubayyitannahū	6 7	tubayyitunnahū		
 27:49	7	la-naqūlanna	6 7	la-taqūlunna		
-27:49	11	mahlika	1 2 3 4 6 7	muhlaka	x	
-27:49	11	mahlika	5a	mahlaka	x	
 27:51	6	annā	1 2 3 4	innā	x	
 27:57	5	qaddarnāhā	5a	qadarnāhā	x	
 27:59	12	yušrikūna	1 2 4 6 7	tušrikūna		
 27:62	16	taḏakkarūna	3 4b	yaḏḏakkarūna		
 27:62	16	taḏakkarūna	1 2 4a 5a	taḏḏakkarūna		
 27:63	9	ar-riyāḥa	2 6 7	ar-rīḥa	x	
-27:63	10	bušran	1 2 3 4	nušuran	*	
+27:63	10	bušran	1 2 3	nušuran	*	
+27:63	10	bušran	4	nušran	*	
 27:63	10	bušran	6 7	našran	*	
 27:66	2	iddāraka	2 3	adraka	x	
 27:80	6	tusmiʿuṣ-ṣumma	2	yasmaʿuṣ-ṣummu		
@@ -964,9 +963,8 @@
 58:2	2	yuẓāhirūna	4 6 7	yaẓẓāharūna	x	
 58:2	12	allāʾī	1b 2b 3	allā	x	
 58:8	13	yatanājauna	6	yantajūna		
-58:11	9	al-majālisi	1 2 3 4 5a 6 7	al-majlisi	x	
-58:11	16	unšuzū	2 3 5a 6 7	inšizū	x	
-58:11	17	fa-nšuzū	2 3 5a 6 7	fa-nšizū	x	
+58:10	5	li-yaḥzuna	1	li-yuḥzina	x	
+58:11	9	al-majālisi	1 2 3 4 6 7	al-majlisi	x	
 59:2	33	yuḫribūna	3	yuḫarribūna	x	
 59:7	19	yakūna	4b	takūna		
 59:7	20	dūlatan	4b	dūlatun	x	
