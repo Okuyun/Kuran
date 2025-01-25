@@ -490,35 +490,109 @@
 18:89	2	atbaʿa	1 2 3	-ttabaʿa	x	
 18:92	2	atbaʿa	1 2 3	-ttabaʿa	x	
 18:93	12	yafqahūna	6 7	yufqihūna	x	
-18:94	13	ḫarjan	6 7	ḫarājan	x	
 18:95	3	makkannī	2	makkananī	C	مكننى
 18:109	12	tanfada	6 7	yanfada		
+19:7	3	nubašširuka	6	nabšuruka	x	
+19:9	9	ḫalaqtuka	6 7	ḫalaqnāka		
+19:19	6	li-ahaba	1b 3	li-yahaba		
+19:24	2	min taḥtihā	2 3 4 5a	man taḥtahā	x	
+19:25	5	tusāqiṭ	1 2 3 4 5a 7	tassāqaṭ	x	
+19:34	5	qaula	1 2 3 6 7	qaulu	x	
+19:35	16	fa-yakūnu	4	fa-yakūna	x	
+19:36	1	wa-inna	1 2 3 6	wa-anna	x	
+19:51	7	muḫlaṣan	1 2 3 4	muḫliṣan	x	
+19:60	8	yadḫulūna	2 3 5a	yudḫalūna	x	
+19:67	2	yaḏkuru	2 3 6 7	yaḏḏakkaru	x	
+19:72	2	nunajji	7	nunji	x	
 19:90	1	takādu	1 7	yakādu		
+19:90	3	yatafaṭṭarna	3 4 5a 6	yanfaṭirna	x	
+20:13	1	wa-anaḫtartuka	6	wa-annaḫtarnāka		
+20:53	5	mahdan	1 2 3 4	mihādan	x	
+20:61	10	fa-yusḥitakum	1 2 3 4 5a	fa-yasḥatakum	x	
+20:63	2	in hāḏāni	1 3 4 5a 6 7	inna hāḏāni	x	
+20:64	1	fa-ajmiʿū	3	fa-jmaʿū	x	
 20:66	7	yuḫayyalu	4a	tuḫayyalu		
+20:69	5	talqaf	1 2a 3 4b 5a 6 7	talaqqaf	x	
+20:69	5	talqaf	4a	talaqqafu	x	
+20:69	5	talqaf	2b	ttalaqqaf	x	
+20:71	2	āmantum	1 2 3 4 5a 6 7	a-āmantum	x	
 20:80	4	anjainākum	6 7	anjaitukum		
 20:80	7	wāʿadnākum	6 7	wāʿadtukum		
 20:81	5	razaqnākum	6 7	razaqtukum		
+20:81	13	yaḥlil	7	yaḥlul	x	
+20:87	7	ḥummilnā	3 5a 6 7	ḥamalnā	x	
 20:96	5	yabṣurū	6 7	tabṣurū		
+20:97	15	tuḫlafahū	2 3	tuḫlifahū	x	
 20:102	2	yunfaḫu	3	nanfuḫu		
+20:119	1	wa-annaka	1 5a	wa-innaka	x	
+20:130	20	tarḍā	5a 7	turḍā	x	
 20:133	8	taʾtihim	2 4 5a 6 7	yaʾtihim		
 21:4	1	qāla	1 2 3 4 5a	qul	M C B S	قل
 21:7	6	nūḥī	1 2 3 4 5a	yūḥā		
 21:7	6	nūḥī	6 7	yūḥē		
-21:25	8	nūḥī	1 2 3 4 5a	yūḥā		
+21:25	8	nūḥī	1 2 3 4 5a	yūḥa		
 21:30	1	a-wa-lam	2	a-lam	C	الم
 21:30	2	yara	2	tara		
+21:45	6	yasmaʿuṣ-ṣummu	4	tusmiʿu ṣ-ṣumma		
+21:47	12	miṯqāla	1	miṯqālu	x	
 21:80	5	li-tuḥṣinakum	1 2 3	li-yuḥṣinakum		
 21:80	5	li-tuḥṣinakum	5a	li-nuḥṣinakum		
+21:88	7	nunjī	4 5a	nujjī		
+21:96	3	futiḥat	4	futtiḥat	x	
+21:104	6	lil-kutubi	1 2 3 4 5a	lil-kitābi	x	
+22:9	3	li-yuḍilla	2 3	li-yaḍilla	x	
+22:15	16	ṯummal-yaqṭaʿ	1b 3 4	ṯumma li-yaqṭaʿ	x	
+22:25	13	sawāʾan	1 2 3 4 5a 6 7	sawāʾun	x	
+22:29	2	ṯummal-yaqḍū	1b 2a 3 4	ṯumma li-yaqḍū	x	
+22:29	4	wal-yūfū	4a	wali-yūfū	x	
+22:29	4	wal-yūfū	5a	wal-yuwaffū	x	
+22:29	6	wal-yaṭṭawwafū	4a	wali-yaṭṭawwafū	x	
+22:31	13	fa-taḫṭafuhu	1	fa-taḫaṭṭafuhu	x	
+22:38	3	yudāfiʿu	2 3	yadfaʿu	x	
+22:39	3	yuqātalūna	2 3 5a 6 7	yuqātilūna	x	
+22:40	13	dafʿu	1	difāʿu	x	
+22:40	18	la-huddimat	1 2	la-hudimat	x	
 22:45	4	ahlaknāhā	3	ahlaktuhā		
 22:47	14	taʿuddūna	2 6 7	yaʿuddūna		
+22:51	5	muʿājizīna	2 3	muʿajjizīna	x	
+22:58	7	qutilū	4	quttilū	x	
 22:62	8	yadʿūna	1 2 4 5a	tadʿūna		
+23:8	3	li-amānātihim	2	li-amānatihim	x	
+23:20	6	tanbutu	2 3	tunbitu	x	
+23:21	6	nusqīkum	1 4 5a	nasqīkum	x	
+23:29	4	munzalan	5a	manzilan	x	
+23:52	1	wa-inna	4	wa-an	x	
+23:52	1	wa-inna	1 2 3	wa-anna	x	
+23:67	4	tahjurūna	1	tuhjirūna	x	
 23:87	2	li-llāhi	3	allāhu	B	الله
 23:89	2	li-llāhi	3	allāhu	B	الله
+23:92	1	ʿālimi	1 5a 6 7	ʿālimu	x	
+23:106	5	šiqwatunā	6 7	šaqāwatunā	x	
+23:111	6	annahum	6 7	innahum	x	
 23:112	1	qāla	2 6 7	qul	M C B S	قال
 23:114	1	qāla	6 7	qul	M C B S	قال
+23:115	8	turjaʿūna	6 7	tarjiʿūna	x	
+24:1	3	wa-faraḍnāhā	2 3	wa-farraḍnāhā	x	
+24:1	9	taḏakkarūna	1 2 3 4 5a	taḏḏakkarūna	x	
+24:2	12	raʾfatun	2	raʾafatun	x	
+24:4	3	al-muḥṣanāti	7	al-muḥṣināti	x	
+24:6	12	arbaʿu	1 2 3 4 5a	arbaʿa	x	
+24:9	1	wal-ḫāmisata	1 2 3 4 5a 6 7	wal-ḫāmisatu	x	
+24:9	2	anna ġaḍaba	1	an ġaḍiba	x	
+24:9	4	allāhi	1	allāhu	x	
 24:24	2	tašhadū	6 7	yašhadū		
+24:31	50	ġairi	4 5a	ġaira	x	
+24:34	5	mubayyinātin	1 2 3 5a	mubayyanātin	x	
 24:35	17	yūqadu	2 3	tawaqqada		
 24:35	17	yūqadu	5a 6 7	tūqadu		
+24:36	10	yusabbiḥu	4 5a	yusabbaḥu	x	
+24:40	13	saḥābun	2b	saḥābu	x	
+24:40	14	ẓulumātun	2	ẓulumātin	x	
+24:45	2	ḫalaqa kulla	6 7	ḫāliqu kulli	x	
+24:52	7	wa-yattaqhi	3 5a 6b	wa-yattaqih	x	
+24:52	7	wa-yattaqhi	1 2 4 7	wa-yattaqihi	x	
+24:55	12	istaḫlafa	5a	istuḫlifa	x	
+24:55	22	yubaddilannahum	2 5a	yubdilannahum	x	
 24:57	2	taḥsabanna	1 2 3 7	taḥsibanna		
 24:57	2	taḥsabanna	4 6	yaḥsabanna		
 25:8	9	yaʾkulu	6 7	naʾkulu		
@@ -756,8 +830,7 @@
 38:53	3	tūʿadūna	2 3	yūʿadūna		
 38:57	4	wa-ġassāqun	1 2 3 4 5a	wa-ġasāqun	x	
 38:58	1	wa-āḫaru	3	wa-uḫaru	x	
-38:63	1	ʾa-ttaḫaḏnāhum	3 6 7	ittaḫaḏnāhum	x	
-38:63	2	siḫriyyan	1 6 7	suḫriyyan	x	
+38:63	1	a-ttaḫaḏnāhum	3 6 7	ittaḫaḏnāhum	x	
 38:84	2	fal-ḥaqqu	1 2 3 4 7	fal-ḥaqqa	x	
 39:6	18	ummahātikum	6	immihātikum	x	
 39:6	18	ummahātikum	7	immahātikum	x	
