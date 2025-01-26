@@ -76,6 +76,63 @@
 8:65	2	an-nabiyyu	1	an-nabīʾu	x	
 8:67	3	li-nabiyyin	1	li-nabīʾin	x	
 8:72	25	walāyatihim	6	wilāyatihim	x	
+9:12	11	ʾaʾimmata	1 2 3	ʾayimmata	x	
+9:21	5	wa-riḍwānin	5a	wa-ruḍwānin	x	
+9:30	3	ʿuzairun	1 2 3 4 6	ʿuzairu	x	
+9:37	2	n-nasīʾu	1b	n-nasiyyu	x	
+9:53	5	karhan	6 7	kurhan	x	
+9:61	4	n-nabiyya	1	n-nabīʾa	x	
+9:61	7	ʾuḏunun	1	ʾuḏnun	x	
+9:61	9	ʾuḏunu	1	ʾuḏnun	x	
+9:109	8	wa-riḍwānin	5a	wa-ruḍwānin	x	
+9:109	16	jurufin	4 5a 6	jurfin	x	
+9:109	17	hārin	1 3 4a 5a 7	hērin	x	
+9:117	5	n-nabiyyi	1	n-nabīʾi	x	
+10:16	8	wa-lā	2a	wa-la	x	
+10:16	9	ʾadrākum	3 4a 5a 6 7	ʾadrēkum	x	
+10:27	18	qiṭaʿan	2 7	qiṭʿan	x	
+10:35	22	yahiddī	1 2 3 4	yahaddī	x	
+10:35	22	yahiddī	5a	yihiddī	x	
+10:35	22	yahiddī	6 7	yahdī	x	
+10:51	7	ā-l-ʾāna	1	ʾā-lāna	x	
+10:61	9	qurʾānin	2	qurānin	x	
+10:87	9	buyūtan	1a 2 4 5a 6 7	biyūtan	x	
+10:87	11	buyūtakum	1a 2 4 5a 6 7	biyūtakum	x	
+10:103	3	rusulanā	3	ruslanā	x	
+11:27	19	bādiya	3	bādiʾa	x	
+11:28	3	ʾa-raʾaitum	7	ʾa-raitum	x	
+11:42	13	yā-bunayya	1 2 3 4 6 7	yā-bunayyi	x	
+11:46	18	ʾinnī	1 2 3	ʾinniya	x	
+11:69	3	rusulunā	3	ruslunā	x	
+11:69	9	salāmun	6 7	silmun	x	
+11:77	3	rusulunā	3	ruslunā	x	
+11:81	9	fa-ʾasri	1 2	fa-sri	x	
+12:13	3	la-yaḥzununī	2	la-yaḥzununiya	x	
+12:13	3	la-yaḥzununī	1	la-yuḥzinuniya	x	
+12:19	8	yā-bušrā	1 2 3 4	yā-bušrāya	x	
+12:19	8	yā-bušrā	6 7	yā-bušrē	x	
+12:23	17	rabbī	1 2 3	rabbiya	x	
+12:24	8	raʾā	3b 4a 5a 6 7	reʾē	x	
+12:24	8	raʾā	1b 3a	raʾē	x	
+12:31	14	wa-qālati	1 2 4 7	wa-qālatu	x	
+12:31	23	ḥāša	3	ḥāšā	x	
+12:47	5	daʾaban	1 2 3 4 5a 6 7	daʾban	x	
+12:53	3	nafsī	1 3	nafsiya	x	
+12:53	7	bi-s-sūʾi	1b 2a 3	bi-s-sū	x	
+12:53	7	bi-s-sūʾi	1a 2b	bi-s-suwwi	x	
+12:53	11	rabbī	1 3	rabbiya	x	
+12:80	2	staiʾasū	2b	stāyasū	x	
+12:80	29	lī	1 3	liya	x	
+12:80	30	ʾabī	1 2 3	ʾabiya	x	
+12:110	3	staiʾasa	2b	stāyasa	x	
+13:4	21	l-ʾukuli	1 2	l-ʾukli	x	
+13:5	5	a-ʾiḏā	1 2 3	ʾa-yiḏā	x	
+13:5	5	a-ʾiḏā	4	ʾiḏā	x	
+13:5	8	ʾa-ʾinnā	1 7	ʾinnā	x	
+13:5	8	ʾa-ʾinnā	2 3	ʾa-yinnā	x	
+13:31	3	qurʾānan	2	qurānan	x	
+13:31	20	yaiʾasi	2b	yāyasi	x	
+13:35	10	ʾukuluhā	1 2 3	ʾukluhā	x	
 18:94	13	ḫarjan	6 7	ḫarājan	x	
 19:2	5	zakariyyā	1 2 3 4 5a	zakariyyāʾa	x	
 19:6	1	yariṯunī	3 7	yariṯnī	x	
