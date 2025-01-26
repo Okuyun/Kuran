@@ -341,26 +341,70 @@
 6:159	3	farraqū	6 7	fāraqū	x	
 6:161	4	rabbī	1 3	rabbiya	x	
 7:3	14	taḏakkarūna	4	yataḏakkarūna	S	يتذكرون
+7:25	7	tuḫrajūna	4a 6 7	taḫrujūna	x	
+7:26	10	wa-libāsu	1 4 7	wa-libāsa	x	
+7:32	19	ḫāliṣatan	1	ḫāliṣatun	x	
 7:38	40	taʿlamūna	5a	yaʿlamūna		
 7:40	8	tufattaḥu	6 7	yuftaḥu		
 7:40	8	tufattaḥu	3	tuftaḥu		
 7:43	17	wa-mā kunnā	4	mā kunnā	S	ما كنا
+7:44	25	an laʿnatu	2b 4 6 7	anna laʿnata	x	
+7:54	15	yuġši	5a 6 7	yuġašši	x	
+7:55	20	wa-š-šamsa	4	wa-š-šamsu	x	
+7:55	21	wa-l-qamara	4	wa-l-qamaru	x	
+7:55	22	wa-n-nujūma	4	wa-n-nujūmu	x	
+7:55	23	musaḫḫarātin	4	musaḫḫarātun	x	
+7:57	4	ar-riyāḥa	2	ar-rīḥa	x	
 7:57	5	bušran	1 2 3	nušuran	*	
 7:57	5	bušran	4	nušran	*	
 7:57	5	bušran	6 7	našran	*	
+7:57	16	mayyitin	2 3 4 5a	maitin	x	
+7:57	29	taḏakkarūna	1 2 3 4 5a	taḏḏakkarūna	x	
+7:62	1	ʾuballiġukum	3	ʾubliġukum	x	
 7:75	1	qāla	4	wa-qāla	S	وقال
+7:96	7	la-fataḥnā	4	la-fattaḥnā	x	
+7:98	1	awa-amina	1 2 4	au amina	x	
+7:112	3	sāḥirin	6 7	saḥḥārin	x	
+7:117	9	talqafu	1 2a 3 4 5a 6 7	talaqqafu	x	
+7:117	9	talqafu	2b	ttalaqqafu	x	
+7:127	15	sa-nuqattilu	1 2	sa-naqtulu	x	
+7:137	29	yaʿrišūna	4 5a	yaʿrušūna	x	
+7:138	8	yaʿkufūna	6 7	yaʿkifūna	x	
 7:141	2	anjainākum	4	anjākum	S	أنجيكم
+7:141	9	yuqattilūna	4	yaqtulūna	x	
+7:144	3	bi-risālātī	1 2 3	bi-risālatī	x	
+7:149	13	rabbunā	6 7	rabbanā	x	
 7:149	12	yarḥamnā	6 7	tarḥamnā		
 7:149	14	wa-yaġfir	6 7	wa-taġfir		
 7:161	16	naġfir	1 4	tuġfar		
+7:161	18	ḫaṭīʾātikum	1	ḫaṭīʾātukum	x	
+7:161	18	ḫaṭīʾātikum	3	ḫaṭāyātikum	x	
+7:161	18	ḫaṭīʾātikum	4	ḫaṭīʾatukum	x	
+7:164	15	maʿḏiratan	1 2 3 4 5a 6 7	maʿḏiratun	x	
 7:169	40	taʿqilūna	2 3 5a 6 7	yaʿqilūna		
+7:170	2	yumassikūna	5a	yumsikūna	x	
+7:172	9	ḏurriyyatahum	1 3 4	ḏurriyyātihim	x	
 7:172	19	taqūlū	3	yaqūlū		
 7:173	2	taqūlū	3	yaqūlū		
+7:180	8	yulḥidūna	6	yalḥadūna	x	
 7:186	7	yaḏaruhum	1 2 4	naḏaruhum		
 7:186	7	yaḏaruhum	6 7	yaḏarhum		
+7:190	6	šurakāʾa	1 5a	širkan	x	
+7:193	6	yattabiʿūkum	1	yatbaʿūkum	x	
+7:201	6	ṭāʾifun	2 3 7	ṭaifun	x	
+7:202	2	yamuddūnahum	1	yumiddūnahum	x	
+8:9	11	murdifīna	1	murdafīna	x	
+8:11	2	yuġaššīkumu	2 3	yaġšākumu	x	
+8:11	6	wa-yunazzilu	2 3	wa-yunzilu	x	
+8:12	16	ar-ruʿba	4 7	ar-ruʿuba	x	
+8:18	4	mūhinu	1 2 3	muwahhinun	x	
+8:19	21	wa-anna	2 3 5a 6 7	wa-inna	x	
+8:37	1	li-yamīza	6 7	li-yumayyiza	x	
 8:50	4	yatawaffā	4	natawaffā		
+8:59	6	innahum	4	annahum	x	
 8:59	2	yaḥsabanna	1 2 3 5a 7	taḥsibanna		
 8:65	15	yakun	1 2 4	takun		
+8:66	8	ḍaʿfan	1 2 3 4 7	ḍuʿfan	x	
 8:66	10	yakun	1 2 3 4	takun		
 8:66	17	yakun	1 2 3 4	takun		
 8:67	5	yakūna	3	takūna		
@@ -727,17 +771,11 @@
 31:30	8	yadʿūna	1 2 4 5a	tadʿūna		
 31:34	6	wa-yunazzilu	2 3 6 7	wa-yunzilu	x	
 32:7	5	ḫalaqahū	2 3 4	ḫalqahū	x	
-32:17	5	uḫfiya	6	uḫfī	x	
-32:24	3	aʾimmatan	1 2 3	aimmatan	x	
-32:24	3	aʾimmatan	4b	āʾimmatan	x	
 33:2	11	taʿmalūna	3	yaʿmalūna		
-33:4	12	allāʾī	1b 2b 3	allā	x	
-33:4	12	allāʾī	1a 2a	allāʾi	x	
 33:4	13	tuẓāhirūna	1 2a 2b 3	taẓẓahharūna	x	
 33:4	13	tuẓāhirūna	4 6 7	taẓāharūna	x	
 33:13	8	muqāma	1 2 3 4 5a 6 7	maqāma	x	
 33:14	9	la-ātauhā	1 2	la-atauhā	x	
-33:21	7	uswatun	1 2 3 4 6 7	iswatun	x	
 33:30	7	mubayyinatin	2 5a	mubayyanatin	x	
 33:30	8	yuḍāʿaf	2 4	nuḍaʿʿif		
 33:30	10	al-ʿaḏābu	4	al-ʿaḏāba	x	
@@ -857,10 +895,9 @@
 39:64	4	taʾmurūnnī	1	taʾmurūniya		
 39:71	10	futiḥat	1 2 3 4	futtiḥat	x	
 40:6	3	kalimatu	1 4	kalimātu	x	
-40:20	5	yadʿūna	1 4	tadʿūna		
+40:20	5	yadʿūna	1 4b	tadʿūna		
 40:21	16	minhum	4	minkum	S	منكم
 40:26	3	ḏarūnī	2	ḏarūniya	x	
-40:26	8	innī	1 2 3	inniya	x	
 40:26	13	aw an	1 2 3 4	wa-an	M C B S	وأن
 40:26	15	yuẓhira	2 4 5a 6 7	yaẓhara	x	
 40:26	18	al-fasāda	2 4 5a 6 7	al-fasādu	x	
@@ -871,12 +908,7 @@
 40:46	9	adḫilū	2 3 4 5a	udḫulū	x	
 40:52	3	yanfaʿu	2 3 4	tanfaʿu		
 40:58	13	tataḏakkarūna	1 2 3 4	yataḏakkarūna		
-40:60	3	adʿūnī	2	adʿūniya	x	
-40:67	20	šuyūḫan	2 4a 5a 6 7	šiyūḫan	x	
-41:16	7	naḥisātin	1 2 3	naḥsātin	x	
-41:19	2	yuḥšaru	1	naḥšuru		
-41:29	5	arina	2 3b 4 5a	arna	x	
-41:29	6	allaḏaini	2	allaḏainni	x	
+41:19	2	yuḥšaru aʿdāu	1	naḥšuru aʿdāa		
 41:40	3	yulḥidūna	6	yalḥadūna	x	
 41:44	9	a-aʿjamiyyun	1a 2 3 4	āʿjamiyyun	x	
 41:47	8	ṯamarātin	2 3 5a 6 7	ṯamaratin	x	
@@ -932,14 +964,9 @@
 46:15	4	iḥsānan	1 2 3 4	ḥusnan	M C B S	حسنا
 46:16	3	nataqabbalu	1 2 3 4 5a	yutaqabbalu		
 46:16	8	wa-natajāwazu	1 2 3 4 5a	wa-yutajāwazu		
-46:17	4	uffin	2 4	uffa	x	
-46:17	4	uffin	3 5a 6 7	uffi	x	
-46:17	6	a-taʿidāninī	1 2	a-taʿidāniniya	x	
-46:17	6	a-taʿidāninī	4b	a-taʿidānnī	x	
 46:19	5	yuwaffiyahum	1 4a 6 7	nuwaffiyahum		
 46:20	7	aḏhabtum	4a	aʾaḏhabtum	x	
 46:23	6	wa-uballiġukum	3	wa-ubliġukum	x	
-46:23	10	wa-lākinnī	1 2b	wa-lākinniya	x	
 46:25	8	yurā	1 2 3 4 7	tarā	x	
 46:25	10	masākinuhum	1 2 3 4 7	masākinahum	x	
 47:4	32	qutilū	1 2 4 5a 6 7	qātalū	x	
@@ -1034,7 +1061,6 @@
 57:24	10	huwal-ġaniyyu	1 4	al-ġaniyyu	M S	الغنى
 58:2	2	yuẓāhirūna	1 2 3	yaẓẓahharūna	x	
 58:2	2	yuẓāhirūna	4 6 7	yaẓẓāharūna	x	
-58:2	12	allāʾī	1b 2b 3	allā	x	
 58:8	13	yatanājauna	6	yantajūna		
 58:10	5	li-yaḥzuna	1	li-yuḥzina	x	
 58:11	9	al-majālisi	1 2 3 4 6 7	al-majlisi	x	
@@ -1047,7 +1073,6 @@
 60:3	8	yafṣilu	1 2 3	yufṣalu	x	
 60:3	8	yafṣilu	4	yufaṣṣalu	x	
 60:3	8	yafṣilu	6 7	yufaṣṣilu	x	
-60:4	4	uswatun	1 2 3 4 6 7	iswatun	x	
 60:10	39	tumsikū	3	tumassikū	x	
 60:10	42	wa-sʾalū	2 7	wa-salū	x	
 61:6	22	baʿdi	1 2 3 4a 5a	baʿdiya	x	
@@ -1085,8 +1110,6 @@
 69:9	4	qablahū	3 7	qibalahū	x	
 69:12	5	uḏunun	1	uḏnun	x	
 69:18	4	lā taḫfā	6 7	lā yaḫfā		
-69:28	4	māliyah	6	māliya	x	
-69:29	3	sulṭāniyah	6	sulṭāniya	x	
 69:41	7	tuʾminūna	2 4	yuʾminūna		
 69:42	6	taḏakkarūna	2 4	yaḏḏakkarūna		
 70:1	1	saʾala	1 4	sāla	x	
@@ -1136,9 +1159,6 @@
 78:23	1	lābiṯīna	6	labiṯīna	x	
 78:35	6	kiḏḏāban	7	kiḏāban	x	
 78:37	6	ar-raḥmāni	1 2 3 6 7	ar-raḥmānu	x	
-79:10	2	a-innā	1 2 3	ā-yinnā	x	
-79:11	1	a-iḏā	1 4 7	iḏā	x	
-79:11	1	a-iḏā	2 3	a-yiḏā	x	
 80:4	3	fa-tanfaʿahu	1 	fa-tanfaʿuhu	x	
 80:25	1	annā	1 2 3 4	innā	x	
 81:6	3	sujjirat	2 3	sujirat	x	
@@ -1156,9 +1176,8 @@
 87:3	2	qaddara	7	qadara	x	
 87:16	2	tuʾṯirūna	2	yuʾṯirūna		
 88:4	1	taṣlā	3 5a	tuṣlā	x	
-88:5	4	āniyatin	4a	ēniyatin	x	
-88:11	2	tasmaʿu	2 3	yusmaʿu	x	
-88:11	2	tasmaʿu	1	tusmaʿu	x	
+88:11	2	tasmaʿu	2 3	yusmaʿu		
+88:11	2	tasmaʿu	1	tusmaʿu		
 88:11	4	lāġiyatan	1 2 3	lāġiyatun	x	
 89:3	2	wal-watri	6 7	wal-witri	x	
 89:17	4	tukrimūna	3	yukrimūna		

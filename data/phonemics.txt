@@ -47,6 +47,35 @@
 6:153	3	ṣirāṭī	6a	zirāṭī	x	
 6:161	6	ṣirāṭin	2a	sirāṭīn	x	
 6:161	6	ṣirāṭin	6a	zirāṭīn	x	
+7:44	20	naʿam	7	naʿim	x	
+7:59	14	ġairuhū	7	ġairihī	x	
+7:59	15	ʾinnī	1 2 3	ʾinniya	x	
+7:81	1	ʾinnakum	2	ʾa-yinnakum	x	
+7:81	1	ʾinnakum	3	ʾā-yinnakum	x	
+7:81	1	ʾinnakum	4a 5a 6 7	ʾa-ʾinnakum	x	
+7:81	1	ʾinnakum	4b	ʾā-ʾinnakum	x	
+7:113	5	ʾinna	3	ʾā-yinna	x	
+7:113	5	ʾinna	4a 5a 6 7	ʾa-ʾinna	x	
+7:113	5	ʾinna	4b	ʾā-ʾinna	x	
+7:143	9	ʾarinī	2 3b	ʾarnī	x	
+7:143	15	wa-lākini	1 2 4 7	wa-lākinu	x	
+7:143	29	dakkan	6 7	dakkāʾa	x	
+7:143	39	wa-ʾana	1	wa-ʾanā	x	
+7:144	3	ʾinni	2 3	ʾinniya	x	
+7:148	7	ḥuliyyihim	6 7	ḥiliyyihim	x	
+7:150	12	baʿdī	1 2 3	baʿdiya	x	
+7:150	25	ʾumma	4 5a 6 7	ʾummi	x	
+7:157	4	an-nabiyya	1	an-nabīʾa	x	
+7:165	15	baʾīsin	1	bīsin	x	
+7:165	15	baʾīsin	4	biʾsin	x	
+7:165	15	baʾīsin	5a	baiʾasin	x	
+8:42	3	bi-l-ʿudwati	2 3	bi-l-ʿidwati	x	
+8:42	6	bi-l-ʿudwati	2 3	bi-l-ʿidwati	x	
+8:42	29	ḥayya	1 2b 5a	ḥayiya	x	
+8:61	3	lis-salmi	5a	lis-silmi	x	
+8:65	2	an-nabiyyu	1	an-nabīʾu	x	
+8:67	3	li-nabiyyin	1	li-nabīʾin	x	
+8:72	25	walāyatihim	6	wilāyatihim	x	
 18:94	13	ḫarjan	6 7	ḫarājan	x	
 19:2	5	zakariyyā	1 2 3 4 5a	zakariyyāʾa	x	
 19:6	1	yariṯunī	3 7	yariṯnī	x	
@@ -141,7 +170,7 @@
 23:72	3	ḫarjan	6 7	ḫarājan	x	
 23:72	4	fa-ḫarāju	4	fa-ḫarju	x	
 23:110	2	siḫriyyan	1 6 7	suḫriyyan	x	
-24:31	18	ǧuyūbihinna	2 4a 6 7	ǧiyūbihinna	x	
+24:31	18	juyūbihinna	2 4a 6 7	jiyūbihinna	x	
 24:35	16	durriyyun	5a 6	durrīʾun	x	
 24:35	16	durriyyun	3 7	dirrīʾun	x	
 24:36	2	buyūtin	1a 2 4 5a 6 7	biyūtin	x	
@@ -190,7 +219,13 @@
 31:13	7	yā-bunayya	2	yā-bunai	x	
 31:16	1	yā-bunayya	2b	yā-bunayyi	x	
 31:16	1	yā-bunayya	2a	yā-bunai	x	
+32:17	5	uḫfiya	6	uḫfī	x	
+32:24	3	aʾimmatan	1 2 3	aimmatan	x	
+32:24	3	aʾimmatan	4b	āʾimmatan	x	
 33:26	12	ar-ruʿba	4 7	ar-ruʿuba	x	
+33:4	12	allāʾī	1b 2b 3	allā	x	
+33:4	12	allāʾī	1a 2a	allāʾi	x	
+33:21	7	uswatun	1 2 3 4 6 7	iswatun	x	
 33:30	2	an-nabiyyi	1	an-nabīʾi	x	
 33:40	12	an-nabiyyīna	1	an-nabīʾīna	x	
 36:1	1	yā-sīn	5a 6 7	yē-sīn	x	
@@ -203,8 +238,14 @@
 39:69	8	bin-nabiyyīna	1	bin-nabīʾīna	x	
 40:1	1	ḥā-mīm	1b 3	ḥæ-mīm	x	
 40:1	1	ḥā-mīm	4a 5a 6 7	ḥē-mīm	x	
+40:26	8	innī	1 2 3	inniya	x	
+40:60	3	adʿūnī	2	adʿūniya	x	
+40:67	20	šuyūḫan	2 4a 5a 6 7	šiyūḫan	x	
 41:1	1	ḥā-mīm	1b 3	ḥæ-mīm	x	
 41:1	1	ḥā-mīm	4a 5a 6 7	ḥē-mīm	x	
+41:16	7	naḥisātin	1 2 3	naḥsātin	x	
+41:29	5	arina	2 3b 4 5a	arna	x	
+41:29	6	allaḏaini	2	allaḏainni	x	
 42:1	1	ḥā-mīm	1b 3	ḥæ-mīm	x	
 42:1	1	ḥā-mīm	4a 5a 6 7	ḥē-mīm	x	
 43:1	1	ḥā-mīm	1b 3	ḥæ-mīm	x	
@@ -219,6 +260,11 @@
 45:35	6	huzuwan	6	huzʾan	x	
 46:1	1	ḥā-mīm	1b 3	ḥæ-mīm	x	
 46:1	1	ḥā-mīm	4a 5a 6 7	ḥē-mīm	x	
+46:17	4	uffin	2 4	uffa	x	
+46:17	4	uffin	3 5a 6 7	uffi	x	
+46:17	6	a-taʿidāninī	1 2	a-taʿidāniniya	x	
+46:17	6	a-taʿidāninī	4b	a-taʿidānnī	x	
+46:23	10	wa-lākinnī	1 2b	wa-lākinniya	x	
 48:29	28	at-taurāti	1b 6	at-tauræti	x	
 48:29	28	at-taurāti	3 4a 7	taurēti	x	
 52:37	7	al-muṣaiṭirūna	2a 4b	al-musaiṭirūna	x	
@@ -243,9 +289,11 @@
 56:47	4	mitnā	2 3 4 5a	mutnā	x	
 56:47	8	a-ʾinnā	1 7	innā	x	
 56:47	8	a-ʾinnā	2 3	ā-yinnā	x	
+58:2	12	allāʾī	1b 2b 3	allā	x	
 58:11	16	unšuzū	2 3 5a 6 7	inšizū	x	
 58:11	17	fa-nšuzū	2 3 5a 6 7	fa-nšizū	x	
 59:2	34	buyūtahum	1a 2 4 5a 6 7	biyūtahum	x	
+60:4	4	uswatun	1 2 3 4 6 7	iswatun	x	
 60:6	7	ibrāhīma	4b	ibrāhāma	x	
 61:6	17	at-taurāti	1b 6	at-tauræti	x	
 61:6	17	at-taurāti	3 4a 7	at-taurēti	x	
@@ -253,10 +301,15 @@
 65:1	16	buyūtihinna	1 2 4 5a 6 7	biyūtihinna	x	
 66:3	3	an-nabiyyu	1	an-nabīʾu	x	
 66:8	25	an-nabiyya	1	an-nabīʾa	x	
+69:28	4	māliyah	6	māliya	x	
+69:29	3	sulṭāniyah	6	sulṭāniya	x	
 70:15	3	laẓā	1a 3	laẓæ	x	
 70:15	3	laẓā	6 7	laẓē	x	
 70:16	2	liš-šawā	1a 3	liš-šawæ	x	
 70:16	2	liš-šawā	6 7	liš-šawē	x	
+79:10	2	a-innā	1 2 3	ā-yinnā	x	
+79:11	1	a-iḏā	1 4 7	iḏā	x	
+79:11	1	a-iḏā	2 3	a-yiḏā	x	
 79:16	6	ṭuwan	1 2 3	ṭuwa	x	
 79:16	6	ṭuwan	6 7	ṭuwē	x	
 79:18	6	tazakkā	a 2	tazzakkā	x	
@@ -268,6 +321,7 @@
 87:3	3	fa-hadā	6 7	fa-hadē	x	
 87:16	4	ad-dunyā	1a 3	ad-dunyæ	x	
 87:16	4	ad-dunyā	6 7	ad-dunyē	x	
+88:5	4	āniyatin	4a	ēniyatin	x	
 88:22	3	bi-muṣaiṭirin	4b	bi-musaiṭirin	x	
 88:22	3	bi-muṣaiṭirin	6b	bi-muzaiṭirin	x	
 91:15	3	ʿuqbāhā	3	ʿuqbæhā	x	
