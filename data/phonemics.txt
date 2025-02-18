@@ -5,6 +5,9 @@
 2:62	7	wa-ṣ-ṣābiʾīna	1	wa-ṣ-ṣābīna	x	
 2:67	13	huzuwan	6	huzʾan	x	
 2:67	13	huzuwan	1 2 3 4 5a 7	huzūʾan	x	
+2:125	18	baitiya	2 3 4a 5a 6 7	baitī	x	
+2:126	22	fa-umattiʿuhū	4	fa-umtiʿuhū	x	
+2:128	10 	wa-arinā	2 3b	wa-arnā	x	
 2:173	13	fa-mani	1 2 4 7	fa-manu	x	
 2:177	18	wa-n-nabiyyīna	1	wa-n-nabīʾīna	x	
 2:185	6	al-qurʾānu	2	al-qurānu	x	
@@ -348,6 +351,7 @@
 53:20	3	al-ʾuḫrā	3 6 7	al-ʾuḫrē	x	
 53:22	4	ḍīzā	2	ḍiʾzā	x	
 53:22	4	ḍīzā	1b 3 6 7	ḍīzē	x	
+53:32	24	ummahātikum	6 7	immihātikum	x	
 53:32	31	ittaqā	1b 3	ittaqæ	x	
 53:32	31	ittaqā	6 7	ittaqē	x	
 53:50	4	al-ʾūlā	1b 3	al-ʾūlæ	x	
