@@ -361,6 +361,7 @@
 7:96	7	la-fataḥnā	4	la-fattaḥnā	x	
 7:98	1	awa-amina	1 2 4	au amina	x	
 7:112	3	sāḥirin	6 7	saḥḥārin	x	
+7:113	5	inna lanā	4 5a 6 7	a-inna lanā	x	
 7:117	9	talqafu	1 2a 3 4 5a 6 7	talaqqafu	x	
 7:117	9	talqafu	2b	ttalaqqafu	x	
 7:127	15	sa-nuqattilu	1 2	sa-naqtulu	x	
@@ -1153,7 +1154,7 @@
 65:1	23	mubayyinatin	2 5a	mubayyanatin	x	
 65:3	14	bāliġu	1 2 4 5a 6 7	bāliġun	x	
 65:3	15	amrihī	1 2 4 5a 6 7	amrahū	x	
-65:11	6	mubayyinātin	1 2 3 5a 4	mubayyanātin		
+65:11	6	mubayyinātin	1 2 3 5a 4	mubayyanātin	x	
 65:11	21	yudḫilhu	1 4	nudḫilhu		
 66:3	14	ʿarrafa	7	ʿarafa	x	
 66:4	9	taẓāharā	1 2 3 4	taẓẓāharā	x	

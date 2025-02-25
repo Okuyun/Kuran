@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.9";
+const VERSION = "V4.9a";
 
 /**
  * &ensp; used in Mujam and VerseRef
@@ -123,11 +123,11 @@ function openSiteVerse(s, c, v) {
         url = "http://corpus.quran.com/wordbyword.jsp?chapter="+c+"&verse="+v
         break
     case 'coranv':
-        url = "https://corpuscoranicum.de/en/verse-navigator/sura/"
+        url = "https://corpuscoranicum.org/en/verse-navigator/sura/"
         +c+"/verse/"+v+"/variants"
         break
     case 'coranp':
-        url = "https://corpuscoranicum.de/en/verse-navigator/sura/"
+        url = "https://corpuscoranicum.org/en/verse-navigator/sura/"
         +c+"/verse/"+v+"/print"
         break
     case 'diyant':
