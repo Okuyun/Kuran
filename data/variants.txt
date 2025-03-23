@@ -357,6 +357,7 @@
 7:57	16	mayyitin	2 3 4 5a	maitin	x	
 7:57	29	taḏakkarūna	1 2 3 4 5a	taḏḏakkarūna	x	
 7:62	1	uballiġukum	3	ubliġukum	x	
+7:68	1	uballiġukum	3	ubliġukum	x	
 7:75	1	qāla	4	wa-qāla	S	وقال
 7:96	7	la-fataḥnā	4	la-fattaḥnā	x	
 7:98	1	awa-amina	1 2 4	au amina	x	
@@ -805,6 +806,7 @@
 29:32	10	nunajjiyannahū	6 7	nunjiyannahū	x	
 29:33	4	rusulunā	3	ruslunā	x	
 29:33	17	munajjūka	2 5a 6 7	munjūka	x	
+29:38	2	wa-ṯamūda	1 2 3 4 5a 7	wa-ṯamūdan	x	
 29:42	5	yadʿūna	1 2 4 6 7	tadʿūna		
 29:50	5	āyātun	2 5a 6 7	āyatun	x	
 29:55	9	wa-yaqūlu	2 3 4	wa-naqūlu		
