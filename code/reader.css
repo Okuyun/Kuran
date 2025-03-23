@@ -313,8 +313,8 @@ body {
     z-index: 5;
   }
   .dialog {
-    width: 300px;
-    padding: 18px;
+    width: 330px;
+    padding: 14px;
     display: block;
     margin: 40px auto;
     background: white;
