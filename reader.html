@@ -15,7 +15,8 @@
 <body>
 <nav id=div3>
   <b id=vers2></b>
-  <select id=sureS></select>  
+  <datalist id=sureList></datalist>
+  <input list=sureList id=sureS> 
   <select id=cuzS></select>  
   <button id=pageA class=beyaz>
     <span id=page1></span>
@@ -328,19 +329,21 @@ summD	title	إظهار/إخفاء رمز Buckwalter
 codeD	title	Buckwalter code -- ترتيب القاموس`
 
 function languageItems() {
-    let k1 = sureS.selectedIndex 
+    let k1 = sureS.value  //selectedIndex 
     sName = suraNames[currentLanguage()]
     let labels = []
     for (let i=1; i<=114; i++)
       labels.push(i+'. '+sName[i])
-    sureS.innerHTML = '<option>'+labels.join('<option>')
-    if (k1) sureS.selectedIndex = k1
+    sureList.innerHTML = 
+      labels.map(x => "<option value='"+x+"'>").join('\n')
+    // '<option>'+labels.join('<option>')
+    if (sureS.value != k1) sureS.value = k1
     let k2 = cuzS.selectedIndex 
     labels = []
     for (let i=1; i<=30; i++)
       labels.push(cuzS.name+' '+i)
     cuzS.innerHTML = '<option>'+labels.join('<option>')
-    if (k2) cuzS.selectedIndex = k2
+    if (cuzS.selectedIndex != k2) cuzS.selectedIndex = k2
     LangManager.adjustDirection(infoS)
     LangManager.adjustDirection(bkgd)
     if (window.Q) Q.dict = Dictionary.newInstance()

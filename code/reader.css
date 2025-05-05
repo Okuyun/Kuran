@@ -56,14 +56,17 @@ body {
       font-size: 16px;
       background-color: transparent;
     }
-    select, #pageA {
+    nav>input {
+      width: 125px;
+    }
+    select, nav>input, #pageA {
       display: inline-block;
       height: 26px;
       margin: 0 2px;
       padding: 4px;
-      font-size: 15px;
+      font-size: 14px;
     }
-    select, nav>button {
+    select, nav>input, nav>button {
       border-radius: 10px;
       border: none;
     }

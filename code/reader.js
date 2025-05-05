@@ -308,7 +308,7 @@ function setSura(c) { // 1<=c<=M
     // c = Number(c);
     if (curSura == c) return;
     curSura = c;
-    sureS.value = sureS.children[c-1].textContent   
+    sureS.value = sureList.children[c-1].value   
     //sureS.selectedIndex = c-1
 }
 function gotoSura(c) {
@@ -444,6 +444,7 @@ function initReader() {
     // console.log(swipe)  //TouchHandler
     languageItems()
     sureS.onchange = () => {gotoSura(sureS.value)}
+    sureS.onclick = () => {sureS.select()}
     cuzS.onchange = () => {gotoPage(cuzS.selectedIndex*20+1)}
     pageA.onclick = handlePageNum
     //functions defined in search.js
