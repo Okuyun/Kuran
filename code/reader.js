@@ -212,7 +212,7 @@ function refreshPage() {
 }
 function handleVariants(p) {
   function markWord(v) {
-    console.log('Variant', v.cv, v.num+1, v.word)
+    // console.log('Variant', v.cv, v.num+1, v.word)
     let a = html.querySelector('.c'+v.cv.replace(':','_'))
     if (a.childElementCount <= v.num) return
     let elt = a.children[v.num]
@@ -308,9 +308,13 @@ function setSura(c) { // 1<=c<=M
     // c = Number(c);
     if (curSura == c) return;
     curSura = c;
-    sureS.selectedIndex = c-1
+    sureS.value = sureS.children[c-1].textContent   
+    //sureS.selectedIndex = c-1
 }
 function gotoSura(c) {
+    if (isNaN(c) && typeof c == "string") {
+      c = Number(c.slice(0, c.indexOf('.')))
+    }
     if (!c || c < 1)  c = 1;
     if (c > Q.M) c = Q.M;
     setSura(c);
@@ -439,7 +443,7 @@ function initReader() {
     vers2.innerHTML = 'Iqra '+VERSION+'&emsp;'
     // console.log(swipe)  //TouchHandler
     languageItems()
-    sureS.onchange = () => {gotoSura(sureS.selectedIndex+1)}
+    sureS.onchange = () => {gotoSura(sureS.value)}
     cuzS.onchange = () => {gotoPage(cuzS.selectedIndex*20+1)}
     pageA.onclick = handlePageNum
     //functions defined in search.js
