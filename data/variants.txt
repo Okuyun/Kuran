@@ -230,6 +230,7 @@
 5:45	11	wal-uḏuna	1	wal-uḏna	x	
 5:45	11	wal-uḏuna	7	wal-uḏunu	x	
 5:45	12	bil-uḏuni	1	bil-uḏni	x	
+5:45	13	wa-s-sinna	7	wa-s-sinnu	x	
 5:45	15	wal-jurūḥa	1 2 3 4 7	wal-jurūḥu	x	
 5:47	1	wal-yaḥkum	1b	wal-yaḥkuma	x	
 5:47	1	wal-yaḥkum	6	wa-li-yaḥkuma	x	
@@ -350,7 +351,7 @@
 7:55	21	wa-l-qamara	4	wa-l-qamaru	x	
 7:55	22	wa-n-nujūma	4	wa-n-nujūmu	x	
 7:55	23	musaḫḫarātin	4	musaḫḫarātun	x	
-7:57	4	ar-riyāḥa	2	ar-rīḥa	x	
+7:57	4	ar-riyāḥa	2 6 7	ar-rīḥa	x	
 7:57	5	bušran	1 2 3	nušuran	*	
 7:57	5	bušran	4	nušran	*	
 7:57	5	bušran	6 7	našran	*	
