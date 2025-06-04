@@ -144,7 +144,7 @@ function openSiteVerse(s, c, v) {
         url = "https://islamawakened.com/quran/"+c+'/'+v
         break
     case 'elktbn':
-        url = "https://elktb.net/Mushaflar/MushafGoruntule?mushaf=HUSEYNI&sureNo="+c+"&ayetNo="+v
+        url = "https://elktb.net/A/"+c+"/"+v
         break
     case 'acikur':
         url = "https://acikkuran.com/"+c+'/'+v
