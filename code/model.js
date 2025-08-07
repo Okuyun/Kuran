@@ -19,21 +19,21 @@ suraNames.tr
 
 /** Sura names in English */
 suraNames.en
-= ['','Faatiha','Baqara','Aali-Imraan','Nisaa','Maaida',"An'aam", 
-"A'raaf",'Anfaal','Tawba','Yunus','Hud','Yusuf',"Ra'd",'Ibrahim', 
+= ['','Faatiha','Baqara','Aali-Imraan','Nisaa','Maaida',"Anʿaam", 
+"Aʿraaf",'Anfaal','Tawba','Yunus','Hud','Yusuf',"Raʿd",'Ibrahim', 
 'Hijr','Nahl','Israa','Kahf','Maryam','Taa-Haa','Anbiyaa','Hajj', 
-'Muminoon','Noor','Furqaan',"Shu'araa",'Naml','Qasas','Ankaboot', 
+'Muminoon','Noor','Furqaan',"Shuʿaraa",'Naml','Qasas','Ankaboot', 
 'Room','Luqman','Sajda','Ahzaab','Saba','Faatir','Yaseen','Saaffaat','Saad', 
 'Zumar','Ghaafir','Fussilat','Shura','Zukhruf','Dukhaan','Jaathiya','Ahqaf', 
 'Muhammad','Fath','Hujuraat','Qaaf','Dhaariyat','Tur','Najm','Qamar', 
 'Rahmaan','Waaqia','Hadid','Mujaadila','Hashr','Mumtahana','Saff', 
-"Jumu'a",'Munaafiqoon','Taghaabun','Talaaq','Tahrim','Mulk','Qalam', 
-'Haaqqa',"Ma'aarij",'Nooh','Jinn','Muzzammil','Muddaththir','Qiyaama','Insaan', 
-'Mursalaat','Naba',"Naazi'aat",'Abasa','Takwir','Infitaar','Mutaffifin', 
-'Inshiqaaq','Burooj','Taariq',"A'laa",'Ghaashiya','Fajr','Balad','Shams', 
+"Jumuʿa",'Munaafiqoon','Taghaabun','Talaaq','Tahrim','Mulk','Qalam', 
+'Haaqqa',"Maʿaarij",'Nooh','Jinn','Muzzammil','Muddaththir','Qiyaama','Insaan', 
+'Mursalaat','Naba',"Naaziʿaat",'Abasa','Takwir','Infitaar','Mutaffifin', 
+'Inshiqaaq','Burooj','Taariq',"Aʿlaa",'Ghaashiya','Fajr','Balad','Shams', 
 'Lail','Dhuhaa','Sharh','Tin','Alaq','Qadr','Bayyina','Zalzala',
-'Aadiyaat',"Qaari'a",'Takaathur','Asr','Humaza','Fil','Quraish', 
-"Maa'un",'Kawthar','Kaafiroon','Nasr','Masad','Ikhlaas','Falaq','Naas']
+'Aadiyaat',"Qaariʿa",'Takaathur','Asr','Humaza','Fil','Quraish', 
+"Maaʿun",'Kawthar','Kaafiroon','Nasr','Masad','Ikhlaas','Falaq','Naas']
 
 /** Sura names in Arabic */
 suraNames.ar
