@@ -19,21 +19,21 @@ suraNames.tr
 
 /** Sura names in English */
 suraNames.en
-= ['','Faatiha','Baqara','Aali-Imraan','Nisaa','Maaida',"Anʿaam", 
-"Aʿraaf",'Anfaal','Tawba','Yunus','Hud','Yusuf',"Raʿd",'Ibrahim', 
-'Hijr','Nahl','Israa','Kahf','Maryam','Taa-Haa','Anbiyaa','Hajj', 
-'Muminoon','Noor','Furqaan',"Shuʿaraa",'Naml','Qasas','Ankaboot', 
-'Room','Luqman','Sajda','Ahzaab','Saba','Faatir','Yaseen','Saaffaat','Saad', 
-'Zumar','Ghaafir','Fussilat','Shura','Zukhruf','Dukhaan','Jaathiya','Ahqaf', 
-'Muhammad','Fath','Hujuraat','Qaaf','Dhaariyat','Tur','Najm','Qamar', 
-'Rahmaan','Waaqia','Hadid','Mujaadila','Hashr','Mumtahana','Saff', 
-"Jumuʿa",'Munaafiqoon','Taghaabun','Talaaq','Tahrim','Mulk','Qalam', 
-'Haaqqa',"Maʿaarij",'Nooh','Jinn','Muzzammil','Muddaththir','Qiyaama','Insaan', 
-'Mursalaat','Naba',"Naaziʿaat",'Abasa','Takwir','Infitaar','Mutaffifin', 
-'Inshiqaaq','Burooj','Taariq',"Aʿlaa",'Ghaashiya','Fajr','Balad','Shams', 
-'Lail','Dhuhaa','Sharh','Tin','Alaq','Qadr','Bayyina','Zalzala',
-'Aadiyaat',"Qaariʿa",'Takaathur','Asr','Humaza','Fil','Quraish', 
-"Maaʿun",'Kawthar','Kaafiroon','Nasr','Masad','Ikhlaas','Falaq','Naas']
+= ["","Fātiḥah","Baqarah","Āli-ʿImrān","Nisā","Māidah","Anʿām", 
+"Aʿrāf","Anfāl","Tawbah","Yūnus","Hūd","Yūsuf","Raʿd","Ibrāhīm", 
+"Ḥijr","Naḥl","Isrā","Kahf","Maryam","Tā-Hā","Anbiyā","Ḥajj", 
+"Muminūn","Nūr","Furqān","Šuʿarā","Naml","Qasas","Ankabūt", 
+"Rūm","Luqmān","Sajdah","Aḥzāb","Saba","Fātir","Yā-sīn","Sāffāt","Sād", 
+"Zumar","Gāfir","Fussilat","Šūrā","Zuḫruf","Duḫān","Jāṯiyah","Aḥqāf", 
+"Muḥammad","Fatḥ","Ḥujurāt","Qāf","Ḏāriyāt","Tūr","Najm","Qamar", 
+"Raḥmān","Wāqiah","Ḥadīd","Mujādalah","Ḥašr","Mumtaḥanah","Saff", 
+"Jumuʿah","Munāfiqūn","Tagābun","Talāq","Tahrīm","Mulk","Qalam", 
+"Ḥāqqah","Maʿārij","Nūḥ","Jinn","Muzzammil","Muddaṯṯir","Qiyāmah","Insān", 
+"Mursalāt","Naba","Nāziʿāt","ʿAbasa","Takwīr","Infitār","Mutaffifīn", 
+"Inšiqāq","Burūj","Tāriq","Aʿlā","Gāšiyah","Fajr","Balad","Šams", 
+"Layl","Ḍuḥā","Šarḥ","Tin","ʿAlaq","Qadr","Bayyinah","Zalzalah",
+"ʿĀdiyāt","Qāriʿah","Takāṯur","ʿAsr","Humazah","Fil","Qurayš", 
+"Māʿūn","Kawṯar","Kāfirūn","Nasr","Masad","Iḫlās","Falaq","Nās"]
 
 /** Sura names in Arabic */
 suraNames.ar
