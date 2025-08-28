@@ -489,6 +489,15 @@ body {
 #hare3 {
   background-image: url(../image/hareke3.png);
 }
+#vrnt1 {
+  background-image: url(../image/variant1.png);
+}
+#vrnt2 {
+  background-image: url(../image/variant2.png);
+}
+#vrnt3 {
+  background-image: url(../image/variant3.png);
+}
 .version {
   padding-block: 0;
   display: flex;

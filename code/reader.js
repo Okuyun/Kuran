@@ -74,6 +74,31 @@ function readSettings() {
     if (save) saveSettings()
     return x
 }
+let vnum = getVariantSettings()
+function getVariantSettings() {
+    let v = localStorage.variant
+    if (v == 1 || v == 3) return v
+    return '2'  //default
+}
+function setVariantSettings(v) {
+  console.log("setVariantSettings", v)
+  if (v == localStorage.variant) return
+  switch (Number(v)) {
+    case 1: case 2: case 3:
+      localStorage.variant = v
+      vnum = v; checkVariants()
+      refreshPage()
+    default:  //do not store v
+  }
+}
+function shouldDisplay(v) {
+  switch (Number(vnum)) {
+    case 3: return true
+    case 2: return (v.rgn != 'x')
+    case 1: //do not display
+    default: return false
+  }
+}
 function getSourceSettings() {
     let x = getStorage('settings')
     if (!x) x = {}
@@ -141,6 +166,7 @@ function displayWord(evt) {
     }
     let [v1, ...av] = Q.vary.getData(i, n)
     if (!v1) return //should not happen
+    if (!shouldDisplay(v1)) return
     stdText.innerText = v1.std
     varText.innerHTML = rdrText(v1)
     if (v1.rasm) varText.innerHTML += rgnText(v1)
@@ -225,7 +251,8 @@ function handleVariants(p) {
   let k = index[p+1] //last verse on page
   while (i <= k) { //for each verse x
     let d = Q.vary.variants(i)
-    if (d) d.forEach(markWord)
+    if (d && shouldDisplay(d[0])) 
+      d.forEach(markWord)
     i++
   }
 }
@@ -401,7 +428,7 @@ function initialPage() {
       let hash = gotoHashPage(), wide = parent.innerWidth>850;
       console.log("initialPage", {hash, wide})
       if (!hash && (parent===window || wide)) gotoPage(1) 
-      checkTrans()
+      checkTrans(); checkVariants()
       fetchPushTime(t => console.log('Last Commit:', t), true) 
     }
 }
@@ -598,10 +625,15 @@ function menuFn() {
   }
   menuK.onclick = (evt) => { //menu button
     let t = evt.target
+    hideMenus()
+    if (t.id.startsWith('vrnt')) {
+        // console.log("click", t.id)
+        setVariantSettings(t.id[4])
+        return
+    } 
     if (!parent.finder) { //no finder
       openSitePage(t.id, curPage); return
     }
-    hideMenus()
     switch (t) {
       case topic: 
         parent.finder.location="konular.html"; break;
@@ -655,6 +687,13 @@ document.onkeydown = evt => {
 /**
 * End of menu functions 
 ***********************************************/
+function checkVariants() {
+  function handleCheck(e) {
+    let check = (e.id == "vrnt"+vnum)
+    e.classList.toggle('checked', check)
+  }
+    menuK.querySelectorAll('[id]').forEach(handleCheck)
+}
 function checkTrans() {
   function handleCheck(e) {
     let check = e.classList.contains('hareke')? 
