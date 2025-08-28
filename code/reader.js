@@ -91,7 +91,8 @@ function setVariantSettings(v) {
     default:  //do not store v
   }
 }
-function shouldDisplay(v) {
+function hasVariant(v) {
+  if (!v) return false
   switch (Number(vnum)) {
     case 3: return true
     case 2: return (v.rgn != 'x')
@@ -165,8 +166,7 @@ function displayWord(evt) {
       return text(v.rgn, REGION, v.rasm, 'Kufi')
     }
     let [v1, ...av] = Q.vary.getData(i, n)
-    if (!v1) return //should not happen
-    if (!shouldDisplay(v1)) return
+    if (!hasVariant(v1)) return
     stdText.innerText = v1.std
     varText.innerHTML = rdrText(v1)
     if (v1.rasm) varText.innerHTML += rgnText(v1)
@@ -198,8 +198,10 @@ function displayWord(evt) {
       bilgi.innerText = r? toArabic(r) : ''
       anlam.innerText = Q.dict.meaning(removeDiacritical(b))
       wordInfo.style.display = r? '' : 'none'
-      varInfo.style.display = i? '' : 'none'
-      if (i) setVariant(i, n)
+      let [v] = Q.vary.getData(i, n)
+      let OK = hasVariant(v)
+      varInfo.style.display = OK? '' : 'none'
+      if (OK) setVariant(i, n)
       setPosition(wordMenu, x+24, y+12)
     }
 }
@@ -244,15 +246,14 @@ function handleVariants(p) {
     let elt = a.children[v.num]
     elt.dataset.indx = i
     elt.dataset.num = v.num
-    elt.classList.add('variant')
-    // elt.dataset.word = v.word
+    if (hasVariant(v))
+      elt.classList.add('variant')
   }
   let i = index[p]+1 //first verse on page
   let k = index[p+1] //last verse on page
   while (i <= k) { //for each verse x
     let d = Q.vary.variants(i)
-    if (d && shouldDisplay(d[0])) 
-      d.forEach(markWord)
+    if (d) d.forEach(markWord)
     i++
   }
 }
