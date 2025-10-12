@@ -111,7 +111,7 @@
 3:39	8	anna	4 6	inna	x	
 3:47	23	fa-yakūnu	4	fa-yakūna	x	
 3:48	1	yuʿallimuhu	2 3 4 6 7	nuʿallimuhu		
-3:57	6	yuwaffīhim	1 2 3 4 5a 6 7	nuwaffīhim		
+3:57	6	fa-yuwaffīhim	1 2 3 4 5a 6 7	fa-nuwaffīhim		
 3:66	1	hā-antum	1 3	hā-ntum	x	
 3:75	8	yuaddihī	1a	yuaddihi	x	
 3:75	8	yuaddihī	3 5a 6	yuaddih	x	
@@ -287,7 +287,7 @@
 6:91	26	tajʿalūnahū	2 3	yajʿalūnahū		
 6:91	28	tubdūnahā	2 3	yubdūnahā		
 6:91	29	wa-tuḫfūna	2 3	wa-yuḫfūna		
-6:92	9	li-tunḏira	5a	li-yunḏira		
+6:92	9	wali-tunḏira	5a	wali-yunḏira		
 6:94	24	bainakum	2 3 4 5a 6	bainukum	x	
 6:95	9	al-mayyiti	2 3 4 5a	al-maiti	x	
 6:95	11	al-mayyiti	2 3 4 5a	al-maiti	x	
@@ -487,7 +487,7 @@
 12:24	19	l-muḫlaṣīna	2 3 4	l-muḫliṣīna	x	
 12:49	11	yaʿṣirūna	6 7	taʿṣirūna		
 12:56	9	yašāʾu	2	našāʾu		
-12:62	2	fityānihi	1 2 3 4 5a	fityātihi		
+12:62	2	li-fityānihi	1 2 3 4 5a	li-fityātihi		
 12:63	13	naktal	6 7	yaktal		
 12:64	14	ḥāfiẓan	1 2 3 4 5a	ḥifẓan	x	
 12:76	26	darajātin	1 2 3 4	darajāti	x	
@@ -647,8 +647,7 @@
 21:7	6	nūḥī	1 2 3 4 5a	yūḥā		
 21:7	6	nūḥī	6 7	yūḥē		
 21:25	8	nūḥī	1 2 3 4 5a	yūḥa		
-21:30	1	a-wa-lam	2	a-lam	C	الم
-21:30	2	yara	2	tara		
+21:30	1	awa-lam yara	2	a-lam tara	C	الم
 21:45	6	yasmaʿu	4	tusmiʿu	
 21:45	7	aṣ-ṣummu	4	aṣ-ṣumma		
 21:47	12	miṯqāla	1	miṯqālu	x	
@@ -744,9 +743,8 @@
 26:197	4	āyatan	4	āyatun	x	
 26:217	1	wa-tawakkal	1 4	fa-tawakkal	M S	فتوكل
 26:224	2	yattabiʿuhumu	1	yatbaʿuhumu	x	
-27:21	7	yaʾtiyannī	2	yaʾtiyannanī	C	ليأتيننى
 27:7	13	bi-šihābin	1 2 3 4	bi-šihābi	x	
-27:21	7	yaʾtiyannī	2	yaʾtiyannanī	C	ليأتيننى
+27:21	7	la-yaʾtiyannī	2	la-yaʾtiyannanī	C	ليأتيننى
 27:22	12	sabaʾin	2b 3	sabaʾa	x	
 27:22	12	sabaʾin	2a	sabaʾ	x	
 27:25	12	tuḫfūna	1 2 3 4 5a 6	yuḫfūna		
@@ -1098,7 +1096,7 @@
 55:22	3	al-luʾluʾu	1	al-lūluʾu	x	
 55:24	3	al-munšaʾātu	5a 6	al-munšiʾātu	x	
 55:31	1	sa-nafruġu	6 7	sa-yafruġu		
-55:31	3	ayyuha	4	ayyuhu		
+55:31	3	ayyuha	4	ayyuhu	x	
 55:35	3	šuwāẓun	2	šiwāẓun	x	
 55:35	6	wa-nuḥāsun	2 3	wa-nuḥāsin	x	
 55:56	5	yaṭmiṯhunna	7a	yaṭmuṯhunna	x	
@@ -1265,7 +1263,7 @@
 90:13	2	raqabatin	2 3 7	raqabatan	x	
 90:14	2	iṭʿāmun	2 3 7	aṭʿama	x	
 90:20	3	muʾṣadatun	1 2 4 5a 7	mūṣadatun	x	
-91:15	1	wa-lā	1 4	fa-lā	M S	فلا
+91:15	1	wa-lā yaḫāfu	1 4	fa-lā yaḫāfu	M S	فلا
 97:5	4	maṭlaʿi	7	maṭliʿi	x	
 104:2	2	jamaʿa	4 6 7	jammaʿa	x	
 104:9	2	ʿamadin	5a 6 7	ʿumudin	x	
