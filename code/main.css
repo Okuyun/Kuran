@@ -1,5 +1,5 @@
     body {
-        max-width: 900px;
+        max-width: 640px;
         padding: 0 10px;
         margin: auto;
         font: 15px/1.4 sans-serif;
@@ -11,7 +11,7 @@
         overflow-x: auto;
     }
     img  {
-        max-width: 500px;
+        max-width: min(540px, 100%);
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -22,9 +22,4 @@
     .center {
         text-align: center;
     }
-@media screen and (max-width: 500px) {
-    img  {
-        width: 100%;
-    }
-}
 
