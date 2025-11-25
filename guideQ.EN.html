@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport"    content="width=device-width">
-    <meta name="author"      content="M A Eyler, Istanbul, 2019" />
+    <meta name="author"      content="M A Eyler, Istanbul, 2025" />
     <meta name="description" content="Help document" />
     <link rel="stylesheet" href="code/main.css" media="all">
     <link rel="icon" href="image/icon.png">
-    <title>Iqra Yardım </title>
+    <title>Iqra Help </title>
   </head>
   <style>
     iframe {
@@ -41,16 +41,16 @@
 <div id=contents>
   <button id=buton onclick="menu1.hidden=!menu1.hidden">☰</button>
   <ul id=menu1 hidden>
-    <li><a href="#title">Iqra &ndash; Oku</a>
+    <li><a href="#title">Iqra &ndash; Read</a>
     <li><a href="#mushaf">Mushaf</a>
-    <li><a href="#rehber">Rehber</a>
-    <li><a href="#mucem">Mucem</a>
-    <li><a href="#benzerlik">Benzerlik</a>
-    <li><a href="#panel">Paneller</a>
-    <li><a href="#sss">Sorular</a>
-    <li><a href="#kullanım">Kullanım</a>
-    <li><a href="history.html">Tarihçe</a>
-    <li><a href="#tesekkur">Teşekkür</a>
+    <li><a href="#rehber">Finder</a>
+    <li><a href="#mucem">Mujam</a>
+    <li><a href="#benzerlik">Similarity</a>
+    <li><a href="#panel">Panels</a>
+    <li><a href="#sss">Questions</a>
+    <li><a href="#kullanım">Use cases</a>
+    <li><a href="history.html">History</a>
+    <li><a href="#tesekkur">Thanks</a>
   </ul>
 </div>
 
@@ -58,7 +58,7 @@
 
 <p>Iqra is one of the hundreds of software applications made for reading our Noble Book, the Qur'an. The main features that distinguish it from other software are: marking the root of a word on the Qur'an text, showing all pages where a word appears in the Qur'an on a single screen, and working in an offline environment.</p>
 
-<p>For ease of memorization and recitation, we used standard Mushaf pages. </p>
+<p>For ease of memorization and recitation, we used standard Mushaf pages. The technical word for "mushaf" is "codex", a written form of the Qur'an text. "Mujam" is an index showing the occurences of each word.</p>
 
 <h3 id=mushaf>1. Mushaf pages</h3>
 
@@ -70,34 +70,34 @@
 
 <p>
   The start page appears like this on a phone held sideways: <br><br>
-  <img src="docs/start.png" alt="Start ekranı">
+  <img src="docs.EN/start.png" alt="Start ekranı">
 </p>
 <ul>
   <li>The yellow globe icon changes the language, the yellow arrow goes to the mushaf panel</li>
   <li>Show in Mushaf: Show the location specified by page or verse number,<br>
-    or the last marked page using the star icon
+    or the last marked page using the star icon. 
   </li>
-  <li>Find in Mucem: Search for words derived from the given Arabic root</li>
-  <li>Find in Guide: Search for words in the Qur'an text or in the translation</li>
+  <li>Find in Mujam: Search for words derived from the given Arabic root. </li>
+  <li>Find in Finder: Search for words in the Qur'an text or in the translation.</li>
   <li>Other buttons access the advanced features of the software</li>
 </ul>
 <p>When the Mushaf is opened, if the screen is wide enough both the Qur'an page and the translation appear.
 If both cannot fit together, only one is shown (See: <a href="#panel">Panels</a>)
-While the Mushaf is open, it is possible to go to the next or previous page, or specify another surah, juz, verse, or page number.</p>
-<p>  <img src="docs/iqra V4.7.png"><br>
+In order to change the panel width, drag the yellow button with the double arrows. While the Mushaf is open, it is possible to go to the next or previous page, or specify another surah, juz, verse, or page number.</p>
+<p>  <img src="docs.EN/iqra V4.7.png"><br>
   All search operations are managed by entering information into the single box in this dialog that resembles the start page. Based on the entered information, the software decides which type of search or navigation is required. In the same dialog, it is also possible to search spoken words using the microphone. Voice search is applicable only for Arabic text.
 </p>
 
 <p>The start link can include page or verse numbers:</p>
 <ul>
+  <li><a href="index.html#p=578" target="iqraTop">
+  #p=578</a> (the page with the given number &ndash; the image above)</li>
   <li><a href="index.html#v=27:28&r=ktb" target="iqraTop">
-  #v=27:28</a> (Surah 27, verse 28 &ndash; first image below)</li>
-  <li><a href="index.html#p=378" target="iqraTop">
-  #p=578</a> (the page with the given number &ndash; second image)</li>
+  #v=27:28</a> (Surah 27, verse 28 &ndash; the image below)</li>
 </ul>
 
 <p>
-  <img src="docs/Iqra_ktb.png" alt="Iqra ekranı" style="max-width: min(100%, 604px)"><br>
+  <img src="docs.EN/Iqra_ktb.png" alt="Iqra ekranı"><br>
 In this image, the page menu, the clicked word information, and the marker used for prostration verses on verse 25 are visible.
 </p>
 
@@ -106,14 +106,14 @@ In this image, the page menu, the clicked word information, and the marker used 
   <li>☆ &nbsp; Add/remove/select bookmark</li>
   <li>T &nbsp; Show/hide/select translation</li>
   <li><xs>A</xs>A &nbsp; Increase/normal text size (not visible on narrow screens)</li>
-  <li>☰ &nbsp; Page menu: Help, Share, External resources, Version... </li>
-  <li>&gt; &nbsp; Move to another panel (<s>Pink button</s> Yellow arrow)</li>
+  <li>☰ &nbsp; Page menu: Help, Share, Variants, External resources... </li>
+  <li>&lt; &nbsp; Move to the search panel (Yellow arrow)</li>
 </ul>
 
 </p>
-<p>The root and meaning of Arabic words can be found by clicking with a mouse on desktop or tapping on mobile. Verses and words found in the search panel (Mucem or Guide) are highlighted in color in that panel. On narrow screens both verse and translation columns do not fit together; the T menu (or screen scrolling) is needed to switch between verses and translations. Fonts scale with screen width, so holding the phone sideways provides a better view.</p>
+<p>The root and meaning of Arabic words can be found by clicking with a mouse on desktop or tapping on mobile. Verses and words found in the search panel (Mujam or Finder) are highlighted in color in that panel. On narrow screens both verse and translation columns do not fit together; the T menu (or screen scrolling) is needed to switch between verses and translations. Fonts scale with screen width, so holding the phone sideways provides a better view.</p>
 <p>
-  <img src="docs/Iqra_dar.png" alt="Iqra dar" /><br>
+  <img src="docs.EN/Iqra_dar.png" alt="Iqra dar" /><br>
 In this image, the context menu is shown after two words are selected.
 For the context menu: if there is a mouse, right-click; otherwise long-press the word or touch with two fingers. The selected text is copied to the clipboard or sent to search modules.
 
@@ -121,12 +121,12 @@ For the context menu: if there is a mouse, right-click; otherwise long-press the
 <p>The software supports three types of search:</p>
 
 <ol>
-  <li>Plain text search (in three languages) &ndash; Guide</li>
-  <li>Search by Arabic word root &ndash; Mucem</li>
+  <li>Plain text search (in three languages) &ndash; Finder</li>
+  <li>Search by Arabic word root &ndash; Mujam</li>
   <li>Search for verses similar on a word-by-word basis</li>
 </ol>
 
-<h3 id="rehber">2.1 Guide (Three languages)</h3>
+<h3 id="rehber">2.1 Finder (Three languages)</h3>
 
 <p>The plain text search in Arabic text or in the Turkish-English translation was presented as a graduation project by Abdurrahman Rajab (Completion date: June 2020)</p>
 
@@ -135,18 +135,13 @@ For the context menu: if there is a mouse, right-click; otherwise long-press the
   Figure 3. <a href="index.html#b=Einda%20{ll~ahi" target="iqraTop">Rehber</a>
 </p>
 
-<p>In the right Mushaf window, the word “indallah” is selected on page 47. From the context menu we can easily switch to the Guide window. By tapping the verse number or the highlighted text you can return to the Mushaf or switch to external software from the menu.</p>
+<p>In the right Mushaf panel, the word “indallah” is selected on page 47. From the context menu we can easily switch to the Finder panel. By tapping the verse number or the highlighted text you can return to the Mushaf or switch to external software from the menu.</p>
 
-<p class=center>
-  <img src="docs/Resizable panes.png" alt="Resizable" />
-  Drag the point with the double arrows to change the panel width
-</p>
+<p>Arabic-Turkish-English voice search feature has been added (Details are on the Finder page)</p>
 
-<p>Arabic-Turkish-English voice search feature has been added (Details are on the Guide page)</p>
+<h3 id="mucem">2.2 Mujam (Arabic only)</h3>
 
-<h3 id="mucem">2.2 Mucem (Arabic only)</h3>
-
-<p>The Mucem method works based on the roots of selected Arabic words. This method is designed for those who know or want to learn the Qur'anic language. Each of the 604 boxes shown on the page corresponds to a page from the Qur'an. A searched root does not appear at all on white pages. The color of each box is proportional to the number of words on the corresponding page. Details are on the <a href="guideM.html">related page</a></p>
+<p>The Mujam method works based on the roots of selected Arabic words. This method is designed for those who know or want to learn the Qur'anic language. Each of the 604 boxes shown on the page corresponds to a page from the Qur'an. A searched root does not appear at all on white pages. The color of each box is proportional to the number of words on the corresponding page. Details are on the <a href="guideM.html">related page</a></p>
 
 <p>
   <img src="docs/Mucem_ktb.png" alt="Mucem menu" />
@@ -159,10 +154,10 @@ Is it possible to automatically find similarities like this?
 The answer is yes; with the similarity module it is possible to find verses containing multiple similar words:
 </p>
 <p>
-  <img src="docs/Iqra_simi.png" alt="Iqra simi" />
+  <img src="docs.EN/Iqra_simi.png" alt="Iqra simi" />
 </p>
 <p>In the example page, there are three verses with blue-colored numbers.
-For instance, for the shown verse 30, three different similar verses were found. The basmala appearing in this verse, of course, is the same as the first verse of the Book. As in Mucem, the similarity module also works with Arabic word roots, so it is used only in the Arabic text; there is not yet a similarity module for translations.
+For instance, for the shown verse 30, three different similar verses were found. The basmala appearing in this verse, of course, is the same as the first verse of the Book. As in Mujam, the similarity module also works with Arabic word roots, so it is used only in the Arabic text; there is not yet a similarity module for translations.
 </p>
 
 <h3 id="panel">3. Software capabilities</h3>
@@ -180,42 +175,43 @@ For instance, for the shown verse 30, three different similar verses were found.
 
 <b>Panels &ndash; Search, Translation, Qur'an</b>
 
-<p>The most obvious feature of the software is the three-panel design:<br><br>
+<p>The most obvious feature of the software is 
+  <a href="design/">the three-panel design</a>:<br>
   <img src="design/wide.png" alt="üç panel bir arada" class=large /></p>
   
-<p>Let's denote the three panels with three letters:<br>
-A: Search, T: Translation (meal), K: Qur'an
+<p>The panels are denoted by three letters:<br>
+A: Access/Search, T: Translation, K: Qur'an
 </p>
 <p>
 When viewing the Search panel only one of the following pages is visible:
-Start, Guide, Mucem, Topics, Notes, Stars, Book...
+Start, Finder, Mujam, Topics, Notes, Stars, Book...
 (Book pages do not work offline)
 </p>
 <p>If the screen is wide enough, all three panels are shown simultaneously. 
   A laptop will fit two panels, a phone only one.
   In this case, pink buttons or screen swiping are used to switch between panels.<p>
 <br>
-<b>Mucem-Mushaf Transition</b>
+<b>Mujam-Mushaf Transition</b>
 <p><img src="docs/Mucem-Mushaf.png" alt="Mucem-Mushaf" class=large /></p>
 
 <ul>
   <li>
-    <p>Mucem: The shown <strong>ktb</strong> (kef-tâ-bâ) root and its various derivatives occur 319 times across 205 pages. In the image the selected page 59 contains the root 6 times; lighter colored pages contain fewer instances... We can read the verses concerned by clicking the yellow box to go to the Mushaf page. (There is also a context menu to read on external resources) The Corpus link at the bottom right leads to the reference page we used.</p>
+    <p>Mujam: The shown <strong>ktb</strong> (kef-tâ-bâ) root and its various derivatives occur 319 times across 205 pages. In the image the selected page 59 contains the root 6 times; lighter colored pages contain fewer instances... We can read the verses concerned by clicking the yellow box to go to the Mushaf page. (There is also a context menu to read on external resources) The Corpus link at the bottom right leads to the reference page we used.</p>
   </li>
   <li>
-    <p>Mushaf: On the open page 59, 6 words derived from the "ktb" root are marked in blue. After selecting a word in the Mushaf, you can switch to the Mucem and Guide search methods from the context menu. Searching for similar verses will be added to the verse menu.</p>
+    <p>Mushaf: On the open page 59, 6 words derived from the "ktb" root are marked in blue. After selecting a word in the Mushaf, you can switch to the Mujam and Finder search methods from the context menu. Searching for similar verses will be added to the verse menu.</p>
   </li>
 </ul>
 
-<b>Mushaf-Guide Transition</b>
+<b>Mushaf-Finder Transition</b>
 <p><img src="docs/Finder-Mushaf.png" alt="Rehber-Mushaf" class=large /></p>
 
 <ul>
   <li>
-    <p>Mushaf: On the open page 382 the letter sequence “metâ hâzâ” has been selected. From the context menu it is easy to switch to the Guide window.</p>
+    <p>Mushaf: On the open page 382 the letter sequence “metâ hâzâ” has been selected. From the context menu it is easy to switch to the Finder panel.</p>
   </li>
   <li>
-    <p>Guide: The image shows the verses where the sequence “metâ hâzâ” occurs. By tapping the verse number or the highlighted text you can return to the Mushaf or switch to external software from the menu.</p>
+    <p>Finder: The image shows the verses where the sequence “metâ hâzâ” occurs. By tapping the verse number or the highlighted text you can return to the Mushaf or switch to external software from the menu.</p>
   </li>
 </ul>
 
@@ -231,14 +227,14 @@ Start, Guide, Mucem, Topics, Notes, Stars, Book...
       <br>* Working independently from the internet
       <br>* Automatically downloading new versions</p>
   </li>
-  <li>What does Mucem mean?
+  <li>What does Mujam mean?
     <p>An index showing in which verses each word occurs</p>
   </li>
-  <li>Source of Mucem data?
+  <li>Source of Mujam data?
     <p><a href="https://corpus.quran.com/download/">corpus.quran.com</a>
     (GNU License is included below)</p>
   </li>
-  <li>What does the Mucem table mean?
+  <li>What does the Mujam table mean?
     <p>Each page is a box, each juz is a row</p>
   </li>
   <li>Why the Medina mushaf?
@@ -253,7 +249,7 @@ Start, Guide, Mucem, Topics, Notes, Stars, Book...
 <ul>
   <li>Daily reading: I bookmark where I left off and continue the next day from the bookmarked page
 
-  <li>Research: meanings and roots of words, Mucem, similar verses
+  <li>Research: meanings and roots of words, Mujam, similar verses
   
   <li>Finding verses: by typing on the keyboard, or by voice search
   
@@ -261,31 +257,31 @@ Start, Guide, Mucem, Topics, Notes, Stars, Book...
   
   <li>Lessons: direct access to verses from pages written on various topics
   
-  <li>External resources: Missing features such as additional translations, audio recitation, qira'at differences, manuscripts are completed by links to other sites. If the relevant site has a mushaf page display feature, it appears in the page menu.<br><br>
-    <img src="docs/kaynaklar.png" alt="Dış kaynaklar" class=large><br>
-  The screenshot shows the context menu on the verse number and the Page menu in the Menu icon.
+  <li>External resources: Missing features such as additional translations, audio recitation, qira'at differences, manuscripts are completed by links to other sites. If the relevant site has a mushaf page display feature, it appears in the page menu.
 </ul>
-
+<img src="docs/kaynaklar.png" alt="Dış kaynaklar" class=large>
+The screenshot shows the context menu on the verse number and the Page menu in the Menu icon.
+<br><br>
 <iframe src="https://youtube.com/embed/21VjAvBg90c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <h3>6. <a href="history.html">History of the software</a></h3>
 
 <h3 id="tesekkur">7. Thanks</h3>
 <ul>(over time)
-<li>My wife Seher Eyler, who contributed ideas from day one,
+<li>My wife Seher Eyler, who has contributed ideas since day zero,
 <li>Celalettin Penbe, who first introduced concepts like CSS and PWA,
 <li>Gürsu Gülcü, who produced the most ideas about the software,
 <li>Burhanettin Can, Erkan Türe, Ali Demir, who provided continuous support,
 <li>Ercan Öztemel, who managed my presentations and was among my first students,
-<li>Abdurrahman Rajab, who developed the Guide section,
+<li>Abdurrahman Rajab, who developed the Finder module,
 <li>Ebrar Çekiç, for comments on the videos,
 <li>Mustafa Sözen, Hanne Sözen, for other general comments,
 <li>Muhammed Abay for Zekr font and Çeviriyazı,
 <li>Oğuz Borat, who requested the most new features,
 <li>Word meanings: <a href="https://kuranmeali.com/" target="NewTab">kuranmeali.com</a> Ömer Faruk Köseoğlu,
 <li>Selçuk İdrisoğlu, who showed qira'at differences and the <a href="https://elktb.net">elktb.net</a> site,
-<li>Marijn van Putten, who translated the <i>Teysir</i> book into English, <a href="https://universiteitleiden.nl/en/staffmembers/marijn-van-putten" target="NewTab">Marijn van Putten</a>,
-<li>M. Sözen and <a href="https://github.com/Okuyun/Kuran/search?q=cpenbe&type=issues" target="NewTab">C Penbe</a>, who prepared the <i>Teysir</i> data for use,
+<li>Marijn van Putten, who translated the <i>Taysir</i> book into English, <a href="https://universiteitleiden.nl/en/staffmembers/marijn-van-putten" target="NewTab">Marijn van Putten</a>,
+<li>M. Sözen and <a href="https://github.com/Okuyun/Kuran/search?q=cpenbe&type=issues" target="NewTab">C Penbe</a>, who prepared the <i>Taysir</i> data for use,
 </ul>
 <b>... my heartfelt thanks to you all</b>
 <br><br>
