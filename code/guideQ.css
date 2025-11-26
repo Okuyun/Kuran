@@ -1,0 +1,23 @@
+    iframe {
+      width: clamp(400px, 100%, 560px);
+      aspect-ratio: 16/9;
+    }
+    #contents {
+      position: fixed;
+      right: 8px; top: 8px;
+      text-align: right;
+    }
+    #menu1 {
+      list-style-type: none;
+      margin: 0;
+      padding: 12px;
+      background: honeydew;
+      border: 1px solid;
+    }
+    button { cursor: pointer; }
+    li { margin: 8px 0; }
+    xs { font-size: x-small; }
+@media screen and (min-width: 800px) {
+    #buton { display: none; }
+    #menu1 { display: block; }
+}
