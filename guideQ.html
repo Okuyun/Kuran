@@ -69,7 +69,7 @@
 </p>
 
 <p>
-  Başlangıç sayfası, yan tutulan telefon ekranında şöyle görünür: <br><br>
+  Başlangıç sayfası, telefon ekranında şöyle görünür: <br><br>
   <img src="docs/start.png" alt="Start ekranı">
 </p>
 <ul>
@@ -84,7 +84,7 @@
 <p>Mushaf açılınca, ekran yeteri kadar geniş ise hem Kuran sayfası hem de meali görünür.
 İkisi bir arada sığmıyorsa sadece biri gösterilir (Bk: <a href="#panel">Paneller</a>) Panel genişliğini değiştirmek için çift okun olduğu sarı butonu kaydırın. 
 Mushaf açıkken, sonraki ya da önceki sayfaya geçmek, başka bir sure, cüz, ayet ya da sayfa numarası vermek mümkün.</p>
-<p>  <img src="docs/iqra V4.7.png"><br>
+<p>  <img src="docs/dialog.png"><br>
   Bütün arama işlemleri, başlangıç sayfasına benzeyen bu diyalogdaki tek kutuya bilgi girerek yönetilir. Girilen bilgiye bakarak, hangi türden bir arama ya da navigasyon gerektiğine yazılım kendisi karar verir. Yine bu diyalogda, mikrofona söylenen kelimeleri aratmak mümkün. Sesli arama sadece Arapça metin için geçerli.
 </p>
 
@@ -130,19 +130,17 @@ Bağlam menüsü için: mouse varsa sağ-tıklayın, yoksa kelimeye uzunca bası
 
 <p>Arapça metin ya da Türkçe-İngilizce meal içinde düz metin aramak için Abdurrahman Rajab tarafından bitirme projesi olarak sunuldu (Bitiş tarihi: 2020 Haziran)</p>
 
-<p class=center>
+<p>
   <img src="docs/Finder_meta.png" alt="Rehber" class=large />
-  Resim 3. <a href="/Kuran/#w=%D9%85%D9%90%D9%86%D9%92%D9%87%D9%8F%20%D8%B4%D9%8E%D9%8A%D9%92%D9%80%D9%94%D9%8B%D8%A7" target="iqraTop">Rehber</a>
 </p>
 
 <p>Sağdaki Mushaf panelinde 47. sayfada "ktb" <a href="/Kuran/#p=47&r=ktb" target="iqraTop">kökü aranmış</a> ve sonra "minhu şey-â" kelimeleri birlikte seçilmiş. Çıkan kelime menüsünden Rehber paneline kolayca geçebiliriz. Orada ayet numarasına ya da bulunan metne basarak Mushafa dönmek mümkün.</p>
 
-<p>Ayrıca sesli arama özelliği eklendi (Ayrıntılar Rehber sayfasında)</p>
+<p>Mikrofon simgesi ile sesli arama özelliği eklendi.</p>
 
 <h3 id="mucem">2.2 Mucem (sadece Arapça)</h3>
 
-<p>Mucem yöntemi ise, seçilen Arapça kelimelerin köküne bağlı çalışıyor. Bu yöntem, Kuran dilini bilenler ya da öğrenmek isteyenler için tasarlandı. Sayfada görülen 604 kutunun herbiri Kuran’dan bir sayfa. Aranan kök beyaz sayfalarda hiç yok. Her kutunun rengi, ilgili sayfada bulunan kelime sayısı ile orantılı. Ayrıntılar 
-  <a href="guideM.html">ilgili sayfada</a></p>
+<p>Mucem yöntemi ise, seçilen Arapça kelimelerin köküne bağlı çalışıyor. Bu yöntem, Kuran dilini bilenler ya da öğrenmek isteyenler için tasarlandı. Sayfada görülen 604 kutunun herbiri Kuran’dan bir sayfa. Aranan kök beyaz sayfalarda hiç yok. Her kutunun rengi, ilgili sayfada bulunan kelime sayısı ile orantılı. Ayrıntılar <a href="guideM.html">ilgili sayfada</a></p>
 
 <p>
   <img src="docs/Mucem_ktb.png" alt="Mucem menu" />
@@ -158,15 +156,12 @@ Cevap evet, benzerlik modülü ile birden fazla benzer kelime içeren ayetleri b
   <img src="docs/Iqra_simi.png" alt="Iqra simi" />
 </p>
 <p>Örnek olarak alınan sayfada, numarası mavi renkli olan üç ayet var. 
-Mesela gösterilen 30. ayet için, üç farklı ayet benzer bulunmuş. Bu ayette
-geçen besmele, elbette Kitab'ın ilk ayeti ile aynı. Mucem'de olduğu gibi,
-benzerlik modülü de Arapça kelime kökleri ile çalıştığı için,
-sadece Arapça metinde kullanılır, mealler için benzerlik modülü henüz yok.
+  Mesela gösterilen 30. ayet için, üç farklı ayet benzer bulunmuş. Bu ayette geçen besmele, elbette Kitab'ın ilk ayeti ile aynı. Mucem'de olduğu gibi, benzerlik modülü de Arapça kelime kökleri ile çalıştığı için, sadece Arapça metinde kullanılır, mealler için benzerlik modülü henüz yok.
 </p>
 
 <h3 id="panel">3. Yazılımın yetenekleri</h3>
 
-<p>PWA (Progressive web application) olduğu için taşıdığı özellikler:</p>
+<p>Progressive web application olarak taşıdığı özellikler:</p>
 
 <ul>
   <li>Web sayfasından açılınca bileşenleri otomatik indirilir</li>
@@ -179,7 +174,8 @@ sadece Arapça metinde kullanılır, mealler için benzerlik modülü henüz yok
 
 <b>Paneller &ndash; Arama, Tercüme, Kuran</b>
 
-<p>Yazılımın en bariz özelliği, üç panelli tasarım:<br><br>
+<p>Yazılımın en bariz özelliği,
+  <a href="design/">üç panelli tasarım</a>:<br>
   <img src="design/wide.png" alt="üç panel bir arada" class=large /></p>
   
 <p>Üç paneli üç harfle gösterelim:<br>
@@ -222,8 +218,7 @@ Başlangıç, Rehber, Mucem, Konular, Notlar, Yıldızlar, Kitap...
 <ul>
   <li>Bu proje hangi ihtiyaçtan doğmuştur?
     <p>Kuran-ı Kerim tilavetinde, birbirine benzeyen ayetlere rastlanır.
-      Bir ayeti diğeri ile açıklamak için, benzer ayetler arasında hızlıca
-      geçmek, hepsini bir arada görmek gerekiyor.
+      Bir ayeti diğeri ile açıklamak için, benzer ayetler arasında hızlıca       geçmek, hepsini bir arada görmek gerekiyor.
     </p>
   </li>
   <li>Iqra’yı diğer Kuran-ı Kerim yazılımlarından ayıran özellikler?
