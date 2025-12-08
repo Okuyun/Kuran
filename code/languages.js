@@ -3,6 +3,14 @@ function currentLanguage() {
     return localStorage.language
         || navigator.language.substring(0,2);
 }
+function getHelpDocument() {
+	let s = 'guideQ'
+	switch (currentLanguage()) {
+	  case 'en': s += '.EN'; break
+	  case 'ar': s += '.AR'; break
+	}
+	return s+'.html'
+}
 
 //Each panel uses a separate instance of this class
 class LangManager {

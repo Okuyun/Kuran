@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.9c";
+const VERSION = "V4.9d";
 
 /**
  * &ensp; used in Mujam and VerseRef
@@ -78,7 +78,7 @@ function openSitePage(s, p) {
     let url; hideMenus()
     switch (s) {
     case 'help': case '?':
-        url = 'guideQ.html'; break
+        url = getHelpDocument(); break
     case 'kuranm':
         url = "https://kuranmeali.com/Sayfalar.php?sayfa="+p
         break
