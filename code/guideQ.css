@@ -17,7 +17,10 @@
     button { cursor: pointer; }
     li { margin: 8px 0; }
     xs { font-size: x-small; }
-@media screen and (min-width: 800px) {
+	.wide { display: none; }
+	ul.bullets { list-style-type: none; }
+@media screen and (min-width: 850px) {
+    .wide { display: block; }
     #buton { display: none; }
     #menu1 { display: block; }
 }
