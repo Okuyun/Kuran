@@ -267,9 +267,7 @@ function hideList(hide) {
  */
 function displayList(refs, liste) {
     function doClick3(evt) {
-        let cv = evt.target.innerText
-        bilgi.innerText = VerseRef.fromChapVerse(cv)
-        doClick(evt)  //transfer event from x to bilgi
+        doClick(null, evt.target.innerText) //cv
     }
     const MAX_REFS = 50  //hide larger lists
     const SPAN = '<span class=item>', _SPAN = '</span> '
@@ -399,18 +397,16 @@ function hideBilgi() {
  * 
  * @param {*} evt get the event trigger. 
  */
-function doClick(evt) {
+function doClick(evt, cv) {
     //do not handle if menuK is on
     if (!menuK.style.display) return
-    evt.preventDefault()
-    let [p, , refs] = bilgi.innerText.split(EM_SPACE)
-    p = p.substring(1) //remove first char
-    let h = "#p="+p; //use page number
-    if (pRefs[p]) { //use first reference & root
-        let [cv] = refs.split(' ')
-        h = "#v="+cv
-        let d = currentRoots.join('&r=')
-        if (d) h += '&r='+d
+    let h = ''
+    if (cv) {
+        h = '#v='+cv
+    } else {
+        evt.preventDefault()
+        let cr = currentRoots.join('&r=')
+        h = '#p='+bilgi.data+'&r='+cr
     }
     console.log(h); hideMenus()
     window.iqra = window.open("reader.html"+h, "iqra")
@@ -512,6 +508,7 @@ function doHover(evt) {  //listener for each td and span element
     let cls, ref, cw
     { // TD
         let p = getPageOf(evt.target)
+        bilgi.data = p
         if (pRefs[p]) {
             let [f, ...L] = pRefs[p]
             ref = f.toString()
