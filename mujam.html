@@ -15,13 +15,16 @@
 <body>
 <div id=div0>
    <button id=showS>▶</button>&nbsp;
-   <span id=out1>[<span id=out2>count</span>]</span>
    &nbsp; <span id=out3>root/word</span>
    <div id=selections>
       <select id=menu1></select>
       <span id=kok></span>
       <select id=menu2></select>
       <button id=combine>◀</button>&nbsp;
+   </div>
+   <div id=div1>
+      <span id=out1>count</span> &nbsp;
+      <span id=out2>count</span>
    </div>
 </div>
 <textarea id=noteBox hidden></textarea>
@@ -51,7 +54,8 @@ const localization = {};
 localization.tr =
 `showS	title	Kelime listesini göster
 combine	title	Kelime listesini gizle
-out1	title	Ayet sayısı
+out1	title	Bu kök kaç sayfada geçiyor
+out2	title	Bu kök kaç ayette geçiyor
 out3	title	Bu kök kaç kere geçiyor
 noteBut	title	Bu kök hakkında notlar ekleyin
 menu1	title	Aranan kökün ilk harfi
@@ -64,8 +68,9 @@ kay1	innerText	Dış kaynaklar:`
 localization.en = 
 `showS	title	Show the word list
 combine	title	Hide the word list
-out1	title	Number of verses
-out3	title	Number of pages with this root
+out1	title	Number of pages with this root
+out2	title	Number of verses with this root
+out3	title	Number of words with this root
 noteBut	title	Add comments about this root
 menu1	title	First letter of the desired root
 kok	innerText	Root:
@@ -77,8 +82,9 @@ kay1	innerText	External sources:`
 localization.ar = 
 `showS	title	أظهر قائمة الكلمات
 combine	title	أخفي قائمة الكلمات
-out1	title	عدد الآيات
-out3	title	عدد الصفحات بهذا المصدر
+out1	title	عدد الصفحات بهذا المصدر
+out2	title	عدد الآيات بهذا المصدر
+out3	title	عدد الكلمات بهذا المصدر
 noteBut	title	أضف ملاحظة لهذا المصدر
 menu1	title	أول حرف من المصدر
 kok	innerText	المصدر:

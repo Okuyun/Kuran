@@ -218,6 +218,7 @@ function indexToArray(list) {
         if (pRefs[p]) pRefs[p].push(v)
         else pRefs[p] = [v]
     }
+    out1.innerText = "Pages: "+pRefs.filter(x => x).length
 }
 /**
  * Make wRefs for specified roots
@@ -284,7 +285,7 @@ function displayList(refs, liste) {
             }
         s += '\n' //'</span>\n'
     }
-    out2.innerText = count
+    out2.innerText = "Verses: "+count
     liste.innerHTML = s
     for (let x of liste.querySelectorAll('.item')) {
         x.onclick = doClick3  //doHover

@@ -10,7 +10,11 @@
     }
     #div0 {
         background-color: hsl(240, 100%, 95%);
-        height: 36px;
+        /* height: 36px; */
+    }
+    #div1 {
+        padding: 4px 8px;
+        font-size: small;
     }
     #showS, #combine {
         background-color: #59b;
