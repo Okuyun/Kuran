@@ -111,11 +111,8 @@ function setFontFamily(f){
     html.style.fontFamily = bilgi.style.fontFamily = f
 }
 function forceSelection() {
-    //trim for Windows -- thank you Rajab
-    let s = window.getSelection().toString().trim()
-        || Q.selection  // fixed for Safari
-    if (s) return s
-    alert("Önce Arapça bir kelime seçin")
+	if (Q.prevText) return Q.prevText
+    else alert("Önce bir kelime seçin")
 }
 function markWord(w, root) {
     for (let x of html.querySelectorAll('span')) {
@@ -143,6 +140,11 @@ function toggleVerse(evt, color='yesil') {
     let p = t.parentElement===text? html : text
     p.querySelector(cls).classList.toggle(color)
 }
+document.onselectionchange = () => {
+	let t = window.getSelection().toString().trim()
+	if (t) Q.prevText = t
+	// testX.textContent = t
+}
 function displayWord(evt) {
   function selectWord() {
     let s = window.getSelection()
@@ -151,7 +153,7 @@ function displayWord(evt) {
       let range = document.createRange();
       range.selectNodeContents(t);
       s.removeAllRanges(); s.addRange(range);
-    } else Q.selection = txt
+    }
   }
   function setVariant(i, n) {
     function text(t1, aa, t2, cls) {
