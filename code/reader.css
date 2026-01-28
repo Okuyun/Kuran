@@ -222,7 +222,7 @@ body {
       position: relative;
       width: 70%;
       max-width: 604px;
-      margin: 0;
+      margin: 0 12px;
     }
     input[type="range" i] { /* added by A Rajab */
       /* -webkit-*/ appearance: none;
@@ -426,7 +426,7 @@ body {
 /* CSS triangles using transparent border
 * https://css-tricks.com/snippets/css/css-triangle/
 */
-#rightB, #leftB {
+.rightArrow, .leftArrow {
   margin: 0;
   display: inline-block;
   width: 0; height: 0;
@@ -434,13 +434,11 @@ body {
   border-bottom: 10px solid transparent;
   cursor: pointer;
 }
-#rightB {
+.rightArrow {
   border-left: 20px solid #06f;
-  margin-left: 12px;
 }
-#leftB {
+.leftArrow {
   border-right: 20px solid #06f; 
-  margin-right: 12px;
 }
 
 #noteBox {
@@ -462,6 +460,11 @@ body {
   border: none;
 }
 @media screen and (max-width: 470px) {
+  #leftS, #rightS {
+    display: none;
+  }
+}
+@media screen and (max-width: 520px) {
   #cuzS, #search {
     display: none;
   }

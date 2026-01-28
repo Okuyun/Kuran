@@ -231,6 +231,16 @@ function clickSimilar(evt) {
     console.log(location.hash+' to '+t)
     location.hash = '#v='+t
 }
+function prevSura() {
+    let c = toChapter(index[curPage]+1) - 1
+	if (c < 1) c = Q.M
+	gotoSura(c)
+}
+function nextSura() {
+    let c = toChapter(index[curPage+1]) + 1
+	if (c > Q.M) c = 1
+	gotoSura(c)
+}
 function prevPage() {
     gotoPage(curPage==1? Q.P : curPage-1)
 }
@@ -473,8 +483,10 @@ function initReader() {
     vers2.innerHTML = 'Iqra '+VERSION+'&emsp;'
     // console.log(swipe)  //TouchHandler
     languageItems()
+    leftS.onclick = prevSura
     sureS.onchange = () => {gotoSura(sureS.value)}
     sureS.onclick = () => {sureS.select()}
+    rightS.onclick = nextSura
     cuzS.onchange = () => {gotoPage(cuzS.selectedIndex*20+1)}
     pageA.onclick = handlePageNum
     //functions defined in search.js
@@ -494,10 +506,10 @@ function initReader() {
     bilgi.onclick  = clickWord
     // varInfo.onclick  = clickVariant
     simiList.onclick  = clickSimilar
-    leftB.onclick  = () => {prevPage()}
+    leftB.onclick  = prevPage
     slider.oninput = () => {adjustPage(true)}
     slider.onchange= () => {adjustPage(false)} //committed
-    rightB.onclick = () => {nextPage()}
+    rightB.onclick = nextPage
     noteBut.onclick = () => {Q.notes.edit()} //in common.js
     menuFn(); hideMenus()
     var prevTime
