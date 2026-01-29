@@ -222,7 +222,7 @@ body {
       position: relative;
       width: 70%;
       max-width: 604px;
-      margin: 0 12px;
+      margin: 0 2px;
     }
     input[type="range" i] { /* added by A Rajab */
       /* -webkit-*/ appearance: none;
@@ -427,18 +427,16 @@ body {
 * https://css-tricks.com/snippets/css/css-triangle/
 */
 .rightArrow, .leftArrow {
-  margin: 0;
   display: inline-block;
-  width: 0; height: 0;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   cursor: pointer;
 }
 .rightArrow {
-  border-left: 20px solid #06f;
+  border-left: 20px solid #02c;
 }
 .leftArrow {
-  border-right: 20px solid #06f; 
+  border-right: 20px solid #02c; 
 }
 
 #noteBox {
