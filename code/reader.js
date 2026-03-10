@@ -218,7 +218,8 @@ function adjustPage(adj) {
 }
 function clickWord(evt) {
     let w = bilgi.textContent
-    if (w) openMujam(toBuckwalter(w))
+    if (w) //openMujam(toBuckwalter(w))
+		window.open("https://hanswehr.app/search/" + w, "Kuran")
 }
 function clickVariant(evt) {
     let [c, v] = evt.target.innerText.split(':')
