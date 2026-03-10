@@ -170,7 +170,7 @@ body {
     }
   @media screen and (max-height: 420px) {
       #div1 { position: relative; }
-      #div0 { height: 14px; }
+      #div0 { height: 4px; }
   }
     #text, #html {
       padding: 4px 8px;
