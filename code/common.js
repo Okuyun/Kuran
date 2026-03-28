@@ -83,12 +83,14 @@ function openSitePage(s, p) {
         url = "https://kuranmeali.com/Sayfalar.php?sayfa="+p
         break
     case 'quranc':
-        url = "https://quran.com/page/"+(p+1)
+        url = `https://quran.com/page/${p+1}?readingMode`
         break
     case 'pay1':
         url = "https://okuyun.github.io/Kuran/#p="
         doShare(p+'. sayfa', url+p)
         return
+    case 'muqabl':
+        window.open("https://maeyler.github.io/JS/api/mukabele", "finder"); return
     default:
         let [c, v] = toCV(index[p]+1)
         openSiteVerse(s, c, v); return
@@ -114,9 +116,9 @@ function openSiteVerse(s, c, v) {
   console.log(s, c, v)
   switch (s) {
     case 'kuranm':
-        url = "https://kuranmeali.com/AyetKarsilastirma.php?sure="+c+"&ayet="+v
+        url = `https://kuranmeali.com/AyetKarsilastirma.php?sure=${c}&ayet=${v}`
         break
-    case 'mufrdt':
+    case 'elfaz':
         url = `https://kuranmeali.com/Elfaz.php?sure=${c}&ayet=${v}`
         break
     case 'corpus':
@@ -126,7 +128,7 @@ function openSiteVerse(s, c, v) {
         url = "https://corpuscoranicum.org/en/verse-navigator/sura/"
         +c+"/verse/"+v+"/variants"
         break
-    case 'coranp':
+    case 'coranp': //Cairo 1924 not used
         url = "https://corpuscoranicum.org/en/verse-navigator/sura/"
         +c+"/verse/"+v+"/print"
         break

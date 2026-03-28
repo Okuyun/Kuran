@@ -218,9 +218,11 @@ function adjustPage(adj) {
 }
 function clickWord(evt) {
     let w = bilgi.textContent
-    if (w) //openMujam(toBuckwalter(w))
-	//  window.open("https://hanswehr.app/search/" + w, "Kuran")
-		window.open("https://arabicstudentsdictionary.com/search?q=" + w, "Kuran")
+    if (!w) return
+	if (navigator.onLine)
+  //  window.open("https://hanswehr.app/search/" + w, "Kuran")
+	  window.open("https://arabicstudentsdictionary.com/search?q=" + w, "Kuran");
+	else openMujam(toBuckwalter(w))
 }
 function clickVariant(evt) {
     let [c, v] = evt.target.innerText.split(':')
