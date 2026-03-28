@@ -3,7 +3,7 @@
 /**
  * The code version.
  */
-const VERSION = "V4.9f";
+const VERSION = "V4.9g";
 
 /**
  * &ensp; used in Mujam and VerseRef
@@ -104,6 +104,31 @@ function doShare(text, url) {
     navigator.share({title, text, url})
 }
 
+/**
+ * Open remote site
+ * 
+ * @param {string} site id -- String
+ * @param {number} word w -- String
+ */
+function openExternal(id, w) {
+	function letters() {
+		return w.split('').join(' ')
+	}
+  let url;
+  switch (id) {
+    case 'rootsX': 
+	  url = "https://kuranmeali.com/Kokler.php?kok="+letters()
+	  break
+    case 'mufrX': 
+	  url = "https://kuranmeali.com/Aciklama.php?kok="+letters()+"&islem=mufredat"
+	  break
+    case 'dictX': 
+	  url = "https://arabicstudentsdictionary.com/search?q="+w
+	  break
+  }
+  console.log("openExternal", id, w, url)
+  window.open(url, "Kuran")
+}
 /**
  * Open remote site -- goto (c, v)
  * 

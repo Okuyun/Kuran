@@ -83,7 +83,7 @@
 <textarea id=noteBox hidden></textarea>
 
 <div id=wordMenu>
-  <div id=menuC class=menu>
+  <div id=menuC class="menu horiz">
     <span id=copy class="menuK"></span>
     <span id=mujm class="menuK"></span>
     <span id=fndr class="menuK"></span>
@@ -91,6 +91,11 @@
   <div id=wordInfo class=info>
     <span id=bilgi>root of the word</span>
     <span id=anlam class=plainSmall>meaning</span>
+	<div id=menuX class="menu horiz">
+	  <span id=rootsX class="menuK">Kökler</span>
+	  <span id=mufrX class="menuK">Mufredât</span>
+	  <span id=dictX class="menuK">Dictionary</span>
+	</div>
   </div>
   <div id=varInfo>
     <span id=stdText class=boldText>std text</span>
@@ -207,7 +212,6 @@ input	placeholder	sayfa, ayet, kök, metin
 input	title	sayfa ya da sure-ayet numaraları; aranacak kök ya da metin
 copy	innerText	Kopyala
 mujm	innerText	Mucem
-mufrdt	innerText	el-Mufredat
 fndr	innerText	Rehber
 leftB	title	Önceki sayfa
 slider	title	Aranan sayfaya geçmek için slider
@@ -255,7 +259,6 @@ input	placeholder	page, verse, root, or text
 input	title	Page or verse number; root or text to search
 copy	innerText	Copy
 mujm	innerText	Mujam
-mufrdt	innerText	al-Mufradat
 fndr	innerText	Finder
 leftB	title	Previous page
 slider	title	Slider to view the desired page
@@ -303,7 +306,6 @@ input	placeholder	378 أو 27.30
 input	title	رقم الصفحة أو رقم السورة والجزء
 copy	innerText	انسخ
 mujm	innerText	المعجم
-mufrdt	innerText	al-Mufradat
 fndr	innerText	الباحث
 leftB	title	صفحة سابقة
 slider	title	شريط تحريك لرؤية الصفحة المطلوبة

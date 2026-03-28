@@ -78,15 +78,18 @@ body {
       position: absolute;
       display: flex;
       flex-wrap: wrap;
-      width: 200px;
+      width: 220px;
     }
-    #menuC {
+    #wordMenu .menu {
+      position: initial;
+    }
+    .horiz {
       position: static;
       width: inherit;
     }
-    #menuC span {
+    .horiz span {
       display: inline-block;
-      width: 63px;
+      width: 69px;
     }
     #wordInfo {
       width: inherit;
@@ -94,7 +97,7 @@ body {
     }
     #wordInfo span {
       display: inline-block;
-      width: 90px;
+      /* width: 90px; */
     }
     #verseMenu { 
       position: absolute;
@@ -115,7 +118,7 @@ body {
     }
     .info span {
       display: block;
-      padding: 8px 12px;
+      padding: 8px;
     }
     .plainSmall {
       font: 13px sans-serif;

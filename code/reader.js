@@ -204,7 +204,7 @@ function displayWord(evt) {
       let OK = hasVariant(v)
       varInfo.style.display = OK? '' : 'none'
       if (OK) setVariant(i, n)
-      setPosition(wordMenu, x+24, y+12)
+      setPosition(wordMenu, x+24, y+12, 222)
     }
 }
 function adjustPage(adj) {
@@ -221,7 +221,7 @@ function clickWord(evt) {
     if (!w) return
 	if (navigator.onLine)
   //  window.open("https://hanswehr.app/search/" + w, "Kuran")
-	  window.open("https://arabicstudentsdictionary.com/search?q=" + w, "Kuran");
+	  openExternal('dictX', w);
 	else openMujam(toBuckwalter(w))
 }
 function clickVariant(evt) {
@@ -574,6 +574,15 @@ function openMujam(...a) { //array of roots in Buckwalter
     for (let r of a) markWord(r, true); 
     // console.log('mucem: r='+p)
 }
+function searchMujam(s) { //array of roots in Buckwalter
+	let a = []
+	for (let w of s.split(' ')) {
+	  let r = Q.roots.wordToRoot(toBuckwalter(w))
+	  if (r) a.push(r)
+	}
+	if (a.length > 0) return a;
+	else alert('Mucemde bulunamadı')
+}
 function menuFn() {
   function menuItem(m) {
       let s = forceSelection() //s is not empty
@@ -585,13 +594,8 @@ function menuFn() {
               .catch(e => { alert('Panoya yazamadım\n'+e) })
               break
           case 'mujm':
-              let a = []
-              for (let w of s.split(' ')) {
-                let r = Q.roots.wordToRoot(toBuckwalter(w))
-                if (r) a.push(r)
-              }
-              if (a.length > 0) openMujam(...a)
-              else alert('Mucemde bulunamadı')
+              let a = searchMujam(s)
+			  if (a) openMujam(...a);
               break
           case 'fndr':
               window.open(LINKF + s, "finder")
@@ -603,6 +607,14 @@ function menuFn() {
   menuC.onclick = (evt) => { //word menu
       evt.preventDefault()
       menuItem(evt.target.id)
+  }
+  menuX.onclick = (evt) => { //menuX
+      evt.preventDefault()
+	  let s = forceSelection()
+      if (!s) return
+	  let a = searchMujam(s)
+	  if (a) openExternal(evt.target.id, toArabic(a[0]))
+      hideMenus()
   }
   menuS.onclick = (evt) => { //star menu
       evt.preventDefault()
