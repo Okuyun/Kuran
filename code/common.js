@@ -112,7 +112,7 @@ function doShare(text, url) {
  */
 function openExternal(id, w) {
 	function letters() {
-		return w.split('').join(' ')
+		return w.replaceAll('ا', 'أ').split('').join(' ')
 	}
   let url;
   switch (id) {
@@ -125,8 +125,13 @@ function openExternal(id, w) {
     case 'dictX': 
 	  url = "https://arabicstudentsdictionary.com/search?q="+w
 	  break
+	default:
+	  id = localStorage.lastExternal || 'rootsX'
+	  openExternal(id, w)
+	  return
   }
-  console.log("openExternal", id, w, url)
+  localStorage.lastExternal = id
+//   console.log("openExternal", id, w)
   window.open(url, "Kuran")
 }
 /**

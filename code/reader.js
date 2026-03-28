@@ -220,8 +220,7 @@ function clickWord(evt) {
     let w = bilgi.textContent
     if (!w) return
 	if (navigator.onLine)
-  //  window.open("https://hanswehr.app/search/" + w, "Kuran")
-	  openExternal('dictX', w);
+	  openExternal('', w); //use localStorage.lastExternal
 	else openMujam(toBuckwalter(w))
 }
 function clickVariant(evt) {
@@ -614,7 +613,7 @@ function menuFn() {
       if (!s) return
 	  let a = searchMujam(s)
 	  if (a) openExternal(evt.target.id, toArabic(a[0]))
-      hideMenus()
+    //   hideMenus()
   }
   menuS.onclick = (evt) => { //star menu
       evt.preventDefault()

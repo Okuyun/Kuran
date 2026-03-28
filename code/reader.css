@@ -97,8 +97,11 @@ body {
     }
     #wordInfo span {
       display: inline-block;
-      /* width: 90px; */
     }
+    #menuX {
+      border-left: none;
+      border-bottom: none;
+	}
     #verseMenu { 
       position: absolute;
       display: flex;
