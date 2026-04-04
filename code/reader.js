@@ -204,7 +204,7 @@ function displayWord(evt) {
       let OK = hasVariant(v)
       varInfo.style.display = OK? '' : 'none'
       if (OK) setVariant(i, n)
-      setPosition(wordMenu, x+24, y+12, 222)
+      setPosition(wordMenu, x+24, y, 222)
     }
 }
 function adjustPage(adj) {

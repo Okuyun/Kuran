@@ -82,6 +82,7 @@ body {
     }
     #wordMenu .menu {
       position: initial;
+	  width: 100%;
     }
     .horiz {
       position: static;
@@ -89,7 +90,8 @@ body {
     }
     .horiz span {
       display: inline-block;
-      width: 69px;
+      text-align: center;
+      width: 32%;
     }
     #wordInfo {
       width: inherit;
@@ -99,8 +101,8 @@ body {
       display: inline-block;
     }
     #menuX {
-      border-left: none;
-      border-bottom: none;
+      border: none;
+      border-top: 1px solid;
 	}
     #verseMenu { 
       position: absolute;
@@ -114,7 +116,6 @@ body {
       text-align: center;
       background-color: #ff7;
       border: 1px solid;
-      z-index: 1;
     }
     #bilgi {
       color: blue;
@@ -220,7 +221,6 @@ body {
       padding: 5px 5px;
       position: fixed;
       border: black 1px solid;
-      z-index: 1;
       bottom: 90px;
       min-width: 160px;
     }
@@ -366,7 +366,6 @@ body {
       user-select: none;
       overflow-y: auto;
       max-height: 90vh; /* for overflow */
-      z-index: 1;
     }
     .black {
       text-align: center;

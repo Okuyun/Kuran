@@ -71,7 +71,7 @@ function hideElement(elt) {
 /**
  * Open remote site -- goto page p
  * 
- * @param {string} s site -- String
+ * @param {string} s site
  * @param {number} p page
  */
 function openSitePage(s, p) {
@@ -107,8 +107,8 @@ function doShare(text, url) {
 /**
  * Open remote site
  * 
- * @param {string} site id -- String
- * @param {number} word w -- String
+ * @param {string} site id
+ * @param {string} word w
  */
 function openExternal(id, w) {
 	function letters() {
@@ -137,7 +137,7 @@ function openExternal(id, w) {
 /**
  * Open remote site -- goto (c, v)
  * 
- * @param {string} s site -- String
+ * @param {string} s site
  * @param {number} c chapter
  * @param {number} v verse
  */
