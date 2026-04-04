@@ -897,7 +897,7 @@
 35:33	10	wa-luʾluʾan	2 3 4 6 7	wa-luʾluʾin	x	
 35:36	16	najzī	3	yujzā		
 35:36	17	kulla	3	kullu	x	
-35:43	24	bayyinatin	1 4 5a 7	bayyanātin	x	
+35:40	24	bayyinatin	1 4 5a 7	bayyinātin	x	
 36:5	1	tanzīla	1 2 3 5a	tanzīlu	x	
 36:14	6	fa-ʿazzaznā	5a	fa-ʿazaznā	x	
 36:32	3	lammā	1 2 3 7	lamā	x	
