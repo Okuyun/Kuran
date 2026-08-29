@@ -1,6 +1,6 @@
 "use strict";
 
-// import {VERSION, EM_SPACE, setPosition, hideElement, 
+// import {VERSION, EN_SPACE, setPosition, hideElement, 
 //     openSitePage, openSiteVerse, fetch_text_then} from './common.js'
 // import {VerseRef, RefSet, nPage, encodeLine} from './utilities.js'
 // import {toArabic, toBuckwalter} from "./buckwalter.js"
@@ -93,7 +93,7 @@ function report2(t) {
         let [w, n] = s.split(' ')
         let a = toArabic(w)
         //convert space to em-space " "
-        return [a, a+EM_SPACE+n] 
+        return [a, a+EN_SPACE+n] 
     }
     let line = t.split('\n')
     let m = line.length - 1
@@ -157,7 +157,7 @@ function selectLetter(ch) {
  * @param {string} root to be seleceted, example: سجد 23
  */
 function selectRoot(root, modifyHash=true) { //root in Arabic 
-    if (!root) [root] = menu2.value.split(EM_SPACE);
+    if (!root) [root] = menu2.value.split(EN_SPACE);
     else if (menu2.value.startsWith(root)) return;
     else {
       selectLetter(firstChar(root))
@@ -466,7 +466,7 @@ function menuFn() {
         openSitePage('help')
       let s = bilgi.innerText
       if (!s) return
-      let [nam, refs] = s.split(EM_SPACE)
+      let [nam, refs] = s.split(EN_SPACE)
       if (!refs) return
       let [cv] = refs.split(' ')
       let [c, v] = cv.split(':')
@@ -515,7 +515,7 @@ function doHover(evt) {  //listener for each td and span element
             ref = f.toString()
             if (L.length)  //convert Array to string
               ref += ' '+L.map(x => x.cv).join(' ')
-                  + EM_SPACE +'('+ (L.length+1) +')'
+                  + EN_SPACE +'('+ (L.length+1) +')'
             cls = 't2>' //backgroundColor
         } else { //no ref on this page
             ref = new VerseRef(index[p]+1).toString()

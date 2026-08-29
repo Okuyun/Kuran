@@ -1,5 +1,5 @@
 "use strict";
-// import {EM_SPACE} from './common.js';
+// import {EN_SPACE} from './common.js';
 // import {sName} from './model.js';
 
 /**
@@ -26,8 +26,8 @@ class VerseRef {
     }
     toString() {
         return langMgr.PAGE0+this.page
-                +EM_SPACE+sName[this.chap]
-                +EM_SPACE+this.cv
+                +EN_SPACE+sName[this.chap]
+                +EN_SPACE+this.cv
     }
     /**
      * factory method to make VerseRef

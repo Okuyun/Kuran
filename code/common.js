@@ -3,13 +3,12 @@
 /**
  * The code version.
  */
-const VERSION = "V4.9g";
+const VERSION = "V4.9h";
 
 /**
  * &ensp; used in Mujam and VerseRef
- * use EN space, may be renamed later
  */
-const EM_SPACE = String.fromCharCode(8194) //8195
+const EN_SPACE = String.fromCharCode(8194) //8195 EM_SPACE
 
 /**
  * Link to finder -- could be modified in console
@@ -363,5 +362,5 @@ class TouchHandler {
     }
 }
 
-// export {VERSION, EM_SPACE, setPosition, hideElement, Notes, 
+// export {VERSION, EN_SPACE, setPosition, hideElement, Notes, 
 //   openSitePage, openSiteVerse, fetch_text_then, TouchHandler}
