@@ -82,7 +82,7 @@ function openSitePage(s, p) {
         url = "https://kuranmeali.com/Sayfalar.php?sayfa="+p
         break
     case 'quranc':
-        url = `https://quran.com/page/${p+1}?readingMode`
+        url = `https://quran.com/page/${p+1}?readingMode=arabic`
         break
     case 'pay1':
         url = "https://okuyun.github.io/Kuran/#p="
@@ -169,7 +169,7 @@ function openSiteVerse(s, c, v) {
         url = "https://tanzil.net/#"+c+':'+v
         break
     case 'quranc':
-        url = "https://previous.quran.com/"+c+'/'+v
+        url = "https://quran.com/"+c+'/'+v
         break
     case 'awaken':
         url = "https://islamawakened.com/quran/"+c+'/'+v
