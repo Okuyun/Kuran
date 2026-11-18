@@ -932,7 +932,7 @@
 37:126	1	allāha	1 2 3 4 5a	allāhu	x	
 37:126	2	rabbakum	1 2 3 4 5a	rabbukum	x	
 37:126	3	wa-rabba	1 2 3 4 5a	wa-rabbu	x	
-37:130	3	il yāsīn	1 4	āl yāsīn	x	
+37:130	3	il yāsīn	1 4	āli yāsīn	x	
 38:13	5	aṣḥābul-ʾaikati	1 2 4	aṣḥābu laikata	x	
 38:15	10	fawāqin	6 7	fuwāqin	x	
 38:45	2	ʿibādanā	2	ʿabdanā	x	
